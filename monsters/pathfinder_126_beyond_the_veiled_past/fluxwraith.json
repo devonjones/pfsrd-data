@@ -1,0 +1,608 @@
+{
+    "name": "Fluxwraith",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or cluster (2-4)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Slow Aura (Su)</b> Fluxwraiths constantly emit a 30-foot-radius aura of temporal distortion. Any creature within this aura is affected as if by <a href=\"SpellDisplay.aspx?ItemName=slow\" style=\"text-decoration:underline\"><i>slow</i></a>, but it gets no saving throw. If a creature exits the radius, the effect ceases at the end of its turn. If the fluxwraith moves more than 30 feet away from an affected creature, the effect ends immediately for that creature. Creatures affected by <a href=\"SpellDisplay.aspx?ItemName=freedom\" style=\"text-decoration:underline\"><i>freedom</i></a>, <a href=\"SpellDisplay.aspx?ItemName=freedom%20of%20movement\" style=\"text-decoration:underline\"><i>freedom of movement</i></a>, or <a href=\"SpellDisplay.aspx?ItemName=haste\" style=\"text-decoration:underline\"><i>haste</i></a> are unaffected by the slow aura. <br/><br/><b>Temporal Madness (Su)</b> As a ranged touch attack with a range increment of 30 feet, a fluxwraith can grant a target a mind-shattering glimpse of its own existence as it appears to a time-displaced entity. The attack deals 1d6 points of Wisdom drain, although this drain is reduced to 1 point if the target succeeds at a DC 29 Will saving throw. This is a mind-affecting effect. The save DC is Charisma-based. <br/><br/><b>Time Shift (Su)</b> A creature struck by the fluxwraith\u2019s touch attack must succeed at a DC 31 Will saving throw or be thrust forward in time, vanishing and then, 1d4 rounds later, reappearing in the same location. If the space has become occupied by an object or another creature, the affected creature is shunted to a random adjacent space, taking 6d6 points of damage. From the creature\u2019s perspective, the time shift is instantaneous. Any duration effects active upon the creature become suspended during the time shift, resuming when the creature reappears. Creatures that succeed at their saving throws cannot be affected by the same fluxwraith\u2019s time shift ability for 24 hours. The save DC is Charisma-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "A fluxwraith is an incorporeal undead with a host of extraordinary powers owing to its singular status as a time-displaced entity. Its serene appearance and dreamlike demeanor harken to its origins, for in life it slept away the centuries in a state of magical or technological stasis. Now, whether by accident or malign intent, the fluxwraith\u2019s soul lies scattered across the timestream. Demented by its paradoxical consciousness, it yearns to destroy any living being audacious enough to exist within a single point of time.<br/><br/> Because its appearance depends upon its state when it first entered suspended animation, viewers may sometimes be able to deduce clues about its former life, as well as its motivations for entering hibernation. Some seek interminable sleep while they are in the prime of life, aiming to awaken and embrace immortality as a perfect specimen, while others hope to defer a terminal diagnosis. However, the sleeper\u2019s motivations in life seldom define a fluxwraith\u2019s outlook, as the process of becoming undead erases all but the most deeply ingrained mortal traits.<br/><br/> The first hint of the fluxwraith\u2019s destructive nature manifests in the caul of energy that winks on and off around it. This ever-shifting network of temporal energy contains fragments of its consciousness, appearing as flickering aspects of itself as a youth, an adult, or a corpse. Scrutinizing these vignettes may provide further clues about the fluxwraith\u2019s former existence, although any creature that enters the fluxwraith\u2019s aura, or any creature affected by its attacks, may begin to see its own reflections appear within the shards as well. These disturbing images depict a creature not as it is, but as the fluxwraith perceives it in the past or future.<br/><br/> Fluxwraiths tend to speak ancient or dead languages, often murmuring incomplete or garbled statements that blend past and future tenses in unsettling ways."
+        }
+    ],
+    "html": "<i>This hovering, translucent humanoid appears to sleep serenely, even as shards of flickering energy encircle it, each fragment reflecting younger or older versions of itself.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Fluxwraith",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 13
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 37
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "lifesense"
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "slow aura",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "30 ft.",
+                    "range": 30,
+                    "unit": "feet"
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "incorporeal"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "17",
+            "xp": 102400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 26,
+                "touch": 26,
+                "flat-footed": 16,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 deflection"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+9 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 dodge"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 14
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 17
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 20
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "channel resistance +4"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "incorporeal"
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "undead traits"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "perfect<br/>"
+                            }
+                        ],
+                        "name": "fly 60 ft.",
+                        "movement_type": "fly",
+                        "value": 60
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "incorporeal touch",
+                    "bonus": [
+                        28
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "15d6"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "time shift"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "temporal madness"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "time shift"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "arcane sight"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "deja vu"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "haste"
+                                    }
+                                ],
+                                "count_text": "At will",
+                                "frequency": "At will"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "metamagic": "quickened",
+                                        "name": "deja vu"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "hold monster",
+                                        "spell_dc": 21
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "mirror image"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "temporal stasis",
+                                        "spell_dc": 24
+                                    }
+                                ],
+                                "count_text": "3/day",
+                                "count": 3,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "time stop",
+                                        "spell_dc": 25
+                                    }
+                                ],
+                                "count_text": "1/day",
+                                "count": 1,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 20,
+                        "concentration": 26
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 19
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 28
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 45
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": null,
+            "dex": 28,
+            "con": null,
+            "int": 18,
+            "wis": 20,
+            "cha": 23,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "time shift"
+                        }
+                    ],
+                    "name": "Ability Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Ability Focus (time shift)",
+                        "alt": "Ability Focus (time shift)",
+                        "href": "FeatDisplay.aspx?ItemName=Ability%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Alertness",
+                    "link": {
+                        "type": "link",
+                        "name": "Alertness",
+                        "alt": "Alertness",
+                        "href": "FeatDisplay.aspx?ItemName=Alertness"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Casting",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Casting",
+                        "alt": "Combat Casting",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Casting"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Expertise",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Expertise",
+                        "alt": "Combat Expertise",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Expertise"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Reflexes",
+                        "alt": "Combat Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Dodge",
+                    "link": {
+                        "type": "link",
+                        "name": "Dodge",
+                        "alt": "Dodge",
+                        "href": "FeatDisplay.aspx?ItemName=Dodge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Flyby Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Flyby Attack",
+                        "alt": "Flyby Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Flyby%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Hover",
+                    "link": {
+                        "type": "link",
+                        "name": "Hover",
+                        "alt": "Hover",
+                        "href": "FeatDisplay.aspx?ItemName=Hover"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lunge",
+                    "link": {
+                        "type": "link",
+                        "name": "Lunge",
+                        "alt": "Lunge",
+                        "href": "FeatDisplay.aspx?ItemName=Lunge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Mobility",
+                    "link": {
+                        "type": "link",
+                        "name": "Mobility",
+                        "alt": "Mobility",
+                        "href": "FeatDisplay.aspx?ItemName=Mobility"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "deja vu",
+                            "links": [
+                                {
+                                    "type": "link",
+                                    "name": "deja vu",
+                                    "alt": "deja vu",
+                                    "href": "SpellDisplay.aspx?ItemName=deja%20vu"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": "Quicken Spell-Like Ability",
+                    "link": {
+                        "type": "link",
+                        "name": "Quicken Spell-Like Ability",
+                        "alt": "Quicken Spell-Like Ability",
+                        "href": "FeatDisplay.aspx?ItemName=Quicken%20Spell-Like%20Ability"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Stand Still",
+                    "link": {
+                        "type": "link",
+                        "name": "Stand Still",
+                        "alt": "Stand Still",
+                        "href": "FeatDisplay.aspx?ItemName=Stand%20Still"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 25
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Diplomacy",
+                        "value": 25
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 36
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 28
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (arcana)",
+                        "value": 23
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (dungeoneering, planes)",
+                        "value": 18
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (history)",
+                        "value": 24
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 37
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 37
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spellcraft",
+                        "value": 23
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 20
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Ancient Osiriani"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Azlanti"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Cyclops"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Thassilonian"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #126: Beyond the Veiled Past",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #126: Beyond the Veiled Past pg. 86",
+                "alt": "Pathfinder #126: Beyond the Veiled Past pg. 86",
+                "href": "http://paizo.com/products/btpy9xf0?Pathfinder-Adventure-Path-126-Beyond-the-Veiled-Past%0D%0A"
+            },
+            "page": 86
+        }
+    ]
+}

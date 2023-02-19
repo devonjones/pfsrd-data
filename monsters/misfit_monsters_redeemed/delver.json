@@ -1,0 +1,410 @@
+{
+    "name": "Delver",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary<br/><b>Treasure</b> none or incidental"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Compression (Ex)</b> A delver\u2019s boneless body can squeeze through spaces that would normally exclude anything larger than a Medium creature; it does not need to make Escape Artist checks to pass through such spaces. When it squeezes through a 5-foot opening, its speed is reduced to 5 feet until it passes completely through.<br/><br/><b>Corrosive Slime (Ex)</b> The delver\u2019s skin is covered in an acidic slime that it uses to dissolve stone and defend against enemies. The slime deals 2d6 acid damage to flesh, 4d8 damage to metal, or 8d10 to stone or crystal. If the delver hits with a natural attack or grapple, it automatically adds its slime damage, and the slime continues to deal 2d6 damage per round for the next 2 rounds. Armor or clothing worn by a creature grappled by a delver takes the same amount of acid damage unless the wearer succeeds on a DC 22 Reflex saving throw. A quart or more of water can wash away the slime. Any weapon that strikes the delver takes slime damage, as does a creature grappling or attacking the delver with natural weapons (both Reflex half DC 22). The saves are Constitution-based.<br/><br/><b>Sculpt Stone (Ex)</b> A delver can secrete a weaker form of its slime from its tentacles that momentarily softens stone rather than destroying it, allowing the creature to reshape up to 25 cubic feet of stone as if using <i>stone shape</i> as a 15th-level caster. This ability has no effect on stone that is protected against acid. It can use this ability at will."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Delvers are enormous gastropods covered with corrosive slime and designed for burrowing through stone. Fifteen feet long and weighing several tons, they are most commonly encountered deep below ground, particularly near underground water sources. Surprisingly intelligent, these juggernauts exist to tunnel, surviving off metals\u2014 which they find intoxicating, and sometimes maddening\u2014 and leaving behind smooth, 10-foot-diameter passages."
+        }
+    ],
+    "html": "<i>This fleshy, slug-like creature has two long pseudopods that end in lumps of hard, callused flesh, and its whole body sizzles with acidic slime as it slides forward through melting stone.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Delver",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 7
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 21
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "tremorsense 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Aberration",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "earth"
+                }
+            ],
+            "size": "Huge",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "9",
+            "xp": 6400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 23,
+                "touch": 12,
+                "flat-footed": 19,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+11 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 12
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 10
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/piercing or slashing",
+                    "conjunction": "or",
+                    "damage_types": [
+                        "piercing",
+                        "slashing"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "acid"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "burrow 10 ft.",
+                        "movement_type": "burrow",
+                        "value": 10
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "slams",
+                    "bonus": [
+                        16
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6+9"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "corrosive slime"
+                        }
+                    ]
+                }
+            ],
+            "space": "15 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "corrosive slime"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 9
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 20
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "can't be tripped"
+                    }
+                ],
+                "value": 34
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 28,
+            "dex": 19,
+            "con": 22,
+            "int": 15,
+            "wis": 15,
+            "cha": 10,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Alertness",
+                    "link": {
+                        "type": "link",
+                        "name": "Alertness",
+                        "alt": "Alertness",
+                        "href": "FeatDisplay.aspx?ItemName=Alertness"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Blind-Fight",
+                    "link": {
+                        "type": "link",
+                        "name": "Blind-Fight",
+                        "alt": "Blind-Fight",
+                        "href": "FeatDisplay.aspx?ItemName=Blind-Fight"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Great Fortitude",
+                    "link": {
+                        "type": "link",
+                        "name": "Great Fortitude",
+                        "alt": "Great Fortitude",
+                        "href": "FeatDisplay.aspx?ItemName=Great%20Fortitude"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (dungeoneering)",
+                        "value": 17
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (local)",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (nature)",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 21
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 16
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": -8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 17
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+8 Stealth in rocky areas"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Aklo"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Terran"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Undercommon"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "compression"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "sculpt stone"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Misfit Monsters Redeemed",
+            "link": {
+                "type": "link",
+                "name": "Misfit Monsters Redeemed pg. 15",
+                "alt": "Misfit Monsters Redeemed pg. 15",
+                "href": "http://paizo.com/store/downloads/pathfinder/pathfinderChronicles/pathfinderRPG/v5748btpy8gnj"
+            },
+            "page": 15
+        }
+    ]
+}

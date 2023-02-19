@@ -1,0 +1,343 @@
+{
+    "name": "Gray Render",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate marshes<br/><b>Organization</b> solitary (plus bonded creatures if any)<br/><b>Treasure</b> incidental"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Double Damage Against Objects (Ex)</b> A gray render that makes a full attack against an object or structure deals double damage."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Standing over 9 feet tall and weighing in excess of 4,000 pounds, a gray render is a solitary and savage predator. Renders are gifted with immense strength, and some reports claim to have witnessed a gray render uprooting a fully grown tree and tearing it to splinters in order to catch prey hiding within. Gray renders actively avoid forming groups or communities with their own kind, and perhaps only tolerate the presence of other renders when it is time to mate. Some sages claim they are asexual, but it is more likely they are hermaphrodites able to self-fertilize, and reproduce only rarely.<br/><br/>Despite its solitary existence, a gray render often develops an affectionate bond with other creatures, typically a herd of herbivores or a small tribe of humanoids, but in some cases a solitary denizen of its swamp. The render acts as a guardian for this creature or creatures, never straying more than a mile away, running to protect them if they are attacked, and providing an offering of meat once each day, as might a domesticated cat. A gray render never harms its protected creatures, and retreats in confusion if they attack it. Most animal \u201cpets\u201d grow to accept its presence, and primitive humanoid \u201cpets\u201d often believe their guardian is a sign of favor from the gods. A render\u2019s bond may last from a few months to as long as 10 years, after which it wanders to a new territory and ignores its former favorites.<br/><br/>Renders are generally not malicious, and only attack if hungry or if they or their pets are threatened. A render protecting its pets fights to the death."
+        }
+    ],
+    "html": "<i>This hulking beast has slick, gray, hairless skin. Its numerous yellow eyes and wide toothy maw are its only facial features.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Gray Render",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 13
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "8",
+            "xp": 4800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 21,
+                "touch": 10,
+                "flat-footed": 20,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+11 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 13
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 7
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        14
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6+7"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        15
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+7"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "2 claws"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1d8+10"
+                        }
+                    ],
+                    "name": "rend"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 8
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+20 grapple"
+                    }
+                ],
+                "value": 16
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 27
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 25,
+            "dex": 13,
+            "con": 24,
+            "int": 3,
+            "wis": 14,
+            "cha": 8,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Awesome Blow",
+                    "link": {
+                        "type": "link",
+                        "name": "Awesome Blow",
+                        "alt": "Awesome Blow",
+                        "href": "FeatDisplay.aspx?ItemName=Awesome%20Blow"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Bull Rush",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Bull Rush",
+                        "alt": "Improved Bull Rush",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Bull%20Rush"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "claw"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (claw)",
+                        "alt": "Weapon Focus (claw)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 13
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 6
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Perception"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Giant"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "double damage against objects"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 2",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 2 pg. 140",
+                "alt": "Bestiary 2 pg. 140",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy8hif"
+            },
+            "page": 140
+        }
+    ]
+}

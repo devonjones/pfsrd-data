@@ -1,0 +1,501 @@
+{
+    "name": "Shadow Collector",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, pair, or gang (3\u20138)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>No Shadow (Ex)</b> A shadow collector casts no shadow of its own, but instead casts any one of the stolen shadows it possesses.<br/><b>Steal Shadow (Su)</b> A shadow collector automatically steals the shadow of any incorporeal or living creature destroyed, incapacitated, or killed by its claw attack. A shadow collector can also steal a living corporeal creature\u2019s shadow with the steal combat maneuver; the shadow doesn\u2019t count as fastened to its owner. Until the shadow is returned, the victim has no shadow or reflection and gains 2 permanent negative levels. These negative levels can\u2019t be removed otherwise, even with magic that usually removes negative levels. When a shadow collector steals a shadow, it gains 2 shadow points. A shadow collector must expend 1 shadow point to use any of its spell-like abilities. A shadow collector generally begins an encounter with 1d3+1 shadow points. A shadow collector can release a stolen shadow as a standard action. A creature can touch the shadow collector to regain its stolen shadow, as long as the shadow collector is helpless or dead. A successful <i>break enchantment</i> (DC 23) can also restore a target\u2019s shadow.<br/><b>Tear Shadow (Su)</b> A shadow collector\u2019s claws strike as <i>ghost</i> touch weapons and, in addition to their normal damage, deal 1d6 points of Charisma damage to incorporeal creatures. This damage destroys a creature if it equals or exceeds the creature\u2019s actual Charisma score."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Shadow collectors feed on memories and regrets sifted from shadows. They often weave mortal shadows into certain magic items such as cloaks and gloves. Some shadow collectors con mortals into selling their shadows or resort to blatant theft; others prowl the Plane of Shadow and the Ethereal Plane for shadows that are already lost.<br/><br/> Shadow collectors favor spaces like the edges of forests and foothills for the varied lighting and for the numerous places where they can f lank marks from hiding or surprise them with pits created by <i>shadow conjuration.</i><br/><br/> A typical shadow collector stands over 3 feet tall and weighs 40 pounds."
+        }
+    ],
+    "html": "<i>Shadows drip from the hands of this small, humanoid figure. Massive ears and elaborate eyebrows frame her youthful features.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Shadow Collector",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 7
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 18
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Fey",
+            "size": "Small",
+            "alignment": "Chaotic Neutral",
+            "alignment_text": "CN",
+            "cr": "8",
+            "xp": 4800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 21,
+                "touch": 19,
+                "flat-footed": 13,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+7 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 dodge"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 15
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/cold iron",
+                    "damage_types": [
+                        "cold iron"
+                    ]
+                }
+            ],
+            "sr": {
+                "type": "stat_block_section",
+                "subtype": "sr",
+                "value": 19
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "40 ft.",
+                        "movement_type": "walk",
+                        "value": 40
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        15
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+2"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "sneak attack +3d6"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "steal shadow"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "tear shadow"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dancing lights"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "disguise self"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "major image (DC 17)"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "shadow evocation",
+                                        "spell_dc": 19,
+                                        "modifiers": [
+                                            {
+                                                "type": "stat_block_section",
+                                                "subtype": "modifier",
+                                                "name": "simulating leashed shackles only"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "shadow step"
+                                    }
+                                ],
+                                "count_text": "At will",
+                                "frequency": "At will"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "shadow conjuration",
+                                        "spell_dc": 18
+                                    }
+                                ],
+                                "count_text": "3/day",
+                                "count": 3,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "shadow evocation",
+                                        "spell_dc": 19
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "shadow walk"
+                                    }
+                                ],
+                                "count_text": "1/day",
+                                "count": 1,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 12,
+                        "concentration": 16
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 6
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+14 steal"
+                    }
+                ],
+                "value": 12
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "27 vs. steal"
+                    }
+                ],
+                "value": 25
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 14,
+            "dex": 24,
+            "con": 19,
+            "int": 15,
+            "wis": 17,
+            "cha": 18,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Agile Maneuvers",
+                    "link": {
+                        "type": "link",
+                        "name": "Agile Maneuvers",
+                        "alt": "Agile Maneuvers",
+                        "href": "FeatDisplay.aspx?ItemName=Agile%20Maneuvers"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Expertise",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Expertise",
+                        "alt": "Combat Expertise",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Expertise"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Dodge",
+                    "link": {
+                        "type": "link",
+                        "name": "Dodge",
+                        "alt": "Dodge",
+                        "href": "FeatDisplay.aspx?ItemName=Dodge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Steal",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Steal",
+                        "alt": "Improved Steal",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Steal"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Mobility",
+                    "link": {
+                        "type": "link",
+                        "name": "Mobility",
+                        "alt": "Mobility",
+                        "href": "FeatDisplay.aspx?ItemName=Mobility"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Spring Attack"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Weapon Finesse",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Finesse",
+                        "alt": "Weapon Finesse",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Finesse"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "claw"
+                        }
+                    ],
+                    "name": "Weapon Focus"
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 19
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 11
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Diplomacy",
+                        "value": 19
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Escape Artist",
+                        "value": 22
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (arcana, planes)",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 18
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sleight of Hand",
+                        "value": 22
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 26
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Aklo"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Sylvan"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "no shadow"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 5",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 5 pg. 228",
+                "alt": "Bestiary 5 pg. 228",
+                "href": "http://paizo.com/products/btpy9g9x?Pathfinder-Roleplaying-Game-Bestiary-5%0D%0A"
+            },
+            "page": 228
+        }
+    ]
+}

@@ -1,0 +1,323 @@
+{
+    "name": "Capramace",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate plains<br/><b>Organization</b> solitary, pack (2-11), or herd (12-25)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Disease (Su)</b><i>Waste Trembles</i>: Bite\u2014injury; <i>save</i> Fort DC 18; <i>onset</i> 1d3 days; <i>frequency</i> 1/day; <i>effect</i> 1d3 Str and 1d3 Dex damage, target must succeed at a second Fortitude save or 1 point of each type of ability damage is drain instead; <i>cure</i> 2 consecutive saves\u2014the secondary save to keep damage from becoming drain does not count toward this requirement. The save DC is Constitution-based.<br/><br/><b>Rage Call (Su)</b> Once per day as a standard action, a capramace can open its mouth and emit a horrible, ear-piercing scream to call for its herd. Maintaining a rage call on any round after the first round is a free action, and there is no limit to the duration of a sustained rage call. Non-capramaces within 120 feet that fail a DC 18 Fortitude saving throw are deafened as long as the capramace maintains its call and for 1d4 minutes afterward.<br/><br/>Any other capramaces within 1 mile can hear this high-pitched cry regardless of external noise conditions, and instinctively react by sprinting to the capramace in need, continuing to move as fast as possible to the capramace as long as it maintains its rage call. A capramace moving toward the source of a rage call is treated as though it possesses the Run feat. Any capramace that comes within 60 feet of another capramace\u2019s rage call goes wild with fear and anger, attacking the nearest non-capramace creature in sight for as long as the rage call lasts.<br/><br/>Sound-mitigating effects such as <i>silence</i> can prevent a capramace from performing its rage call, as can effects that suffocate a capramace. Similarly, a capramace with the deafened condition cannot be affected by the rage call of another capramace. The save DC is Constitution-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "While the capramaces\u2019 exact origins are unknown, many legends hold them to be abominations resulting from some magical combination of goat and human. Certainly their humanoid shape suggests such a melding, although they show no signs of humanoid intelligence. Farmers who find their fields beset by capramaches must be careful not to startle them, lest their terrible, deafening screams call more of these monstrosities to their aid. Brave inhabitants of remote settlements sometimes entice capramaces into service as work animals, but most people regard this a foolish endeavor at best. While these creatures are both strong and hardy, they are difficult to control, and even the slightest mistreatment can cause them to turn on their would-be masters with little warning."
+        }
+    ],
+    "html": "<i>This twisted amalgamation of human and goat is covered in matted fur, its teeth sharp and eyes eerily blank.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Capramace",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 10
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Aberration",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "7",
+            "xp": 3200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 18,
+                "touch": 10,
+                "flat-footed": 17,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+8 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "50 ft.",
+                        "movement_type": "walk",
+                        "value": 50
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        13
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6+8"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "disease"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "hooves",
+                    "bonus": [
+                        8
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+4"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "disease"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "rage call"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 6
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+17 bull rush"
+                    }
+                ],
+                "value": 15
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "28 vs. bull rush"
+                    }
+                ],
+                "value": 26
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 26,
+            "dex": 13,
+            "con": 18,
+            "int": 1,
+            "wis": 14,
+            "cha": 5,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Great Fortitude",
+                    "link": {
+                        "type": "link",
+                        "name": "Great Fortitude",
+                        "alt": "Great Fortitude",
+                        "href": "FeatDisplay.aspx?ItemName=Great%20Fortitude"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Bull Rush",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Bull Rush",
+                        "alt": "Improved Bull Rush",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Bull%20Rush"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lightning Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Lightning Reflexes",
+                        "alt": "Lightning Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Lightning%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 15
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 10
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 5",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 5 pg. 50",
+                "alt": "Bestiary 5 pg. 50",
+                "href": "http://paizo.com/products/btpy9g9x?Pathfinder-Roleplaying-Game-Bestiary-5%0D%0A"
+            },
+            "page": 50
+        },
+        {
+            "type": "source",
+            "name": "Wardens of the Reborn Forge",
+            "link": {
+                "type": "link",
+                "name": "Wardens of the Reborn Forge pg. 61",
+                "alt": "Wardens of the Reborn Forge pg. 61",
+                "href": "http://paizo.com/products/btpy92lr?Pathfinder-Module-Wardens-of-the-Reborn-Forge"
+            },
+            "page": 61
+        }
+    ]
+}

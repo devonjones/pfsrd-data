@@ -1,0 +1,337 @@
+{
+    "name": "Aurosrath",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or entombment (3-12)<br/><b>Treasure</b> double"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Smeltable (Ex)</b> When an aurosrath takes 5 or more points of fire damage in a round, a significant amount of its constituent coins melts into molten gold. The aurosrath gains the following abilities for 1d4 rounds plus 1 additional round for every 5 additional points of fire damage it took that round. <ul> <li>Speed is reduced to 20 feet.</li> <li>DR changes to DR/\u2014.</li> <li>Slam attacks deal an additional 1d6 points of fire damage.</li> <li>Creatures grappled by the aurosrath reduce the number of rounds they can hold their breath by 3 instead of 1 at the end of each round.</li> </ul><br/><br/><b>Suffocating Wealth (Ex)</b> A creature affected by an aurosrath\u2019s strangle ability cannot breathe. A strangled creature must hold its breath as it is suffocated by the flood of coins that spill from the undead\u2019s open mouth and onto the victim\u2019s face."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Aurosraths arise from individuals who die tragic deaths caused by immense wealth, such as an explorer who would rather die beneath a collapsing tomb\u2019s roof than forfeit the hoard of gold he\u2019s just discovered. The avarice that motivated these people in life continues into undeath as negative energy fuses their souls with the riches they so desperately clung to, transforming them into horrific walking treasure troves that hunger for ever more gold even as it overflows from their bulging bodies.<br/><br/> The average aurosrath stands 15 feet tall and weighs almost 1,100 pounds."
+        }
+    ],
+    "html": "<i>This obscenely bloated and stretched human corpse jingles as it moves. Coins tumble from its mouth and from the exposed wounds that cover its hideously distended body.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Aurosrath",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 11
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "size": "Large",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "5",
+            "xp": 1600
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 19,
+                "touch": 10,
+                "flat-footed": 18,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+9 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "smeltable"
+                }
+            ],
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/slashing",
+                    "damage_types": [
+                        "slashing"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "undead traits"
+                }
+            ],
+            "resistances": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "resistance",
+                    "value": 10,
+                    "name": "electricity"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "slams",
+                    "bonus": [
+                        8
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+4"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "strangle"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "suffocating wealth"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 5
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+16 grapple"
+                    }
+                ],
+                "value": 10
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "23 vs. grapple"
+                    }
+                ],
+                "value": 21
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 18,
+            "dex": 13,
+            "con": null,
+            "int": 11,
+            "wis": 12,
+            "cha": 17,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Grapple",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Grapple",
+                        "alt": "Improved Grapple",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Grapple"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "slam"
+                        }
+                    ],
+                    "name": "Improved Natural Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Natural Attack (slam)",
+                        "alt": "Improved Natural Attack (slam)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Natural%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 14
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 13
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 11
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 7
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Druma, Profit and Prophecy",
+            "link": {
+                "type": "link",
+                "name": "Druma, Profit and Prophecy pg. 56",
+                "alt": "Druma, Profit and Prophecy pg. 56",
+                "href": "https://paizo.com/products/btq01zow"
+            },
+            "page": 56
+        }
+    ]
+}

@@ -1,0 +1,307 @@
+{
+    "name": "Wight",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, gang (3\u20136), or pack (7\u201312)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Create Spawn (Su)</b> Any humanoid creature that is slain by a wight becomes a wight itself in only 1d4 rounds. Spawn so created are less powerful than typical wights, and suffer a \u20132 penalty on all d20 rolls and checks, as well as \u20132 hp per HD. Spawn are under the command of the wight that created them and remain enslaved until its death, at which point they lose their spawn penalties and become full-fledged and free-willed wights. They do not possess any of the abilities they had in life.<br/><br/><b>Resurrection Vulnerability (Su)</b> A <i>raise dead </i>or similar spell cast on a wight destroys it (Will negates). Using the spell in this way does not require a material component."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Wights are humanoids who rise as undead due to necromancy, a violent death, or an extremely malevolent personality. In some cases, a wight arises when an evil undead spirit permanently bonds with a corpse, often the corpse of a slain warrior. They are barely recognizable to those who knew them in life; their flesh is twisted by evil and undeath, the eyes burn with hatred, and the teeth become beast-like. In some ways, a wight bridges the gap between a ghoul and a spectre\u2014a warped animated corpse whose touch steals living energy.<br/><br/>As undead, wights do not need to breathe, so they are sometimes found underwater, though they are not particularly good swimmers unless they were originally swimming creatures such as aquatic elves or merfolk. Underwater wights prefer low-ceilinged caves where their limited swimming isn\u2019t as much of a liability.<br/><br/>The wight presented here is a typical example of its kind, but sometimes when a wight creates spawn from particularly unusual humanoids, the resulting wights are quite different in power, such as the following three variants.<br/><br/><b>Brute Wight (CR 5)</b>: Giants that are killed by wights become hunchbacked, simple-minded undead. Brute wights are giant advanced wights, but cannot create spawn of their own.<br/><br/><b>Cairn Wight (CR 4)</b>: Some societies deliberately create these specialized wights to serve as guardians for barrows or other burial sites. A cairn wight is an advanced wight that fights with a weapon, typically a sword, that channels its energy drain attack and affects creatures damaged by the weapon as if they had been struck by the wight\u2019s slam attack.<br/><br/><b>Frost Wight (CR 4)</b>: Wights created in cold environments sometimes become pale undead with blue-white eyes and ice in their hair. Frost wights have the cold subtype and their slam attacks deal 1d6 cold damage in addition to the normal effects. A creature touching a frost wight with natural weapons or unarmed strikes takes 1d6 cold damage."
+        }
+    ],
+    "html": "<i>The flesh of this walking corpse is rotting and putrid, its body skeletal in places and its eye sockets glowing with red light.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Wight",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 11
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "size": "Medium",
+            "alignment": "Lawful Evil",
+            "alignment_text": "LE",
+            "cr": "3",
+            "xp": 800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 11,
+                "flat-footed": 14,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "undead traits"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "resurrection vulnerability"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "slam",
+                    "bonus": [
+                        4
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+1"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "energy drain"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "create spawn"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1 level"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 14"
+                        }
+                    ],
+                    "name": "energy drain"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 4
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 15
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 12,
+            "dex": 12,
+            "con": null,
+            "int": 11,
+            "wis": 13,
+            "cha": 15,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Blind-Fight",
+                    "link": {
+                        "type": "link",
+                        "name": "Blind-Fight",
+                        "alt": "Blind-Fight",
+                        "href": "FeatDisplay.aspx?ItemName=Blind-Fight"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Perception"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Perception)",
+                        "alt": "Skill Focus (Perception)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (religion)",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 11
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 16
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+8 Stealth"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "create spawn"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder RPG Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder RPG Bestiary pg. 276",
+                "alt": "Pathfinder RPG Bestiary pg. 276",
+                "href": "http://paizo.com/products/btpy8auu?Pathfinder-Roleplaying-Game-Bestiary"
+            },
+            "page": 276
+        }
+    ]
+}

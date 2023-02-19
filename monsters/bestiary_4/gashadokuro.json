@@ -1,0 +1,506 @@
+{
+    "name": "Gashadokuro",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Breath Weapon (Su)</b> A gashadokuro can breathe bone shards as a standard action.<br/><br/><b>Corpse Consumption (Su)</b> A gashadokuro that kills creature by using its swallow whole special ability automatically consumes its victim\u2019s body and regains a number of hit points equal to the victim\u2019s Constitution score. Consumed creatures cannot be resurrected by any effect short of a <i>miracle</i> or <i>wish</i> spell until the gashadokuro is destroyed.<br/><br/><b>Starvation Aura (Su)</b> A gashadokuro emits a powerful aura that causes all creatures within range to feel the intense pains of starvation. Each creature within 60 feet must succeed at a DC 24 Fortitude save or be fatigued and succumb to the supernatural starvation of the gashadokuro, taking 2d6 points of nonlethal damage at the end of its turn each round it remains in the aura. Even after leaving the area or slaying the gashadokuro, an affected creature continues to starve and cannot heal from the nonlethal damage dealt by this ability until it consumes food (<i>Pathfinder RPG Core Rulebook</i> 444)."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Gashadokuros are enormous skeletons that come into being as a result of mass starvation. The victims of such a tragedy fuse together into an undead colossus that continues to hunger even in death. A gashadokuro uses its feral instincts to hunt living creatures, forever seeking to sate its ineradicable, collective memory of starvation.<br/><br/>A typical gashadokuro is 30 feet tall and weighs up to 5,000 pounds."
+        }
+    ],
+    "html": "<i>The bones and skulls of countless smaller creatures dribble from the joints and rib cage of this massive skeleton.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Gashadokuro",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 4
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 20
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "starvation",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "60 ft.",
+                    "range": 60,
+                    "unit": "feet"
+                },
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 25",
+                    "dc": 25
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "size": "Huge",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "13",
+            "xp": 25600
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 28,
+                "touch": 8,
+                "flat-footed": 28,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+20 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 14
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "channel resistance +4"
+                }
+            ],
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/bludgeoning",
+                    "damage_types": [
+                        "bludgeoning"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "undead traits"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        22
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d8+10"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        23
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6+10"
+                        }
+                    ]
+                }
+            ],
+            "space": "15 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "15 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "30-ft. cone"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "12d6 bludgeoning damage"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Reflex DC 24 half"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "usable every 1d4 rounds"
+                        }
+                    ],
+                    "name": "breath weapon"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "corpse consumption"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "6d6 bludgeoning damage"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "AC 20"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "18 hp"
+                        }
+                    ],
+                    "name": "swallow whole"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 14
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+28 bull rush"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+30 grapple"
+                    }
+                ],
+                "value": 26
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "38 vs. bull rush"
+                    }
+                ],
+                "value": 36
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 30,
+            "dex": 11,
+            "con": null,
+            "int": 6,
+            "wis": 17,
+            "cha": 21,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Awesome Blow",
+                    "link": {
+                        "type": "link",
+                        "name": "Awesome Blow",
+                        "alt": "Awesome Blow",
+                        "href": "FeatDisplay.aspx?ItemName=Awesome%20Blow"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Cleave",
+                    "link": {
+                        "type": "link",
+                        "name": "Cleave",
+                        "alt": "Cleave",
+                        "href": "FeatDisplay.aspx?ItemName=Cleave"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Great Cleave",
+                    "link": {
+                        "type": "link",
+                        "name": "Great Cleave",
+                        "alt": "Great Cleave",
+                        "href": "FeatDisplay.aspx?ItemName=Great%20Cleave"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Bull Rush",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Bull Rush",
+                        "alt": "Improved Bull Rush",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Bull%20Rush"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "claw"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (claw)",
+                        "alt": "Improved Critical (claw)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Intimidating Prowess",
+                    "link": {
+                        "type": "link",
+                        "name": "Intimidating Prowess",
+                        "alt": "Intimidating Prowess",
+                        "href": "FeatDisplay.aspx?ItemName=Intimidating%20Prowess"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Vital Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Vital Strike",
+                        "alt": "Vital Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Vital%20Strike"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "claw"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (claw)",
+                        "alt": "Weapon Focus (claw)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 23
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 32
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 20
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "can\u2019t speak"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 4",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 4 pg. 121",
+                "alt": "Bestiary 4 pg. 121",
+                "href": "http://paizo.com/products/btpy91ds?Pathfinder-Roleplaying-Game-Bestiary-4"
+            },
+            "page": 121
+        },
+        {
+            "type": "source",
+            "name": "Pathfinder #54: The Empty Throne",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #54: The Empty Throne pg. 84",
+                "alt": "Pathfinder #54: The Empty Throne pg. 84",
+                "href": "http://paizo.com/pathfinder/v5748btpy8mh1"
+            },
+            "page": 84
+        }
+    ]
+}

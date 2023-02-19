@@ -1,0 +1,377 @@
+{
+    "name": "Ice Troll",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> cold mountains or underground<br/><b>Organization</b> solitary or band (3\u20136)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Ice trolls are somewhat smaller than normal trolls, but they possess greater intelligence and cunning and are just as voraciously hungry. They display the typical hunched posture of trolls, combined with long arms tipped with sharp claws and the distinctive troll underbite. Like normal trolls, ice trolls possess amazing regenerative powers that enable them to recover from almost any wound. Unlike most trolls, ice trolls often use weapons in battle, but in the heat of combat, they often cast aside weapons in favor of their rending claws. An ice troll stands about 10 feet tall and weighs up to 900 pounds.<br/><br/>Because of their greater intellects, ice trolls sometimes work as mercenaries, and often serve as soldiers in monstrous armies. They frequently ally with frost giants, and may even be found among northern barbarian tribes, as long as they are well fed and well paid.<br/><br/>Ice trolls enjoy the taste of human flesh, and those not working with humans frequently set traps near civilized areas to catch their favorite prey. They will also raid isolated settlements for food, often bringing captured humans back to their icy lairs, where the unfortunate victims are caged and fattened up before finally being devoured by the voracious trolls.<br/><br/>In combat, ice trolls are more cautious than normal trolls. They do not normally rush headlong into battle, instead focusing on weaker foes or those bearing fire. They do not hesitate to attack opponents armed with fire, but work together to defeat such enemies before they can bring their dangerous weapons to bear.<br/><br/>Ice troll society is more patriarchal than normal troll society, and while males may form gangs to hunt or raid, most ice trolls live in small family groups comprised of a male, a female, and their offspring."
+        }
+    ],
+    "html": "<i>This large creature has light blue-green skin and cold, piercing eyes. Dressed in rough furs, its tusked jaw juts forth in a long underbite.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Ice Troll",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 4
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 9
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "cold"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "giant"
+                }
+            ],
+            "size": "Large",
+            "alignment": "Chaotic Evil",
+            "alignment_text": "CE",
+            "family": "Troll",
+            "cr": "4",
+            "xp": 1200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 17,
+                "touch": 13,
+                "flat-footed": 13,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "cold"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerable to fire"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "battleaxe",
+                    "bonus": [
+                        7
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6+4"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+2"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "claw",
+                    "bonus": [
+                        2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+2"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        7
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+4"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        7
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+4"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "2 claws"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1d6+6"
+                        }
+                    ],
+                    "name": "rend"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 4
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 9
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 23
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 19,
+            "dex": 18,
+            "con": 16,
+            "int": 9,
+            "wis": 10,
+            "cha": 7,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Intimidating Prowess",
+                    "link": {
+                        "type": "link",
+                        "name": "Intimidating Prowess",
+                        "alt": "Intimidating Prowess",
+                        "href": "FeatDisplay.aspx?ItemName=Intimidating%20Prowess"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lightning Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Lightning Reflexes",
+                        "alt": "Lightning Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Lightning%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Perception"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Perception)",
+                        "alt": "Skill Focus (Perception)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 4
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Giant"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 2",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 2 pg. 271",
+                "alt": "Bestiary 2 pg. 271",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy8hif"
+            },
+            "page": 271
+        }
+    ]
+}

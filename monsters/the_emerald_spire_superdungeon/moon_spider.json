@@ -1,0 +1,376 @@
+{
+    "name": "Moon Spider",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate forest<br/><b>Organization</b> solitary, pair, or colony (3\u20138)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Moon Spider Webs (Ex)</b> The webs created by a moon spider are especially strong and sticky, and the creatures weave net-like snares to trap their enemies. A moon spider\u2019s web attack is a ranged touch attack with a +6 racial bonus to the save DC needed to burst or escape the web. The spider also holds a trailing tether that prevents an entangled creature from moving away from the spider until it gets free.<br/><br/>Moon spiders frequently set web traps throughout areas where they live. Anyone who enters a square of moon spider web must succeed at a Reflex save (DC 13) or become entangled as though it had been hit by a web attack (though the spider doesn\u2019t have a tether to it). If a creature that is already entangled enters a square of moon spider web, it must save again or become grappled. The save DC is Constitution-based.<br/><br/>A moon spider\u2019s webs have 10 hit points and DR 5/slashing. A web that\u2019s set on fire takes an additional 1d6 points of fire damage each round until it\u2019s destroyed.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 5 rounds; <i>effect </i>1d3 Str; <i>cure </i>1 save."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Moon spiders are malevolent giant spiders that haunt the Echo Wood and other forests in the western vales of the Sellen River. They are far more intelligent than most of their arachnid kin; while they aren\u2019t as smart as humans, they possess a sly cunning and magical talents that make them much more dangerous than other giant spiders\u2014they even hunt cooperatively and share their kills.<br/><br/>Moon spiders are web-weavers, and often create huge traps of sticky webbing. A creature that enters a square of moon spider webbing can easily become entangled or grappled. Typically, a moon spider uses its <i>obscuring mist</i> to hide the extent of its webs when prey approaches, using its tremorsense to keep track of its prey\u2019s struggles.<br/><br/>Moon spiders do not speak any humanoid language, but communicate with each other in clicks and taps of their legs on the ground, and they can understand simple concepts in Common (which is useful when they\u2019re listening to prey)."
+        }
+    ],
+    "html": "<i>Pale and round-bodied, this giant spider is the size of a large dog. Its crimson eyes glitter with malign intelligence.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Moon Spider",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 10
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "tremorsense 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "family": "Spider",
+            "cr": "2",
+            "xp": 600
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 14,
+                "touch": 12,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "climb 30 ft.",
+                        "movement_type": "climb",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        4
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+1"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "poison"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "poison"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+11 ranged touch"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 19"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "10 hp"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DR 5/slashing"
+                        }
+                    ],
+                    "name": "web"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "obscuring mist"
+                                    }
+                                ],
+                                "count_text": "3/day",
+                                "count": 3,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "gaseous form"
+                                    }
+                                ],
+                                "count_text": "1/day",
+                                "count": 1,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 5,
+                        "concentration": 3
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 4
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 16
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 12,
+            "dex": 15,
+            "con": 14,
+            "int": 5,
+            "wis": 14,
+            "cha": 7,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "poison"
+                        }
+                    ],
+                    "name": "Ability Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Ability Focus (poison)",
+                        "alt": "Ability Focus (poison)",
+                        "href": "FeatDisplay.aspx?ItemName=Ability%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 21
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 10
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+16 Climb"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Perception"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Stealth"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "can\u2019t speak"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "moon spider webs"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "The Emerald Spire Superdungeon",
+            "link": {
+                "type": "link",
+                "name": "The Emerald Spire Superdungeon pg. 156",
+                "alt": "The Emerald Spire Superdungeon pg. 156",
+                "href": "http://paizo.com/products/btpy8yqx?Pathfinder-Module-The-Emerald-Spire-Superdungeon"
+            },
+            "page": 156
+        }
+    ]
+}

@@ -1,0 +1,292 @@
+{
+    "name": "Megapon Ant",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> warm plains<br/><b>Organization</b> solitary, pair, column (3-10)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Carry Off (Ex)</b> Megapon ants\u2019 carrying capacity is triple normal.<br/><br/><b>Poison (Ex)</b> Sting\u2014injury; <i>save</i> Fort DC 20; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d6 Str; <i>cure</i> 2 consecutive saves."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "These giant ants use pheromones to organize the complex work and protection of their colonies, identifying insects of their own or allied colonies and warding off intruders. They have a specialized physiology, including both enhanced pheromone glands and an especially wide, oversized head. The sheer size of its head allows a knight ant to block off entire tunnels within the hive in order to protect its fellow ants. It remains in place long enough to fend off invaders, even at the cost of its own life.<br/><br/>A knight ant is 10 feet long and weighs approximately 1,100 pounds. Its head is 7 feet across, and the flanges on the sides make it appear slightly concave."
+        }
+    ],
+    "html": "<i>This enormous ant has vicious mandibles and a dripping stinger, and looks large enough to devour a horse.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Megapon Ant",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": -1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Vermin",
+            "size": "Huge",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Ant",
+            "cr": "6",
+            "xp": 2400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 19,
+                "touch": 7,
+                "flat-footed": 19,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+12 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 12
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "mind-affecting effects"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "50 ft.",
+                        "movement_type": "walk",
+                        "value": 50
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "climb 20 ft.",
+                        "movement_type": "climb",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        10
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6+8"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "sting",
+                    "bonus": [
+                        10
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+8"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "poison"
+                        }
+                    ]
+                }
+            ],
+            "space": "15 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 4
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+18 grapple"
+                    }
+                ],
+                "value": 14
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "31 vs. trip"
+                    }
+                ],
+                "value": 23
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 26,
+            "dex": 8,
+            "con": 25,
+            "int": null,
+            "wis": 13,
+            "cha": 11,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Snatch",
+                    "link": {
+                        "type": "link",
+                        "name": "Snatch",
+                        "alt": "Snatch",
+                        "href": "FeatDisplay.aspx?ItemName=Snatch"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 16
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "carry off"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 5",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 5 pg. 27",
+                "alt": "Bestiary 5 pg. 27",
+                "href": "http://paizo.com/products/btpy9g9x?Pathfinder-Roleplaying-Game-Bestiary-5%0D%0A"
+            },
+            "page": 27
+        }
+    ]
+}

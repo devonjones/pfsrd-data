@@ -1,0 +1,231 @@
+{
+    "name": "Giant Bee",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate or warm plains <br/><b>Organization</b> solitary, group (2\u20135), or nest (6\u201319) <br/><b>Treasure</b> incidental"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Poison (Ex)</b> Sting\u2014injury; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save. <br/><br/><b>Vulnerable to Smoke (Ex)</b> Smoke from particularly smoky fires or effects (such as that created by a <i>pyrotechnics </i>spell) causes a giant bee to become nauseated if it fails a DC 14 Fortitude save. This condition persists as long as the giant bee remains in the smoke, plus 1d4 rounds."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Like their smaller cousins, giant bees fill their ecological niche by playing matchmaker for a vast array of flowering plant life. As a giant bee feeds on plant nectars, clumps of pollen attach to the coarse hairs covering its body and legs. <br/><br/>Giant bees grow to approximately 5 feet in length, with a similar wingspan. These creatures weigh 60 pounds and live in their adult form for nearly 10 years. Giant bees\u2019 stingers are not barbed like those of their diminutive counterparts, so these creatures can sting foes repeatedly and do not die after one sting."
+        }
+    ],
+    "html": "<i>Striking yellow and black markings and a coat of bristling hairs cover this immense bee. Its stinger is the size of a dagger blade. </i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Giant Bee",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Vermin",
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Bee",
+            "cr": "1",
+            "xp": 400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 13,
+                "touch": 12,
+                "flat-footed": 11,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "mind-affecting effects"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerable to smoke"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "good <br/>"
+                            }
+                        ],
+                        "name": "fly 60 ft.",
+                        "movement_type": "fly",
+                        "value": 60
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "sting",
+                    "bonus": [
+                        2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "poison"
+                        }
+                    ]
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 2
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 2
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "22 vs. trip"
+                    }
+                ],
+                "value": 14
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 11,
+            "dex": 14,
+            "con": 13,
+            "int": null,
+            "wis": 12,
+            "cha": 9,
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 6
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 2",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 2 pg. 43",
+                "alt": "Bestiary 2 pg. 43",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy8hif"
+            },
+            "page": 43
+        }
+    ]
+}

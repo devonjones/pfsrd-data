@@ -1,0 +1,326 @@
+{
+    "name": "Dust Digger",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> warm deserts <br/><b>Organization</b> solitary, pair, or colony (3\u201310) <br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Sinkhole (Ex) </b>A dust digger can burrow into sand, loose soil, or dirt to lie in ambush just under the surface. When it feels (via tremorsense) prey walk into a square it threatens, it can deflate its body as an immediate action, causing the sand and other loose soil above to shift and slide. All creatures who were standing in the dust digger\u2019s reach must make a DC 15 Reflex save or become entangled as long as they remain in the dust digger\u2019s reach. All creatures who were standing at least partially in the dust digger\u2019s actual space must make a DC 15 Reflex save or become entangled and fall prone\u2014if such a creature makes this save, it immediately moves to the closest adjacent unoccupied square. If this results in more than a 5-foot move, the creature moves that distance and then falls prone. The save DC is Strength-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Dust diggers most resemble mammoth starfish, with thick sandy-colored exoskeletons covered with rough, burr-like spines. Its five arms are long and thin, and covered with hundreds of barbed, tubular cilia that the creature uses to move as well at grab and grapple prey. At the fleshy center of the creature\u2019s body gapes a circular maw lined with large sharp teeth. <br/><br/>As ambush predators, dust diggers spend the majority of their lives buried beneath the sand, waiting patiently for prey to stumble over their ambush site. <br/><br/>Dust diggers are asexual. They reproduce by budding, splitting off young three to four times over the course of their 10-year lives\u2014smaller versions of themselves that must immediately move away from the parent to avoid being snatched up and eaten. Dust digger young are just over 4 feet across, and can move relatively quickly through sand (their burrow speed is 40 feet). Usually, a young dust digger travels at least a mile from its parent before it settles down to create its first ambush\u2014the amount of life in the region it has chosen as its new lair often determines whether the new dust digger thrives or starves to death, for once it digs its first ambush, it rarely moves more than a few hundred feet away over the course of its life."
+        }
+    ],
+    "html": "<i>A tremendous starfish-like creature emerges from the sand, its five long arms surrounding a circular toothy maw. </i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Dust Digger",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 4
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "tremorsense 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Aberration",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "4",
+            "xp": 1200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 16,
+                "touch": 9,
+                "flat-footed": 16,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+7 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "10 ft.",
+                        "movement_type": "walk",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "burrow 20 ft.",
+                        "movement_type": "burrow",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        5
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+3"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 5,
+                    "name": "tentacles",
+                    "bonus": [
+                        3
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+1"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "sinkhole"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "2d8+4 bludgeoning"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "AC 13"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "4 hp"
+                        }
+                    ],
+                    "name": "swallow whole"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 7
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 17
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 17,
+            "dex": 11,
+            "con": 18,
+            "int": 2,
+            "wis": 11,
+            "cha": 10,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Multiattack",
+                    "link": {
+                        "type": "link",
+                        "name": "Multiattack",
+                        "alt": "Multiattack",
+                        "href": "FeatDisplay.aspx?ItemName=Multiattack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Stealth"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Stealth)",
+                        "alt": "Skill Focus (Stealth)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 5,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+13 in ambush"
+                            }
+                        ]
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+8 Stealth in ambush"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 2",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 2 pg. 112",
+                "alt": "Bestiary 2 pg. 112",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy8hif"
+            },
+            "page": 112
+        }
+    ]
+}

@@ -1,0 +1,267 @@
+{
+    "name": "Stirge",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate and warm swamps<br/><b>Organization</b> solitary, colony (2\u20134), flock (5\u20138), storm (9\u201314), or swarm (15\u201340)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Attach (Ex)</b> When a stirge hits with a touch attack, its barbed legs latch onto the target, anchoring it in place. An attached stirge is effectively grappling its prey. The stirge loses its Dexterity bonus to AC and has an AC of 12, but holds on with great tenacity and inserts its proboscis into the grappled target\u2019s flesh. A stirge has a +8 racial bonus to maintain its grapple on a foe once it is attached. An attached stirge can be struck with a weapon or grappled itself\u2014if its prey manages to win a grapple check or Escape Artist check against it, the stirge is removed.<br/><br/><b>Blood Drain (Ex)</b> A stirge drains blood at the end of its turn if it is attached to a foe, inflicting 1 point of Constitution damage. Once a stirge has dealt 4 points of Constitution damage, it detaches and flies off to digest the meal. If its victim dies before the stirge\u2019s appetite has been sated, the stirge detaches and seeks a new target.<br/><br/><b>Diseased (Ex)</b> Due to the stagnant swamps in which they live and their contact with the blood of numerous creatures, stirges are harbingers of disease. Any creature subjected to a stirge\u2019s blood drain attack has a 10% chance of being exposed to filth fever, blinding sickness, or a similar disease (<i>Pathfinder RPG Core Rulebook </i>557). Once this check is made, the victim can no longer be infected by this particular stirge, though attacks by different stirges are resolved normally and may result in multiple illnesses."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Stirges are vicious, blood-drinking swamp pests that prey on wild animals, livestock, and unwary travelers. While weak individually, swarms of the creatures are capable of draining a man dry in minutes, leaving only a desiccated husk in their wake.<br/><br/>Closer to mammals than insects, stirges carry their bodies through the air on four fleshy wings, searching out warm-blooded prey. They are fond of hiding near watering holes and waiting for travelers to drop their guard, then swooping out to attach and drink their fill by thrusting their long feeding tubes into unprotected veins. After feeding they flap heavily off into the mud and reeds to lay their eggs and rest until hunger drives them to hunt again.<br/><br/>Stirges are usually 1 foot long, with a wingspan of twice that, and weigh just under a pound. Their coloration is rust-red or reddish-brown with a dirty yellow underbelly, though stirges that have not fed in some time are often pale pink, their color deepening as they gorge."
+        }
+    ],
+    "html": "<i>This insectoid creature has two pairs of bat wings, a tangle of thin legs, and a needle-sharp proboscis.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Stirge",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 4
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "size": "Tiny",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1/2",
+            "xp": 200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 16,
+                "touch": 16,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "10 ft.",
+                        "movement_type": "walk",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "average<br/>"
+                            }
+                        ],
+                        "name": "fly 40 ft.",
+                        "movement_type": "fly",
+                        "value": 40
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "touch",
+                    "bonus": [
+                        7
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "attach"
+                        }
+                    ]
+                }
+            ],
+            "space": "2-1/2 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "0 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "blood drain"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+11 grapple when attached"
+                    }
+                ],
+                "value": 3
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "17 vs. trip"
+                    }
+                ],
+                "value": 9
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 3,
+            "dex": 19,
+            "con": 10,
+            "int": 1,
+            "wis": 12,
+            "cha": 6,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Weapon Finesse",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Finesse",
+                        "alt": "Weapon Finesse",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Finesse"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 16
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "diseased"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder RPG Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder RPG Bestiary pg. 260",
+                "alt": "Pathfinder RPG Bestiary pg. 260",
+                "href": "http://paizo.com/products/btpy8auu?Pathfinder-Roleplaying-Game-Bestiary"
+            },
+            "page": 260
+        }
+    ]
+}

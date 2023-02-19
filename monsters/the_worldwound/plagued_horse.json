@@ -1,0 +1,333 @@
+{
+    "name": "Plagued Horse",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or herd (3\u201330)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Disease (Ex)</b> Demon Plague: Bite\u2014injury; <i>save</i> Fortitude DC 13; <i>onset</i> 1 day; <i>frequency</i> 1/day; <i>effect</i> 1d3 Constitution damage and 1d6 Wisdom damage, victim is fatigued if it takes any ability damage from the disease, and certain creatures slain by demon plague rise as plagued beasts; <i>cure</i> 3 consecutive saves."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "When animals are stricken with demon plague, they may arise as undead and further spread the disease. Some demons and cultists are fond of using plagued horses as mounts."
+        }
+    ],
+    "html": "<i>The rotting skeleton and muscles of this fanged, decaying horse seem barely able to hold together.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Plagued Horse",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 3
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 6
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "augmented animal"
+                }
+            ],
+            "size": "Large",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "family": "Plagued Beast",
+            "cr": "2",
+            "xp": 600
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 14,
+                "touch": 12,
+                "flat-footed": 11,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "channel resistance +2"
+                }
+            ],
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/slashing",
+                    "damage_types": [
+                        "slashing"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "cold"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "undead traits"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "50 ft.",
+                        "movement_type": "walk",
+                        "value": 50
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        5
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+5"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "disease"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "hooves",
+                    "bonus": [
+                        0
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+2"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "disease"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 7
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "24 vs. trip"
+                    }
+                ],
+                "value": 20
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 20,
+            "dex": 16,
+            "con": null,
+            "int": 2,
+            "wis": 13,
+            "cha": 15,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Endurance",
+                    "link": {
+                        "type": "link",
+                        "name": "Endurance",
+                        "alt": "Endurance",
+                        "href": "FeatDisplay.aspx?ItemName=Endurance"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Run",
+                    "link": {
+                        "type": "link",
+                        "name": "Run",
+                        "alt": "Run",
+                        "href": "FeatDisplay.aspx?ItemName=Run"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 6
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "docile"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 5",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 5 pg. 194",
+                "alt": "Bestiary 5 pg. 194",
+                "href": "http://paizo.com/products/btpy9g9x?Pathfinder-Roleplaying-Game-Bestiary-5%0D%0A"
+            },
+            "page": 194
+        },
+        {
+            "type": "source",
+            "name": "The Worldwound",
+            "link": {
+                "type": "link",
+                "name": "The Worldwound pg. 56",
+                "alt": "The Worldwound pg. 56",
+                "href": "http://paizo.com/products/btpy8yvk?Pathfinder-Campaign-Setting-The-Worldwound"
+            },
+            "page": 56
+        }
+    ]
+}

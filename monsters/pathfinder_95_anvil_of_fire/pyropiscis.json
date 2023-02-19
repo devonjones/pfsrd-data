@@ -1,0 +1,433 @@
+{
+    "name": "Pyropiscis",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> warm mountains or underground<br/><b>Organization</b> solitary, pack (3\u20136), or school (12\u201320)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Hibernation (Ex)</b> A pyropiscis can enter a state of hibernation for an indefinite period of time in order to survive longer periods away from a source of lava. Entering a state of hibernation takes 1 hour, during which the pyropiscis encases itself in a thick layer of igneous stone. While hibernating, a pyropiscis doesn\u2019t need to breathe, drink, or eat. The stone casing has hardness 8 and 90 hit points. As long as the casing remains intact, the pyropiscis within remains unharmed. The pyropiscis remains in a state of hibernation until it senses lava (or another source of extreme heat) nearby, at which point it breaks out of its case over the course of 1d4 minutes.<br/><br/><b>Lava Bomb (Ex)</b> Like an active volcano, a pyropiscis can spit a lava bomb\u2014a blob of molten rock\u2014as a ranged attack (range increment 30 feet). If a lava bomb hits, it deals 3d6 points of bludgeoning damage and 2d6 points of fire damage to its target.<br/><br/><b>Lava Dependency (Ex)</b> A pyropiscis can breathe indefinitely while submerged in lava. It can survive out of lava for 1 hour per point of Constitution. Beyond this limit, the pyropiscis runs the risk of suffocation, as if it were drowning.<br/><br/><b>Searing Bite (Ex)</b> A pyropiscis\u2019s searinghot jaws are designed to bind readily to flesh, giving it a firm grasp on its prey. This functions as the constrict ability, except that a pyropiscis deals 2d6 points of fire damage when it makes a successful grapple check, rather than dealing bludgeoning damage.<br/><br/><b>Sprint (Ex)</b> Once per minute, a pyropiscis may sprint, increasing its land speed to 40 feet for 1 round."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Few environments are more inhospitable to life than the depths of a volcano, where magma surges through the rock like blood through veins. Of the creatures that do live in this hellish landscape, few are better adapted than the pyropiscis. Pyropiscises depend on this deadly environment of extreme temperatures and choking gases for their very lives. While they have a fishlike appearance, pyropiscises do not swim\u2014their bodies are far too dense to float in water or similar liquids. Instead, pyropiscises rely on their powerful muscles and sharp scales to burrow through molten rock.<br/><br/>A typical pyropiscis measures over 12 feet long, and weighs almost 4,000 pounds. Brilliant red scales glow and pulse with terrible heat, protecting those portions of their bodies not covered in blackened iron plates."
+        }
+    ],
+    "html": "<i>Glowing-hot plates of iron cover the head of this immense, primordial lungfish, and lava spills from between its jagged teeth.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Pyropiscis",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 10
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "tremorsense 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "fire"
+                }
+            ],
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "8",
+            "xp": 4800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 22,
+                "touch": 11,
+                "flat-footed": 20,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+11 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/adamantine",
+                    "damage_types": [
+                        "adamantine"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "fire"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "lava dependency"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerable to cold"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "10 ft.",
+                        "movement_type": "walk",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "through lava or magma only"
+                            }
+                        ],
+                        "name": "burrow 60 ft.",
+                        "movement_type": "burrow",
+                        "value": 60
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "sprint"
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        17
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d8+10"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "burn"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "lava bomb",
+                    "bonus": [
+                        11
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "3d6"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6",
+                            "effect": "fire",
+                            "damage_type": "",
+                            "damage_type_text": "fire"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1d6"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 19"
+                        }
+                    ],
+                    "name": "burn"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "searing bite"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 10
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+22 grapple"
+                    }
+                ],
+                "value": 18
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 30
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 24,
+            "dex": 14,
+            "con": 18,
+            "int": 2,
+            "wis": 15,
+            "cha": 6,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "bite"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (bite)",
+                        "alt": "Improved Critical (bite)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lunge",
+                    "link": {
+                        "type": "link",
+                        "name": "Lunge",
+                        "alt": "Lunge",
+                        "href": "FeatDisplay.aspx?ItemName=Lunge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "bite"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (bite)",
+                        "alt": "Weapon Focus (bite)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 6,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+14 in lava"
+                            }
+                        ]
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+8 Stealth in lava"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "hibernation"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #95: Anvil of Fire",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #95: Anvil of Fire pg. 90",
+                "alt": "Pathfinder #95: Anvil of Fire pg. 90",
+                "href": "http://paizo.com/products/btpy9et7?Pathfinder-Adventure-Path-95-Anvil-of-Fire"
+            },
+            "page": 90
+        }
+    ]
+}

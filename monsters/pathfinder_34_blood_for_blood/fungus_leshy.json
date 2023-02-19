@@ -1,0 +1,406 @@
+{
+    "name": "Fungus Leshy",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any swamp or underground<br/><b>Organization</b> solitary or cluster (2\u201316)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Puffball (Ex)</b> A fungus leshy can spit a puffball as a standard action. If it hits, this attack deals 1 point of damage (this damage is not modified by Strength) and affects the target struck (but not adjacent targets) with the fungus leshy\u2019s spores. The puffball has a range increment of 20 feet.<br/><br/><b>Spores (Ex)</b> A fungus leshy is riddled with molds and spores. Anytime a fungus leshy takes damage, a cloud of spores bursts from its body, forcing all adjacent creatures to make a DC 14 Fortitude save or have their vision reduced to 10 feet for 1 minute. Spending a full-round action to wash one\u2019s eyes with water ends this effect. The save DC is Constitution-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Keepers of cavernous mushroom forests and rotting compost pits deep within the swamp, fungus leshys preside over subterranean growth and the rot that fertilizes new life. Among the most alien and monstrous-looking of all leshys, these tiny rot farmers\u2019 frightening appearance has more to do with the asymmetrical eeriness intrinsic to molds and fungi than an outward expression of evil. Like all their kin, fungus leshys vary widely in form, often adopting the colors and shapes of the mushrooms and other large fungi common to the areas they tend.<br/><br/>Fungus leshys are spawned from realms of underground wonder or the rotting places of the natural world. They perform an important service in the lands they keep, encouraging the growth of fungi, transporting rotting material to fertilize other plants, and making the most use of growth that has died off. Fungus leshys are most active at night and spend the day in the forms of plump fungi amid their ripest compost heaps or fungal glens.<br/><br/>Fungus leshys are 2 feet tall and weigh 25 pounds, their spongy interiors full of hollows and fluffy spores."
+        }
+    ],
+    "html": "<i>Mismatched eyes dot this plant creature\u2019s thick mushroom cap, while below works an overlarge maw set with pale fungal teeth.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Fungus Leshy",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 2
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Plant",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "leshy"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "shapechanger"
+                }
+            ],
+            "size": "Small",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Leshy",
+            "cr": "2",
+            "xp": 600
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 13,
+                "touch": 13,
+                "flat-footed": 11,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "electricity"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "sonic"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "plant traits"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d3"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "puffball",
+                    "bonus": [
+                        4
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "1"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "spores"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "spores"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "pass without trace"
+                                    }
+                                ],
+                                "count_text": "Constant",
+                                "frequency": "Constant"
+                            }
+                        ],
+                        "caster_level": 4,
+                        "concentration": 6
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 0
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 12
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 10,
+            "dex": 15,
+            "con": 16,
+            "int": 7,
+            "wis": 14,
+            "cha": 15,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Blind-Fight",
+                    "link": {
+                        "type": "link",
+                        "name": "Blind-Fight",
+                        "alt": "Blind-Fight",
+                        "href": "FeatDisplay.aspx?ItemName=Blind-Fight"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 10,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+14 in swamps and underground"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 3,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+7 in swamps and underground"
+                            }
+                        ]
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Stealth and Survival in swamps and underground"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Druidic"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Sylvan"
+                    }
+                ],
+                "communication_abilities": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "communication_ability",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "fungi"
+                            }
+                        ],
+                        "name": "plantspeech"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Small fungus"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "tree shape"
+                        }
+                    ],
+                    "name": "change shape"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "verdant burst"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 3",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 3 pg. 177",
+                "alt": "Bestiary 3 pg. 177",
+                "href": "http://paizo.com/products/btpy8odu?Pathfinder-Roleplaying-Game-Bestiary-3"
+            },
+            "page": 177
+        },
+        {
+            "type": "source",
+            "name": "Pathfinder #34: Blood for Blood",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #34: Blood for Blood pg. 86",
+                "alt": "Pathfinder #34: Blood for Blood pg. 86",
+                "href": "http://paizo.com/pathfinder/adventurePath/kingmaker/v5748btpy8b7w"
+            },
+            "page": 86
+        }
+    ]
+}

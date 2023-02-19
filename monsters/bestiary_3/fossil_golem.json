@@ -1,0 +1,240 @@
+{
+    "name": "Fossil Golem",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or gang (2\u20134)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Immunity to Magic (Su)</b> A fossil golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and abilities function differently against the creature, as noted below. <ul> <li>A <i>transmute rock to mud </i>spell slows a fossil golem (as the <i>slow </i>spell) for 2d6 rounds, with no saving throw.</li> <li>A <i>stone to flesh </i>spell negates its damage reduction and petrification ability for 1 round.</li> </ul><b>Petrification (Su)</b> The attacks of a fossil golem gradually turn living flesh to stone. Each time the golem hits a target with one of its natural attacks, the target must make a DC 19  Fortitude save or take 1d6 points of Dexterity drain. A creature that is reduced to 0 Dexterity by this attack turns completely to stone, as if by a <i>flesh to stone </i>spell. Casting <i>stone to flesh </i>on the creature removes all Dexterity drain caused by this attack. The save DC is Constitution-based and includes a +2 racial bonus."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "A fossil golem is constructed of the stony bones of long-dead dinosaurs and other prehistoric creatures. These bones are generally not assembled with any attempt to accurately model the original creature\u2014usually, the skulls of powerful predatory dinosaurs (such as tyrannosauruses) serve in the place of hands, granting the fossil golem a pair of devastating bite attacks. The magical energies that infuse a fossil golem create an additional peril\u2014they transform fossilization into a terrible form of contagion that can affect any creature they damage.<br/><br/>Fossil golems are often used to guard caverns and other natural fortifications. A fossil golem at rest might look to the untrained eye like nothing more than a strange display of bones. A fossil golem is 20 feet tall and weighs 8,000 pounds."
+        }
+    ],
+    "html": "<i>Fossilized bones make up the body of this animated construct, from its horned shoulders to its tyrannosaur-skulled hands.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Fossil Golem",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 0
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "size": "Huge",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Golem",
+            "cr": "12",
+            "xp": 19200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 26,
+                "touch": 9,
+                "flat-footed": 25,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+17 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/adamantine and bludgeoning",
+                    "conjunction": "and",
+                    "damage_types": [
+                        "adamantine",
+                        "bludgeoning"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "magic"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "bites",
+                    "bonus": [
+                        20
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "6d6+7"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "petrification"
+                        }
+                    ]
+                }
+            ],
+            "space": "15 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "15 ft."
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 15
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 24
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 35
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 25,
+            "dex": 13,
+            "con": null,
+            "int": null,
+            "wis": 10,
+            "cha": 1,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Reflexes",
+                        "alt": "Combat Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Reflexes"
+                    },
+                    "notation": "B"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 3",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 3 pg. 136",
+                "alt": "Bestiary 3 pg. 136",
+                "href": "http://paizo.com/products/btpy8odu?Pathfinder-Roleplaying-Game-Bestiary-3"
+            },
+            "page": 136
+        }
+    ]
+}

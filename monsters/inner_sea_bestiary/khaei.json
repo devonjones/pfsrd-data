@@ -1,0 +1,319 @@
+{
+    "name": "Khaei",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any underground (beneath Kaer Maga)<br/><b>Organization</b> solitary, pair, gang (3\u20135), or village (6\u201330)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Lost Time (Su)</b> As a touch attack, a khaei can touch a creature and prematurely age it. The creature touched must succeed at a DC 14 Fortitude save or take 1d4 points of Constitution damage and be permanently aged 1d10 years. This effect also deals 1d4 points of damage to the khaei. Effects from multiple khaei stack, though a single khaei can use this power on a given opponent only once."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "The khaei are a mystery even to themselves. Their twisted limbs give them an awkward, shambling gait, and their personalities are dull and incurious, making them seem in many ways to be simply degenerate humans. At the same time, their bodies\u2019 tendency to trail off into mist and shadow, combined with their weird magical attack, suggests they could be much more. A typical khaei stands 4 feet tall and weighs 100 pounds.<br/><br/>By far the most unusual aspect of the khaei is their ability to manipulate time. A khaei in fear for her life can grab an attacker and forcefully age him by several years, creating enormous strain on the foe\u2019s body. This exertion does damage to the khaei as well, and thus is rarely used, but a would-be tyrant who considers the khaei easy pickings may find himself surrounded by a weeping mob that quickly ages him into decrepitude\u2014then forgives and cares for him. The few scholars who know of the khaei\u2019s existence speculate that the creatures may themselves be somehow unstuck in time, perhaps sent back or forward from another era in preparation for a great event.<br/><br/>Khaei live in small, isolated communities underground, often inhabiting a single cavern and refusing to explore beyond it or otherwise improve their situation. The only known enclave of khaei in the Inner Sea region is in the Dark Forest, a cavern deep beneath the city of Kaer Maga, where they serve as both subjects and prey for the mysterious dullahan called the Dark Rider. One of the most cherished stories of these khaei concerns a time and place\u2014somewhere in either the past or the future\u2014 when there were many more of them, their cavern-forests linked by magical standing stones."
+        }
+    ],
+    "html": "<i>This short, stunted humanoid is bald and has weirdly twisted limbs, its body seeming to fade and come apart at the edges.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Khaei",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 7
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Monstrous Humanoid",
+            "size": "Small",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "3",
+            "xp": 800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 12,
+                "flat-footed": 14,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "club",
+                    "bonus": [
+                        5
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "touch",
+                    "bonus": [
+                        5
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "lost time"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "sling",
+                    "bonus": [
+                        6
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d3"
+                        }
+                    ]
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "blur"
+                                    }
+                                ],
+                                "count_text": "Constant",
+                                "frequency": "Constant"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dancing lights"
+                                    }
+                                ],
+                                "count_text": "At will",
+                                "frequency": "At will"
+                            }
+                        ],
+                        "caster_level": 4,
+                        "concentration": 5
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 4
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 3
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 14
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 10,
+            "dex": 13,
+            "con": 14,
+            "int": 7,
+            "wis": 10,
+            "cha": 13,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Reflexes",
+                        "alt": "Combat Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 16
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Stealth"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Undercommon"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Inner Sea Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Inner Sea Bestiary pg. 22",
+                "alt": "Inner Sea Bestiary pg. 22",
+                "href": "http://paizo.com/products/btpy8v2x?Pathfinder-Campaign-Setting-Inner-Sea-Bestiary%0D%0A"
+            },
+            "page": 22
+        }
+    ]
+}

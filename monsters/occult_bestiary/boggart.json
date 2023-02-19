@@ -1,0 +1,450 @@
+{
+    "name": "Boggart",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate forests or swamps<br/><b>Organization</b> solitary, gang (2\u20135), or band (6\u201312)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Abduct (Ex)</b> When a boggart hits a single target with both of its claw attacks as part of a full attack, it can attempt a drag combat maneuver as a free action. The boggart can move more than 5 feet as part of this combat maneuver even if it doesn\u2019t have any movement remaining for the round."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Malicious and furtive, boggarts are believed to be brownies (<i>Pathfinder RPG Bestiary 2</i> 49) that were mistreated or somehow corrupted. Unlike brownies, who sometimes form mutually beneficial relationships with particular families and take up residence within those families\u2019 houses, boggarts rarely occupy homes. Instead, they lurk in swamps, in marshes, and on riverbanks, favoring areas where people have vanished or drowned. A boggart\u2019s relationship with nearby households and homesteads is almost always disruptive. It frightens livestock and breaks valuable objects, and even goes so far as to follow victims who move their households in an attempt to escape their tormentor. Despite these habits, boggarts rarely cause serious harm to their chosen families, preferring simply to sow fear and misery. Even though these relationships are characterized by animosity, they seem to stabilize the boggarts somewhat. Boggarts that lack households to terrorize are far less benign. <br/><br/>A boggart is rarely spotted unless it wishes to be seen, and it has little interest in fighting fair. When preying on its victims, a boggart uses its familiarity with its home terrain to its advantage, preferring to induce foes to struggle against the natural environment rather than against the boggart. A boggart has very long arms, which it uses to pull creatures into water or onto marshy ground; it then psychically paralyzes its victims and allows the creatures to drown. A boggart is also quite skilled at setting traps and dragging its opponents into them. It sometimes uses aversion to keep people away from its home, but more often uses this power to prevent anyone from helping its chosen prey. <br/><br/>A boggart\u2019s magic is drawn from the excess psychic energy in an area. Boggarts cause mischief in order to heighten negative emotions near their homes and thus fuel their powers. It has been theorized that if a boggart were isolated from such energy for long enough, it could eventually revert into a brownie. <br/><br/>A typical boggart stands 3 feet tall and weighs 70 pounds."
+        }
+    ],
+    "html": "<i>This gangly, long-armed creature has a face like a calf\u2019s, but with large, forward-facing eyes and a mane of lank hair.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Boggart",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 12
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Fey",
+            "size": "Small",
+            "alignment": "Chaotic Evil",
+            "alignment_text": "CE",
+            "cr": "4",
+            "xp": 1200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 16,
+                "touch": 16,
+                "flat-footed": 11,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+5 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 10
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/cold iron",
+                    "damage_types": [
+                        "cold iron"
+                    ]
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "swim 30 ft.",
+                        "movement_type": "swim",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        9
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d3+2"
+                        }
+                    ]
+                }
+            ],
+            "space": "5 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "abduct"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "sneak attack +1d6"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "aversion",
+                                        "psychic_energy": 2,
+                                        "spell_dc": 16
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "hallucinatory terrain",
+                                        "psychic_energy": 4,
+                                        "spell_dc": 18
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "hold person",
+                                        "psychic_energy": 2,
+                                        "spell_dc": 16
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "invisibility",
+                                        "psychic_energy": 2,
+                                        "spell_dc": 16
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "telekinetic maneuver",
+                                        "psychic_energy": 0
+                                    }
+                                ],
+                                "count_text": "10 PE",
+                                "psychic_energy": 10
+                            }
+                        ],
+                        "caster_level": 8,
+                        "concentration": 12
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+9 drag"
+                    }
+                ],
+                "value": 7
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "21 vs. drag"
+                    }
+                ],
+                "value": 19
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 15,
+            "dex": 20,
+            "con": 13,
+            "int": 14,
+            "wis": 10,
+            "cha": 19,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Agile Maneuvers",
+                    "link": {
+                        "type": "link",
+                        "name": "Agile Maneuvers",
+                        "alt": "Agile Maneuvers",
+                        "href": "FeatDisplay.aspx?ItemName=Agile%20Maneuvers"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Expertise",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Expertise",
+                        "alt": "Combat Expertise",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Expertise"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Drag",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Drag",
+                        "alt": "Improved Drag",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Drag"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Weapon Finesse",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Finesse",
+                        "alt": "Weapon Finesse",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Finesse"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 13
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Craft (traps)",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Handle Animal",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 11
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (geography)",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (nature)",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 4
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 23
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 16
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+2 Perception"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Stealth"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Sylvan"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 6",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 6 pg. 50",
+                "alt": "Bestiary 6 pg. 50",
+                "href": "http://paizo.com/products/btpy9oge?Pathfinder-Roleplaying-Game-Bestiary-6-Hardcover%0D%0A"
+            },
+            "page": 50
+        },
+        {
+            "type": "source",
+            "name": "Occult Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Occult Bestiary pg. 11",
+                "alt": "Occult Bestiary pg. 11",
+                "href": "http://paizo.com/products/btpy9g21?Pathfinder-Campaign-Setting-Occult-Bestiary%0D%0A"
+            },
+            "page": 11
+        }
+    ]
+}

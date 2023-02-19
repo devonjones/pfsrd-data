@@ -1,0 +1,393 @@
+{
+    "name": "Bagman",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any urban<br/><b>Organization</b> solitary, pair, or gang (3\u20135)<br/><b>Treasure</b> standard (<i>potion of infernal healing</i><sup>ISWG</sup>, <i>potion of youthful appearance</i><sup>UM</sup>, cauldron, flint and steel, sack, sewing needle, other treasure)"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Bag Prey (Su)</b> If a bagman begins its turn with a creature grappled in its claws, as long as the creature is size Small or smaller, it can stuff the target into its sack as a swift action that does not provoke attacks of opportunity. A bagman can stuff a grappled Medium creature in the sack, but doing so is a standard action that provokes attacks of opportunity. A creature in the sack can try to cut its way free with any light slashing or piercing weapon. The sack has AC 12 and 15 hit points. If a creature cuts its way out of the sack or the sack is damaged enough to allow a victim to escape, the bagman cannot use the sack to bag prey again until it has spent 1 hour mending it.<br/><br/> The sack has other special qualities while in the bagman\u2019s possession. The weight of creatures in the sack do not count against the bagman\u2019s carrying capacity, and the bagman can fit up to two Small creatures or one Medium creature in the sack at a time. If used by any creature other than the bagman that owns it, this container functions as a mundane sack. If a bagman\u2019s sack is lost or destroyed, it can craft a new sack with proper materials and a week of work.<br/><br/><b>Fat Extractor (Su)</b> A bagman can use the fat of intelligent humanoid creatures to create <i>potions of infernal healing</i> and <i>potions of youthful appearance</i> as if it had the Brew Potion feat. These potions are created at caster level 3rd, and the fat from one humanoid creature of any size is enough to make a single potion. Creating each potion takes 2 hours, and requires the bagman to flense the fat from its victims\u2019 flesh with its claws, place the fat in a cauldron over an open fire, and mix it with whatever free ingredients are at hand. Unlike brewing a potion normally, creating these potions has no cost. A bagman can carry only four potions created in this way at a time, even if another bagman made them, but it can sell or give away an unlimited number of potions. Knowingly consuming one of these potions is an evil act.<br/><br/><b>Find Children (Ex)</b> A bagman has the scent ability, but only with respect to humanoid children. Thus, it could sniff out a human child\u2019s hiding place, but not the child\u2019s parents."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Some monsters feed on humans, while others torture humans for their own sadistic pleasure, but few creatures go to such perverse lengths as to murder humans and then sell the processed remains back to their victims\u2019 unwitting families. Bagmen are such monsters\u2014 degenerate fey creatures who specialize in kidnapping humanoid victims and harvesting their fat to produce potions. Bagmen disguise themselves as traveling peddlers and apothecaries, often selling the products of their depredations to the very communities from which they steal their victims. An average bagman stands 5-1/2 feet tall and weighs close to 300 pounds."
+        }
+    ],
+    "html": "<i>This pale, pudgy humanoid is clad in a greasy traveling cloak and a wide-brimmed hat. A bloodstained burlap sack hangs over its shoulder.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Bagman",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 11
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "find children"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Fey",
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "4",
+            "xp": 1200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 17,
+                "touch": 12,
+                "flat-footed": 15,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+5 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 7
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/cold iron",
+                    "damage_types": [
+                        "cold iron"
+                    ]
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "40 ft.",
+                        "movement_type": "walk",
+                        "value": 40
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        8
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+4"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "handaxe",
+                    "bonus": [
+                        7
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+6"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "bag prey"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+9 bull rush"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+11 grapple"
+                    }
+                ],
+                "value": 7
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "21 vs. bull rush"
+                    }
+                ],
+                "value": 19
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 19,
+            "dex": 14,
+            "con": 16,
+            "int": 15,
+            "wis": 12,
+            "cha": 17,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Bull Rush",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Bull Rush",
+                        "alt": "Improved Bull Rush",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Bull%20Rush"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Step Up",
+                    "link": {
+                        "type": "link",
+                        "name": "Step Up",
+                        "alt": "Step Up",
+                        "href": "FeatDisplay.aspx?ItemName=Step%20Up"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "claw"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (claw)",
+                        "alt": "Weapon Focus (claw)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 13
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Craft (alchemy)",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Disguise",
+                        "value": 13,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+17 to appear human"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (local)",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (nature)",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 11
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spellcraft",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Use Magic Device",
+                        "value": 13
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Disguise to appear human"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Sylvan"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "fat extractor"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #105: The Inferno Gate",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #105: The Inferno Gate pg. 84",
+                "alt": "Pathfinder #105: The Inferno Gate pg. 84",
+                "href": "http://paizo.com/products/btpy9jb9?Pathfinder-Adventure-Path-105-The-Inferno-Gate%0D%0A"
+            },
+            "page": 84
+        }
+    ]
+}

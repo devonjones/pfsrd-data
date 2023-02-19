@@ -1,0 +1,310 @@
+{
+    "name": "Polar Bear",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> cold coastlines or plains<br/><b>Organization</b> solitary or pair<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Polar bears swim along frigid coasts and wander icy plains looking for prey, most notably the seals they pluck from holes in the ice. A polar bear\u2019s blubber gives it buoyancy, and its long neck helps keep its head above water. Oversized paws with webbed toes propel it steadily through the icy seas, and a polar bear can swim more than 100 miles in a single day.<br/><br/>While easily able to avoid conflict by plunging into the frigid ocean swells that surround their lairs, polar bears are notoriously fearless, and will attack nearly any creature if they feel threatened or desperate. This makes them particularly dangerous scavengers around arctic settlements, though a rare few civilizations hunt polar bears, both for their meat and for the furs and bones that can be fashioned into clothes and vital tools. Many of these cultures hold polar bears sacred, honoring their deaths with solemn rituals and ceremonies.<br/><br/>Polar bears live an average of 15 to 20 years, but arctic peoples have known individual bears to live as long as 40 years, often assuming legendary status in local lore. An adult male polar bear can weigh 800 to 1,200 pounds, with females weighing 350 to 650 pounds."
+        }
+    ],
+    "html": "<i>This large bear is completely white save for small black eyes and black lips hiding huge, glistening teeth.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Polar Bear",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 3
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 8
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Animal",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Bear",
+            "cr": "5",
+            "xp": 1600
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 20,
+                "touch": 12,
+                "flat-footed": 17,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+8 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 10
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 7
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "40 ft.",
+                        "movement_type": "walk",
+                        "value": 40
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "swim 20 ft.",
+                        "movement_type": "swim",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        9
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+7"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        9
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+7"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "5 ft."
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+15 grapple"
+                    }
+                ],
+                "value": 11
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "28 vs. trip"
+                    }
+                ],
+                "value": 24
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 25,
+            "dex": 17,
+            "con": 23,
+            "int": 2,
+            "wis": 16,
+            "cha": 10,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Endurance",
+                    "link": {
+                        "type": "link",
+                        "name": "Endurance",
+                        "alt": "Endurance",
+                        "href": "FeatDisplay.aspx?ItemName=Endurance"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Run",
+                    "link": {
+                        "type": "link",
+                        "name": "Run",
+                        "alt": "Run",
+                        "href": "FeatDisplay.aspx?ItemName=Run"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Survival"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Survival)",
+                        "alt": "Skill Focus (Survival)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 19
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 5",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 5 pg. 41",
+                "alt": "Bestiary 5 pg. 41",
+                "href": "http://paizo.com/products/btpy9g9x?Pathfinder-Roleplaying-Game-Bestiary-5%0D%0A"
+            },
+            "page": 41
+        },
+        {
+            "type": "source",
+            "name": "Pathfinder #67: The Snows of Summer",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #67: The Snows of Summer pg. 82",
+                "alt": "Pathfinder #67: The Snows of Summer pg. 82",
+                "href": "http://paizo.com/products/btpy8ubg?Pathfinder-Adventure-Path-67-The-Snows-of-Summer%0D%0A"
+            },
+            "page": 82
+        }
+    ]
+}

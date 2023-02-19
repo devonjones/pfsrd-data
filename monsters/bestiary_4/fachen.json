@@ -1,0 +1,326 @@
+{
+    "name": "Fachen",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate hills or plains<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard (battle axe, other treasure)"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Fear (Su)</b> Each creature within a 30-foot radius that sees a fachen must succeed at a DC 15 Will save or be paralyzed by fear for 1d4 rounds. A creature that successfully saves is not subject to the same fachen\u2019s fear aura for 24 hours. This is a paralysis effect and a mind-affecting fear effect. The save DC is Charisma-based.<br/><br/><b>Incredible Balance (Ex)</b> Despite its strange anatomy, a fachen is adept at keeping itself upright and out of danger. A fachen gains a +3 dodge bonus to AC and a +4 racial bonus to its CMD against trip combat maneuvers."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "The fearsome fachen\u2019s terrifying visage paralyzes all but the most intrepid that happen across its hopping path. Reports disagree on just what it is about the fachen that turns one\u2019s blood to ice\u2014the single leg and foot that somehow don\u2019t impair the being\u2019s balance or speed, the seemingly toostrong arm jutting from the center of the creature\u2019s torso, or the lone, bulbous eye leering maliciously at its wouldbe prey. Most likely it\u2019s a combination of all of these things mixed with the unrelenting rage and savagery that seems to ooze from its every pore.<br/><br/>Though the fachen\u2019s grotesque approximation of a humanoid form could be enough to scare a traveler witless on its own, no single part of the abomination\u2019s appearance induces fear like that of its mouth, a snarling and snapping thing filled with two full rows of long, sharp teeth\u2014a mouth that looks like a cage out of a foul nightmare. Constantly gnashing or chomping in the air, it delivers grievous wounds to those who don\u2019t flee this terrible creature.<br/><br/>Though they\u2019re able to speak, fachens do so only to curse at those they encounter. These barbaric creatures have no discernible culture, and sages and naturalists are still puzzled as to how they even reproduce. It almost seems as if they are pure rage that spontaneous takes on a hideous natural form.<br/><br/>A typical fachen stands just short of 6 feet tall, and despite appearing to be half a person, weighs around 150 pounds because of its muscle mass. Though it isn\u2019t a very large creature, its fearsome composition and the aura of fear it exudes give it a presence that makes it seem much greater than its actual size."
+        }
+    ],
+    "html": "<i>This half-bodied monstrosity with a toothy mouth and stringy hair hops about on its single leg with unusual grace.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Fachen",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 9
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "fear",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "30 ft.",
+                    "range": 30,
+                    "unit": "feet"
+                },
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 15",
+                    "dc": 15
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Aberration",
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "5",
+            "xp": 1600
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 18,
+                "touch": 14,
+                "flat-footed": 14,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 dodge"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "battleaxe",
+                    "bonus": [
+                        10
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+5"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        5
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+2"
+                        }
+                    ]
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 5
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 10
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "28 vs. trip"
+                    }
+                ],
+                "value": 24
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 20,
+            "dex": 13,
+            "con": 15,
+            "int": 6,
+            "wis": 12,
+            "cha": 15,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Acrobatic",
+                    "link": {
+                        "type": "link",
+                        "name": "Acrobatic",
+                        "alt": "Acrobatic",
+                        "href": "FeatDisplay.aspx?ItemName=Acrobatic"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Cleave",
+                    "link": {
+                        "type": "link",
+                        "name": "Cleave",
+                        "alt": "Cleave",
+                        "href": "FeatDisplay.aspx?ItemName=Cleave"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Iron Will",
+                        "alt": "Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 13
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 6
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "incredible balance"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 4",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 4 pg. 95",
+                "alt": "Bestiary 4 pg. 95",
+                "href": "http://paizo.com/products/btpy91ds?Pathfinder-Roleplaying-Game-Bestiary-4"
+            },
+            "page": 95
+        },
+        {
+            "type": "source",
+            "name": "Pathfinder #63: The Asylum Stone",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #63: The Asylum Stone pg. 88",
+                "alt": "Pathfinder #63: The Asylum Stone pg. 88",
+                "href": "http://paizo.com/products/btpy8sds?Pathfinder-Adventure-Path-63-The-Asylum-Stone%0D%0A"
+            },
+            "page": 88
+        }
+    ]
+}

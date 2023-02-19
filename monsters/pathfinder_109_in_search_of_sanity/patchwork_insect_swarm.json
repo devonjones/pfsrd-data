@@ -1,0 +1,248 @@
+{
+    "name": "Patchwork Insect Swarm",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary, cluster (2\u20138), or epidemic (9\u201320)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Indescribable Swarm (Ex)</b> The horror of discovering a swarm that seems normal at first holds a bloodcurdling secret can drive sane folk mad. The first time an intelligent creature encounters a given variety of swarm with this ability, it must succeed at a Will saving throw against the swarm\u2019s distraction ability save DC or become shaken for 1 hour or until the swarm is defeated, whichever comes first.<br/><br/><b>Sickening Crunch (Ex)</b> Any attack made against a patchwork insect swarm creates a sickening sound as the insects\u2019 humanoid limbs snap with astonishing volume. Every creature within 20 feet of the swarm that can hear this sound must succeed at a DC 11 Fortitude saving throw or become sickened for 1 round."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "These grotesque creatures appear in a variety of forms, usually taking the general shape of an insect or other vermin, but with hideous and disconcerting limbs. Most common are humanoid arms and legs in place of the usual limbs, but some of these disgusting creatures have human eyes, ears, or entire heads or faces. Elven ears or dwarven beards appear occasionally, though they are not nearly as common as human traits. There are even tales of goblin-headed beetles roving the Chitterwood of southern Isger in vast packs, singing insane songs as they devour their prey.<br/><br/>Scholars who have had an opportunity to study these creatures up close speculate that they are actually created by some strange form of fungus or parasite that grows a humanlike skin over the existing chitin of the vermin involved. The incredible coincidence of the resemblance to human forms makes the influence of occult magic a strong possibility, but there is no record of the history of these monstrous creatures that might reveal the truth."
+        }
+    ],
+    "html": "<i>This collection of insects is composed of a variety of centipedes, beetles, and other bugs, each of which bears humanoid arms, legs, eyes, or even faces.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Patchwork Insect Swarm",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": -1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Vermin",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "swarm"
+                }
+            ],
+            "size": "Diminutive",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Indescribable Swarm",
+            "cr": "1/2",
+            "xp": 200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 13,
+                "touch": 13,
+                "flat-footed": 13,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -1
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "sickening crunch"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "swarm traits"
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "mind-affecting effects"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "weapon damage"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "burrow 20 ft.",
+                        "movement_type": "burrow",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "swarm",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "0 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 11"
+                        }
+                    ],
+                    "name": "distraction"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": null
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": null
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 3,
+            "dex": 9,
+            "con": 11,
+            "int": null,
+            "wis": 12,
+            "cha": 4,
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 11"
+                        }
+                    ],
+                    "name": "indescribable swarm"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #109: In Search of Sanity",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #109: In Search of Sanity pg. 86",
+                "alt": "Pathfinder #109: In Search of Sanity pg. 86",
+                "href": "http://paizo.com/products/btpy9nry?Pathfinder-Adventure-Path-109-In-Search-of-Sanity"
+            },
+            "page": 86
+        }
+    ]
+}

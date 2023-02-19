@@ -1,0 +1,353 @@
+{
+    "name": "Dragonne",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate deserts<br/><b>Organization</b> solitary, pair, or pride (5\u201310)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Roar (Su)</b> A dragonne can unleash a devastating roar every 1d4 rounds as a standard action. All creatures except dragonnes within 120 feet must succeed at a DC 17 Fortitude save or become fatigued. Those within 30 feet who fail their saves are also deafened for 2d4 rounds. This is a sonic effect. The save DC is Constitution-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Possessing the savage instincts of lions with the cunning of brass dragons, dragonnes combine the fiercest features of these noble creatures into predators both awe-inspiring and deadly.<br/><br/>The origin of dragonnes generates endless speculation. The odds of these creatures being direct crossbreeds of dragons and lions are quite remote, for numerous reasons: the two creatures rarely share the same territories; few creatures as clever as brass dragons would choose to mate with simple lions; and dragonne abilities differ significantly from those of metallic dragons. While otherworldly breeding experiments and magical mishaps remain possibilities, few satisfying explanations make themselves apparent.<br/><br/>Although many creatures rightly fear these ferocious hunters, few dragonnes are blatantly evil\u2014most are just highly territorial and seek to defend their homes and hunting grounds from interlopers. Creatures that draw too close to a dragonne\u2019s lair are typically met by the resident\u2019s fearsome roar, followed by its claws and fangs if this warning is ignored. Those who attempt to settle in a dragonne\u2019s territory find themselves harassed constantly until they decide to leave or the dragonne is slain. These intimidating predators spend the majority of their time on the ground, even when in combat, since their wings prove somewhat ungainly. They typically search for prey and intruders from the air, then land nearby to charge and pounce.<br/><br/>Despite their deadliness, dragonnes form strong bonds with those they consider members of their pride, sometimes even adopting creatures of other races. A character with the Leadership feat can take a dragonne as a cohort. Such characters must have an effective leadership level of 10th. Most dragonne cohorts gain levels in barbarian, fighter, or ranger.<br/><br/>A dragonne measures between 10 and 12 feet long and weighs up to 1,200 pounds."
+        }
+    ],
+    "html": "<i>This creature has the features of a lion but the wings and scales of a brass dragon, and a wild mane matching its scales.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Dragonne",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 7
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 12
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "7",
+            "xp": 3200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 20,
+                "touch": 12,
+                "flat-footed": 17,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+8 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "40 ft.",
+                        "movement_type": "walk",
+                        "value": 40
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "poor<br/>"
+                            }
+                        ],
+                        "name": "fly 30 ft.",
+                        "movement_type": "fly",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        13
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+5"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        13
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+5"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "roar"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "pounce"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 9
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 15
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "32 vs. trip"
+                    }
+                ],
+                "value": 28
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 21,
+            "dex": 17,
+            "con": 17,
+            "int": 6,
+            "wis": 12,
+            "cha": 12,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Blind-Fight",
+                    "link": {
+                        "type": "link",
+                        "name": "Blind-Fight",
+                        "alt": "Blind-Fight",
+                        "href": "FeatDisplay.aspx?ItemName=Blind-Fight"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Reflexes",
+                        "alt": "Combat Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Flyby Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Flyby Attack",
+                        "alt": "Flyby Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Flyby%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 12
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Perception"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Draconic"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 3",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 3 pg. 104",
+                "alt": "Bestiary 3 pg. 104",
+                "href": "http://paizo.com/products/btpy8odu?Pathfinder-Roleplaying-Game-Bestiary-3"
+            },
+            "page": 104
+        },
+        {
+            "type": "source",
+            "name": "Bonus Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Bonus Bestiary pg. 10",
+                "alt": "Bonus Bestiary pg. 10",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy88x4"
+            },
+            "page": 10
+        }
+    ]
+}

@@ -1,0 +1,260 @@
+{
+    "name": "Bonestorm",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary<br/><b>Treasure</b> none<br/><b>Advancement</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Distraction (Ex)</b> Any living creature that begins its turn with a bonestorm in its space must succeed on a DC 18 Fortitude save or be nauseated for 1 round. The save DC is Charisma-based.<br/><br/><b>Gather Bones (Su)</b> By spending a full-round action in the same square as a dead creature, a bonestorm can shred the flesh from the corpse and absorb the bones into its swarm. The absorption grants the bonestorm healing (or temporary hit points if it is unwounded). The amount of healing depends on the size of the body absorbed. A Small creature grants 2 points of healing. A Medium grants 5 points, Large grants 10 points, and Huge grants 20 point. A bonestorm gains no benefit from collecting the skeletons of creatures smaller than Small or larger than Huge.<br/><br/><b>Unholy Winds (Su)</b> A bonestorm is surrounded by fierce netherwinds, the howls and raging essences of souls forever trapped within a whirlwind of death. As such, the area within 10 feet of a bonestorm is affected by winds of windstorm force (see page 95 of the DMG or the summary of these effects on the following page). Creatures that enter this area must make a DC 18 Fortitude save or be affected by the high winds as dictated by their size: Small or smaller creatures are blown away, Medium creatures are knocked down, Large creatures are checked, and larger creatures are unaffected. In addition, these winds are responsible for a bonestorm\u2019s movement and protect it from the damage and dispersal Diminutive swarms typically face when affected by powerful winds.<br/><br/><b>Wrath (Su)</b> A bonestorm cuts apart creatures occupying the same space as it, not just with splintered bones and bludgeoning skulls, but with the unholy energies of the damned souls that make up the undead whirlwind. Thus, 3d6 points of the damage dealt by a bone swarm is physical, and 3d6 points are untyped damage, resulting directly from unholy power."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Bonestorms are the charnel offspring of vast battlefields, the wrathful resurrections of legions of the fallen unwilling to let go of their wrath and unable to accept defeat. Amid violent currents of tormented souls, the rent corpses of the fallen rise again, formless masses of marrow and splintered bone that know only revenge.<br/><br/>While bonestorms can spontaneously form\u2014typically days or weeks after a particularly violent or meaningful battle\u2014they have also been known to be created by malicious necromancers and arcane warlords. Brought into being to serve as lifeless engines of war or to wreak havoc upon their creators\u2019 enemies, bonestorms purposefully brought into existence have slightly more direction than their spontaneously forming counterparts. Upon completing a task, however, its not uncommon for one of these cyclones of bones to indulge its motivating rage, attacking and destroying living things far in excess of its creator\u2019s wishes.<br/><br/>A bonestorm typically rises to about 10 feet tall, though it has no weight besides the hundreds of pounds of bones caught up in its macabre vortex."
+        }
+    ],
+    "html": "<img src=\"images\\ThreeFiveSymbol.gif\" style=\"margin: 3px 3px 0px 3px\"/><i>A swirling, 15-foot-high, funnel cloud composed of thousands of jagged human bones whirls in an uncontrolled vortex of death. From it, the air splits with the deafening grind of bone-on-bone.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Bonestorm",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "listen",
+                "value": 1
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "spot",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "unholy winds 10 ft.",
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 18",
+                    "dc": 18
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "swarm"
+                }
+            ],
+            "size": "Diminutive",
+            "alignment_text": "Always CE",
+            "cr": "8"
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 23,
+                "touch": 20,
+                "flat-footed": 17,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "cold"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "swarm traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "undead traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "weapon damage"
+                }
+            ],
+            "sr": {
+                "type": "stat_block_section",
+                "subtype": "sr",
+                "value": 20
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "perfect<br/>"
+                            }
+                        ],
+                        "name": "fly 50 ft.",
+                        "movement_type": "fly",
+                        "value": 50
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "swarm",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "3d6"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "3d6",
+                            "effect": "unholy",
+                            "damage_type": "",
+                            "damage_type_text": "unholy"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "0 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "wrath"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 8
+            },
+            "grapple": {
+                "type": "stat_block_section",
+                "subtype": "grapple",
+                "value": null
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 3,
+            "dex": 23,
+            "con": null,
+            "int": null,
+            "wis": 12,
+            "cha": 10,
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "gather bones"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #10: A History of Ashes",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #10: A History of Ashes pg. 82",
+                "alt": "Pathfinder #10: A History of Ashes pg. 82",
+                "href": "http://paizo.com/pathfinder/adventurePath/curseOfTheCrimsonThrone/v5748btpy82u9"
+            },
+            "page": 82
+        }
+    ]
+}

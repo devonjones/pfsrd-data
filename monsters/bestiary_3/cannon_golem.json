@@ -1,0 +1,284 @@
+{
+    "name": "Cannon Golem",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary or pair<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Alloyed (Ex)</b> A cannon golem\u2019s slam and cannon attacks count as adamantine, cold iron, and silver for the purpose of overcoming damage reduction.<br/><br/><b>Blasting Critical (Ex) </b>When a cannon golem confirms a critical hit with a slam attack, it can make one cannon attack against that target as a free action (as long as the cannon is loaded).<br/><br/><b>Cannon (Ex)</b> The golem\u2019s cannon has a range increment of 100 feet and deals 6d6 points of bludgeoning and piercing damage on a hit with a \u00d74 critical modifier. The cannon\u2019s magazine can hold up to 20 cannonballs at a time\u2014reloading a single cannonball into this magazine is a standard action for the golem, while loading a cannonball into the cannon itself to fire it is a swift action; this allows the golem to take two shots per round with the cannon.<br/><br/><b>Gun Training (Ex)</b> A cannon golem adds its Dex modifier to the damage dealt by its cannon.<br/><br/><b>Immunity to Magic (Ex)</b> A cannon golem is immune to spells and spell-like abilities that allow spell resistance. Certain spells and effects function differently against it, as noted below. <ul> <li>Any spell with the water descriptor that affects a cannon golem renders its cannon unusable for 1 round (no save).</li> <li>A <i>heat metal </i>spell causes the golem\u2019s cannon to instantly backfire, dealing 6d6 points of damage to the golem and staggering it for 1 round (no save).</li> </ul>"
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "A cannon golem\u2019s internal workings are a mechanical labyrinth; its extradimensional pockets constantly process new black powder. A cannon golem stands 12 feet tall."
+        }
+    ],
+    "html": "<i>This collection of jagged metal rears up into a humanoid form, its enormous cannon tracking movement with mechanical precision.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Cannon Golem",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 7
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 2
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Golem",
+            "cr": "15",
+            "xp": 51200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 31,
+                "touch": 16,
+                "flat-footed": 24,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+7 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+15 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 13
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 15,
+                    "text": "15/adamantine",
+                    "damage_types": [
+                        "adamantine"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "magic"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "slams",
+                    "bonus": [
+                        29
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d10+10"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "cannon",
+                    "bonus": [
+                        26,
+                        21
+                    ],
+                    "critical_range": "19\u201320/\u00d74",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "6d6+7"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "cannon"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 20
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 31
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 48
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 30,
+            "dex": 24,
+            "con": null,
+            "int": null,
+            "wis": 15,
+            "cha": 2,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "cannon"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (cannon)",
+                        "alt": "Improved Critical (cannon)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    },
+                    "notation": "B"
+                }
+            ],
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "alloyed"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "blasting critical"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "gun training"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 3",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 3 pg. 135",
+                "alt": "Bestiary 3 pg. 135",
+                "href": "http://paizo.com/products/btpy8odu?Pathfinder-Roleplaying-Game-Bestiary-3"
+            },
+            "page": 135
+        }
+    ]
+}

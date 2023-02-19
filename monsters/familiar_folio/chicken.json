@@ -1,0 +1,252 @@
+{
+    "name": "Chicken",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any temperate<br/><b>Organization</b> solitary, pair, or flock (3\u201320)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Drift (Ex) </b>A chicken flies in short bursts and can\u2019t use its fly speed to hover. When it flies, a chicken must end its move action by landing or perching on a solid surface."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Chickens are prized for the hearty breakfast meals they provide if properly fed and cared for. Chickens are highly social creatures that raise their young communally. They\u2019re picky about the spots where they roost, and a hen rarely strays from a particular nest once she\u2019s laid her eggs there. A fertilized chicken egg hatches into a chick after roughly 3 weeks of incubation.<br/><br/> In addition to their quick reproductive cycles, chickens have the ability to thrive on simple foods, and they are valued in both rural farming communities and metropolitan areas for their delicious and nutrient-rich eggs and meat. A hen bred for laying eggs can produce up to one egg every 24 hours.<br/><br/> A chicken is about 1 foot tall and weighs 5 pounds."
+        }
+    ],
+    "html": "<i>This fowl has a compact body, a short beak flanked by red wattles, and a crimson comb on the crown of its head.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Chicken",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 4
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Animal",
+            "size": "Tiny",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Familiar",
+            "cr": "1/6",
+            "xp": 65
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 12,
+                "touch": 12,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "clumsy"
+                            }
+                        ],
+                        "name": "fly 20 ft.",
+                        "movement_type": "fly",
+                        "value": 20
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "drift"
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        -2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d3\u20134"
+                        }
+                    ]
+                }
+            ],
+            "space": "2-1/2 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "0 ft."
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 0
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": -2
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 4
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 3,
+            "dex": 11,
+            "con": 12,
+            "int": 2,
+            "wis": 12,
+            "cha": 13,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": -4
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 5
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Ultimate Wilderness",
+            "link": {
+                "type": "link",
+                "name": "Ultimate Wilderness pg. 193",
+                "alt": "Ultimate Wilderness pg. 193",
+                "href": "http://paizo.com/products/btpy9ujo"
+            },
+            "page": 193
+        },
+        {
+            "type": "source",
+            "name": "Familiar Folio",
+            "link": {
+                "type": "link",
+                "name": "Familiar Folio pg. 24",
+                "alt": "Familiar Folio pg. 24",
+                "href": "http://paizo.com/products/btpy98d3?Pathfinder-Player-Companion-Familiar-Folio"
+            },
+            "page": 24
+        },
+        {
+            "type": "source",
+            "name": "Bestiary 5",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 5 pg. 112",
+                "alt": "Bestiary 5 pg. 112",
+                "href": "http://paizo.com/products/btpy9g9x?Pathfinder-Roleplaying-Game-Bestiary-5%0D%0A"
+            },
+            "page": 112
+        }
+    ]
+}

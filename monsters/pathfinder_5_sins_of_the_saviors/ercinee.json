@@ -1,0 +1,361 @@
+{
+    "name": "Ercinee",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate forests<br/><b>Organization</b> solitary<br/><b>Treasure</b> none<br/><b>Advancement</b> 8-12 HD (Large)"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Lighted Way (Su)</b> At will, an ercinee can shed drops of luminous fluid from its wings. This liquid falls behind it as it flies, with one droplet falling every 25 feet. Where these droplets land, the area within 5 feet is lit by shadowy illumination. This fluid lasts for 1 hour, after which it evaporates to nothing.<br/><br/><b>Unstable Screech (Su)</b> An ercinee can, as a standard action, emit a shrill and bewildering screech. Any creature within 30 feet of the ercinee must make a DC 15 Will save or be <i>confused</i> for 1d4 rounds. Creatures who succeed at this save cannot be affected again by the same ercinee\u2019s screech for 24 hours. Creatures already confused take a \u20132 penalty on their save to resist additional unstable screeches. The save DC is Wisdom-based.<br/><br/><b>Radiance (Sp)</b> At night, an ercinee sheds light as the spell <i>daylight</i>. It can suppress or reactivate this ability as a free action."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Also called alicanto, ercinee are enormous, multicolored creatures resembling giant birds of prey. Unlike normal birds, however, ercinee are infused with a magical luminescence that causes the tips of their feathers to emit green light as well as giving their green eyes a burning appearance. This luminescence is only apparent at night. On average, an ercinee stands about 6 feet tall from talons to beak and its wingspan measures 14 to 18 feet."
+        }
+    ],
+    "html": "<img src=\"images\\ThreeFiveSymbol.gif\" style=\"margin: 3px 3px 0px 3px\"/><i>Beating its powerful wings, this massive multicolored bird circles purposefully. Its eyes are pits of greenish flame and its radiant feathers cause it to soar in stark relief against the comparably dull sky.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Ercinee",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "listen",
+                "value": 10
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "spot",
+                "value": 11
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "4"
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 17,
+                "touch": 11,
+                "flat-footed": 15,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 7
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "10 ft.",
+                        "movement_type": "walk",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "good<br/>"
+                            }
+                        ],
+                        "name": "fly 80 ft.",
+                        "movement_type": "fly",
+                        "value": 80
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        9
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+3"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        4
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+1"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "5 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "unstable screech"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dancing lights"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "light"
+                                    }
+                                ],
+                                "count_text": "At will",
+                                "frequency": "At will"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "searing light"
+                                    }
+                                ],
+                                "count_text": "3/day",
+                                "count": 3,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 6,
+                        "ranged": 8
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 7
+            },
+            "grapple": {
+                "type": "stat_block_section",
+                "subtype": "grapple",
+                "value": 14
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 17,
+            "dex": 15,
+            "con": 10,
+            "int": 10,
+            "wis": 14,
+            "cha": 13,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Alertness",
+                    "link": {
+                        "type": "link",
+                        "name": "Alertness",
+                        "alt": "Alertness",
+                        "href": "FeatDisplay.aspx?ItemName=Alertness"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Flyby Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Flyby Attack",
+                        "alt": "Flyby Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Flyby%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Wingover",
+                    "link": {
+                        "type": "link",
+                        "name": "Wingover",
+                        "alt": "Wingover",
+                        "href": "FeatDisplay.aspx?ItemName=Wingover"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Listen",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spot",
+                        "value": 11
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Auran"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "lighted way"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "radiance"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #5: Sins of the Saviors",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #5: Sins of the Saviors pg. 81",
+                "alt": "Pathfinder #5: Sins of the Saviors pg. 81",
+                "href": "http://paizo.com/pathfinder/adventurePath/riseOfTheRunelords/v5748btpy815o"
+            },
+            "page": 81
+        }
+    ]
+}

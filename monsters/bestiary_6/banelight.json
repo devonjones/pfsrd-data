@@ -1,0 +1,532 @@
+{
+    "name": "Banelight",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or witchlight (3\u201310 plus 4\u20136 will-o\u2019-wisps or lurkers in light)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Banelight Aura (Su)</b> Creatures within a banelight\u2019s aura and also in an area of bright light (generally the case because of the creature\u2019s constant <i>daylight</i>) are dazzled and affected as by the spell <i>bane</i>, with no saving throw. All magical light sources that come within a banelight\u2019s aura turn bright red except those from her own spell-like abilities. <br/><br/><b>Create Will-o\u2019-Wisp (Su)</b> Up to three times per day as a swift action, a banelight can cause a single nonliving source of light (other than one she created) within the area of her banelight aura to spawn an advanced will-o\u2019-wisp under her control. Will-o\u2019-wisps created in this manner exist for up to 1 minute before vanishing. A single banelight can maintain up to three will-o\u2019-wisps at a time in this manner. <br/><br/><b>Immune to Magic (Ex)</b> Banelights are immune to all spells and spell-like abilities that allow spell resistance except <i>magic missile, maze</i>, and their personal <i>daylight</i> (which constantly affects them even though they aren\u2019t an object). <br/><br/><b>Light Vortex (Su)</b> A banelight can use its light vortices as melee touch attacks or ranged touch attacks with a 60-foot range. Each vortex deals 5d8 points of damage to most targets, but deals 5d6 points of damage to constructs and inanimate objects, 10d6 points of damage to undead, and 10d8 points of damage to creatures specifically vulnerable to sunlight or bright light. This damage bypasses all damage reduction and energy resistance. <br/><br/><b>Susceptible to Darkness (Ex)</b> A banelight gains much of its power from light. It can reactivate its <i>daylight</i> on its turn if the effect is dispelled, but a banelight in an area of darkness does not have a banelight aura, loses its fast healing, and is staggered."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Banelights are cruel fey who stalk mortals in the darkness and loathe the increasing ubiquity of mortalmade light. Banelights are strangely social creatures, and they conduct bizarre courtship dances among themselves or with will-o\u2019-wisps. In the absence of other fey to keep them company, banelights sometimes capture mortals to keep them entertained. While a good conversationalist can survive as a banelight\u2019s \u201cguest\u201d for years, banelights are quick to dispatch companions who bore them."
+        }
+    ],
+    "html": "<i>This creature has a dragonfly\u2019s body and a woman\u2019s head and arms. A glowing red vortex gathers between her hands.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Banelight",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 15
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 25
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "blindsight 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "banelight",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "60 ft.",
+                    "range": 60,
+                    "unit": "feet"
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Fey",
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "12",
+            "xp": 19200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 27,
+                "touch": 21,
+                "flat-footed": 16,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+11 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 14
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 21
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 16
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/cold iron",
+                    "damage_types": [
+                        "cold iron"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "magic"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "susceptible to darkness"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "perfect<br/>"
+                            }
+                        ],
+                        "name": "fly 100 ft.",
+                        "movement_type": "fly",
+                        "value": 100
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "touch": true,
+                    "count": 2,
+                    "name": "light vortices",
+                    "bonus": [
+                        19
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "5d8"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "touch": true,
+                    "count": 2,
+                    "name": "light vortices",
+                    "bonus": [
+                        19
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "5d8"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "create will-o\u2019-wisp"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "daylight",
+                                        "modifiers": [
+                                            {
+                                                "type": "stat_block_section",
+                                                "subtype": "modifier",
+                                                "name": "centered on self"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "count_text": "Constant",
+                                "frequency": "Constant"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "wandering star motes",
+                                        "spell_dc": 20
+                                    }
+                                ],
+                                "count_text": "At will",
+                                "frequency": "At will"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "wandering star motes",
+                                        "metamagic": "quickened",
+                                        "spell_dc": 20
+                                    }
+                                ],
+                                "count_text": "3/day",
+                                "count": 3,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 12,
+                        "concentration": 18
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 8
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 9
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "42 vs. trip"
+                    }
+                ],
+                "value": 38
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 12,
+            "dex": 32,
+            "con": 25,
+            "int": 21,
+            "wis": 22,
+            "cha": 23,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Reflexes",
+                        "alt": "Combat Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Defensive Combat Training",
+                    "link": {
+                        "type": "link",
+                        "name": "Defensive Combat Training",
+                        "alt": "Defensive Combat Training",
+                        "href": "FeatDisplay.aspx?ItemName=Defensive%20Combat%20Training"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Great Fortitude"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Great Fortitude",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Great Fortitude",
+                        "alt": "Improved Great Fortitude",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Great%20Fortitude"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "wandering star motes"
+                        }
+                    ],
+                    "name": "Quicken Spell-Like Ability",
+                    "link": {
+                        "type": "link",
+                        "name": "Quicken Spell-Like Ability (wandering star motes)",
+                        "alt": "Quicken Spell-Like Ability (wandering star motes)",
+                        "href": "FeatDisplay.aspx?ItemName=Quicken%20Spell-Like%20Ability"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Vital Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Vital Strike",
+                        "alt": "Vital Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Vital%20Strike"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Weapon Finesse",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Finesse",
+                        "alt": "Weapon Finesse",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Finesse"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 25
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Escape Artist",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 38
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 22
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (nature)",
+                        "value": 24
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 25
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 25
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spellcraft",
+                        "value": 21
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Use Magic Device",
+                        "value": 25
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Aklo"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Auran"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Draconic"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Sylvan"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 6",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 6 pg. 37",
+                "alt": "Bestiary 6 pg. 37",
+                "href": "http://paizo.com/products/btpy9oge?Pathfinder-Roleplaying-Game-Bestiary-6-Hardcover%0D%0A"
+            },
+            "page": 37
+        }
+    ]
+}

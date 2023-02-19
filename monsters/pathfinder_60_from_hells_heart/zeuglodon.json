@@ -1,0 +1,321 @@
+{
+    "name": "Zeuglodon",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> warm oceans<br/><b>Organization</b> solitary or pair<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Hold Breath (Ex)</b> A zeuglodon can hold its breath for a number of rounds equal to 4 times its Constitution score before it risks drowning.<br/><br/><b>Thrash (Ex) </b>A zeuglodon grappling a foe can thrash its body back and forth rapidly, dealing extra damage due to the violent motion of its whipping head. This attack deals 4d8+19 points of damage, but allows the grappled creature a free attempt to escape the grapple. If a creature escapes, it is thrown 30 feet in a random direction by the zeuglodon\u2019s erratic thrashing."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "The primordial zeuglodon is often mistaken for a dinosaur or other large reptile, in part because of its almost crocodilian mouth as well as its snake-like elongation. Despite these features, it is more closely related to whales and other cetaceans than either aquatic reptiles or fish. A zeuglodon moves through the water with a vertical anguiliform (eel-like) motion that seems almost to be a primitive version of the efficient flukedriven locomotion of its cetacean relatives. Zeuglodons breathe air through blowholes on the tops of their heads, though they lack the lung capacity to stay underwater for as long as their more evolved kin. The relative dimensions of their angular heads are too small to encase the enlarged brains or melons developed by other cetaceans for echolocation or communication with others of their kind, and as such zeuglodons are less social than whales and dolphins. What they lack in specialized anatomy, however, they make up for in sheer ferocity and speed. A hunting zeuglodon is a furious foe to contend with. An adult zeuglodon measures around 50 feet long and weighs upward of 50,000 pounds."
+        }
+    ],
+    "html": "<i>This elongated, whale-like creature moves through the water with an eel-like motion despite its wide, fluked tail. Razor-sharp teeth fill its almost reptilian mouth.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Zeuglodon",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 8
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 20
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Animal",
+            "size": "Gargantuan",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Primeval Sea Creature",
+            "cr": "9",
+            "xp": 6400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 25,
+                "touch": 11,
+                "flat-footed": 20,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 dodge"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+14 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-4 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 13
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "swim 60 ft.",
+                        "movement_type": "swim",
+                        "value": 60
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        17
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d8+19"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                }
+            ],
+            "space": "20 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "20 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "thrash"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 8
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+29 grapple"
+                    }
+                ],
+                "value": 25
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "can\u2019t be tripped"
+                    }
+                ],
+                "value": 40
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 37,
+            "dex": 18,
+            "con": 22,
+            "int": 1,
+            "wis": 13,
+            "cha": 6,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Dodge",
+                    "link": {
+                        "type": "link",
+                        "name": "Dodge",
+                        "alt": "Dodge",
+                        "href": "FeatDisplay.aspx?ItemName=Dodge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Iron Will",
+                        "alt": "Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lunge",
+                    "link": {
+                        "type": "link",
+                        "name": "Lunge",
+                        "alt": "Lunge",
+                        "href": "FeatDisplay.aspx?ItemName=Lunge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Run",
+                    "link": {
+                        "type": "link",
+                        "name": "Run",
+                        "alt": "Run",
+                        "href": "FeatDisplay.aspx?ItemName=Run"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 20
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 27
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+8 Perception"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "hold breath"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #60: From Hell's Heart",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #60: From Hell's Heart pg. 89",
+                "alt": "Pathfinder #60: From Hell's Heart pg. 89",
+                "href": "http://paizo.com/pathfinder/adventurePath/skullAndShackles/v5748btpy8moi"
+            },
+            "page": 89
+        }
+    ]
+}

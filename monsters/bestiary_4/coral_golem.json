@@ -1,0 +1,285 @@
+{
+    "name": "Coral Golem",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> warm oceans or coastlines<br/><b>Organization</b> solitary or gang (2\u20135)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Aquatic Reconstruction (Ex)</b> Whenever a coral golem is touching a body of saltwater of a size equal to or greater than its own size, it gains fast healing 5.<br/><br/><b>Immunity to Magic (Ex)</b> A coral golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. <ul> <li>Any spell with the water descriptor heals a coral golem 1d6 points of damage per level of the caster (maximum 10d6).</li> <li> <i>Transmute rock to mud</i> slows a coral golem (as the slow spell) for 1d6 rounds (no save).</li> <li> <i>Transmute mud to rock</i> increases the golem\u2019s bleed damage to 2d6 for 3 rounds.</li> <li> <i>Soften earth and stone</i> causes a coral golem to lose its damage reduction for 3 rounds.</li> </ul>"
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Coral golems are constructs made entirely of colonies of living coral drawn from the ocean. While their sharpened appendages are capable of performing tasks that require meticulous precision, they are equally useful in martial combat. Wizards and sorcerers employ coral golems to collect delicate specimens of plant life from local beaches, spear and retrieve fish from the ocean for meals, and protect valuable locations such as their masters\u2019 homes or veins of minerals and other potent resources. A coral golem is 9 feet tall and weighs 1,000 pounds."
+        }
+    ],
+    "html": "<i>This tall creature appears to be made of wrinkled stone and coral, bits of plant life clinging to its creased body and clawlike hands.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Coral Golem",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 0
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 0
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Golem",
+            "cr": "9",
+            "xp": 6400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 21,
+                "touch": 9,
+                "flat-footed": 21,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+12 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/adamantine",
+                    "damage_types": [
+                        "adamantine"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "magic"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        18
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+10"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "bleed"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1d6"
+                        }
+                    ],
+                    "name": "bleed"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 12
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 20
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 30
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 24,
+            "dex": 11,
+            "con": null,
+            "int": null,
+            "wis": 11,
+            "cha": 1,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "claw"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (claw)",
+                        "alt": "Improved Critical (claw)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    },
+                    "notation": "B"
+                }
+            ],
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "aquatic reconstruction"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "slam"
+                        }
+                    ],
+                    "name": "powerful blows"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 4",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 4 pg. 131",
+                "alt": "Bestiary 4 pg. 131",
+                "href": "http://paizo.com/products/btpy91ds?Pathfinder-Roleplaying-Game-Bestiary-4"
+            },
+            "page": 131
+        },
+        {
+            "type": "source",
+            "name": "Isles of the Shackles",
+            "link": {
+                "type": "link",
+                "name": "Isles of the Shackles pg. 47",
+                "alt": "Isles of the Shackles pg. 47",
+                "href": "http://paizo.com/products/btpy8qzx?Pathfinder-Campaign-Setting-Isles-of-the-Shackles"
+            },
+            "page": 47
+        }
+    ]
+}

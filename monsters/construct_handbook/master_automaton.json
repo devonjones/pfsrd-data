@@ -1,0 +1,742 @@
+{
+    "name": "Master Automaton",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any (Axis)<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Arcane Hooks (Ex)</b> A master automaton\u2019s hooks are treated as having the <a href=\"MagicWeaponsDisplay.aspx?ItemName=Ghost%20Touch\" style=\"text-decoration:underline\"><i>ghost touch</i></a> property and as epic weapons for the purpose of overcoming damage reduction. A master automaton applies twice its Strength as a bonus on damage rolls with its hooks. When a master automaton hits with a hook, it can attempt a reposition combat maneuver as a free action. With a successful combat maneuver check, the master automaton can move its target to any square within its reach. If both hook attacks hit the target, the master automaton gains a +5 bonus on the combat maneuver check. <br/><br/><b>Automaton Sense (Ex)</b> A master automaton can sense and locate other automatons within 500 feet as if it had blindsense, and it can detect automatons within 60 feet as if it had blindsight. <br/><br/><b>Consume Core (Ex)</b> A master automaton can consume the life energy found within an <i>automaton core</i> as a standard action. Consuming a core in this manner destroys the <i>automaton core</i> and grants the master a +1 bonus to natural armor and on attack rolls, skill checks, and saving throws for 24 hours. Consuming a second <i>automaton core</i> within this 24 hour period causes the bonuses to become permanent. A master automaton can never gain more than a +10 bonus by consuming <i>automaton cores</i>. If a master automaton consumes the <i>automaton core</i> of another master automaton, it gains that master automaton\u2019s permanent bonuses gained by the consume core ability, if any, and add these bonuses to its own permanent bonuses. <br/><br/><b>Energy Beam (Ex)</b> A master automaton can focus the energy in its core to fire either a 90-foot line or a 60-foot cone of energy as a standard action. The beam deals 20d6 points of damage to each creature caught in the area (Reflex DC 30 half). Half of the damage is fire damage and half is force damage. A master automaton can use its energy beam once every 1d3 rounds. A master automaton can use its energy beam when it is grappling or being grappled. The save DC is Wisdom-based. <br/><br/><b>Powerful Core (Ex)</b> A master automaton\u2019s <i>automaton core</i> is filled with extremely potent life energy, granting the master an insight bonus to AC and on saving throws equal to the master automaton\u2019s Charisma bonus (if any). Additionally, this energy grants the master automaton a number of bonus hit points per Hit Die equal to its Charisma bonus (if any). <br/><br/><b>Reconstruction (Ex)</b> A master automaton is able to reconstruct itself if its body is destroyed. The master automaton\u2019s <i>automaton core</i> uses its energy to rebuild the automaton\u2019s body over the span of 1d10 days. If the core is located in Axis, the reconstruction requires only 1d10 hours. Once reconstructed, the master automaton reactivates with full hit points and any bonuses it had gained from the consume core ability. Only destroying a master automaton\u2019s <i>automaton core</i> prevents this reconstruction."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Master automatons are the most powerful among their kind. The highest-ranking leaders of the Artificer Conclave reserved these frames for themselves, intent on using their power to keep the rest of the automatons, and the other masters, in check. Most master automatons did not enter combat, instead choosing to serve as strategists and advisors.<br/><br/> While every master automaton is customized to serve the needs of the Conclave, they all command the same basic abilities. Most notable is their ability to detect and destroy <i>automaton cores</i>, an ability developed in case it became necessary to stop rogue automatons. Each master\u2019s frame is created with an arcane resonance that matches that found in <i>automaton cores</i>, allowing a master automaton to destroy and consume a core with ease. An unexpected side effect of this destruction process, however, is that a master absorbs the destroyed core\u2019s energy, which empowers the master.<br/><br/> This knowledge soon led to an arms race among the masters as they sought more automatons that they deemed as deserving of destruction. A large number of automatons were destroyed and consumed before this arms race eventually reached a deadlock, when the masters intentionally destroyed the means of creating new <i>automaton cores</i> in an attempt to cut off their rivals. This marked the end of the Artificer Conclave, and the masters soon went into hiding.<br/><br/> Today, the masters hide among the planes, mostly in especially remote or dangerous areas. Very few masters remain on Golarion. These masters resurface only when they find leads on a large collection of <i>automaton cores</i> or a particularly powerful automaton, biding their time until the perfect moment to strike. A few masters did not fall prey to avarice, though, and instead serve as advisors to particularly powerful beings, such as great rulers or powerful mages, hoping to steer them away from Jistka\u2019s past mistakes. Others still continue their search for knowledge, exploring the multiverse at their leisure to collect new knowledge and meet new personalities. Of particular note is the master automaton Anquira, who makes it very public that she is on a quest to speak with the other masters in the hopes of piecing together the lost knowledge of automaton creation to help restore the automatons to their original forms.<br/><br/>"
+        }
+    ],
+    "html": "<i>This construct is covered with elaborate markings. Its arms end in tremendous hooks, and the core in its head glows with light.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Master Automaton",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 3
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 34
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "automaton sense"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "true seeing"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "automaton"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "extraplanar"
+                }
+            ],
+            "size": "Huge",
+            "alignment": "Lawful Neutral",
+            "alignment_text": "LN",
+            "family": "Automaton",
+            "cr": "20",
+            "xp": 307200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 38,
+                "touch": 20,
+                "flat-footed": 34,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 dodge"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+8 insight"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+18 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 16
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 19
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 23
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "powerful core"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "reconstruction"
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "electricity"
+                }
+            ],
+            "resistances": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "resistance",
+                    "value": 30,
+                    "name": "cold"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "resistance",
+                    "value": 30,
+                    "name": "sonic"
+                }
+            ],
+            "sr": {
+                "type": "stat_block_section",
+                "subtype": "sr",
+                "value": 31
+            },
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerable mind"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "60 ft.",
+                        "movement_type": "walk",
+                        "value": 60
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "climb 30 ft.",
+                        "movement_type": "climb",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "average<br/>"
+                            }
+                        ],
+                        "name": "fly 60 ft.",
+                        "movement_type": "fly",
+                        "value": 60
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "arcane hooks",
+                    "bonus": [
+                        33
+                    ],
+                    "critical_range": "19-20",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "4d10+18"
+                        }
+                    ]
+                }
+            ],
+            "space": "15 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "15 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "90-ft. line or 60-ft. cone"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 30"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "20d6"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "usable every 1d3 rounds"
+                        }
+                    ],
+                    "name": "energy beam"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "2 arcane hooks"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "4d10+18"
+                        }
+                    ],
+                    "name": "rend"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "tongues"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "true seeing"
+                                    }
+                                ],
+                                "count_text": "Constant",
+                                "frequency": "Constant"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "cloudkill",
+                                        "spell_dc": 23
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "fireball",
+                                        "spell_dc": 21
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "lightning bolt",
+                                        "spell_dc": 21
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "teleport"
+                                    }
+                                ],
+                                "count_text": "At will",
+                                "frequency": "At will"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "banishment",
+                                        "spell_dc": 25
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "blade barrier",
+                                        "spell_dc": 24
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "plane shift"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "power word stun",
+                                        "spell_dc": 26
+                                    }
+                                ],
+                                "count_text": "3/day",
+                                "count": 3,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "reverse gravity"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "prismatic wall"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "time stop"
+                                    }
+                                ],
+                                "count_text": "1/day",
+                                "count": 1,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 25,
+                        "concentration": 33
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 25
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 36
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 58
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 28,
+            "dex": 16,
+            "con": null,
+            "int": 20,
+            "wis": 21,
+            "cha": 27,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Alertness",
+                    "link": {
+                        "type": "link",
+                        "name": "Alertness",
+                        "alt": "Alertness",
+                        "href": "FeatDisplay.aspx?ItemName=Alertness"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Expertise",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Expertise",
+                        "alt": "Combat Expertise",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Expertise"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Reflexes",
+                        "alt": "Combat Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Dodge",
+                    "link": {
+                        "type": "link",
+                        "name": "Dodge",
+                        "alt": "Dodge",
+                        "href": "FeatDisplay.aspx?ItemName=Dodge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Flyby Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Flyby Attack",
+                        "alt": "Flyby Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Flyby%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Hover",
+                    "link": {
+                        "type": "link",
+                        "name": "Hover",
+                        "alt": "Hover",
+                        "href": "FeatDisplay.aspx?ItemName=Hover"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "arcane hook"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (arcane hook)",
+                        "alt": "Improved Critical (arcane hook)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Iron Will",
+                        "alt": "Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Mobility",
+                    "link": {
+                        "type": "link",
+                        "name": "Mobility",
+                        "alt": "Mobility",
+                        "href": "FeatDisplay.aspx?ItemName=Mobility"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Spring Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Spring Attack",
+                        "alt": "Spring Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Spring%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Vital Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Vital Strike",
+                        "alt": "Vital Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Vital%20Strike"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "arcane hook"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (arcane hook)",
+                        "alt": "Weapon Focus (arcane hook)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 32
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Diplomacy",
+                        "value": 23
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 27
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 23
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (arcana)",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (planes)",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 34
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spellcraft",
+                        "value": 20
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Use Magic Device",
+                        "value": 23
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Abyssal"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Celestial"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Ignan"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Jistka"
+                    }
+                ],
+                "communication_abilities": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "communication_ability",
+                        "name": "telepathy",
+                        "range": {
+                            "type": "stat_block_section",
+                            "subtype": "range",
+                            "text": "100 ft.",
+                            "range": 100,
+                            "unit": "feet"
+                        }
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "communication_ability",
+                        "name": "<a href=\"SpellDisplay.aspx?ItemName=tongues\" style=\"text-decoration:underline\">tongues</a>"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Construct Handbook",
+            "link": {
+                "type": "link",
+                "name": "Construct Handbook pg. 26",
+                "alt": "Construct Handbook pg. 26",
+                "href": "https://paizo.com/products/btq01vam"
+            },
+            "page": 26
+        }
+    ]
+}

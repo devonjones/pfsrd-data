@@ -1,0 +1,330 @@
+{
+    "name": "Dossenus",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any underground (except water)<br/><b>Organization</b> solitary, clutch (2\u20139), or infestation (10\u201320)<br/><b>Treasure</b> incidental"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Burrow (Ex)</b> A dossenus can burrow through stone (or weaker materials such as wood) as easily as dirt.<br/><br/><b>Devastating Maw (Ex)</b> A dossenus\u2019 bite attack counts as adamantine for the purposes of overcoming DR and bypassing hardness.<br/><br/><b>Hydrophobia (Ex)</b> A dossenus cannot swim and always fails Swim checks. If a dossenus becomes completely submerged in water, it must succeed at a DC 15 Will save on its turn each round or be paralyzed with fear until it is no longer submerged.<br/><br/><b>Swarming (Ex)</b> Dossenuses are brutally efficient at swarming foes and often skitter atop one another in their haste to overwhelm and devour prey. Up to two dossenuses can share the same square at the same time. If two dossenuses sharing the same square attack the same foe, they are considered to be flanking that foe as if they were in two opposite squares."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "A dossenus is a subterranean pack hunter that can digest almost anything. Its body is mostly head and face, dominated by a huge mouth with multiple rows of black, rocklike teeth. Two thin arms and four thin legs extend from its underdeveloped body; its front limbs end in crablike claws it can use to clumsily manipulate objects. A dossenus is just under 4 feet long and weighs 60 pounds.<br/><br/>Dossenuses are notorious for their voracious appetites and ability to gnaw through practically any substance with their savage teeth. Though their tiny eyes appear absent of thought or purpose, dossenuses are actually slightly more intelligent than mere beasts. These creatures have a primitive communal social structure, speak and understand Aklo, and practice a violent form of religion based on the indiscriminate consumption of all other forms of life. Dossenuses practice ritual cannibalism of their dead.<br/><br/>Dossenuses are gifted climbers and burrowers and use their talents to clamber up or through walls, floors, ceilings, and over their fellows to quickly surround and overwhelm prey.<br/><br/>Once one of these extremely tenacious creatures lays eyes on potential prey, it does not give up the chase until it or its target is dead, or enters or crosses a body of water. A dossenus cannot swim (it sinks to the bottom) and has an intense fear of deep water.<br/><br/>Once every few generations, dossenuses gather in great numbers, sometimes in the thousands. After several weeks of worship, fasting, and frenzied mating, the creatures skitter forth as a massive swarm intent on devouring any living thing in their path."
+        }
+    ],
+    "html": "<i>This small creature looks like a lumpy head with crab legs and a giant mouth filled with stone teeth.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Dossenus",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 0
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Aberration",
+            "size": "Small",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1",
+            "xp": 400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 12,
+                "touch": 11,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 0
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+4 vs. poison"
+                        }
+                    ]
+                }
+            },
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "hydrophobia"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "light blindness"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "burrow 30 ft.",
+                        "movement_type": "burrow",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "climb 30 ft.",
+                        "movement_type": "climb",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        4
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+3"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "devastating maw"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "sneak attack +1d6"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "swarming"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 1
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "15 vs. trip"
+                    }
+                ],
+                "value": 11
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 12,
+            "dex": 11,
+            "con": 14,
+            "int": 3,
+            "wis": 10,
+            "cha": 5,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "bite"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (bite)",
+                        "alt": "Improved Critical (bite)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    },
+                    "notation": "B"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "bite"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (bite)",
+                        "alt": "Weapon Focus (bite)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "bite"
+                        }
+                    ],
+                    "name": "Weapon Specialization",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Specialization (bite)",
+                        "alt": "Weapon Specialization (bite)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Specialization"
+                    },
+                    "notation": "B"
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 17
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 5
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+8 Climb"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Aklo"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 4",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 4 pg. 63",
+                "alt": "Bestiary 4 pg. 63",
+                "href": "http://paizo.com/products/btpy91ds?Pathfinder-Roleplaying-Game-Bestiary-4"
+            },
+            "page": 63
+        }
+    ]
+}

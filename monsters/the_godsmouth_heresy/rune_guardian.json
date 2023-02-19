@@ -1,0 +1,342 @@
+{
+    "name": "Rune Guardian",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any (Thassilonian runes)<br/><b>Organization</b> solitary, pair, or syllabary (7 rune guardians, 1 of each sin)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>School Vulnerability (Ex)</b> A rune guardian\u2019s spell resistance does not apply against spells or effects from its opposition schools.<br/><br/>Rune guardians of envy are vulnerable to evocation and necromancy spells, rune guardians of gluttony are vulnerable to abjuration and enchantment spells, rune guardians of greed are vulnerable to enchantment and illusion spells, rune guardians of lust are vulnerable to necromancy and transmutation spells, rune guardians of pride are vulnerable to conjuration and transmutation spells, rune guardians of sloth are vulnerable to evocation and illusion spells, and rune guardians of wrath are vulnerable to abjuration and conjuration spells.<br/><br/><b>Sin Magic (Sp)</b> A rune guardian has a single spell-like ability, usable at will, from the school of magic associated with the reward of rule it represents. Rune guardians of envy cast <i>hold portal</i>, rune guardians of gluttony cast <i>ray of enfeeblement</i>, rune guardians of greed cast <i>reduce person</i>, rune guardians of lust cast <i>sleep</i>, rune guardians of pride cast <i>color spray</i>, rune guardians of sloth cast <i>summon monster I</i>, and rune guardians of wrath cast <i>burning hands</i>."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Rune guardians are animated constructs from ancient Thassilon, created by the runelords to guard laboratories, ossuaries, and repositories of lore. Each rune guardian is dedicated to one of the seven rewards of rule (now known as the seven sins of the soul), and empowered with that sin\u2019s associated school of magic. As such, there are seven varieties of rune guardian, each recognizable by its shape\u2014that of the Thassilonian rune representing that specific sin and arcane school. (The Thassilonians did not consider divination a separate school). Unlike golems, rune guardians are intelligent, able to follow complex orders and pursue intruders. They were built to coordinate with other servants of the runelords\u2014for example, an envy guardian\u2019s <i>hold portal</i> ability is more dangerous when used to lock someone in a room with a servitor monster.<br/><br/>A rune guardian is approximately 1 foot in diameter and weighs around 10 pounds."
+        }
+    ],
+    "html": "<i>A carved rune detaches itself from the wall and floats silently in midair, glowing with arcane energy.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Rune Guardian",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 3
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "size": "Tiny",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1",
+            "xp": 400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 14,
+                "touch": 14,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 0
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                }
+            ],
+            "sr": {
+                "type": "stat_block_section",
+                "subtype": "sr",
+                "value": 12
+            },
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "school vulnerability"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "perfect<br/>"
+                            }
+                        ],
+                        "name": "fly 60 ft.",
+                        "movement_type": "fly",
+                        "value": 60
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "slam",
+                    "bonus": [
+                        2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d2-2"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "sin magic"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "burning hands",
+                                        "spell_dc": 12
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "color spray",
+                                        "spell_dc": 12
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "hold portal"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "ray of enfeeblement",
+                                        "spell_dc": 12
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "reduce person",
+                                        "spell_dc": 12
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "sleep",
+                                        "spell_dc": 12
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "summon monster I"
+                                    }
+                                ],
+                                "count_text": "At will",
+                                "frequency": "At will"
+                            }
+                        ],
+                        "caster_level": 3,
+                        "concentration": 4
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 2
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 2
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "can't be tripped"
+                    }
+                ],
+                "value": 10
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 6,
+            "dex": 15,
+            "con": null,
+            "int": 11,
+            "wis": 14,
+            "cha": 12,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 18
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 3
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 12
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Thassilonian",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "does not speak"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "The Godsmouth Heresy",
+            "link": {
+                "type": "link",
+                "name": "The Godsmouth Heresy pg. 29",
+                "alt": "The Godsmouth Heresy pg. 29",
+                "href": "http://paizo.com/store/games/roleplayingGames/p/pathfinderRPG/paizo/pathfinderModules/v5748btpy8hil"
+            },
+            "page": 29
+        }
+    ]
+}

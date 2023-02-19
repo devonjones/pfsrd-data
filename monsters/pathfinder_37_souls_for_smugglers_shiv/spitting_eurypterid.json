@@ -1,0 +1,274 @@
+{
+    "name": "Spitting Eurypterid",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate or warm ocean<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Poison (Ex)</b> Sting\u2014injury; <i>save</i> Fort DC 25; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d6 Con and 1d4 Dex; <i>cure</i> 2 consecutive saves.<br/><br/><b>Spit (Ex)</b> A spitting eurypterid can expel a high-pressure jet of water from a vent just below its mouth with startling accuracy and force. This spit attack is equally effective above or below water, creating a 40-foot line that inflicts 10d6 points of nonlethal damage to all creatures in the area of effect. In addition, creatures that take damage from this jet of water are stunned for 1 round. A DC 25 Fortitude save halves the damage and negates the stun effect. Once a spitting eurypterid uses this ability, it cannot use it again until it takes a full-round action while completely submerged to draw more water into its body. The save DC is Constitution-based.<br/><br/>Known to some as sea scorpions, eurypterids are aquatic crustaceans that blur the line between their terrestrial cousins and lobsters. Primeval and voracious, these vermin range in size from relatively harmless ochre eurypterids the size of a dog up to the truly immense spitting eurypterids. There are even rumors of yet larger beasts, called whaleeating eurypterids by sailors. Regardless of their size, all share one thing in common\u2014an aggressive attitude. Eurypterids lash out at anything that might be food, and once they\u2019ve tasted prey, are single-minded in their pursuit. Although quite at home in the open sea, most eurypterids are capable of scuttling around on land and can exist out of water indefinitely. Unlike rats, eurypterids don\u2019t spread disease or cause much damage to most cargos\u2014traits that have led some captains to experiment with seeding colonies of ochre eurypterids in their holds to keep rodent populations under control. Alas, one can often tell the ships that use this tactic by the unusually high number of crewmen with missing fingers."
+        }
+    ],
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Spitting Eurypterid",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 4
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "tremorsense 30 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Vermin",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "aquatic"
+                }
+            ],
+            "size": "Gargantuan",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Eurypterid",
+            "cr": "12",
+            "xp": 19200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 26,
+                "touch": 6,
+                "flat-footed": 26,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+20 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-4 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 17
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "mind-affecting effects"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "10 ft.",
+                        "movement_type": "walk",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "swim 40 ft.",
+                        "movement_type": "swim",
+                        "value": 40
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        20
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+12"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "sting",
+                    "bonus": [
+                        20
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6+12"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "poison"
+                        }
+                    ]
+                }
+            ],
+            "space": "20 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "30 ft. with sting"
+                    }
+                ],
+                "value": "20 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "spit"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 12
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 28
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 38
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 34,
+            "dex": 10,
+            "con": 24,
+            "int": null,
+            "wis": 13,
+            "cha": 2,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    },
+                    "notation": "B"
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 20
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "amphibious"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #37: Souls for Smuggler's Shiv",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #37: Souls for Smuggler's Shiv pg. 79",
+                "alt": "Pathfinder #37: Souls for Smuggler's Shiv pg. 79",
+                "href": "http://paizo.com/pathfinder/adventurePath/theSerpentsSkull/v5748btpy8b7v"
+            },
+            "page": 79
+        }
+    ]
+}

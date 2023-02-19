@@ -1,0 +1,285 @@
+{
+    "name": "Huecuva",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or cloister (3\u201310)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Aura of Faithlessness (Su) </b>The huecuva and all undead creatures within 30 feet receive a +2 profane bonus on Will saves made to resist channeled energy and positive energy effects.<br/><br/><b>Disease (Ex)</b><i>Filth fever</i>: Injury; <i>save </i>Fort DC 12; <i>onset </i>1d3 days; <i>frequency </i>1/day; <i>effect </i>1d3 Dex damage and 1d3 Str damage; <i>cure </i>2 consecutive saves. The save DC is Charisma-based.<br/><br/><b>False Humanity (Su)</b> During the day, a huecuva is cloaked in an illusion that makes it look, sound, and feel like the living creature it once was. This effect functions similarly to <i>disguise self</i>\u2014if a creature interacts directly with a huecuva, it can attempt a DC 12 Will save to see through the illusion. Regardless, the huecuva\u2019s scent never changes\u2014it always exudes a faint stench of grave dust and decay. Creatures with the scent ability receive a +4 bonus on any Will saving throw made to see through this illusion. At night (regardless of whether the huecuva itself knows night has fallen) this illusion fades and reveals the creature for what it truly is. The save DC is Charisma-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Huecuvas are the risen corpses of heretical clerics who blasphemed and renounced their deities before meeting death. In unlife, they hate and seek to destroy those pious souls who keep their vows. Although easily mistaken for zombies or even skeletons, huecuvas have a spark of intelligence that makes them cunning and deceptive foes. During daylight hours, a huecuva becomes shrouded in an illusion that causes it to appear as it did in life\u2014at these times, a huecuva might seek to infiltrate society to dwell among those it hates. When night falls, it emerges to seek out its prey. Fortunately for the living, the typical huecuva has only fragments of intellect remaining, so it is usually not long before the undead creature makes an error of judgment or simply reveals itself for the monster it is.<br/><br/>Most huecuvas remember little of their former lives except for the blasphemies that led them to their cursed fates. They often find themselves drawn to the ruins of old temples, where they rage against or seek hopeless absolution from the deities who so afflicted them. Huecuvas sometimes work in concert with other undead creatures that share the same area.<br/><br/>While most huecuvas arise when a god rejects a heretic priest\u2019s soul, forcing the slain to rise as horrible undead, a huecuva can also be created with <i>create undead</i>. The caster must be at least 11th level, and the body to be transformed must have been an evil cleric in life. The spell can be used to create a huecuva using the body of a nonevil cleric, but doing so requires a DC 20 caster level check."
+        }
+    ],
+    "html": "<i>Rotting vestments hang across the withered flesh of this walking corpse, and its mouth hangs open in a silent scream.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Huecuva",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "faithlessness",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "30 ft.",
+                    "range": 30,
+                    "unit": "feet"
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "size": "Medium",
+            "alignment": "Chaotic Evil",
+            "alignment_text": "CE",
+            "cr": "2",
+            "xp": 600
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 12,
+                "flat-footed": 13,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/magic or silver",
+                    "conjunction": "or",
+                    "damage_types": [
+                        "magic",
+                        "silver"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "undead traits"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        4
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+1"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "disease"
+                        }
+                    ]
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 2
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 3
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 15
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 13,
+            "dex": 14,
+            "con": null,
+            "int": 4,
+            "wis": 12,
+            "cha": 12,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "claw"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (claw)",
+                        "alt": "Weapon Focus (claw)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 7
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "false humanity"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 3",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 3 pg. 150",
+                "alt": "Bestiary 3 pg. 150",
+                "href": "http://paizo.com/products/btpy8odu?Pathfinder-Roleplaying-Game-Bestiary-3"
+            },
+            "page": 150
+        },
+        {
+            "type": "source",
+            "name": "Bonus Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Bonus Bestiary pg. 12",
+                "alt": "Bonus Bestiary pg. 12",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy88x4"
+            },
+            "page": 12
+        }
+    ]
+}

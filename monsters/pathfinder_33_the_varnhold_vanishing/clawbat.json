@@ -1,0 +1,282 @@
+{
+    "name": "Clawbat",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate hills and ruins<br/><b>Organization</b> solitary, pair, or clutch (3-16)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Blood Scent (Ex)</b> A clawbat can detect any creature at less than maximum hit points as if it had scent. Those at full hit points cannot be detected by the blood scent ability.<br/><br/><b>Distraction (Ex)</b> A clawbat\u2019s lengthy tongue whips around its body as it feeds, lapping up the blood from wounded creatures nearby. Every round a clawbat may choose either a creature it attacks or any creature it passes adjacent to as it moves. If the target is at less than full hit points, it must make a DC 11 Fortitude save or be nauseated for 1 round. The save DC is Constitution-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Clawbats, or einchadu, as they\u2019re known to the tribes of greater Iobaria, haunt the desolate expanses of northeastern Avistan and the rugged lands beyond. Swarming forth from their shadowy dens to hunt by night, these strange predators thirst for blood, scavenging from the victims of greater nocturnal hunters and stalking those foolish enough not to fear dangers in the dark. Drawn by the scent of spilled blood, clawbats fearlessly follow deadly beasts, and more than one traveler has narrowly escaped a predator\u2019s nearly lethal ambush only to find his luck change as a swarm of wings and eyes descend upon him.<br/><br/>The span of an average clawbat\u2019s dual pairs of wings stretches 3 feet wide, lifting aloft rubbery bodies weighing 2 to 4 pounds. Tales of more monstrous clawbats, with wings that blot out the stars as they swoop away with children and small animals, also pass through the civilized lands of Iobaria. Such overgrown clawbats might be constructed by making use of the giant creature simple template."
+        }
+    ],
+    "html": "<i>A leathery piece of skin stretched across a frame of joints and bony knobs beats awkwardly through the air. Eyes glare from the folds of its thick wings, writhing tentacles surround its sucker-like maw, and a long, thin tongue darts forth seemingly at random to lash the air around it.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Clawbat",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 3
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 2
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "blood scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "size": "Small",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1",
+            "xp": 400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 14,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "10 ft.",
+                        "movement_type": "walk",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "average<br/>"
+                            }
+                        ],
+                        "name": "fly 50 ft.",
+                        "movement_type": "fly",
+                        "value": 50
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 1,
+                    "name": "bite",
+                    "bonus": [
+                        6
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4-2"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "bleed"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1"
+                        }
+                    ],
+                    "name": "bleed"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 11"
+                        }
+                    ],
+                    "name": "distraction"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 2
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": -1
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 12
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 7,
+            "dex": 17,
+            "con": 10,
+            "int": 2,
+            "wis": 14,
+            "cha": 10,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Flyby Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Flyby Attack",
+                        "alt": "Flyby Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Flyby%20Attack"
+                    },
+                    "notation": "B"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Weapon Finesse",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Finesse",
+                        "alt": "Weapon Finesse",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Finesse"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 12
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #33: The Varnhold Vanishing",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #33: The Varnhold Vanishing pg. 82",
+                "alt": "Pathfinder #33: The Varnhold Vanishing pg. 82",
+                "href": "http://paizo.com/pathfinder/adventurePath/kingmaker/v5748btpy8e7e"
+            },
+            "page": 82
+        }
+    ]
+}

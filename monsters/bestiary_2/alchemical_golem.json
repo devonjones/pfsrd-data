@@ -1,0 +1,264 @@
+{
+    "name": "Alchemical Golem",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or gang (2\u20134)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Alchemy (Ex)</b> When an alchemical golem strikes a foe, the attack has an additional random effect, chosen from the options below. The attack can either deal 1d6 points of acid, cold, electricity, or fire damage, or cause the target to become sickened (Fortitude DC 16 negates) or entangled (Reflex DC 16 negates) for 1d4 rounds. These save DCs are Constitution-based.<br/><br/><b>Bombs (Ex) </b>As a standard action, an alchemical golem can throw a bomb as a ranged touch attack to a distance of 60 feet (no range increment). If the attack misses, treat it as a thrown splash weapon to determine where it lands. Anyone struck by an alchemical golem\u2019s bomb takes 8d6 points of acid, cold, electricity, or fire damage (determine type randomly). All creatures adjacent to the location where the bomb hits take 1d6 points of energy damage of the same type.<br/><br/><b>Immunity to Magic (Ex) </b>An alchemical golem is immune to spells or spell-like abilities that allow spell resistance, save for spells with the sonic descriptor. Shatter damages an alchemical golem as if it were a crystalline creature.<br/><br/><b>Splash (Ex)</b> Any strike on an alchemical golem with a non-reach melee weapon deals 1 point of acid, cold, electricity, or fire damage (determine type randomly) to the attacker. This amount increases to 1d6 points of damage if the attack is a critical hit."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "This golem is a walking alchemical nightmare, capable of inflicting all manner of painful wounds on its foes. Its ability to follow orders is granted by the otherwise mindless humanoid brain that floats in its dome-like head, while its animating force is a curious combination of alchemy and elemental spirits bound into the fluids and metals of its body."
+        }
+    ],
+    "html": "<i>A rickety construction of glass tubing, metal, and wood convey the brain and two eyes afloat in this figure\u2019s glass skull.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Alchemical Golem",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 4
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 0
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Golem",
+            "cr": "9",
+            "xp": 6400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 23,
+                "touch": 13,
+                "flat-footed": 19,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+10 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/adamantine or bludgeoning",
+                    "conjunction": "or",
+                    "damage_types": [
+                        "adamantine",
+                        "bludgeoning"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "magic"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "slams",
+                    "bonus": [
+                        19
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d8+8"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "alchemy"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "bomb",
+                    "bonus": [
+                        15
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "8d6",
+                            "effect": "energy damage",
+                            "damage_type": "",
+                            "damage_type_text": "energy damage"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "alchemy"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "bombs"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "splash"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 12
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 21
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 35
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 27,
+            "dex": 18,
+            "con": null,
+            "int": null,
+            "wis": 11,
+            "cha": 1
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 2",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 2 pg. 135",
+                "alt": "Bestiary 2 pg. 135",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy8hif"
+            },
+            "page": 135
+        }
+    ]
+}

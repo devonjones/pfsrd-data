@@ -1,0 +1,263 @@
+{
+    "name": "Jackal",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> warm deserts or plains<br/><b>Organization</b> solitary, pair, or pack (3\u201310)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Opportunistic Bite (Ex)</b> On a successful bite attack against an opponent it\u2019s flanking or that is denied its Dexterity bonus to AC, a jackal deals 1 additional point of damage."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Jackals are usually encountered alone or as a mated pair, but sometimes they associate for a time with a small pack composed of two parents and their adult offspring, with the offspring serving a deferential support role to their parents. Although considered craven and foul by humans, jackals are relatively friendly and gentle with members of their own small packs.<br/><br/>Attracted to the edges of human settlements in their territory, jackals often make opportunistic raids on fruit crops and vulnerable domesticated animals. They\u2019re also attracted to large deposits of garbage that they can sift through for leftover food. Jackals are remarkably adaptable, and readily forage for insects or fruit, feed on found carcasses, or hunt small or vulnerable game as the opportunity presents itself.<br/><br/>Jackals are notorious for their craftiness in evading pursuit, and they\u2019ve been known to feign death when caught in order to lull opponents into complacency and gain another chance to escape. A jackal can attempt a Bluff check opposed by its opponent\u2019s Sense Motive check to play dead. If successful, after combat ends, the jackal can begin a new encounter with surprise. During the surprise round, only the jackal and any opponents who succeeded on their Sense Motive checks can act."
+        }
+    ],
+    "html": "<i>This sandy-colored canine resembles a slender-bodied wolf with short, graceful legs. It watches with dark brown eyes.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Jackal",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Animal",
+            "size": "Small",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1/2",
+            "xp": 200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 14,
+                "touch": 13,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "40 ft.",
+                        "movement_type": "walk",
+                        "value": 40
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+1"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "trip"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "opportunistic bite"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 0
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 0
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "16 vs. trip"
+                    }
+                ],
+                "value": 12
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 13,
+            "dex": 15,
+            "con": 14,
+            "int": 2,
+            "wis": 13,
+            "cha": 6,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 2
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 0,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+4 when tracking by scent"
+                            }
+                        ]
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Bluff"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Survival when tracking by scent"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Osirion, Legacy of the Pharaohs",
+            "link": {
+                "type": "link",
+                "name": "Osirion, Legacy of the Pharaohs pg. 54",
+                "alt": "Osirion, Legacy of the Pharaohs pg. 54",
+                "href": "http://paizo.com/products/btpy93n8?Pathfinder-Campaign-Setting-Osirion-Legacy-of-Pharaohs"
+            },
+            "page": 54
+        }
+    ]
+}

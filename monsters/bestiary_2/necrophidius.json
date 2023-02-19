@@ -1,0 +1,239 @@
+{
+    "name": "Necrophidius",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or coil (2\u20136)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Dance of Death (Ex)</b> A necrophidius can entrance opponents by swaying back and forth as a full-round action. All creatures within 30 feet who can see the necrophidius when it uses its dance of death must succeed on a DC 15 Will save or be dazed for 2d4 rounds. This is a mind-affecting effect. The save DC is Constitution-based and includes a +4 racial bonus.<br/><br/><b>Paralysis (Su) </b>Any living creature that is bitten by a necrophidius must succeed on a DC 13 Fortitude save or be paralyzed for 1d4 rounds. The save DC is Constitution-based and includes a +2 racial bonus."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Despite its sinister appearance, the snake-like necrophidius is not an undead creature. Rather, it is a magical construct built from the skeleton of a giant snake and then mounted with the skull of a humanoid creature. Fangs are cemented into the jaws of the skull, after which the entire creation can be brought to life by a series of obscure and expensive rituals\u2014these rituals are traditionally well guarded by those who discover them.<br/><br/>As a mindless construct that requires neither food nor sleep, a necrophidius makes an excellent guardian, and its innate stealth allows it to slip up on the unwary undetected. In certain areas, the necrophidius is commonly employed as an assassin, able to disable its quarries with its dance of death or paralyzing bite before disposing of them in a gruesome manner\u2014as long as the assassination doesn\u2019t require any particular intelligence to carry out. Particularly macabre creators might even construct the creature from the skull of a friend or loved one of the intended victim in order to magnify the horror of the assassination, leaving much of the flesh on the skull so the victim can recognize its source. This flesh rots eventually\u2014only freshly crafted necrophidiuses have this grisly feature (although regular applications of <i>gentle repose </i>spells can keep such a morbid decoration fresh for a much longer period of time).<br/><br/>Although a necrophidius is mindless, it can follow the simple commands of its creator. These can include commands to lie dormant until some specific condition is met or to follow and kill an indicated target to the exclusion of all other activities.<br/><br/>A typical necrophidius is 10 feet long and weighs 200 pounds."
+        }
+    ],
+    "html": "<i>The soft scrape of bone reveals the long, sinuous skeleton of a large snake, its head a humanoid skull with a snake\u2019s jaws.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Necrophidius",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 3
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 0
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "3",
+            "xp": 800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 13,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/bludgeoning",
+                    "damage_types": [
+                        "bludgeoning"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        6
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+4"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "paralysis"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "dance of death"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 6
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "can\u2019t be tripped"
+                    }
+                ],
+                "value": 19
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 16,
+            "dex": 17,
+            "con": null,
+            "int": null,
+            "wis": 11,
+            "cha": 1,
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 15
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+12 Stealth"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 2",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 2 pg. 196",
+                "alt": "Bestiary 2 pg. 196",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy8hif"
+            },
+            "page": 196
+        }
+    ]
+}

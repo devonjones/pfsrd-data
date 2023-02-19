@@ -1,0 +1,231 @@
+{
+    "name": "Goblin Dog",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate forest, swamp, or underground<br/><b>Organization</b> solitary or pack (2\u201312)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Allergic Reaction (Ex)</b> A goblin dog\u2019s dander is highly irritating to all creatures save those with the goblinoid subtype. A non-goblinoid creature damaged by a goblin dog\u2019s bite, who deals damage to a goblin dog with a natural weapon or unarmed attack, or who otherwise comes into contact with a goblin dog (including attempts to grapple or ride the creature) must make a DC 12 Fortitude save or break out in an itching rash. A creature affected by this rash takes a \u20132 penalty to Dexterity and Charisma for 1 day (multiple allergic reactions do not stack). <i>Remove disease </i>or any magical healing removes the rash instantly. This is a disease effect. The save DC is Constitution-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Loathed by men and beasts alike, goblin dogs are ugly, stinking, craven, and foul-tempered. It\u2019s no surprise that goblins find kindred spirits in these shunned, disgusting beasts. Constantly itching, afflicted with a species-wide mange exacerbated by prolific dander, even the healthiest goblin dog looks sickly and starved.<br/><br/>Despite its name, the goblin dog is in fact a species of rodent grown monstrously large. Their long-legged shape and proclivity to hunt and run in packs earned them their popular name, a name that many goblins take issue with, as it galls the average goblin to consider these, their favored mounts, having anything at all to do with actual dogs. Of course, being goblins, they haven\u2019t bothered to come up with alternate names for goblin dogs. Perhaps they don\u2019t realize they can.<br/><br/>Contact with a goblin dog\u2019s infested, mangy hide causes most other creatures to break out into hives, a condition known as \u201cgoblin rash.\u201d Goblinoids seem to be immune to this affliction, and are fond of keeping goblin dogs as guardians and mounts.<br/><br/>Despite their skin conditions and disorders, goblin dogs are highly resistant to disease. Their favored food is carrion\u2014the riper, the better. That many goblin tribes let their goblin dogs run free in their lairs is the single reason most goblin dens aren\u2019t filthier than they actually are; constantly hungry, a goblin dog eats anything it can chew that it finds left behind by other, more discerning palates.<br/><br/>A goblin dog is 5 feet long but weighs only 75 pounds."
+        }
+    ],
+    "html": "<i>This mangy canine\u2019s face has the same flat nose, beady eyes, and protruding teeth as a rat grown grotesquely large.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Goblin Dog",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Animal",
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1",
+            "xp": 400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 13,
+                "touch": 12,
+                "flat-footed": 11,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "disease"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "50 ft.",
+                        "movement_type": "walk",
+                        "value": 50
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        2
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+3"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "allergic reaction"
+                        }
+                    ]
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 0
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 2
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 14
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 15,
+            "dex": 14,
+            "con": 15,
+            "int": 2,
+            "wis": 12,
+            "cha": 8,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 6
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder RPG Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder RPG Bestiary pg. 157",
+                "alt": "Pathfinder RPG Bestiary pg. 157",
+                "href": "http://paizo.com/products/btpy8auu?Pathfinder-Roleplaying-Game-Bestiary"
+            },
+            "page": 157
+        },
+        {
+            "type": "source",
+            "name": "Pathfinder #1: Burnt Offerings",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #1: Burnt Offerings pg. 87",
+                "alt": "Pathfinder #1: Burnt Offerings pg. 87",
+                "href": "http://paizo.com/pathfinder/adventurePath/riseOfTheRunelords/v5748btpy7zkq"
+            },
+            "page": 87
+        }
+    ]
+}

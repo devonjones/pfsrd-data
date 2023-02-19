@@ -1,0 +1,258 @@
+{
+    "name": "Carrion Golem",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary or gang (2\u20134)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Foul Stench (Ex)</b> This functions as the stench ability, but causes affected creatures to be nauseated rather than sickened.<br/><br/><b>Immune to Magic (Ex)</b> A carrion golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. <ul> <li> <i>Gentle repose </i>causes a carrion golem to become stiff and helpless for 1d4 rounds if it fails a Will save against the spell.</li> <li> <i>Animate dead </i>causes the various parts of the golem\u2019s body to shudder and tear, dealing 1d6 points of damage per caster level to the golem (no save).</li> <li>Any magical attack that deals cold or fire damage slows a carrion golem (as the <i>slow </i>spell) for 2d6 rounds (no save).</li> <li>Any magical attack that deals electricity damage hastes a carrion golem (as the <i>haste </i>spell) for 2d6 rounds.</li> </ul><b>Plague Carrier (Ex)</b> When a carrion golem is created, its creator infects it with a specific disease. The carrion golem can then infect those it strikes with its slams with this disease\u2014most carrion golems inflict filth fever. The save DC is Constitution-based and includes a +2 racial bonus.<br/><br/><i>Filth Fever</i>: Slam\u2014injury; <i>save </i>Fortitude DC 14; <i>onset </i>1d3 days; <i>frequency </i>1/day; <i>effect </i>1d3 Dex damage and 1d3 Con damage; <i>cure </i>2 consecutive saves."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Carrion golems are made from the partially decayed parts of numerous dead creatures\u2014no two carrion golems are exactly alike in appearance. Most are created from the corpses of humanoid creatures that are then augmented here and there with parts taken from animals, resulting in a monster that stands 6 feet tall and weighs 120 pounds."
+        }
+    ],
+    "html": "<i>A lurching mash-up of rotting flesh, jagged bone, and coarse hair, this humanoid monstrosity reeks of death and decay.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Carrion Golem",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 0
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "blindsense 10 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "1 round"
+                    }
+                ],
+                "name": "foul stench",
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 12",
+                    "dc": 12
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Golem",
+            "cr": "4",
+            "xp": 1200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 17,
+                "touch": 11,
+                "flat-footed": 16,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/bludgeoning or slashing",
+                    "conjunction": "or",
+                    "damage_types": [
+                        "bludgeoning",
+                        "slashing"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "magic"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "slams",
+                    "bonus": [
+                        7
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+3"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "disease"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "plague carrier"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 4
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 7
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 18
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 17,
+            "dex": 12,
+            "con": null,
+            "int": null,
+            "wis": 11,
+            "cha": 1
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 2",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 2 pg. 136",
+                "alt": "Bestiary 2 pg. 136",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy8hif"
+            },
+            "page": 136
+        },
+        {
+            "type": "source",
+            "name": "Pathfinder #7: Edge of Anarchy",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #7: Edge of Anarchy pg. 78",
+                "alt": "Pathfinder #7: Edge of Anarchy pg. 78",
+                "href": "http://paizo.com/pathfinder/adventurePath/curseOfTheCrimsonThrone/v5748btpy81xw"
+            },
+            "page": 78
+        }
+    ]
+}

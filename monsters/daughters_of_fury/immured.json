@@ -1,0 +1,305 @@
+{
+    "name": "Immured",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any urban<br/><b>Organization</b> solitary or gang (2\u20135)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Aura of Breathlessness (Su)</b> The agonized gasping of an immured displaces oxygen within 10 feet of it, automatically extinguishing nonmagical fires within this range. Breathing creatures within the aura must hold their breath or risk suffocation. Whenever an immured deals nonlethal damage to a creature holding its breath in the aura, the duration the target can hold its breath for decreases by a number of rounds equal to the nonlethal damage dealt. The immured cannot dismiss this aura.<br/><br/><b>Bound (Su)</b> Immured are bound to the locations in which they died. Each hour an immured remains away from the tomb or building in which it died, it takes 1d6 points of damage that can\u2019t be healed until it returns to its place of death.<br/><br/><b>Breach (Su)</b> As a swift action, an immured can touch a nonmagical wall and open a spatial rift. The touched 5-foot section of wall (which can be up to 2 feet thick) effectively ceases to exist for 2 rounds, except for a dark, semisolid membrane that blocks line of sight through the rift. The immured can see, move, attack, or even drag a target through the rift without penalty. Other creatures can move through the rift, treating it as difficult terrain. After 2 rounds, the rift closes, pushing anything inside it into the nearest open space.<br/><br/><b>Seize (Ex)</b> An immured can choose to deal nonlethal damage with its slam attack with no penalty on the attack roll. In addition, an immured that deals nonlethal damage with its slam attack can attempt a drag combat maneuver against the target as a free action."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Immured are undead remains of those who died of slow suffocation in a confined, lightless space. Their feelings of abject terror and desperate desire to escape before death manifest as an ability to open temporary rifts in reality. Although they loathe the bright lights and open spaces of the world outside, they occasionally emerge to violently hush any sounds that disturb their repose. Some immured find the last gasps of dying creatures intoxicating, so they seek out victims to choke night after night.<br/><br/>While an accidental live burial can trigger the birth of an immured, most of these unfortunates are brought about by purposeful malevolence, such as being walled in as a form of torture or execution in life. In cultures obsessed with undeath or the afterlife, living servants are sometimes honored by being entombed with their masters, which can create immured.<br/><br/>An immured is 6 feet tall and weighs 100 pounds."
+        }
+    ],
+    "html": "<i>Through cracked, sickly blue lips, this pallid humanoid figure emits deep gasps as if struggling to breathe.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Immured",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 4
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 6
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "breathlessness",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "10 ft.",
+                    "range": 10,
+                    "unit": "feet"
+                },
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 14",
+                    "dc": 14
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "3",
+            "xp": 800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 16,
+                "touch": 10,
+                "flat-footed": 16,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "undead traits"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "bound"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "slam",
+                    "bonus": [
+                        6
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+4"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "breach"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "seize"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+8 drag"
+                    }
+                ],
+                "value": 6
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "18 vs. drag"
+                    }
+                ],
+                "value": 16
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 16,
+            "dex": 11,
+            "con": null,
+            "int": 5,
+            "wis": 13,
+            "cha": 14,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Drag",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Drag",
+                        "alt": "Improved Drag",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Drag"
+                    },
+                    "notation": "B"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 6
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 5
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "can\u2019t speak"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Daughters of Fury",
+            "link": {
+                "type": "link",
+                "name": "Daughters of Fury pg. 55",
+                "alt": "Daughters of Fury pg. 55",
+                "href": "http://paizo.com/products/btpy9au7?Pathfinder-Module-Daughters-of-Fury"
+            },
+            "page": 55
+        }
+    ]
+}

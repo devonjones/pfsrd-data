@@ -1,0 +1,244 @@
+{
+    "name": "Skittergoat",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate hills or plains<br/><b>Organization</b> solitary, pair, or herd (3\u201312)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Egg Cracker (Ex)</b> A skittergoat\u2019s horns are able to crack through the tough shells of ankheg eggs. When a skittergoat charges, its gore attack is resolved against the target\u2019s touch AC. In addition, when breaking an object, a skittergoat ignores 1 point of the object\u2019s hardness."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "This breed of small goats, which dines almost exclusively on ankheg eggs, was only recently discovered living among the low hills and valleys of the Skittermounds. The skittergoats have adapted to life alongside the ankhegs with whom they share their environment: their agility allows them to slip through small spaces in search of eggs, and their speed makes them quite adept at escaping the grasp of angry ankheg mothers. Their relatively docile nature and ability to pierce ankheg eggs with their sharp horns have led to high demand for domesticated skittergoat companions among rangers searching for ankheg nests.<br/><br/>Skittergoats don\u2019t often form large herds, since foraging for ankheg eggs is most effectively done alone. A mating pair of skittergoats will generally pair for life, with the female ranging out in search of food while the male stays near the den to protect the young. Mothers regurgitate food for their young after returning from a hunt."
+        }
+    ],
+    "html": "<i>This small goat has sharp horns that wrap around its head to point forward, making it resemble a tiny bull.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Skittergoat",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 4
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Animal",
+            "size": "Small",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1/2",
+            "xp": 200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 13,
+                "touch": 13,
+                "flat-footed": 11,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 0
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "gore",
+                    "bonus": [
+                        3
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+1"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "egg cracker"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 1
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "17 vs. trip"
+                    }
+                ],
+                "value": 13
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 12,
+            "dex": 14,
+            "con": 11,
+            "int": 2,
+            "wis": 11,
+            "cha": 5,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Escape Artist"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Escape Artist)",
+                        "alt": "Skill Focus (Escape Artist)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Escape Artist",
+                        "value": 6,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+8 to escape a grapple"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 4
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+2 Escape Artist to escape a grapple"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #91: Battle of Bloodmarch Hills",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #91: Battle of Bloodmarch Hills pg. 82",
+                "alt": "Pathfinder #91: Battle of Bloodmarch Hills pg. 82",
+                "href": "http://paizo.com/products/btpy9aub?Pathfinder-Adventure-Path-91-Battle-of-Bloodmarch-Hill"
+            },
+            "page": 82
+        }
+    ]
+}

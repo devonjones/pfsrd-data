@@ -1,0 +1,347 @@
+{
+    "name": "Combusted",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or effigy (2\u20136)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Combustion (Su)</b> Curse\u2014slam; <i>save</i> Fort DC 13; <i>onset</i> immediate; <i>frequency</i> 1/ round; <i>effect</i> 2d6 fire damage that ignores fire resistance; <i>cure</i> 1 save. A creature that falls below 0 hit points from this curse spontaneously combusts, dying instantly. The save DC is Charisma-based. <br/><br/><b>Fire Blast (Sp)</b> This ability has a 30 foot range and can be used at will as a standard action. <br/><br/><b>Howl of Agony (Ex)</b> A combusted perpetually screams in agony, forcing each creature within 10 feet to succeed at a DC 13 Will save or be stunned with fear for 1d4 rounds. A creature cannot be affected by the same combusted\u2019s howl of agony ability more than once every 24 hours. This is a mind-affecting fear effect. The save DC is Charisma-based. <br/><br/><b>Susceptible to Water (Ex)</b> A vial of water can be used as a splash weapon against a combusted, dealing 1d4 points of damage on a hit or 1 point of damage on a splash. Holy water deals double damage to a combusted. Rainfall deals 1d6 points of damage per round to a combusted, and full immersion in water deals 6d6 points of damage per round. Despite this, the supernatural fires that burn in a combusted cannot be extinguished by mere water, and a combusted cannot be reduced to fewer hit points than it has Hit Dice (5 hp for most combusted) by water alone."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Most scholars of the strange consider accounts of spontaneous combustion to be nothing more than superstitious folktales. But those with a deep understanding of the occult know it is indeed possible for a person to feel a sudden fever come on, only to find the heat within her body rising to incredible levels until she bursts into flames and perishes, leaving behind only a charred corpse. The sudden and violent deaths of such individuals make it easier for dark powers to reanimate their bodies, and sometimes for the victims to return from the dead on their own. <br/><br/>However they return, the undead creatures known as combusted all suffer the telltale signs of their demise: their corpses constantly burn and their desiccated flesh is never fully consumed by the flames. Roiling clouds of smoke, thick with the stench of burning skin and hair, surround them at all times, and may reveal their presence from over a mile away. These shambling horrors can arise at any location that has a particular affinity for undead, but they have been known to wander into nearby bodies of water in an attempt to extinguish the flames that took their lives, though they never attempt such self destructive acts when affronted by the presence of the living. <br/><br/>A typical combusted stands the same height as the creature it was in life, but weighs less than half as much, since so much of its body and musculature has burned away to ashes."
+        }
+    ],
+    "html": "<i>This creature\u2019s vestments are charred black and fused together, and its flesh is a raging inferno surrounded by greasy black smoke.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Combusted",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 9
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "howl of agony",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "10 ft.",
+                    "range": 10,
+                    "unit": "feet"
+                },
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 13",
+                    "dc": 13
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "10 rounds"
+                    }
+                ],
+                "name": "stench",
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 13",
+                    "dc": 13
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Undead",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "fire"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "3",
+            "xp": 800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 11,
+                "flat-footed": 14,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "fire"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "undead traits"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "susceptible to water"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerable to cold"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "slams",
+                    "bonus": [
+                        6
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+3"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6",
+                            "effect": "fire",
+                            "damage_type": "",
+                            "damage_type_text": "fire"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "combustion"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "touch": true,
+                    "name": "fire blast",
+                    "bonus": [
+                        4
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "3d6",
+                            "effect": "fire",
+                            "damage_type": "",
+                            "damage_type_text": "fire"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "combustion"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "fire blast"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 6
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 17
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 17,
+            "dex": 13,
+            "con": null,
+            "int": 1,
+            "wis": 12,
+            "cha": 13,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lightning Reflexes"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 9
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 6",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 6 pg. 63",
+                "alt": "Bestiary 6 pg. 63",
+                "href": "http://paizo.com/products/btpy9oge?Pathfinder-Roleplaying-Game-Bestiary-6-Hardcover%0D%0A"
+            },
+            "page": 63
+        },
+        {
+            "type": "source",
+            "name": "Occult Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Occult Bestiary pg. 16",
+                "alt": "Occult Bestiary pg. 16",
+                "href": "http://paizo.com/products/btpy9g21?Pathfinder-Campaign-Setting-Occult-Bestiary%0D%0A"
+            },
+            "page": 16
+        }
+    ]
+}

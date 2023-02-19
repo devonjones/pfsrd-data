@@ -1,0 +1,242 @@
+{
+    "name": "Gnoll",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> warm plains or desert<br/><b>Organization</b> solitary, pair, hunting party (2\u20135 gnolls and 1\u20132 hyenas), band (10\u2013100 adults plus 50% noncombatant children, 1 sergeant of 3rd level per 20 adults, 1 leader of 4th\u20136th level, and 5\u20138 hyenas), or tribe (20\u2013200 plus 1 sergeant of 3rd level per 20 adults, 1 or 2 lieutenants of 4th or 5th level, 1 leader of 6th\u20138th level, 7\u201312 hyenas, and 4\u20137 hyaenodons)<br/><b>Treasure</b> NPC Gear (leather armor, heavy wooden shield, battleaxe, longbow with 20 arrows, other treasure)"
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Gnolls are a race of hulking, humanoids that resemble hyenas in more than mere appearance; they show a striking affinity with the scavenging animals, to the point of keeping them as pets, and reflect many of the lesser creatures\u2019 behaviors.<br/><br/>Gnolls are capable hunters, but are far happier to scavenge or steal a kill than to go out and track down prey. This laziness impels them to acquire slaves of whatever type is available, whom they force to dig warrens, gather supplies and water, and even hunt for their gnoll masters.<br/><br/>Creatures other than hyenas and other gnolls are either meat or slaves, depending upon the temperament of the tribe. Even a dead or fallen comrade is a fresh meal for a gnoll, who might honor a distinguished tribe member with a brief prayer, or thoroughly cook one that has died of a wasting disease, but otherwise view a dead gnoll as little different from any other creature. The more \u201ccivilized\u201d gnolls do not eat their prisoners, but instead keep them as slaves, either to defend or improve their lair or to trade with other tribes or slaver bands.<br/><br/>Gnolls relish combat, but only when they have the obvious advantage of numbers. In other situations, they prefer to avoid combat except as a means of winning a kill from another hunter, or as a clever ambush to bring down a large meal. These hyena-men see no value in courage or valor, instead preferring to flee once it becomes clear that victory is not possible, noting that it is better to run with tail tucked away than to lose one\u2019s tail entirely.<br/><br/>During combat, gnolls use a strange mixture of pack tactics and individual standoffs. If a gnoll feels that it is winning, it attempts to take down a weaker being rather than aiding its fellows. If the gnolls are struggling, they gang up on a powerful leader and try to take that creature down, in the hopes of forcing its allies to flee.<br/><br/>Gnoll leaders are typically rangers, although clerics are highly regarded as well. Most gnolls find arcane magic difficult to master, and as a result it is relatively rare to see a gnoll bard, sorcerer, or wizard."
+        }
+    ],
+    "html": "<i>Hunched and feral, this furred, hyena-headed humanoid stands slightly taller than the average human.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Gnoll",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 0
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 2
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "gnoll"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Chaotic Evil",
+            "alignment_text": "CE",
+            "family": "Gnoll",
+            "cr": "1",
+            "xp": 400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 10,
+                "flat-footed": 15,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 shield"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 0
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 0
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "spear",
+                    "bonus": [
+                        3
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+3"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "spear",
+                    "bonus": [
+                        1
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+2"
+                        }
+                    ]
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 3
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 13
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 15,
+            "dex": 10,
+            "con": 13,
+            "int": 8,
+            "wis": 11,
+            "cha": 8,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 2
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Gnoll"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder RPG Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder RPG Bestiary pg. 155",
+                "alt": "Pathfinder RPG Bestiary pg. 155",
+                "href": "http://paizo.com/products/btpy8auu?Pathfinder-Roleplaying-Game-Bestiary"
+            },
+            "page": 155
+        }
+    ]
+}

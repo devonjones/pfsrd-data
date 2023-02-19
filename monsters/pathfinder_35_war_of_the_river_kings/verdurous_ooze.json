@@ -1,0 +1,333 @@
+{
+    "name": "Verdurous Ooze",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate forest or plains<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Acid (Ex)</b> A verdurous ooze secretes a digestive acid that dissolves flesh and metal quickly. Each time a creature takes damage from a verdurous ooze\u2019s acid, the creature\u2019s metal equipment and armor take the same amount of damage from the acid. A DC 21 Reflex save prevents damage to such items. A metal or natural weapon that strikes a verdurous ooze takes 1d6 points of acid damage unless the weapon\u2019s wielder succeeds on a DC 21 Reflex save. If a verdurous ooze remains in contact with a metal object for 1 full round, it inflicts 20 points of acid damage (no save) on the object. The save DCs are Constitution-based.<br/><br/><b>Enliven (Sp)</b> The chemicals emitted by a verdurous ooze cause nearby plants to twitch into life. While in areas covered in natural growth, all squares within 15 feet of the verdurous ooze are affected as if by the spell <i>entangle</i>. The verdurous ooze has no control over this effect, and if dispelled the effect renews after 1d4 rounds. The save DC is Constitution-based.<br/><br/><b>Sleep Aura (Su)</b> The chemicals emitted by a verdurous ooze have a stronger and opposite effect on living, non-plant creatures that come within a 30-foot radius. All living creatures within the area must make a DC 21 Will save or fall asleep for a number of rounds equal to the ooze\u2019s HD. Creatures immune to poison are also immune to this effect. Whether or not the save is successful, that creature cannot be affected again by the same verdurous ooze\u2019s sleep aura for 24 hours. This is a nonmagical sleep effect. The save DC is Constitution-based.<br/><br/><b>Split (Ex)</b> Slashing and piercing weapons deal no damage to a verdurous ooze. Instead, if the verdurous ooze would have taken 10 or more points of damage from a single slashing or piercing attack, it splits into two identical oozes, each with half of the original\u2019s current hit points (round down). Slashing or piercing attacks that deal less than 10 points of damage do not cause a verdurous ooze to split. Damage from multiple slashing or piercing attacks is not cumulative. A verdurous ooze with 15 hit points or less cannot be further split and dies if reduced to 0 hit points."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Verdurous oozes are animate masses of protoplasm of a sickly green hue. At rest, their flat bodies stand roughly 5 inches tall and can stretch out to a wide diameter, their surfaces blossoming into what look like thick tangles of mossy roots and gnarled vegetation as they lie still. Known to emit invisible but dangerous chemicals, these masses of slinking muck cause nearby plants to writhe and coil as if alive, while shocking animals into a temporary but deathly torpor. As such, they rarely must hunt to find food, instead sensing passing creatures and preying upon them after they succumb to the oozes\u2019 sleep aura. Always ravenous, the powerful acids that comprise these oozes quickly dissolve the flesh of their meals.<br/><br/>A verdurous ooze typically weighs 300 pounds and can easily spread to fill a 5-foot-square area. While moving, such crawling muck rises only a few inches tall, though its structure might grow and boil up to a height of 2 or 3 feet if let undisturbed for a matter of days. Spontaneously grown structures collapse and melt back into the ooze\u2019s body as soon as it begins moving again."
+        }
+    ],
+    "html": "<i>A pool of greenish muck, blossoming with weird vegetable-like growths and sap-seeping boils, twitches into unnatural motion as a pseudopod springs outward, dragging the entire grotesque mass forward with an ameboid life.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Verdurous Ooze",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": -5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": -5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "blindsight 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "tremorsense 60 ft."
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "enliven",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "15 ft.",
+                    "range": 15,
+                    "unit": "feet"
+                },
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 20",
+                    "dc": 20
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "sleep aura",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "30 ft.",
+                    "range": 30,
+                    "unit": "feet"
+                },
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 20",
+                    "dc": 20
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Ooze",
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Verdurous Ooze",
+            "cr": "6",
+            "xp": 2400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 5,
+                "touch": 5,
+                "flat-footed": 5,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-5 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -2
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -2
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "split"
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "acid"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "fire"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "mind-affecting effects"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "ooze traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "slashing"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "piercing damage"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "slam",
+                    "bonus": [
+                        9
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+4"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6",
+                            "effect": "acid",
+                            "damage_type": "",
+                            "damage_type_text": "acid"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "acid"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1d6+4 plus 1d6 acid"
+                        }
+                    ],
+                    "name": "constrict"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "enliven"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 6
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+13 grapple"
+                    }
+                ],
+                "value": 9
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "can't be tripped"
+                    }
+                ],
+                "value": 14
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 16,
+            "dex": 1,
+            "con": 22,
+            "int": null,
+            "wis": 1,
+            "cha": 1,
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": -4,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+16 in forests and plains areas"
+                            }
+                        ]
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+0 Stealth (+20 in forest and plains environs)"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #35: War of the River Kings",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #35: War of the River Kings pg. 86",
+                "alt": "Pathfinder #35: War of the River Kings pg. 86",
+                "href": "http://paizo.com/pathfinder/adventurePath/kingmaker/v5748btpy8b7u"
+            },
+            "page": 86
+        }
+    ]
+}

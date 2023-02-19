@@ -1,0 +1,362 @@
+{
+    "name": "Ceratioidi",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any saltwater<br/><b>Organization</b> solitary, mated individual, or clan (3\u201320)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Dual Mind (Ex)</b> The fact that each ceratioidi is actually two creatures sharing the same body gives it a number of unique abilities. A ceratioidi can delegate various actions and physical processes to the individual minds, allowing it to fight with two weapons simultaneously without any penalties. It can also select two favored classes. The telepathic tangle between its twin consciousnesses makes a ceratioidi impervious to mind-affecting effects.<br/><br/><b>Lure (Su)</b> As a free action, a ceratioidi can light the dangling lure on its forehead, forcing all non-ceratioidi within a 20-foot radius to make a DC 15 Will save or become fascinated for 1 round. Regardless of the preceding interaction between the ceratioidi and its target, a creature affected by this ability does not view the ceratioidi who has fascinated it as a potential threat until that ceratioidi actually attacks\u2014allowing it to approach without breaking the fascination. Once a creature successfully saves against this effect, it is immune to the same ceratioidi\u2019s lure ability for 24 hours. The save DC is Charisma-based.<br/><br/><b>Primitive Amphibian (Ex)</b> Ceratioidi have rudimentary lungs capable of breathing air indefinitely, but their skin must be bathed in salt water regularly or it begins drying out painfully. They can go for a number of hours equal to twice their Constitution score (30 hours for most ceratioidi) before they need to be bathed in salt water\u2014if they don\u2019t, they take 1 point of Constitution damage per hour. Any Constitution damage accrued is reversed after they spend at least 10 minutes immersed in salt water."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Rulers of deep ocean trenches, ceratioidi share several unusual traits with the aquatic predators of the ceratiidae family, also known as angler fish. From their strange, spired cities beneath the waves, ceratioidi cast their nets of influence far and wide.<br/><br/>Perhaps the strangest aspect of the ceratioidi is that each individual is in fact two entities\u2014a powerful, imposing female, and a rat-sized parasitic male who spends most of his life attached to his mate\u2019s neck. A female without a mate loses her dual mind ability, while a male unattached to a female retains his intelligence but otherwise has the same statistics as an electric eel (without the electricity special ability or electricity resistance)."
+        }
+    ],
+    "html": "<i>This flabby, fishlike humanoid has the wide mouth, bulging eyes, and dangling, luminescent flesh lure of a deep-sea predator.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Ceratioidi",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 0
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 9
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Monstrous Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "aquatic"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "3",
+            "xp": 800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 10,
+                "flat-footed": 15,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+5 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "mind-affecting effects"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "swim 50 ft.",
+                        "movement_type": "swim",
+                        "value": 50
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "shortspears",
+                    "bonus": [
+                        8
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+3"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "slams",
+                    "bonus": [
+                        7
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+3"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "count": 2,
+                    "name": "shortspears",
+                    "bonus": [
+                        5
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+3"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "lure"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 4
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 7
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 17
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 17,
+            "dex": 10,
+            "con": 15,
+            "int": 15,
+            "wis": 14,
+            "cha": 12,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "lure"
+                        }
+                    ],
+                    "name": "Ability Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Ability Focus (lure)",
+                        "alt": "Ability Focus (lure)",
+                        "href": "FeatDisplay.aspx?ItemName=Ability%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "shortspear"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (shortspear)",
+                        "alt": "Weapon Focus (shortspear)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 6
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 18
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Aquan"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "dual mind"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "primitive amphibian"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Bestiary 3",
+            "link": {
+                "type": "link",
+                "name": "Bestiary 3 pg. 50",
+                "alt": "Bestiary 3 pg. 50",
+                "href": "http://paizo.com/products/btpy8odu?Pathfinder-Roleplaying-Game-Bestiary-3"
+            },
+            "page": 50
+        },
+        {
+            "type": "source",
+            "name": "Pathfinder #32: Rivers Run Red",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #32: Rivers Run Red pg. 80",
+                "alt": "Pathfinder #32: Rivers Run Red pg. 80",
+                "href": "http://paizo.com/pathfinder/adventurePath/kingmaker/v5748btpy8dml"
+            },
+            "page": 80
+        }
+    ]
+}

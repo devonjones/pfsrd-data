@@ -1,0 +1,374 @@
+{
+    "name": "Glimmerhollow",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any underground (Plane of Earth)<br/><b>Organization</b> solitary<br/><b>Treasure</b> double (gems and crystals)"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Brittle (Ex)</b> Attacks that deal bludgeoning or sonic damage can inflict critical hits on a glimmerhollow. The glimmerhollow remains immune to precision-based damage, such as damage from sneak attacks.<br/><br/><b>Engulf (Ex)</b> A glimmerhollow can attempt to engulf all creatures adjacent to it at the start of its turn, provoking attacks of opportunity as normal. Each target that does not make an attack of opportunity must succeed at a DC 20 Reflex saving throw to avoid being trapped and take a free 5-foot step away from the glimmerhollow. Engulfed creatures are pinned and risk suffocation, and they take 6d8 points of piercing and slashing damage from the creature\u2019s crystal formations and 2d6 points of acid damage from its digestive secretions each round. The save DC is Strength-based.<br/><br/><b>Hypnotic Lure (Ex)</b> The scintillating colors of the crystals on the glimmerhollow\u2019s interior create a mesmerizing display that further entices its prey. All creatures within 30 feet of the glimmerhollow must succeed at a DC 18 Will saving throw or move at their full speed toward the crystal formation until they are adjacent to it. A creature that successfully saves cannot be affected by the same glimmerhollow\u2019s hypnotic lure for 24 hours. If the glimmerhollow loses more than half its hit points from sonic damage, it loses the use of this ability until it is fully healed. This is a visual mind-affecting compulsion effect. The save DC is Charisma-based and includes a +6 racial bonus.<br/><br/><b>Razor Sharp (Ex)</b> A glimmerhollow\u2019s slam attack deals both piercing and slashing damage and threatens a critical hit on a roll of 18\u201320."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Travelers on the Plane of Earth or in the Darklands may be familiar with carnivorous crystals\u2014crystalline oozes that prey on living creatures to gruesomely hasten their own reproduction. Less known, even among the greatest planar scholars, is that carnivorous crystals are not the only oozes that hail from the Plane of Earth and gain sustenance from living things.<br/><br/>Unlike their more aggressive cousins, the carnivorous geodes known as glimmerhollows rely entirely on the enticement of rich mineral deposits to attract prey. They still leach minerals from the earth around them for food, but they use some of those minerals to grow wondrous crystal formations. Creatures that lust after such treasures, either for wealth or for food, find that the glimmerhollow relishes the minerals in their bodies above all else.<br/><br/>A mature glimmerhollow can cover the inside of a 10-foot cube and weighs a staggering 100,000 pounds."
+        }
+    ],
+    "html": "<i>An acidic tang fills the air of this small, glittering cave. Several extremely sharp formations are as large as a human head.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Glimmerhollow",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": -5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": -5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "blindsight 30 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "tremorsense 60 ft."
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "hypnotic lure",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "30 ft.",
+                    "range": 30,
+                    "unit": "feet"
+                },
+                "saving_throw": {
+                    "type": "stat_block_section",
+                    "subtype": "save_dc",
+                    "text": "DC 18",
+                    "dc": 18
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Ooze",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "earth"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "extraplanar"
+                }
+            ],
+            "size": "Huge",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "9",
+            "xp": 6400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 3,
+                "flat-footed": 15,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-5 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+12 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -1
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -1
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/\u2014",
+                    "damage_types": [
+                        "\u2014"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "acid"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "cold"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "ooze traits"
+                }
+            ],
+            "resistances": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "resistance",
+                    "value": 20,
+                    "name": "electricity"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "resistance",
+                    "value": 20,
+                    "name": "fire"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "brittle"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerable to sonic"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "5 ft.",
+                        "movement_type": "walk",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "burrow 5 ft.",
+                        "movement_type": "burrow",
+                        "value": 5
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "slam",
+                    "bonus": [
+                        11
+                    ],
+                    "critical_range": "18\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "3d8+4"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "pull"
+                        }
+                    ]
+                }
+            ],
+            "space": "15 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "15 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 20"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "6d8 piercing/slashing and 2d6 acid"
+                        }
+                    ],
+                    "name": "engulf"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "slam"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "5 ft."
+                        }
+                    ],
+                    "name": "pull"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "razor sharp"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 10
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 15
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "can\u2019t be tripped"
+                    }
+                ],
+                "value": 20
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 16,
+            "dex": 1,
+            "con": 18,
+            "int": null,
+            "wis": 1,
+            "cha": 1,
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": -3
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+10 Stealth (+20 underground)"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "as geode"
+                        }
+                    ],
+                    "name": "freeze"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #117: Assault on Longshadow",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #117: Assault on Longshadow pg. 88",
+                "alt": "Pathfinder #117: Assault on Longshadow pg. 88",
+                "href": "http://paizo.com/products/btpy9p1h"
+            },
+            "page": 88
+        }
+    ]
+}

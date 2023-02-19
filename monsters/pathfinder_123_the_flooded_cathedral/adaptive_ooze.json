@@ -1,0 +1,222 @@
+{
+    "name": "Adaptive Ooze",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, pair, or divergence (3\u20136)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Adaptive Form (Su)</b> The slam attack of an adaptive ooze gains a temporary additional damage type (slashing or piercing) whenever it has damage reduction against that type from its adaptive resistance ability. This damage type lasts until the ooze no longer has that type of damage reduction. The adaptive ooze can also reproduce an energy type it comes into contact with. The ooze\u2019s slam attack deals an additional 2d6 points of energy damage of a single energy type randomly chosen from the types of energy it is currently immune to due to its adaptive resistance ability. <br/><br/><b>Adaptive Resistance (Su)</b> An adaptive ooze can rapidly develop resistances to its most pressing threats. When the adaptive ooze takes bludgeoning, slashing, or piercing damage, it gains DR 10/adamantine against that damage type starting at the beginning of its next turn. This DR lasts for 1 hour. Additionally, when an adaptive ooze takes hit point damage from a particular type of energy (acid, cold, electricity, fire, or sonic), it gains immunity to that energy type starting at the beginning of its next turn. The adaptive ooze can maintain immunity to only three energy types at once, losing the oldest immunity it has when it takes hit point damage of a fourth energy type. This immunity lasts for 1 hour or until it is replaced with a new immunity."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Adaptive oozes are composed of an amorphous substance that flows like liquid metal, but they can harden this form to a consistency resembling tempered steel. When adaptive oozes attack, they form pseudopods that strike out at targets and take on characteristics of weapons the oozes have recently been struck by. They can also assimilate different energies into their forms, becoming immune to them and even reproducing them for a limited time. Adaptive oozes can break down both organic and inorganic substances and incorporate those materials into their bodies to grow their mass. They are especially drawn to organic creatures that have more complex compositions. However, their digestive process is very slow, so they need to disable creatures that might fight back or attempt to flee. Adaptive oozes go through a cycle of accumulating mass until they split into two in order to propagate, after which the cycle begins anew. Adaptive oozes that have just split begin life with the young creature simple template. Adaptive oozes that are in resource-rich areas can accumulate mass very rapidly, gaining the giant creature simple template before they reach the end of their reproductive cycle. These huge adaptive oozes can split into more than two parts when they divide.<br/><br/> Adaptive oozes can achieve a height of 8 feet, taking on an almost spherical form when stationary, and weigh about 2,200 pounds."
+        }
+    ],
+    "html": "<i>The color and texture of this massive, metallic ooze shift whenever it touches something.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Adaptive Ooze",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": -5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": -5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "blindsight 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Ooze",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "7",
+            "xp": 3200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 4,
+                "touch": 4,
+                "flat-footed": 4,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-5 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 7
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -2
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -2
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "adaptive resistances"
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "ooze traits"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "10 ft.",
+                        "movement_type": "walk",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "climb 10 ft.",
+                        "movement_type": "climb",
+                        "value": 10
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "slam",
+                    "bonus": [
+                        15
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "3d6+13"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "adaptive form"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "5 ft."
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 7
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 17
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 22
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 28,
+            "dex": 1,
+            "con": 18,
+            "int": null,
+            "wis": 1,
+            "cha": 1,
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 17
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #123: The Flooded Cathedral",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #123: The Flooded Cathedral pg. 90",
+                "alt": "Pathfinder #123: The Flooded Cathedral pg. 90",
+                "href": "http://paizo.com/products/btpy9uk2?Pathfinder-Adventure-Path-123-The-Flooded-Cathedral%0D%0A"
+            },
+            "page": 90
+        }
+    ]
+}

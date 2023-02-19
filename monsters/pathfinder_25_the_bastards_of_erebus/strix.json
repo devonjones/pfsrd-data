@@ -1,0 +1,300 @@
+{
+    "name": "Strix",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate mountains<br/><b>Organization</b> solitary, hunting party (3-6), war party (5-12), or tribe (22 plus 100% noncombatants plus 1 champion of 2nd level per 10 adults, 1 or 2 seers of 3rd or 4th level, and 1 leader of 5th-7th level)<br/><b>Treasure</b> NPC gear"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Hatred (Ex)</b> Strix receive a +1 bonus on attack rolls against humanoid creatures of the human subtype due to special training against these hated foes.<br/><br/><b>Nocturnal (Ex)</b> Strix gain a +2 racial bonus on Perception and Stealth checks at night."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Strix fiercely defend both land and air in their mountain territories. Deadly but wise, strix would prefer to live quietly amid the towers of Devil\u2019s Perch in Cheliax, yet time and tradition have taught them the wingless peoples of the shores and lowlands cannot be trusted, and that only fear and bloodshed will protect their homes. Fortunately, the strix excel in this regard.<br/><br/>Strix have learned to hate humans. Although the source of this hatred is unclear to all but the strix, it most likely comes from centuries of bloody invasions into their lands, disastrous first encounters, or an even older grudge.<br/><br/>On average, strix stand just over 6 feet tall, with males and females being roughly the same size. Sharply pointed ears, pupilless eyes, and slitted nostrils distinguish the race, though their 12-foot wingspans prove most distinctive. An adult strix weighs around 170 pounds. Most strix live to be about 40 years old, with the eldest reaching ages of up to 60."
+        }
+    ],
+    "html": "<i>Monstrous black-feathered wings cloak this leanly muscled, onyx-skinned humanoid.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Strix",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 0,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 at night"
+                    }
+                ]
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "strix"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Strix",
+            "cr": "1/3",
+            "xp": 135,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Strix"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "warrior 1"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 12,
+                "touch": 12,
+                "flat-footed": 10,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 0,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 vs. illusions"
+                        }
+                    ]
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "average<br/>"
+                            }
+                        ],
+                        "name": "fly 60 ft.",
+                        "movement_type": "fly",
+                        "value": 60
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "spear",
+                    "bonus": [
+                        2
+                    ],
+                    "critical_range": "x3",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+1"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "hatred"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 2
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 14
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 12,
+            "dex": 15,
+            "con": 10,
+            "int": 8,
+            "wis": 11,
+            "cha": 7,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 6
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+2 Perception and +2 Stealth in dim light or darkness"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Strix"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "nocturnal"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Inner Sea World Guide",
+            "link": {
+                "type": "link",
+                "name": "Inner Sea World Guide pg. 313",
+                "alt": "Inner Sea World Guide pg. 313",
+                "href": "http://paizo.com/store/games/roleplayingGames/p/pathfinderRPG/paizo/pathfinderChronicles/v5748btpy8ief"
+            },
+            "page": 313
+        },
+        {
+            "type": "source",
+            "name": "Pathfinder #25: The Bastards of Erebus",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #25: The Bastards of Erebus pg. 82",
+                "alt": "Pathfinder #25: The Bastards of Erebus pg. 82",
+                "href": "http://paizo.com/pathfinder/v5748btpy89a4"
+            },
+            "page": 82
+        }
+    ]
+}

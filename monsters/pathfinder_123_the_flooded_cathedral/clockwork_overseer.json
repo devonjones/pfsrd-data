@@ -1,0 +1,365 @@
+{
+    "name": "Clockwork Overseer",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, crew (1 plus 2\u20135 <a href=\"MonsterDisplay.aspx?ItemName=Clockwork%20Servant\" style=\"text-decoration:underline\">clockwork servants</a>), or deployment (1\u20132 plus 2\u20135 <a href=\"MonsterDisplay.aspx?ItemName=Clockwork%20Soldier\" style=\"text-decoration:underline\">clockwork soldiers</a>)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Aura of Command (Ex)</b> A clockwork overseer broadcasts subtle commands in a 30-foot radius, granting heightened combat abilities to all clockwork creatures in the area. Affected clockwork creatures, including the clockwork overseer, gain a +1 competence bonus on saving throws, attack rolls, and weapon damage rolls; these bonuses are already calculated into the clockwork overseer\u2019s statistics. As a standard action, a clockwork overseer can intensify the aura until the beginning of its next turn, increasing the competence bonus to +2. <br/><br/><b>Lash (Ex)</b> A clockwork overseer\u2019s lash is a primary natural attack that deals bludgeoning damage. <br/><br/><b>Overclock (Ex)</b> In place of making a lash attack on its turn, a clockwork overseer can overclock another clockwork creature within its reach, impelling it to exceed its performance limitations. At the beginning of its turn, an overclocked creature takes an amount of damage equal to half its Hit Dice (minimum 1), expends 1 full day of activity stored by its winding ability, and gains one of the following benefits, selected by the clockwork overseer. <ul> <li>The overclocked creature gains the benefits of <a href=\"SpellDisplay.aspx?ItemName=haste\" style=\"text-decoration:underline\"><i>haste</i></a>. </li> <li>The overclocked creature\u2019s natural attacks and attacks with metal melee weapons deal an additional 1d6 points of fire damage. If the creature already deals fire damage, including with a breath weapon or the swallow whole ability, that special attack\u2019s fire damage increases by 2d6. </li> <li>The overclocked creature gains <a href=\"FeatDisplay.aspx?ItemName=Combat%20Reflexes\" style=\"text-decoration:underline\">Combat Reflexes</a> as a bonus feat and gains a +2 bonus on attack rolls when making attacks of opportunity.</li> </ul> A clockwork overseer can end this effect on a clockwork creature affected by its aura of command as a free action. The overclocked condition otherwise continues until the clockwork creature expends its stored days of activity or is destroyed. <br/><br/><b>Tactical Calculus (Ex)</b> A clockwork overseer can store hundreds of commands and scripts, allowing it to perform modest feats of problem-solving and strategic command as though it had an Intelligence score of 10. In practice, this enables a clockwork overseer to make tactical decisions, such as exploiting terrain or flanking targets, as well as convey simple tactical commands to other clockwork creatures in its aura of command. If the clockwork overseer takes electricity damage, it must succeed at a Fortitude save (DC = the electricity damage dealt) or lose both its aura of command and tactical calculus abilities for 1d4 rounds."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "What clockwork creatures boast in both strength and resilience, they often lack in nuance and strategy. Most machinists are content to command their constructs directly when seeking tactical precision, but only a few artificers have the technical expertise needed to create a mechanical lieutenant capable of reasoning and adapting in its master\u2019s absence. Known as clockwork overseers, these constructs boast extraordinarily complex programming that far exceeds the basic command vocabulary of other clockwork creatures. This allows clockwork overseers to store hundreds or even thousands of commands, which they can parse and sort quickly enough to simulate an intelligent creature\u2019s adaptive thinking\u2014at least regarding combat strategy and moderately complex tasks of coordinating construct laborers. These functions fall short of true thought, and clockwork overseers are incapable of language, emotion, higher thinking, or symbolic reasoning beyond specific sounds and statements they might parrot on command."
+        }
+    ],
+    "html": "<i>One arm of this six-limbed clockwork construct ends in a broad fist, and the other extends into an articulated metal lash.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Clockwork Overseer",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "all-around vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "aura of command",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "30 ft.",
+                    "range": 30,
+                    "unit": "feet"
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "clockwork"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Clockwork",
+            "cr": "7",
+            "xp": 3200
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 21,
+                "touch": 14,
+                "flat-footed": 17,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 dodge"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+7 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 5,
+                    "text": "5/adamantine",
+                    "damage_types": [
+                        "adamantine"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerable to electricity"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "climb 30 ft.",
+                        "movement_type": "climb",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "lash",
+                    "bonus": [
+                        15
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+5"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "trip"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "slam",
+                    "bonus": [
+                        15
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+5"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "push"
+                        }
+                    ]
+                }
+            ],
+            "space": "5 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "10 ft. with lash"
+                    }
+                ],
+                "value": "5 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "overclock"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "slam"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "10 ft."
+                        }
+                    ],
+                    "name": "push"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 10
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 15
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 29
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 19,
+            "dex": 14,
+            "con": null,
+            "int": null,
+            "wis": 13,
+            "cha": 1,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    },
+                    "notation": "B"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lightning Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Lightning Reflexes",
+                        "alt": "Lightning Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Lightning%20Reflexes"
+                    },
+                    "notation": "B"
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 12
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "swift reactions"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "tactical calculus"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "winding"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #123: The Flooded Cathedral",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #123: The Flooded Cathedral pg. 86",
+                "alt": "Pathfinder #123: The Flooded Cathedral pg. 86",
+                "href": "http://paizo.com/products/btpy9uk2?Pathfinder-Adventure-Path-123-The-Flooded-Cathedral%0D%0A"
+            },
+            "page": 86
+        }
+    ]
+}

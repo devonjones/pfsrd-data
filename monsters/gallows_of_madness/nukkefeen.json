@@ -1,0 +1,324 @@
+{
+    "name": "Nukkefeen",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or family (3\u20134)<br/><b>Treasure</b> standard"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Blind (Ex)</b> A nukkefeen sees and senses exclusively through its blindsight ability, which is based on sound and movement\u2014beyond 60 feet, the nukkefeen is considered blind. A deafened nukkefeen is effectively blinded as well. It is invulnerable to all sight-based effects and attacks, including gaze attacks.<br/><br/><b>Improvised Weaponry (Ex)</b> A nukkefeen can use kitchen knives, scissors, shears, straight razors, and other sharp household objects of similar size as though they were daggers. A nukkefeen does not take any penalties for using such objects as improvised weapons.<br/><br/><b>Sneak Attack (Ex)</b> Against a creature denied a Dexterity bonus to its AC, a nukkefeen\u2019s attacks deal extra damage. This ability functions like the rogue\u2019s class feature of the same name.<br/><br/><b>Steal Eyesight (Su)</b> Once per day as a standard action that provokes attacks of opportunity, a nukkefeen can steal the eyesight of any humanoid or animal that can see within 30 feet. The target must succeed at a DC 14 Will saving throw or become blinded for 1d4 hours. During this time, the nukkefeen loses all the benefits and drawbacks of blindness and blindsight, and it gains the target creature\u2019s low-light vision and darkvision abilities, if any. If the nukkefeen dies while using the eyesight of a creature, the affected creature immediately regains its eyesight. If the affected creature dies before the duration ends, the duration of the nukkefeen\u2019s stolen eyesight is instead extended to 24 hours. This is a curse effect. The save DC is Wisdom-based and includes a +2 racial bonus."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Many scholars posit that nukkefeens originated as experiments of a powerful First World creature or creatures, and perhaps were intended to serve as assistants or researchers. Some have even tied these creatures to norns\u2019 workshop-like lairs, positing that they may have originally acted as servants of those prescient beings. Nukkefeens\u2019 eyes are glazed and unnatural, and though they are quite limber, their knocked knees make their gait seem uneven and stiff. Most nukkefeens resemble human men or women, though many appear androgynous.<br/><br/>Nukkefeens have a peculiar sense of morality. For example, most of them loathe weapons and violence, but think that harming unpleasant people or animals with scissors or similar objects is a way to \u201cfix\u201d them. They are not inherently malicious, though they are obsessed with old, abandoned buildings where great tragedies have occurred. They are likely to settle in abandoned homes, which they take care of in their own peculiar way."
+        }
+    ],
+    "html": "<i>This eerie creature resembles a human with oddly segmented limbs, waxen skin, and doll-like eyes.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Nukkefeen",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 7
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "blindsight 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Fey",
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1",
+            "xp": 400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 12,
+                "touch": 12,
+                "flat-footed": 10,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 2,
+                    "text": "2/cold iron",
+                    "damage_types": [
+                        "cold iron"
+                    ]
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "blind"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "dagger",
+                    "bonus": [
+                        5
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+2"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "dagger",
+                    "bonus": [
+                        5
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+2"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "improvised weaponry"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "sneak attack +1d6"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "steal eyesight"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 2
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 4
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 16
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 14,
+            "dex": 15,
+            "con": 11,
+            "int": 10,
+            "wis": 10,
+            "cha": 7,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Stealth"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Stealth)",
+                        "alt": "Skill Focus (Stealth)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "dagger"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (dagger)",
+                        "alt": "Weapon Focus (dagger)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Disable Device",
+                        "value": 6
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Disguise",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sleight of Hand",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 12
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Sylvan"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Gallows of Madness",
+            "link": {
+                "type": "link",
+                "name": "Gallows of Madness pg. 63",
+                "alt": "Gallows of Madness pg. 63",
+                "href": "http://paizo.com/products/btpy9nfu/discuss&page=last?Pathfinder-Module-Gallows-of-Madness%0D%0A"
+            },
+            "page": 63
+        }
+    ]
+}

@@ -1,0 +1,284 @@
+{
+    "name": "Ankheg",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate or warm plains<br/><b>Organization</b> solitary, pair, or nest (3\u20136)<br/><b>Treasure</b> incidental"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Spit Acid (Ex)</b> Once every 6 hours, an ankheg can spit a 30-foot line of acid. Creatures struck by this acid take 4d4 points of acid damage (Reflex DC 14 halves). Once an ankheg uses this attack, it must wait 6 hours before using it again. Additionally, during this time period, its bite attack does not inflict any additional acid damage. As a result, an ankheg does not use this ability unless it is desperate or frustrated, most often spitting acid when reduced to fewer than half its full normal hit points or when it cannot not successfully grab an opponent. The save DC is Constitution-based."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Ankhegs are an all-too-common plague upon the rural areas of the world. These horse-sized burrowing monsters generally avoid heavily settled areas like cities, but their predilection for livestock and humanoid flesh ensures that they do not keep to the deep wilderness either. Their preferred habitat is rural farmlands, as the loose soil of such regions makes it easy for the creatures to burrow. Tales speak of larger ankhegs that dwell in remote deserts\u2014such creatures likely feed primarily on giant scorpions and camels, and rarely come in contact with civilization due to their remote locations. (A desert ankheg is a Huge advanced ankheg.)<br/><br/>In combat, an ankheg prefers to attack with its bite. Against multiple foes, an ankheg often grabs one of the available targets and then attempts to retreat to safety, burrowing into the ground. A creature carried underground can still breathe with difficulty (the ankheg needs to breathe as well, so its tunnels are relatively porous), but is often eaten alive before its allies can rescue it.<br/><br/>Ankhegs burrow with their legs and mandibles, moving with unsettling speed through loose soil, sand, gravel, and the like\u2014they cannot burrow through solid stone. Burrowing ankhegs can construct tunnels by pausing frequently to shore up the walls with a thicker, less caustic secretion from their mouths. If an ankheg chooses to make a permanent tunnel when burrowing, it moves at half speed. A typical ankheg tunnel is 10 feet tall and wide, roughly circular in cross-section, and from 60 to 150 feet long ([1d10 + 5] \u00d7 10). Clusters of ankhegs often share the same territory and create intricate winding networks of tunnels under farmlands, sometimes resulting in sinkholes where too many burrow at once.<br/><br/>Although ankhegs resemble immense vermin, they are in fact much more intelligent than the typical arachnid and, given time and a talented trainer, can even be trained to serve as mounts or beasts of burden. The fact that even \u201cdomesticated\u201d ankhegs are prone to squirting acid when frightened or startled makes them unsafe at best in most heavily populated regions, but for more savage races like hobgoblins, troglodytes, and particularly orcs, ankhegs make popular guardians or even pets."
+        }
+    ],
+    "html": "<i>This burrowing, bug-like monster scuttles about on six legs, drooling noxious green ichor from its clacking mandibles.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Ankheg",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 0
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 8
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "tremorsense 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "3",
+            "xp": 800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 16,
+                "touch": 9,
+                "flat-footed": 16,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+7 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "burrow 20 ft.",
+                        "movement_type": "burrow",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        5
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6+4"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4",
+                            "effect": "acid",
+                            "damage_type": "",
+                            "damage_type_text": "acid"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "grab"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "5 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "spit acid"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+11 grapple"
+                    }
+                ],
+                "value": 7
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "25 vs. trip"
+                    }
+                ],
+                "value": 17
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 16,
+            "dex": 10,
+            "con": 17,
+            "int": 1,
+            "wis": 13,
+            "cha": 6,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Perception"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Perception)",
+                        "alt": "Skill Focus (Perception)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 8
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder RPG Bestiary",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder RPG Bestiary pg. 15",
+                "alt": "Pathfinder RPG Bestiary pg. 15",
+                "href": "http://paizo.com/products/btpy8auu?Pathfinder-Roleplaying-Game-Bestiary"
+            },
+            "page": 15
+        }
+    ]
+}

@@ -1,0 +1,279 @@
+{
+    "name": "Cinder Wolf",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> temperate or warm deserts<br/><b>Organization</b> solitary, pair (2), or pack (5-24)<br/><b>Treasure</b> none<br/><b>Advancement</b> 3-4 HD (Medium); 5-7 HD (Large)<br/><b>Level Adjustment</b> +2 (cohort)"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Fast Healing (Ex)</b> A cinder wolf heals 1 point of damage every round that it resists a point or more of fire damage, so long as it has at least 1 hit point. This fire must be from an external source, not from a cinder wolf\u2019s fiery bite.<br/><br/><b>Fiery Body (Su)</b> A cinderwolf inflicts 1d4 points of fire damage when it bites a foe in addition to the normal bite damage. In any round that the cinderwolf resists at least one point of fire damage, it gains fast healing 3.<br/><br/><b>Trip (Ex)</b> A cinder wolf that hits with a bite attack can attempt to trip the opponent (+3 check modifier) as a free action without making a touch attack or provoking an attack of opportunity. If the attempt fails, the opponent cannot react to trip the cinder wolf."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Vicious predators and tireless trackers, cinder wolves are a relentless threat to the travelers and native tribes who make the Cinderlands their home. Ravenous creatures that endlessly hunt to fuel their fiery metabolisms, cinder wolves attack nearly any creature, from well-armored horned spirestalkers and ember scorpions to Shoanti barbarians and even stone giant warriors. Fleet footed and fearsome in appearance, these tenacious pack hunters thrive amid the flames of the Cinderlands, their fiery bites and relentless hunger embodying the deadliness of the burning plains.<br/><br/>An adult cinder wolf stands just over 3 feet tall and weighs up to 200 pounds. What little fur they have is often singed and black, but can also be ash-gray. Their eyes are frequently bloodshot red with yellow irises."
+        }
+    ],
+    "html": "<img src=\"images\\ThreeFiveSymbol.gif\" style=\"margin: 3px 3px 0px 3px\"/><i>This wolf-like beast has a charred and blackened hide, its flesh split in places and seeping a fiery red ooze. The slaving creature stalks closer, snarling gutturally as cinders flicker from its maw.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Cinder Wolf",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "listen",
+                "value": 4
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "spot",
+                "value": 4
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Magical Beast",
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "2"
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 11,
+                "flat-footed": 15,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            },
+            "resistances": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "resistance",
+                    "value": 10,
+                    "name": "fire"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerable to cold"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "50 ft.",
+                        "movement_type": "walk",
+                        "value": 50
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        5
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+4"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4",
+                            "effect": "fire",
+                            "damage_type": "",
+                            "damage_type_text": "fire"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "trip"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 2
+            },
+            "grapple": {
+                "type": "stat_block_section",
+                "subtype": "grapple",
+                "value": 5
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 17,
+            "dex": 13,
+            "con": 14,
+            "int": 2,
+            "wis": 12,
+            "cha": 10,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Track"
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Listen",
+                        "value": 4
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spot",
+                        "value": 4
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 3,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+7 when tracking living creatures"
+                            }
+                        ]
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+2 Listen"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+2 Spot"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+2 Search"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+2 Survival (+6 if tracking living creatures)"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "fiery body"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #10: A History of Ashes",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #10: A History of Ashes pg. 84",
+                "alt": "Pathfinder #10: A History of Ashes pg. 84",
+                "href": "http://paizo.com/pathfinder/adventurePath/curseOfTheCrimsonThrone/v5748btpy82u9"
+            },
+            "page": 84
+        }
+    ]
+}

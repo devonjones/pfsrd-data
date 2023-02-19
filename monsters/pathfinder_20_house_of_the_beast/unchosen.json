@@ -1,0 +1,313 @@
+{
+    "name": "Unchosen",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or pack (6-12)<br/><b>Treasure</b> standard<br/><b>Advancement</b> by character class; <b>Favored Class</b> barbarian<br/><b>Level Adjustment</b> +3"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Deathwatch (Ex)</b> The tampering with the unchosen\u2019s brain has granted the creature the ability to \u201cscent life.\u201d As long as targets are in range of the unchosen\u2019s scent ability, it instantly knows whether each creture in the area is dead, fragile (alive and wounded with 3 or fewer hit points left), fighting off death (alive with 4 or more hit points), undead, or neither alive nor dead (such as a construct).<br/><br/><b>Ferocity (Ex)</b> An unchosen becomes enraged if mortally wounded. It continues to fight without penalty even while disabled or dying, and as long as it has less than 0 hit points, it gains a +2 bonus on attack rolls and all weapon damage rolls.<br/><br/><b>Foresighted (Su)</b> An unchosen\u2019s trepanation has partially unlocked an almost psychic ability to sense peril. It gains a +2 insight bonus on Initiative checks and to its armor class."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "Unchosen stand between 10 and 12 feet tall. Masses of bloated muscle and matted fur, they possess insatiable instincts for acts of violence upon other living creatures, including their own kind. They are highly territorial as well as voracious predators, which one might infer by their thick, arrowhead-shaped teeth."
+        }
+    ],
+    "html": "<img src=\"images\\ThreeFiveSymbol.gif\" style=\"margin: 3px 3px 0px 3px\"/><i>A hulking monstrosity lumbers forth, its canine jaws snapping ferociously. Its matted, speckled hide and hyena-like cackle hint at its animalistic nature, yet it walks like a man, even though its grotesque proportions seem wholly unnatural. A circular patch of thickened, gray scar tissue nestles in the filthy fur in the center of its forehead.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Unchosen",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "listen",
+                "value": 4
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "spot",
+                "value": 4
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "deathwatch"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "scent"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "gnoll"
+                }
+            ],
+            "size": "Large",
+            "alignment_text": "Usually CE",
+            "family": "Gnoll",
+            "cr": "4"
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 17,
+                "touch": 11,
+                "flat-footed": 17,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 insight"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "foresighted"
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "charm"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "fear"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "40 ft.",
+                        "movement_type": "walk",
+                        "value": 40
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "claws",
+                    "bonus": [
+                        8
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+6"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "bite",
+                    "bonus": [
+                        3
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+3"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "ferocity"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "grapple": {
+                "type": "stat_block_section",
+                "subtype": "grapple",
+                "value": 13
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 23,
+            "dex": 10,
+            "con": 19,
+            "int": 4,
+            "wis": 10,
+            "cha": 8,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Bull Rush",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Bull Rush",
+                        "alt": "Improved Bull Rush",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Bull%20Rush"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Jump",
+                        "value": 14
+                    }
+                ],
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Listen"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "racial_modifier",
+                        "name": "+4 Spot"
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Gnoll"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #20: House of the Beast",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #20: House of the Beast pg. 88",
+                "alt": "Pathfinder #20: House of the Beast pg. 88",
+                "href": "http://paizo.com/pathfinder/adventurePath/legacyOfFire/v5748btpy86xw"
+            },
+            "page": 88
+        }
+    ]
+}

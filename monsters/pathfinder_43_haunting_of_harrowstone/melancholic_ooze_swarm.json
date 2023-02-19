@@ -1,0 +1,253 @@
+{
+    "name": "Melancholic Ooze Swarm",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary, pair, or glob (3-4)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Paralyzing Slime (Ex)</b> Melancholic oozes are composed of chemical depressants. Any living creature that begins its turn affected by the swarm\u2019s viscous ability must make a DC 15 Fortitude save or be paralyzed for 1 round. This is a mindaffecting effect. Creatures immune to poison are immune to this effect.<br/><br/><b>Viscous (Ex)</b> As described in the sanguine ooze swarm\u2019s special abilities, except that the Reflex save DC is 15 and the patches are destroyed if the victim takes any amount of acid damage.<br/><br/>Formed from accumulations of runoff from arcane laboratories and regions of magical calamity, alchemical oozes are fist-sized blobs of volatile chemicals. Although composed of unpredictable compounds and toxins, these mobile oozes pose little threat individually, but in polluted quagmires and tainted sewers can collect in numbers great enough to threaten creatures many times their size. Swarms of the slimes linger in such contaminated areas and seek new accretions of vital solutions, like those found within the bodies of higher life forms, to fuel their erratic life cycles. Found in numerous varieties with a host of differing abilities, these weird, clinging oozes have been differentiated by likening them to the humors said to compose the bodies of living beings.<br/><br/>Appearing at first to be a collection of tiny blobs of viscous, translucent fluid, alchemical oozes become far more terrifying once their hungry nature becomes apparent. Each swarm is composed of several hundred palm-sized balls of ooze that all scuttle along as a single unit."
+        }
+    ],
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Melancholic Ooze Swarm",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": -5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": -5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "blindsight 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Ooze",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "swarm"
+                }
+            ],
+            "size": "Tiny",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Alchemical Ooze Swarm",
+            "cr": "1",
+            "xp": 400
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 7,
+                "touch": 7,
+                "flat-footed": 7,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-5 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -5
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -5
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "ooze traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "swarm traits"
+                }
+            ],
+            "resistances": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "resistance",
+                    "value": 5,
+                    "name": "electricity"
+                }
+            ],
+            "weaknesses": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "weakness",
+                    "name": "vulnerability to acid"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "10 ft.",
+                        "movement_type": "walk",
+                        "value": 10
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "swarm",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "1"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "viscous"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "0 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 15"
+                        }
+                    ],
+                    "name": "distraction"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "paralyzing slime"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 15"
+                        }
+                    ],
+                    "name": "viscous"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 1
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": -6
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "can't be tripped"
+                    }
+                ],
+                "value": 6
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 14,
+            "dex": 1,
+            "con": 18,
+            "int": null,
+            "wis": 1,
+            "cha": 1
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Pathfinder #43: Haunting of Harrowstone",
+            "link": {
+                "type": "link",
+                "name": "Pathfinder #43: Haunting of Harrowstone pg. 79",
+                "alt": "Pathfinder #43: Haunting of Harrowstone pg. 79",
+                "href": "http://paizo.com/store/games/roleplayingGames/p/pathfinderRPG/paizo/pathfinderAdventurePath/carrionCrown/v5748btpy8ihy"
+            },
+            "page": 79
+        }
+    ]
+}

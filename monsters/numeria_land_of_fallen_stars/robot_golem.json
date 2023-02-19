@@ -1,0 +1,260 @@
+{
+    "name": "Robot Golem",
+    "type": "monster",
+    "sections": [
+        {
+            "name": "Ecology",
+            "type": "section",
+            "html": "<b>Environment</b> any (Numeria)<br/><b>Organization</b> solitary or gang (2\u20134)<br/><b>Treasure</b> none"
+        },
+        {
+            "name": "Special Abilities",
+            "type": "section",
+            "html": "<b>Immunity to Magic (Ex)</b> A robot golem is immune to spells or spell-like abilities that allow spell resistance. In addition, certain spells and effects function differently against it, as noted below. <ul> <li>A magical attack that deals electricity damage deals half damage to the golem. Additionally, for 1d4+1 rounds the golem gains the benefits of <i>haste </i>and goes berserk. The uncontrolled golem goes on a rampage, attacking the nearest living creature or smashing an object smaller than itself if no creature is within reach; it then moves on to spread more destruction. The golem comes back under the control of its creator when the duration ends.</li> <li>A <i>transmute metal to wood</i> spell reduces the robot golem\u2019s damage reduction by 5 and its natural armor bonus by 9 for 1d4 rounds.</li> <li>A robot golem is affected normally by rust attacks, such as those of a rust monster or a <i>rusting grasp</i> spell.</li> </ul><b>Rend Construct (Ex)</b> This functions as the rend special ability, except the robot golem can rend only other constructs.<br/><br/><b>Shockwave (Ex)</b> A robot golem can release a pulse of electrical energy held within its nonfunctioning batteries as a standard action once every 1d4 rounds. This pulse is a 30-foot-radius spread that deals 8d6 points of electricity damage to all creatures in its area of effect (Reflex DC 19 half). The save DC is Constitution-based and includes a +2 racial bonus."
+        },
+        {
+            "name": "Description",
+            "type": "section",
+            "html": "When robots are damaged beyond the abilities of Numerian technologists to repair, salvages sometimes animate their frames via magic rather than science. What results is more of a walking mechanical corpse that lacks the intelligence and vulnerabilities of a true robot. The arcanists of the Technic League often employ these magically animated constructs to combat rogue robots or those under the control of their enemies."
+        }
+    ],
+    "html": "<i>Though corroded and damaged, this bipedal metallic construct moves silently, as though powered by some force other than its own rattling gears.</i>",
+    "game-obj": "Monsters",
+    "stat_block": {
+        "name": "Robot Golem",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 0
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 0
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Construct",
+            "size": "Large",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "family": "Golem",
+            "cr": "11",
+            "xp": 12800
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 27,
+                "touch": 9,
+                "flat-footed": 27,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+18 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                }
+            },
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/adamantine",
+                    "damage_types": [
+                        "adamantine"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "construct traits"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "magic"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "slams",
+                    "bonus": [
+                        22
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d10+8"
+                        }
+                    ]
+                }
+            ],
+            "space": "10 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "value": "10 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "2 slams"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "2d10+12"
+                        }
+                    ],
+                    "name": "rend construct"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "30-ft.-radius spread"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "8d6 electricity"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Reflex DC 19 for half"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "usable every 1d4 rounds"
+                        }
+                    ],
+                    "name": "shockwave"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 15
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 24
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 34
+            }
+        },
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 26,
+            "dex": 11,
+            "con": null,
+            "int": null,
+            "wis": 11,
+            "cha": 1
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "Numeria, Land of Fallen Stars",
+            "link": {
+                "type": "link",
+                "name": "Numeria, Land of Fallen Stars pg. 49",
+                "alt": "Numeria, Land of Fallen Stars pg. 49",
+                "href": "http://paizo.com/products/btpy978l?Pathfinder-Campaign-Setting-Numeria-Land-of-Fallen-Stars"
+            },
+            "page": 49
+        }
+    ]
+}
