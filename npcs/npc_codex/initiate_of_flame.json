@@ -1,0 +1,536 @@
+{
+    "name": "Initiate of Flame",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The druid casts <i>endure elements </i>each day.<br/><b>During Combat </b>The druid casts <i>faerie fire</i>, then drops a smokestick at his feet, letting foes come to him, and possibly sets his spear against a charge. He then fights with his spear or casts burning hands."
+        },
+        {
+            "name": "Description",
+            "html": "These hostile guardians of volcanic mountain regions have tempers to match their fiery environs, and tolerate no intruders."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Initiate of Flame",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 0
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 6
+            }
+        ],
+        "senses": [],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "dwarf"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Lawful Neutral",
+            "alignment_text": "LN",
+            "cr": "1/2",
+            "xp": 200,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Dwarf"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "druid 1"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 14,
+                "touch": 10,
+                "flat-footed": 14,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 armor"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 0
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 vs. poison"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "spells"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "and spell-like abilities"
+                        }
+                    ]
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+4 dodge bonus to AC vs. giants"
+                        }
+                    ],
+                    "name": "defensive training"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "spear",
+                    "bonus": [
+                        2
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+3"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "sling",
+                    "bonus": [
+                        0
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+2"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "+1 on attack rolls against goblinoid and orc humanoids"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "fire bolt"
+                                    }
+                                ],
+                                "count_text": "5/day",
+                                "count": 5,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 1,
+                        "concentration": 3
+                    },
+                    {
+                        "name": "Druid Spells Prepared",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "burning hands",
+                                        "notation": "D",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 13",
+                                            "dc": 13
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "endure elements"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "faerie fire"
+                                    }
+                                ],
+                                "count_text": "1st",
+                                "frequency": "1st"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "detect poison"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "flare",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 12",
+                                            "dc": 12
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "stabilize"
+                                    }
+                                ],
+                                "level_text": "0",
+                                "level": 0,
+                                "count_text": "at will",
+                                "frequency": "at will"
+                            }
+                        ],
+                        "caster_level": 1,
+                        "concentration": 3
+                    }
+                ],
+                "notations": [
+                    {
+                        "name": "D",
+                        "type": "stat_block_section",
+                        "subtype": "notation",
+                        "value": "Domain spell"
+                    }
+                ],
+                "class_selections": [
+                    {
+                        "name": "Domains",
+                        "type": "stat_block_section",
+                        "subtype": "class_selection",
+                        "values": [
+                            "Fire"
+                        ]
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 0
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 2
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "16 vs. bull rush or trip"
+                    }
+                ],
+                "value": 12
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "alchemist\u2019s fire",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "smokesticks",
+                "quantity": 2
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork hide armor"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "sling",
+                "with": {
+                    "type": "stat_block_section",
+                    "subtype": "item",
+                    "name": "bullets",
+                    "quantity": 20
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "spear"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "climber\u2019s kit"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "healer\u2019s kit"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "holly and mistletoe"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "spell component pouch"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 8
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 15,
+            "dex": 10,
+            "con": 16,
+            "int": 12,
+            "wis": 15,
+            "cha": 6,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 4
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Handle Animal",
+                        "value": 2
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (geography)",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (nature)",
+                        "value": 3
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 6,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+8 to notice unusual stonework"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 8
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Druidic"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Dwarven"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Giant"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Fire domain"
+                        }
+                    ],
+                    "name": "nature bond"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "nature sense"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "wild empathy \u20131"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 62",
+                "alt": "NPC Codex pg. 62",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 62
+        }
+    ]
+}

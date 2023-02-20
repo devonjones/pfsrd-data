@@ -1,0 +1,512 @@
+{
+    "name": "Tavern Singer",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>During Combat </b>The bard uses <i>grease </i>to escape."
+        },
+        {
+            "name": "Description",
+            "html": "These performers entertain to earn drinks and tips."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Tavern Singer",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 5
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "elf"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Chaotic Neutral",
+            "alignment_text": "CN",
+            "cr": "1/2",
+            "xp": 200,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Half-elf"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "bard 1"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 12,
+                "flat-footed": 13,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 vs. enchantments"
+                        }
+                    ]
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "sleep"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "rapier",
+                    "bonus": [
+                        2
+                    ],
+                    "critical_range": "18\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "shortbow",
+                    "bonus": [
+                        2
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "countersong"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "distraction"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "fascinate"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "inspire courage +1"
+                        }
+                    ],
+                    "name": "bardic performance 7 rounds/day"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Bard Spells Known",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "grease"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "hideous laughter",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 14",
+                                            "dc": 14
+                                        }
+                                    }
+                                ],
+                                "level_text": "1st",
+                                "level": 1,
+                                "count_text": "2/day",
+                                "count": 2,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dancing lights"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "ghost sound",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 13",
+                                            "dc": 13
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "message"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "prestidigitation"
+                                    }
+                                ],
+                                "level_text": "0",
+                                "level": 0,
+                                "count_text": "at will",
+                                "frequency": "at will"
+                            }
+                        ],
+                        "caster_level": 1,
+                        "concentration": 4
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 0
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 0
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 12
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potions of cure light wounds",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "alchemist\u2019s fire"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "sunrod"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "tanglefoot bag"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "thunderstone"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "studded leather"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "rapier"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "shortbow",
+                "with": {
+                    "type": "stat_block_section",
+                    "subtype": "item",
+                    "name": "arrows",
+                    "quantity": 20
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork flute"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 13
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 10,
+            "dex": 14,
+            "con": 12,
+            "int": 13,
+            "wis": 8,
+            "cha": 17,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Perform [wind]"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Perform [wind])",
+                        "alt": "Skill Focus (Perform [wind])",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Weapon Finesse",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Finesse",
+                        "alt": "Weapon Finesse",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Finesse"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Diplomacy",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perform (wind)",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 3
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sleight of Hand",
+                        "value": 6
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Use Magic Device",
+                        "value": 7
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Elven"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "bardic knowledge +1"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "elf blood"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 26",
+                "alt": "NPC Codex pg. 26",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 26
+        }
+    ]
+}

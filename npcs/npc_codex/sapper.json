@@ -1,0 +1,433 @@
+{
+    "name": "Sapper",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>During Combat </b>The sapper throws alchemical splash weapons, avoiding melee combat as long as possible."
+        },
+        {
+            "name": "Description",
+            "html": "Sappers specialize in undermining fortifications and tunneling under walls. Using a combination of time, engineering, and explosives, sappers can rig a tunnel to collapse to protect a retreat or create a path over a mountainside. Their enthusiasm for blowing things up means they take unnecessary risks, and the lifespan of a professional sapper is often cut short in a dramatic blast."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Sapper",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 8
+            }
+        ],
+        "senses": [],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Lawful Evil",
+            "alignment_text": "LE",
+            "cr": "3",
+            "xp": 800,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Human"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "expert 5"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 13,
+                "touch": 11,
+                "flat-footed": 12,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "mwk dagger",
+                    "bonus": [
+                        3
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4\u20131"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "mwk dagger",
+                    "bonus": [
+                        5
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4\u20131"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "splash weapon",
+                    "bonus": [
+                        4
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "varies"
+                        }
+                    ]
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 3
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 2
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 13
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "elixirs of hiding",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of barkskin"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of cure moderate wounds"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of invisibility"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "acid",
+                "quantity": 4
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "alchemist\u2019s fire",
+                "quantity": 4
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "leather armor"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork dagger"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "alchemist\u2019s lab"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "antitoxin"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "everburning torch"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork thieves\u2019 tools"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "smokestick",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "tindertwig",
+                "quantity": 4
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 171
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 8,
+            "dex": 12,
+            "con": 10,
+            "int": 16,
+            "wis": 11,
+            "cha": 9,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lightning Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Lightning Reflexes",
+                        "alt": "Lightning Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Lightning%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Point-Blank Shot",
+                    "link": {
+                        "type": "link",
+                        "name": "Point-Blank Shot",
+                        "alt": "Point-Blank Shot",
+                        "href": "FeatDisplay.aspx?ItemName=Point-Blank%20Shot"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Knowledge [engineering]"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Stealth"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Knowledge [engineering]",
+                        "alt": "Skill Focus (Knowledge [engineering]",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Craft (alchemy)",
+                        "value": 11
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Disable Device",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Escape Artist",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (arcana, geography)",
+                        "value": 11
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (engineering)",
+                        "value": 14
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 12
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Dwarven"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Goblin"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 262",
+                "alt": "NPC Codex pg. 262",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 262
+        }
+    ]
+}

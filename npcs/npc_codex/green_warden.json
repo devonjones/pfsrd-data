@@ -1,0 +1,783 @@
+{
+    "name": "Green Warden",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The arcane archer attempts to start combat from a hard-to-reach spot, such as a high tree branch or steep elevation. He casts <i>heroism </i>and <i>protection from arrows </i>on himself from scrolls.<br/><b>During Combat </b>The archer keeps his distance and uses his magic arrows first. He casts <i>glitterdust </i>and <i>web </i>to slow down any approaching enemies, using imbue arrow to increase the range of such spells if needed. He uses Arcane Armor Training each round.<br/><b>Base Statistics </b>Without <i>heroism </i>and <i>protection from arrows</i>, the archer\u2019s base statistics are <b>Senses </b>Perception +12; <b>Fort </b>+5, <b>Ref </b>+7, <b>Will </b>+8; <b>DR </b>none; <b>Melee</b><i>+2 short sword </i>+12/+7 (1d6+4/19\u201320); <b>Ranged </b>mwk composite longbow +16/+11 (1d8+5/\u00d73); <b>Skills </b>Climb +8, Knowledge (arcana, nature) +7, Perception +12, Spellcraft +7 (+9 to identify magic item properties), Stealth +12, Swim +8."
+        },
+        {
+            "name": "Description",
+            "html": "Protectors of the forest, green wardens are sworn to defend their sylvan homes from enemy encroachment, using magic arrows to kill from the trees\u2019 canopy."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Green Warden",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 14
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "elf"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "8",
+            "xp": 4800,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Elf"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "fighter"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "5/conjurer"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "2/arcane"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "archer 2"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 19,
+                "touch": 15,
+                "flat-footed": 14,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+5 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 7
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 10,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 vs. enchantments"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+1 vs. fear"
+                        }
+                    ]
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "bravery +1"
+                }
+            ],
+            "dr": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "dr",
+                    "value": 10,
+                    "text": "10/magic (ranged weapon attack only; 30 points)",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "ranged weapon attack only; 30 points"
+                        }
+                    ],
+                    "damage_types": [
+                        "magic"
+                    ]
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "sleep"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "short sword",
+                    "bonus": [
+                        14,
+                        9
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+4"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "mwk composite longbow",
+                    "bonus": [
+                        18,
+                        13
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+5"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "magic"
+                        }
+                    ],
+                    "name": "enhance arrows"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "imbue arrow"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "bows +1"
+                        }
+                    ],
+                    "name": "weapon training"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "acid dart"
+                                    }
+                                ],
+                                "count_text": "4/day",
+                                "count": 4,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 3,
+                        "concentration": 4
+                    },
+                    {
+                        "name": "Conjurer Spells Prepared",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "glitterdust",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 13",
+                                            "dc": 13
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "web",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 13",
+                                            "dc": 13
+                                        }
+                                    }
+                                ],
+                                "count_text": "2nd",
+                                "frequency": "2nd"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "burning hands",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 12",
+                                            "dc": 12
+                                        },
+                                        "modifiers": [
+                                            {
+                                                "type": "stat_block_section",
+                                                "subtype": "modifier",
+                                                "name": "2"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "color spray",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 12",
+                                            "dc": 12
+                                        },
+                                        "modifiers": [
+                                            {
+                                                "type": "stat_block_section",
+                                                "subtype": "modifier",
+                                                "name": "2"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "count_text": "1st",
+                                "frequency": "1st"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bleed",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 11",
+                                            "dc": 11
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dancing lights"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "ghost sound",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 11",
+                                            "dc": 11
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "mage hand"
+                                    }
+                                ],
+                                "level_text": "0",
+                                "level": 0,
+                                "count_text": "at will",
+                                "frequency": "at will"
+                            }
+                        ],
+                        "caster_level": 3,
+                        "concentration": 4,
+                        "notes": [
+                            "arcane spell failure 15%"
+                        ]
+                    }
+                ],
+                "class_selections": [
+                    {
+                        "name": "Opposition Schools",
+                        "type": "stat_block_section",
+                        "subtype": "class_selection",
+                        "values": [
+                            "divination",
+                            "necromancy"
+                        ]
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 8
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 10
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 25
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 frost arrows",
+                "quantity": 5
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 human-bane arrows",
+                "quantity": 5
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 shock arrows",
+                "quantity": 5
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of cure moderate wounds"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of heroism"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scrolls of invisibility",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of protection from arrows"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 studded leather"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+2 short sword"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork composite longbow",
+                "with": {
+                    "type": "stat_block_section",
+                    "subtype": "item",
+                    "name": "arrows",
+                    "quantity": 50
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "belt of incredible dexterity +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "spell component pouch"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "spellbook"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 165
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 14,
+            "dex": 21,
+            "con": 10,
+            "int": 12,
+            "wis": 13,
+            "cha": 8,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Arcane Armor Training",
+                    "link": {
+                        "type": "link",
+                        "name": "Arcane Armor Training",
+                        "alt": "Arcane Armor Training",
+                        "href": "FeatDisplay.aspx?ItemName=Arcane%20Armor%20Training"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Iron Will",
+                        "alt": "Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Manyshot",
+                    "link": {
+                        "type": "link",
+                        "name": "Manyshot",
+                        "alt": "Manyshot",
+                        "href": "FeatDisplay.aspx?ItemName=Manyshot"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Point-Blank Shot",
+                    "link": {
+                        "type": "link",
+                        "name": "Point-Blank Shot",
+                        "alt": "Point-Blank Shot",
+                        "href": "FeatDisplay.aspx?ItemName=Point-Blank%20Shot"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Precise Shot",
+                    "link": {
+                        "type": "link",
+                        "name": "Precise Shot",
+                        "alt": "Precise Shot",
+                        "href": "FeatDisplay.aspx?ItemName=Precise%20Shot"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Rapid Shot",
+                    "link": {
+                        "type": "link",
+                        "name": "Rapid Shot",
+                        "alt": "Rapid Shot",
+                        "href": "FeatDisplay.aspx?ItemName=Rapid%20Shot"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Scribe Scroll",
+                    "link": {
+                        "type": "link",
+                        "name": "Scribe Scroll",
+                        "alt": "Scribe Scroll",
+                        "href": "FeatDisplay.aspx?ItemName=Scribe%20Scroll"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "longbow"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (longbow)",
+                        "alt": "Weapon Focus (longbow)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "longbow"
+                        }
+                    ],
+                    "name": "Weapon Specialization",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Specialization (longbow)",
+                        "alt": "Weapon Specialization (longbow)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Specialization"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (arcana, nature)",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 14
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spellcraft",
+                        "value": 9,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+11 to identify magic items"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 14
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 10
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Elven"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Goblin"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "masterwork composite longbow"
+                        }
+                    ],
+                    "name": "arcane bond"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "armor training 1"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "elven magic"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1 round"
+                        }
+                    ],
+                    "name": "summoner\u2019s charm"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "weapon familiarity"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 200",
+                "alt": "NPC Codex pg. 200",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 200
+        }
+    ]
+}

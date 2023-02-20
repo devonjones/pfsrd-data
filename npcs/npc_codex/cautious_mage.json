@@ -1,0 +1,476 @@
+{
+    "name": "Cautious Mage",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The wizard casts <i>mage armor</i>.<br/><b>During Combat </b>The wizard uses hand of the apprentice to throw her quarterstaff or casts <i>burning hands</i>. She offers to use her <i>scroll of enlarge person </i>on an ally who\u2019ll protect her.<br/><b>Base Statistics </b>Without <i>mage armor</i>, the wizard\u2019s statistics are <b>AC </b>11, touch 11, flat-footed 10."
+        },
+        {
+            "name": "Description",
+            "html": "These mages are new adventurers looking for protectors."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Cautious Mage",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 4
+            }
+        ],
+        "senses": [],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1/2",
+            "xp": 200,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Human"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "wizard 1"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 15,
+                "touch": 11,
+                "flat-footed": 14,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 2
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "quarterstaff",
+                    "bonus": [
+                        0
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "6/day"
+                        }
+                    ],
+                    "name": "hand of the apprentice"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Wizard Spells Prepared",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "burning hands",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 14",
+                                            "dc": 14
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "mage armor"
+                                    }
+                                ],
+                                "count_text": "1st",
+                                "frequency": "1st"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bleed",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 13",
+                                            "dc": 13
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "detect magic"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "resistance"
+                                    }
+                                ],
+                                "level_text": "0",
+                                "level": 0,
+                                "count_text": "at will",
+                                "frequency": "at will"
+                            }
+                        ],
+                        "caster_level": 1,
+                        "concentration": 4
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 0
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 0
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 11
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potions of cure light wounds",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of shield of faith"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scrolls of comprehend languages",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of endure elements"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of enlarge person"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of grease"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of mount"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scrolls of shield",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "smokesticks",
+                "quantity": 2
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "quarterstaff"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "antitoxin"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "spellbook"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "sunrods",
+                "quantity": 5
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 40
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 10,
+            "dex": 13,
+            "con": 14,
+            "int": 17,
+            "wis": 12,
+            "cha": 8,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Alertness",
+                    "link": {
+                        "type": "link",
+                        "name": "Alertness",
+                        "alt": "Alertness",
+                        "href": "FeatDisplay.aspx?ItemName=Alertness"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Casting",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Casting",
+                        "alt": "Combat Casting",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Casting"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Scribe Scroll",
+                    "link": {
+                        "type": "link",
+                        "name": "Scribe Scroll",
+                        "alt": "Scribe Scroll",
+                        "href": "FeatDisplay.aspx?ItemName=Scribe%20Scroll"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (arcana, history, planes)",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Linguistics",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 4
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 3
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spellcraft",
+                        "value": 7
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Draconic"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Dwarven"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Elven"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Infernal"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "raven"
+                        }
+                    ],
+                    "name": "arcane bond"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 178",
+                "alt": "NPC Codex pg. 178",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 178
+        }
+    ]
+}

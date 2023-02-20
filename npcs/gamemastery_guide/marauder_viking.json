@@ -1,0 +1,573 @@
+{
+    "name": "Marauder (Viking)",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Base Statistics</b> When not raging, the viking has <b>AC </b>22, touch 12, flat-footed 20; <b>hp </b>64; <b>Fort </b>+12, <b>Will </b>+5; <b>Melee </b><i>+1 battleaxe</i> +14/+9 (1d8+6/19\u201320/\u00d73) or shortspear +12/+7 (1d6+4); <b>Ranged </b>throwing axe +11 (1d6+5) or shortspear +10 (1d6+4); <b>Str </b>18, <b>Con </b>14; <b>CMB </b>+12 (+16 to overrun); Climb +6, Swim +10"
+        },
+        {
+            "name": "Description",
+            "html": "Vikings are riders of the waves, marauding plunderers from the frozen northern lands who are always ready to pillage with axe and spear and blazing torch. They are boastful and proud, shouting battle cries to their savage gods for the glory of combat. Vikings can serve as elite marines or mobile shock troops. A lone viking may travel with a minstrel to chronicle his journeys (CR 8) or with a first mate and captain (CR 12), while five vikings might serve as honor guard to a chieftain (CR 13)."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Marauder (Viking)",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 10
+            }
+        ],
+        "senses": [],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "size": "Medium",
+            "alignment": "Chaotic Neutral",
+            "alignment_text": "CN",
+            "cr": "7",
+            "xp": 3200,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Human"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "barbarian"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "2/fighter 6"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 20,
+                "touch": 10,
+                "flat-footed": 18,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+7 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 shield"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "-2 rage"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 14
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 4
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 7,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 vs. fear"
+                        }
+                    ]
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "bravery +2"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "uncanny dodge"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "40 ft.",
+                        "movement_type": "walk",
+                        "value": 40
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 1,
+                    "name": "battleaxe",
+                    "bonus": [
+                        16,
+                        11
+                    ],
+                    "critical_range": "19\u201320/\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+9"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "shortspear",
+                    "bonus": [
+                        14,
+                        9
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+6"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "throwing axe",
+                    "bonus": [
+                        11
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+7"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "shortspear",
+                    "bonus": [
+                        10
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+6"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "14 rounds per day"
+                        }
+                    ],
+                    "name": "rage"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "quick reflexes"
+                        }
+                    ],
+                    "name": "rage power"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "axes +1"
+                        }
+                    ],
+                    "name": "weapon training"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 8
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+18 to overrun"
+                    }
+                ],
+                "value": 14
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "26 vs. overrun"
+                    }
+                ],
+                "value": 24
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of bull\u2019s strength"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potions of cure light wounds",
+                "quantity": 3
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 chainmail"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 heavy wooden shield"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 battleaxe"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "shortspear"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "throwing axes",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "boots of the winterlands"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "feather token",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "anchor"
+                    }
+                ]
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 5
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 22,
+            "dex": 14,
+            "con": 18,
+            "int": 8,
+            "wis": 12,
+            "cha": 10,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Athletic",
+                    "link": {
+                        "type": "link",
+                        "name": "Athletic",
+                        "alt": "Athletic",
+                        "href": "FeatDisplay.aspx?ItemName=Athletic"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Extra Rage",
+                    "link": {
+                        "type": "link",
+                        "name": "Extra Rage",
+                        "alt": "Extra Rage",
+                        "href": "FeatDisplay.aspx?ItemName=Extra%20Rage"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Great Fortitude",
+                    "link": {
+                        "type": "link",
+                        "name": "Great Fortitude",
+                        "alt": "Great Fortitude",
+                        "href": "FeatDisplay.aspx?ItemName=Great%20Fortitude"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Greater Overrun",
+                    "link": {
+                        "type": "link",
+                        "name": "Greater Overrun",
+                        "alt": "Greater Overrun",
+                        "href": "FeatDisplay.aspx?ItemName=Greater%20Overrun"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "battleaxe"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (battleaxe)",
+                        "alt": "Improved Critical (battleaxe)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Overrun",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Overrun",
+                        "alt": "Improved Overrun",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Overrun"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Iron Will",
+                        "alt": "Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Vital Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Vital Strike",
+                        "alt": "Vital Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Vital%20Strike"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 6,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+10 jump"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Craft (ships)",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Profession (sailor)",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 12
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "armor training 1"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "fast movement"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "GameMastery Guide",
+            "link": {
+                "type": "link",
+                "name": "GameMastery Guide pg. 281",
+                "alt": "GameMastery Guide pg. 281",
+                "href": "http://paizo.com/pathfinderRPG/v5748btpy8ffn"
+            },
+            "page": 281
+        }
+    ]
+}

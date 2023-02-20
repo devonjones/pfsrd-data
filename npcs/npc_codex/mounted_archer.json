@@ -1,0 +1,553 @@
+{
+    "name": "Mounted Archer",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The ranger casts <i>endure elements </i>and <i>resist energy </i>(fire).<br/><b>During Combat </b>The ranger shoots from horseback. When fighting dangerous opponents, she uses <i>oil of magic weapon </i>on her bow and drinks her <i>potion of blur</i>.<br/><b>Base Statistics </b>Without <i>resist energy</i>, the ranger\u2019s statistics are <b>Resist </b>none."
+        },
+        {
+            "name": "Description",
+            "html": "The mounted archer fires deadly arrows from horseback."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Mounted Archer",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 7
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 9
+            }
+        ],
+        "senses": [],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "4",
+            "xp": 1200,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Human"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "ranger 5"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 19,
+                "touch": 13,
+                "flat-footed": 16,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 shield"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 7
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                }
+            },
+            "resistances": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "resistance",
+                    "value": 10,
+                    "name": "fire"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "mwk scimitar",
+                    "bonus": [
+                        8
+                    ],
+                    "critical_range": "18\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+2"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "lance",
+                    "bonus": [
+                        7
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+2"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "mwk composite shortbow",
+                    "bonus": [
+                        10
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+2"
+                        }
+                    ]
+                }
+            ],
+            "space": "5 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "10 ft. with lance"
+                    }
+                ],
+                "value": "5 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "animals +2"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "humans +4"
+                        }
+                    ],
+                    "name": "favored enemy"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Ranger Spells Prepared",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "endure elements"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "resist energy"
+                                    }
+                                ],
+                                "count_text": "1st",
+                                "frequency": "1st"
+                            }
+                        ],
+                        "caster_level": 2,
+                        "concentration": 3
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 5
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 7
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 20
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "oil of magic weapon"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of blur"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of cure moderate wounds"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of invisibility"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork chain shirt"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork heavy wooden shield"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "lance"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork composite shortbow",
+                "with": {
+                    "type": "stat_block_section",
+                    "subtype": "item",
+                    "name": "arrows",
+                    "quantity": 20
+                },
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Str"
+                    }
+                ]
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork scimitar"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "cloak of resistance +1"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "combat-trained horse"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "riding saddle"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 72
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 15,
+            "dex": 16,
+            "con": 14,
+            "int": 10,
+            "wis": 12,
+            "cha": 8,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Endurance",
+                    "link": {
+                        "type": "link",
+                        "name": "Endurance",
+                        "alt": "Endurance",
+                        "href": "FeatDisplay.aspx?ItemName=Endurance"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Mounted Archery",
+                    "link": {
+                        "type": "link",
+                        "name": "Mounted Archery",
+                        "alt": "Mounted Archery",
+                        "href": "FeatDisplay.aspx?ItemName=Mounted%20Archery"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Mounted Combat",
+                    "link": {
+                        "type": "link",
+                        "name": "Mounted Combat",
+                        "alt": "Mounted Combat",
+                        "href": "FeatDisplay.aspx?ItemName=Mounted%20Combat"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Point-Blank Shot",
+                    "link": {
+                        "type": "link",
+                        "name": "Point-Blank Shot",
+                        "alt": "Point-Blank Shot",
+                        "href": "FeatDisplay.aspx?ItemName=Point-Blank%20Shot"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "composite shortbow"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (composite shortbow)",
+                        "alt": "Weapon Focus (composite shortbow)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Handle Animal",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Heal",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (geography, nature)",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Ride",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 9
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "desert +2"
+                        }
+                    ],
+                    "name": "favored terrain"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "companions"
+                        }
+                    ],
+                    "name": "hunter\u2019s bond"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "track +2"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "wild empathy +4"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 130",
+                "alt": "NPC Codex pg. 130",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 130
+        }
+    ]
+}

@@ -1,0 +1,942 @@
+{
+    "name": "Fey Enchantress",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The sorcerer casts <i>false life </i>and <i>mage armor</i>.<br/><b>During Combat </b>The sorcerer uses her fleeting glance ability to turn invisible, then casts <i>mind fog </i>before using her enchantment spells. She casts <i>spectral hand </i>to deliver touch spells such as <i>bestow curse</i>, <i>poison</i>, or <i>touch of idiocy</i>.<br/><b>Base Statistics </b>Without <i>false life </i>and <i>mage armor</i>, the sorcerer\u2019s statistics are <b>AC </b>17, touch 16, flat-footed 13; <b>hp </b>44."
+        },
+        {
+            "name": "Description",
+            "html": "The fey enchantress uses her powers to manipulate others, acquire power, and gain wealth."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Fey Enchantress",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 3
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 12
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "elf"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Chaotic Neutral",
+            "alignment_text": "CN",
+            "cr": "11",
+            "xp": 12800,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Elf"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "sorcerer 12"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 21,
+                "touch": 16,
+                "flat-footed": 17,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 deflection"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 dodge"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 natural"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 5
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 10
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 12,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 vs. enchantments"
+                        }
+                    ]
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "sleep"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "mwk rapier",
+                    "bonus": [
+                        10,
+                        5
+                    ],
+                    "critical_range": "18\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6\u20131"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "mwk shortbow",
+                    "bonus": [
+                        10,
+                        5
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6"
+                        }
+                    ]
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "laughing touch"
+                                    }
+                                ],
+                                "count_text": "8/day",
+                                "count": 8,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "fleeting glance"
+                                    }
+                                ],
+                                "count_text": "12 rounds/day",
+                                "count": 12,
+                                "frequency": "rounds/day"
+                            }
+                        ],
+                        "caster_level": 12,
+                        "concentration": 17
+                    },
+                    {
+                        "name": "Sorcerer Spells Known",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "mass suggestion",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 25",
+                                            "dc": 25
+                                        }
+                                    }
+                                ],
+                                "level_text": "6th",
+                                "level": 6,
+                                "count_text": "3/day",
+                                "count": 3,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dominate person",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 24",
+                                            "dc": 24
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "mind fog",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 24",
+                                            "dc": 24
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "tree stride"
+                                    }
+                                ],
+                                "level_text": "5th",
+                                "level": 5,
+                                "count_text": "6/day",
+                                "count": 6,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bestow curse",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 19",
+                                            "dc": 19
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "charm monster",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 21",
+                                            "dc": 21
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "crushing despair",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 23",
+                                            "dc": 23
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "poison",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 19",
+                                            "dc": 19
+                                        }
+                                    }
+                                ],
+                                "level_text": "4th",
+                                "level": 4,
+                                "count_text": "7/day",
+                                "count": 7,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "deep slumber",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 22",
+                                            "dc": 22
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "fly"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "hold person",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 22",
+                                            "dc": 22
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "lightning bolt",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 18",
+                                            "dc": 18
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "suggestion",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 22",
+                                            "dc": 22
+                                        }
+                                    }
+                                ],
+                                "level_text": "3rd",
+                                "level": 3,
+                                "count_text": "7/day",
+                                "count": 7,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "false life"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "glitterdust",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 17",
+                                            "dc": 17
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "hideous laughter",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 21",
+                                            "dc": 21
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "scorching ray"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "spectral hand"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "touch of idiocy"
+                                    }
+                                ],
+                                "level_text": "2nd",
+                                "level": 2,
+                                "count_text": "7/day",
+                                "count": 7,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "charm person",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 18",
+                                            "dc": 18
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "entangle",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 16",
+                                            "dc": 16
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "mage armor"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "magic missile"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "shield"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "ventriloquism",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 16",
+                                            "dc": 16
+                                        }
+                                    }
+                                ],
+                                "level_text": "1st",
+                                "level": 1,
+                                "count_text": "8/day",
+                                "count": 8,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dancing lights"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "daze",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 19",
+                                            "dc": 19
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "detect magic"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "ghost sound",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 15",
+                                            "dc": 15
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "mage hand"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "message"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "prestidigitation"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "ray of frost"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "read magic"
+                                    }
+                                ],
+                                "level_text": "0",
+                                "level": 0,
+                                "count_text": "at will",
+                                "frequency": "at will"
+                            }
+                        ],
+                        "caster_level": 12,
+                        "concentration": 17
+                    }
+                ],
+                "class_selections": [
+                    {
+                        "name": "Bloodline",
+                        "type": "stat_block_section",
+                        "subtype": "class_selection",
+                        "values": [
+                            "fey"
+                        ]
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 6
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 5
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 21
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "elixir of love",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of wall of force"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork rapier"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork shortbow",
+                "with": {
+                    "type": "stat_block_section",
+                    "subtype": "item",
+                    "name": "arrows",
+                    "quantity": 20
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "cloak of resistance +1"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "hat of disguise"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "headband of alluring charisma +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "ring of protection +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "jewelry",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "worth 300 gp"
+                    }
+                ]
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 1825
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 8,
+            "dex": 16,
+            "con": 10,
+            "int": 12,
+            "wis": 13,
+            "cha": 20,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Dodge",
+                    "link": {
+                        "type": "link",
+                        "name": "Dodge",
+                        "alt": "Dodge",
+                        "href": "FeatDisplay.aspx?ItemName=Dodge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Eschew Materials",
+                    "link": {
+                        "type": "link",
+                        "name": "Eschew Materials",
+                        "alt": "Eschew Materials",
+                        "href": "FeatDisplay.aspx?ItemName=Eschew%20Materials"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "enchantment"
+                        }
+                    ],
+                    "name": "Greater Spell Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Greater Spell Focus (enchantment)",
+                        "alt": "Greater Spell Focus (enchantment)",
+                        "href": "FeatDisplay.aspx?ItemName=Greater%20Spell%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Iron Will",
+                        "alt": "Improved Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Iron Will",
+                        "alt": "Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lightning Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Lightning Reflexes",
+                        "alt": "Lightning Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Lightning%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "enchantment"
+                        }
+                    ],
+                    "name": "Spell Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Spell Focus (enchantment)",
+                        "alt": "Spell Focus (enchantment)",
+                        "href": "FeatDisplay.aspx?ItemName=Spell%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Weapon Finesse",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Finesse",
+                        "alt": "Weapon Finesse",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Finesse"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 18
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Diplomacy",
+                        "value": 15
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Fly",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 18
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (arcana)",
+                        "value": 6
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (nature)",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spellcraft",
+                        "value": 9,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+11 to identify magic item properties"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Elven"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Sylvan"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 DC for compulsion spells"
+                        }
+                    ],
+                    "name": "bloodline arcana"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "elven magic"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "weapon familiarity"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "woodland stride"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 169",
+                "alt": "NPC Codex pg. 169",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 169
+        }
+    ]
+}

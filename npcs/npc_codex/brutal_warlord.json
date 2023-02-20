@@ -1,0 +1,626 @@
+{
+    "name": "Brutal Warlord",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The fighter drinks her <i>potions of bear\u2019s endurance </i>and <i>heroism</i>.<br/><b>During Combat </b>Using the free bull rush from her shield bash attack, the fighter pushes her foes around the battlefield, forcing them back until they\u2019re pressed against an obstacle, then bull rushes again to knock them prone. She saves her shield\u2019s bite attack for prone enemies and other easy targets.<br/><b>Base Statistics </b>Without <i>bear\u2019s endurance </i>and <i>heroism</i>, the fighter\u2019s statistics are <b>Senses </b>Perception \u20131; <b>hp </b>115; <b>Fort </b>+11, <b>Ref </b>+7, <b>Will </b>+6; <b>Melee</b><i>+1 vicious flail</i> +18/+13/+8 (1d8+10/19\u201320 plus 2d6), <i>lion\u2019s shield </i>+21 (1d4+6 plus bull rush attempt) or <i>+1 vicious flail </i>+22/+17/+2 (1d8+10/19\u201320 plus 2d6); <b>Ranged </b>mwk throwing axe +17 (1d6+5); <b>Con </b>14; <b>CMB </b>+17; <b>Skills </b>Intimidate +19, Sense Motive +12."
+        },
+        {
+            "name": "Description",
+            "html": "Serving as a leader to orcs, half-orcs, or other barbaric forces, the brutal warlord uses her martial control to shape the battlefield."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Brutal Warlord",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "orc"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Lawful Evil",
+            "alignment_text": "LE",
+            "cr": "12",
+            "xp": 19200,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Half-orc"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "fighter 13"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 27,
+                "touch": 12,
+                "flat-footed": 25,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+10 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+5 shield"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 15
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+3 vs. fear"
+                        }
+                    ]
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "bravery +3"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "orc ferocity"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 1,
+                    "name": "vicious flail",
+                    "bonus": [
+                        20,
+                        15,
+                        10
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+10"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "lion\u2019s shield",
+                    "bonus": [
+                        23
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+6"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "effect": "bull rush attempt"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 1,
+                    "name": "vicious flail",
+                    "bonus": [
+                        24,
+                        19,
+                        14
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8+10"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d6"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "mwk throwing axe",
+                    "bonus": [
+                        19
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+5"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "free action"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "3/day"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+13/+8/+3"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "2d6 damage"
+                        }
+                    ],
+                    "name": "<i>lion\u2019s shield </i>bite"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "heavy flails +3"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "close +2"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "thrown +1"
+                        }
+                    ],
+                    "name": "weapon training"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 13
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 19
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 29
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of bear\u2019s endurance"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of cure moderate wounds"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of heroism"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 full plate"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "lion\u2019s shield"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 vicious flail"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork throwing axe"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "throwing axes",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "belt of giant strength +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "cloak of resistance +1,198 gp"
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 18,
+            "dex": 15,
+            "con": 18,
+            "int": 10,
+            "wis": 8,
+            "cha": 12,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Critical Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Critical Focus",
+                        "alt": "Critical Focus",
+                        "href": "FeatDisplay.aspx?ItemName=Critical%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Disruptive",
+                    "link": {
+                        "type": "link",
+                        "name": "Disruptive",
+                        "alt": "Disruptive",
+                        "href": "FeatDisplay.aspx?ItemName=Disruptive"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "flail"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (flail)",
+                        "alt": "Improved Critical (flail)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Shield Bash",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Shield Bash",
+                        "alt": "Improved Shield Bash",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Shield%20Bash"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Iron Will",
+                        "alt": "Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Shield Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Shield Focus",
+                        "alt": "Shield Focus",
+                        "href": "FeatDisplay.aspx?ItemName=Shield%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Shield Master",
+                    "link": {
+                        "type": "link",
+                        "name": "Shield Master",
+                        "alt": "Shield Master",
+                        "href": "FeatDisplay.aspx?ItemName=Shield%20Master"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Shield Slam",
+                    "link": {
+                        "type": "link",
+                        "name": "Shield Slam",
+                        "alt": "Shield Slam",
+                        "href": "FeatDisplay.aspx?ItemName=Shield%20Slam"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Spellbreaker",
+                    "link": {
+                        "type": "link",
+                        "name": "Spellbreaker",
+                        "alt": "Spellbreaker",
+                        "href": "FeatDisplay.aspx?ItemName=Spellbreaker"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Staggering Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Staggering Critical",
+                        "alt": "Staggering Critical",
+                        "href": "FeatDisplay.aspx?ItemName=Staggering%20Critical"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Step Up",
+                    "link": {
+                        "type": "link",
+                        "name": "Step Up",
+                        "alt": "Step Up",
+                        "href": "FeatDisplay.aspx?ItemName=Step%20Up"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Two-Weapon Fighting",
+                    "link": {
+                        "type": "link",
+                        "name": "Two-Weapon Fighting",
+                        "alt": "Two-Weapon Fighting",
+                        "href": "FeatDisplay.aspx?ItemName=Two-Weapon%20Fighting"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "flail"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (flail)",
+                        "alt": "Weapon Focus (flail)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "flail"
+                        }
+                    ],
+                    "name": "Weapon Specialization",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Specialization (flail)",
+                        "alt": "Weapon Specialization (flail)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Specialization"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 21
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 14
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Orc"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "armor training 3"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "orc blood"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "weapon familiarity"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 88",
+                "alt": "NPC Codex pg. 88",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 88
+        }
+    ]
+}

@@ -1,0 +1,609 @@
+{
+    "name": "Dog Rider Knight",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The paladin casts <i>bull\u2019s strength</i>.<br/><b>During Combat </b>The paladin uses Ride-By Attack to charge his foes, and uses smite evil.<br/><b>Base Statistics </b>Without <i>bull\u2019s strength</i>, the paladin\u2019s statistics are <b>Melee</b><i>+1 lance </i>+12/+7 (1d6+3/\u00d73) or mwk longsword +11/+6 (1d6+2/19\u201320); <b>Str </b>14; <b>CMB </b>+8; <b>CMD </b>20; <b>Skills </b>Climb +0."
+        },
+        {
+            "name": "Description",
+            "html": "There is no description for this NPC."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Dog Rider Knight",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 2
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 5
+            }
+        ],
+        "senses": [],
+        "auras": [
+            {
+                "type": "stat_block_section",
+                "subtype": "aura",
+                "name": "courage",
+                "range": {
+                    "type": "stat_block_section",
+                    "subtype": "range",
+                    "text": "10 ft.",
+                    "range": 10,
+                    "unit": "feet"
+                }
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "halfling"
+                }
+            ],
+            "size": "Small",
+            "alignment": "Lawful Good",
+            "alignment_text": "LG",
+            "cr": "6",
+            "xp": 2400,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Halfling"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "paladin"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "of"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Sarenrae 7"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 23,
+                "touch": 13,
+                "flat-footed": 21,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+7 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 shield"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 10
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 vs. fear"
+                        }
+                    ]
+                }
+            },
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "disease"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "fear"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "15 ft.",
+                        "movement_type": "walk",
+                        "value": 15
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 1,
+                    "name": "lance",
+                    "bonus": [
+                        14,
+                        9
+                    ],
+                    "critical_range": "\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+5"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "mwk longsword",
+                    "bonus": [
+                        13,
+                        8
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+4"
+                        }
+                    ]
+                }
+            ],
+            "space": "5 ft.",
+            "reach": {
+                "type": "stat_block_section",
+                "subtype": "reach",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "10 ft. with lance"
+                    }
+                ],
+                "value": "5 ft."
+            },
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 16"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "4d6"
+                        }
+                    ],
+                    "name": "channel positive energy"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+3 attack and AC"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+7 damage"
+                        }
+                    ],
+                    "name": "smite evil 3/day"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "detect evil"
+                                    }
+                                ],
+                                "count_text": "At will",
+                                "frequency": "At will"
+                            }
+                        ],
+                        "caster_level": 7,
+                        "concentration": 10
+                    },
+                    {
+                        "name": "Paladin Spells Prepared",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bull\u2019s strength"
+                                    }
+                                ],
+                                "count_text": "2nd",
+                                "frequency": "2nd"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bless weapon"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "divine favor"
+                                    }
+                                ],
+                                "count_text": "1st",
+                                "frequency": "1st"
+                            }
+                        ],
+                        "caster_level": 4,
+                        "concentration": 7
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 7
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 10
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 22
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of aid"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of shield of faith"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 breastplate"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 heavy steel shield"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 lance"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork longsword"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "silver holy symbol"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "exotic military saddle"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 420
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 18,
+            "dex": 14,
+            "con": 13,
+            "int": 10,
+            "wis": 8,
+            "cha": 16,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Mounted Combat",
+                    "link": {
+                        "type": "link",
+                        "name": "Mounted Combat",
+                        "alt": "Mounted Combat",
+                        "href": "FeatDisplay.aspx?ItemName=Mounted%20Combat"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Ride-By Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Ride-By Attack",
+                        "alt": "Ride-By Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Ride-By%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "lance"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (lance)",
+                        "alt": "Weapon Focus (lance)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 0,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "\u20134 when jumping"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 2
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Heal",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Ride",
+                        "value": 8,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+10 to stay in the saddle"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 1
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Halfling"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "aura"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "code of conduct"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "mount"
+                        }
+                    ],
+                    "name": "divine bond"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "3d6"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "6/day"
+                        }
+                    ],
+                    "name": "lay on hands"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "dazed"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "shaken"
+                        }
+                    ],
+                    "name": "mercies"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 115",
+                "alt": "NPC Codex pg. 115",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 115
+        }
+    ]
+}

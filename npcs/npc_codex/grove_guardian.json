@@ -1,0 +1,843 @@
+{
+    "name": "Grove Guardian",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The monk attempts to get close to an opponent through Bluff or Diplomacy, then drinks her <i>potions of bear\u2019s endurance </i>and <i>bull\u2019s strength</i>.<br/><b>During Combat </b>Against a single foe, the monk opens with Stunning Fist augmented with Improved Vital Strike, then tries to grapple the stunned foe. Against multiple opponents, she uses flurry of blows to attempt trip and disarm maneuvers, making as many foes prone or weaponless as possible, then strikes when those opponents provoke attacks of opportunity. Against foes too large to grapple or immune to stunning, she uses her <i>ki</i> pool to boost her movement, then Spring Attack with Improved Vital Strike to make hit and run attacks.<br/><b>Base Statistics </b>Without <i>bear\u2019s endurance </i>and <i>bull\u2019s strength</i>, the monk\u2019s statistics are <b>hp </b>112; <b>Fort </b>+14; <b>Melee </b><i>+2 unarmed strike</i> +21/+16/+11 (2d8+2) or mwk cold iron dagger +20/+15/+10 (1d4/19\u201320) or flurry of blows (<i>+2 unarmed strike</i>) +22/+22/+17/+17/+12/+12/+7 (2d8+2); <b>Ranged </b>mwk cold iron dagger +20/+15/+10 (1d4/19\u201320); Str 10, Con 12; CMD 45 (47 vs. trip); <b>Skills </b>Climb +4, Swim +5."
+        },
+        {
+            "name": "Description",
+            "html": "Devoted to the protection of druidic groves or other sacred places of power, grove guardians do anything necessary to protect what they guard."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Grove Guardian",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 24
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "low-light vision"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "elf"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Lawful Neutral",
+            "alignment_text": "LN",
+            "cr": "17",
+            "xp": 102400,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Half-elf"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "monk 18"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 31,
+                "touch": 27,
+                "flat-footed": 24,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 deflection"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 dodge"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+4 monk"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+5 Wis"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 16
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 19
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 18,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+4 vs. enchantments"
+                        }
+                    ]
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "improved evasion"
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "disease"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "poison"
+                }
+            ],
+            "sr": {
+                "type": "stat_block_section",
+                "subtype": "sr",
+                "value": 28
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "90 ft.",
+                        "movement_type": "walk",
+                        "value": 90
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "unarmed strike",
+                    "bonus": [
+                        21,
+                        16,
+                        11
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d8+4"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "mwk cold iron dagger",
+                    "bonus": [
+                        20,
+                        15,
+                        10
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+2"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 2,
+                    "name": "unarmed strike flurry of blows",
+                    "bonus": [
+                        24,
+                        24,
+                        19,
+                        19,
+                        14,
+                        14,
+                        9
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d8+4"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "mwk cold iron dagger",
+                    "bonus": [
+                        20,
+                        15,
+                        10
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+2"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "flurry of blows"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "1/day"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 24"
+                        }
+                    ],
+                    "name": "quivering palm"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "18/day"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 24"
+                        }
+                    ],
+                    "name": "stunning fist"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 13
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+26 grapple"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+28 trip"
+                    }
+                ],
+                "value": 24
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "49 vs. trip"
+                    }
+                ],
+                "value": 47
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of bear\u2019s endurance"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of bull\u2019s strength"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potions of cure moderate wounds",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potions of entropic shield",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "universal solvent",
+                "quantity": 2
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork cold iron dagger"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "amulet of mighty fists +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "belt of incredible dexterity +6"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "bracers of armor +4"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "cloak of resistance +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "headband of inspired wisdom +4"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "ring of protection +1,298 gp"
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 14,
+            "dex": 22,
+            "con": 16,
+            "int": 13,
+            "wis": 20,
+            "cha": 11,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Agile Maneuvers",
+                    "link": {
+                        "type": "link",
+                        "name": "Agile Maneuvers",
+                        "alt": "Agile Maneuvers",
+                        "href": "FeatDisplay.aspx?ItemName=Agile%20Maneuvers"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Expertise",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Expertise",
+                        "alt": "Combat Expertise",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Expertise"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Reflexes",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Reflexes",
+                        "alt": "Combat Reflexes",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Reflexes"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Defensive Combat Training",
+                    "link": {
+                        "type": "link",
+                        "name": "Defensive Combat Training",
+                        "alt": "Defensive Combat Training",
+                        "href": "FeatDisplay.aspx?ItemName=Defensive%20Combat%20Training"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Dodge",
+                    "link": {
+                        "type": "link",
+                        "name": "Dodge",
+                        "alt": "Dodge",
+                        "href": "FeatDisplay.aspx?ItemName=Dodge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Greater Trip",
+                    "link": {
+                        "type": "link",
+                        "name": "Greater Trip",
+                        "alt": "Greater Trip",
+                        "href": "FeatDisplay.aspx?ItemName=Greater%20Trip"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Bull Rush",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Bull Rush",
+                        "alt": "Improved Bull Rush",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Bull%20Rush"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Disarm",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Disarm",
+                        "alt": "Improved Disarm",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Disarm"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Grapple",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Grapple",
+                        "alt": "Improved Grapple",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Grapple"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Trip",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Trip",
+                        "alt": "Improved Trip",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Trip"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Unarmed Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Unarmed Strike",
+                        "alt": "Improved Unarmed Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Unarmed%20Strike"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Vital Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Vital Strike",
+                        "alt": "Improved Vital Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Vital%20Strike"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Acrobatics"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Acrobatics)",
+                        "alt": "Skill Focus (Acrobatics)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Spring Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Spring Attack",
+                        "alt": "Spring Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Spring%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Strike Back",
+                    "link": {
+                        "type": "link",
+                        "name": "Strike Back",
+                        "alt": "Strike Back",
+                        "href": "FeatDisplay.aspx?ItemName=Strike%20Back"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Stunning Fist",
+                    "link": {
+                        "type": "link",
+                        "name": "Stunning Fist",
+                        "alt": "Stunning Fist",
+                        "href": "FeatDisplay.aspx?ItemName=Stunning%20Fist"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Vital Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Vital Strike",
+                        "alt": "Vital Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Vital%20Strike"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Weapon Finesse",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Finesse",
+                        "alt": "Weapon Finesse",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Finesse"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 33,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+75 when jumping"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Bluff",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 4
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Diplomacy",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (history)",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (local)",
+                        "value": 6
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (religion)",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 24
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perform (dance)",
+                        "value": 6
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 26
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 23
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 5
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Elven"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Gnome"
+                    }
+                ],
+                "communication_abilities": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "communication_ability",
+                        "name": "tongue of the sun and moon"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "abundant step"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "diamond body"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "diamond soul"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "elf blood"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "fast movement"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "high jump"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "14 points"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "adamantine"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "lawful"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "magic"
+                        }
+                    ],
+                    "name": "ki pool"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "maneuver training"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "purity of body"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "slow fall 90 ft."
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "timeless body"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "wholeness of body"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 109",
+                "alt": "NPC Codex pg. 109",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 109
+        }
+    ]
+}

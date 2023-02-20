@@ -1,0 +1,810 @@
+{
+    "name": "Death Priest",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The cleric casts <i>bear\u2019s endurance</i>, <i>delay poison</i>, and <i>freedom of movement</i>.<br/><b>During Combat </b>The cleric lets allies or undead minions handle the bulk of the fighting, using <i>bestow curse</i>, <i>contagion</i>, and <i>slay living </i>against individual foes or channeling negative energy against groups or to heal herself and her undead allies.<br/><b>Base Statistics </b>Without <i>bear\u2019s endurance</i>, the cleric\u2019s statistics are hp 71, Fort +9, Con 14."
+        },
+        {
+            "name": "Description",
+            "html": "A death priest serves the goddess of plague and undeath, and seeks to infect, kill, and animate anyone who stands in her way. She might desire to one day become undead, but remains alive for now so she can carry out tasks in places that would never allow the undead."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Death Priest",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 6
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 10
+            }
+        ],
+        "senses": [],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral Evil",
+            "alignment_text": "NE",
+            "cr": "8",
+            "xp": 4800,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Human"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "cleric"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "of"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Urgathoa 9"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 20,
+                "touch": 13,
+                "flat-footed": 18,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+7 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 deflection"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 6
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "dagger",
+                    "bonus": [
+                        5,
+                        0
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4\u20131"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "light crossbow",
+                    "bonus": [
+                        8
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 17"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "5d6"
+                        }
+                    ],
+                    "name": "channel negative energy 4/day"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "7/day"
+                        }
+                    ],
+                    "name": "hand of the acolyte"
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Spell-Like Abilities",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bleeding touch (4 rounds)"
+                                    }
+                                ],
+                                "count_text": "7/day",
+                                "count": 7,
+                                "frequency": "day"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dispelling touch"
+                                    }
+                                ],
+                                "count_text": "1/day",
+                                "count": 1,
+                                "frequency": "day"
+                            }
+                        ],
+                        "caster_level": 9,
+                        "concentration": 13
+                    },
+                    {
+                        "name": "Cleric Spells Prepared",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "slay living",
+                                        "notation": "D ",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 21",
+                                            "dc": 21
+                                        },
+                                        "modifiers": [
+                                            {
+                                                "type": "stat_block_section",
+                                                "subtype": "modifier",
+                                                "name": "2"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "count_text": "5th",
+                                "frequency": "5th"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "death ward",
+                                        "notation": "D"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "freedom of movement"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "poison",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 20",
+                                            "dc": 20
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "spell immunity"
+                                    }
+                                ],
+                                "count_text": "4th",
+                                "frequency": "4th"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bestow curse",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 19",
+                                            "dc": 19
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "contagion",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 19",
+                                            "dc": 19
+                                        },
+                                        "modifiers": [
+                                            {
+                                                "type": "stat_block_section",
+                                                "subtype": "modifier",
+                                                "name": "2"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "dispel magic",
+                                        "notation": "D"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "prayer"
+                                    }
+                                ],
+                                "count_text": "3rd",
+                                "frequency": "3rd"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bear\u2019s endurance"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "darkness"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "death knell",
+                                        "notation": "D ",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 18",
+                                            "dc": 18
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "delay poison",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 16",
+                                            "dc": 16
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "desecrate"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "resist energy",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 16",
+                                            "dc": 16
+                                        }
+                                    }
+                                ],
+                                "count_text": "2nd",
+                                "frequency": "2nd"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bane",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 15",
+                                            "dc": 15
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "cause fear",
+                                        "notation": "D ",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 17",
+                                            "dc": 17
+                                        },
+                                        "modifiers": [
+                                            {
+                                                "type": "stat_block_section",
+                                                "subtype": "modifier",
+                                                "name": "2"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "entropic shield"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "obscuring mist"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "protection from good"
+                                    }
+                                ],
+                                "count_text": "1st",
+                                "frequency": "1st"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bleed",
+                                        "saving_throw": {
+                                            "type": "stat_block_section",
+                                            "subtype": "save_dc",
+                                            "text": "DC 16",
+                                            "dc": 16
+                                        }
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "detect poison"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "light"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "virtue"
+                                    }
+                                ],
+                                "level_text": "0",
+                                "level": 0,
+                                "count_text": "at will",
+                                "frequency": "at will"
+                            }
+                        ],
+                        "caster_level": 9,
+                        "concentration": 13
+                    }
+                ],
+                "notations": [
+                    {
+                        "name": "D",
+                        "type": "stat_block_section",
+                        "subtype": "notation",
+                        "value": "Domain spell"
+                    }
+                ],
+                "class_selections": [
+                    {
+                        "name": "Domains",
+                        "type": "stat_block_section",
+                        "subtype": "class_selection",
+                        "values": [
+                            "Death",
+                            "Magic"
+                        ]
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 6
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 5
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 18
+            }
+        },
+        "gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 chainmail"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "dagger"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "light crossbow",
+                "with": {
+                    "type": "stat_block_section",
+                    "subtype": "item",
+                    "name": "bolts",
+                    "quantity": 20
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "cloak of resistance +1"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "headband of inspired wisdom +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "pearl of power",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "1st"
+                    }
+                ]
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "ring of protection +1"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "bone unholy symbol"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "unholy water"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "onyx gems",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "worth 500 gp"
+                    }
+                ]
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "silver dust for desecrate",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "worth 25 gp"
+                    }
+                ]
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 162
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 8,
+            "dex": 15,
+            "con": 18,
+            "int": 10,
+            "wis": 19,
+            "cha": 12,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Combat Casting",
+                    "link": {
+                        "type": "link",
+                        "name": "Combat Casting",
+                        "alt": "Combat Casting",
+                        "href": "FeatDisplay.aspx?ItemName=Combat%20Casting"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Command Undead",
+                    "link": {
+                        "type": "link",
+                        "name": "Command Undead",
+                        "alt": "Command Undead",
+                        "href": "FeatDisplay.aspx?ItemName=Command%20Undead"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "necromancy"
+                        }
+                    ],
+                    "name": "Greater Spell Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Greater Spell Focus (necromancy)",
+                        "alt": "Greater Spell Focus (necromancy)",
+                        "href": "FeatDisplay.aspx?ItemName=Greater%20Spell%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Channel",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Channel",
+                        "alt": "Improved Channel",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Channel"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "necromancy"
+                        }
+                    ],
+                    "name": "Spell Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Spell Focus (necromancy)",
+                        "alt": "Spell Focus (necromancy)",
+                        "href": "FeatDisplay.aspx?ItemName=Spell%20Focus"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Craft (alchemy)",
+                        "value": 6
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Heal",
+                        "value": 10
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (religion)",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 10
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "aura"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "death\u2019s embrace"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 50",
+                "alt": "NPC Codex pg. 50",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 50
+        }
+    ]
+}

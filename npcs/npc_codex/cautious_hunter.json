@@ -1,0 +1,668 @@
+{
+    "name": "Cautious Hunter",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The monk drinks <i>potions of barkskin </i>and <i>see invisibility </i>and ambushes foes whenever possible.<br/><b>During Combat </b>The monk charges, using Vital Strike in conjunction with Stunning Fist. Against stunned opponents, she employs her falchion and Power Attack. If surrounded or adjacent to a particularly powerful combatant, she uses Improved Bull Rush and then Lunge, pushing her enemies away and then forcing them to close again.<br/><b>Base Statistics </b>Without <i>barkskin </i>and <i>see invisibility</i>, the monk\u2019s statistics are <b>Senses </b>no <i>see invisibility</i>; <b>AC </b>19, touch 17, flat-footed 17."
+        },
+        {
+            "name": "Description",
+            "html": "These monks often serve as enforcers and bounty hunters for monastic orders or lawful lords, tracking down those in need of punishment."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Cautious Hunter",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 12
+            }
+        ],
+        "senses": [
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "darkvision 60 ft."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "sense",
+                "name": "see invisibility"
+            }
+        ],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "orc"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Lawful Evil",
+            "alignment_text": "LE",
+            "cr": "9",
+            "xp": 6400,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Half-orc"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "monk 10"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 21,
+                "touch": 17,
+                "flat-footed": 19,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 dodge"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 monk"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+2 natural"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 Wis"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 8
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 10,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+2 vs. enchantments"
+                        }
+                    ]
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "improved evasion"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "orc ferocity"
+                }
+            ],
+            "immunities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "immunity",
+                    "name": "disease"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "60 ft.",
+                        "movement_type": "walk",
+                        "value": 60
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "unarmed strike",
+                    "bonus": [
+                        11,
+                        6
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d10+4"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "mwk falchion",
+                    "bonus": [
+                        12,
+                        7
+                    ],
+                    "critical_range": "18\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "2d4+6"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "unarmed strike flurry of blows",
+                    "bonus": [
+                        12,
+                        12,
+                        7,
+                        7
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d10+4"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "heavy crossbow",
+                    "bonus": [
+                        8
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d10"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "name": "flurry of blows"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "10/day"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "DC 18"
+                        }
+                    ],
+                    "name": "stunning fist"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 7
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+17 bull rush"
+                    }
+                ],
+                "value": 14
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "30 vs. bull rush"
+                    }
+                ],
+                "value": 28
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potions of barkskin",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potions of cure moderate wounds",
+                "quantity": 2
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of see invisibility"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "heavy crossbow",
+                "with": {
+                    "type": "stat_block_section",
+                    "subtype": "item",
+                    "name": "bolts",
+                    "quantity": 20
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork falchion"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "belt of giant strength +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "bracers of armor +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "cloak of elvenkind"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork manacles"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 195
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 18,
+            "dex": 12,
+            "con": 14,
+            "int": 10,
+            "wis": 16,
+            "cha": 8,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Dodge",
+                    "link": {
+                        "type": "link",
+                        "name": "Dodge",
+                        "alt": "Dodge",
+                        "href": "FeatDisplay.aspx?ItemName=Dodge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Extra Ki",
+                    "link": {
+                        "type": "link",
+                        "name": "Extra Ki",
+                        "alt": "Extra Ki",
+                        "href": "FeatDisplay.aspx?ItemName=Extra%20Ki"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Bull Rush",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Bull Rush",
+                        "alt": "Improved Bull Rush",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Bull%20Rush"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Initiative",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Initiative",
+                        "alt": "Improved Initiative",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Initiative"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Improved Unarmed Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Unarmed Strike",
+                        "alt": "Improved Unarmed Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Unarmed%20Strike"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Lunge",
+                    "link": {
+                        "type": "link",
+                        "name": "Lunge",
+                        "alt": "Lunge",
+                        "href": "FeatDisplay.aspx?ItemName=Lunge"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Medusa\u2019s Wrath"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Power Attack",
+                    "link": {
+                        "type": "link",
+                        "name": "Power Attack",
+                        "alt": "Power Attack",
+                        "href": "FeatDisplay.aspx?ItemName=Power%20Attack"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Scorpion Style",
+                    "link": {
+                        "type": "link",
+                        "name": "Scorpion Style",
+                        "alt": "Scorpion Style",
+                        "href": "FeatDisplay.aspx?ItemName=Scorpion%20Style"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Stunning Fist",
+                    "link": {
+                        "type": "link",
+                        "name": "Stunning Fist",
+                        "alt": "Stunning Fist",
+                        "href": "FeatDisplay.aspx?ItemName=Stunning%20Fist"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Vital Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Vital Strike",
+                        "alt": "Vital Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Vital%20Strike"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 6,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+28 when jumping"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Intimidate",
+                        "value": 9
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Knowledge (history)",
+                        "value": 4
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 12
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Sense Motive",
+                        "value": 16
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Stealth",
+                        "value": 19
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 8
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Swim",
+                        "value": 8
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Orc"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "fast movement"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "high jump"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "10 points"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "lawful"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "magic"
+                        }
+                    ],
+                    "name": "ki pool"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "maneuver training"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "orc blood"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "purity of body"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "slow fall 50 ft."
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "weapon familiarity"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "wholeness of body"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 101",
+                "alt": "NPC Codex pg. 101",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 101
+        }
+    ]
+}

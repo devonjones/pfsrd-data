@@ -1,0 +1,415 @@
+{
+    "name": "Acolyte",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>During Combat </b>The adept reads her <i>scroll of sleep </i>and commands her dog to attack. She then casts <i>bless </i>and attacks with her morningstar."
+        },
+        {
+            "name": "Description",
+            "html": "An acolyte has just begun to unravel the mysteries of her faith, and lacks the fervent zeal that more indoctrinated members of her religion have. She is eager to learn, but her incomplete teachings mean she is more easily swayed by contrary rhetoric.<br/><br/>Settlements that have adepts rather than clerics are often primitive or remote. Their religious practices may be a strange or heretical offshoot of a main religion, weaker than the common form but giving access to spells that are normally unavailable to true clerics (such as <i>minor creation </i>and <i>sleep</i>). A person trained by a cleric who instead manifests adept abilities may be cast out as a blasphemer or witch."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Acolyte",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 1
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 1
+            }
+        ],
+        "senses": [],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "human"
+                }
+            ],
+            "size": "Medium",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "1/3",
+            "xp": 135,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Human"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "adept 1"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 14,
+                "touch": 11,
+                "flat-footed": 13,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+3 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 Dex"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": -1
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 1
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 3
+                }
+            }
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "30 ft.",
+                        "movement_type": "walk",
+                        "value": 30
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "morningstar",
+                    "bonus": [
+                        0
+                    ],
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d8"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "silver dagger",
+                    "bonus": [
+                        0
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "name": "silver dagger",
+                    "bonus": [
+                        1
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4"
+                        }
+                    ]
+                }
+            ],
+            "magic": {
+                "name": "Magic",
+                "type": "stat_block_section",
+                "subtype": "magic",
+                "spells": [
+                    {
+                        "name": "Adept Spells Prepared",
+                        "type": "stat_block_section",
+                        "subtype": "spells",
+                        "spell_list": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "bless"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "cure light wounds"
+                                    }
+                                ],
+                                "count_text": "1st",
+                                "frequency": "1st"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "spell_list",
+                                "spells": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "guidance"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "light"
+                                    },
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "spell",
+                                        "name": "mending"
+                                    }
+                                ],
+                                "level_text": "0",
+                                "level": 0,
+                                "count_text": "at will",
+                                "frequency": "at will"
+                            }
+                        ],
+                        "caster_level": 1,
+                        "concentration": 2
+                    }
+                ]
+            },
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 0
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 0
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 11
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of cure light wounds"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "scroll of sleep"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "alchemist\u2019s fire"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "studded leather"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "morningstar"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "silver dagger"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "guard dog"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "healer\u2019s kit"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "silver holy symbol"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "smokestick"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "spell component pouch"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "tindertwig"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 9
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 10,
+            "dex": 12,
+            "con": 8,
+            "int": 9,
+            "wis": 13,
+            "cha": 10,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Handle Animal"
+                        }
+                    ],
+                    "name": "Skill Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Skill Focus (Handle Animal)",
+                        "alt": "Skill Focus (Handle Animal)",
+                        "href": "FeatDisplay.aspx?ItemName=Skill%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Toughness",
+                    "link": {
+                        "type": "link",
+                        "name": "Toughness",
+                        "alt": "Toughness",
+                        "href": "FeatDisplay.aspx?ItemName=Toughness"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Handle Animal",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Heal",
+                        "value": 7
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Spellcraft",
+                        "value": 3
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    }
+                ]
+            }
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 244",
+                "alt": "NPC Codex pg. 244",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 244
+        }
+    ]
+}

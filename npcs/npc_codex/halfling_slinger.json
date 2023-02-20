@@ -1,0 +1,568 @@
+{
+    "name": "Halfling Slinger",
+    "type": "npc",
+    "sections": [
+        {
+            "name": "Tactics",
+            "type": "section",
+            "html": "<b>Before Combat </b>The fighter drinks his <i>potions of bull's strength </i>and <i>heroism</i>.<br/><b>During Combat </b>If fighting elves, the fighter stays back from the fight, wielding his sling staff until he's out of <i>elf-bane </i>bullets. Otherwise, he rides into the fray, bashing foes and hurling bulletswith his sling staff while using Deadly Aim and Vital Strike.<br/><b>Base Statistics</b> Without <i>bull's strength </i>and <i>heroism</i>, the fighter's statistics are <b>Senses </b>Perception +3; <b>Fort </b>+9, <b>Ref </b>+9, <b>Will </b>+7; <b>Melee </b><i>+1 halfling sling staff </i>+14/+9 (1d4+6/19\u201320) or short sword +12/+7 (1d4+2/19\u201320); <b>Ranged </b><i>+1 halfling sling staff</i> +20 (1d6+6/19\u201320/\u00d73); <b>Str </b>12; <b>CMB </b>+9; <b>CMD </b>24; <b>Skills </b>Acrobatics +5 (+1 when jumping), Climb +1, Perception +3, Ride +15, Survival +13."
+        },
+        {
+            "name": "Description",
+            "html": "Halfling slingers often patrol the areas surrounding halfling settlements. Sometimes they hire themselves out as scouts and skirmishers."
+        }
+    ],
+    "game-obj": "NPCs",
+    "stat_block": {
+        "name": "Halfling Slinger",
+        "type": "stat_block",
+        "initiative": {
+            "type": "stat_block_section",
+            "subtype": "initiative",
+            "value": 5
+        },
+        "perception": [
+            {
+                "type": "stat_block_section",
+                "subtype": "perception",
+                "value": 5
+            }
+        ],
+        "senses": [],
+        "creature_type": {
+            "type": "stat_block_section",
+            "subtype": "creature_type",
+            "creature_type": "Humanoid",
+            "creature_subtypes": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "creature_subtype",
+                    "name": "halfling"
+                }
+            ],
+            "size": "Small",
+            "alignment": "Neutral",
+            "alignment_text": "N",
+            "cr": "8",
+            "xp": 4800,
+            "grafts": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "Halfling"
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "graft",
+                    "name": "fighter 9"
+                }
+            ]
+        },
+        "defense": {
+            "name": "Defense",
+            "type": "stat_block_section",
+            "subtype": "defense",
+            "ac": {
+                "name": "AC",
+                "type": "stat_block_section",
+                "subtype": "armor_class",
+                "ac": 22,
+                "touch": 16,
+                "flat-footed": 17,
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+6 armor"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+5 Dex"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "+1 size"
+                    }
+                ]
+            },
+            "saves": {
+                "type": "stat_block_section",
+                "subtype": "saves",
+                "fort": {
+                    "name": "Fort",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                },
+                "ref": {
+                    "name": "Ref",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 11
+                },
+                "will": {
+                    "name": "Will",
+                    "type": "stat_block_section",
+                    "subtype": "save",
+                    "value": 9,
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "+4 vs. fear"
+                        }
+                    ]
+                }
+            },
+            "defensive_abilities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "defensive_ability",
+                    "name": "bravery +2"
+                }
+            ]
+        },
+        "offense": {
+            "name": "Offense",
+            "type": "stat_block_section",
+            "subtype": "offense",
+            "speed": {
+                "name": "Speed",
+                "type": "stat_block_section",
+                "subtype": "speeds",
+                "movement": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "speed",
+                        "name": "20 ft.",
+                        "movement_type": "walk",
+                        "value": 20
+                    }
+                ]
+            },
+            "melee": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "count": 1,
+                    "name": "halfling sling staff",
+                    "bonus": [
+                        18,
+                        13
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+9"
+                        }
+                    ]
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "melee",
+                    "name": "short sword",
+                    "bonus": [
+                        14,
+                        9
+                    ],
+                    "critical_range": "19\u201320",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d4+4"
+                        }
+                    ]
+                }
+            ],
+            "ranged": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "attack",
+                    "attack_type": "ranged",
+                    "count": 1,
+                    "name": "halfling sling staff",
+                    "bonus": [
+                        22
+                    ],
+                    "critical_range": "19\u201320/\u00d73",
+                    "damage": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack_damage",
+                            "formula": "1d6+8"
+                        }
+                    ]
+                }
+            ],
+            "special_attacks": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_attack",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "thrown +2"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "light blades +1"
+                        }
+                    ],
+                    "name": "weapon training"
+                }
+            ],
+            "bab": {
+                "type": "stat_block_section",
+                "subtype": "bab",
+                "value": 9
+            },
+            "cmb": {
+                "type": "stat_block_section",
+                "subtype": "cmb",
+                "value": 13
+            },
+            "cmd": {
+                "type": "stat_block_section",
+                "subtype": "cmd",
+                "value": 26
+            }
+        },
+        "combat_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 elf-bane bullets",
+                "quantity": 5
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of bull\u2019s strength"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of cure moderate wounds"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of heroism"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "potion of invisibility"
+            }
+        ],
+        "other_gear": [
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "breastplate"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "+1 halfling sling staff",
+                "with": {
+                    "type": "stat_block_section",
+                    "subtype": "item",
+                    "name": "bullets",
+                    "quantity": 20
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "short sword"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "belt of incredible dexterity +2"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "brooch of shielding",
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "35 points of damage remaining"
+                    }
+                ]
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "bit and bridle"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "masterwork studded leather barding"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "military saddle"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "riding dog"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "saddlebags"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "item",
+                "name": "gp",
+                "quantity": 161
+            }
+        ],
+        "statistics": {
+            "type": "stat_block_section",
+            "subtype": "statistics",
+            "str": 16,
+            "dex": 20,
+            "con": 14,
+            "int": 8,
+            "wis": 12,
+            "cha": 12,
+            "feats": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Deadly Aim",
+                    "link": {
+                        "type": "link",
+                        "name": "Deadly Aim",
+                        "alt": "Deadly Aim",
+                        "href": "FeatDisplay.aspx?ItemName=Deadly%20Aim"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "halfling sling staff"
+                        }
+                    ],
+                    "name": "Greater Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Greater Weapon Focus (halfling sling staff)",
+                        "alt": "Greater Weapon Focus (halfling sling staff)",
+                        "href": "FeatDisplay.aspx?ItemName=Greater%20Weapon%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "halfling sling staff"
+                        }
+                    ],
+                    "name": "Improved Critical",
+                    "link": {
+                        "type": "link",
+                        "name": "Improved Critical (halfling sling staff)",
+                        "alt": "Improved Critical (halfling sling staff)",
+                        "href": "FeatDisplay.aspx?ItemName=Improved%20Critical"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Iron Will",
+                    "link": {
+                        "type": "link",
+                        "name": "Iron Will",
+                        "alt": "Iron Will",
+                        "href": "FeatDisplay.aspx?ItemName=Iron%20Will"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Mounted Combat",
+                    "link": {
+                        "type": "link",
+                        "name": "Mounted Combat",
+                        "alt": "Mounted Combat",
+                        "href": "FeatDisplay.aspx?ItemName=Mounted%20Combat"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Point-Blank Shot",
+                    "link": {
+                        "type": "link",
+                        "name": "Point-Blank Shot",
+                        "alt": "Point-Blank Shot",
+                        "href": "FeatDisplay.aspx?ItemName=Point-Blank%20Shot"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Precise Shot",
+                    "link": {
+                        "type": "link",
+                        "name": "Precise Shot",
+                        "alt": "Precise Shot",
+                        "href": "FeatDisplay.aspx?ItemName=Precise%20Shot"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "name": "Vital Strike",
+                    "link": {
+                        "type": "link",
+                        "name": "Vital Strike",
+                        "alt": "Vital Strike",
+                        "href": "FeatDisplay.aspx?ItemName=Vital%20Strike"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "halfling sling staff"
+                        }
+                    ],
+                    "name": "Weapon Focus",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Focus (halfling sling staff)",
+                        "alt": "Weapon Focus (halfling sling staff)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Focus"
+                    }
+                },
+                {
+                    "type": "stat_block_section",
+                    "subtype": "feat",
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "halfling sling staff"
+                        }
+                    ],
+                    "name": "Weapon Specialization",
+                    "link": {
+                        "type": "link",
+                        "name": "Weapon Specialization (halfling sling staff)",
+                        "alt": "Weapon Specialization (halfling sling staff)",
+                        "href": "FeatDisplay.aspx?ItemName=Weapon%20Specialization"
+                    }
+                }
+            ],
+            "skills": {
+                "type": "stat_block_section",
+                "subtype": "skills",
+                "skills": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Acrobatics",
+                        "value": 7,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+3 when jumping"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Climb",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Perception",
+                        "value": 5
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Ride",
+                        "value": 17
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "skill",
+                        "name": "Survival",
+                        "value": 15
+                    }
+                ]
+            },
+            "languages": {
+                "type": "stat_block_section",
+                "subtype": "languages",
+                "languages": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Common"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "language",
+                        "name": "Halfling"
+                    }
+                ]
+            },
+            "special_qualities": [
+                {
+                    "type": "stat_block_section",
+                    "subtype": "special_quality",
+                    "name": "armor training 2"
+                }
+            ]
+        }
+    },
+    "sources": [
+        {
+            "type": "source",
+            "name": "NPC Codex",
+            "link": {
+                "type": "link",
+                "name": "NPC Codex pg. 84",
+                "alt": "NPC Codex pg. 84",
+                "href": "http://paizo.com/products/btpy8v3a?Pathfinder-Roleplaying-Game-NPC-Codex%0A"
+            },
+            "page": 84
+        }
+    ]
+}
