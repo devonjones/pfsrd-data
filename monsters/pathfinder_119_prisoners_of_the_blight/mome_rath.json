@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests (First World)<br/><b>Organization</b> solitary or pair<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Claws\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 3 rounds; <i>effect </i>sickened for 1d4 rounds; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Mome raths are a variety of rath that sniff through the forests of the First World, digging up roots and hiding from large predators with a variety of cunning camouflage techniques. When spotted, they are easily identified by their powerful, hunched backs and stout claws. Mature specimens cultivate a garden of moss, algae, and other plants on their backs to retain water, ward off parasites, and help them blend in to their environment, giving them a mottled green coloration. All raths defend themselves with powerful kicks and spurs on their hind legs that are coated with burning venom.<br/><br/> Some Garundi scholars believe mome raths to be distant relatives of the pangolin\u2014if only for their similar body structure. While a variety of raths have adapted to the First World\u2019s strange climates, the mome rath is the most common, climbing through trees to graze on leaves and fruit and raid the occasional bird or snark nest. A healthy mome rath is up to 6 feet long including its muscular tail, and weighs around 100 pounds."
@@ -261,7 +251,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests (First World)",
+            "organization": "solitary or pair",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Claws\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 3 rounds; <i>effect </i>sickened for 1d4 rounds; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Claws\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 3 rounds",
+                    "effect": "sickened for 1d4 rounds",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

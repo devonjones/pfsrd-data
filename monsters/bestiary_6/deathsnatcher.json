@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm deserts or mountains<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Su)</b> Sting\u2014injury; <i>save</i> Fort DC 28, <i>frequency</i> 1/round for 6 rounds, <i>effect</i> 1d4 Con drain, <i>cure</i> 2 consecutive saves. <br/><br/><b>Soul Rend (Su)</b> If a deathsnatcher hits a single creature with two or more claw attacks in 1 round, it deals an additional 1d8+13 points of damage to the creature. For every claw attack that hits beyond the first, the soul rend inflicts 1 negative level. The deathsnatcher regains 5 hit points per negative level inflicted. After 24 hours have passed, a negative level can be removed with a successful DC 26 Fortitude save. <br/><br/><b>Swift Spawning (Su)</b> When a deathsnatcher kills via negative levels, negative energy damage, or a death effect, the body immediately rises as an advanced bodak (<i>Pathfinder RPG Bestiary 2</i> 292, 48) under the deathsnatcher\u2019s control."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Deathsnatchers dwell amid the ruins of fallen civilizations, where they play at being godlings worshiped by undead slaves. Though self-aggrandizing, deathsnatchers are known to give homage to (and claim descent from) the various demon lords of darkness, the desert, and undeath. <br/><br/>A deathsnatcher is 6 feet tall and weighs 280 pounds."
@@ -572,7 +562,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm deserts or mountains",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Sting\u2014injury; <i>save</i> Fort DC 28, <i>frequency</i> 1/round for 6 rounds, <i>effect</i> 1d4 Con drain, <i>cure</i> 2 consecutive saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 28",
+                        "save_type": "Fort",
+                        "dc": 28
+                    },
+                    "frequency": "1/round for 6 rounds,",
+                    "effect": "1d4 Con drain,",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Soul Rend",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "If a deathsnatcher hits a single creature with two or more claw attacks in 1 round, it deals an additional 1d8+13 points of damage to the creature. For every claw attack that hits beyond the first, the soul rend inflicts 1 negative level. The deathsnatcher regains 5 hit points per negative level inflicted. After 24 hours have passed, a negative level can be removed with a successful DC 26 Fortitude save. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Swift Spawning",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "When a deathsnatcher kills via negative levels, negative energy damage, or a death effect, the body immediately rises as an advanced bodak (<i>Pathfinder RPG Bestiary 2</i> 292, 48) under the deathsnatcher\u2019s control."
+            }
+        ]
     },
     "sources": [
         {

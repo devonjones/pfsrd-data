@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm deserts and hills<br/><b>Organization</b> solitary, pair, nest (1\u20132 plus 2\u20134 young), colony (4\u20136 plus 6\u20138 young)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Curative Skin (Su)</b> A nehushtan\u2019s bronze scales repel disease and poison. A nehushtan can treat diseases and poisons (as per the Heal skill) without attempting Heal checks merely by remaining in continuous physical contact with the creature to be treated for 10 minutes. Additionally, a creature that takes a nehushtan as a familiar gains a +2 bonus on saving throws against disease or poison so long as the nehushtan remains within 1 mile of its master.<br/><br/> A creature with at least 1 rank in Heal can use skin shed by a nehushtan to craft a draught that, when consumed, functions as either a <i>potion of remove disease</i> or a <i>potion of neutralize poison</i>, as chosen by the crafter. A nehushtan sheds enough skin to craft a single draught every 3 months, and crafting this draught takes 10 minutes.<br/><br/><b>Poison (Ex)</b> Injury\u2014bite; <i>save</i> Fort DC 12; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 fire damage; <i>cure</i> 1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "In many of Golarion\u2019s cultures, serpents symbolize wisdom, medicine, and the healing arts. This association may have its roots in nehushtans, a rare breed of bronze-colored serpents prized and venerated for their miraculous curative powers. Nehushtans\u2019 lustrous scales contain potent curative properties, making the snakes\u2019 shed skin extremely valuable to healers and apothecaries. In regions where nehushtans live, desperately sick or poor people sometimes turn to scavenging the hills, hoping to find the discarded, metallic skins in order to either use them or sell them.<br/><br/>Were it not for their peculiarly metallic scales, nehushtans would be virtually indistinguishable from vipers of comparable size. A nehushtan\u2019s body is 4 to 5 feet long, and it weighs 5 to 7 pounds."
@@ -396,7 +386,49 @@
                     "name": "curative skin"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm deserts and hills",
+            "organization": "solitary, pair, nest (1\u20132 plus 2\u20134 young), colony (4\u20136 plus 6\u20138 young)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Curative Skin",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A nehushtan\u2019s bronze scales repel disease and poison. A nehushtan can treat diseases and poisons (as per the Heal skill) without attempting Heal checks merely by remaining in continuous physical contact with the creature to be treated for 10 minutes. Additionally, a creature that takes a nehushtan as a familiar gains a +2 bonus on saving throws against disease or poison so long as the nehushtan remains within 1 mile of its master.<br/><br/> A creature with at least 1 rank in Heal can use skin shed by a nehushtan to craft a draught that, when consumed, functions as either a <i>potion of remove disease</i> or a <i>potion of neutralize poison</i>, as chosen by the crafter. A nehushtan sheds enough skin to craft a single draught every 3 months, and crafting this draught takes 10 minutes."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Injury\u2014bite; <i>save</i> Fort DC 12; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 fire damage; <i>cure</i> 1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Injury\u2014bite",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 fire damage",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

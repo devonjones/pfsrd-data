@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any temperate and warm<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 9; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Vipers are not particularly aggressive snakes, but their poisonous bite can be deadly."
@@ -257,7 +247,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any temperate and warm",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 9; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 9",
+                        "save_type": "Fort",
+                        "dc": 9
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Con",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

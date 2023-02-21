@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate coastlines or oceans<br/><b>Organization</b> solitary, pair, or graveyard (3\u201312)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Anchored (Ex)</b> As a full-round action, a coffin anemone can affix itself to a solid surface. While anchored, it cannot move and gains a +4 bonus to its CMD against bull rush, drag, overrun, and reposition combat maneuvers. This bonus increases by 4 for each size category larger the sea anemone is compared to the opponent. It can unanchor as a full-round action. <br/><br/><b>Poison (Ex)</b> Tentacle\u2014injury; <i>save</i> Fort DC 12; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d2 Str damage; <i>cure</i> 1 save. <br/><br/><b>Sightless (Ex)</b> A coffin anemone is blind and thus unaffected by effects that rely on sight, such as blindness or gaze attacks."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Named for its distinctive oblong shape, the coffin anemone is well-suited to swallow its favored prey: swimming humanoid creatures."
@@ -215,7 +205,57 @@
                     "name": "sightless"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate coastlines or oceans",
+            "organization": "solitary, pair, or graveyard (3\u201312)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Anchored",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a full-round action, a coffin anemone can affix itself to a solid surface. While anchored, it cannot move and gains a +4 bonus to its CMD against bull rush, drag, overrun, and reposition combat maneuvers. This bonus increases by 4 for each size category larger the sea anemone is compared to the opponent. It can unanchor as a full-round action. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tentacle\u2014injury; <i>save</i> Fort DC 12; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d2 Str damage; <i>cure</i> 1 save. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tentacle\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Str damage",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sightless",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A coffin anemone is blind and thus unaffected by effects that rely on sight, such as blindness or gaze attacks."
+            }
+        ]
     },
     "sources": [
         {

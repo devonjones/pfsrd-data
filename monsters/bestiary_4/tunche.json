@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm forests<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Feather Step (Su)</b> A tunche in a forest ignores the adverse movement effects of difficult terrain, and can even take 5-foot steps in difficult terrain.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 29; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con and 1d4 Wis plus nauseated for 1 round; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A tunche is a bizarre forest creature with twisted feline legs, a dense body resembling jungle undergrowth, clawed arms like those of a praying mantis, and a head resembling a cross between a monstrous spider\u2019s head and a jungle orchid. Although it has plant and animal features, a tunche is neither plant nor animal and is immune to effects that specifically target such creatures. Considering itself the ultimate protector of the jungle, a tunche prowls its domain in search of any who might despoil this vibrant and lush environment. If a tunche encounters travelers who treat the jungle with proper respect, it might simply observe them or demand an offering in exchange for allowing them to pass through its territory.<br/><br/>A tunche especially enjoys toying with its victims, using its magic to confuse and mislead its opponents. A tunche rarely kills a foe without toying with it first, unless the target is actively harming plants or animals.<br/><br/>A tunche stands 20 feet tall and weighs 4,000 pounds."
@@ -741,7 +731,49 @@
                     "name": "sound mimicry"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm forests",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Feather Step",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A tunche in a forest ignores the adverse movement effects of difficult terrain, and can even take 5-foot steps in difficult terrain."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 29; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con and 1d4 Wis plus nauseated for 1 round; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 29",
+                        "save_type": "Fort",
+                        "dc": 29
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con and 1d4 Wis plus nauseated for 1 round",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

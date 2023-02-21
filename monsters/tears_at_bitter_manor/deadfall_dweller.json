@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests and swamps<br/><b>Organization</b> solitary, brood (2\u20135), or ruin (6\u201312)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Implant (Ex)</b> A deadfall dweller can inject 1d3 larvae into a helpless creature as a full-round action. Excretions from these larvae have a paralyzing effect, leaving the host helpless until the larvae mature into young deadfall dwellers that erupt from the host\u2019s body, killing it. Each day, an impregnated host must attempt a DC 16 Fortitude save. If the host succeeds at the saving throw, it is no longer helpless, but is still impregnated. If it fails, it takes 1 point of Constitution drain and remains helpless for another day. All of the larvae in an impregnated creature can be destroyed with a <i>remove disease </i>spell. Alternatively, a creature can take 10 minutes to attempt a DC 20 Heal check to remove a single larva. This check can be attempted multiple times, but each attempt deals 1d6 points of damage to the host. The save DC is Constitution-based.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 16; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Dexterity damage; <i>cure </i>1 save.<br/><br/><b>Spittle (Ex)</b> As a swift action, a deadfall dweller can emit a stream of corrosive spittle at one target within 30 feet. On a successful attack, the target takes 1d6 points of acid damage, and must save to avoid being entrapped by the solidifying mucus."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Deadfall dwellers are dangerous ambush predators most commonly encountered in the old forests and forgotten marshes of eastern Avistan. They make their homes among fallen stands of trees, where they take advantage of a unique form of camouflage. Hungry deadfall dwellers fold their many sticklike legs under themselves, collapsing against large tree trunks or simply lying on the ground. When a warm-blooded creature happens by, a deadfall dweller straightens its legs to pursue, and bellows out a spray of acidic mucus that paralyzes the victim in its tracks. The beast then advances to attack with its poisonous bite and sharp, scraping appendages.<br/><br/>Deadfall dwellers reproduce by immobilizing prey with repeated applications of acidic spray, then implanting a clutch of eggs within the paralyzed host. The larval dwellers keep their host immobilized while they absorb moisture from its body. After the dwellers grow in size, they emerge from the husk of their host, whose flesh by that point resembles the shriveled bark of a dead tree.<br/><br/>Most deadfall dwellers have a mottled green-brown carapace, the better to fit into their typical surroundings. A few have been reported in colder climates, with whitegray exoskeletons and freezing spittle. An average deadfall dweller stretches 11 feet long, stands 6 feet tall, and weighs 600 pounds."
@@ -389,7 +379,57 @@
                     "name": "freeze"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests and swamps",
+            "organization": "solitary, brood (2\u20135), or ruin (6\u201312)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Implant",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A deadfall dweller can inject 1d3 larvae into a helpless creature as a full-round action. Excretions from these larvae have a paralyzing effect, leaving the host helpless until the larvae mature into young deadfall dwellers that erupt from the host\u2019s body, killing it. Each day, an impregnated host must attempt a DC 16 Fortitude save. If the host succeeds at the saving throw, it is no longer helpless, but is still impregnated. If it fails, it takes 1 point of Constitution drain and remains helpless for another day. All of the larvae in an impregnated creature can be destroyed with a <i>remove disease </i>spell. Alternatively, a creature can take 10 minutes to attempt a DC 20 Heal check to remove a single larva. This check can be attempted multiple times, but each attempt deals 1d6 points of damage to the host. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 16; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Dexterity damage; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 16",
+                        "save_type": "Fort",
+                        "dc": 16
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Dexterity damage",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spittle",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a swift action, a deadfall dweller can emit a stream of corrosive spittle at one target within 30 feet. On a successful attack, the target takes 1d6 points of acid damage, and must save to avoid being entrapped by the solidifying mucus."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any oceans<br/><b>Organization</b> solitary, pair, or school (3-6)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Gulp (Ex)</b> A stargazer can open its giant mouth in a fraction of a second, creating a vortex that draws a target into its maw. When underwater, a stargazer gains 5 additional feet of reach with its bite attack and a +2 bonus on combat maneuver checks to grapple. <br/><br/><b>Poison (Ex)</b> Venomous spines\u2014injury; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> sickened for 1d4 rounds; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based. <br/><br/><b>Shock (Ex)</b> A stargazer delivers an electrical shock with each successful bite attack, dealing an additional 1d6 points of electricity damage. <br/><br/><b>Venomous Spines (Ex)</b> A stargazer has two large venomous spines situated behind its head. The stargazer reacts swiftly to attacks, stabbing at any creature that attempts to harm it. Each time a creature attacks a stargazer with a natural weapon, unarmed strike, or weapon attack that doesn't have reach, it must succeed at a DC 16 Reflex save or be hit by one of these spines. Each time a creature is hit by a spine, it takes 1d4 points of piercing damage and is exposed to the stargazer's poison. A creature that grapples a stargazer is automatically hit by these spines. The save DC to avoid the spines is Dexterity-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A giant stargazer is an ambush predator with a speckled, flattened body that hunts by burying itself in the sand, leaving just its eyes and mouth uncovered. A typical giant stargazer is 6 feet long and weighs 250 pounds."
@@ -339,7 +329,65 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any oceans",
+            "organization": "solitary, pair, or school (3-6)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Gulp",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A stargazer can open its giant mouth in a fraction of a second, creating a vortex that draws a target into its maw. When underwater, a stargazer gains 5 additional feet of reach with its bite attack and a +2 bonus on combat maneuver checks to grapple. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Venomous spines\u2014injury; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> sickened for 1d4 rounds; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Venomous spines\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "sickened for 1d4 rounds",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Shock",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A stargazer delivers an electrical shock with each successful bite attack, dealing an additional 1d6 points of electricity damage. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Venomous Spines",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A stargazer has two large venomous spines situated behind its head. The stargazer reacts swiftly to attacks, stabbing at any creature that attempts to harm it. Each time a creature attacks a stargazer with a natural weapon, unarmed strike, or weapon attack that doesn't have reach, it must succeed at a DC 16 Reflex save or be hit by one of these spines. Each time a creature is hit by a spine, it takes 1d4 points of piercing damage and is exposed to the stargazer's poison. A creature that grapples a stargazer is automatically hit by these spines. The save DC to avoid the spines is Dexterity-based."
+            }
+        ]
     },
     "sources": [
         {

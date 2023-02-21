@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm jungles<br/><b>Organization</b> solitary, pair, or rampage (3\u20138)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Sting\u2014injury; <i>save </i>Fort DC 17; <i>frequency</i> 1/round for 6 rounds; <i>effect </i>1d2 Dexterity and Strength damage; <i>cure </i>1 save.<br/><br/><b>Predatory Grab (Ex)</b> A jungle drake moves at full speed when it chooses the move option after maintaining a grapple, though it can\u2019t carry the grappled creature aloft. A jungle drake can spend a use of its speed surge to move a grappled creature in this way without requiring a check to maintain the grapple.<br/><br/><b>Speed Surge (Ex)</b> Three times per day as a swift action, a jungle drake can draw on its draconic heritage for a boost of strength and speed that allows it to take an additional move action that round.<br/><br/><b>Woodland Stride (Ex)</b> A jungle drake can move through any sort of foliage at full speed without taking damage or suffering impairment. Areas of foliage that have been magically manipulated affect it normally."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Jungle drakes are tenacious predators, ruthlessly adapted to the environment they call home. The tails of these drakes inject a virulent toxin, capable of debilitating the most stubborn of foes.<br/><br/>Jungle drakes typically travel in rampages of three or more, stalking animals or humanoids without remorse. Able to travel through forested terrain with ease, jungle drakes prefer to make several hit-and-run attacks, using their stingers to inject their prey with poison. After the venom has time to set in, the drake reemerges from the jungle, snatching the weakest target in its jaws before retreating back into the woods with its new meal. When the prey of a jungle drake appears too well armed or prepared to assault foes head-on, the drake stalks them, letting the natural hazards of the jungle wear them down before emerging to grab a meal, and then retreating back to the protection of the deeper jungle.<br/><br/>A jungle drake measures 14 feet from front to back, with a lean but muscular build, and weighs around 2,100 pounds."
@@ -375,7 +365,65 @@
                     "name": "woodland stride"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm jungles",
+            "organization": "solitary, pair, or rampage (3\u20138)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 17; <i>frequency</i> 1/round for 6 rounds; <i>effect </i>1d2 Dexterity and Strength damage; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Dexterity and Strength damage",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Predatory Grab",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A jungle drake moves at full speed when it chooses the move option after maintaining a grapple, though it can\u2019t carry the grappled creature aloft. A jungle drake can spend a use of its speed surge to move a grappled creature in this way without requiring a check to maintain the grapple."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Speed Surge",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Three times per day as a swift action, a jungle drake can draw on its draconic heritage for a boost of strength and speed that allows it to take an additional move action that round."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Woodland Stride",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A jungle drake can move through any sort of foliage at full speed without taking damage or suffering impairment. Areas of foliage that have been magically manipulated affect it normally."
+            }
+        ]
     },
     "sources": [
         {

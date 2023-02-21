@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any urban (Vudra)<br/><b>Organization</b> solitary, pair, or litter (3\u20135)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Luckbringer (Su)</b> As a standard action, a ceru can bring luck or misfortune upon any creature it can see within 30 feet. This effect lasts for 1 round, and the ceru decides in advance whether the modified luck is good or bad. If the ceru grants bad luck, anytime the target makes an ability check, attack roll, saving throw, or skill check, it must roll twice and take the worse result. A successful DC 13 Will save negates this effect. If the ceru grants good luck, the target must choose a single roll (as above) prior to rolling, and may roll the chosen roll twice and take the higher result. A creature can only be affected by this ability once per 24 hours, and the ceru may use the ability once per day for every 4 HD it has (minimum once per day). The save DC is Charisma-based. If the ceru is a familiar, it may use its master\u2019s character level, if higher, in place of its racial Hit Dice for determining the number of uses of this ability, and for calculating the save DC (DC = 10 + 1/2 or the master\u2019s character level + the master\u2019s Cha modifier).<br/><br/><b>Poison (Ex)</b> Gore\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Cerus are artificial creatures created through the fusion of alchemy and magic in the Impossible Kingdoms of Vudra, where they are regarded as amazing pets for the rich and powerful. A single ceru fetches at least 300 gp from Vudrani specialty merchants. Most cerus are sterile, and so the rare breeding pair commands an additional +1,000 gp beyond the cost of two non-breeding cerus. Many breeders would rather kill their breeding stock (or murder would-be thieves) than lose control of their exclusivity.<br/><br/>Cerus do not yet exist outside of exotic merchant stalls and strange arcane laboratories. Rumors persist of an alchemical formula allowing the creation of a firstgeneration ceru that is reliably fertile. This revelation is bound to spur a race among arcanists to find the formula and introduce these creatures to the Inner Sea region in much greater numbers. A spellcaster of 7th level or higher can bond with a ceru via the Improved Familiar feat.<br/><br/>Upon reaching maturity, a ceru\u2019s body is 1 foot long and weighs 12 pounds. The rare fertile female ceru bears only one litter per year, no matter how frequently bred, with typically no more than one to three offspring."
@@ -335,7 +325,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any urban (Vudra)",
+            "organization": "solitary, pair, or litter (3\u20135)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Luckbringer",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action, a ceru can bring luck or misfortune upon any creature it can see within 30 feet. This effect lasts for 1 round, and the ceru decides in advance whether the modified luck is good or bad. If the ceru grants bad luck, anytime the target makes an ability check, attack roll, saving throw, or skill check, it must roll twice and take the worse result. A successful DC 13 Will save negates this effect. If the ceru grants good luck, the target must choose a single roll (as above) prior to rolling, and may roll the chosen roll twice and take the higher result. A creature can only be affected by this ability once per 24 hours, and the ceru may use the ability once per day for every 4 HD it has (minimum once per day). The save DC is Charisma-based. If the ceru is a familiar, it may use its master\u2019s character level, if higher, in place of its racial Hit Dice for determining the number of uses of this ability, and for calculating the save DC (DC = 10 + 1/2 or the master\u2019s character level + the master\u2019s Cha modifier)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Gore\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Gore\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Con",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

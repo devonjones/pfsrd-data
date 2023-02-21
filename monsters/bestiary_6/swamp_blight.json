@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any swamps<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Mosquitoes Aura (Su)</b> An infestation of mosquitoes with a radius of 10 feet constantly surrounds a swamp blight. Any creature within this area takes 2d6 points of damage at the end of each round it remains in the area. A creature that takes this damage also takes 1d6 points of bleed damage and must succeed at a DC 27 Fortitude save or be nauseated for 1 round. Any area effect attack that deals 20 or more points of damage to a swamp blight destroys the mosquitoes, removing the mosquito aura for 1 minute, after which a new batch of mosquitoes swarms out of the ooze\u2019s body to replenish the infestation. The save DC is Constitution-based. <br/><br/><b>Toxic Acid (Ex)</b> Sting\u2014injury; <i>save</i> Fort DC 29; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 2d6 acid plus 1 Str drain plus staggered for 1 round; <i>cure</i> 2 saves. <br/><br/><b>Unquiet Bog (Su)</b> All humanoid creatures that die within a swamp blight\u2019s cursed domain rise from death as mummies. Creatures with 7 or fewer Hit Dice rise as swamp mummies (<i>Pathfinder RPG Bestiary 5</i> 178), while creatures with 8 or more Hit Dice rise as mummy lords (<i>Bestiary 5</i> 176). A swamp blight can control a number of Hit Dice of mummies equal to double its own Hit Dice (up to 38 Hit Dice of mummies for most swamp blights); additional mummies created beyond this limit are free-willed but still regard the swamp blight as an ally."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Swamp blights rule over large swaths of boggy land, populating their realms with the mummified forms of those they have slaughtered or who have fallen prey to their domains\u2019 denizens. These mummies are the swamp blights\u2019 preferred weapon against nearby settlements, and the mummies typically seek to drag the unconscious bodies of their victims back to be killed within their masters\u2019 cursed swamplands so the bodies rise as new mummies to bolster the sodden, undead army. Yet even these undead eventually fall prey to the blights\u2019 unwillingness to share their realms. <br/><br/>A swamp blight is 7 feet across and weighs 540 pounds."
@@ -549,7 +539,57 @@
                     "name": "favored terrain"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any swamps",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Mosquitoes Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "An infestation of mosquitoes with a radius of 10 feet constantly surrounds a swamp blight. Any creature within this area takes 2d6 points of damage at the end of each round it remains in the area. A creature that takes this damage also takes 1d6 points of bleed damage and must succeed at a DC 27 Fortitude save or be nauseated for 1 round. Any area effect attack that deals 20 or more points of damage to a swamp blight destroys the mosquitoes, removing the mosquito aura for 1 minute, after which a new batch of mosquitoes swarms out of the ooze\u2019s body to replenish the infestation. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Toxic Acid",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save</i> Fort DC 29; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 2d6 acid plus 1 Str drain plus staggered for 1 round; <i>cure</i> 2 saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Toxic Acid",
+                    "affliction_type": "Toxic Acid; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 29",
+                        "save_type": "Fort",
+                        "dc": 29
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "2d6 acid plus 1 Str drain plus staggered for 1 round",
+                    "cure": "2 saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Unquiet Bog",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "All humanoid creatures that die within a swamp blight\u2019s cursed domain rise from death as mummies. Creatures with 7 or fewer Hit Dice rise as swamp mummies (<i>Pathfinder RPG Bestiary 5</i> 178), while creatures with 8 or more Hit Dice rise as mummy lords (<i>Bestiary 5</i> 176). A swamp blight can control a number of Hit Dice of mummies equal to double its own Hit Dice (up to 38 Hit Dice of mummies for most swamp blights); additional mummies created beyond this limit are free-willed but still regard the swamp blight as an ally."
+            }
+        ]
     },
     "sources": [
         {

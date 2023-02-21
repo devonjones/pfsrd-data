@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> cold mountainous coastlines<br/><b>Organization</b> solitary<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su)</b> Once every 1d4 rounds as a standard action, a fjord linnorm can expel a 120-foot line of icy fluid, dealing 16d8 points of cold damage to all creatures struck (Reflex DC 27 for half damage). The freezing liquid quickly hardens to sheets of ice, causing any creature that takes damage to move at only half its normal speed for 1d4 rounds. A DC 27 Strength check made as a full-round action allows a character to break free of the ice before this duration expires. The save DC and Strength check DC are Constitution-based.<br/><br/><b>Death Curse (Su)</b><i>Curse of Drowning</i>: <i>save </i>Will DC 26; <i>effect </i>creature can never gain the benefit of water breathing, and if it possesses this ability, loses it as long as it suffers the curse. In addition, the creature can hold its breath only half as long as normal, and whenever the cursed creature holds its breath, it functions as if sickened.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 27; <i>frequency </i>1/round for 10 rounds; <i>effect </i>3d6 cold damage and 1d6 Con drain; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Fjord linnorms dwell among the deep waters that grace northern coastlines where fingers of land create complex rivulets, venturing out to sea to feed on sharks and whales when they cannot find settlements or traveling caravans to savage. As their favored haunts often overlap with coastal trade routes, regions known to be within the territory of a fjord linnorm are often avoided by ships. Fjord linnorms are not particularly adept at capsizing ships, as are some other large aquatic monsters, but one might argue that such tactics are unnecessary for a creature the size and power of a fjord linnorm in the first place.<br/><br/>Both the curse and poison of a fjord linnorm are extremely dangerous for those who frequent the waterways of the north. The fjord linnorm\u2019s curse is particularly devastating to aquatic creatures, and such beings are careful to avoid any possible conflict with such linnorms.<br/><br/>A fjord linnorm is 60 feet long and weighs just over 10,000 pounds."
@@ -506,7 +496,57 @@
                     "name": "amphibious"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "cold mountainous coastlines",
+            "organization": "solitary",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds as a standard action, a fjord linnorm can expel a 120-foot line of icy fluid, dealing 16d8 points of cold damage to all creatures struck (Reflex DC 27 for half damage). The freezing liquid quickly hardens to sheets of ice, causing any creature that takes damage to move at only half its normal speed for 1d4 rounds. A DC 27 Strength check made as a full-round action allows a character to break free of the ice before this duration expires. The save DC and Strength check DC are Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Curse",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "<i>Curse of Drowning</i>: <i>save </i>Will DC 26; <i>effect </i>creature can never gain the benefit of water breathing, and if it possesses this ability, loses it as long as it suffers the curse. In addition, the creature can hold its breath only half as long as normal, and whenever the cursed creature holds its breath, it functions as if sickened."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 27; <i>frequency </i>1/round for 10 rounds; <i>effect </i>3d6 cold damage and 1d6 Con drain; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 27",
+                        "save_type": "Fort",
+                        "dc": 27
+                    },
+                    "frequency": "1/round for 10 rounds",
+                    "effect": "3d6 cold damage and 1d6 Con drain",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

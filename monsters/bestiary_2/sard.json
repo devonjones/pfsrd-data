@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any forests<br/><b>Organization</b> solitary<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Death Throes (Su) </b>When a sard dies, its remains explode with a blast of lightning into razor-sharp splinters of wood. All creatures within 30 feet of a sard when it explodes in this manner take 12d6 points of electricity damage and 12d6 points of piercing damage. A DC 31 Reflex save halves this damage. The save DC is Constitution-based.<br/><br/><b>Electrical Jolt (Su)</b> Every time a creature strikes a sard with a metal melee weapon, arcs of electricity deal 1d10 points of damage to the attacker.<br/><br/><b>Planar Acclimation (Ex)</b> A sard is always considered to be on its home plane, regardless of what plane it finds itself upon. It never gains the extraplanar subtype.<br/><br/><b>Poison (Ex)</b> Thorn\u2014injury; <i>save </i>Fort DC 31; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dex and 4d6 electricity; <i>cure </i>2 consecutive saves.<br/><br/><b>Thorns (Ex)</b> A sard\u2019s thorns have a range of 180 feet with no range increment."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The sard is an ancient elm, oak, or pine tree that has been infused with lightning and raw life by one of the strange gods of the fey realm. One of the legendary beasts known as the Tane, a sard has \u201csap\u201d that consists of red lightning\u2014all of the sard\u2019s electrical attacks manifest with this same eerie-colored energy.<br/><br/>A sard can pass for an old dead tree\u2014especially when the creature uses its <i>tree shape </i>spell-like ability. Yet despite its enormous size and ungainly shape, the sard is in fact a swift and agile monster. It can move with unsettling grace and speed, crawling across the ground on long spidery roots like an immense insect. It attacks either with a single slam of its immense trunk or by launching volleys of foot-long thorns that inject the creature\u2019s poisonous, electrified sap.<br/><br/>Sards are nearly as intelligent as most humans, but few actually use this intelligence for productive purposes\u2014the first sards were created as a form of living siege engine, and they quite enjoy this destructive role, often seeking out fortresses or even towns to systematically destroy."
@@ -606,7 +596,73 @@
                     "name": "planar acclimation"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any forests",
+            "organization": "solitary",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Throes",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "When a sard dies, its remains explode with a blast of lightning into razor-sharp splinters of wood. All creatures within 30 feet of a sard when it explodes in this manner take 12d6 points of electricity damage and 12d6 points of piercing damage. A DC 31 Reflex save halves this damage. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Electrical Jolt",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Every time a creature strikes a sard with a metal melee weapon, arcs of electricity deal 1d10 points of damage to the attacker."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Planar Acclimation",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A sard is always considered to be on its home plane, regardless of what plane it finds itself upon. It never gains the extraplanar subtype."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Thorn\u2014injury; <i>save </i>Fort DC 31; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dex and 4d6 electricity; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Thorn\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 31",
+                        "save_type": "Fort",
+                        "dc": 31
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Dex and 4d6 electricity",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Thorns",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A sard\u2019s thorns have a range of 180 feet with no range increment."
+            }
+        ]
     },
     "sources": [
         {

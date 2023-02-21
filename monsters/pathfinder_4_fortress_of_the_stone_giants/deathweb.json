@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or nest (3\u20138)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Infestation\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str damage; <i>cure </i>2 consecutive saves. The save DC is Charisma-based.<br/><br/><b>Infestation (Su)</b> An infestation of poisonous spiders, which nest within this creature\u2019s exoskeleton, constantly surrounds a deathweb, to a radius of 5 feet. Any creature within the infestation takes 1d6 points of damage at the end of each round it remains in the area. A creature that takes this damage must make a DC 17 Fortitude save or be nauseated for 1 round. In addition, those damaged by this infestation are poisoned as well. Any area effect attack that deals 10 or more points of damage to a deathweb destroys its infesting spiders, removing its aura for 3 rounds, after which a new batch of spiders swarms out of the undead\u2019s body to replenish the infestation. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A deathweb is the undead exoskeleton of a massive spider animated with the vilest necromancy. The spells that create this monstrosity bind to it thousands of normal spiders, which together form the mind of the undead beast like an arachnid hive. These smaller spiders live in and direct their exoskeleton home, working together to swarm around the deathweb and weave its web sheets.<br/><br/>The exoskeleton of a deathweb is cracked and full of holes to allow the resident spiders easy passage into and out of it. Although the exoskeleton can be up to 10 feet long, the largest spiders within are only 6 inches in length. The variety in the sizes of the internal spiders allows them to ably move all parts of the exoskeleton, giving the massive carapace amazing dexterity and swiftness, as well as cleverness, perception, and presence.<br/><br/>These capabilities make deathwebs resourceful and frightening opponents, especially when adversaries mistake them for normal monstrous arachnids or mindless undead. Because of their ability to squeeze into tight surroundings, deathwebs may be found lurking in all manner of niches.<br/><br/>Deathwebs lair where they can build webs to trap passersby, such as among thick trees or in caves or tunnels. The creatures don\u2019t actively collect valuables, but they kill indiscriminately to feed the multitude of spiders within. Webs in a deathweb\u2019s lair are thus likely to contain valuables despite the creature\u2019s lack of interest in wealth."
@@ -343,7 +333,49 @@
                     "name": "compression"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or nest (3\u20138)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Infestation\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str damage; <i>cure </i>2 consecutive saves. The save DC is Charisma-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Infestation\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Str damage",
+                    "cure": "2 consecutive saves. The save DC is Charisma-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Infestation",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "An infestation of poisonous spiders, which nest within this creature\u2019s exoskeleton, constantly surrounds a deathweb, to a radius of 5 feet. Any creature within the infestation takes 1d6 points of damage at the end of each round it remains in the area. A creature that takes this damage must make a DC 17 Fortitude save or be nauseated for 1 round. In addition, those damaged by this infestation are poisoned as well. Any area effect attack that deals 10 or more points of damage to a deathweb destroys its infesting spiders, removing its aura for 3 rounds, after which a new batch of spiders swarms out of the undead\u2019s body to replenish the infestation. The save DC is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

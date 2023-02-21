@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Axis)<br/><b>Organization</b> solitary, pair, or swarm (3\u201312)<br/><b>Treasure</b> standard (usually alchemical weapons)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Deft Limbs (Ex)</b> A karumzek\u2019s front pair of feet are as nimble and dexterous as human hands. It takes a karumzek half the normal amount of time to create alchemical items.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 6 rounds; <i>effect</i> 1d3 Str, Dex, or Con (karumzek\u2019s choice); <i>cure </i>2 consecutive saves.<br/><br/><b>Sense Poison (Ex)</b> As a free action, a karumzek can detect if a creature within 15 feet of it is poisoned. It can attempt to determine the exact type of poison, as if using <i>detect poison</i>."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A karumzek is a specialized servitor of Norgorber\u2014one focused on Blackfingers, the god\u2019s aspect dealing with alchemy, experimentation, and poison. Despite this focus, a karumzek is as fond of murder as a devotee of Father Skinsaw, as covetous of material goods as a follower of the Gray Master, and as careful with secrets as one who worships the Reaper of Reputation. When left to its own devices, a karumzek spends its time crafting poisons, drugs, and other strange concoctions, and is usually armed with several common alchemical weapons\u2014typically acid, alchemist\u2019s fire, smokesticks, and thunderstones.<br/><br/>Karumzeks enjoy working with mortal servants of Norgorber in order to meet their dark deity\u2019s goals. Though karumzeks aren\u2019t decidedly brilliant, their inhuman minds and outsider nature often allow them to devise strategies that a mortal humanoid wouldn\u2019t normally conceive of. They use their miniature spider form to watch their enemies or spy on their rivals\u2019 labs. They also keep to their inconspicuous spider forms to scout ahead when working with groups of cultists, though they quickly revert to their true forms if threatened. Karumzeks enjoy the opportunity to sample concoctions crafted by mortals, slurping and regurgitating drugs and poisons as if noisily sampling a flight of fine wines. Karumzeks have a crude and alien sense of humor, and enjoy making mortals feel uncomfortable or disgusted. They tell foul jokes while in the company of human cultists and put on unnerving performances, such as using <i>vomit swarm</i> and claiming the swarms of spiders are its own pre-sentient young.<br/><br/>A karumzek stands about 5 feet tall and weighs around 200 pounds."
@@ -508,7 +498,57 @@
                     "name": "deft limbs"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Axis)",
+            "organization": "solitary, pair, or swarm (3\u201312)",
+            "treasure": "standard (usually alchemical weapons)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Deft Limbs",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A karumzek\u2019s front pair of feet are as nimble and dexterous as human hands. It takes a karumzek half the normal amount of time to create alchemical items."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 6 rounds; <i>effect</i> 1d3 Str, Dex, or Con (karumzek\u2019s choice); <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Str, Dex, or Con (karumzek\u2019s choice)",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sense Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a free action, a karumzek can detect if a creature within 15 feet of it is poisoned. It can attempt to determine the exact type of poison, as if using <i>detect poison</i>."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land (usually urban)<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard<br/><b>Advancement</b> 6-10 HD (Medium)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Charisma Drain (Ex)</b> A shadowy lurker drains 1d6 Charisma points with each successful incorporeal slam attack.<br/><br/><b>Dimensional Step (Su)</b> As a free action, a shadowy lurker can move from one painting to another in a way similar to the dimension door spell, except no two paintings can be more than 30 feet apart from each other and from its bonded painting (see below). A shadowy lurker's dimensional step ability is suppressed in an <i>antimagic field</i> or by <i>dimensional lock</i> and <i>dimensional anchor</i> spells.<br/><br/><b>Fast Healing (Su)</b> A wounded shadowy lurker may retreat into its bonded painting and regain lost hit points at the rate of 5 hp per round.<br/><br/><b>Painting Dependent (Ex)</b> A shadowy lurker is bonded to a single masterwork quality painting. If the painting is ever destroyed, the shadowy lurker dies in 4d6 hours.<br/><br/><b>Possession (Su)</b> If a shadowy lurker drains an opponent to 0 Charisma, it immediately attempts to possess the target creature's body. The intended victim may attempt a DC 17 Will save to resist it. If successful, the creature becomes catatonic and cannot be targeted by the same shadowy lurker's possession ability for 24 hours. If the opponent fails its Will save, its soul is forced into the shadowy lurker's bonded painting, which acts as the receptacle for the purposes of this ability, while the shadowy lurker takes over the creature's body. In all other ways, this ability duplicates the effects of a <i>magic jar</i> spell (CL 9th). The save DC is Charisma based and includes a +2 racial bonus."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Shadowy lurkers were once the celebrated artisans of the First Elves of Golarion. They were unsurpassed in their skill with paint and brush, responsible for works of art so beautiful that lesser races wept at the sight of them.<br/><br/>Dark powers already hateful of the elves grew increasingly jealous of the artisans and plotted their downfall. One of these evil creatures disguised itself as an ambassador from another world and came to them with claims that the artists of his world used colors and textures that made what the elven artisans produced look like charcoal sketches. The elves, puffed up with the hubris of generations of unrivaled artistry, were intrigued by these tales. The ambassador promised to take them on a visit to his home world, where they could see for themselves. He so thoroughly seduced the artisans that every one of them agreed to go.<br/><br/>When the day came for their extraplanar trip, the ambassador opened a shimmering golden <i>gate</i>. The gate trapped them in the First World, the world of spirits and birthplace of fey, which stripped them of their bodies and forced them to wander in a colorless reflection of the physical world.<br/><br/>Undeath made the artisans hateful and malicious, transforming them into stunted, shadowy versions of their former selves. In time they discovered portals back to their world. Ironically, these \"portals\" were in fact the paintings they had crafted so many centuries before, collected in galleries all across Golarion. Obsessed over their lost lives, the shadowy lurkers found their own works. The shadowy lurkers learned how to bond with their paintings and cross over into the Material Plane. Through their paintings they can even take control of nearby host bodies by sapping their victims' willpower. The artisans became so dependent on their connection to their bonded paintings that if these receptacles are ever destroyed, they perish. To protect their paintings, shadowy lurkers have learned tricks of illusion and can move from painting to painting to confuse their enemies.<br/><br/><b>Environment</b>: Shadowy lurkers follow their paintings and frequently appear in ancient galleries and vaults on the Material Plane. These paintings often have something slightly unsettling about them. Indeed, on a DC 30 Spot check, shadows in the painting appear a bit off and even seem to move around on their own.<br/><br/><b>Typical Physical Characteristics</b>: Shadowy lurkers resemble emaciated miniature elves with pinched, angry faces and large pale eyes that lack pupils. Their hands and feet trail wisps of shadow. A typical shadowy lurker is approximately 4 feet tall."
@@ -413,7 +403,58 @@
                     "name": "painting dependent"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land (usually urban)",
+            "organization": "solitary",
+            "treasure": "standard",
+            "advancement": "6-10 HD (Medium)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Charisma Drain",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A shadowy lurker drains 1d6 Charisma points with each successful incorporeal slam attack."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dimensional Step",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a free action, a shadowy lurker can move from one painting to another in a way similar to the dimension door spell, except no two paintings can be more than 30 feet apart from each other and from its bonded painting (see below). A shadowy lurker's dimensional step ability is suppressed in an <i>antimagic field</i> or by <i>dimensional lock</i> and <i>dimensional anchor</i> spells."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Fast Healing",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A wounded shadowy lurker may retreat into its bonded painting and regain lost hit points at the rate of 5 hp per round."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Painting Dependent",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A shadowy lurker is bonded to a single masterwork quality painting. If the painting is ever destroyed, the shadowy lurker dies in 4d6 hours."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Possession",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "If a shadowy lurker drains an opponent to 0 Charisma, it immediately attempts to possess the target creature's body. The intended victim may attempt a DC 17 Will save to resist it. If successful, the creature becomes catatonic and cannot be targeted by the same shadowy lurker's possession ability for 24 hours. If the opponent fails its Will save, its soul is forced into the shadowy lurker's bonded painting, which acts as the receptacle for the purposes of this ability, while the shadowy lurker takes over the creature's body. In all other ways, this ability duplicates the effects of a <i>magic jar</i> spell (CL 9th). The save DC is Charisma based and includes a +2 racial bonus."
+            }
+        ]
     },
     "sources": [
         {

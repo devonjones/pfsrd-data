@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any urban<br/><b>Organization</b> solitary, investigation (1 hykariut plus 4\u20138 <a href=\"MonsterDisplay.aspx?ItemName=Arbiter\" style=\"text-decoration:underline\">arbiters</a>), or mitigation (1 hykariut plus 5\u201310 arbiters and 2\u20138 <a href=\"MonsterDisplay.aspx?ItemName=Kolyarut\" style=\"text-decoration:underline\">kolyaruts</a> or <a href=\"MonsterDisplay.aspx?ItemName=Zelekhut\" style=\"text-decoration:underline\">zelekhuts</a>)<br/><b>Treasure</b> standard (Large <i>+1 <a href=\"MagicWeaponsDisplay.aspx?ItemName=Axiomatic\" style=\"text-decoration:underline\">axiomatic</a> warhammer</i>, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disperse the Rabble (Su)</b> As a standard action, a hykariut can attempt a single melee attack with its warhammer against one creature within its reach. If it hits, it deals damage as normal and releases a suppressing shockwave centered on the target. This shockwave functions as <a href=\"SpellDisplay.aspx?ItemName=order%C3%A2%C2%80%C2%99s%20wrath\" style=\"text-decoration:underline\"><i>order\u2019s wrath</i></a> (CL 20th, Will DC 22) unless the attack roll is a critical hit, in which case the hykariut can instead have the shockwave function as <a href=\"SpellDisplay.aspx?ItemName=dictum\" style=\"text-decoration:underline\"><i>dictum</i></a> (CL 20th, Will DC 25). <br/><br/><b>Drastic Measures (Su)</b> Once per day as a swift action, a hykariut can condemn one creature it can see. The condemned creature\u2019s alignment is treated as chaotic for the purpose of resolving the hykariut\u2019s abilities and spell-like abilities for 24 hours. If the creature is already chaotic, it instead takes a \u20132 penalty on its saving throws against the hykariut\u2019s abilities and spell-like abilities and it is treated as though it has an overwhelming chaotic aura for the purpose of the inevitable\u2019s smite chaos ability. <br/><br/><b>Judicious (Su)</b> A hykariut can show considerable restraint when suppressing riots. The hykariut can deal nonlethal damage with its weapons without taking a \u20134 penalty on attack rolls. When using <a href=\"SpellDisplay.aspx?ItemName=dictum\" style=\"text-decoration:underline\"><i>dictum</i></a>, a hykariut can choose for the spell to treat each affected creature as though its Hit Dice were no more than 9 below the inevitable\u2019s caster level. When using <a href=\"SpellDisplay.aspx?ItemName=order%C3%A2%C2%80%C2%99s%20wrath\" style=\"text-decoration:underline\"><i>order\u2019s wrath</i></a>, a hykariut can choose for the spell to deal nonlethal damage to affected creatures. <br/><br/><b>Smite Chaos (Su)</b> Three times per day as a swift action, a hykariut can choose a creature it can see to smite. If the target is chaotic, the hykariut adds its Charisma bonus as a bonus on weapon damage rolls against that creature, and its attacks automatically bypass any damage reduction the creature might have. If the target has a strong or overwhelming chaotic aura, the bonus damage increases to twice the hykariut\u2019s Charisma modifier on its first successful attack against that creature. The smite chaos effect remains until the target of the smite is dead or until 24 hours have passed.<br/><br/><b>Unimpeachable (Ex)</b> Any weapon a hykariut wields cannot be disarmed or sundered by chaotic creatures."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Whereas most inevitables punish individual crimes such as oath breaking and murder, the mighty hykariuts quash rebellions and extinguish revolutions. These inevitables care little for petty uprisings, instead focusing on those upheavals that are at risk of spreading catastrophically, setting off a chain reaction of chaotic destabilizations. When such a riot reaches its critical mass, a hykariut stoically marches into its epicenter to scatter the rebellious citizens and crush the ideological leaders.<br/><br/> A hykariut is 14 feet tall and weighs 5,000 pounds."
@@ -641,7 +631,57 @@
                     "name": "judicious"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any urban",
+            "organization": "solitary, investigation (1 hykariut plus 4\u20138 <a href=\"MonsterDisplay.aspx?ItemName=Arbiter\" style=\"text-decoration:underline\">arbiters</a>), or mitigation (1 hykariut plus 5\u201310 arbiters and 2\u20138 <a href=\"MonsterDisplay.aspx?ItemName=Kolyarut\" style=\"text-decoration:underline\">kolyaruts</a> or <a href=\"MonsterDisplay.aspx?ItemName=Zelekhut\" style=\"text-decoration:underline\">zelekhuts</a>)",
+            "treasure": "standard (Large <i>+1 <a href=\"MagicWeaponsDisplay.aspx?ItemName=Axiomatic\" style=\"text-decoration:underline\">axiomatic</a> warhammer</i>, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disperse the Rabble",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action, a hykariut can attempt a single melee attack with its warhammer against one creature within its reach. If it hits, it deals damage as normal and releases a suppressing shockwave centered on the target. This shockwave functions as <a href=\"SpellDisplay.aspx?ItemName=order%C3%A2%C2%80%C2%99s%20wrath\" style=\"text-decoration:underline\"><i>order\u2019s wrath</i></a> (CL 20th, Will DC 22) unless the attack roll is a critical hit, in which case the hykariut can instead have the shockwave function as <a href=\"SpellDisplay.aspx?ItemName=dictum\" style=\"text-decoration:underline\"><i>dictum</i></a> (CL 20th, Will DC 25). "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Drastic Measures",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per day as a swift action, a hykariut can condemn one creature it can see. The condemned creature\u2019s alignment is treated as chaotic for the purpose of resolving the hykariut\u2019s abilities and spell-like abilities for 24 hours. If the creature is already chaotic, it instead takes a \u20132 penalty on its saving throws against the hykariut\u2019s abilities and spell-like abilities and it is treated as though it has an overwhelming chaotic aura for the purpose of the inevitable\u2019s smite chaos ability. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Judicious",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A hykariut can show considerable restraint when suppressing riots. The hykariut can deal nonlethal damage with its weapons without taking a \u20134 penalty on attack rolls. When using <a href=\"SpellDisplay.aspx?ItemName=dictum\" style=\"text-decoration:underline\"><i>dictum</i></a>, a hykariut can choose for the spell to treat each affected creature as though its Hit Dice were no more than 9 below the inevitable\u2019s caster level. When using <a href=\"SpellDisplay.aspx?ItemName=order%C3%A2%C2%80%C2%99s%20wrath\" style=\"text-decoration:underline\"><i>order\u2019s wrath</i></a>, a hykariut can choose for the spell to deal nonlethal damage to affected creatures. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Smite Chaos",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Three times per day as a swift action, a hykariut can choose a creature it can see to smite. If the target is chaotic, the hykariut adds its Charisma bonus as a bonus on weapon damage rolls against that creature, and its attacks automatically bypass any damage reduction the creature might have. If the target has a strong or overwhelming chaotic aura, the bonus damage increases to twice the hykariut\u2019s Charisma modifier on its first successful attack against that creature. The smite chaos effect remains until the target of the smite is dead or until 24 hours have passed."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Unimpeachable",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Any weapon a hykariut wields cannot be disarmed or sundered by chaotic creatures."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> underground<br/><b>Organization</b> solitary, pair, gathering (3\u201312), or settlement (12\u201330 telgrodradts and 200\u2013500 zombies and skeletons)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Create Thralls (Su)</b> Any creature that dies from the disease a telgrodradt transmits rises in 24 hours as if it were raised by <i>animate dead</i> (CL 9th). This ability can create only exoskeletons (<i>Pathfinder Adventure Path #91: Battle of Bloodmarch Hill</i> 84), skeletons, or zombies. This is determined by the amount of flesh left on the corpse and the corpse\u2019s creature type. While a telgrodradt has no natural ability to control these mindless undead, the undead created in this manner don\u2019t attack or otherwise intentionally harm the telgrodradt.<br/><br/><b>Disease (Su)</b> Bite\u2014injury; <i>save</i> Fort DC 17; <i>onset</i> 1d3 days; <i>frequency</i> 1 day; <i>effect</i> 1 Con damage; <i>cure</i> 2 consecutive saves.<br/><br/><b>Negative Energy Ray (Su)</b> A telgrodradt can fire a sickly purple beam of negative energy from its eyes at a single target within 60 feet. If the telgrodradt successfully hits, the target takes 3d6 points of negative energy damage. This ray can also heal undead creatures. A telgrodradt can\u2019t target itself with this ability, but it can be healed by the negative energy rays of other telgrodradts."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "These strange Darklands creatures savor the flesh of the undead, while at the same time being one step in the grave themselves. Mistaken for undead by those who encounter them and inscrutable to most living things, telgrodradts straddle a strange line between worlds. These strange abominations look like a nightmarish fusion of insect, humanoid, and corpse. Telgrodradts have six multi-jointed appendages that they use to skitter about and burrow, as well as four hooked, probing tentacles that act as antennae. A typical telgrodradt stretches 14 feet from head to tail and weighs upward of 2,500 pounds, though larger and smaller specimens do exist."
@@ -456,7 +446,58 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "underground",
+            "organization": "solitary, pair, gathering (3\u201312), or settlement (12\u201330 telgrodradts and 200\u2013500 zombies and skeletons)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Create Thralls",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any creature that dies from the disease a telgrodradt transmits rises in 24 hours as if it were raised by <i>animate dead</i> (CL 9th). This ability can create only exoskeletons (<i>Pathfinder Adventure Path #91: Battle of Bloodmarch Hill</i> 84), skeletons, or zombies. This is determined by the amount of flesh left on the corpse and the corpse\u2019s creature type. While a telgrodradt has no natural ability to control these mindless undead, the undead created in this manner don\u2019t attack or otherwise intentionally harm the telgrodradt."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 17; <i>onset</i> 1d3 days; <i>frequency</i> 1 day; <i>effect</i> 1 Con damage; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Disease",
+                    "affliction_type": "Disease; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "onset": "1d3 days",
+                    "frequency": "1 day",
+                    "effect": "1 Con damage",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Negative Energy Ray",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A telgrodradt can fire a sickly purple beam of negative energy from its eyes at a single target within 60 feet. If the telgrodradt successfully hits, the target takes 3d6 points of negative energy damage. This ray can also heal undead creatures. A telgrodradt can\u2019t target itself with this ability, but it can be healed by the negative energy rays of other telgrodradts."
+            }
+        ]
     },
     "sources": [
         {

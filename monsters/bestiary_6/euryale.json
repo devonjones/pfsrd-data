@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, triumvirate (3), or cult (1 plus 4\u201317 medusas)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Absorb Essence (Ex)</b> Whenever a creature that has been petrified is destroyed within 60 feet of a euryale, the euryale gains the effects of a <i>cure serious wounds</i> spell and a <i>restoration</i> spell (both at CL 20th). <br/><b>Gaze (Su)</b> The euryale\u2019s gaze attack has a range of 30 feet and turns the target to stone permanently (Fortitude DC 32 negates). The save DC is Constitution-based. <br/><b>Irresistible Poison (Ex)</b> A creature must roll twice and take the lower result on all saving throws against a euryale\u2019s poison effects. If the creature would normally be immune to poison, the immunity doesn\u2019t apply, but it only needs to roll its save once. Delay poison doesn\u2019t delay her poison effects; they still occur immediately. A euryale gains a +4 bonus on saving throws against neutralize poison cast against her to negate her venomous attacks. <br/><b>Poison (Ex)</b> Snake bite, viper fangs, or viper rod\u2014injury; <i>save</i> Fort DC 32; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Dex damage, 1d4 Con damage, and vulnerable to sonic for 1 minute; <i>cure</i> 3 consecutive saves. The save DC is Constitution-based. <br/><b>Profane Visions (Ex)</b> A euryale\u2019s prophetic visions allow her to avoid misfortune. She gains a profane bonus to Armor Class equal to her Charisma bonus, and whenever she would be forced to reroll a d20 or to roll a d20 twice and take the lower result, she takes the higher result of the two rolls instead. <br/><b>Shattering Shriek (Su)</b> Whenever a euryale uses one of her sonic spell-like abilities, any sonic damage dealt by the spell increases by 1 point per die. In addition, sonic damage from her spell-like abilities bypasses the hardness of a petrified creature, and the damage is not halved when applied to petrified creatures. (A typical Medium petrified creature has 30 hit points.) A petrified creature that is destroyed by the effects of a euryale\u2019s shattering shriek explodes into a 20-foot burst of jagged stone shards, dealing 4d6 points of slashing damage to any creatures in that area (Reflex DC 30 half); this explosion heals the euryale as detailed in absorb essence above. The save DC is Charisma-based. <br/><b>Snake Independence (Ex)</b> A euryale\u2019s snakes are independently intelligent and can attack even when she doesn\u2019t. No matter what action the euryale takes, she can still always make all six snake bite attacks on her turn. Even when she doesn\u2019t attack with any other weapons that round, her snake bites always count as secondary attacks. <br/><b>Spells</b> A euryale casts spells as an 18th-level oracle. <br/><b>Statue Control (Su)</b> A euryale can control the statues of any creatures she petrifies via her spells or special abilities as long as they remain within 120 feet of her. Petrified creatures are treated as animated stone objects (<i>Pathfinder RPG Bestiary</i> 14). While the typical Medium animated object is almost insignificant in a CR 20 encounter, the euryale often commands these statues to move so as to provide her cover or to place them in areas where she can shatter them to deal the most damage to foes (see the shattering shriek ability on page 120). The euryale\u2019s control over these statues is a purely mental act that takes no action. A euryale can control a number of statues at once equal to her Charisma modifier (10 for the typical euryale). <br/><b>Viper Rod (Su)</b> Any blunt weapon or object a euryale holds becomes a rod of the viper with a +5 enhancement bonus that uses her poison instead of its usual poison. She can flick the snake head of her viper rod to fire poisoned fangs as a ranged attack. Treat these attacks as if she fired arrows from a <i>+5 longbow</i>; fangs launched in this manner deliver her poison"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Euryales are powerful medusa matriarchs and among the most favored agents of Lamashtu, the Mother of Monsters. Long ago, Lamashtu tricked these medusa forebears with a gift that tainted and empowered them into becoming beings of madness and evil, twisting them into forms even more monstrous than their medusa sisters. Euryales delight in destroying their foes in ways they find particularly cruel, such as transforming one of a pair of lovers into a statue and then commanding the statue to destroy the still-living lover. Because of the oracular powers of these creatures, there are tales of desperate folk who seek out euryales for answers, but these tales invariably end poorly\u2014those few petitioners who receive the answers they seek find they would have been better off never knowing. In most cases, an encounter with a euryale is destined for disaster. However, they are endlessly fascinated by poisons, so a creature that can satisfy a euryale\u2019s curiosity by teaching it new poison lore (a daunting task in its own right) can likely avoid destruction in a chance meeting. Euryales find themselves distant from medusa society, unless they hold together a cult of fawning medusas by force. While they occasionally form triumvirates among themselves, they are more likely to find companionship among like-minded zealots of other races, particularly lamia matriarchs (<i>Pathfinder RPG Bestiary 2</i> 175) or mariliths. <br/><br/>Most euryales willingly embrace the taint of madness and lovingly serve the Mother of Monsters, but there are some who seek to eschew it, whether simply to be free of Lamashtu\u2019s influence and live an evil life more like that of a normal medusa, or to follow a path of redemption. These rare heretical euryales have alignments other than chaotic evil as well as additional powers gained through their struggle to control their own destinies. Typically they advance by Hit Dice, although it\u2019s also fairly common for them to take up to 2 oracle levels to improve their oracle spellcasting and to represent the curse the Mother of Monsters inflicted upon them for daring to cross her. <br/><br/>A euryale is 7 feet tall and weighs 460 pounds."
@@ -1165,7 +1155,113 @@
                     "name": "change shape"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, triumvirate (3), or cult (1 plus 4\u201317 medusas)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Absorb Essence",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Whenever a creature that has been petrified is destroyed within 60 feet of a euryale, the euryale gains the effects of a <i>cure serious wounds</i> spell and a <i>restoration</i> spell (both at CL 20th). "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Gaze",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "The euryale\u2019s gaze attack has a range of 30 feet and turns the target to stone permanently (Fortitude DC 32 negates). The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Irresistible Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A creature must roll twice and take the lower result on all saving throws against a euryale\u2019s poison effects. If the creature would normally be immune to poison, the immunity doesn\u2019t apply, but it only needs to roll its save once. Delay poison doesn\u2019t delay her poison effects; they still occur immediately. A euryale gains a +4 bonus on saving throws against neutralize poison cast against her to negate her venomous attacks. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Snake bite, viper fangs, or viper rod\u2014injury; <i>save</i> Fort DC 32; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Dex damage, 1d4 Con damage, and vulnerable to sonic for 1 minute; <i>cure</i> 3 consecutive saves. The save DC is Constitution-based. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Snake bite, viper fangs, or viper rod\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 32",
+                        "save_type": "Fort",
+                        "dc": 32
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Dex damage, 1d4 Con damage, and vulnerable to sonic for 1 minute",
+                    "cure": "3 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Profane Visions",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A euryale\u2019s prophetic visions allow her to avoid misfortune. She gains a profane bonus to Armor Class equal to her Charisma bonus, and whenever she would be forced to reroll a d20 or to roll a d20 twice and take the lower result, she takes the higher result of the two rolls instead. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Shattering Shriek",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Whenever a euryale uses one of her sonic spell-like abilities, any sonic damage dealt by the spell increases by 1 point per die. In addition, sonic damage from her spell-like abilities bypasses the hardness of a petrified creature, and the damage is not halved when applied to petrified creatures. (A typical Medium petrified creature has 30 hit points.) A petrified creature that is destroyed by the effects of a euryale\u2019s shattering shriek explodes into a 20-foot burst of jagged stone shards, dealing 4d6 points of slashing damage to any creatures in that area (Reflex DC 30 half); this explosion heals the euryale as detailed in absorb essence above. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Snake Independence",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A euryale\u2019s snakes are independently intelligent and can attack even when she doesn\u2019t. No matter what action the euryale takes, she can still always make all six snake bite attacks on her turn. Even when she doesn\u2019t attack with any other weapons that round, her snake bites always count as secondary attacks. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Statue Control",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A euryale can control the statues of any creatures she petrifies via her spells or special abilities as long as they remain within 120 feet of her. Petrified creatures are treated as animated stone objects (<i>Pathfinder RPG Bestiary</i> 14). While the typical Medium animated object is almost insignificant in a CR 20 encounter, the euryale often commands these statues to move so as to provide her cover or to place them in areas where she can shatter them to deal the most damage to foes (see the shattering shriek ability on page 120). The euryale\u2019s control over these statues is a purely mental act that takes no action. A euryale can control a number of statues at once equal to her Charisma modifier (10 for the typical euryale). "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Viper Rod",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any blunt weapon or object a euryale holds becomes a rod of the viper with a +5 enhancement bonus that uses her poison instead of its usual poison. She can flick the snake head of her viper rod to fire poisoned fangs as a ranged attack. Treat these attacks as if she fired arrows from a <i>+5 longbow</i>; fangs launched in this manner deliver her poison"
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A euryale casts spells as an 18th-level oracle. "
+            }
+        ]
     },
     "sources": [
         {

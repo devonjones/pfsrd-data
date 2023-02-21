@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any non-cold underground<br/><b>Organization</b> solitary, pair, or grove (3\u20138)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Hallucination Cloud (Ex)</b> As a standard action once per minute, a basidirond can release a cloud of invisible spores in a 20-foot radius. All creatures within the area must succeed on a DC 16 Fortitude save or be affected by powerful hallucinations as long as they remain in the cloud plus 1d4 rounds after leaving the area. A new save must be made each round a creature remains within the affected area. A hallucination cloud persists for 5 rounds before dispersing\u2014a strong wind causes it to disperse immediately. The save DC is Constitution-based. To determine what hallucination is suffered each round, roll 1d6 and consult the following table.<br/><br/><table class=\"inner\"> <tr> <td><b>d6</b></td> <td><b>Hallucination</b></td> </tr> <tr> <td><b>1</b></td> <td>You\u2019re sinking in quicksand! Fall prone and spend 1 round flailing your arms and legs as if trying to swim.</td> </tr> <tr> <td><b>2</b></td> <td>Attacked by a swarm of spiders! Spend a full round action to attack the floor near you with your weapon.</td> </tr> <tr> <td><b>3</b></td> <td>An item you hold has turned into a viper! Drop it and flee from the item at top speed for 1 round.</td> </tr> <tr> <td><b>4</b></td> <td>You\u2019re suffocating! Stand in place, hold your breath, and clutch at your throat for 1 round.</td> </tr> <tr> <td><b>5</b></td> <td>You\u2019ve shrunk to 1/10th your normal size! Take no actions for 1 round and monsters won\u2019t see you.</td> </tr> <tr> <td><b>6</b></td> <td>You\u2019re melting! Grasp hold of yourself in an attempt to hold yourself together, and take no actions for 1 round.</td> </tr> </table><br/><br/><b>Spores (Ex) </b>Any creature struck by a basidirond\u2019s slam attack is coated with spores. The creature struck must make a DC 16 Fortitude save or these spores take root in his flesh, and particularly in his lungs. The save DC is Constititon-based.<i>Basidirond Spores</i>: Disease\u2014inhaled; <i>save </i>Fort DC 16; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con damage; <i>cure </i>1 save.<br/><br/><b>Cold Lethargy (Ex) </b>Although a basidirond is immune to cold damage, any cold effect it is exposed to slows it for 1d4 rounds. During this time, the basidirond cannot use its hallucination cloud or spores."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The strange fungal basidirond is a deadly plant monster that feeds on mineral-rich moisture, be it runoff from cave walls or fresh blood. By ensuring a constant flow of nutritious moisture, canny cave dwellers can use basidironds as guardians for their lairs, although they must take care to avoid the plant\u2019s hunting routes lest they become its latest victims."
@@ -208,7 +198,41 @@
             "int": null,
             "wis": 11,
             "cha": 1
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any non-cold underground",
+            "organization": "solitary, pair, or grove (3\u20138)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hallucination Cloud",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a standard action once per minute, a basidirond can release a cloud of invisible spores in a 20-foot radius. All creatures within the area must succeed on a DC 16 Fortitude save or be affected by powerful hallucinations as long as they remain in the cloud plus 1d4 rounds after leaving the area. A new save must be made each round a creature remains within the affected area. A hallucination cloud persists for 5 rounds before dispersing\u2014a strong wind causes it to disperse immediately. The save DC is Constitution-based. To determine what hallucination is suffered each round, roll 1d6 and consult the following table.<br/><br/><table class=\"inner\"> <tr> <td><b>d6</b></td> <td><b>Hallucination</b></td> </tr> <tr> <td><b>1</b></td> <td>You\u2019re sinking in quicksand! Fall prone and spend 1 round flailing your arms and legs as if trying to swim.</td> </tr> <tr> <td><b>2</b></td> <td>Attacked by a swarm of spiders! Spend a full round action to attack the floor near you with your weapon.</td> </tr> <tr> <td><b>3</b></td> <td>An item you hold has turned into a viper! Drop it and flee from the item at top speed for 1 round.</td> </tr> <tr> <td><b>4</b></td> <td>You\u2019re suffocating! Stand in place, hold your breath, and clutch at your throat for 1 round.</td> </tr> <tr> <td><b>5</b></td> <td>You\u2019ve shrunk to 1/10th your normal size! Take no actions for 1 round and monsters won\u2019t see you.</td> </tr> <tr> <td><b>6</b></td> <td>You\u2019re melting! Grasp hold of yourself in an attempt to hold yourself together, and take no actions for 1 round.</td> </tr> </table>"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spores",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Any creature struck by a basidirond\u2019s slam attack is coated with spores. The creature struck must make a DC 16 Fortitude save or these spores take root in his flesh, and particularly in his lungs. The save DC is Constititon-based.<i>Basidirond Spores</i>: Disease\u2014inhaled; <i>save </i>Fort DC 16; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con damage; <i>cure </i>1 save."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Cold Lethargy",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Although a basidirond is immune to cold damage, any cold effect it is exposed to slows it for 1d4 rounds. During this time, the basidirond cannot use its hallucination cloud or spores."
+            }
+        ]
     },
     "sources": [
         {

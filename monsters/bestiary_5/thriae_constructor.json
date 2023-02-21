@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or troop (1 plus 6\u201315 thriae soldiers)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Encase (Ex)</b> A thriae constructor produces vast amounts of fastdrying, adhesive wax. A creature hit by a thriae constructor\u2019s sticky wax must succeed at a DC 25 Reflex save or be encased in a ball of wax. A creature that succeeds at its saving throw gains the entangled condition, but can otherwise act normally. An encased creature is pinned and can\u2019t use spells with verbal components. On the first round, an encased creature can attempt to break out by succeeding at a DC 25 Strength check. If it fails to escape, on all future rounds the encased creature is helpless and can\u2019t attempt to escape. A creature that hits a ball of sticky wax with a natural attack must succeed at a DC 25 Reflex save or become stuck. A stuck creature can\u2019t move away from the ball of wax or use the stuck limb until it escapes, but can otherwise act normally. If a creature strikes the ball of wax with a manufactured weapon, it must succeed at a DC 25 Reflex save or the weapon becomes stuck. Sticky wax has hardness 5, has 100 hit points, and is vulnerable to fire. The save DCs are Constitution-based.<br/><b>Merope Consumption (Su)</b> Three times per day as a standard action, a thriae constructor can consume a dose of merope to gain the ability to launch its wax with crushing force for 1d4 rounds. Starting on the round after the constructor consumes the merope, its sticky wax attack deals 6d6+8 points damage on a successful hit, in addition to the encase effect.<br/><b>Poison (Ex)</b> Sting\u2014injury; <i>save</i> Fort DC 25; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d6 Str plus sickened; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Thriae blend the physical features of graceful humanoid women with those of giant bees. For the most part, they are a wise, knowledgeable, and spiritual race. But unlike others of their kind, thriae constructors are not philosophers or seers; they are mindless laborers that react by pure instinct. Despite their lack of intelligence, however, these enormous creatures possess an even more complex sense of architecture and structure than bees, and in some ways, their architectural instincts surpass even the greatest designs a human mind could imagine. Other thriae, particularly those of high rank, are adept at directing thriae constructors to focus on those jobs that will most benefit the community and herding them to their work. In times of peace, thriae constructors labor to build, expand, and renovate hives and enhance its fortifications. When a thriae hive is threatened, the constructors quickly descend upon their foes, encasing these enemies in the same secretion of adhesive wax they normally use as a material to build the hive, and assailing resilient enemies with numerous attacks and a vicious poison.<br/><br/> A typical thriae constructor is 18 feet tall with a wingspan of 30 feet, and weighs about 5,500 pounds."
@@ -304,7 +294,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or troop (1 plus 6\u201315 thriae soldiers)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Encase",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A thriae constructor produces vast amounts of fastdrying, adhesive wax. A creature hit by a thriae constructor\u2019s sticky wax must succeed at a DC 25 Reflex save or be encased in a ball of wax. A creature that succeeds at its saving throw gains the entangled condition, but can otherwise act normally. An encased creature is pinned and can\u2019t use spells with verbal components. On the first round, an encased creature can attempt to break out by succeeding at a DC 25 Strength check. If it fails to escape, on all future rounds the encased creature is helpless and can\u2019t attempt to escape. A creature that hits a ball of sticky wax with a natural attack must succeed at a DC 25 Reflex save or become stuck. A stuck creature can\u2019t move away from the ball of wax or use the stuck limb until it escapes, but can otherwise act normally. If a creature strikes the ball of wax with a manufactured weapon, it must succeed at a DC 25 Reflex save or the weapon becomes stuck. Sticky wax has hardness 5, has 100 hit points, and is vulnerable to fire. The save DCs are Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Merope Consumption",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Three times per day as a standard action, a thriae constructor can consume a dose of merope to gain the ability to launch its wax with crushing force for 1d4 rounds. Starting on the round after the constructor consumes the merope, its sticky wax attack deals 6d6+8 points damage on a successful hit, in addition to the encase effect."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save</i> Fort DC 25; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d6 Str plus sickened; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 25",
+                        "save_type": "Fort",
+                        "dc": 25
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d6 Str plus sickened",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

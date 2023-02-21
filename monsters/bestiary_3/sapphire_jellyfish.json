@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm or temperate oceans<br/><b>Organization</b> solitary, pack (2\u20133), or bloom (4\u20137)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Electricity Blast (Ex)</b> Once every 1d6 rounds as a standard action, a sapphire jellyfish can discharge a 20-foot-radius blast of electricity, dealing 8d6 points of electricity damage (DC 23 Reflex for half). Any creature that takes damage from this electricity must also make a DC 23 Fortitude save to avoid being staggered for 1d4 rounds.<br/><br/><b>Poison (Ex)</b> Tentacle\u2014injury; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dex and 1d4 Con; <i>cure </i>2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Like other giant jellyfish, a sapphire jellyfish is an active hunter. It stores powerful electrical charges in its domelike bell, which is 16 feet in diameter. Its sensory tentacles can trail for twice that length, but the dangerous toxic tentacles are positioned within about 20 feet of the creature\u2019s bell."
@@ -255,7 +245,49 @@
                     "name": "compression"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm or temperate oceans",
+            "organization": "solitary, pack (2\u20133), or bloom (4\u20137)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Electricity Blast",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once every 1d6 rounds as a standard action, a sapphire jellyfish can discharge a 20-foot-radius blast of electricity, dealing 8d6 points of electricity damage (DC 23 Reflex for half). Any creature that takes damage from this electricity must also make a DC 23 Fortitude save to avoid being staggered for 1d4 rounds."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tentacle\u2014injury; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dex and 1d4 Con; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tentacle\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 23",
+                        "save_type": "Fort",
+                        "dc": 23
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Dex and 1d4 Con",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

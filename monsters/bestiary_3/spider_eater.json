@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests<br/><b>Organization</b> solitary or brood (2\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Implant (Ex)</b> A spider eaters grows its eggs inside of a living host. Implanting an egg in a host is a full-round action that provokes attacks of opportunity, and the target must be helpless but alive. Once an egg is implanted, it exudes paralytic enzymes that not only keep the victim in state of perpetual paralysis, but also keep it nourished and alive in its comatose but fully aware state. This condition lasts until the egg hatches in 1d6 weeks, at which point the young spider eater consumes most of its host, killing it. An egg can be surgically removed with a DC 25 Heal check (this check deals 2d6 points of damage to the host regardless of success), at which point the host recovers from the paralysis in 1d6 rounds. Any magical effect that removes paralysis or disease (such as <i>remove paralysis</i>, <i>remove disease</i>, or <i>heal</i>) also destroys the egg, but mere immunity to paralysis or disease does not offer protection.<br/><br/><b>Poison (Ex) </b>Sting\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/minute for 6 minutes; <i>effect </i>paralysis for 1 minute; <i>cure </i>1 save. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "An amalgam of dangerous creatures, this predator, as its name suggests, prefers to hunt and feed upon spiders. Their greatest boon to spider hunting, aside from their stinger, ability to fly, and strong pincers, is their ability to slip through the stickiest of webs in order to get to their prey. Unfortunately for other creatures, when a spider eater is denied its preferred prey, it seeks out any living creature it can find to serve as a host for its ravenous young.<br/><br/>When hunting, a spider eater drops from the air onto its victim, stinging the prey with its barbed tail. The creature then returns to the air and hovers, waiting for its venom to take hold. Once the opponent succumbs to paralysis, the spider eater lands again, either to feed or implant its egg.<br/><br/>Although more intelligent than the typical beast, to the point where it can understand a language (usually Aklo), the spider eater is relatively slow-witted. Nevertheless, it is intelligent enough that it resists training\u2014those who seek to ally with spider eaters must befriend them via diplomacy and gifts of spiders to feed upon or implant eggs into, or via intimidation and coercion.<br/><br/>A spider eater measures roughly 14 feet long and stands 6 feet tall. The creature has a wingspan just over 20 feet and weighs almost 2,000 pounds."
@@ -366,7 +356,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests",
+            "organization": "solitary or brood (2\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Implant",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A spider eaters grows its eggs inside of a living host. Implanting an egg in a host is a full-round action that provokes attacks of opportunity, and the target must be helpless but alive. Once an egg is implanted, it exudes paralytic enzymes that not only keep the victim in state of perpetual paralysis, but also keep it nourished and alive in its comatose but fully aware state. This condition lasts until the egg hatches in 1d6 weeks, at which point the young spider eater consumes most of its host, killing it. An egg can be surgically removed with a DC 25 Heal check (this check deals 2d6 points of damage to the host regardless of success), at which point the host recovers from the paralysis in 1d6 rounds. Any magical effect that removes paralysis or disease (such as <i>remove paralysis</i>, <i>remove disease</i>, or <i>heal</i>) also destroys the egg, but mere immunity to paralysis or disease does not offer protection."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/minute for 6 minutes; <i>effect </i>paralysis for 1 minute; <i>cure </i>1 save. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/minute for 6 minutes",
+                    "effect": "paralysis for 1 minute",
+                    "cure": "1 save. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

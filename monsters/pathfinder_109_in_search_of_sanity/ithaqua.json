@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any cold<br/><b>Organization</b> solitary (unique)<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Arctic Bound (Ex)</b> When Ithaqua is south of a planet\u2019s arctic circle or on a planet without a magnetic north, he is staggered.<br/><br/><b>Arctic Dreams (Su)</b> Any creature that has ever looked into Ithaqua\u2019s eyes or has committed cannibalism can be targeted by the Great Old One\u2019s arctic dreams regardless of distance, even across planar boundaries. If such a victim fails its save against Ithaqua\u2019s <i>nightmare</i> spell-like ability, the damage it takes from the ability is cold damage. Upon awakening, the victim is affected by a <i>geas/quest</i> to travel north beyond the arctic circle and, once there, await Ithaqua\u2019s arrival in a remote location. Whether or not the Great Old One comes to call is left to the GM to decide, but if Ithaqua does not visit within 1 month, the effects of the arctic dreams end.<br/><br/><b>Create Wendigo (Su)</b> By using <i>wind walk</i> with a creature or by affecting it with his unspeakable presence, Ithaqua afflicts the creature with an enhanced version of wendigo psychosis.<br/><br/><i>Wendigo Psychosis</i>: Curse\u2014unspeakable presence or wind walk; <i>save </i>Will DC 36; <i>onset </i>immediate; <i>frequency</i> 1/hour; <i>effect </i>1d6 Wis drain (minimum Wis 1). When a victim\u2019s Wisdom reaches 1, it seeks an individual of its race to kill and devour. After completing this act, the victim takes off at a run, and in 1d4 rounds sprints up into the sky at such a speed that its feet burn away into jagged stumps. The victim transforms into a wendigo (<i>Pathfinder RPG Bestiary 2</i> 281) over the next 1d4 minutes. Once the transformation is complete, the victim is effectively dead, replaced by a wendigo. <i>Miracle</i>, <i>true resurrection</i>, or <i>wish</i> can restore such a victim to life, yet doing so does not harm the new wendigo. The save DC is Charisma-based.<br/><br/><b>Great Old One Traits</b> Rules for Great Old One traits like immortality, insanity, his mythic abilities, and otherworldly insight, and the base rules for unspeakable presence can be found on page 306 of <i>Pathfinder RPG Bestiary 4</i>.<br/><br/><b>Howl (Su)</b> Once every 1d4 rounds as a swift action, Ithaqua can emit a forlorn howl that can be heard up to 10 miles away. Any who hear the howl must make succeed at a DC 36 Will save to avoid becoming shaken for 24 hours. Creatures within 360 feet of Ithaqua become panicked for 1d4+4 rounds, and those within 60 feet cower in fear for 1d4 rounds. Although this is a mind-affecting fear effect, immunity to fear does not offer full protection; a creature normally immune to fear must still succeed at a Will saving throw if within 60 feet to avoid becoming shaken for 1 hour (immunity to fear functions normally against Ithaqua\u2019s howl at greater distances). The save DC is Charisma-based.<br/><br/><b>Immortality (Ex)</b> If Ithaqua is slain, his body explodes in a burst of frozen wind that deals 20d6 points of cold damage to all creatures within a 60-foot spread (Reflex DC 42 half; the save DC is Constitution-based). Ithaqua reforms with full hit points 1 year later in another world\u2019s arctic region, but cannot return to the world on which he was slain via <i>interplanetary teleport</i> for another 10 years (or until outside agents allow for his travel to this world).<br/><br/><b>Immune to Storms (Ex)</b> Ithaqua is immune to the effects of any storm or storm-like condition unless he chooses otherwise. This includes being affected by high winds and by spells like <i>ice storm</i> and <i>storm of vengeance</i>.<br/><br/><b>Snow Vision (Ex)</b> Ithaqua can see perfectly well in snowy conditions, and does not take penalties on Perception checks when in snowy or blizzard conditions.<br/><br/><b>Unspeakable Presence (Su)</b> Failing a DC 36 Will saving throw against Ithaqua\u2019s unspeakable presence has two effects. First, it exposes the victim to Ithaqua\u2019s create wendigo ability (see page 82). In addition, the creature gains vulnerability to cold and loses any resistance or immunity to cold it had; this condition persists for 24 hours. A creature that lacks any immunity or resistance to cold also becomes chilled by the Great Old One\u2019s presence, taking a \u20134 penalty on ranged attacks, initiative checks, Reflex saving throws, and Dexteritybased skill checks, as well as a \u20134 penalty to Armor Class. These penalties last for 24 hours.<br/><br/><b>Wind Walk (Sp)</b> If Ithaqua pins a grappled foe, he can attempt to use <i>wind walk</i> with the grappled foe by using his spell-like ability\u2014he automatically succeeds at all concentration checks made to use <i>wind walk</i> in this case. If the victim fails to resist the spell, Ithaqua hurtles into the sky with it. Each round, a victim can attempt a new DC 36 Will saving throw to turn solid again, but at this point it falls if it cannot fly. A creature affected by Ithaqua\u2019s wind walk in this way might begin transformation into a wendigo (see Create Wendigo on page 82), and eventually Ithaqua strands the victim in some rural area, often miles or even worlds away from where it began. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Also known as the Wind-Walker, Ithaqua has visited countless worlds during his travels throughout the universe. Whether he is able to visit only worlds with arctic circles and magnetic poles, or whether those worlds have such conditions because the Great Old One visited them in their earliest days is unclear.<br/><br/>Ithaqua appears as a 50-foot-tall primitive humanoid with glowing red eyes and unnaturally long arms, yet his feet are always cloaked in blasts of thick snow-laden and freezing winds."
@@ -962,7 +952,97 @@
                     "name": "wind walk"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any cold",
+            "organization": "solitary (unique)",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Arctic Bound",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "When Ithaqua is south of a planet\u2019s arctic circle or on a planet without a magnetic north, he is staggered."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Arctic Dreams",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any creature that has ever looked into Ithaqua\u2019s eyes or has committed cannibalism can be targeted by the Great Old One\u2019s arctic dreams regardless of distance, even across planar boundaries. If such a victim fails its save against Ithaqua\u2019s <i>nightmare</i> spell-like ability, the damage it takes from the ability is cold damage. Upon awakening, the victim is affected by a <i>geas/quest</i> to travel north beyond the arctic circle and, once there, await Ithaqua\u2019s arrival in a remote location. Whether or not the Great Old One comes to call is left to the GM to decide, but if Ithaqua does not visit within 1 month, the effects of the arctic dreams end."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Create Wendigo",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "By using <i>wind walk</i> with a creature or by affecting it with his unspeakable presence, Ithaqua afflicts the creature with an enhanced version of wendigo psychosis.<br/><br/><i>Wendigo Psychosis</i>: Curse\u2014unspeakable presence or wind walk; <i>save </i>Will DC 36; <i>onset </i>immediate; <i>frequency</i> 1/hour; <i>effect </i>1d6 Wis drain (minimum Wis 1). When a victim\u2019s Wisdom reaches 1, it seeks an individual of its race to kill and devour. After completing this act, the victim takes off at a run, and in 1d4 rounds sprints up into the sky at such a speed that its feet burn away into jagged stumps. The victim transforms into a wendigo (<i>Pathfinder RPG Bestiary 2</i> 281) over the next 1d4 minutes. Once the transformation is complete, the victim is effectively dead, replaced by a wendigo. <i>Miracle</i>, <i>true resurrection</i>, or <i>wish</i> can restore such a victim to life, yet doing so does not harm the new wendigo. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Howl",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds as a swift action, Ithaqua can emit a forlorn howl that can be heard up to 10 miles away. Any who hear the howl must make succeed at a DC 36 Will save to avoid becoming shaken for 24 hours. Creatures within 360 feet of Ithaqua become panicked for 1d4+4 rounds, and those within 60 feet cower in fear for 1d4 rounds. Although this is a mind-affecting fear effect, immunity to fear does not offer full protection; a creature normally immune to fear must still succeed at a Will saving throw if within 60 feet to avoid becoming shaken for 1 hour (immunity to fear functions normally against Ithaqua\u2019s howl at greater distances). The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immortality",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "If Ithaqua is slain, his body explodes in a burst of frozen wind that deals 20d6 points of cold damage to all creatures within a 60-foot spread (Reflex DC 42 half; the save DC is Constitution-based). Ithaqua reforms with full hit points 1 year later in another world\u2019s arctic region, but cannot return to the world on which he was slain via <i>interplanetary teleport</i> for another 10 years (or until outside agents allow for his travel to this world)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immune to Storms",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Ithaqua is immune to the effects of any storm or storm-like condition unless he chooses otherwise. This includes being affected by high winds and by spells like <i>ice storm</i> and <i>storm of vengeance</i>."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Snow Vision",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Ithaqua can see perfectly well in snowy conditions, and does not take penalties on Perception checks when in snowy or blizzard conditions."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Unspeakable Presence",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Failing a DC 36 Will saving throw against Ithaqua\u2019s unspeakable presence has two effects. First, it exposes the victim to Ithaqua\u2019s create wendigo ability (see page 82). In addition, the creature gains vulnerability to cold and loses any resistance or immunity to cold it had; this condition persists for 24 hours. A creature that lacks any immunity or resistance to cold also becomes chilled by the Great Old One\u2019s presence, taking a \u20134 penalty on ranged attacks, initiative checks, Reflex saving throws, and Dexteritybased skill checks, as well as a \u20134 penalty to Armor Class. These penalties last for 24 hours."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Wind Walk",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "If Ithaqua pins a grappled foe, he can attempt to use <i>wind walk</i> with the grappled foe by using his spell-like ability\u2014he automatically succeeds at all concentration checks made to use <i>wind walk</i> in this case. If the victim fails to resist the spell, Ithaqua hurtles into the sky with it. Each round, a victim can attempt a new DC 36 Will saving throw to turn solid again, but at this point it falls if it cannot fly. A creature affected by Ithaqua\u2019s wind walk in this way might begin transformation into a wendigo (see Create Wendigo on page 82), and eventually Ithaqua strands the victim in some rural area, often miles or even worlds away from where it began. The save DC is Charisma-based."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Great Old One Traits",
+                "text": "Rules for Great Old One traits like immortality, insanity, his mythic abilities, and otherworldly insight, and the base rules for unspeakable presence can be found on page 306 of <i>Pathfinder RPG Bestiary 4</i>."
+            }
+        ]
     },
     "sources": [
         {

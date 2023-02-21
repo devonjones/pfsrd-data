@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (R\u2019lyeh)<br/><b>Organization</b> solitary (unique)<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Cleaving Claws (Ex)</b> A single attack from one of Cthulhu\u2019s claws can target all creatures in a 10-foot square. Make one attack roll; any creature in the area whose AC is equal to or lower than the result takes damage from the claw.<br/><br/><b>Dreams of Madness (Su)</b> When Cthulhu uses his nightmare spell-like ability on a creature with one or more ranks in a Craft or Perform skill, he also afflicts the creature with maddening dreams. In addition to the effect of nightmare, the target must succeed at a DC 40 Will save or contract a random insanity (<i>Pathfinder RPG GameMastery Guide</i> 250). This is a mind-affecting effect. A creature that already has an insanity is immune to this ability. The save DC is Charisma-based.<br/><br/><b>Greater Starflight (Su)</b> Cthulhu can survive in the void of outer space, and flies through outer space at incredible speeds. Although the exact travel time will vary from one trip to the next, a trip within a solar system normally takes Cthulhu 2d6 hours, and a trip beyond normally takes 2d6 days (or more, at the GM\u2019s discretion).<br/><br/><b>Immortality (Ex)</b> If Cthulhu is killed, his body immediately fades away into a noxious cloud of otherworldly vapor that fills an area out to his reach. This cloud blocks vision as <i>obscuring mist</i>, but can\u2019t be dispersed by any amount of wind. Any creature in this area must succeed at a DC 45 Fortitude save or be nauseated for as long as it remains in the cloud and for an additional 1d10 rounds after it leaves the area. Cthulhu returns to life after 2d6 rounds, manifesting from the cloud and restored to life via <i>true resurrection</i>, but is staggered for 2d6 rounds (nothing can remove this staggered effect). If slain again while he is staggered from this effect, Cthulhu reverts to vapor form again and his essence fades away after 2d6 rounds, returning to his tomb in R\u2019lyeh until he is released again. The save DC is Constitution-based.<br/><br/><b>Non-Euclidean (Ex)</b> Cthulhu does not exist wholly in the physical world, and space and time strain against his presence. This grants Cthulhu a deflection bonus to AC and a racial bonus on Reflex saves equal to his Charisma modifier (+12). His apparent and actual position are never quite the same, granting him a 50% miss chance against all attacks. <i>True seeing</i> can defeat this miss chance, but any creature that looks upon Cthulhu while under the effects of <i>true seeing</i> must succeed at a DC 40 Will save or be afflicted by a random insanity (this is a mind-affecting effect). The save DC is Charisma-based.<br/><br/><b>Tentacles (Ex)</b> Cthulhu\u2019s tentacles are a primary attack.<br/><br/><b>Unspeakable Presence (Su)</b> Failing a DC 40 Will save against Cthulhu\u2019s unspeakable presence causes the victim to immediately die of fright. This is a death and fear effect. A creature immune to fear that fails its save against Cthulhu\u2019s unspeakable presence is staggered for 1d6 rounds instead of killed. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Known to some as the Dreamer in the Deep, Great Cthulhu is the mightiest of the Great Old Ones. Cthulhu is represented often in artwork\u2014particularly in sculpture, painting, and poetry, for his influence is particularly strong among such sensitive and creative minds. In these eldritch works of art, he is depicted or described as having a vaguely humanoid frame, but with immense draconic wings and an octopus-shaped head. His actual form is somewhat fluid\u2014the Great Old One can shift and reshape his exact countenance as he wills, allowing him to occupy a smaller space than one might expect for a creature that stands over 100 feet tall.<br/><br/>It is fortunate indeed that Cthulhu is currently imprisoned on a distant planet within the sunken city of R\u2019lyeh. There, the Great Old One slumbers away the eons in a state neither quite dead nor living, held in stasis by ancient magic and the potency of the <i>Elder Sign</i>, yet at times the city rises from the sea and the doors to his tomb open, granting Cthulhu limited mobility before he must return to his tomb."
@@ -1015,7 +1005,73 @@
                     "name": "otherworldly insight"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (R\u2019lyeh)",
+            "organization": "solitary (unique)",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Cleaving Claws",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A single attack from one of Cthulhu\u2019s claws can target all creatures in a 10-foot square. Make one attack roll; any creature in the area whose AC is equal to or lower than the result takes damage from the claw."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dreams of Madness",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "When Cthulhu uses his nightmare spell-like ability on a creature with one or more ranks in a Craft or Perform skill, he also afflicts the creature with maddening dreams. In addition to the effect of nightmare, the target must succeed at a DC 40 Will save or contract a random insanity (<i>Pathfinder RPG GameMastery Guide</i> 250). This is a mind-affecting effect. A creature that already has an insanity is immune to this ability. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Greater Starflight",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Cthulhu can survive in the void of outer space, and flies through outer space at incredible speeds. Although the exact travel time will vary from one trip to the next, a trip within a solar system normally takes Cthulhu 2d6 hours, and a trip beyond normally takes 2d6 days (or more, at the GM\u2019s discretion)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immortality",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "If Cthulhu is killed, his body immediately fades away into a noxious cloud of otherworldly vapor that fills an area out to his reach. This cloud blocks vision as <i>obscuring mist</i>, but can\u2019t be dispersed by any amount of wind. Any creature in this area must succeed at a DC 45 Fortitude save or be nauseated for as long as it remains in the cloud and for an additional 1d10 rounds after it leaves the area. Cthulhu returns to life after 2d6 rounds, manifesting from the cloud and restored to life via <i>true resurrection</i>, but is staggered for 2d6 rounds (nothing can remove this staggered effect). If slain again while he is staggered from this effect, Cthulhu reverts to vapor form again and his essence fades away after 2d6 rounds, returning to his tomb in R\u2019lyeh until he is released again. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Non-Euclidean",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Cthulhu does not exist wholly in the physical world, and space and time strain against his presence. This grants Cthulhu a deflection bonus to AC and a racial bonus on Reflex saves equal to his Charisma modifier (+12). His apparent and actual position are never quite the same, granting him a 50% miss chance against all attacks. <i>True seeing</i> can defeat this miss chance, but any creature that looks upon Cthulhu while under the effects of <i>true seeing</i> must succeed at a DC 40 Will save or be afflicted by a random insanity (this is a mind-affecting effect). The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Tentacles",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Cthulhu\u2019s tentacles are a primary attack."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Unspeakable Presence",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Failing a DC 40 Will save against Cthulhu\u2019s unspeakable presence causes the victim to immediately die of fright. This is a death and fear effect. A creature immune to fear that fails its save against Cthulhu\u2019s unspeakable presence is staggered for 1d6 rounds instead of killed. The save DC is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

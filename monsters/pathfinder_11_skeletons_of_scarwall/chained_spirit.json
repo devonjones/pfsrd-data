@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary plus up to 4 spirit anchors<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Chain Spirit (Su)</b> As a standard action once per day, a chained spirit can attempt to chain any evil-aligned corporeal creature with an Intelligence score of 3 or higher that it can detect via spiritsense; it need not have line of sight or line of effect to such a creature. The targeted evil creature to must succeed at a DC 25 Will save or take 1d8 points of Charisma drain. On each successful attack, the chained spirit gains 5 temporary hit points. Any creature targeted by this ability is immediately aware of some malevolence attempting to take control of it. If a creature\u2019s Charisma score is drained to 0 by this attack, its fate depends on its Hit Dice. If the victim has half the Hit Dice or fewer of the chained spirit (8 Hit Dice for most chained spirits), it is slain by the attack. If the victim has more than 8 Hit Dice, it becomes a spirit anchor linked to the chained spirit (see below). Even though a chained spirit can use this ability once per day, it can create only one spirit anchor per week. In addition, a chained spirit can use this ability only if it currently has three or fewer spirit anchors, and it can never have more than four spirit anchors. A creature with more than half the chained spirit\u2019s Hit Dice whose Charisma score is drained to 0 by this attack and who doesn\u2019t become a spirit anchor is merely driven unconscious, as per normal for catastrophic Charisma drain. The save DC is Charisma-based. <br/><br/><b></b> Numerous chains extend from a chained spirit. A number of these (one for every spirit anchor currently tethered to the chained spirit) are corporeal and can make melee attacks. These corporeal chains are treated as evil, magical, <a href=\"MagicWondrousDisplay.aspx?FinalName=Ghost%20Touch\" style=\"text-decoration:underline\"><i>ghost touch</i></a> weapons and deal bludgeoning damage in addition to Charisma drain. Each chain is treated as if wielded one-handed by a creature with a Strength score of 25. A sundered chain automatically reforms 1 round later. <br/><br/><b>Charisma Drain (Su)</b> Any creature hit by a chained spirit\u2019s chains or incorporeal touch attack must succeed at a DC 25 Will save or take Charisma drain (1 point if struck by a chain, or 1d6 points if struck by a touch attack). The save DC is Charisma-based. <br/><br/><b>Create Spawn (Su)</b> Any humanoid slain by a chained spirit becomes a <a href=\"MonsterDisplay.aspx?ItemName=Spectre\" style=\"text-decoration:underline\">spectre</a> in 1d4 rounds. These spawn are under the command of the chained spirit that created them and remain enslaved until its death. They don\u2019t have any of the abilities they had in life. <br/><br/><b>Spectral Bindings (Su)</b> A chained spirit is extremely mobile, with only one major hindrance: no matter how far it moves on its turn, as long as it has at least one spirit anchor, it automatically returns to its starting place when its turn ends. This immediate return does not count as an action and does not provoke attacks of opportunity, as the spirit simply reappears back in its original position. In essence, the chained spirit is eternally confined to a single square throughout its existence except the distance it can travel in a single round before returning to its starting position. If another creature occupies the space it has left, that creature is shunted to the closest available square. If a solid object occupies its starting square, the spirit\u2019s incorporeal nature allows it to return regardless. Even a force effect cannot thwart it as it simply reappears within the square, though if that square is surrounded by a force effect with no exit, the chained spirit is effectively trapped. Spectral Sight (Su) A chained spirit can see and hear through the senses of any of its spirit anchors whenever it wishes, just as if it were using both effects of clairaudience/clairvoyance. <br/><br/><b>Spiritsense (Su)</b> A chained spirit can detect both the living and the undead. It can detect living creatures within 100 feet, just as if it had <a href=\"UMR.aspx?ItemName=Blindsight\" style=\"text-decoration:underline\">blindsight</a>. It can also sense the dead, as per <a href=\"SpellDisplay.aspx?ItemName=detect%20undead\" style=\"text-decoration:underline\"><i>detect undead</i></a>, to a range of 500 feet."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A chained spirit is the tormented soul of one who was charged, cursed, or honor-bound to guard a certain place or object, only to be slain in the course of such duty. Such a dishonored spirit returns as a misty approximation of its living form, except now burdened by loops of constricting chains and inescapable locks, all representing its bonds of duty. Reaching out with these chains, these tormented undead claim allies, binding other unwilling sentinels to the same charge with which they are eternally cursed.<br/><br/> Among the rarest known manifestations of undead, the chained spirit can exist only in an area of extreme misery combined with a potent source of necromantic energy. In the case of Scarwall, the castle\u2019s history of violence, combined with the vengeful attention of Zon-Kuthon, made the castle the perfect cradle for the generation of a chained spirit. Others may well exist on Golarion, or could yet come to manifest, but at this point, the chained spirit of Scarwall may be the only one of its kind."
@@ -442,7 +432,65 @@
                     "name": "spectral bindings"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary plus up to 4 spirit anchors",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Chain Spirit",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action once per day, a chained spirit can attempt to chain any evil-aligned corporeal creature with an Intelligence score of 3 or higher that it can detect via spiritsense; it need not have line of sight or line of effect to such a creature. The targeted evil creature to must succeed at a DC 25 Will save or take 1d8 points of Charisma drain. On each successful attack, the chained spirit gains 5 temporary hit points. Any creature targeted by this ability is immediately aware of some malevolence attempting to take control of it. If a creature\u2019s Charisma score is drained to 0 by this attack, its fate depends on its Hit Dice. If the victim has half the Hit Dice or fewer of the chained spirit (8 Hit Dice for most chained spirits), it is slain by the attack. If the victim has more than 8 Hit Dice, it becomes a spirit anchor linked to the chained spirit (see below). Even though a chained spirit can use this ability once per day, it can create only one spirit anchor per week. In addition, a chained spirit can use this ability only if it currently has three or fewer spirit anchors, and it can never have more than four spirit anchors. A creature with more than half the chained spirit\u2019s Hit Dice whose Charisma score is drained to 0 by this attack and who doesn\u2019t become a spirit anchor is merely driven unconscious, as per normal for catastrophic Charisma drain. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Charisma Drain",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any creature hit by a chained spirit\u2019s chains or incorporeal touch attack must succeed at a DC 25 Will save or take Charisma drain (1 point if struck by a chain, or 1d6 points if struck by a touch attack). The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Create Spawn",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any humanoid slain by a chained spirit becomes a <a href=\"MonsterDisplay.aspx?ItemName=Spectre\" style=\"text-decoration:underline\">spectre</a> in 1d4 rounds. These spawn are under the command of the chained spirit that created them and remain enslaved until its death. They don\u2019t have any of the abilities they had in life. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spectral Bindings",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A chained spirit is extremely mobile, with only one major hindrance: no matter how far it moves on its turn, as long as it has at least one spirit anchor, it automatically returns to its starting place when its turn ends. This immediate return does not count as an action and does not provoke attacks of opportunity, as the spirit simply reappears back in its original position. In essence, the chained spirit is eternally confined to a single square throughout its existence except the distance it can travel in a single round before returning to its starting position. If another creature occupies the space it has left, that creature is shunted to the closest available square. If a solid object occupies its starting square, the spirit\u2019s incorporeal nature allows it to return regardless. Even a force effect cannot thwart it as it simply reappears within the square, though if that square is surrounded by a force effect with no exit, the chained spirit is effectively trapped. Spectral Sight (Su) A chained spirit can see and hear through the senses of any of its spirit anchors whenever it wishes, just as if it were using both effects of clairaudience/clairvoyance. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spiritsense",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A chained spirit can detect both the living and the undead. It can detect living creatures within 100 feet, just as if it had <a href=\"UMR.aspx?ItemName=Blindsight\" style=\"text-decoration:underline\">blindsight</a>. It can also sense the dead, as per <a href=\"SpellDisplay.aspx?ItemName=detect%20undead\" style=\"text-decoration:underline\"><i>detect undead</i></a>, to a range of 500 feet."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "",
+                "text": "Numerous chains extend from a chained spirit. A number of these (one for every spirit anchor currently tethered to the chained spirit) are corporeal and can make melee attacks. These corporeal chains are treated as evil, magical, <a href=\"MagicWondrousDisplay.aspx?FinalName=Ghost%20Touch\" style=\"text-decoration:underline\"><i>ghost touch</i></a> weapons and deal bludgeoning damage in addition to Charisma drain. Each chain is treated as if wielded one-handed by a creature with a Strength score of 25. A sundered chain automatically reforms 1 round later. "
+            }
+        ]
     },
     "sources": [
         {

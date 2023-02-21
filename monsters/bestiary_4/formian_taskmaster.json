@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm or temperate land or underground<br/><b>Organization</b> solitary, work crew (1 plus 6\u201312 workers), band (1 plus 3\u201315 workers and 5\u20138 warriors), embassy (2\u20136)<br/><b>Treasure</b> standard (10 darts, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Mental Motivator (Su)</b> A formian taskmaster can inspire competence or inspire courage as a 7th-level bard (typically 20 rounds/day). The taskmaster\u2019s performance is purely mental and only affects formians from its own hive within telepathic range.<br/><br/><b>Poison (Ex)</b> Sting\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dexterity; <i>cure </i>2 consecutive saves.<br/><br/><b>Spells</b> A formian taskmaster casts spells as a 7th-level bard. It favors enchantment and illusion spells."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Formian taskmasters are merchants, traders, diplomats, and spies, and particularly talented taskmasters may even advise the queen. Taskmasters can often be found outside the hive engaging in commerce or routine diplomatic missions. While traveling, a taskmaster is usually accompanied by 3\u20135 workers and at least 5 warriors.<br/><br/>When dealing with other creatures, formians recognize that their telepathy can be offputting and use normal speech, although their mandibles are not well suited for the task and their voices are often hoarse and difficult to understand.<br/><br/>Like myrmarchs, taskmasters are highly competitive and take great pride in their successes. Notable accomplishments are carved into their carapaces and highlighted with the use of bright inks, precious metals, or gems. Formian society is largely free of the crime that is common in other humanoid societies, but formians do have occasional duels within a caste.<br/><br/>Two taskmasters might have a duel over promotions, a trade route, or an insult. These duels are rarely lethal for fear of weakening the hive, and taskmasters who are too aggressive attract the wrong kind of attention from the myrmarchs. Dueling victories are often recorded on taskmasters\u2019 carapaces alongside their other major accomplishments."
@@ -641,7 +631,57 @@
                     "name": "mental motivator"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm or temperate land or underground",
+            "organization": "solitary, work crew (1 plus 6\u201312 workers), band (1 plus 3\u201315 workers and 5\u20138 warriors), embassy (2\u20136)",
+            "treasure": "standard (10 darts, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Mental Motivator",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A formian taskmaster can inspire competence or inspire courage as a 7th-level bard (typically 20 rounds/day). The taskmaster\u2019s performance is purely mental and only affects formians from its own hive within telepathic range."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dexterity; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 18",
+                        "save_type": "Fort",
+                        "dc": 18
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Dexterity",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A formian taskmaster casts spells as a 7th-level bard. It favors enchantment and illusion spells."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Dimension of Dreams)<br/><b>Organization</b> solitary, pair, or nest (3\u20136)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Dream Passage (Su)</b> A dream naga can physically enter dreamscapes in the Dimension of Dreams (<i>Pathfinder RPG Occult Adventures</i> 241) and dwell within those dreams without disorientation or other debilitating effects. The naga can also attempt impossible feats while in a dreamscape in its physical body, and it gains the bonuses from the Lucid Dreamer feat when it does. <br/><br/><b>Dreamsight (Ex)</b> Just by looking at a dreaming creature or when in a dreamscape in the Dimension of Dreams, a dream naga gains a general sense of the nature of the dream. While the dream naga\u2019s vision is not detailed, it gets a general impression of the dream\u2019s themes and the dreamer\u2019s current emotional state. <br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Will DC 21; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> daze 1 round; <i>cure</i> 1 save. <br/><br/><b>Spells</b> A dream naga casts spells as a 7th-level psychic (<i>Pathfinder RPG Occult Adventures</i> 60)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Inhabitants of the Dimension of Dreams, dream nagas fly through dreamscapes as part of an unknowable plan to alter the destiny of the multiverse. Most creatures that encounter dream nagas do so while they sleep, as their dreams provide convenient shortcuts for the dream nagas\u2019 paths through the various dreamscapes. Even after these dreamers awaken, the sight of these beautiful creatures remains ingrained in their minds. Many cultures consider seeing a dream naga a sign of a special destiny. But when a dreaming creature gains the full attention of a dream naga, it is no mere chance encounter. For convoluted and arcane reasons that only they truly understand, dream nagas enter dreams and interact with the sleepers\u2014sometimes relaying knowledge to the sleepers, and other times tormenting them. Such dream encounters often don\u2019t make sense to the dreaming creature until some point far in the future, if ever."
@@ -547,7 +537,65 @@
                     "name": "dream passage"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Dimension of Dreams)",
+            "organization": "solitary, pair, or nest (3\u20136)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dream Passage",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A dream naga can physically enter dreamscapes in the Dimension of Dreams (<i>Pathfinder RPG Occult Adventures</i> 241) and dwell within those dreams without disorientation or other debilitating effects. The naga can also attempt impossible feats while in a dreamscape in its physical body, and it gains the bonuses from the Lucid Dreamer feat when it does. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dreamsight",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Just by looking at a dreaming creature or when in a dreamscape in the Dimension of Dreams, a dream naga gains a general sense of the nature of the dream. While the dream naga\u2019s vision is not detailed, it gets a general impression of the dream\u2019s themes and the dreamer\u2019s current emotional state. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Will DC 21; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> daze 1 round; <i>cure</i> 1 save. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Will DC 21",
+                        "save_type": "Will",
+                        "dc": 21
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "daze 1 round",
+                    "cure": "1 save."
+                }
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A dream naga casts spells as a 7th-level psychic (<i>Pathfinder RPG Occult Adventures</i> 60)."
+            }
+        ]
     },
     "sources": [
         {

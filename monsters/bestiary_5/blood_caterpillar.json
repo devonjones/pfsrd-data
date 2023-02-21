@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or warm forests<br/><b>Organization</b> solitary, pair, or clutch (3-12)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Bristles (Ex)</b> A creature that attacks a caterpillar with a natural attack or non-reach melee weapon must succeed at a DC 16 Reflex save or take damage as if the caterpillar had struck the creature with its bristles. The save DC is Dexterity-based and includes a +4 racial bonus.<br/><br/><b>Poison (Ex)</b> Bristles\u2014injury; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Strength; <i>cure</i> 1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Blood caterpillars are among the largest of giant caterpillars. These massive vermin draw sustenance from rotting meat in the same way many butterflies eat rotting fruit. Behind their mandibles are spinnerets that allow them to manipulate silk, which the caterpillars can discharge to spin webs and immobilize their prey. Their venom weakens the muscles of creatures exposed to it, aiding the caterpillars in restraining and devouring even large, strong, and agile prey."
@@ -264,7 +254,49 @@
                     "name": "compression"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or warm forests",
+            "organization": "solitary, pair, or clutch (3-12)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Bristles",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A creature that attacks a caterpillar with a natural attack or non-reach melee weapon must succeed at a DC 16 Reflex save or take damage as if the caterpillar had struck the creature with its bristles. The save DC is Dexterity-based and includes a +4 racial bonus."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bristles\u2014injury; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Strength; <i>cure</i> 1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bristles\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Strength",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

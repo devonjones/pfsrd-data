@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, pair, or gang (3\u20136)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Bolster Disease (Su)</b> A creature bitten by a ghole must succeed at a DC 23 Fortitude save or any disease it currently suffers from is bolstered. A disease bolstered in this way has its frequency doubled (so a disease that normally has a frequency of 1/day has its effects applied once every 12 hours) and can be cured only by magic. The bubonic plague carried by a ghole automatically gains these advantages. The save DC is Constitution-based. <br/><br/><b>Disease (Ex)</b> Bubonic Plague: Bite or claw\u2014 injury; <i>save</i> Fort DC 23; <i>frequency</i> 2/day; <i>effect</i> 1d4 Con damage and 1 Cha damage and target is fatigued; <i>cure</i> \u2014. <br/><br/><b>Powerful Bite (Ex)</b> A ghole\u2019s bite attack always applies 1-1/2 times its Strength modifier to damage rolls and threatens a critical hit on a roll of 19\u201320. When a ghole bites an object, its bite treats the object as having a hardness of 5 less than the object\u2019s actual hardness rating. <br/><br/><b>Savage the Sick (Ex)</b> Gholes are vicious when attacking a diseased foe. Against diseased targets, a ghole gains a +2 morale bonus on attack rolls and automatically adds its sneak attack damage to any damage it deals. <br/><br/><b>Scent Sickness (Ex)</b> A ghole has the scent ability against diseased creatures"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Gholes are foul denizens of the wilderness that feed upon rotten meat. Their ability to restore flesh to even the most ancient of skeletal remains allows them to harvest flesh from ruins long forgotten by the living. Many gholes keep their favorite skeletons handy to repeat beloved meals, while others hoard ancient skeletons and savor the flavor of restored flesh in a grisly mockery of a gourmand\u2019s appreciation of well aged wine or cheese. Many attempt to capture sick victims alive only to imprison them\u2014sepulchers or crypts make for favorite prisons\u2014so they perish of their sickness and thus provide the most delicious meal possible for the foul creature. <br/><br/>A typical ghole is 6 feet tall and weighs 250 pounds."
@@ -455,7 +445,73 @@
                     "name": "change shape"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary, pair, or gang (3\u20136)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Bolster Disease",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A creature bitten by a ghole must succeed at a DC 23 Fortitude save or any disease it currently suffers from is bolstered. A disease bolstered in this way has its frequency doubled (so a disease that normally has a frequency of 1/day has its effects applied once every 12 hours) and can be cured only by magic. The bubonic plague carried by a ghole automatically gains these advantages. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bubonic Plague: Bite or claw\u2014 injury; <i>save</i> Fort DC 23; <i>frequency</i> 2/day; <i>effect</i> 1d4 Con damage and 1 Cha damage and target is fatigued; <i>cure</i> \u2014. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Bubonic Plague",
+                    "affliction_type": "Disease; Bite or claw\u2014 injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 23",
+                        "save_type": "Fort",
+                        "dc": 23
+                    },
+                    "frequency": "2/day",
+                    "effect": "1d4 Con damage and 1 Cha damage and target is fatigued",
+                    "cure": "\u2014."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Powerful Bite",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A ghole\u2019s bite attack always applies 1-1/2 times its Strength modifier to damage rolls and threatens a critical hit on a roll of 19\u201320. When a ghole bites an object, its bite treats the object as having a hardness of 5 less than the object\u2019s actual hardness rating. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Savage the Sick",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Gholes are vicious when attacking a diseased foe. Against diseased targets, a ghole gains a +2 morale bonus on attack rolls and automatically adds its sneak attack damage to any damage it deals. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Scent Sickness",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A ghole has the scent ability against diseased creatures"
+            }
+        ]
     },
     "sources": [
         {

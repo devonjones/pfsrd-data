@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, pair, or pride (3\u20138)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Create Undead (Su)</b> Up to three times per day, a nekomata can turn a dead body into an undead creature by licking it as a standard action. A skeleton rises as a skeletal champion, while a body with flesh animates as a juju zombie. Undead created in this way are free-willed. <br/><br/><b>Disease (Su)</b> Nekomata madness: Bite\u2014injury; <i>save</i> Fort DC 17; <i>onset</i> 1d6 hours; <i>frequency</i> 1/day; <i>effect</i> 1 Con damage and 1d4 Wis damage; <i>cure</i> 2 consecutive saves. <br/><br/><b>Perfect Copy (Su)</b> When a nekomata uses change shape, it can assume the specific appearance of the last humanoid it damaged with its bite attack."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "According to legend, when a house cat lives beyond its normally allotted years, it changes. The cat\u2019s tail splits and the beast becomes a malevolent spirit capable of casting evil spells and taking on humanoid form. It uses these abilities to prey upon mortals, starting with the family that once cared for the cat. <br/><br/>Nekomatas are cruel, vindictive spirit-creatures that seek to destroy households from within by sowing fear and discord, breaking bonds of love and friendship, and spreading mental and physical illness. A nekomata often starts its campaign of destruction by secretly killing and eating a household servant and then taking on the servant\u2019s appearance. In such a guise, the creature can infiltrate the home and begin working all kinds of mischief, using its innate magical abilities to terrorize the home\u2019s residents, often while enjoying all the comforts that home provides. Ultimately, the nekomata\u2019s goal is to ruin the health and reputation of the head of the house before killing every member of the family. Once its vile work is done, the creature moves on to find another home to destroy. In its true form, a nekomata appears as a two-tailed house cat about 7 feet long and weighing 200 pounds."
@@ -458,7 +448,58 @@
                     "name": "perfect copy"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary, pair, or pride (3\u20138)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Create Undead",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Up to three times per day, a nekomata can turn a dead body into an undead creature by licking it as a standard action. A skeleton rises as a skeletal champion, while a body with flesh animates as a juju zombie. Undead created in this way are free-willed. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Nekomata madness: Bite\u2014injury; <i>save</i> Fort DC 17; <i>onset</i> 1d6 hours; <i>frequency</i> 1/day; <i>effect</i> 1 Con damage and 1d4 Wis damage; <i>cure</i> 2 consecutive saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Nekomata madness",
+                    "affliction_type": "Disease; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "onset": "1d6 hours",
+                    "frequency": "1/day",
+                    "effect": "1 Con damage and 1d4 Wis damage",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Perfect Copy",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "When a nekomata uses change shape, it can assume the specific appearance of the last humanoid it damaged with its bite attack."
+            }
+        ]
     },
     "sources": [
         {

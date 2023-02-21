@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm badlands or ruins<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Aura of Resplendence (Sp)</b> A chicome constantly radiates an aura of <a href=\"SpellDisplay.aspx?ItemName=plant%20growth\" style=\"text-decoration:underline\"><i>plant growth</i></a>, as the spell, providing enrichment to plants within a half-mile radius. The chicome can suppress or resume the aura as a free action. <br/><br/><b>Natural Form (Sp)</b> Once per day as a standard action, a chicome can take the form of any animal, dragon, magical beast, or vermin with 18 Hit Dice or fewer. This functions as if using <a href=\"SpellDisplay.aspx?ItemName=beast%20shape%20IV\" style=\"text-decoration:underline\"><i>beast shape IV</i></a>, <a href=\"SpellDisplay.aspx?ItemName=form%20of%20the%20dragon%20III\" style=\"text-decoration:underline\"><i>form of the dragon III</i></a>, <a href=\"SpellDisplay.aspx?ItemName=magical%20beast%20shape\" style=\"text-decoration:underline\"><i>magical beast shape</i></a>, or <a href=\"SpellDisplay.aspx?ItemName=vermin%20shape%20II\" style=\"text-decoration:underline\"><i>vermin shape II</i></a>, as appropriate, and otherwise counts as a druid\u2019s <a href=\"ClassDisplay.aspx?ItemName=Druid\" style=\"text-decoration:underline\">wild shape</a> ability for the purposes of abilities and prerequisites. The chicome can maintain this form indefinitely and can end the transformation as a free action. <br/><br/><b>Poison (Ex)</b> Injury\u2014bite; <i>save</i> Fort DC 27; <i>frequency</i> 1/minute for 10 minutes; <i>effect</i> 2d4 Str; <i>cure</i> 2 consecutive saves. <br/><br/><b>Spells</b> A chicome casts spells as an 18th-level druid, but cannot swap out prepared spells to cast summon spells. <br/><br/><b>Wild Empathy (Su)</b> This works like the druid\u2019s wild empathy class feature, except the chicome has a +6 racial bonus on the check. The chicome\u2019s effective druid level is 18 for the purpose of determining its total modifier to the check."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Chicomes are a powerful but gentle variety of couatl\u2014 winged serpentine outsiders who act as agents of lawful good deities\u2014whose purpose is to reestablish nature in destroyed and ravaged lands, especially those that have been recently cleansed of evil. Chicomes accomplish this by way of powerful druidic magic and the cloud of restorative pollen and dew that constantly drifts from their wings. Like other couatls, chicomes have varicolored feathers and beautiful, glossy scales. The couatls' wing feathers are typically shades of green or brown, but their crests are always a brilliant crimson. Like for other couatls, the feathers of chicomes are incredibly powerful magic items when bestowed upon chosen mortals. Such a freely given feather can be used as the material component for a <a href=\"SpellDisplay.aspx?ItemName=planar%20ally\" style=\"text-decoration:underline\"><i>planar ally</i></a> spell. In addition, if buried in at least 6 inches of soil and undisturbed for 24 hours, the feather can be used as the material component to cast a <a href=\"SpellDisplay.aspx?ItemName=hallow\" style=\"text-decoration:underline\"><i>hallow</i></a> spell; the spell effect tied to the hallowed site is always the enrichment version of <a href=\"SpellDisplay.aspx?ItemName=plant%20growth\" style=\"text-decoration:underline\"><i>plant growth</i></a>. By using a chicome feather in this way, the caster need not expend the typical payment of gold or other valuables required by the spell.<br/><br/> A typical chicome is 40 feet long with a wingspan of 30 feet and weighs 5,500 pounds."
@@ -1097,7 +1087,73 @@
                     "name": "wild empathy +32"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm badlands or ruins",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Aura of Resplendence",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "A chicome constantly radiates an aura of <a href=\"SpellDisplay.aspx?ItemName=plant%20growth\" style=\"text-decoration:underline\"><i>plant growth</i></a>, as the spell, providing enrichment to plants within a half-mile radius. The chicome can suppress or resume the aura as a free action. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Natural Form",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "Once per day as a standard action, a chicome can take the form of any animal, dragon, magical beast, or vermin with 18 Hit Dice or fewer. This functions as if using <a href=\"SpellDisplay.aspx?ItemName=beast%20shape%20IV\" style=\"text-decoration:underline\"><i>beast shape IV</i></a>, <a href=\"SpellDisplay.aspx?ItemName=form%20of%20the%20dragon%20III\" style=\"text-decoration:underline\"><i>form of the dragon III</i></a>, <a href=\"SpellDisplay.aspx?ItemName=magical%20beast%20shape\" style=\"text-decoration:underline\"><i>magical beast shape</i></a>, or <a href=\"SpellDisplay.aspx?ItemName=vermin%20shape%20II\" style=\"text-decoration:underline\"><i>vermin shape II</i></a>, as appropriate, and otherwise counts as a druid\u2019s <a href=\"ClassDisplay.aspx?ItemName=Druid\" style=\"text-decoration:underline\">wild shape</a> ability for the purposes of abilities and prerequisites. The chicome can maintain this form indefinitely and can end the transformation as a free action. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Injury\u2014bite; <i>save</i> Fort DC 27; <i>frequency</i> 1/minute for 10 minutes; <i>effect</i> 2d4 Str; <i>cure</i> 2 consecutive saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Injury\u2014bite",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 27",
+                        "save_type": "Fort",
+                        "dc": 27
+                    },
+                    "frequency": "1/minute for 10 minutes",
+                    "effect": "2d4 Str",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Wild Empathy",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "This works like the druid\u2019s wild empathy class feature, except the chicome has a +6 racial bonus on the check. The chicome\u2019s effective druid level is 18 for the purpose of determining its total modifier to the check."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A chicome casts spells as an 18th-level druid, but cannot swap out prepared spells to cast summon spells. "
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests<br/><b>Organization</b> solitary, pair, or clutch (3\u20135)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Sting\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/minute for 10 minutes; <i>effect </i>sleep for 1 minute; <i>cure </i>1 save. The save DC is Constitution-based and includes a +2 racial bonus."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Pseudodragons are tiny cousins of true dragons, and are playful but shy. They often only vocalize in chirps, hisses, growls, and purrs, but can communicate telepathically with any intelligent creature. If approached peacefully and offered food, they are usually willing to share information about what they\u2019ve seen in their territory, but threats or violence make them flee.<br/><br/>Pseudodragons are carnivores, devouring insects, rodents, small birds, and snakes, though they sometimes eat eggs, and most also enjoy butter, cheese, and fish. They either hunt on the ground like lizards or look for prey on the wing like a raptor. As smart as a typical humanoid, they do not enjoy being treated as pets and prefer being treated as friends. They are wary of evil folk but can bond with sorcerers and wizards as familiars, and some have befriended druids and rangers or partnered with good dragons as scouts. Pseudodragons will serve as familiars if they approve of a spellcaster\u2019s personality (and if the spellcaster takes the Improved Familiar feat), but often also bond with those whose company they enjoy or who have proven themselves true friends. A pseudodragon might follow another character in this manner for days, weeks, years, or even a lifetime if the creature is treated well, provided with food, and generally well-loved.<br/><br/>Upon reaching adulthood, a pseudodragon\u2019s body is about 1 foot long with a 2-foot tail, and weighs about 7 pounds. A pseudodragon egg is the size of a chicken egg, but leathery and spotted brown, and a mating female lays 2\u20135 eggs every spring. A clutch of pseudodragons (the collective noun\u2014not to be confused with pseudodragons from the same brood of eggs) usually consists of a mated pair and several near-adult offspring."
@@ -341,7 +331,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests",
+            "organization": "solitary, pair, or clutch (3\u20135)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/minute for 10 minutes; <i>effect </i>sleep for 1 minute; <i>cure </i>1 save. The save DC is Constitution-based and includes a +2 racial bonus.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/minute for 10 minutes",
+                    "effect": "sleep for 1 minute",
+                    "cure": "1 save. The save DC is Constitution-based and includes a +2 racial bonus."
+                }
+            }
+        ]
     },
     "sources": [
         {

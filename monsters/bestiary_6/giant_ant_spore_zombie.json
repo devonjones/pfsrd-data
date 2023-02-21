@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or bloom (2\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Sting\u2014injury; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d2 Str damage; <i>cure</i> 1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "There are certain evil fungal creatures (such as fungus queens [see page 130], but also rare fungal growths or extraplanar blights upon the wild) that can infest vermin with spores that have been infused with sinister power and negative energy. These foul spores grow quickly in the body of a dead vermin, eventually bursting from its head to form disturbing, antler-like growths. At the same time, the spores animate the vermin as an intelligent undead creature. <br/><br/>These are then known as spore zombies."
@@ -330,7 +320,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or bloom (2\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d2 Str damage; <i>cure</i> 1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Str damage",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

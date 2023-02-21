@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or infestation (2\u20135 swarms)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disease (Su)</b> Swarm\u2014injury; <i>save</i> Fort DC 16; <i>onset</i> 1d3 days; <i>frequency</i> 1/day; <i>effect</i> 1d3 Dex damage and 1d3 Con damage; <i>cure</i> 2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A hivemind consists of a swarm of smaller creatures whose individual minds have supernaturally bonded into one to become a single, collective intelligence. Hiveminds often occur in swarms that have existed for generations and that have dwelled in areas of potent magical influence, particularly areas of strong psychic magic. Over time, the swarm learns to work together in more intelligent ways to achieve its goals, and it eventually evolves a cohesive mind. Of course, this evolution can be hastened by direct intervention of potent magic (typically something on the level of a <i>miracle</i> or <i>wish</i>), or as an unintended side effect of esoteric rituals, the use or destruction of artifacts, or the deaths of powerful minds. <br/><br/>A hivemind swarm learns from its surroundings, which in turn shape its choices in the languages it learns and the psychic spells it develops a penchant for casting. An urban swarm may pick up Common, Dwarven, Elven, or Halfling from snippets of conversations overheard through sewer grates, whereas an underground swarm may learn Dwarven or Undercommon. A hivemind may begin to exert its psychic abilities by compelling animals or people to bring it food or protect it from larger creatures, and it slowly graduates to defending itself and actively attacking as it gains experience. <br/><br/>Eventually, the hivemind\u2019s mental network takes on more complex tasks as a collective mind. At this point, the hivemind creates a nexus, a single individual in the swarm through which the collective routes all thought. While the nexus is often fairly inconspicuous within the teeming mass of the swarm, it is possible for a highly perceptive observer to notice its decisive movements, spellcasting gestures, or intense gaze. The death of the nexus does not eliminate the shared intelligence of a hivemind, but it is disruptive, forcing the collective to focus inward to regroup and form a new nexus."
@@ -601,7 +591,42 @@
                     "name": "hivemind nexus"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or infestation (2\u20135 swarms)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Swarm\u2014injury; <i>save</i> Fort DC 16; <i>onset</i> 1d3 days; <i>frequency</i> 1/day; <i>effect</i> 1d3 Dex damage and 1d3 Con damage; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Disease",
+                    "affliction_type": "Disease; Swarm\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 16",
+                        "save_type": "Fort",
+                        "dc": 16
+                    },
+                    "onset": "1d3 days",
+                    "frequency": "1/day",
+                    "effect": "1d3 Dex damage and 1d3 Con damage",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

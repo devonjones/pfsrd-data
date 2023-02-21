@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm deserts<br/><b>Organization</b> solitary, pair, or infestation (3\u20136)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disease (Ex)</b> Filth fever: Swarm\u2014injury; <i>save</i> Fort DC 13; <i>onset</i> 1d3 days; <i>frequency</i> 1 day; <i>effect</i> 1d3 Dex damage and 1d3 Con damage; <i>cure</i> 2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Scarab beetles often mass in swarms and terrorize remote desert regions. These vermin are a threat to ancient tombs as they chew their way through the interred.<br/><br/> A scarab swarm comprises thousands of scarab beetles, each filthy from its constant contact with dung and carrion. Normally inattentive toward other creatures, scarab swarms subject those who get in their way to thousands of sharp bites as well as an infectious disease. Indeed, the bites of a scarab swarm are the least of their victims\u2019 worries, as the disease they carry claims far more lives than their hunger.<br/><br/> Some religious scholars theorize that scarabs are prone to swarming because they\u2019re drawn to the same malign energy that causes undead to rise, though most people regard this explanation as pure superstition. Some worshipers of gods of death see the arrival of a scarab swarm as a portent of ill fortune."
@@ -267,7 +257,42 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm deserts",
+            "organization": "solitary, pair, or infestation (3\u20136)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Filth fever: Swarm\u2014injury; <i>save</i> Fort DC 13; <i>onset</i> 1d3 days; <i>frequency</i> 1 day; <i>effect</i> 1d3 Dex damage and 1d3 Con damage; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Filth fever",
+                    "affliction_type": "Disease; Swarm\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "onset": "1d3 days",
+                    "frequency": "1 day",
+                    "effect": "1d3 Dex damage and 1d3 Con damage",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

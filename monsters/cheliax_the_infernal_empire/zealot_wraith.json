@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or conclave (3\u20138)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Curse of Sorrowful Wasting (Su)</b> Curse\u2014incorporeal touch; <i>save</i> Fortitude DC 18; <i>frequency</i> 1/day; <i>effect</i> 1d4 Charisma drain and the creature can no longer benefit from morale bonuses. The save DC bonus is Charisma-based.<br/><br/><b>Legacy of Faith (Su)</b> Zealot wraiths still recall the tenets of their faith, constraining their actions. A zealot wraith recoils from strongly presented holy symbols of its god. A holy symbol does not harm a zealot wraith; it merely keeps the wraith at bay. A recoiling zealot wraith must stay at least 5 feet away from a strongly presented holy symbol and cannot touch or make melee attacks against the creature presenting it. Holding a zealot wraith at bay with a holy symbol requires a standard action. After 1 round, the zealot wraith can overcome its revulsion and function normally each round it succeeds at a DC 25 Will save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "When Aroden died, natural disasters wracked Avistan. Priests of Aroden killed in such disasters often died with overwhelming feelings of confusion, sorrow, and betrayal as their prayers for succor went unanswered; for some, their sense of doubt and injustice overwhelmed their faith at the moments of their deaths. The souls of these forsaken priests were unable to pass on, and they now prowl the site of their deaths as incorporeal undead known as zealot wraiths. These restless shades harbor a hatred for the living, and their touch inflicts a curse that embodies their sense of sorrow and self-doubt.<br/><br/>Anytime a cleric or devout follower of a deity dies in the throes of doubt or a sense of disappointment in her god, she risks becoming a zealot wraith. Although now undead horrors, such wraiths were once devoted believers of their gods; this heritage manifests as an aversion to their deities\u2019 holy symbols (whether or not wielded by a worshiper of the associated god). As such, zealot wraiths pose little threat to those living souls who shared their faith but who did not succumb to the same tragedies that resulted in the wraith\u2019s creation, leaving the undead ironically impotent in the temples and holy sites they frequently haunt.<br/><br/>Arodenite zealot wraiths are common in the ruins of Deng and are occasionally spotted in destroyed Arodenite chapels in Westcrown. Zealot wraiths of other faiths, including those of Easivra, Lissala, and Ydersius can be found throughout the Inner Sea region."
@@ -356,7 +346,48 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or conclave (3\u20138)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Curse of Sorrowful Wasting",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Curse\u2014incorporeal touch; <i>save</i> Fortitude DC 18; <i>frequency</i> 1/day; <i>effect</i> 1d4 Charisma drain and the creature can no longer benefit from morale bonuses. The save DC bonus is Charisma-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Curse of Sorrowful Wasting",
+                    "affliction_type": "Curse of Sorrowful Wasting; Curse\u2014incorporeal touch",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fortitude DC 18",
+                        "save_type": "Fort",
+                        "dc": 18
+                    },
+                    "frequency": "1/day",
+                    "effect": "1d4 Charisma drain and the creature can no longer benefit from morale bonuses. The save DC bonus is Charisma-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Legacy of Faith",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Zealot wraiths still recall the tenets of their faith, constraining their actions. A zealot wraith recoils from strongly presented holy symbols of its god. A holy symbol does not harm a zealot wraith; it merely keeps the wraith at bay. A recoiling zealot wraith must stay at least 5 feet away from a strongly presented holy symbol and cannot touch or make melee attacks against the creature presenting it. Holding a zealot wraith at bay with a holy symbol requires a standard action. After 1 round, the zealot wraith can overcome its revulsion and function normally each round it succeeds at a DC 25 Will save."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, pair, or copse (3\u20138)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Excavate (Ex)</b> A crypt flower can use its shoots to dig rapidly through soil, dirt, sand, or other loose ground. As a result of this constant excavation activity, the ground in a 20-foot radius around a crypt flower is treated as difficult terrain for all creatures except crypt flowers. <br/><br/><b>Gushing Wound (Ex)</b> Whenever an opponent scores a critical hit on a crypt flower with a slashing or piercing weapon, the flower\u2019s toxic fluids squirt out. The attacker and all creatures adjacent to the attacker must attempt a DC 18 Reflex save or be doused in toxic fluids and thus exposed to the crypt flower\u2019s poison. The save DC is Constitution-based. <br/><br/><b>Poison (Ex)</b> Contact; <i>save</i> Fort DC 18; <i>frequency</i> 1/round for 6 rounds; effect 1d4 Dex damage; <i>cure</i> 2 consecutive saves. <br/><br/><b>Toxin Splash (Ex)</b> As a standard action, a crypt flower can dip its vines into the toxic fluids within its pitcher and fling the liquid as a splash weapon with a range increment of 20 feet. A target struck, as well as all targets in the splash radius, are exposed to the crypt flower\u2019s poison (although creatures in the splash radius gain a +4 bonus on Fortitude saves to resist the poison). A crypt flower can use its toxin splash once every 1d4 rounds. The save DC is Dexterity-based. <br/><br/><b>Vines (Ex)</b> A crypt flower\u2019s vines are primary natural attacks that deal bludgeoning damage"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Driven by pure instinct, this monstrously sized pitcher plant is much more aggressive than its more common and harmless insect-eating kin. Though a capable hunter, the crypt flower has no qualms about scavenging for its sustenance and eagerly devours living or rotting flesh. It maintains a proclivity for growing in graveyards and cemeteries, nursing itself on a diet of carrion, corpses, and vermin. Because the crypt flower gains its nutrients from decomposing organisms, the plant is nearly rootless and moves about by extending and retracting four thick clusters of rootlike shoots. <br/><br/>The crypt flower\u2019s central, pitcher-shaped bulb is larger than an average adult human. A single petal hovers above the opening, acting as a sort of lid above rows of jagged spines that fold inward, overlapping each other almost like shark\u2019s teeth. As soon as a victim comes near this maw, the overhanging petal slams down and the flower rapidly constricts. Its spines gnaw upon the captured prey, drawing it into the large, hollow pitcher to be dissolved in sweet-scented but acidic and toxic nectar. <br/><br/>In certain areas, bandit gangs or criminal organizations based in rural regions have taken the somewhat dangerous tradition of using crypt flowers to dispose of unwanted bodies. Since it makes no difference to a crypt flower whether it consumes an unwanted body and otherwise, complex pens or troughs are built to contain the flowers and limit their movements so that they can be \u201cfed\u201d with relative safety. <br/><br/>Crypt flowers typically grow between 8 to 10 feet tall and weigh 320 pounds."
@@ -298,7 +288,72 @@
                     "name": "gushing wound"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary, pair, or copse (3\u20138)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Excavate",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A crypt flower can use its shoots to dig rapidly through soil, dirt, sand, or other loose ground. As a result of this constant excavation activity, the ground in a 20-foot radius around a crypt flower is treated as difficult terrain for all creatures except crypt flowers. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Gushing Wound",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Whenever an opponent scores a critical hit on a crypt flower with a slashing or piercing weapon, the flower\u2019s toxic fluids squirt out. The attacker and all creatures adjacent to the attacker must attempt a DC 18 Reflex save or be doused in toxic fluids and thus exposed to the crypt flower\u2019s poison. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Contact; <i>save</i> Fort DC 18; <i>frequency</i> 1/round for 6 rounds; effect 1d4 Dex damage; <i>cure</i> 2 consecutive saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 18",
+                        "save_type": "Fort",
+                        "dc": 18
+                    },
+                    "frequency": "1/round for 6 rounds; effect 1d4 Dex damage",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Toxin Splash",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a standard action, a crypt flower can dip its vines into the toxic fluids within its pitcher and fling the liquid as a splash weapon with a range increment of 20 feet. A target struck, as well as all targets in the splash radius, are exposed to the crypt flower\u2019s poison (although creatures in the splash radius gain a +4 bonus on Fortitude saves to resist the poison). A crypt flower can use its toxin splash once every 1d4 rounds. The save DC is Dexterity-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vines",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A crypt flower\u2019s vines are primary natural attacks that deal bludgeoning damage"
+            }
+        ]
     },
     "sources": [
         {

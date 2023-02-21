@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate marshes and underground<br/><b>Organization</b> solitary<br/><b>Treasure</b> double (dagger, masterwork longbow with 20 arrows, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>All-Around Vision (Ex)</b> A medusa\u2019s snake-hair allows her to see in all directions. Medusas gain a +4 racial bonus to Perception checks and cannot be flanked.<br/><br/><b>Petrifying Gaze (Su)</b> Turn to stone permanently, 30 feet, Fortitude DC 16 negates. The save DC is Charisma-based.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Str; <i>cure </i>2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Medusas are human-like creatures with snakes instead of hair. At distances of 30 feet or more, a medusa can easily pass for a beautiful woman if she wears something to cover her serpentine locks\u2014when wearing clothing that conceals her head and face, she can be mistaken for a human at even closer distances. Medusas use lies and disguises that conceal their faces to get close enough to opponents to use their petrifying gaze, though they like playing with their prey and may fire arrows from a distance to lead enemies into traps. Some enjoy creating intricate decorations out of their victims, using their petrified remains as accents to their swampy lairs, but most medusas take care to hide the evidence of their previous conflicts so that new foes won\u2019t have advance warning of their presence.<br/><br/>Used to concealing themselves, medusas in cities are usually rogues, while those in the wilderness often pass themselves off as rangers or trackers. The most notorious and legendary medusas, though, are those who take levels as bards or clerics. Charismatic and intelligent, urban medusas are often involved with thieves\u2019 guilds or other aspects of the criminal underworld. Medusas may form alliances with blind creatures or intelligent undead, both of which are immune to their stony gaze. Spellcasting medusas often serve as oracles or prophets, usually dwelling in remote locations of legendary power or infamous history. Such oracle medusas take great delight in their roles, and if presented with the proper gifts and flattery, the secrets they offer can be quite helpful. Of course, the lairs of such potent creatures are liberally decorated with statues of those who have offended them, so the seeker of knowledge is well advised to tred carefully during such meetings.<br/><br/>All known medusas are female. Rarely, a medusa may decide to keep a male humanoid as a mate, usually with the help of elixirs of love or similar magic, and is always careful to not petrify her prisoner\u2014at least until she grows tired of his company."
@@ -315,7 +305,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate marshes and underground",
+            "organization": "solitary",
+            "treasure": "double (dagger, masterwork longbow with 20 arrows, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "All-Around Vision",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A medusa\u2019s snake-hair allows her to see in all directions. Medusas gain a +4 racial bonus to Perception checks and cannot be flanked."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Petrifying Gaze",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Turn to stone permanently, 30 feet, Fortitude DC 16 negates. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Str; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 18",
+                        "save_type": "Fort",
+                        "dc": 18
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Str",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> cold hills<br/><b>Organization</b> solitary<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su)</b> Once every 1d4 rounds as a standard action, a crag linnorm can expel a 120-foot line of magma, dealing 15d8 points of fire damage to all creatures struck (Reflex DC 24 halves). This line of magma remains red-hot for 1 round after the linnorm creates it. Creatures that took damage on the first round take 6d6 fire damage the second round (Reflex DC 24 negates), as does any creature that walks across the line of magma. If the magma was expelled while the linnorm was airborne, it instead rains downward during the second round as a sheet of fire no more than 60 feet high that does 6d6 damage (Reflex DC 24 negates) to any creature that passes through it. On the third round, the line of magma cools to a thin layer of brittle stone that quickly degrades to powder and sand over the course of several hours; magma that\u2019s turned to a sheet of fire is consumed entirely during the second round, leaving behind only a stain of smoke in the air that swiftly disperses. The save DC is Constitution-based.<br/><br/><b>Death Curse (Su)</b> When a creature slays a crag linnorm, the slayer is affected by the curse of fire.<i>Curse of Fire</i>: <i>save </i>Will DC 22; <i>effect </i>creature gains vulnerability to fire. The save DC is Charisma-based.<br/><br/>Freedom of Movement (Ex) A crag linnorm is under the constant effect of <i>freedom of movement</i>, as per the spell of the same name. This effect cannot be dispelled.<br/><br/><b>Poison (Su)</b> Bite\u2014injury; <i>save </i>Fort DC 24; <i>frequency </i>1/round for 10 rounds; <i>effect </i>2d6 fire damage and 1d4 Con drain; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.<br/><br/><b>True Seeing (Ex)</b> A crag linnorm has constant <i>true seeing</i>, as per the spell of the same name."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Like all linnorms, the deadly crag linnorm is a powerful, primeval dragon, a denizen of the wild regions far north of where most civilizations dare to tread. The crag linnorm is among the weakest of its kind, yet still a devastating predator in its own right. Favored, if not by the gods, then by some primal intelligence of the mysterious world of the fey, the linnorm bestows a powerful curse on any who manage to slay it. A crag linnorm is 60 feet long and weighs 12,000 pounds."
@@ -492,7 +482,65 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "cold hills",
+            "organization": "solitary",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds as a standard action, a crag linnorm can expel a 120-foot line of magma, dealing 15d8 points of fire damage to all creatures struck (Reflex DC 24 halves). This line of magma remains red-hot for 1 round after the linnorm creates it. Creatures that took damage on the first round take 6d6 fire damage the second round (Reflex DC 24 negates), as does any creature that walks across the line of magma. If the magma was expelled while the linnorm was airborne, it instead rains downward during the second round as a sheet of fire no more than 60 feet high that does 6d6 damage (Reflex DC 24 negates) to any creature that passes through it. On the third round, the line of magma cools to a thin layer of brittle stone that quickly degrades to powder and sand over the course of several hours; magma that\u2019s turned to a sheet of fire is consumed entirely during the second round, leaving behind only a stain of smoke in the air that swiftly disperses. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Curse",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "When a creature slays a crag linnorm, the slayer is affected by the curse of fire.<i>Curse of Fire</i>: <i>save </i>Will DC 22; <i>effect </i>creature gains vulnerability to fire. The save DC is Charisma-based.<br/><br/>Freedom of Movement (Ex) A crag linnorm is under the constant effect of <i>freedom of movement</i>, as per the spell of the same name. This effect cannot be dispelled."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 24; <i>frequency </i>1/round for 10 rounds; <i>effect </i>2d6 fire damage and 1d4 Con drain; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 24",
+                        "save_type": "Fort",
+                        "dc": 24
+                    },
+                    "frequency": "1/round for 10 rounds",
+                    "effect": "2d6 fire damage and 1d4 Con drain",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "True Seeing",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A crag linnorm has constant <i>true seeing</i>, as per the spell of the same name."
+            }
+        ]
     },
     "sources": [
         {

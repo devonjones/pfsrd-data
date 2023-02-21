@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Hell)<br/><b>Organization</b> solitary, pair, or gang (3\u201310)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Change Shape (Su) </b>The tripurasura has only one alternative form\u2014when it uses change shape, it always appears as the same Small humanoid. Most take the form of gnomes or human children.<br/><br/><b>Elusive (Su)</b> The tripurasura and items it carries are considered to be under the effects of a <i>nondetection </i>spell. A caster must succeed at a DC 14 caster level check to overcome this effect.<br/><br/><b>Poison (Ex)</b> Tongue\u2014injury; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Wis damage; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Tripurasuras, or sly ones, are among the weakest asuras, manifestations not of divine mistakes but instead creations of the most powerful of asuras exhibiting their loathing of the gods by creating blasphemous mockeries of their creations. A newly created tripurasura most commonly exists for one of two reasons: to give an asurendra sage the raw materials it needs to create more powerful asuras, or to seek out mortals\u2014especially mortal spellcasters\u2014to recruit into the asura cause.<br/><br/>Using its power to assume a pleasing or innocuous form, a tripurasura wanders the world, seeking pious mortals to corrupt. When it encounters a promising spellcaster (typically one who has some sort of link to a church or religion, but not necessarily a divine spellcaster), the tripurasura presents itself as an apprentice, pilgrim, or other type of curious student eager to learn from the spellcaster. The tripurasura keeps its true nature and its powers hidden, and seeks opportunities to steer its \u201cmaster\u201d away from decisions it might have made in good conscience to acts that promote the collapse of religious belief, faith, and society. When, as it inevitably does, the wayward spellcaster runs afoul of justice or is confronted by those seeking revenge, the tripurasura fades away to watch the final stage of the spellcaster\u2019s fall from grace, then seeks a new victim in another city or region.<br/><br/>Some spellcasters, on the other hand, actually seek out these tiny fiends to employ as familiars. A tripurasura greatly values these opportunities, since it need not abandon its master once its work is done and can continue to spread its agenda for as long as its master survives. A spellcaster must be lawful evil, at least 7th level, and have the Improved Familiar feat to gain a tripurasura as a familiar."
@@ -493,7 +483,57 @@
                     "name": "elusive"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Hell)",
+            "organization": "solitary, pair, or gang (3\u201310)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Change Shape",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "The tripurasura has only one alternative form\u2014when it uses change shape, it always appears as the same Small humanoid. Most take the form of gnomes or human children."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Elusive",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "The tripurasura and items it carries are considered to be under the effects of a <i>nondetection </i>spell. A caster must succeed at a DC 14 caster level check to overcome this effect."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tongue\u2014injury; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Wis damage; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tongue\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Wis damage",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

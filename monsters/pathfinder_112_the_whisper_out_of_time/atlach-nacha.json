@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary (unique)<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Critical Poisoning (Su)</b> If Atlach-Nacha confirms a critical hit with its bite, it injects its foe with 3 doses of poison (this increases the save DC by 4). A foe that is normally immune to poison can be affected by Atlach-Nacha\u2019s poison in this way, but the victim treats the poisoning as if it had been injected with only 1 dose.<br/><br/><b>Dreams of Futility (Su)</b> Atlach-Nacha can impose its verminous dreams on any creature that has been rendered unconscious at any point in its life as a result of spider venom, that has come in contact with the Great Old One\u2019s webs, or upon whom Atlach-Nacha has fed. When Atlach-Nacha uses <i>nightmare</i> on such a target, the victim must also succeed at a DC 35 Will saving throw or become overwhelmed with futility. Whenever the victim attempts a skill check, or at the start of each round in combat, the victim has a 50% chance to act normally; otherwise, it takes no action. This effect persists for 24 hours but can be ended earlier via a successful <i>break enchantment</i> spell. This is a mind-affecting effect. The save DC is Charisma-based.<br/><br/><b>Feed (Ex)</b> As a standard action, Atlach-Nacha can feed upon a helpless or willing living creature by biting it. This deals no hit point damage, but it does cause 2d6 points of Strength drain and 2d6 points of Dexterity drain. If a creature\u2019s Strength and Dexterity are drained to 0, any drain that would normally affect those ability scores instead affects Constitution\u2014thus, if Atlach-Nacha feeds on a creature with Strength and Dexterity scores of 0, the Great Old One drains 4d6 points of Constitution instead. A successful DC 43 Fortitude save reduces the drain to the minimum possible. The save DC is Constitution-based.<br/><br/><b>Great Old One Traits</b> Rules for Atlach-Nacha\u2019s Great Old One traits, such as immortality, insanity, its mythic abilities, otherworldly insight, and the base rules for unspeakable presence, can be found on page 306 of <i>Pathfinder RPG Bestiary 4</i>.<br/><br/><b>Immortality (Ex)</b> If Atlach-Nacha is killed, its body splits open and unleashes a hideous mass of swarming spiders. Treat this swarm of spiders as a locust plague swarm (<i>Pathfinder RPG Bestiary 5</i> 192) save that it has a base speed of 60 feet, a climb speed of 60 feet, and no fly speed. If this swarm of spiders is allowed to reform after being dispersed by damage (or after 24 hours have passed), the spiders fall upon one another in a cannibalistic frenzy, with the last spider alive growing and growing until it becomes Atlach-Nacha reborn. If the swarm is truly destroyed as a result of devouring a good-aligned minor artifact or holy relic, Atlach-Nacha is instead reborn 1d100 months later from one of countless hidden eggs in deep underground caverns\u2014 but typically not on the same world upon which it was most recently defeated.<br/><br/><b>Otherworldly Leap (Ex)</b> Atlach-Nacha gains a +20 racial bonus on Acrobatics checks made to jump, and this stacks with its bonus to jumping from high speed. It treats all jumps as if it had a running start.<br/><br/><b>Penetrating Bite (Ex)</b> Atlach-Nacha\u2019s bite penetrates all forms of armor. It resolves its bite attacks as if they were touch attacks.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 43; <i>frequency</i> 1/round for 6 rounds; <i>effect </i>permanent paralysis plus 1d6 Strength drain; <i>cure </i>3 consecutive saves. The save DC is Constitution-based.<br/><br/><b>Powerful Blows (Ex)</b> Atlach-Nacha always modifies the damage from its physical attacks with 1-1/2 times its Strength modifier.<br/><br/><b>Swift Construction (Ex)</b> Atlach-Nacha can create bridges or walls from its webs as a swift action. A web bridge is 15 feet wide and has a maximum length of 200 feet. A web wall functions as a <i>wall of stone</i> (CL 20th). Atlach-Nacha can use its climb speed to move on these webs, but other creatures treat it as sticky webbing (see the web universal monster rule on page 305 of <i>Pathfinder RPG Bestiary</i>) if they come in contact with it. Atlach-Nacha\u2019s web constructions collapse and melt into vapor after 1 day has passed, forcing the Great Old One to constantly toil to maintain its webs in a futile effort at permanence.<br/><br/><b>Unspeakable Presence (Su)</b> Failing a DC 35 Will saving throw against Atlach-Nacha\u2019s unspeakable presence causes victims to become convinced they are covered with swarming spiders and tangled, sticky webbing. This causes victims to become nauseated for as long as the Great Old One remains in the area plus an additional 1d6 rounds. This is a mind-affecting effect. The save DC is Charisma-based.<br/><br/><b>Webs (Ex)</b> Atlach-Nacha can make a ranged attack with its webs as a swift action. These webs have a range increment of 200 feet, and it can shoot up to 10 range increments."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "This strange arachnid Great Old One, known to some as the Void Weaver, is a dualistic entity in many respects. Its gender is fluid, being both and neither male and female. It constantly toils to build, yet its creations are fated to fail. It exists both in the waking world and the realm of dreams. It embodies the alien form of the spider and the recognizable visage of humanity. To Atlach-Nacha, duality exists only to contradict itself.<br/><br/>Atlach-Nacha is an elephant-sized, red-and-black spider with a monstrously humanoid face, but at times it can appear as a woman with multiple long arms and a spider\u2019s lower torso."
@@ -977,7 +967,129 @@
                     "name": "swift construction"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground",
+            "organization": "solitary (unique)",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Critical Poisoning",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "If Atlach-Nacha confirms a critical hit with its bite, it injects its foe with 3 doses of poison (this increases the save DC by 4). A foe that is normally immune to poison can be affected by Atlach-Nacha\u2019s poison in this way, but the victim treats the poisoning as if it had been injected with only 1 dose."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dreams of Futility",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Atlach-Nacha can impose its verminous dreams on any creature that has been rendered unconscious at any point in its life as a result of spider venom, that has come in contact with the Great Old One\u2019s webs, or upon whom Atlach-Nacha has fed. When Atlach-Nacha uses <i>nightmare</i> on such a target, the victim must also succeed at a DC 35 Will saving throw or become overwhelmed with futility. Whenever the victim attempts a skill check, or at the start of each round in combat, the victim has a 50% chance to act normally; otherwise, it takes no action. This effect persists for 24 hours but can be ended earlier via a successful <i>break enchantment</i> spell. This is a mind-affecting effect. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Feed",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a standard action, Atlach-Nacha can feed upon a helpless or willing living creature by biting it. This deals no hit point damage, but it does cause 2d6 points of Strength drain and 2d6 points of Dexterity drain. If a creature\u2019s Strength and Dexterity are drained to 0, any drain that would normally affect those ability scores instead affects Constitution\u2014thus, if Atlach-Nacha feeds on a creature with Strength and Dexterity scores of 0, the Great Old One drains 4d6 points of Constitution instead. A successful DC 43 Fortitude save reduces the drain to the minimum possible. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immortality",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "If Atlach-Nacha is killed, its body splits open and unleashes a hideous mass of swarming spiders. Treat this swarm of spiders as a locust plague swarm (<i>Pathfinder RPG Bestiary 5</i> 192) save that it has a base speed of 60 feet, a climb speed of 60 feet, and no fly speed. If this swarm of spiders is allowed to reform after being dispersed by damage (or after 24 hours have passed), the spiders fall upon one another in a cannibalistic frenzy, with the last spider alive growing and growing until it becomes Atlach-Nacha reborn. If the swarm is truly destroyed as a result of devouring a good-aligned minor artifact or holy relic, Atlach-Nacha is instead reborn 1d100 months later from one of countless hidden eggs in deep underground caverns\u2014 but typically not on the same world upon which it was most recently defeated."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Otherworldly Leap",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Atlach-Nacha gains a +20 racial bonus on Acrobatics checks made to jump, and this stacks with its bonus to jumping from high speed. It treats all jumps as if it had a running start."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Penetrating Bite",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Atlach-Nacha\u2019s bite penetrates all forms of armor. It resolves its bite attacks as if they were touch attacks."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 43; <i>frequency</i> 1/round for 6 rounds; <i>effect </i>permanent paralysis plus 1d6 Strength drain; <i>cure </i>3 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 43",
+                        "save_type": "Fort",
+                        "dc": 43
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "permanent paralysis plus 1d6 Strength drain",
+                    "cure": "3 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Powerful Blows",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Atlach-Nacha always modifies the damage from its physical attacks with 1-1/2 times its Strength modifier."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Swift Construction",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Atlach-Nacha can create bridges or walls from its webs as a swift action. A web bridge is 15 feet wide and has a maximum length of 200 feet. A web wall functions as a <i>wall of stone</i> (CL 20th). Atlach-Nacha can use its climb speed to move on these webs, but other creatures treat it as sticky webbing (see the web universal monster rule on page 305 of <i>Pathfinder RPG Bestiary</i>) if they come in contact with it. Atlach-Nacha\u2019s web constructions collapse and melt into vapor after 1 day has passed, forcing the Great Old One to constantly toil to maintain its webs in a futile effort at permanence."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Unspeakable Presence",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Failing a DC 35 Will saving throw against Atlach-Nacha\u2019s unspeakable presence causes victims to become convinced they are covered with swarming spiders and tangled, sticky webbing. This causes victims to become nauseated for as long as the Great Old One remains in the area plus an additional 1d6 rounds. This is a mind-affecting effect. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Webs",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Atlach-Nacha can make a ranged attack with its webs as a swift action. These webs have a range increment of 200 feet, and it can shoot up to 10 range increments."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Great Old One Traits",
+                "text": "Rules for Atlach-Nacha\u2019s Great Old One traits, such as immortality, insanity, its mythic abilities, otherworldly insight, and the base rules for unspeakable presence, can be found on page 306 of <i>Pathfinder RPG Bestiary 4</i>."
+            }
+        ]
     },
     "sources": [
         {

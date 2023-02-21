@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or plague (2\u20134)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disease (Ex)</b> Viridium Leprosy\u2014injury; <i>save</i> Fort DC 24; <i>onset</i> immediate; <i>frequency</i> 1/day; <i>effect</i> 1d6 Cha damage and 1d6 Con damage; <i>cure</i> 3 consecutive saves. The save DC is Constitution-based. <br/><br/><b>Immunity to Magic (Ex)</b> A viridium golem is immune to any spell or spell-like ability that allows spell resistance. Certain spells and effects function as noted below. <ul> <li>\u00e2\u0080\u00a2 A <i>heal</i> spell deals 5 points of damage per caster level to a viridium golem, to a maximum of 75 points of damage. This damage bypasses the golem\u2019s damage reduction.</li> <li>\u00e2\u0080\u00a2 A <i>remove disease</i> spell staggers a viridium golem for 1 round (no save).</li> </ul><br/><br/><b>Shield (Ex)</b> A viridium golem\u2019s shield is part of its body and does not provide a bonus to its AC; it functions as a primary natural attack that deals bludgeoning damage. A creature struck by the golem\u2019s shield is exposed to the golem\u2019s disease and must also attempt a DC 24 Fortitude save to avoid being stunned for 1 round. The save DC is Constitution-based. <br/><br/><b>Sword (Ex)</b> A viridium golem\u2019s sword functions as a primary natural attack that deals slashing damage and can cause both disease and deep, bleeding wounds."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Viridium golems exemplify toxicity, as the substance that makes up their bodies is known for its lethality. A viridium golem stands 25 feet tall and weighs 20,000 pounds."
@@ -287,7 +277,66 @@
                     }
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or plague (2\u20134)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Viridium Leprosy\u2014injury; <i>save</i> Fort DC 24; <i>onset</i> immediate; <i>frequency</i> 1/day; <i>effect</i> 1d6 Cha damage and 1d6 Con damage; <i>cure</i> 3 consecutive saves. The save DC is Constitution-based. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Disease",
+                    "affliction_type": "Disease; Viridium Leprosy\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 24",
+                        "save_type": "Fort",
+                        "dc": 24
+                    },
+                    "onset": "immediate",
+                    "frequency": "1/day",
+                    "effect": "1d6 Cha damage and 1d6 Con damage",
+                    "cure": "3 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immunity to Magic",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A viridium golem is immune to any spell or spell-like ability that allows spell resistance. Certain spells and effects function as noted below. <ul> <li>\u00e2\u0080\u00a2 A <i>heal</i> spell deals 5 points of damage per caster level to a viridium golem, to a maximum of 75 points of damage. This damage bypasses the golem\u2019s damage reduction.</li> <li>\u00e2\u0080\u00a2 A <i>remove disease</i> spell staggers a viridium golem for 1 round (no save).</li> </ul>"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Shield",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A viridium golem\u2019s shield is part of its body and does not provide a bonus to its AC; it functions as a primary natural attack that deals bludgeoning damage. A creature struck by the golem\u2019s shield is exposed to the golem\u2019s disease and must also attempt a DC 24 Fortitude save to avoid being stunned for 1 round. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sword",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A viridium golem\u2019s sword functions as a primary natural attack that deals slashing damage and can cause both disease and deep, bleeding wounds."
+            }
+        ]
     },
     "sources": [
         {

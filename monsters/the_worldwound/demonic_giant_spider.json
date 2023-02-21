@@ -3,14 +3,8 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any <br/><b>Organization</b> solitary, pair, or colony (3\u201316) <br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Strength; <i>cure </i>1 save.<br/><br/>Deskari\u2019s influence upon the Worldwound\u2019s verminous life cannot be ignored for long by visitors to this tainted land. While some giant vermin have resisted Deskari\u2019s influence, most have succumbed to it. Such creatures are almost always encountered along the Worldwound\u2019s periphery. As one travels deeper into the blighted land, the immense insects, spiders, and other vermin encountered in the canyons and rivers take on an increasingly unsettling intelligence and demonic features. In many ways, these demonic vermin are no longer true denizens of the Material Plane\u2014they are, after a fact, what happens when the chaos and evil of the Abyss infuse a mindless creature. They are the unholy spawn of vermin\u2014and mortal sins. <br/><br/>Countless variations of demonic vermin exist in the forbidding wasteland that is the Worldwound. When a nest of similar monsters is encountered, they all typically share the same demonic powers and traits, but another nest of the same species could exhibit entirely different abilities, depending on the nature of the Abyssal energies that have corrupted and transformed them. Uncorrupted giant vermin that wander into or are otherwise brought into the Worldwound do not immediately fall victim to this vile transformation, but several months of exposure can, at the GM\u2019s whim, cause such creatures to spontaneously transform into one of these hideous monstrosities."
+            "name": "Description",
+            "html": "Deskari\u2019s influence upon the Worldwound\u2019s verminous life cannot be ignored for long by visitors to this tainted land. While some giant vermin have resisted Deskari\u2019s influence, most have succumbed to it. Such creatures are almost always encountered along the Worldwound\u2019s periphery. As one travels deeper into the blighted land, the immense insects, spiders, and other vermin encountered in the canyons and rivers take on an increasingly unsettling intelligence and demonic features. In many ways, these demonic vermin are no longer true denizens of the Material Plane\u2014they are, after a fact, what happens when the chaos and evil of the Abyss infuse a mindless creature. They are the unholy spawn of vermin\u2014and mortal sins. <br/><br/>Countless variations of demonic vermin exist in the forbidding wasteland that is the Worldwound. When a nest of similar monsters is encountered, they all typically share the same demonic powers and traits, but another nest of the same species could exhibit entirely different abilities, depending on the nature of the Abyssal energies that have corrupted and transformed them. Uncorrupted giant vermin that wander into or are otherwise brought into the Worldwound do not immediately fall victim to this vile transformation, but several months of exposure can, at the GM\u2019s whim, cause such creatures to spontaneously transform into one of these hideous monstrosities."
         }
     ],
     "game-obj": "Monsters",
@@ -434,7 +428,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or colony (3\u201316)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Strength; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Strength",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

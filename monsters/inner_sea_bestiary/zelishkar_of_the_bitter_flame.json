@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Osirion)<br/><b>Organization</b> solitary<br/><b>Treasure</b> triple (<i>+5 breastplate</i>, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Bitter Flames (Su)</b> Whenever Zelishkar deals fire damage with any attack or effect, half of the damage is fire damage and the other half is untyped damage, similar to a flame strike spell. In addition, creatures that fail a save against any fire effect Zelishkar creates are sickened for 1 minute. Those damaged by his melee attacks or by fire effects that allow no save are instead sickened for 1 round per attack. This duration stacks.<br/><br/><b>Corpse Cremation (Su)</b> Whenever Zelishkar reduces a living creature to negative hit points, as a swift action he can turn its body to ashes and feed upon the target\u2019s life force, as <i>death knell </i>(Will DC 28 negates). Whenever Zelishkar slays a creature with any attack or ability, the creature\u2019s corpse is reduced to ashes (treat as <i>disintegrate</i>).<br/><br/><b>Daemonic Harbinger Traits </b>A daemonic harbinger is a powerful daemon that has not yet made the full transition from unique daemon to a horseman. It possesses several traits, as summarized here. <ul> <li>Immunity to acid, charm and compulsion effects, death effects, disease, and poison.</li> <li>Resistance to cold 30, electricity 30, and fire 30.</li> <li>Telepathy 300 feet.</li> <li>The harbinger\u2019s natural weapons, as well as any weapon it wields, are treated as evil and lawful for the purpose of overcoming damage reduction.</li> <li>The harbinger can grant spells to its worshipers. Granting spells does not require any specific action on its behalf. Zelishkar grants access to the domains of Evil, Law, Magic, and Trickery. His favored weapon is the quarterstaff.</li> </ul><b>Incandescent Body (Su)</b> As a free action, Zelishkar can cause his body to erupt into white-hot flame. He sheds light as bright as a <i>daylight </i>spell, and dazzles any creature that does not avert its gaze. Creatures with the fire subtype are immune to this dazzling effect. Zelishkar can dim his flames to burning black shadows as a free action, suppressing the dazzling effect and allowing him to use Stealth without penalty.<br/><br/><b>Incendiary Grasp (Su)</b> If Zelishkar hits a target with more than one natural weapon in the same round, the fire damage from each hit is combined as if from a single attack for the purpose of overcoming effects that provide resistance to fire. In addition, if Zelishkar succeeds at a grapple combat maneuver, as a swift action he can suppress any fire resistance or immunity the target possesses until the beginning of Zelishkar\u2019s next turn. Creatures with the fire subtype are immune to this effect, unless that subtype is granted by a temporary magical effect or magic item."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The dread Zelishkar of the Bitter Flame is a figure much feared on the crumbling plains of Abaddon and across the multiverse. A monstrous feline in shape but seemingly sculpted of lurid crimson flame, Zelishkar is girded with a crest and cuirass of infernally strengthened obsidian, shaved to razor thinness yet losing none of its terrible strength. His eyes are jet-black pits that mirror his armor, though pinpoints of awful orange radiance gleam deep within. He is surrounded always by a heat shimmer that diffuses his blinding radiance. Zelishkar is reputed to sense the presence of his prey by the tiniest variations in temperature, tracking the movements of creatures both seen and unseen before he pounces. His own fires burn with a hellish uncleanness, tainting even those who thought themselves proofed against his flames and rapidly consuming their body and soul, leaving nothing behind but befouled ashes.<br/><br/>Zelishkar is feared as much for his incisive tactical acumen as for his dreadful and terrifying powers in close combat. He has single-handedly withered and despoiled cities and farmlands when summoned in the name of his daemonic mistress\u2014Szuriel, patron of war and suffering. She forged Zelishkar\u2019s form in the deepest pits of the Cinder Furnace as her terrifying harbinger, embodying the hopeless misery of funeral pyres that consume and cremate the dead in the wake of the war that she brings. He proved so adept that she judged him worthy to transcend his purpose, and he has come to embody all of the hateful and sadistic purposes that fire serves. His name is invoked now by torturers and inquisitors alike as they consign their hapless captives to the ultimate agonies of being burned alive, and even by arsonists both petty and grand. All twisted souls who love nothing more than to see the world burn offer up silent praises to Zelishkar in their hearts; even if they never speak his name, the hate that burns within them is a sweet savor in his nostrils.<br/><br/>Zelishkar was summoned to Golarion in ancient times, during the height of Osirion\u2019s empire, and he led legions of flaming minions against the enemies of the Pharaoh of Forgotten Plagues, notably the Jistka Imperium. In a twist of supreme hubris, the Pharaoh of Forgotten Plagues turned against his summoned ally after several successful campaigns, and chose Zelishkar to be the test subject of his grandest experiment yet. The Osirian king had just finished construction of a grand labyrinth south of the Alamein Peninsula, and in a display of prideful foolishness ordered Zelishkar to be imprisoned within to prove the infallibility of his maze. It took the efforts of an entire army of summoned genies to lock the daemonic harbinger away beneath the desert\u2019s churning sands, but his imprisonment was absolute with the aid of an ancient efreeti and a legendary artifact known as the <i>Bottle of the Bound</i>.<br/><br/>Through all the long millennia since, Zelishkar and the remnant of his host have remained imprisoned beneath the Labyrinth of Shiman-Sekh, the city founded by the Song Pharaoh upon her victory over the Pharaoh of Forgotten Plagues years after Zelishkar\u2019s detention. He has emerged from his prison but once, when Szuriel and the ironically named Incorruptible Pharaoh joined to loose his fiery fury upon one of the sky-cities of Shory. His destructive rampage could not be contained, however, and he devastated several cities and oases of western Osirion before he and his host were finally bound back within their prison. There he remains, plotting burning vengeance upon Osirion and all of Golarion for his ages of durance vile."
@@ -834,7 +824,57 @@
                     "name": "daemonic harbinger traits"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Osirion)",
+            "organization": "solitary",
+            "treasure": "triple (<i>+5 breastplate</i>, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Bitter Flames",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Whenever Zelishkar deals fire damage with any attack or effect, half of the damage is fire damage and the other half is untyped damage, similar to a flame strike spell. In addition, creatures that fail a save against any fire effect Zelishkar creates are sickened for 1 minute. Those damaged by his melee attacks or by fire effects that allow no save are instead sickened for 1 round per attack. This duration stacks."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Corpse Cremation",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Whenever Zelishkar reduces a living creature to negative hit points, as a swift action he can turn its body to ashes and feed upon the target\u2019s life force, as <i>death knell </i>(Will DC 28 negates). Whenever Zelishkar slays a creature with any attack or ability, the creature\u2019s corpse is reduced to ashes (treat as <i>disintegrate</i>)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Incandescent Body",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a free action, Zelishkar can cause his body to erupt into white-hot flame. He sheds light as bright as a <i>daylight </i>spell, and dazzles any creature that does not avert its gaze. Creatures with the fire subtype are immune to this dazzling effect. Zelishkar can dim his flames to burning black shadows as a free action, suppressing the dazzling effect and allowing him to use Stealth without penalty."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Incendiary Grasp",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "If Zelishkar hits a target with more than one natural weapon in the same round, the fire damage from each hit is combined as if from a single attack for the purpose of overcoming effects that provide resistance to fire. In addition, if Zelishkar succeeds at a grapple combat maneuver, as a swift action he can suppress any fire resistance or immunity the target possesses until the beginning of Zelishkar\u2019s next turn. Creatures with the fire subtype are immune to this effect, unless that subtype is granted by a temporary magical effect or magic item."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Daemonic Harbinger Traits",
+                "text": "A daemonic harbinger is a powerful daemon that has not yet made the full transition from unique daemon to a horseman. It possesses several traits, as summarized here. <ul> <li>Immunity to acid, charm and compulsion effects, death effects, disease, and poison.</li> <li>Resistance to cold 30, electricity 30, and fire 30.</li> <li>Telepathy 300 feet.</li> <li>The harbinger\u2019s natural weapons, as well as any weapon it wields, are treated as evil and lawful for the purpose of overcoming damage reduction.</li> <li>The harbinger can grant spells to its worshipers. Granting spells does not require any specific action on its behalf. Zelishkar grants access to the domains of Evil, Law, Magic, and Trickery. His favored weapon is the quarterstaff.</li> </ul>"
+            }
+        ]
     },
     "sources": [
         {

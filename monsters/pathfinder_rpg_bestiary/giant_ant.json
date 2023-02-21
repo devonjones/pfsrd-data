@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, gang (3\u20136), or hive (7\u201318 plus 10\u2013100 workers, 2\u20138 drones, and 1 queen)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex) </b>Sting\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Giant ants are as industrious as their normal-sized kin. While their nests generally don\u2019t consist of thousands, their greatly increased size more than compensates.<br/><br/>The statistics given above are for soldier ants\u2014the variety most commonly encountered. The following simple templates can be used to create variants of the standard soldier ant.<br/><br/><b>Worker (\u20131 CR) </b>Worker ants do not have a poison sting attack or a grab special attack.<br/><br/><b>Drone (+1 CR) </b>Drones have the advanced simple template and a fly speed of 30 feet (average).<br/><br/><b>Queen (+2 CR) </b>The queen of a nest is an immense, bloated creature. She gains the advanced and the giant simple templates, but drops her speed to 10 feet and loses her climb speed entirely."
@@ -265,7 +255,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, gang (3\u20136), or hive (7\u201318 plus 10\u2013100 workers, 2\u20138 drones, and 1 queen)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Str",
+                    "cure": "1 save"
+                }
+            }
+        ]
     },
     "sources": [
         {

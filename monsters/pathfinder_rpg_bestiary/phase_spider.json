@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm hills<br/><b>Organization</b> solitary, pair, or cluster (3\u20136)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Ethereal Ambush (Ex)</b> A phase spider that attacks foes on the Material Plane in a surprise round can take a full round of actions if it begins the combat by phasing into the Material Plane from the Ethereal Plane.<br/><br/><b>Ethereal Jaunt (Su)</b> A phase spider can shift from the Ethereal Plane to the Material Plane as a free action, and shift back again as a move action (or as part of a move action). The ability is otherwise identical to <i>ethereal jaunt </i>(CL 15th).<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 8 rounds; <i>effect </i>1d2 Constitution damage; <i>cure </i>2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Phase spiders are voracious predators from the Ethereal Plane who hunt on the Material Plane. When prey is located, the spider shifts to the Ethereal Plane to prepare an ambush. Against a lone victim, the spider shifts to the Material Plane, bites the victim, then retreats back to the Ethereal Plane to wait for the poison to take effect. Against multiple foes, a phase spider follows these same tactics, and on each round a foe remains in reach at the start of its turn, it repeats this gambit. If no foes are in reach, it moves while ethereal to prepare an attack on an available target, but unless it feels safe in spending an entire round on the Material, it won\u2019t phase back to attack unless it can do so while saving a move action for an escape.<br/><br/>Phase spiders are the natural enemy of another denizen of the Ethereal Plane\u2014the xill. The two races have long fought a bloody war with no real prospect of a resolution anytime soon. Were phase spiders less horrifying and alien in appearance, they might find the allies they need to defeat the sinister xill among other races, but their monstrous forms and often overwhelming hunger make diplomacy difficult.<br/><br/>On the Ethereal Plane, phase spiders can manipulate the raw smoky ether in a manner similar to how a spider manipulates webs. Vast, complex nests of semisolid ether float idly through the eddies of the Ethereal Plane, each supporting numerous phase spiders. The creatures enjoy each other\u2019s company, but have no real concept of family\u2014a newborn phase spider is fully capable of fending for itself and is treated no differently by its parents or siblings than any other.<br/><br/>The typical phase spider is 8 feet long and weighs about 700 pounds."
@@ -305,7 +295,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm hills",
+            "organization": "solitary, pair, or cluster (3\u20136)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Ethereal Ambush",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A phase spider that attacks foes on the Material Plane in a surprise round can take a full round of actions if it begins the combat by phasing into the Material Plane from the Ethereal Plane."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Ethereal Jaunt",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A phase spider can shift from the Ethereal Plane to the Material Plane as a free action, and shift back again as a move action (or as part of a move action). The ability is otherwise identical to <i>ethereal jaunt </i>(CL 15th)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 8 rounds; <i>effect </i>1d2 Constitution damage; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 18",
+                        "save_type": "Fort",
+                        "dc": 18
+                    },
+                    "frequency": "1/round for 8 rounds",
+                    "effect": "1d2 Constitution damage",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

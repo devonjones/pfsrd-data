@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or warm deserts or forests<br/><b>Organization</b> solitary or nest (2\u20135)<br/><b>Treasure</b> incidental (acid-proof items)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Acid Blood (Ex)</b> A metal, wooden, or natural weapon that deals piercing or slashing damage to a seps takes 4d6 points of acid damage unless the weapon\u2019s wielder succeeds at a DC 22 Reflex save at the listed DC. The DC is Constitution-based.<br/><br/><b>Liquefaction (Su)</b> Any creature killed by seps poison dissolves into an acidic liquid that deals 2d6 points of acid damage per round to anything in its square (including the dead creature\u2019s equipment).<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 22; <i>frequency </i>1/round for 10 rounds; <i>effect </i>1d8 acid damage and 1d4 Con drain; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A seps is an exotic snake-like creature whose powerful jaws contain acidic venom so potent that it quickly dissolves prey into liquid.<br/><br/>An adult seps is 30 feet long and weighs 1,500 pounds."
@@ -365,7 +355,57 @@
                     "name": "liquefaction"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or warm deserts or forests",
+            "organization": "solitary or nest (2\u20135)",
+            "treasure": "incidental (acid-proof items)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Acid Blood",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A metal, wooden, or natural weapon that deals piercing or slashing damage to a seps takes 4d6 points of acid damage unless the weapon\u2019s wielder succeeds at a DC 22 Reflex save at the listed DC. The DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Liquefaction",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any creature killed by seps poison dissolves into an acidic liquid that deals 2d6 points of acid damage per round to anything in its square (including the dead creature\u2019s equipment)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 22; <i>frequency </i>1/round for 10 rounds; <i>effect </i>1d8 acid damage and 1d4 Con drain; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 22",
+                        "save_type": "Fort",
+                        "dc": 22
+                    },
+                    "frequency": "1/round for 10 rounds",
+                    "effect": "1d8 acid damage and 1d4 Con drain",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

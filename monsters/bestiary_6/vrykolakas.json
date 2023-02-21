@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Create Spawn (Su)</b> A humanoid slain by a vrykolakas becomes a free-willed vrykolakas itself in 1d4 days if not blessed and given proper funerary rites. A blessing might entail either the spell <i>bless</i> or a more mundane consecration, but at the very least requires a proper prayer (with a successful DC 15 Knowledge [religion] check) invoking a good-aligned deity. <br/><br/><b>Feral Possession (Su)</b> Upon being reduced to 0 hit points, a vrykolakas attempts to possess any animal within 100 feet. This ability is similar to <i>possession</i> and has a duration equal to 1 day for every Hit Die the vrykolakas has. The target must succeed at a DC 22 Will save or be possessed. If the possession fails, the vrykolakas immediately dies. If the possession succeeds, the animal immediately retreats to the vrykolakas\u2019s lair, where it attempts to bury itself in the earth. If left uninterrupted for 1d4 days, the animal transforms into a new vrykolakas with all the same statistics as the original. If discovered and slain during this time, both the animal and the vrykolakas are destroyed. If discovered and the possession effect is ended via <i>dispel magic</i> or a similar effect, the animal returns to normal and the vrykolakas is destroyed (caster level is equal to the vrykolakas\u2019s CR for the purposes of resolving this dispel magic attempt). The save DC is Charisma-based. <br/><br/><b>Pestilent Aura (Su)</b> Creatures within 5 feet of a vrykolakas must succeed at a DC 22 Fortitude save or contract bubonic plague. Any creature that successfully saves against a vrykolakas\u2019s pestilent aura cannot be affected by the aura of that same vrykolakas for 24 hours. The save DC is Charisma-based. <br/><br/><i>Bubonic Plague</i>: <i>save</i> Fort DC 21; <i>onset</i> 1 day; <i>frequency</i> 1/day; <i>effect</i> 1d4 Con damage and 1 Cha damage and target is fatigued; <i>cure</i> 2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The vrykolakas knows only rage and relishes the suffering of those who failed it in life. Reanimated corpses of wicked and vengeful souls denied even the most basic burial rites, these unreasoning, vampire-like creatures unleash their wrath against the living indiscriminately, spreading disease and death among all in their paths."
@@ -495,7 +485,41 @@
                     "name": "feral possession"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Create Spawn",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A humanoid slain by a vrykolakas becomes a free-willed vrykolakas itself in 1d4 days if not blessed and given proper funerary rites. A blessing might entail either the spell <i>bless</i> or a more mundane consecration, but at the very least requires a proper prayer (with a successful DC 15 Knowledge [religion] check) invoking a good-aligned deity. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Feral Possession",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Upon being reduced to 0 hit points, a vrykolakas attempts to possess any animal within 100 feet. This ability is similar to <i>possession</i> and has a duration equal to 1 day for every Hit Die the vrykolakas has. The target must succeed at a DC 22 Will save or be possessed. If the possession fails, the vrykolakas immediately dies. If the possession succeeds, the animal immediately retreats to the vrykolakas\u2019s lair, where it attempts to bury itself in the earth. If left uninterrupted for 1d4 days, the animal transforms into a new vrykolakas with all the same statistics as the original. If discovered and slain during this time, both the animal and the vrykolakas are destroyed. If discovered and the possession effect is ended via <i>dispel magic</i> or a similar effect, the animal returns to normal and the vrykolakas is destroyed (caster level is equal to the vrykolakas\u2019s CR for the purposes of resolving this dispel magic attempt). The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Pestilent Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Creatures within 5 feet of a vrykolakas must succeed at a DC 22 Fortitude save or contract bubonic plague. Any creature that successfully saves against a vrykolakas\u2019s pestilent aura cannot be affected by the aura of that same vrykolakas for 24 hours. The save DC is Charisma-based. <br/><br/><i>Bubonic Plague</i>: <i>save</i> Fort DC 21; <i>onset</i> 1 day; <i>frequency</i> 1/day; <i>effect</i> 1d4 Con damage and 1 Cha damage and target is fatigued; <i>cure</i> 2 consecutive saves."
+            }
+        ]
     },
     "sources": [
         {

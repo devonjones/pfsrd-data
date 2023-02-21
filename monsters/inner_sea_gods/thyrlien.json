@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Elysium)<br/><b>Organization</b> solitary, pair, or squad (3\u20135)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Fast Healing (Ex)</b> A thyrlien has fast healing 1 only when outside under a night sky (whether the sky is cloudy or clear).<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Str; <i>cure </i>2 consecutive saves.<br/><br/><b>Starlight Blast (Su)</b> As a standard action once every 1d4 rounds, a thyrlien can tap into Desna\u2019s divine radiance and unleash a blast of holy twilight in a 5-foot burst. All creatures in this area take 2d4 points of holy damage, plus 1 point for each step their alignment deviates from chaotic good. For example, a chaotic neutral or neutral good creature would take 2d4+1 points of damage, a neutral creature would take 2d4+2 points of damage, and a lawful evil creature would take 2d4+4 points of damage. A DC 14 Reflex save negates this damage. Chaotic good creatures are unaffected by this ability. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A thyrlien is a unique type of azata created by Desna. Intended as rare warrior counterparts to lyrakien, thyrlien are tasked with watching over nighttime travelers. Specifically hunting the servants of Lamashtu and Ghlaunder, thyrlien wander lonely roads and dark alleys, hoping to confront or counter the dark things that so often hunt such ominous spots. Superficially humanoid, a thyrlien\u2019s attacks reveal its nonhuman origins. Venomous saliva coats mouth and its delicatelooking wings are actually as stiff as wood and have razor sharp edges. A thyrlien is skilled at tracking using conventional and magical methods and is savvy to the ways of its chosen prey. These servants of the goddess of luck stand about 2 feet tall and weigh around 15 pounds."
@@ -551,7 +541,57 @@
                     "name": "change shape"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Elysium)",
+            "organization": "solitary, pair, or squad (3\u20135)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Fast Healing",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A thyrlien has fast healing 1 only when outside under a night sky (whether the sky is cloudy or clear)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Str; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Str",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Starlight Blast",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action once every 1d4 rounds, a thyrlien can tap into Desna\u2019s divine radiance and unleash a blast of holy twilight in a 5-foot burst. All creatures in this area take 2d4 points of holy damage, plus 1 point for each step their alignment deviates from chaotic good. For example, a chaotic neutral or neutral good creature would take 2d4+1 points of damage, a neutral creature would take 2d4+2 points of damage, and a lawful evil creature would take 2d4+4 points of damage. A DC 14 Reflex save negates this damage. Chaotic good creatures are unaffected by this ability. The save DC is Constitution-based."
+            }
+        ]
     },
     "sources": [
         {

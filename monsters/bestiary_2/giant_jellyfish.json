@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any oceans<br/><b>Organization</b> solitary, pack (2\u20135), or bloom (6\u201312)<br/><b>Treasure</b> None"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Tentacles\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con; <i>cure </i>2 consecutive saves. The save DC is Constitution based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Unlike its smaller cousins, the giant jellyfish is an active predator that seeks out prey. Capable of slithering through narrow cracks, a giant jellyfish is a horrifying beast to encounter lurking in the hold of a flooded or sunken ship. Other species of these vermin exist, as summarized on the following table\u2014these variants often have different types of poison or other abilities like translucency or constriction. <br/><br/><table class=\"inner\"> <tr> <td><b>Species</b></td> <td><b>CR</b></td> <td><b>Size</b></td> <td><b>HD</b></td> </tr> <tr> <td>Death\u2019s head jellyfish</td> <td>1</td> <td>Small</td> <td>2</td> </tr> <tr> <td>Crimson jellyfish</td> <td>4</td> <td>Medium</td> <td>5</td> </tr> <tr> <td>Sapphire jellyfish</td> <td>11</td> <td>Huge</td> <td>12</td> </tr> <tr> <td>Vampire jellyfish</td> <td>14</td> <td>Gargantuan</td> <td>16</td> </tr> <tr> <td>Whaler jellyfish</td> <td>17</td> <td>Colossal</td> <td>20</td> </tr> </table>"
@@ -233,7 +223,41 @@
                     "name": "compression"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any oceans",
+            "organization": "solitary, pack (2\u20135), or bloom (6\u201312)",
+            "treasure": "None"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tentacles\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con; <i>cure </i>2 consecutive saves. The save DC is Constitution based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tentacles\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con",
+                    "cure": "2 consecutive saves. The save DC is Constitution based."
+                }
+            }
+        ]
     },
     "sources": [
         {

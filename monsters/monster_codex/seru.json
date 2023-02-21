@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land (jungles, swamps, or underground)<br/><b>Organization</b> solitary, pair, or nest (3\u20138)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite or spit venom\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/minute for 6 minutes; <i>effect </i>1 Con damage plus blindness for 1 minute; <i>cure </i>1 save.<br/><br/><b>Spit Venom (Ex)</b> As a standard action, a seru can spit venom up to 30 feet. This is a ranged touch attack with no range increment. Any opponent hit by this attack is exposed to the seru\u2019s poison."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A seru is an underground variety of telepathic venomous snake with the wings of a bat. These creatures have long held a special relationship with serpentfolk, and some legends suggest the snake-god created these winged vipers to assist the serpentfolk in their war against humanity. Intelligent enough to form their own culture, many serus live entirely separate lives from serpentfolk enclaves. Even so, many serpentfolk wizards still seek out serus to bind them as familiars. A spellcaster must have the Improved Familiar feat, be of an evil alignment, and be an arcane caster of level of 7th or higher to gain a seru familiar.<br/><br/>Serus are natural predators that prefer to track prey by scent. When ready to strike, they spit venom into the eyes of a victim and use ambush tactics to wear down their targets. When presented with overwhelming odds or those capable of resisting their venom, serus tend to flee and hide among their cavern rocks.<br/><br/>Serpentfolk often use serus to watch their territorial borders. These creatures serve both as a deterrent and as telepathic spies that can quickly alert their masters to the presence of outsiders. They sometimes enter into friendships with degenerate serpentfolk, participating in raiding parties as equal companions and trackers, or else command them by acting as mouthpieces for purecastes.<br/><br/>An adult seru weighs approximately 20 pounds, with a body nearly 3 feet long and a wingspan of 5 feet. A mated female lays two to five eggs every year, but many fall victim to underground predators before they ever hatch. Serus have an average life span of 25 years."
@@ -364,7 +354,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land (jungles, swamps, or underground)",
+            "organization": "solitary, pair, or nest (3\u20138)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite or spit venom\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/minute for 6 minutes; <i>effect </i>1 Con damage plus blindness for 1 minute; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite or spit venom\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/minute for 6 minutes",
+                    "effect": "1 Con damage plus blindness for 1 minute",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spit Venom",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a standard action, a seru can spit venom up to 30 feet. This is a ranged touch attack with no range increment. Any opponent hit by this attack is exposed to the seru\u2019s poison."
+            }
+        ]
     },
     "sources": [
         {

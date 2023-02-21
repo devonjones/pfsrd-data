@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or colony (3\u20138)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 10; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1 Str; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Scarlet spiders are small arachnids with bright red bodies and black legs. Because they are hunting spiders, scarlet spiders don\u2019t have a web attack."
@@ -270,7 +260,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or colony (3\u20138)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 10; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1 Str; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 10",
+                        "save_type": "Fort",
+                        "dc": 10
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1 Str",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

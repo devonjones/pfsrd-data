@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Hell)<br/><b>Organization</b> solitary or team (2-8)<br/><b>Treasure</b> standard (<i>+1 dagger</i>, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Contract Killer (Su)</b> A salikotal gains a +2 bonus on attack and damage rolls when attacking a specific individual it has marked for death. At the beginning of each day, it determines an individual to serve as its target and which one of its three vengeances it may make use of that day. It may not change this target or ability until the next day. The target may be any specific creature the salikotal knows of, even if it has not seen its target before. This target is treated as being known to a salikotal for the purposes of using its <i>locate creature</i> ability, even if the devil has never seen its victim before.<br/><br/><b>Sneak Attack (Ex)</b> Anytime a salikotal\u2019s opponent is denied his Dexterity bonus to AC, or if a salikotal flanks his opponent, he deals an extra 3d6 points of damage. This ability is just like the rogue\u2019s sneak attack and subject to the same limitations.<br/><br/><b>Suicide (Su)</b> As a standard action, a salikotal may target itself with a coup de grace attack. If the salikotal reduces itself to fewer than 0 hit points\u2014or fails to do so but still fails the associated Fortitude save (DC = 10 + damage dealt)\u2014the salikotal erupts in a burst of destructive energy. Any creature within 15 feet of a salikotal that commits suicide is damaged by a blast of metal shards and needle-like scales, taking 6d6 points of damage (DC 17, save for half ). The save DC is Constitution-based. Upon using this ability, a salikotal is permanently destroyed. This effect only takes place if a salikotal willingly ends its own life, not if it is killed by outside effects.<br/><br/><b>Vengeance (Su)</b> While seeking a victim a salikotal prepares itself daily, honing its will to effectively slaughter its intended quarry. On a given day, chosen as part of its contract killer ability, a salikotal may gain the benefit of any one of the following powers, either the one it feels will most aid it or whichever one its summoner requests. Only one of these abilities is active on a given day, and it only comes into effect when a salikotal kills its intended target with a coup de grace. These executions only function on living creatures.<br/><br/><i>Fideicide</i>: The victim\u2019s soul is immediately shunted to a infernal prison on Erebus, the third layer of Hell. The soul can be returned to life, but upon casting the spell, the spellcaster attempting the resurrection takes an amount of fire damage equal to 1d6 \u00d7 the victim\u2019s number of Hit Dice, and must make an immediate concentration check (DC 10 + damage delt + spell level) or lose the spell.<br/><br/><i>Necrocide</i>: After 1d4 rounds, the victim\u2019s body animates as a zombie under the salikotal\u2019s control. The devil may permanently grant control of the zombie to any sentient creature as a free action.<br/><br/><i>Omnicide</i>: The victim\u2019s body is utterly destroyed, disintegrating without a trace. Its clothing and possessions remain unharmed. Only spells that do not require a portion of the corpse may return the victim to life."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Prince-killers and assassins of souls, salikotals serve as the bloody chisels by which the lords of Hell subtly shape the mortal world to their whims. Soaring through the night on silent wings, these murderous devils care nothing for life or reason, knowing only a single, murderous goal. Cloaked by shadow and silence, few ever glimpse the sharp features of a salikotal, for Hell\u2019s death-dealers reveal themselves only amid the haze of fading life.<br/><br/>Lean, deft hunters, salikotals move like terrible predatory birds, each taloned step measured, cautious, and full of deadly intent. Protected by an armor of sharp, thin scales, these agile devils universally stand 5 feet, 4 inches tall, and weigh 85 pounds, their barbed frames supporting the breadth of their 8-foot-wide, bat-like wings. They have full control over their slender tails, nimbly manipulating objects and even wielding deadly, Hell-forged blades in these dexterous, prehensile appendages."
@@ -678,7 +668,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Hell)",
+            "organization": "solitary or team (2-8)",
+            "treasure": "standard (<i>+1 dagger</i>, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Contract Killer",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A salikotal gains a +2 bonus on attack and damage rolls when attacking a specific individual it has marked for death. At the beginning of each day, it determines an individual to serve as its target and which one of its three vengeances it may make use of that day. It may not change this target or ability until the next day. The target may be any specific creature the salikotal knows of, even if it has not seen its target before. This target is treated as being known to a salikotal for the purposes of using its <i>locate creature</i> ability, even if the devil has never seen its victim before."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sneak Attack",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Anytime a salikotal\u2019s opponent is denied his Dexterity bonus to AC, or if a salikotal flanks his opponent, he deals an extra 3d6 points of damage. This ability is just like the rogue\u2019s sneak attack and subject to the same limitations."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Suicide",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action, a salikotal may target itself with a coup de grace attack. If the salikotal reduces itself to fewer than 0 hit points\u2014or fails to do so but still fails the associated Fortitude save (DC = 10 + damage dealt)\u2014the salikotal erupts in a burst of destructive energy. Any creature within 15 feet of a salikotal that commits suicide is damaged by a blast of metal shards and needle-like scales, taking 6d6 points of damage (DC 17, save for half ). The save DC is Constitution-based. Upon using this ability, a salikotal is permanently destroyed. This effect only takes place if a salikotal willingly ends its own life, not if it is killed by outside effects."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vengeance",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "While seeking a victim a salikotal prepares itself daily, honing its will to effectively slaughter its intended quarry. On a given day, chosen as part of its contract killer ability, a salikotal may gain the benefit of any one of the following powers, either the one it feels will most aid it or whichever one its summoner requests. Only one of these abilities is active on a given day, and it only comes into effect when a salikotal kills its intended target with a coup de grace. These executions only function on living creatures.<br/><br/><i>Fideicide</i>: The victim\u2019s soul is immediately shunted to a infernal prison on Erebus, the third layer of Hell. The soul can be returned to life, but upon casting the spell, the spellcaster attempting the resurrection takes an amount of fire damage equal to 1d6 \u00d7 the victim\u2019s number of Hit Dice, and must make an immediate concentration check (DC 10 + damage delt + spell level) or lose the spell.<br/><br/><i>Necrocide</i>: After 1d4 rounds, the victim\u2019s body animates as a zombie under the salikotal\u2019s control. The devil may permanently grant control of the zombie to any sentient creature as a free action.<br/><br/><i>Omnicide</i>: The victim\u2019s body is utterly destroyed, disintegrating without a trace. Its clothing and possessions remain unharmed. Only spells that do not require a portion of the corpse may return the victim to life."
+            }
+        ]
     },
     "sources": [
         {

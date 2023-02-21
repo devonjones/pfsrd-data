@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or cold aquatic<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Ink Cloud (Ex) </b>While within water, an octopus can emit a 5-foot-radius sphere of ink once per minute as a swift action. This ink provides total concealment and persists for 1 minute.<br/><br/><b>Jet (Ex) </b>The octopus can jet 60 feet in a straight line as a full-round action. This does not provoke attacks of opportunity.<br/><br/><b>Poison (Ex) </b>Bite\u2014injury; <i>save </i>Fort DC 10; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1 Str; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Blue-ringed octopuses are aquatic animals capable of a surprising amount of cunning. They cannot survive out of water."
@@ -297,7 +287,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or cold aquatic",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Ink Cloud",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "While within water, an octopus can emit a 5-foot-radius sphere of ink once per minute as a swift action. This ink provides total concealment and persists for 1 minute."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Jet",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The octopus can jet 60 feet in a straight line as a full-round action. This does not provoke attacks of opportunity."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 10; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1 Str; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 10",
+                        "save_type": "Fort",
+                        "dc": 10
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1 Str",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

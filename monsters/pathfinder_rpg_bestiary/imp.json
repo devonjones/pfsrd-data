@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Hell)<br/><b>Organization</b> solitary, pair, or flock (3\u201310)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex) </b>Sting\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dex; <i>cure </i>1 save. The save DC is Constitution-based, and includes a +2 racial bonus."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Born directly from the pits of Hell, imps are among the least of the true devils; these vicious, manipulative fiends, however, hold an important role in the corruption of mortal souls. Unfettered from the ranks and duties of diabolical armies, imps delight in any opportunity to travel to the Material Plane and subtly tempt mortals toward acts of ever-greater depravity. Willingly serving spellcasters as familiars, imps play the role of dutiful servants, often granting their masters cunning advice and infernal insights. In truth, though, an imp works to deliver souls to Hell, assuring that its master\u2019s soul\u2014and as many collateral souls as possible\u2014faces damnation upon death.<br/><br/>Imps vary widely in appearance, ranging through a spectrum of bestial traits and grotesque body shapes, though most take the forms of red-skinned, winged humanoids with bulbous features. Such a typical imp stands a mere 2 feet tall, has a 3-foot wingspan, and weighs 10 pounds.<br/><br/>One in every thousand imps possesses the ability to communicate telepathically with creatures within 50 feet and the power to change its form into that of any Small or Tiny animal, as per the spell <i>beast shape II</i>. These imp consulars are highly prized by powerful devils, who send them to serve their favored minions or to corrupt mortals with great destinies. An imp consular can be summoned via the Improved Familiar feat, but only by a spellcaster of 8th level or higher. Diabolists tell of other breeds of imps with similarly specialized abilities, but if such creatures truly exist they are an especially rare lot.<br/><br/>Unlike most devils, imps often find themselves free and alone on the Material Plane, particularly after they\u2019ve been summoned to serve as familiars and their masters have perished (often indirectly due to the machinations of the imp itself). With no way to return home, these imps, freed of their bonds to arcane masters, can become dangerous pests or even leaders of small tribes of savage humanoids like goblins or kobolds."
@@ -498,7 +488,41 @@
                     "name": "change shape"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Hell)",
+            "organization": "solitary, pair, or flock (3\u201310)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dex; <i>cure </i>1 save. The save DC is Constitution-based, and includes a +2 racial bonus.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Dex",
+                    "cure": "1 save. The save DC is Constitution-based, and includes a +2 racial bonus."
+                }
+            }
+        ]
     },
     "sources": [
         {

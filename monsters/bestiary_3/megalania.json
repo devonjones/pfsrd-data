@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm forests or plains<br/><b>Organization</b> solitary, pair, or pack (3\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite; <i>save </i>Fort DC 19; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dex damage; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The immense megalania is often mistaken for a dragon or dinosaur. Certainly the lizard\u2019s aggressive attitude and deep, rumbling roars only encourage such misidentifications. Large enough to catch and eat rhinos and elephants, a megalania prefers hunting much smaller prey that it can gulp down in one greedy swallow. Humanoids are among its favorite meals.<br/><br/>A megalania is 20 feet long and weighs 2,000 pounds."
@@ -347,7 +337,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm forests or plains",
+            "organization": "solitary, pair, or pack (3\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite; <i>save </i>Fort DC 19; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dex damage; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 19",
+                        "save_type": "Fort",
+                        "dc": 19
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Dex damage",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

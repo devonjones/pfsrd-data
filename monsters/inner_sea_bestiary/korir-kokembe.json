@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm jungles (Mwangi Expanse)<br/><b>Organization</b> solitary or nest (2\u20135)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disease (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 20; <i>onset </i>1 round; <i>frequency </i>1 day; <i>effect </i>1d3 Dex damage and 1d3 Str damage; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Korir-kokembe live in the deep, watery jungles of central Garund, plaguing the major rivers and lake systems. While young korir-kokembe may swim near populated waterways to claim their prey, their elder kin prefer more remote backwaters, sloughs, and heavily wooded swamps where they can hunt undisturbed. These degenerate dragons live in a violent symbiosis with the tiny vermin that infest the jungle, hosting colonies of such creatures within their own bodies. Such tiny vermin constantly swarm in and out of the korir-kokembe\u2019s gullet, bringing contagion to creatures bitten and allowing the wyrm to expel swarms of pests, or to summon yet more vermin to its aid. While korir-kokembe are capable of flight, they generally prefer to crawl or climb on their eight legs, hunching their bodies like inchworms or twining their coils around their prey while savaging creatures with a barrage of slashing claws."
@@ -653,7 +643,42 @@
                     "name": "compression"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm jungles (Mwangi Expanse)",
+            "organization": "solitary or nest (2\u20135)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 20; <i>onset </i>1 round; <i>frequency </i>1 day; <i>effect </i>1d3 Dex damage and 1d3 Str damage; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Disease",
+                    "affliction_type": "Disease; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 20",
+                        "save_type": "Fort",
+                        "dc": 20
+                    },
+                    "onset": "1 round",
+                    "frequency": "1 day",
+                    "effect": "1d3 Dex damage and 1d3 Str damage",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

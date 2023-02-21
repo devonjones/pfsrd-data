@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any ocean<br/><b>Organization</b> solitary, hunting group (3\u20136), or clan (9\u201314)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Arcane Echo (Su)</b> Merlucents naturally filter arcane energies from the world around them, and can produce large displays of magical power. Three times per day as a standard action, a merlucent can replicate the effects of a single arcane spell cast within 20 feet of it, directing the spell\u2019s effect and choosing a target as if it were the caster. This echo uses the merlucent\u2019s caster level rather than that of the original spellcaster, and a merlucent can\u2019t echo any effect with a spell level greater than half the merlucent\u2019s own Hit Dice (generally limiting it to second-level spells). A merlucent can\u2019t echo the spells, spell-like abilities, or arcane echo effects created by other merlucents.<br/><br/><b>Jellyfish Empathy (Ex)</b> This ability functions as a druid\u2019s wild empathy ability, save that it works only on jellyfish. A merlucent gains a racial bonus on this check equal to its Hit Dice (normally +4). Jellyfish are normally mindless, but this empathic communication imparts upon them a modicum of implanted intelligence, allowing merlucents to train jellyfish and use them as guardians (though it does not grant them skills or feats).<br/><br/><b>Poison (Ex)</b> Tentacle\u2014injury; <i>save</i> Fort DC 14; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d3 Dex; <i>cure</i> 1 save. The save DC is Constitution-based.<br/><br/><b>Transparent Flesh (Ex)</b> A merlucent\u2019s transparent flesh becomes hazy and indistinct in water, granting it concealment while the creature is submerged.<br/><br/><b>Vitrify (Su)</b> A merlucent can produce a polyp and implant it in the ear of a willing or helpless creature over the course of 1 minute, during which the merlucent is flat-footed. The polyp begins slowly consuming its host\u2019s brain, transforming the creature\u2019s flesh into a transparent jelly and replacing its bone with delicate crystal. A creature that takes any amount of Intelligence damage from a merlucent polyp can breathe while underwater, but loses the ability to breathe air. If a humanoid creature takes ability damage in excess of its Intelligence score, it transforms into a new merlucent, losing all abilities or class levels it previously possessed. The polyp can be destroyed by any effect that removes disease, but the inability to breathe air persists until a creature\u2019s Intelligence damage is healed.<br/><br/><i>Vitrify</i>: Implantation; <i>save</i> Fort 12; <i>onset</i> 12 hours; <i>frequency</i> 1/day; <i>effect</i> 1d4 Int damage; <i>cure</i> 2 consecutive saves. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Merlucents are strange creatures formed from the fusion of human and jellyfish. As a species, they are simple-minded ascetics. Individual clans claim small stretches of coastline where they hunt fish and shellfish, and scratch strange glyphs into coral, coaxing it to grow in unnatural though beautiful formations. Naturally sensitive to arcane energy, they settle in locations rife with ambient magic, such as along ley lines or near schools of magic built on islands or coasts. Local communities generally consider merlucents to be pests for stripping fishing grounds bare, but the aberrations also keep more aggressive aquatic threats away. This small blessing turns bane every 2 to 5 years when merlucents enter their mating phase and become extremely aggressive.<br/><br/>To reproduce, each merlucent spawns dozens of antsized polyps, each of which must mature inside the skull of a humanoid host. Depending on the host, it can take anywhere from days to weeks for the tiny parasite to take over its host\u2019s mind and convert the bony, flesh-covered body into its own adult form. To support their children, merlucents conduct fanatical crusades, kidnapping surface dwellers to act as incubators. Relying on its members\u2019 stealth and paralytic poison, a single clan may snatch dozens of unwary sailors or coastal residents in a single season.<br/><br/>Merlucents range from 4 to 5 feet in height and weigh around 180 pounds, though smaller or larger specimens may be spawned depending on the size of the host."
@@ -393,7 +383,73 @@
                     "name": "transparent flesh"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any ocean",
+            "organization": "solitary, hunting group (3\u20136), or clan (9\u201314)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Arcane Echo",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Merlucents naturally filter arcane energies from the world around them, and can produce large displays of magical power. Three times per day as a standard action, a merlucent can replicate the effects of a single arcane spell cast within 20 feet of it, directing the spell\u2019s effect and choosing a target as if it were the caster. This echo uses the merlucent\u2019s caster level rather than that of the original spellcaster, and a merlucent can\u2019t echo any effect with a spell level greater than half the merlucent\u2019s own Hit Dice (generally limiting it to second-level spells). A merlucent can\u2019t echo the spells, spell-like abilities, or arcane echo effects created by other merlucents."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Jellyfish Empathy",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "This ability functions as a druid\u2019s wild empathy ability, save that it works only on jellyfish. A merlucent gains a racial bonus on this check equal to its Hit Dice (normally +4). Jellyfish are normally mindless, but this empathic communication imparts upon them a modicum of implanted intelligence, allowing merlucents to train jellyfish and use them as guardians (though it does not grant them skills or feats)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tentacle\u2014injury; <i>save</i> Fort DC 14; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d3 Dex; <i>cure</i> 1 save. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tentacle\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d3 Dex",
+                    "cure": "1 save. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Transparent Flesh",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A merlucent\u2019s transparent flesh becomes hazy and indistinct in water, granting it concealment while the creature is submerged."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vitrify",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A merlucent can produce a polyp and implant it in the ear of a willing or helpless creature over the course of 1 minute, during which the merlucent is flat-footed. The polyp begins slowly consuming its host\u2019s brain, transforming the creature\u2019s flesh into a transparent jelly and replacing its bone with delicate crystal. A creature that takes any amount of Intelligence damage from a merlucent polyp can breathe while underwater, but loses the ability to breathe air. If a humanoid creature takes ability damage in excess of its Intelligence score, it transforms into a new merlucent, losing all abilities or class levels it previously possessed. The polyp can be destroyed by any effect that removes disease, but the inability to breathe air persists until a creature\u2019s Intelligence damage is healed.<br/><br/><i>Vitrify</i>: Implantation; <i>save</i> Fort 12; <i>onset</i> 12 hours; <i>frequency</i> 1/day; <i>effect</i> 1d4 Int damage; <i>cure</i> 2 consecutive saves. The save DC is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

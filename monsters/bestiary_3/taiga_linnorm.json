@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> cold forests<br/><b>Organization</b> solitary<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su)</b> Once every 1d4 rounds as a standard action, a taiga linnorm can expel a 60-foot cone of electrified vapor, dealing 21d8 points of electricity damage to all creatures struck (Reflex DC 30 for half). The vapor itself persists for 1d4 rounds, filling its cone-shaped area with electrified mist that deals 4d6 points of electricity damage (no save) to any creature that ends its turn in the mist. The mist does not hinder vision. The save DC is Constitution-based.<br/><br/><b>Death Curse (Su)</b><i>Curse of Electrocution</i>: <i>save </i>Will DC 29; <i>effect </i>the creature gains vulnerability to electricity.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 30; <i>frequency </i>1/round for 10 rounds; <i>effect </i>4d6 electricity damage and 1d8 Dex drain; <i>cure </i>3 consecutive saves.<br/><br/><b>Spines (Ex)</b> Any creature that makes a melee attack against a taiga linnorm takes 1d6 points of piercing damage per attack from the linnorm\u2019s spines. A melee weapon with reach provides protection from these spines."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A beast covered with hundreds of spines, the taiga linnorm is a terror to all those who venture through the arctic forests of the north. Taiga linnorms take down foes and prey first with their electrifying breath and finish their victims off with their devastating bite.<br/><br/>In winter, when light is sparse and the nights are long, it is easy for a taiga linnorm to blend in with the coniferous forests it dwells in, hiding among the trees and ambushing imprudent travelers or unwary adventurers setting up camp. A taiga linnorm often lies in wait for days\u2014sometimes weeks\u2014just for the opportunity to maim and devour unsuspecting victims. When this subtler tactic does not work, a taiga linnorm simply rampages through the woods in order to find nearby settlements to pillage, taking twisted delight in shocking the inhabitants before shredding them with its massive jaws or destructive forelimbs. In any event, taiga linnorms rarely venture far from their woodland territories save for short flights to attack outlying villages.<br/><br/>A taiga linnorm is 50 feet long and weighs just over 13,000 pounds."
@@ -550,7 +540,65 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "cold forests",
+            "organization": "solitary",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds as a standard action, a taiga linnorm can expel a 60-foot cone of electrified vapor, dealing 21d8 points of electricity damage to all creatures struck (Reflex DC 30 for half). The vapor itself persists for 1d4 rounds, filling its cone-shaped area with electrified mist that deals 4d6 points of electricity damage (no save) to any creature that ends its turn in the mist. The mist does not hinder vision. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Curse",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "<i>Curse of Electrocution</i>: <i>save </i>Will DC 29; <i>effect </i>the creature gains vulnerability to electricity."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 30; <i>frequency </i>1/round for 10 rounds; <i>effect </i>4d6 electricity damage and 1d8 Dex drain; <i>cure </i>3 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 30",
+                        "save_type": "Fort",
+                        "dc": 30
+                    },
+                    "frequency": "1/round for 10 rounds",
+                    "effect": "4d6 electricity damage and 1d8 Dex drain",
+                    "cure": "3 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spines",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Any creature that makes a melee attack against a taiga linnorm takes 1d6 points of piercing damage per attack from the linnorm\u2019s spines. A melee weapon with reach provides protection from these spines."
+            }
+        ]
     },
     "sources": [
         {

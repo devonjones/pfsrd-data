@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or procession (2\u20135)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Death Throes (Ex)</b> A gold golem melts into worthless slag when destroyed, releasing a 10-foot-radius cloud of fumes that deals 1d4 points of Constitution damage to all creatures within a 10-foot radius. A successful DC 21 Fortitude save negates this effect. This is a poison effect. The save DC is Constitution-based. <br/><br/><b>Immunity to Magic (Ex)</b> A gold golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. <ul> <li>\u00e2\u0080\u00a2 A magical attack that deals fire damage reduces the golem's DR to 5/adamantine but also hastens it for 1d6 rounds as per the spell haste, with no saving throw.</li> <li>\u00e2\u0080\u00a2 A magical attack that deals cold damage slows a gold golem for 1d6 rounds as per the spell slow, with no saving throw.</li> </ul><br/><br/><b>Prismatic Surge (Su)</b> As a swift action when it hits a foe with its slam attack, a gold golem unleashes a ray of prismatic energy from its bejeweled scepter. It can choose to automatically hit the foe it hit with its slam attack with this ray, or it can target another creature within 30 feet as a +26 ranged touch attack. Roll 1d6 for any creature struck by a ray, and consult the following table to determine the effects. The save DCs are Constitution-based.<br/><br/><table class=\"inner\"> <tr> <td><b>1d6</b></td> <td><b>Beam</b></td> <td><b>Color Effect</b></td> </tr> <tr> <td>1</td> <td>Red</td> <td>20 points of fire damage (Reflex DC 21 half)</td> </tr> <tr> <td>2</td> <td>Orange</td> <td>40 points of acid damage (Reflex DC 21 half)</td> </tr> <tr> <td>3</td> <td>Yellow</td> <td>80 points of electricity damage (Reflex DC 21 half)</td> </tr> <tr> <td>4</td> <td>Green</td> <td>Poison (<i>save</i> Fort DC 21;  <i>frequency</i> 1/round for 6 rounds;  <i>effect</i> 1d4 Con damage;  <i>cure</i> 2 consecutive saves)</td> </tr> <tr> <td>5</td> <td>Blue</td> <td>Petrification (as per <a href=\"SpellDisplay.aspx?ItemName=flesh%20to%20stone\" style=\"text-decoration:underline\"><i>flesh to stone</i></a>,  Fort DC 21 negates)</td> </tr> <tr> <td>6</td> <td>Indigo</td> <td>Insanity (as per <a href=\"SpellDisplay.aspx?ItemName=insanity\" style=\"text-decoration:underline\"><i>insanity</i></a>, Will DC 21  negates)</td> </tr> </table>"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Gold golems are extravagant constructs, crafted at great expense at the command of the rich and powerful. They\u2019re most often used to guard palaces and family vaults, but are rarely placed in areas that are hidden away from casual observation. <br/><br/>Many of those who expend the funds to create a gold golem aren\u2019t the type to hide the conspicuous display of their wealth from their visitors. A gold golem is humanoid in appearance, standing 10 feet tall and weighing 4,500 pounds."
@@ -213,7 +203,41 @@
                     "name": "death throes"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or procession (2\u20135)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Throes",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A gold golem melts into worthless slag when destroyed, releasing a 10-foot-radius cloud of fumes that deals 1d4 points of Constitution damage to all creatures within a 10-foot radius. A successful DC 21 Fortitude save negates this effect. This is a poison effect. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immunity to Magic",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A gold golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. <ul> <li>\u00e2\u0080\u00a2 A magical attack that deals fire damage reduces the golem's DR to 5/adamantine but also hastens it for 1d6 rounds as per the spell haste, with no saving throw.</li> <li>\u00e2\u0080\u00a2 A magical attack that deals cold damage slows a gold golem for 1d6 rounds as per the spell slow, with no saving throw.</li> </ul>"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Prismatic Surge",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a swift action when it hits a foe with its slam attack, a gold golem unleashes a ray of prismatic energy from its bejeweled scepter. It can choose to automatically hit the foe it hit with its slam attack with this ray, or it can target another creature within 30 feet as a +26 ranged touch attack. Roll 1d6 for any creature struck by a ray, and consult the following table to determine the effects. The save DCs are Constitution-based.<br/><br/><table class=\"inner\"> <tr> <td><b>1d6</b></td> <td><b>Beam</b></td> <td><b>Color Effect</b></td> </tr> <tr> <td>1</td> <td>Red</td> <td>20 points of fire damage (Reflex DC 21 half)</td> </tr> <tr> <td>2</td> <td>Orange</td> <td>40 points of acid damage (Reflex DC 21 half)</td> </tr> <tr> <td>3</td> <td>Yellow</td> <td>80 points of electricity damage (Reflex DC 21 half)</td> </tr> <tr> <td>4</td> <td>Green</td> <td>Poison (<i>save</i> Fort DC 21;  <i>frequency</i> 1/round for 6 rounds;  <i>effect</i> 1d4 Con damage;  <i>cure</i> 2 consecutive saves)</td> </tr> <tr> <td>5</td> <td>Blue</td> <td>Petrification (as per <a href=\"SpellDisplay.aspx?ItemName=flesh%20to%20stone\" style=\"text-decoration:underline\"><i>flesh to stone</i></a>,  Fort DC 21 negates)</td> </tr> <tr> <td>6</td> <td>Indigo</td> <td>Insanity (as per <a href=\"SpellDisplay.aspx?ItemName=insanity\" style=\"text-decoration:underline\"><i>insanity</i></a>, Will DC 21  negates)</td> </tr> </table>"
+            }
+        ]
     },
     "sources": [
         {

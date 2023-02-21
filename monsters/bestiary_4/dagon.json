@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any oceans (Abyss)<br/><b>Organization</b> solitary (unique)<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su)</b> Once every 1d4 rounds as a standard action, Dagon can exhale a 60-foot cone of inky blackness. Underwater, this cone manifests as black ink, while above water it manifests as a thick cloud. Creatures in the area have their vision obscured as if they were in complete darkness. Darkvision does not allow someone to see through the ink or smoke, but true seeing does. The ink or smoke persists for 1d4 rounds, but dissipates in 1 round in areas with aquatic currents or winds. Any creature in the breath weapon\u2019s area is exposed to the breath weapon\u2019s poison (see below) and must succeed at a DC 41 Will save or gain 2 negative levels as its memories and knowledge leach away (this is a mind-affecting effect). Any creature that enters the ink or cloud, or ends its turn inside it, must succeed at another Will save (at a +4 bonus) to avoid further level loss and poisoning. The save DC is Constitution-based.<br/><br/><b>Command Aquatic Creature (Su)</b> Dagon can command aquatic creatures to do his bidding as a move action, either via using his ability to <i>speak with animals </i>or via telepathy. This affects all aberrations, animals, magical beasts, oozes, and vermin within 300 feet that have the aquatic subtype (Will DC 36 negates). This functions like <i>mass suggestion</i>, but can affect mindless creatures. Dagon can suggest obviously harmful or suicidal acts (though non-mindless creatures gain a +10 bonus on their saving throws against these suggestions). The commanded course of activity can have a duration of up to 1 hour. If Dagon issues a new command to a creature, the previous command is discarded. Once a creature succeeds at its save against this effect, it is immune to further commands from Dagon for 24 hours. The save DC is Charisma-based.<br/><br/><b>Poison (Ex) </b>Breath weapon\u2014contact; <i>save </i>Fort DC 41; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Con drain and confused for 1 round; <i>cure </i>3 consecutive saves.<br/><br/><b>Transformation (Su)</b> A creature swallowed by Dagon is assaulted by demonic enzymes, rasping talons, sucking tendrils, and vile gases. At the start of the swallowed creature\u2019s turn, it must succeed at a DC 41 Fortitude save or be nauseated, and must succeed at a DC 36 Will save or take 1d6 points of Dexterity and Charisma drain. Once the creature\u2019s Dexterity and Charisma are drained to 0, the creature transforms into a horrifically deformed version of itself that Dagon can then disgorge into any adjacent square as a swift action. The transformed creature gains the half-fiend template, its Dexterity and Charisma return to their normal values, and it is under Dagon\u2019s control (as <i>dominate monster</i>, caster level 28th). The transformation can be reversed by casting <i>break enchantment </i>and <i>atonement </i>on the victim during the first 24 hours (after that, it can be reversed only via <i>miracle </i>or <i>wish</i>). The Fortitude save DC is Constitution-based, and the Will save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Dagon is the demon lord of deformity, the sea, and sea monsters. He rules an Abyssal realm that consists of an immense ocean dotted above with strange and horrible islands and marked below with countless deep sea trenches and sunken cities. Dagon is 35 feet long, with the lower body of an eel, a horrif ic visage that evokes images of deep sea predators, and four long tentacles in place of arms.<br/><br/>Dagon almost always uses Power Attack in combat, taking a \u20139 penalty on all attack rolls but gaining a +18 bonus on damage rolls. He is never encountered without a large number of aquatic demons or monsters at his side that he uses as pawns in battles, often simply commanding them to attack foes while he hangs back in the shadows and observes the fight with his cold eyes. Immense sharks, hezrous, carnivorous whales, krakens, and shoggoths are the demon lord\u2019s favored minions.<br/><br/>Dagon began life not as a demon lord but as a powerful qlippoth\u2014the reasons for his transformation into a demon lord are not understood by mortal scholars, but there is certainly no love lost between Dagon and the qlippoth race."
@@ -1136,7 +1126,65 @@
                     "name": "demon lord traits"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any oceans (Abyss)",
+            "organization": "solitary (unique)",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds as a standard action, Dagon can exhale a 60-foot cone of inky blackness. Underwater, this cone manifests as black ink, while above water it manifests as a thick cloud. Creatures in the area have their vision obscured as if they were in complete darkness. Darkvision does not allow someone to see through the ink or smoke, but true seeing does. The ink or smoke persists for 1d4 rounds, but dissipates in 1 round in areas with aquatic currents or winds. Any creature in the breath weapon\u2019s area is exposed to the breath weapon\u2019s poison (see below) and must succeed at a DC 41 Will save or gain 2 negative levels as its memories and knowledge leach away (this is a mind-affecting effect). Any creature that enters the ink or cloud, or ends its turn inside it, must succeed at another Will save (at a +4 bonus) to avoid further level loss and poisoning. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Command Aquatic Creature",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Dagon can command aquatic creatures to do his bidding as a move action, either via using his ability to <i>speak with animals </i>or via telepathy. This affects all aberrations, animals, magical beasts, oozes, and vermin within 300 feet that have the aquatic subtype (Will DC 36 negates). This functions like <i>mass suggestion</i>, but can affect mindless creatures. Dagon can suggest obviously harmful or suicidal acts (though non-mindless creatures gain a +10 bonus on their saving throws against these suggestions). The commanded course of activity can have a duration of up to 1 hour. If Dagon issues a new command to a creature, the previous command is discarded. Once a creature succeeds at its save against this effect, it is immune to further commands from Dagon for 24 hours. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Breath weapon\u2014contact; <i>save </i>Fort DC 41; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Con drain and confused for 1 round; <i>cure </i>3 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Breath weapon\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 41",
+                        "save_type": "Fort",
+                        "dc": 41
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d6 Con drain and confused for 1 round",
+                    "cure": "3 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Transformation",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A creature swallowed by Dagon is assaulted by demonic enzymes, rasping talons, sucking tendrils, and vile gases. At the start of the swallowed creature\u2019s turn, it must succeed at a DC 41 Fortitude save or be nauseated, and must succeed at a DC 36 Will save or take 1d6 points of Dexterity and Charisma drain. Once the creature\u2019s Dexterity and Charisma are drained to 0, the creature transforms into a horrifically deformed version of itself that Dagon can then disgorge into any adjacent square as a swift action. The transformed creature gains the half-fiend template, its Dexterity and Charisma return to their normal values, and it is under Dagon\u2019s control (as <i>dominate monster</i>, caster level 28th). The transformation can be reversed by casting <i>break enchantment </i>and <i>atonement </i>on the victim during the first 24 hours (after that, it can be reversed only via <i>miracle </i>or <i>wish</i>). The Fortitude save DC is Constitution-based, and the Will save DC is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

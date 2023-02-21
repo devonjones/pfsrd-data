@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or tropical rivers<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Electrolocation (Ex)</b> While underwater, platypuses can sense the tiny electrical currents that trigger muscle movement. This allows them to locate living prey and distinguish it from inanimate objects. Treat electrolocation as blindsight 30 feet, but platypuses can sense only living creatures, and it functions only underwater.<br/><br/><b>Poison (Ex)</b> Spur\u2014injury; <i>save </i>Fort DC 9; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1 nonlethal damage; <i>cure </i>1 save.<br/><br/><b>Spur (Ex)</b> A platypus\u2019s spur attack is a primary natural attack that deals piercing damage."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Platypuses are members of an extremely unusual order of egg-laying mammals that live in riverside burrows where they hunt for larvae, shellfish, and worms. Platypuses also have a remarkable electrical sense they use in place of hearing, scent, and sight while hunting underwater.<br/><br/> The average platypus is roughly 1-1/2 feet long and weighs 3-1/2 pounds."
@@ -243,7 +233,57 @@
                     "name": "hold breath"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or tropical rivers",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Electrolocation",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "While underwater, platypuses can sense the tiny electrical currents that trigger muscle movement. This allows them to locate living prey and distinguish it from inanimate objects. Treat electrolocation as blindsight 30 feet, but platypuses can sense only living creatures, and it functions only underwater."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Spur\u2014injury; <i>save </i>Fort DC 9; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1 nonlethal damage; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Spur\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 9",
+                        "save_type": "Fort",
+                        "dc": 9
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1 nonlethal damage",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spur",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A platypus\u2019s spur attack is a primary natural attack that deals piercing damage."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Numeria)<br/><b>Organization</b> solitary or team (2\u20136)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Force Field (Ex)</b> A surgeon robot is sheathed in a thin layer of shimmering energy that grants it 75 bonus hit points. All damage dealt to a surgeon robot with an active force field is deducted from these hit points first. As long as the force field is active, the surgeon robot is immune to critical hits. A surgeon robot\u2019s force field has fast healing 15, but once these bonus hit points are reduced to 0, the force field shuts down and doesn\u2019t reactivate for 24 hours.<br/><br/><b>Master Surgeon (Ex)</b> Programmed to execute advanced medical procedures, a surgeon robot can perform surgeries and other procedures that heal humanoid creatures of all manner of maladies. A surgeon robot can heal wounds, set broken bones, cure diseases, treat burns, remove poison, and even install cybertech items. These procedures take varying amounts of time for the surgeon robot to complete and require different Heal check DCs. The DCs for these surgical procedures increase by 10 when they\u2019re performed on a non-humanoid creature. These procedures leave the patient with the exhausted condition. If the surgeon robot fails any of its Heal checks, the surgery fails and the patient takes 1d4 points of Constitution damage and is exhausted for 24 hours. The procedures a surgeon robot can perform are as follows: <ul> <li> <i>Cure Blindness/Deafness (DC 35)</i>: The patient\u2019s sight or hearing is restored. <i>Required Time</i>: 30 minutes.</li> <li> <i>Install Cybertech (DC = 5 + the cybertech install DC)</i>: Cybernetic equipment is installed safely. <i>Required Time</i>: 20 minutes per point of implantation of the cybertech being installed.</li> <li> <i>Minor Surgery (DC 25)</i>: The patient is healed of 1d8+1 points of damage. <i>Required Time</i>: 5 minutes.</li> <li> <i>Moderate Surgery (DC 30)</i>: The patient is healed of 2d8+3 points of damage and 1d4+1 points of ability damage to a selected ability score. <i>Required Time</i>: 10 minutes.</li> <li> <i>Major Surgery (DC 35)</i>: The patient is healed of 3d8+5 points of damage and is cured of blindness and deafness. <i>Required Time</i>: 15 minutes.</li> <li> <i>Critical Surgery (DC 40)</i>: The patient is healed of 4d8+7 points of damage and either all ability damage to all ability scores or all ability drain to one ability score. <i>Required Time</i>: 30 minutes.</li> <li> <i>Treat Toxin (DC = 10 + the save DC of disease or poison)</i>: One disease or poison currently afflicting the patient is removed. <i>Required Time</i>: 10 minutes.</li> </ul><br/><br/><b>Specialized Programming (Ex)</b> Heal is always a class skill for surgeon robots, and they gain a +8 racial bonus on Heal checks.<br/><br/><b>Superior Optics (Ex)</b> Surgeon robots see invisible creatures or objects as if they were visible.<br/><br/><b>Syringe (Ex)</b> When a surgeon robot makes a successful attack with its syringe, it can inject the target with pharmaceuticals. The robot contains nanites that fabricate the pharmaceuticals stored within its body. Up to 10 doses of these pharmaceuticals can be administered per day. The surgeon robot can choose to affect its target with cardioamp, cureall, hemochem (grade III), torpinal, or zortaphen each time it uses this ability. Rules for these pharmaceuticals can be found on pages 33\u201334 of <i>Pathfinder Campaign Setting: Technology Guide</i>."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "These large, insectoid-looking robots were designed to perform incredibly complicated surgeries with flawless results. Possessing a data bank filled with advanced surgical techniques, these robots produce nearly supernatural effects, and the recovery time from their procedures is often nothing short of miraculous. These robots were originally stationed on <i>Divinity</i> to care for the humanoid crew of the ship during their long voyage, and some were even employed to treat the aliens the ship collected during its journey. Surgeon robots stand 7 feet tall and weigh a bit more than 600 pounds."
@@ -523,7 +513,57 @@
                     "name": "specialized programming"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Numeria)",
+            "organization": "solitary or team (2\u20136)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Force Field",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A surgeon robot is sheathed in a thin layer of shimmering energy that grants it 75 bonus hit points. All damage dealt to a surgeon robot with an active force field is deducted from these hit points first. As long as the force field is active, the surgeon robot is immune to critical hits. A surgeon robot\u2019s force field has fast healing 15, but once these bonus hit points are reduced to 0, the force field shuts down and doesn\u2019t reactivate for 24 hours."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Master Surgeon",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Programmed to execute advanced medical procedures, a surgeon robot can perform surgeries and other procedures that heal humanoid creatures of all manner of maladies. A surgeon robot can heal wounds, set broken bones, cure diseases, treat burns, remove poison, and even install cybertech items. These procedures take varying amounts of time for the surgeon robot to complete and require different Heal check DCs. The DCs for these surgical procedures increase by 10 when they\u2019re performed on a non-humanoid creature. These procedures leave the patient with the exhausted condition. If the surgeon robot fails any of its Heal checks, the surgery fails and the patient takes 1d4 points of Constitution damage and is exhausted for 24 hours. The procedures a surgeon robot can perform are as follows: <ul> <li> <i>Cure Blindness/Deafness (DC 35)</i>: The patient\u2019s sight or hearing is restored. <i>Required Time</i>: 30 minutes.</li> <li> <i>Install Cybertech (DC = 5 + the cybertech install DC)</i>: Cybernetic equipment is installed safely. <i>Required Time</i>: 20 minutes per point of implantation of the cybertech being installed.</li> <li> <i>Minor Surgery (DC 25)</i>: The patient is healed of 1d8+1 points of damage. <i>Required Time</i>: 5 minutes.</li> <li> <i>Moderate Surgery (DC 30)</i>: The patient is healed of 2d8+3 points of damage and 1d4+1 points of ability damage to a selected ability score. <i>Required Time</i>: 10 minutes.</li> <li> <i>Major Surgery (DC 35)</i>: The patient is healed of 3d8+5 points of damage and is cured of blindness and deafness. <i>Required Time</i>: 15 minutes.</li> <li> <i>Critical Surgery (DC 40)</i>: The patient is healed of 4d8+7 points of damage and either all ability damage to all ability scores or all ability drain to one ability score. <i>Required Time</i>: 30 minutes.</li> <li> <i>Treat Toxin (DC = 10 + the save DC of disease or poison)</i>: One disease or poison currently afflicting the patient is removed. <i>Required Time</i>: 10 minutes.</li> </ul>"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Specialized Programming",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Heal is always a class skill for surgeon robots, and they gain a +8 racial bonus on Heal checks."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Superior Optics",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Surgeon robots see invisible creatures or objects as if they were visible."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Syringe",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "When a surgeon robot makes a successful attack with its syringe, it can inject the target with pharmaceuticals. The robot contains nanites that fabricate the pharmaceuticals stored within its body. Up to 10 doses of these pharmaceuticals can be administered per day. The surgeon robot can choose to affect its target with cardioamp, cureall, hemochem (grade III), torpinal, or zortaphen each time it uses this ability. Rules for these pharmaceuticals can be found on pages 33\u201334 of <i>Pathfinder Campaign Setting: Technology Guide</i>."
+            }
+        ]
     },
     "sources": [
         {

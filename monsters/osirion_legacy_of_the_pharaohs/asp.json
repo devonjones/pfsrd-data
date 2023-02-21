@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm deserts<br/><b>Organization</b> solitary, pair, or nest (3\u20138)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con; <i>cure </i>2 consecutive saves. The save DC includes a +2 racial bonus."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "An asp is a type of cobra native to Osirion and northern Garund. It ranges from 4 to 6 feet in length and has brownish scales with dark mottling."
@@ -295,7 +285,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm deserts",
+            "organization": "solitary, pair, or nest (3\u20138)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con; <i>cure </i>2 consecutive saves. The save DC includes a +2 racial bonus.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Con",
+                    "cure": "2 consecutive saves. The save DC includes a +2 racial bonus."
+                }
+            }
+        ]
     },
     "sources": [
         {

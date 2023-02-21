@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or colony (3\u201310)<br/><b>Treasure</b> NPC gear (studded leather armor, short sword, 2 doses of Medium spider venom, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Fort DC 16; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d2 Strength damage; <i>cure</i> 1 save. The save DC is Constitution-based and includes a +2 racial bonus."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "In humanoid form, werespiders are squat, compact, and usually have short, dark brown or black hair. Their eyes tend to be large and dark, and their fingers almost constantly twitch. Their faces are often shiny with natural oils, and the chins of male werespiders are commonly covered in prickly black stubble. Werespiders enjoy the company of kin, having large families and even larger networks of friends and acquaintances. They like to pass information through these communities, creating a web of contacts that can sometimes stretch over several towns. Werespiders that like to sit at the centers of large organizations often employ non-entothrope informants and spies to be on the lookout for the information they desire, slipping feelers into all aspects of their communities. <br/><br/>Werespiders prefer not to fight by themselves. They are most comfortable when outnumbering their foes. When threatened, a lone werespider attempts to scuttle off to a safer location, usually one full of his allies. Such places are often filled with traps designed to immobilize or poison targets\u2014 sometimes both. When werespiders catch victims in these devices, they are quick to move the corpses out of the way and reset the traps, leaving the looting of the bodies for when they feel secure once again."
@@ -397,7 +387,41 @@
                     "name": "trapfinding +1"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or colony (3\u201310)",
+            "treasure": "NPC gear (studded leather armor, short sword, 2 doses of Medium spider venom, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 16; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d2 Strength damage; <i>cure</i> 1 save. The save DC is Constitution-based and includes a +2 racial bonus.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 16",
+                        "save_type": "Fort",
+                        "dc": 16
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Strength damage",
+                    "cure": "1 save. The save DC is Constitution-based and includes a +2 racial bonus."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Hell)<br/><b>Organization</b> solitary, pair, or infestation (3\u20136)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Inhabit (Ex)</b> A hellwasp swarm can enter the body of a helpless or dead creature by crawling into its mouth and other orifices. Inhabiting a body requires 1 minute, and the victim must be Small, Medium, or Large. The swarm can abandon the body at any time as a full-round action. Any attack against the host deals half damage to the hellwasp swarm as well, although the swarm\u2019s DR, resistances, and immunities may negate some or all of this damage.<br/><br/>When a hellwasp swarm inhabits a dead body, it effectively transforms the corpse into a zombie of the appropriate size under the swarm\u2019s control. If a hellwasp swarm inhabits a living victim, it can neutralize the effects of its own poison and control the victim\u2019s movement and actions as if using <i>dominate monster</i>. Hellwasps quickly consume a living victim, dealing 2d4 points of Constitution damage per hour.<br/><br/>A hellwasp-inhabited creature is easy to spot, since its skin crawls with the forms of the insects inside. A swarm can attempt a Disguise check to conceal its inhabitation of a host, with a \u20134 penalty if currently inhabiting a Small host.<br/><br/>A <i>remove disease </i>or <i>heal </i>spell cast on an inhabited victim forces the hellwasp swarm to abandon its host.<br/><br/><b>Poison (Ex) </b>Swarm\u2014injury; <i>save </i>Fort DC 20; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Dex; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Even Hell\u2019s fiendish inhabitants know to stay clear of the maddening buzz of hellwasp swarms. While individual hellwasps are mindless, when swarmed together they gain a hive mind that torments the living and the dead alike. Sages and diabolists argue as to why this happens, but a favored explanation is that all hellwasps contain the dispersed soul of some greater devil, scattered and imprisoned by his rivals for infractions lost to mortal knowledge.<br/><br/>Though intelligent, these swarms are often difficult to understand and reason with. A hellwasp swarm can speak in a fashion with its myriad droning wings. The chatter is often little more than repetitive mantras of insults and the voicing of the twisted and base desires of the swarm. A hellwasp swarm has little use for reason, diplomacy, or discourse in other circumstances, for its desires are as savage as its home plane."
@@ -371,7 +361,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Hell)",
+            "organization": "solitary, pair, or infestation (3\u20136)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Inhabit",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A hellwasp swarm can enter the body of a helpless or dead creature by crawling into its mouth and other orifices. Inhabiting a body requires 1 minute, and the victim must be Small, Medium, or Large. The swarm can abandon the body at any time as a full-round action. Any attack against the host deals half damage to the hellwasp swarm as well, although the swarm\u2019s DR, resistances, and immunities may negate some or all of this damage.<br/><br/>When a hellwasp swarm inhabits a dead body, it effectively transforms the corpse into a zombie of the appropriate size under the swarm\u2019s control. If a hellwasp swarm inhabits a living victim, it can neutralize the effects of its own poison and control the victim\u2019s movement and actions as if using <i>dominate monster</i>. Hellwasps quickly consume a living victim, dealing 2d4 points of Constitution damage per hour.<br/><br/>A hellwasp-inhabited creature is easy to spot, since its skin crawls with the forms of the insects inside. A swarm can attempt a Disguise check to conceal its inhabitation of a host, with a \u20134 penalty if currently inhabiting a Small host.<br/><br/>A <i>remove disease </i>or <i>heal </i>spell cast on an inhabited victim forces the hellwasp swarm to abandon its host."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Swarm\u2014injury; <i>save </i>Fort DC 20; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Dex; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Swarm\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 20",
+                        "save_type": "Fort",
+                        "dc": 20
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d6 Dex",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

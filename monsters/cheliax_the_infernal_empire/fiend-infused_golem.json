@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or gang (2\u20134)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Berserk Liberation (Ex)</b> When a fiend-infused golem enters combat, there is a cumulative 2% chance each round that the animating fiend breaks free and the golem goes berserk. This chance resets to 0% after 1 minute of inactivity. When a fiend-infused golem goes berserk, the animating fiend explodes in a conflagration of hellfire, dealing 13d6 points of damage to all creatures within 60 feet (Reflex DC 17 half). Half of this damage is fire damage, but the other half results directly from unholy power and is not reduced by resistance to fire-based attacks. The save DC is Constitution-based. The berserk golem then loses the fiend-infused template permanently and thereafter attacks the nearest living creature, or smashes some object smaller than itself if no creature is within reach. Once it goes berserk, no known method can reestablish control.<br/><br/><b>Hellfire Touch (Su)</b> A fiend-infused golem\u2019s body radiates the soul-scorching heat of the evil Outer Planes, dealing 2d6 points of damage with its touch. Half of this damage is fire damage, but the other half results directly from unholy power and is not reduced by resistance to fire-based attacks. Creatures attacking a fiend-infused golem with unarmed strikes or natural weapons take this same hellfire damage each time one of their attacks hits. A fiend-infused golem\u2019s natural attacks are treated as evil for the purpose of overcoming damage reduction.<br/><br/><b>Immunity to Magic (Ex)</b> A fiend-infused stone golem is immune to any spells or spell-like abilities that allow spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. <ul> <li>A <i>transmute rock to mud</i> spell slows a fiend-infused stone golem (as per the <i>slow</i> spell) for 2d6 rounds, with no saving throw, while <i>transmute mud to rock</i> restores all of its lost hit points.</li> <li>A <i>stone to flesh</i> spell does not actually change the golem\u2019s structure but negates its damage reduction and immunity to magic for 1 full round.</li> <li>A <i>banishment</i> or <i>dismissal</i> spell quells the animating fiend temporarily, negating the golem\u2019s hellfire touch ability for 1 round with no saving throw. The spell also increases the chance of the golem\u2019s berserk liberation by 20% in subsequent rounds of combat.</li> </ul><b>Slow (Su)</b> A fiend-infused stone golem can use a <i>slow</i> effect, as per the spell, as a free action once every 2 rounds. The effect has a range of 10 feet in a burst centered on the golem and a duration of 7 rounds. A successful DC 17 Will save negates the effect. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Although most golems are animated by the spirits of elementals, certain reckless or daring golem crafters instead bind evil outsiders such as daemons, demons, and devils to power golems. This fiend does not inhabit or control the golem in the usual manner of fiendish possession; instead, the outsider is subjugated within the golem to act as a mere engine. Although a fiend-infused golem has more self-awareness and cunning than a typical golem, it possesses only a brute, primitive intellect, lacking the animating fiend\u2019s personality beyond a base desire to destroy goodness. The fiend\u2019s rage at being imprisoned in such a manner manifests as ever-burning hellfire, which the fiend-infused golem uses as a weapon against its foes.<br/><br/>As with ordinary golems, fiend-infused golems primarily serve as guards or defenders. However, a fiend-infused golem\u2019s marginally improved intellect means it can be given more complex instructions, such as evaluating an intruder\u2019s intent, activating or deactivating traps, acting in disguise, or patrolling a convoluted territory. Although fiend-infused golems are obligated to follow their creators\u2019 commands in the same manner as regular golems, they sometimes do so with sullenness or frustrated defiance.<br/><br/>The foremost golem crafters of antiquity served the Jistka Imperium many thousands of years ago, and that empire\u2019s golem foundries at Rachikan experimented extensively with fiend-bound golems. Using evil outsiders as an animating force came with an inherent drawback that Rachikan\u2019s golem crafters could never fully overcome: the fiend\u2019s seething anger at serving within a golem increases the chance that the fiend-infused golem will break free of its command and run amok. Ultimately, the golem crafters of Rachikan succeeded only by increasing the size of their golems: Rachikan\u2019s enormous behemoth golems (<i>Pathfinder Campaign Setting: Lost Kingdoms</i> 40) are the only fiendinfused golems that do not risk the bound fiend going berserk. Although the Jistka Imperium is long gone, fiend-infused golems still guard its ancient factories and treasure vaults, particularly in the ruins of Rachikan and in other hidden sites along the Chelish coast.<br/><br/>With renewed interest in the Jistka Imperium among such organizations as the Pathfinder Society and Egorian\u2019s prestigious Athenaeum, ancient secrets of fiend-infused golems have leaked to several modern golem crafters. Some of these crafters had already developed their own techniques for creating fiend-infused golems, and use the unearthed Jistkan lore to confirm or supplement their own designs. The artificers of House Thrune are particularly interested in harnessing and improving upon the Jistkan methods, both because the golems promise to be very powerful additions to the Thrune arsenal and because they are always looking for new ways to bind the spirits of Hell.<br/><br/>A fiend-infused golem is the same size and weight as an ordinary golem of its type."
@@ -358,7 +348,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or gang (2\u20134)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Berserk Liberation",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "When a fiend-infused golem enters combat, there is a cumulative 2% chance each round that the animating fiend breaks free and the golem goes berserk. This chance resets to 0% after 1 minute of inactivity. When a fiend-infused golem goes berserk, the animating fiend explodes in a conflagration of hellfire, dealing 13d6 points of damage to all creatures within 60 feet (Reflex DC 17 half). Half of this damage is fire damage, but the other half results directly from unholy power and is not reduced by resistance to fire-based attacks. The save DC is Constitution-based. The berserk golem then loses the fiend-infused template permanently and thereafter attacks the nearest living creature, or smashes some object smaller than itself if no creature is within reach. Once it goes berserk, no known method can reestablish control."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hellfire Touch",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A fiend-infused golem\u2019s body radiates the soul-scorching heat of the evil Outer Planes, dealing 2d6 points of damage with its touch. Half of this damage is fire damage, but the other half results directly from unholy power and is not reduced by resistance to fire-based attacks. Creatures attacking a fiend-infused golem with unarmed strikes or natural weapons take this same hellfire damage each time one of their attacks hits. A fiend-infused golem\u2019s natural attacks are treated as evil for the purpose of overcoming damage reduction."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immunity to Magic",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A fiend-infused stone golem is immune to any spells or spell-like abilities that allow spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. <ul> <li>A <i>transmute rock to mud</i> spell slows a fiend-infused stone golem (as per the <i>slow</i> spell) for 2d6 rounds, with no saving throw, while <i>transmute mud to rock</i> restores all of its lost hit points.</li> <li>A <i>stone to flesh</i> spell does not actually change the golem\u2019s structure but negates its damage reduction and immunity to magic for 1 full round.</li> <li>A <i>banishment</i> or <i>dismissal</i> spell quells the animating fiend temporarily, negating the golem\u2019s hellfire touch ability for 1 round with no saving throw. The spell also increases the chance of the golem\u2019s berserk liberation by 20% in subsequent rounds of combat.</li> </ul>"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Slow",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A fiend-infused stone golem can use a <i>slow</i> effect, as per the spell, as a free action once every 2 rounds. The effect has a range of 10 feet in a burst centered on the golem and a duration of 7 rounds. A successful DC 17 Will save negates the effect. The save DC is Constitution-based."
+            }
+        ]
     },
     "sources": [
         {

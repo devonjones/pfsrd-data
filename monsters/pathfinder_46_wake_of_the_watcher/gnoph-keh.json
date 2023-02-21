@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any cold<br/><b>Organization</b> solitary, pair, or gathering (3-8)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Blizzard (Su)</b> Once per hour as a standard action, a gnoph-keh can create a stationary blizzard that fills a 20-foot-radius spread. The gnoph-keh can place the center of this blizzard at any point within its reach. Multiple gnoph-kehs can use the aid another action to help a single gnoph-keh create a much larger blizzard\u2014every additional gnoph-keh who aids the first increases the area of the blizzard\u2019s radius by 20 feet. All gnoph-kehs wishing to aid the primary creature must be within the area of that gnoph-keh\u2019s cold aura. Once created, the blizzard remains active for 1 hour if it was created in a cold environment, or for 1 minute if created anywhere else. The wind in the blizzard\u2019s area blows in a clockwise circular pattern at windstorm speeds, restricts visibility as fog does, and makes the region count as difficult terrain. A gnoph-keh can move through a blizzard (either one created by magic or a naturally occurring blizzard) without penalty.<br/><br/><b>Cold Aura (Su)</b> A gnoph-keh radiates an aura of blistering cold in a 30-foot radius. Any creature that ends its turn within this area takes 2d6 points of cold damage. While in a blizzard (either one created by magic, such as the gnoph-keh\u2019s blizzard power, or a naturally occurring blizzard), any creature that takes damage from a gnoph-keh\u2019s cold aura must make a DC 22 Fortitude save to avoid being staggered by the numbing cold for 1 round. The save DC is Constitution-based.<br/><br/><b>Heat Susceptible (Ex)</b> A gnoph-keh takes a \u20134 penalty on all saving throws made to resist the effects of high temperatures (see page 444 of the <i>Pathfinder RPG Core Rulebook</i>). When a gnoph-keh takes damage from heat in this way, and the damage is from temperatures in excess of 90\u00ba F, the damage the creature takes is always lethal damage. In these conditions, the gnoph-keh\u2019s cold aura does not function at all.<br/><br/><b>Icewalking (Ex)</b> This ability works like the <i>spider climb</i> spell, but the surfaces the gnoph-keh climbs must be icy. The beast can move across icy surfaces without penalty and does not need to make Acrobatics checks to run or charge on ice.<br/><br/><b>Snow Vision (Ex)</b> A gnoph-keh can see perfectly well in snowy conditions, and does not take any penalties on Perception checks while in snow."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The gnoph-keh is a six-legged horned creature vaguely akin to a polar bear in shape and outline, yet possessed of a cruel and creative intellect that elevates it from the rank of wild beast to murderous warmonger. Covered with a dense pelt of shaggy white fur, the gnoph-keh is equally at home walking on two, four, or six legs. The creature prefers to travel on all six when using its powerful charge or running, but rears up on its hind legs in combat to bring its four front claws to bear on its foes. With the gnophkeh\u2019s ability to call up and direct powerful blizzards matched to its ability to move and see in such conditions without any disadvantage, the creature is rightfully feared in the frozen realms where it dwells."
@@ -412,7 +402,57 @@
                     "name": "icewalking"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any cold",
+            "organization": "solitary, pair, or gathering (3-8)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Blizzard",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per hour as a standard action, a gnoph-keh can create a stationary blizzard that fills a 20-foot-radius spread. The gnoph-keh can place the center of this blizzard at any point within its reach. Multiple gnoph-kehs can use the aid another action to help a single gnoph-keh create a much larger blizzard\u2014every additional gnoph-keh who aids the first increases the area of the blizzard\u2019s radius by 20 feet. All gnoph-kehs wishing to aid the primary creature must be within the area of that gnoph-keh\u2019s cold aura. Once created, the blizzard remains active for 1 hour if it was created in a cold environment, or for 1 minute if created anywhere else. The wind in the blizzard\u2019s area blows in a clockwise circular pattern at windstorm speeds, restricts visibility as fog does, and makes the region count as difficult terrain. A gnoph-keh can move through a blizzard (either one created by magic or a naturally occurring blizzard) without penalty."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Cold Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A gnoph-keh radiates an aura of blistering cold in a 30-foot radius. Any creature that ends its turn within this area takes 2d6 points of cold damage. While in a blizzard (either one created by magic, such as the gnoph-keh\u2019s blizzard power, or a naturally occurring blizzard), any creature that takes damage from a gnoph-keh\u2019s cold aura must make a DC 22 Fortitude save to avoid being staggered by the numbing cold for 1 round. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Heat Susceptible",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A gnoph-keh takes a \u20134 penalty on all saving throws made to resist the effects of high temperatures (see page 444 of the <i>Pathfinder RPG Core Rulebook</i>). When a gnoph-keh takes damage from heat in this way, and the damage is from temperatures in excess of 90\u00ba F, the damage the creature takes is always lethal damage. In these conditions, the gnoph-keh\u2019s cold aura does not function at all."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Icewalking",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "This ability works like the <i>spider climb</i> spell, but the surfaces the gnoph-keh climbs must be icy. The beast can move across icy surfaces without penalty and does not need to make Acrobatics checks to run or charge on ice."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Snow Vision",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A gnoph-keh can see perfectly well in snowy conditions, and does not take any penalties on Perception checks while in snow."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or colony (3-12)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Fort DC 10; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1 Str; cure 1 save. <br/><br/><b>Water Skating (Ex)</b> A drain spider can move on the surface of calm water as if it were on land. A drain spider swimming at the water\u2019s surface can pull itself on top of the water with a successful DC 10 Climb check."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Already a tiny creature, the drain spider has the ability to compress its legs and body even further, allowing it to lurk in pipes, niches, and (its favorite hideout) sink or tub drains with ease. The sewers below Korvosa are infested with drain spiders in certain places. In the wild, drain spiders prefer to hunt in swamps or along river banks, but they have adapted readily to urban life in Korvosa and now infest numerous nooks and crannies in the city\u2019s lowerclass quarters, particularly along the waterfronts.<br/><br/> A variant of the drain spider, known as the shingle spider, exists in Korvosa as well. Shingle spiders dwell in the upper reaches of the city, particularly enjoying the chimneys and gutters of abandoned buildings as a place to make their nests. Shingle spiders retain the drain spider\u2019s water skating ability, although they rarely have the opportunity to use it."
@@ -248,7 +238,48 @@
                     "name": "water skating"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or colony (3-12)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 10; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1 Str; cure 1 save. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 10",
+                        "save_type": "Fort",
+                        "dc": 10
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1 Str; cure 1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Water Skating",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A drain spider can move on the surface of calm water as if it were on land. A drain spider swimming at the water\u2019s surface can pull itself on top of the water with a successful DC 10 Climb check."
+            }
+        ]
     },
     "sources": [
         {

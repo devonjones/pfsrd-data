@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or rack (3\u201312)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Mask Symbiosis (Ex)</b> A spirit oni can be worn as a mask by a willing Small or Medium creature. While worn in this way, the wearer can see through the oni\u2019s eyes and speak through its mouth, although the wearer retains its own senses and voice. The spirit oni remains a separate creature, and must detach from its host\u2019s face (as a move action) if it wishes to take any action of its own (including attacking or using a spell-like ability). While a spirit oni is worn as a mask, it grants a +2 insight bonus on its host\u2019s Perception checks.<br/><br/><b>Poison (Ex)</b> Gore\u2014injury; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Cha; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Most oni that emerge on the Material Plane do so into a new body of humanoid flesh, yet this is not the case for all oni. Periodically, when an evil spellcaster wishes to engage the servitude of an oni as a familiar, the result is something relatively unusual\u2014an oni made flesh directly from its spiritual form rather than one who takes the features of a humanoid as its own.<br/><br/>Any lawful evil 7th-level spellcaster who takes the Improved Familiar feat can gain a spirit oni as a familiar. The ritual to gain such a familiar requires the spellcaster to craft a particularly fiendish and fierce-looking oni mask\u2014this does not require a Craft check or any additional expenditure of gold, and is assumed to be part of the overall ritual for securing the familiar. When the ritual is complete a raw oni spirit is lured into the mask, which immediately transforms it into the animate, living creature presented here.<br/><br/>While the ritual binds the oni to its new master, it also robs the oni of its immediate chance to achieve a human form. As a result, spirit oni are foul-tempered and cantankerous creatures, even to their masters. They must be regularly reprimanded and disciplined, lest their jealousy and bitterness get the better of them.<br/><br/>When a spirit oni\u2019s master dies, the spirit oni gains free will and the ability to make its own choices\u2014but the spirit oni\u2019s innate cowardice and dishonor usually prevents it from taking its own life in hopes of returning to true spirit form and then returning as a proper oni. Rather than extinguishing themselves, such masterless spirit oni seek out more powerful oni and offer their services to their superiors, in hopes that they might someday be granted a promotion from their lowly state to something more befitting their egos and desires."
@@ -439,7 +429,49 @@
                     "name": "mask symbiosis"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or rack (3\u201312)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Mask Symbiosis",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A spirit oni can be worn as a mask by a willing Small or Medium creature. While worn in this way, the wearer can see through the oni\u2019s eyes and speak through its mouth, although the wearer retains its own senses and voice. The spirit oni remains a separate creature, and must detach from its host\u2019s face (as a move action) if it wishes to take any action of its own (including attacking or using a spell-like ability). While a spirit oni is worn as a mask, it grants a +2 insight bonus on its host\u2019s Perception checks."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Gore\u2014injury; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Cha; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Gore\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Cha",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any forests or swamps<br/><b>Organization</b> solitary, pair, or colony (3\u20136)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Str and paralysis 1 round; <i>cure </i>2 consecutive saves.<br/><br/><b>Poisoned Web (Ex)</b> This ability works like the web ability, but affects all creatures in a 10-foot-radius burst. In addition, any creature hit by the web must save against the spider\u2019s poison."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Goliath spiders are giant hunting spiders that most often prey on large creatures such as giant scorpions, snakes, and younger dragons, but sometimes catch and paralyze smaller prey to eat later. Camouf laged by their hairs and coloration, they prowl atop the forest canopy, dropping upon unsuspecting creatures. Females often cannibalize their mates."
@@ -290,7 +280,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any forests or swamps",
+            "organization": "solitary, pair, or colony (3\u20136)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Str and paralysis 1 round; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 23",
+                        "save_type": "Fort",
+                        "dc": 23
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d6 Str and paralysis 1 round",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poisoned Web",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "This ability works like the web ability, but affects all creatures in a 10-foot-radius burst. In addition, any creature hit by the web must save against the spider\u2019s poison."
+            }
+        ]
     },
     "sources": [
         {

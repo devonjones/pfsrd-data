@@ -3,14 +3,8 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any warm<br/><b>Organization</b> solitary or nest (2-12)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Fort DC 16; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d4 Dex; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based.<br/><br/><b>Poison Stream (Ex)</b> As a standard action usable every 1d4 rounds, an assassin bug can spray poison from its mouthin a 15-foot line. Any creature caught in this area must succeed at a DC 17 Reflex save or be exposed to the assassin bug\u2019s poison. The save DC is Dexterity-based.<br/><br/>Giant assassin bugs are an example of a large and varied class of hunting insects that live throughout Golarion. Assassin bugs partially bury themselves in the sand or hide among clusters of thorny bushes found near oases, waiting for the next palatable creature to approach. When prey arrives, the insects burst out of hiding and pierce their prey with their elongated mouthparts, injecting a potent toxin that paralyzes victims. Once prey is safely paralyzed, assassin bugs feed by siphoning the victim\u2019s fluids. Even if these bites don\u2019t kill their prey, they are extremely painful and cause swelling in the area. Giant assassin bugs lay eggs in places shaded from the sun at all times, such as shallow caves or the crevices between rocks, preferably in a place where food is readily available for the hatching young. The soft-bodied young that hatch resemble their mature counterparts in all ways but size, and are fully ready to hunt the moment they emerge, though they typically seek much smaller prey. An adult assassin bug is typically 4 feet long, and weighs 65 pounds."
+            "name": "Description",
+            "html": "Giant assassin bugs are an example of a large and varied class of hunting insects that live throughout Golarion. Assassin bugs partially bury themselves in the sand or hide among clusters of thorny bushes found near oases, waiting for the next palatable creature to approach. When prey arrives, the insects burst out of hiding and pierce their prey with their elongated mouthparts, injecting a potent toxin that paralyzes victims. Once prey is safely paralyzed, assassin bugs feed by siphoning the victim\u2019s fluids. Even if these bites don\u2019t kill their prey, they are extremely painful and cause swelling in the area. Giant assassin bugs lay eggs in places shaded from the sun at all times, such as shallow caves or the crevices between rocks, preferably in a place where food is readily available for the hatching young. The soft-bodied young that hatch resemble their mature counterparts in all ways but size, and are fully ready to hunt the moment they emerge, though they typically seek much smaller prey. An adult assassin bug is typically 4 feet long, and weighs 65 pounds."
         }
     ],
     "html": "<i>A massive insect with long mandibles and sullenly glowing eyes, this creature has a heavy, bulbous thorax.</i>",
@@ -254,7 +248,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any warm",
+            "organization": "solitary or nest (2-12)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 16; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d4 Dex; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 16",
+                        "save_type": "Fort",
+                        "dc": 16
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d4 Dex",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison Stream",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a standard action usable every 1d4 rounds, an assassin bug can spray poison from its mouthin a 15-foot line. Any creature caught in this area must succeed at a DC 17 Reflex save or be exposed to the assassin bug\u2019s poison. The save DC is Dexterity-based."
+            }
+        ]
     },
     "sources": [
         {

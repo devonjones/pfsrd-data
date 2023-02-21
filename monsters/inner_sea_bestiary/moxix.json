@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm jungles (Yoha\u2019s Graveyard)<br/><b>Organization</b> solitary<br/><b>Treasure</b> double"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su) </b>Moxix can exhale a cone of acidic fog laced with a terrible disease. Any creature damaged by the acid of his breath weapon must succeed at a DC 28 Fortitude save or contract this disease. A humanoid afflicted with this disease must attempt a new Will save each day. If the humanoid fails, it attacks and attempts to eat the weakest humanoid nearby. If the save is successful, it resists this impulse. A humanoid who dies or is killed while afflicted rises as a ghast at the next midnight. The save DC is Charisma-based.<br/><br/><i>Moxix\u2019s Delectation</i>: Inhaled; <i>save </i>Fortitude DC 28; <i>onset </i>1 day; <i>frequency </i>1/day; <i>effect </i>1d4 Con and 1d4 Wis damage; <i>cure </i>2 consecutive saves.<br/><br/><b>Gush (Ex)</b> Anytime Moxix takes more than 50 points of weapon damage in a round, blood and pus spews forth from the wound. The blood is extremely slippery and sprays out in a 20-foot radius, coating all creatures and surfaces in the area. Any creatures in the area must succeed at a DC 28 Reflex save or drop any items they are holding. A saving throw must be made each round that the creature attempts to use or pick up an item it previously dropped. In addition, the area coated in the gushing blood is difficult to move about in, and creatures moving through the area must succeed at a DC 15 Acrobatics check or fall prone.<br/><br/><b>Hopedrinker (Su) </b>Moxix emits an aura that drains hope from all within 60 feet. All morale bonuses are suppressed within this aura, regardless of their source. In addition, spells and spell-like abilities granting a morale bonus are affected as <i>dispel magic </i>used to counterspell (caster level 23rd) every round at the beginning of Moxix\u2019s turn. A successful dispel check negates the entire effect (not just the morale bonus) and grants Moxix temporary hit points equal to the spell\u2019s level (to a maximum of 100). These temporary hit points last 1 hour.<br/><br/><b>Mindshatter (Su)</b> If a creature fails its save against Moxix\u2019s <i>eyebite </i>spell-like ability, as a standard action before the end of his turn he may unravel the target\u2019s mind and spirit. This acts as <i>greater dispel magic </i>(caster level 23rd) against effects that protect against mind-affecting or necromantic effects and automatically affects the target as <i>enervation </i>and<i> touch of idiocy </i>(duration 24 hours)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Moxix, the Drinker of Human Hopes, is a unique demon bound to the mysterious isle called Yoha\u2019s Graveyard in the Shackles. Appearing as an eldritch four-armed statue of weathered gray stone, Moxix has a single emerald eye centered in his horrible face. A nest of twisted horns rests atop his head, and his fangf illed maw is perpetually stained with blood. Those courageous explorers traveling to his seemingly idyllic isle are driven mad by strange visions and dreams, or by inscrutable but disturbing carvings, idols, and glyphs that litter the island. Even if they withstand the island\u2019s maddening magic, adventurers in search of legendary lost riches may confront Moxix himself and be scourged of mind, body, and soul. Moxix\u2019s baleful presence and malevolent awareness leer from every crudely carved icon, relief, and idol bearing his likeness, bringing with them a tinge of insanity and a ravenous hunger for human flesh. Ghosts and pentagram-branded cannibals and lunatics are all that remain of ill-fated expeditions to Yoha\u2019s Graveyard. <br/><br/>Moxix found his first worshipers among the terrible cyclopes of Ghol-Gan as their civilization fell into ruin. As the one-eyed giants slipped more and more into depravity and violence, they began worshiping foul, otherworldly creatures their brothers and sisters brought up from the vaults of the Darklands after their exposure to the serpentfolk\u2019s wicked ways. Among the dozens of fiendish icons was Moxix, who came into inf luence among the cyclopes as their practice of sacrifice and cannibalism increased. It was at this time Moxix became known as the Drinker of Human Hopes. The ancient Ghol-Gan cyclopes fed him hundreds of captured humans, most of whom were of Azlanti descent. In one instance early in his time among the Ghol-Gan cyclopes, Moxix\u2019s followers captured an entire Azlanti embassy and fed them to the strange demon one by one while their companions watched in horror. Some say the sacrifices\u2019 spirits still inhabit the region, their wailing cries drifting through the hills and jungles of the haunted island.<br/><br/>As his reign of blood began to spread from its base in southern Ghol-Gan, a raging contingent of rival cyclopes from elsewhere in the failing empire raided the demon-worshiping clan dedicated to Moxix, bringing both brute strength and the magic of powerful shamans and oracles to bear against it. The battle raged for 2 days, and in the end an oracle sacrificed her life in a final ploy to destroy Moxix. However, the oracle only succeeded in binding him to the high mountain peak that would one day become the island known as Yoha\u2019s Graveyard.<br/><br/>To this very day, Moxix remains trapped in his island domain, ever eager to draw creatures to the ziggurat he calls home. There he delights in turning people to cannibalism, destruction, and insanity. Obscuring and disease-laden mists swirl around the island, keeping its lands hidden and protected from trespassers. Once per year, however, on the first full moon after the rainy season, the mists part for a single night. Some explorers have mounted expeditions to Moxix\u2019s island during these events, but as of yet, no one has returned the same person she used to be; all bear the mark of insanity Moxix stamps on their being."
@@ -843,7 +833,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm jungles (Yoha\u2019s Graveyard)",
+            "organization": "solitary",
+            "treasure": "double"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Moxix can exhale a cone of acidic fog laced with a terrible disease. Any creature damaged by the acid of his breath weapon must succeed at a DC 28 Fortitude save or contract this disease. A humanoid afflicted with this disease must attempt a new Will save each day. If the humanoid fails, it attacks and attempts to eat the weakest humanoid nearby. If the save is successful, it resists this impulse. A humanoid who dies or is killed while afflicted rises as a ghast at the next midnight. The save DC is Charisma-based.<br/><br/><i>Moxix\u2019s Delectation</i>: Inhaled; <i>save </i>Fortitude DC 28; <i>onset </i>1 day; <i>frequency </i>1/day; <i>effect </i>1d4 Con and 1d4 Wis damage; <i>cure </i>2 consecutive saves."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Gush",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Anytime Moxix takes more than 50 points of weapon damage in a round, blood and pus spews forth from the wound. The blood is extremely slippery and sprays out in a 20-foot radius, coating all creatures and surfaces in the area. Any creatures in the area must succeed at a DC 28 Reflex save or drop any items they are holding. A saving throw must be made each round that the creature attempts to use or pick up an item it previously dropped. In addition, the area coated in the gushing blood is difficult to move about in, and creatures moving through the area must succeed at a DC 15 Acrobatics check or fall prone."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hopedrinker",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Moxix emits an aura that drains hope from all within 60 feet. All morale bonuses are suppressed within this aura, regardless of their source. In addition, spells and spell-like abilities granting a morale bonus are affected as <i>dispel magic </i>used to counterspell (caster level 23rd) every round at the beginning of Moxix\u2019s turn. A successful dispel check negates the entire effect (not just the morale bonus) and grants Moxix temporary hit points equal to the spell\u2019s level (to a maximum of 100). These temporary hit points last 1 hour."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Mindshatter",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "If a creature fails its save against Moxix\u2019s <i>eyebite </i>spell-like ability, as a standard action before the end of his turn he may unravel the target\u2019s mind and spirit. This acts as <i>greater dispel magic </i>(caster level 23rd) against effects that protect against mind-affecting or necromantic effects and automatically affects the target as <i>enervation </i>and<i> touch of idiocy </i>(duration 24 hours)."
+            }
+        ]
     },
     "sources": [
         {

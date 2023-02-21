@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Hell)<br/><b>Organization</b> solitary or troop (2\u20139)<br/><b>Treasure</b> standard (masterwork breastplate,"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Attraction Aura (Su)</b> An aghasura exudes a 50-foot aura whenever it remains motionless for at least 1 round. All nonevil creatures that enter this area must make a DC 21 Will save to avoid being compelled to move toward the aghasura\u2019s location. If the aghasura moves, the effect ends for all currently affected creatures. This is a mind-affecting compulsion. The save DC is Charisma-based.<br/><br/><b>Dual Wielder (Ex) </b>An aghasura does not take a penalty on attack or damage rolls when attacking with two weapons.<br/><br/><b>Infused Weapons (Su)</b> Weapons an aghasura wields are considered to be magic for the purposes of overcoming damage reduction. In addition, such weapons gain the ability to deliver the aghasura\u2019s poison on a successful attack.<br/><br/><b>Poison (Ex)</b> Bite or weapon\u2014injury; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con damage; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Aghasuras, or the poison ones, are massive fiends who have perfected the art of ambush and hold to duties of guardianship and butchery. It is said that these frightful ophidian monsters came into being when a deity granted free will to her favorite serpent pets, but when these pets were left to their own devices, they slipped into the deity\u2019s favored temple and slew all of her greatest priests. The serpents who survived the deity\u2019s wrath became the first aghasuras.<br/><br/>An aghasura is 30 feet long and weighs nearly 7 tons."
@@ -677,7 +667,65 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Hell)",
+            "organization": "solitary or troop (2\u20139)",
+            "treasure": "standard (masterwork breastplate,"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Attraction Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "An aghasura exudes a 50-foot aura whenever it remains motionless for at least 1 round. All nonevil creatures that enter this area must make a DC 21 Will save to avoid being compelled to move toward the aghasura\u2019s location. If the aghasura moves, the effect ends for all currently affected creatures. This is a mind-affecting compulsion. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dual Wielder",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "An aghasura does not take a penalty on attack or damage rolls when attacking with two weapons."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Infused Weapons",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Weapons an aghasura wields are considered to be magic for the purposes of overcoming damage reduction. In addition, such weapons gain the ability to deliver the aghasura\u2019s poison on a successful attack."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite or weapon\u2014injury; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con damage; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite or weapon\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 23",
+                        "save_type": "Fort",
+                        "dc": 23
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con damage",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

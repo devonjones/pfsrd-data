@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> cold volcanic mountains<br/><b>Organization</b> solitary<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su)</b> Once every 1d4 rounds as a standard action, a tor linnorm can expel a 60-foot cone of flame and ash, dealing 24d8 points of fire damage to all creatures struck (Reflex DC 33 for half damage). One round after this breath weapon is used, the area affected by the attack becomes covered in a cloud of thick, scorching smoke that burns both the lungs and eyes, dealing an additional 8d8 points of fire damage to all creatures in the area. Each creature that begins its turn in the smoke-covered area and breathes must make a DC 33 (+ 1 per previous check) Fortitude save each round or spend that round choking and coughing. Creatures that keep their eyes open for more than 1 round while in the area of the smoke must make a DC 33 Fortitude save or go blind for 1d3 hours. The smoke dissipates after 2d4 rounds. This duration is halved in strong winds and quartered in more powerful winds. The save DC is Constitution-based.<br/><br/><b>Death Curse (Su)</b><i>Curse of Boiling Blood</i>: <i>save </i>Will DC 31; <i>effect </i>creature gains vulnerability to fire and is permanently staggered from the pain of its boiling blood. The save DC is Charisma-based.<br/><br/><b>Lava Affinity (Ex)</b> A tor linnorm can breathe and swim while submerged in lava and magma.<br/><br/><b>Poison (Ex) </b>Bite\u2014injury; <i>save </i>Fort DC 33; <i>frequency </i>1/round for 10 rounds; <i>effect </i>8d6 fire damage and 1d8 Con drain; <i>cure </i>3 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Tor linnorms epitomize the raw and untempered power of their kin. They dwell in the tallest volcanic mountains, either in naturally formed caverns or in the craters themselves, and rain destruction down upon nearby mountain villages whenever the urge strikes them. Tor linnorms are brutes, but as far as linnorms go are relatively intelligent. With this intelligence comes an overwhelming vanity\u2014unlike other linnorms, tor linnorms enjoy being adored and worshiped by lesser creatures, and have been known to delay eating prisoners who seem to be particularly cowed by their presence, simply basking in their victims\u2019 fear.<br/><br/>A tor linnorm is 50 feet long and weighs 15,000 pounds."
@@ -562,7 +552,65 @@
                     "name": "lava affinity"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "cold volcanic mountains",
+            "organization": "solitary",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds as a standard action, a tor linnorm can expel a 60-foot cone of flame and ash, dealing 24d8 points of fire damage to all creatures struck (Reflex DC 33 for half damage). One round after this breath weapon is used, the area affected by the attack becomes covered in a cloud of thick, scorching smoke that burns both the lungs and eyes, dealing an additional 8d8 points of fire damage to all creatures in the area. Each creature that begins its turn in the smoke-covered area and breathes must make a DC 33 (+ 1 per previous check) Fortitude save each round or spend that round choking and coughing. Creatures that keep their eyes open for more than 1 round while in the area of the smoke must make a DC 33 Fortitude save or go blind for 1d3 hours. The smoke dissipates after 2d4 rounds. This duration is halved in strong winds and quartered in more powerful winds. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Curse",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "<i>Curse of Boiling Blood</i>: <i>save </i>Will DC 31; <i>effect </i>creature gains vulnerability to fire and is permanently staggered from the pain of its boiling blood. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Lava Affinity",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A tor linnorm can breathe and swim while submerged in lava and magma."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 33; <i>frequency </i>1/round for 10 rounds; <i>effect </i>8d6 fire damage and 1d8 Con drain; <i>cure </i>3 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 33",
+                        "save_type": "Fort",
+                        "dc": 33
+                    },
+                    "frequency": "1/round for 10 rounds",
+                    "effect": "8d6 fire damage and 1d8 Con drain",
+                    "cure": "3 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

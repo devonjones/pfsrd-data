@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any <br/><b>Organization</b> solitary, pair, or nest (3\u20138) <br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Behead (Ex)</b> A skull ripper is an expert at collecting its favorite trophies\u2014skulls. Once it has pinned a foe, it can attempt to behead the victim with a single gut-wrenching rip of its claws. This attempt is made as part of the grapple check to maintain an existing pin, and if successful, deals 4d6+18 points of damage to the victim. If this damage is enough to bring the target below 0 hit points, the victim must succeed at a DC 23 Fortitude save to resist having its head torn from its body, which results in instant death for most creatures. The save DC is Strength-based. <br/><br/><b>Dread Visage (Su)</b> All creatures within 30 feet that can see a skull ripper must make a DC 18 Will save at the start of their turn in order to avoid becoming frightened for 1 round. If the victim recognizes any of the heads affixed to the skull ripper\u2019s body as having once belonged to friends or allies, that victim takes a \u20134 penalty on the save. A creature that succeeds at the save is immune to the dread visage of that particular skull ripper for 24 hours. This is a mind-affecting fear effect. The save DC is Charisma-based. <br/><br/><b>Poison (Su)</b> Sting\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dex; <i>cure </i>2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Skull rippers were once guardians of the dead, the grim custodians of the great ossuaries of Thassilon. Although most skull rippers are discovered in ancient tombs and sepulchers, occasionally a geological upheaval or massive flood destroys a given catacomb or leaves a skull ripper stranded. In these cases, the construct emerges and ventures forth into the world above, harvesting skulls and causing widespread panic as it searches for a new tomb to guard."
@@ -422,7 +412,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or nest (3\u20138)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Behead",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A skull ripper is an expert at collecting its favorite trophies\u2014skulls. Once it has pinned a foe, it can attempt to behead the victim with a single gut-wrenching rip of its claws. This attempt is made as part of the grapple check to maintain an existing pin, and if successful, deals 4d6+18 points of damage to the victim. If this damage is enough to bring the target below 0 hit points, the victim must succeed at a DC 23 Fortitude save to resist having its head torn from its body, which results in instant death for most creatures. The save DC is Strength-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dread Visage",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "All creatures within 30 feet that can see a skull ripper must make a DC 18 Will save at the start of their turn in order to avoid becoming frightened for 1 round. If the victim recognizes any of the heads affixed to the skull ripper\u2019s body as having once belonged to friends or allies, that victim takes a \u20134 penalty on the save. A creature that succeeds at the save is immune to the dread visage of that particular skull ripper for 24 hours. This is a mind-affecting fear effect. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dex; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Dex",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

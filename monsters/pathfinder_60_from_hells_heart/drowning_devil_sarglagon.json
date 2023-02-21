@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Hell)<br/><b>Organization</b> solitary, pair, or guard (3\u201310)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Drown (Su)</b> As a full-round action, a drowning devil can summon murky water into the lungs of a single target within 30 feet. If the target can\u2019t breathe water, it\u2019s unable hold its breath and immediately begins to drown. At the start of its next turn, the target must succeed at a DC 18 Fortitude save to cough up this water or it falls unconscious and is brought to 0 hit points. On the next round, the target must save successfully again or drop to \u20131 hit point and start dying; on the third round it must save successfully again or die. The save DC is Charisma-based.<br/><br/><b>Heavy Aura (Su)</b> Whenever a creature enters the drowning devil\u2019s heavy aura, it must succeed at a DC 18 Will save or reduce its speed as if carrying a load one step higher or wearing armor one category heavier (whichever is worse), and its armor check penalty increases by 2. A creature already carrying a heavy load or wearing heavy armor that fails its save can\u2019t move as long as it remains in the affected area. A creature that saves against a drowning devil\u2019s heavy aura is immune to that devil\u2019s aura for 24 hours. The save DC is Charisma-based.<br/><br/><b>Poison (Ex)</b> Slam\u2014injury; <i>save </i>Fort DC 20; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Called sarglagons in their Infernal tongue, drowning devils take great pride in being the best-adapted guardians of Hell\u2019s waterways, and are among the few fiends who travel the seas and rivers of the multiverse as part of larger infernal plots. Even in the air or on the ground, a drowning devil moves with a haunting litheness as though it were swimming. A typical drowning devil weighs 600 pounds, and can exceed 15 feet from head to tail."
@@ -621,7 +611,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Hell)",
+            "organization": "solitary, pair, or guard (3\u201310)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Drown",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a full-round action, a drowning devil can summon murky water into the lungs of a single target within 30 feet. If the target can\u2019t breathe water, it\u2019s unable hold its breath and immediately begins to drown. At the start of its next turn, the target must succeed at a DC 18 Fortitude save to cough up this water or it falls unconscious and is brought to 0 hit points. On the next round, the target must save successfully again or drop to \u20131 hit point and start dying; on the third round it must save successfully again or die. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Heavy Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Whenever a creature enters the drowning devil\u2019s heavy aura, it must succeed at a DC 18 Will save or reduce its speed as if carrying a load one step higher or wearing armor one category heavier (whichever is worse), and its armor check penalty increases by 2. A creature already carrying a heavy load or wearing heavy armor that fails its save can\u2019t move as long as it remains in the affected area. A creature that saves against a drowning devil\u2019s heavy aura is immune to that devil\u2019s aura for 24 hours. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Slam\u2014injury; <i>save </i>Fort DC 20; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Slam\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 20",
+                        "save_type": "Fort",
+                        "dc": 20
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Str",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

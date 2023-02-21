@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Jandelay)<br/><b>Organization</b> solitary or council (2\u20135)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Beacon of Jandelay (Su)</b> Watchers can plant a beacon of Jandelay\u2014a six-foot-tall glowing spire of pale yellow force energy\u2014by spending 1 minute of uninterrupted activity. When planted on a world shortly to experience an apocalypse, these beacons designate the surrounding environs as important and guarantee that the area around the beacon will be incorporated into Jandelay upon the world\u2019s destruction. Beacons of Jandelay function properly even when constructed out of phase (see phase shift below), so watchers typically place them in such a manner to prevent denizens of the doomed world from removing or otherwise tampering with them. A beacon of Jandelay has hardness 30 and 440 hit points. A watcher immediately senses if a beacon of Jandelay it created takes damage, and when a watcher plane shifts or teleports to a site that contains a beacon of Jandelay, it always arrives on target.<br/><br/><b>Inconspicuous (Su)</b> Despite their enormous size, watchers have an unnerving ability to fade into the background, causing other creatures to overlook or ignore them. When a creature would first perceive a watcher (see it, hear its movements, or notice it with any other sense, be it natural or supernatural), it must succeed at a DC 28 Will save or it simply doesn\u2019t perceive the watcher for 24 hours, treating it as if it were invisible and silenced from the observer\u2019s perspective. On a successful save, the creature perceives the watcher and is immune to that watcher\u2019s inconspicuous ability for 24 hours. If the watcher attacks a creature that failed its save, it breaks the inconspicuous effect for that creature automatically for 24 hours. The Oliphaunt of Jandelay automatically fails its save against the inconspicuous ability, allowing the watchers to share their home with the beast while staying beneath its notice. This is a mind-affecting effect that automatically bypasses the Oliphaunt of Jandelay\u2019s ward against command ability. The save DC is Charisma-based.<br/><br/><b>Perfect Observation (Su)</b> Watchers see and remember every sensation around them with perfect clarity, and their memory never fades. They are always assumed to have rolled a 20 on vision-based Perception checks (resulting in a 71 for a typical watcher). Further, they gain a bonus to their AC equal to their Wisdom modifier as a result of this supernatural ability to perceive threats and danger.<br/><br/><b>Phase Shift (Su)</b> Once per day, a watcher can shift itself out of phase with reality as a standard action; shifting back into phase is a free action. When out of phase with reality, a watcher can\u2019t be affected by effects from the plane it is watching, but it also can\u2019t affect that plane with its abilities (except for with beacon of Jandelay). However, the watcher can still observe the plane, and denizens of the plane can observe it if they overcome the watcher\u2019s inconspicuous ability. Watchers often use phase shift to observe events leading up to an apocalypse without succumbing to the cataclysm destined to destroy the world in question. <i>Dimensional anchor</i> or similar effects that bar dimensional travel not only prevent a watcher from using phase shift but can also force a watcher back into reality if they successfully target and affect a phase-shifted watcher. A watcher forced into reality against its will in this manner becomes staggered for 1d3 rounds.<br/><br/><b>Stasis (Su)</b> A creature damaged by a watcher\u2019s talon must succeed at a DC 28 Will save or be slowed for 1 round, as per <i>slow</i>. A slowed creature (be it a creature affected by the spell of the same name, by a watcher\u2019s talon, or by another slow-inducing effect) that takes damage from a watcher\u2019s talon must succeed at a DC 28 Fortitude save or become permanently trapped in a state of stasis, as per temporal stasis. This effect ends if the watcher who created the effect is slain or is no longer on the same plane as the victim. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The watchers of Jandelay are bizarre and enigmatic creatures, inscrutable to most mortals, particularly since Jandelay itself is so unknown. Watchers lurk in worlds on the brink of destruction in order to observe events as they unfold and to catalogue and prepare a piece of the worlds for eternal enshrinement in Jandelay. Watchers mostly perform this work unseen, regularly setting beacons and, rarely, putting objects or beings into stasis in order to bring them along to Jandelay. Watchers have no desire to accelerate apocalypses before their appointed times, but they are drawn to action when would-be heroes or saviors take extreme measures to prevent a calamity.<br/><br/>On Jandelay, watchers move from region to region, building alabaster spires and creating other objects and edifices upon the interstitial fields, depending on their favored crafts. Left alone, a watcher might spend centuries crafting a single object, only to lose interest in its work immediately after completing the task.<br/><br/>When faced with a particular threat or curiosity, watchers naturally organize into councils of up to five individuals. When such a council forms, one watcher is selected as an observer, and this watcher is bolstered by the presence of the others. Councils often take quite a while to come to a decision as to how to proceed, but once they do, they pursue their task with an eerie single-mindedness and efficiency that has led some observers to incorrectly infer that the speechless watchers were operating as a hive mind\u2014in truth, they are simply obsessed with perfection and elegance of action.<br/><br/>Prehensile filaments nestled amid the sharp talons at the tip of each leg allow watchers to perform precision motions as necessary. A watcher\u2019s peculiar brand of air walk keeps its main body upright even if all of its legs are occupied, allowing it to attack with all six legs and protecting it from attempts to trip it.<br/><br/>Watchers stand 30 feet tall atop their insectile legs, and weigh 6 tons."
@@ -763,7 +753,57 @@
                     "name": "phase shift"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Jandelay)",
+            "organization": "solitary or council (2\u20135)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Beacon of Jandelay",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Watchers can plant a beacon of Jandelay\u2014a six-foot-tall glowing spire of pale yellow force energy\u2014by spending 1 minute of uninterrupted activity. When planted on a world shortly to experience an apocalypse, these beacons designate the surrounding environs as important and guarantee that the area around the beacon will be incorporated into Jandelay upon the world\u2019s destruction. Beacons of Jandelay function properly even when constructed out of phase (see phase shift below), so watchers typically place them in such a manner to prevent denizens of the doomed world from removing or otherwise tampering with them. A beacon of Jandelay has hardness 30 and 440 hit points. A watcher immediately senses if a beacon of Jandelay it created takes damage, and when a watcher plane shifts or teleports to a site that contains a beacon of Jandelay, it always arrives on target."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Inconspicuous",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Despite their enormous size, watchers have an unnerving ability to fade into the background, causing other creatures to overlook or ignore them. When a creature would first perceive a watcher (see it, hear its movements, or notice it with any other sense, be it natural or supernatural), it must succeed at a DC 28 Will save or it simply doesn\u2019t perceive the watcher for 24 hours, treating it as if it were invisible and silenced from the observer\u2019s perspective. On a successful save, the creature perceives the watcher and is immune to that watcher\u2019s inconspicuous ability for 24 hours. If the watcher attacks a creature that failed its save, it breaks the inconspicuous effect for that creature automatically for 24 hours. The Oliphaunt of Jandelay automatically fails its save against the inconspicuous ability, allowing the watchers to share their home with the beast while staying beneath its notice. This is a mind-affecting effect that automatically bypasses the Oliphaunt of Jandelay\u2019s ward against command ability. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Perfect Observation",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Watchers see and remember every sensation around them with perfect clarity, and their memory never fades. They are always assumed to have rolled a 20 on vision-based Perception checks (resulting in a 71 for a typical watcher). Further, they gain a bonus to their AC equal to their Wisdom modifier as a result of this supernatural ability to perceive threats and danger."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Phase Shift",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per day, a watcher can shift itself out of phase with reality as a standard action; shifting back into phase is a free action. When out of phase with reality, a watcher can\u2019t be affected by effects from the plane it is watching, but it also can\u2019t affect that plane with its abilities (except for with beacon of Jandelay). However, the watcher can still observe the plane, and denizens of the plane can observe it if they overcome the watcher\u2019s inconspicuous ability. Watchers often use phase shift to observe events leading up to an apocalypse without succumbing to the cataclysm destined to destroy the world in question. <i>Dimensional anchor</i> or similar effects that bar dimensional travel not only prevent a watcher from using phase shift but can also force a watcher back into reality if they successfully target and affect a phase-shifted watcher. A watcher forced into reality against its will in this manner becomes staggered for 1d3 rounds."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Stasis",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A creature damaged by a watcher\u2019s talon must succeed at a DC 28 Will save or be slowed for 1 round, as per <i>slow</i>. A slowed creature (be it a creature affected by the spell of the same name, by a watcher\u2019s talon, or by another slow-inducing effect) that takes damage from a watcher\u2019s talon must succeed at a DC 28 Fortitude save or become permanently trapped in a state of stasis, as per temporal stasis. This effect ends if the watcher who created the effect is slain or is no longer on the same plane as the victim. The save DC is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

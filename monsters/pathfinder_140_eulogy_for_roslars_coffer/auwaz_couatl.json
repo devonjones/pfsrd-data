@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Gifts of the Sea (Ex)</b> Once per day as a full-round action, an auwaz couatl can bestow a creature within 120 feet with either its blessing or its curse. A blessed creature knows the location to either its final destination or the nearest port city, whichever is closer, as <a href=\"SpellDisplay.aspx?ItemName=find%20the%20path\" style=\"text-decoration:underline\"><i>find the path</i></a>. In addition, the blessed creature always has favorable winds, which grant the benefits of <a href=\"SpellDisplay.aspx?ItemName=endure%20elements\" style=\"text-decoration:underline\"><i>endure elements</i></a> and allow any ship the creature travels on to move at its fastest speed. A cursed creature takes a \u20136 penalty on Profession (sailor) and Survival checks, and it always has strong unfavorable winds that blow in the opposite direction of the cursed creature\u2019s final destination. A creature affected by this ability remains affected for 12 hours. A creature can attempt a DC 16 Will save to resist this effect. The save DC is Charisma-based. <br/><br/><b>Poison (Ex)</b> Injury\u2014bite; <i>save</i> Fortitude DC 17; <i>frequency</i> 1/ minute for 10 minutes; <i>effect</i> 1d2 Dex damage; <i>cure</i> 1 save. The DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Auwaz couatls are a variety of couatl known for helping those who are lost find their way back to safety. They are particularly known for traveling around the oceans of Golarion to help sailors and other travelers lost at sea. Many sailors claim that they owe their lives to an auwaz couatl, though these same sailors warn that living a particularly vile life will instead draw an auwaz couatl\u2019s ire. An auwaz couatl often prefers that evil beings remain lost, and it actively works to ensure such creatures remain lost for as long as possible. A typical auwaz couatl is 8 feet long with a wingspan of 12 feet, and weighs 800 pounds."
@@ -551,7 +541,49 @@
                     "name": "gift of the sea"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Gifts of the Sea",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per day as a full-round action, an auwaz couatl can bestow a creature within 120 feet with either its blessing or its curse. A blessed creature knows the location to either its final destination or the nearest port city, whichever is closer, as <a href=\"SpellDisplay.aspx?ItemName=find%20the%20path\" style=\"text-decoration:underline\"><i>find the path</i></a>. In addition, the blessed creature always has favorable winds, which grant the benefits of <a href=\"SpellDisplay.aspx?ItemName=endure%20elements\" style=\"text-decoration:underline\"><i>endure elements</i></a> and allow any ship the creature travels on to move at its fastest speed. A cursed creature takes a \u20136 penalty on Profession (sailor) and Survival checks, and it always has strong unfavorable winds that blow in the opposite direction of the cursed creature\u2019s final destination. A creature affected by this ability remains affected for 12 hours. A creature can attempt a DC 16 Will save to resist this effect. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Injury\u2014bite; <i>save</i> Fortitude DC 17; <i>frequency</i> 1/ minute for 10 minutes; <i>effect</i> 1d2 Dex damage; <i>cure</i> 1 save. The DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Injury\u2014bite",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fortitude DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/ minute for 10 minutes",
+                    "effect": "1d2 Dex damage",
+                    "cure": "1 save. The DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

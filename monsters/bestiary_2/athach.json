@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> cold or temperate hills <br/><b>Organization</b> solitary, gang (2\u20134), or tribe (7\u201312) <br/><b>Treasure</b> standard (leather armor, heavy shield, heavy mace, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 24; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str; <i>cure </i>2 consecutive saves. <br/><br/><b>Swift Claw (Ex)</b> An athach can attack with its claw as a swift action, even when the creature\u2019s movement would normally restrict it to one attack. This attack is made at a +19 bonus and deals 1d10+11 points of damage, regardless of what other attacks are made on the athach\u2019s turn."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "An athach is a twisted kind of giant, cruel and thuggish. It lives to bring misery, ruin, and terror to weaker creatures. An individual may be nearly any human color, though its arms are often a darker color or even grayish. Its upper fangs are long, extending from its mouth like those of a ferocious beast, and it constantly drools a weakness-inducing poison. A group of athachs is usually a family unit, with gangs typically consisting of a group of siblings and full tribes consisting of parents and young. <br/><br/>Athachs thrive upon the fear of their victims, preferring to play with their prey for some time before indulging their vile and murderous natures. Tales tell of how athachs cut down orchards and ruin crops by night, leaving the ruins to be discovered by innocent villagers at the dawning of the following day. Further tales tell of how athachs desecrate graveyards by exhuming graves and scattering the bones of the dead about. The motivation behind these games seems to be sheer entertainment\u2014some athachs are unusually creative in their antics, displaying ingenuity beyond their normal capacity, as if an athach in the throes of desecration and cruelty were prone to some form of divine inspiration. <br/><br/>An athach is 18 feet tall and weighs 5,000 pounds. Athachs dislike other giants (and other monsters of their size) and either attack or flee from them, depending on whether the odds are in their favor."
@@ -421,7 +411,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "cold or temperate hills",
+            "organization": "solitary, gang (2\u20134), or tribe (7\u201312)",
+            "treasure": "standard (leather armor, heavy shield, heavy mace, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 24; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str; <i>cure </i>2 consecutive saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 24",
+                        "save_type": "Fort",
+                        "dc": 24
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Str",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Swift Claw",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "An athach can attack with its claw as a swift action, even when the creature\u2019s movement would normally restrict it to one attack. This attack is made at a +19 bonus and deals 1d10+11 points of damage, regardless of what other attacks are made on the athach\u2019s turn."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm deserts<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Ambush Pit (Ex)</b> A giant emperor scorpion can spend 1 minute digging itself into the soil or other ground debris. It then waits for its tremorsense to detect prey. When a creature comes within range, it can erupt from the ground as a free action as part of a charge, allowing it to use its pounce ability. When dug in, the scorpion has improved cover granting it a +10 bonus on Stealth checks.<br/><br/><b>Poison (Ex)</b> Sting\u2014injury; <i>save </i>Fort DC 22; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str and 1d4 Dex; <i>cure </i>1 save. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A giant emperor scorpion is an ambush predator, burying itself in soil or sand until prey approaches."
@@ -309,7 +299,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm deserts",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Ambush Pit",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A giant emperor scorpion can spend 1 minute digging itself into the soil or other ground debris. It then waits for its tremorsense to detect prey. When a creature comes within range, it can erupt from the ground as a free action as part of a charge, allowing it to use its pounce ability. When dug in, the scorpion has improved cover granting it a +10 bonus on Stealth checks."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 22; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str and 1d4 Dex; <i>cure </i>1 save. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 22",
+                        "save_type": "Fort",
+                        "dc": 22
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Str and 1d4 Dex",
+                    "cure": "1 save. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

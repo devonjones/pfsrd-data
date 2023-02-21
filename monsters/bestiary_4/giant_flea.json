@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land or underground<br/><b>Organization</b> solitary, cluster (2\u20136), or colony (7\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disease (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 11; <i>onset </i>1d3 days; <i>frequency </i>1 day; <i>effect </i>1 Con damage; <i>cure </i>1 save. The save DC is Constitution-based.<br/><br/><b>Uncanny Leap (Ex)</b> As a full-round action, a giant flea can jump up to 120 feet. A flea can treat this jump as a charge, as long as the leap is made in a straight line."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Much like their smaller cousins, giant fleas are hemophagous insects that live in any kind of environment where they can feed upon blood. These creatures possess surprising agility and strength. Able to leap great distances, they flit about mindlessly, looking for easy prey. A giant flea can go for several months without feeding, but then gorges after such a fast.<br/><br/>A witch can take a giant flea as a familiar. Like all vermin, a giant flea gains 1 point of Intelligence when it becomes a familiar. A giant flea familiar grants its master a +3 bonus on Fortitude saves against disease."
@@ -229,7 +219,50 @@
                     "name": "uncanny leap"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land or underground",
+            "organization": "solitary, cluster (2\u20136), or colony (7\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 11; <i>onset </i>1d3 days; <i>frequency </i>1 day; <i>effect </i>1 Con damage; <i>cure </i>1 save. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Disease",
+                    "affliction_type": "Disease; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 11",
+                        "save_type": "Fort",
+                        "dc": 11
+                    },
+                    "onset": "1d3 days",
+                    "frequency": "1 day",
+                    "effect": "1 Con damage",
+                    "cure": "1 save. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Uncanny Leap",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a full-round action, a giant flea can jump up to 120 feet. A flea can treat this jump as a charge, as long as the leap is made in a straight line."
+            }
+        ]
     },
     "sources": [
         {

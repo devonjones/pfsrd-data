@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any water<br/><b>Organization</b> solitary, pair, or crew (1 thalassic architect plus 2\u201330 <a href=\"MonsterDisplay.aspx?ItemName=Aboleth\" style=\"text-decoration:underline\">aboleths</a>, <a href=\"MonsterDisplay.aspx?ItemName=Skum\" style=\"text-decoration:underline\">skum</a>, and other dominated creatures)<br/><b>Treasure</b> double"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Deadlight (Su)</b> Once per round as a free action, the thalassic architect can affix its center eye on one target. The target must succeed at a DC 20 Will saving throw or become transfixed as per <a href=\"SpellDisplay.aspx?ItemName=lock%20gaze\" style=\"text-decoration:underline\"><i>lock gaze</i></a>  at caster level 14th. Once a creature has been affected by this ability, it becomes immune to it for 24 hours. The save DC is Charisma-based. <br/><br/><b>Glyph Carver (Su)</b> A thalassic architect can cause its tentacles to vibrate at an intense frequency when it rends through solid matter, such that the tips can engrave inhuman patterns into solid stone. When activated, the tentacles count as adamantine for the purpose of bypassing DR and hardness. Furthermore, the additional sonic damage caused by the tentacles is treated as energy damage when used as part of a melee attack (as per normal) but is treated as additional normal physical damage when used to perform a sunder combat maneuver. The thalassic architect can turn this ability on or off as a free action. While this ability is activated, the tentacles can\u2019t be used to manipulate physical objects, nor can the thalassic architect attempt Stealth checks. While this ability is deactivated, the tentacles cause no sonic damage. <br/><br/><b>Mucus Cloud (Ex)</b> While underwater, a thalassic architect exudes a cloud of transparent slime in a 100-foot-radius spread. All creatures in this area must succeed at a DC 22 Fortitude save each round or lose the ability to breathe air (and gain the ability to breathe water) for 8 hours. If a creature comes into contact with this mucus cloud again and fails another save, the effect extends for another 8 hours. The save DC is Constitution-based. <br/><br/><b>Slime (Ex)</b> A creature hit by a thalassic architect\u2019s tentacle must succeed at a DC 22 Fortitude save or its skin and flesh transform into a clear, slimy membrane over the course of 1d4 rounds. The target\u2019s new \u201cflesh\u201d is soft and tender, reducing the creature\u2019s Constitution score by 4 as long as the effect persists. If the creature\u2019s flesh isn\u2019t kept moist, it dries out quickly and the victim takes 1d12 points of damage every 10 minutes. Remove disease and similar effects can restore an afflicted creature to normal, but immunity to disease offers no protection from this attack. The save DC is Constitution-based. <br/><br/><b>Water Manipulation (Su)</b> A thalassic architect is adept at the telekinetic manipulation of matter, including the waters it inhabits. This at-will ability is a standard action with a duration of concentration + 1 round. The ability functions in two different modes that can be used only one at a time.<br/><br/> The architect can force the water around a creature to lock in place and act as a solid, paralyzing the target as per <a href=\"SpellDisplay.aspx?ItemName=hold%20monster\" style=\"text-decoration:underline\"><i>hold monster</i></a> unless the target succeeds at a DC 20 Reflex save. Aside from using effects such as <a href=\"SpellDisplay.aspx?ItemName=freedom%20of%20movement\" style=\"text-decoration:underline\"><i>freedom of movement</i></a> or <a href=\"SpellDisplay.aspx?ItemName=remove%20paralysis\" style=\"text-decoration:underline\"><i>remove paralysis</i></a>, the target can also break free with a DC 20 Strength check. This ability can affect a creature more than once, but each casting grants a new saving throw.<br/><br/> Alternatively, it can thicken water to the consistency of gelatin in a 20-foot radius. Creatures with a swim speed treat this area as difficult terrain. Creatures without a swim speed increase the DC for Swim checks to move through the affected area by 10 (for example, calm underwater areas, usually DC 10, become DC 20). In either case, 5-foot steps become impossible. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "\"Thalassic architect\u201d is a human term for a racial subspecies of aboleth, known as uldraaghus in the language of alghollthus. Uldraaghus were engineered and bred by the mysterious entities that rule the alghollthu race from the deepest oceanic trenches. Whereas aboleths and veiled masters are adept at using telepathy and mental domination, thalassic architects use telekinetic powers to manipulate\u2014even create or destroy\u2014physical matter.<br/><br/> Uldraaghus more closely resemble veiled masters than they do standard aboleths. They\u2019re smaller, being about 15 feet long and weighing 2,800 pounds. Furthermore, they have five eyes instead of three; four are set to either side of their head, while a larger fifth eye is set in the center and glows with a brilliant white light. Thalassic architects have four tentacles, two of which end in clawed appendages capable of manipulating objects. Dark bands of scales typically ring their silvery bodies."
@@ -666,7 +656,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any water",
+            "organization": "solitary, pair, or crew (1 thalassic architect plus 2\u201330 <a href=\"MonsterDisplay.aspx?ItemName=Aboleth\" style=\"text-decoration:underline\">aboleths</a>, <a href=\"MonsterDisplay.aspx?ItemName=Skum\" style=\"text-decoration:underline\">skum</a>, and other dominated creatures)",
+            "treasure": "double"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Deadlight",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per round as a free action, the thalassic architect can affix its center eye on one target. The target must succeed at a DC 20 Will saving throw or become transfixed as per <a href=\"SpellDisplay.aspx?ItemName=lock%20gaze\" style=\"text-decoration:underline\"><i>lock gaze</i></a>  at caster level 14th. Once a creature has been affected by this ability, it becomes immune to it for 24 hours. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Glyph Carver",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A thalassic architect can cause its tentacles to vibrate at an intense frequency when it rends through solid matter, such that the tips can engrave inhuman patterns into solid stone. When activated, the tentacles count as adamantine for the purpose of bypassing DR and hardness. Furthermore, the additional sonic damage caused by the tentacles is treated as energy damage when used as part of a melee attack (as per normal) but is treated as additional normal physical damage when used to perform a sunder combat maneuver. The thalassic architect can turn this ability on or off as a free action. While this ability is activated, the tentacles can\u2019t be used to manipulate physical objects, nor can the thalassic architect attempt Stealth checks. While this ability is deactivated, the tentacles cause no sonic damage. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Mucus Cloud",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "While underwater, a thalassic architect exudes a cloud of transparent slime in a 100-foot-radius spread. All creatures in this area must succeed at a DC 22 Fortitude save each round or lose the ability to breathe air (and gain the ability to breathe water) for 8 hours. If a creature comes into contact with this mucus cloud again and fails another save, the effect extends for another 8 hours. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Slime",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A creature hit by a thalassic architect\u2019s tentacle must succeed at a DC 22 Fortitude save or its skin and flesh transform into a clear, slimy membrane over the course of 1d4 rounds. The target\u2019s new \u201cflesh\u201d is soft and tender, reducing the creature\u2019s Constitution score by 4 as long as the effect persists. If the creature\u2019s flesh isn\u2019t kept moist, it dries out quickly and the victim takes 1d12 points of damage every 10 minutes. Remove disease and similar effects can restore an afflicted creature to normal, but immunity to disease offers no protection from this attack. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Water Manipulation",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A thalassic architect is adept at the telekinetic manipulation of matter, including the waters it inhabits. This at-will ability is a standard action with a duration of concentration + 1 round. The ability functions in two different modes that can be used only one at a time.<br/><br/> The architect can force the water around a creature to lock in place and act as a solid, paralyzing the target as per <a href=\"SpellDisplay.aspx?ItemName=hold%20monster\" style=\"text-decoration:underline\"><i>hold monster</i></a> unless the target succeeds at a DC 20 Reflex save. Aside from using effects such as <a href=\"SpellDisplay.aspx?ItemName=freedom%20of%20movement\" style=\"text-decoration:underline\"><i>freedom of movement</i></a> or <a href=\"SpellDisplay.aspx?ItemName=remove%20paralysis\" style=\"text-decoration:underline\"><i>remove paralysis</i></a>, the target can also break free with a DC 20 Strength check. This ability can affect a creature more than once, but each casting grants a new saving throw.<br/><br/> Alternatively, it can thicken water to the consistency of gelatin in a 20-foot radius. Creatures with a swim speed treat this area as difficult terrain. Creatures without a swim speed increase the DC for Swim checks to move through the affected area by 10 (for example, calm underwater areas, usually DC 10, become DC 20). In either case, 5-foot steps become impossible. The save DC is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

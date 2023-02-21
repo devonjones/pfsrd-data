@@ -3,11 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests<br/><b>Organization</b> solitary, mated pair, or blessing (3\u20136)<br/><b>Treasure</b> none<br/>*<a href=\"MonsterDisplay.aspx?ItemName=Unicorn\" style=\"text-decoration:underline\">Unicorn</a> ability"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Most half-celestials are born of a mortal who loved a good outsider, but powerful holy magic can also create one."
@@ -51,7 +46,14 @@
             {
                 "type": "stat_block_section",
                 "subtype": "aura",
-                "name": "magic circle against evil*"
+                "modifiers": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "modifier",
+                        "name": "Unicorn Ability"
+                    }
+                ],
+                "name": "magic circle against evil"
             }
         ],
         "creature_type": {
@@ -367,12 +369,16 @@
                                         "type": "stat_block_section",
                                         "subtype": "spell",
                                         "name": "greater teleport",
-                                        "notation": "*",
                                         "modifiers": [
                                             {
                                                 "type": "stat_block_section",
                                                 "subtype": "modifier",
                                                 "name": "within its territory"
+                                            },
+                                            {
+                                                "type": "stat_block_section",
+                                                "subtype": "modifier",
+                                                "name": "Unicorn Ability"
                                             }
                                         ]
                                     },
@@ -541,14 +547,36 @@
                 {
                     "type": "stat_block_section",
                     "subtype": "special_quality",
-                    "name": "magical strike*"
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Unicorn Ability"
+                        }
+                    ],
+                    "name": "magical strike"
                 },
                 {
                     "type": "stat_block_section",
                     "subtype": "special_quality",
-                    "name": "wild empathy +18*"
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Unicorn Ability"
+                        }
+                    ],
+                    "name": "wild empathy +18"
                 }
             ]
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests",
+            "organization": "solitary, mated pair, or blessing (3\u20136)",
+            "treasure": "none"
         }
     },
     "sources": [

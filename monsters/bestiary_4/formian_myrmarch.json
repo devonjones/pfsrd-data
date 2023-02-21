@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm or temperate land or underground<br/><b>Organization</b> Solitary, team (2\u20134), platoon (1 plus 7\u201318 warriors and 6\u201312 workers), or royal guard (4 plus 12\u201320 warriors)<br/><b>Treasure</b> standard (9 javelins, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Inspire Hive (Su)</b> Once per day, a myrmarch can affect all warriors and workers in its telepathic range as if they were under the effect of a <i>greater heroism</i> spell (CL 12th).<br/><br/><b>Poison (Ex)</b> Javelin or sting\u2014injury; <i>save </i>Fort DC 21; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dex and sickened; <i>cure </i>2 saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Myrmarchs are an elite caste of the formian race. They serve as direct agents for the queen, acting as advisors and generals, or administrating tasks where complexity or propriety renders taskmasters unsuitable. It is myrmarchs who answer the call when a particularly skilled diplomat or emissary is required to carry the queen\u2019s words outside of the territory of the hive to the dangerously disorganized races.<br/><br/>While myrmarchs make up the aristocracy of formian society, this does not make them pampered intellectuals and bureaucrats. On the contrary, they are even more deadly than the warriors they often command, and do not hesitate to use their considerable might to aid and protect their kin. Myrmarchs facing combat apply their natural poison to their javelins, making them even more lethal.<br/><br/>Like other formians, myrmarchs record their life\u2019s history upon their carapaces. Between their greater opportunities and longer lifespans (roughly as long as those of humans), myrmarchs can cover nearly every inch of their shells with great deeds accomplished, foes overcome, and service to the hive. Some myrmarchs actually run out of space for new records: some die shortly thereafter, knowing that they have served their queen to the utmost, while others add new artificial plates to their carapaces to continue their epics.<br/><br/>The most accomplished, trusted, and battle-tested of their race, myrmarchs form the queen\u2019s elite bodyguard. In a small hive, these bodyguards likely have the same statistics presented above. In the oldest and largest hives, however, most possess class levels.<br/><br/>A myrmarch has an enlarged thorax and abdomen, which give it the same general size and weight as a large warhorse, though its upper body is not much larger than that of a formian warrior\u2019s. Myrmarchs stand about 8 feet high and weigh about 1,200 pounds."
@@ -548,7 +538,49 @@
                     "name": "undersized weapons"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm or temperate land or underground",
+            "organization": "Solitary, team (2\u20134), platoon (1 plus 7\u201318 warriors and 6\u201312 workers), or royal guard (4 plus 12\u201320 warriors)",
+            "treasure": "standard (9 javelins, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Inspire Hive",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per day, a myrmarch can affect all warriors and workers in its telepathic range as if they were under the effect of a <i>greater heroism</i> spell (CL 12th)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Javelin or sting\u2014injury; <i>save </i>Fort DC 21; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Dex and sickened; <i>cure </i>2 saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Javelin or sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 21",
+                        "save_type": "Fort",
+                        "dc": 21
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Dex and sickened",
+                    "cure": "2 saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground<br/><b>Organization</b> single, pair, or expedition (3\u20138)<br/><b>Treasure</b> double (masterwork short sword, <i>wand of magic missile </i>[CL 5th, 1d20+30 charges])"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Aura of Madness (Su)</b> Any sane being within 30 feet of a conscious seugathi must make a DC 20 Will save each round or become confused for 1 round. A creature that fails 5 saves in a row becomes permanently insane, as per the <i>insanity </i>spell. A seugathi can suppress or activate this aura as a free action. This is a mind-affecting effect. The save DC is Charisma-based.<br/><br/><b>Confusion Command (Su)</b> As an immediate action, a seugathi can issue a telepathic command to a confused creature within 30 feet. This allows the seugathi to pick a result from the confusion behavior table, rather than the confused creature rolling randomly for its actions that round.<br/><br/><b>Item Use (Ex) </b>A seugathi can utilize spell trigger devices as if it were a spellcaster of the appropriate class. As a free action by touch, it can identify all spell trigger properties an item has. Use Magic Device is a class skill for seugathis.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Wis and deafness; <i>cure </i>2 consecutive saves. Deafness persists as long as the ability damage caused by the poison lasts. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Seugathi are spawned by the hundreds by a single neothelid that has performed rituals to impregnate itself. As part of the strange process of being spawned in such rituals, the seugathi assimilates an extensive list of missions from its parent\u2014once the seugathi completes these missions, it perishes. No single seugathi knows the purpose of these commands, but they trust that their neothelid masters have a reason for sending them on these diverse and usually cruel missions. A seugathi is 14 feet long and weighs 650 pounds."
@@ -531,7 +521,65 @@
                     "name": "item use"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground",
+            "organization": "single, pair, or expedition (3\u20138)",
+            "treasure": "double (masterwork short sword, <i>wand of magic missile </i>[CL 5th, 1d20+30 charges])"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Aura of Madness",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any sane being within 30 feet of a conscious seugathi must make a DC 20 Will save each round or become confused for 1 round. A creature that fails 5 saves in a row becomes permanently insane, as per the <i>insanity </i>spell. A seugathi can suppress or activate this aura as a free action. This is a mind-affecting effect. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Confusion Command",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As an immediate action, a seugathi can issue a telepathic command to a confused creature within 30 feet. This allows the seugathi to pick a result from the confusion behavior table, rather than the confused creature rolling randomly for its actions that round."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Item Use",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A seugathi can utilize spell trigger devices as if it were a spellcaster of the appropriate class. As a free action by touch, it can identify all spell trigger properties an item has. Use Magic Device is a class skill for seugathis."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Wis and deafness; <i>cure </i>2 consecutive saves. Deafness persists as long as the ability damage caused by the poison lasts. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Wis and deafness",
+                    "cure": "2 consecutive saves. Deafness persists as long as the ability damage caused by the poison lasts. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

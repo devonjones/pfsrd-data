@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm forests or plains<br/><b>Organization</b> solitary, pair, or pack (3\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Tail barbs\u2014injury; <i>save</i> Fort DC 23; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Dex; <i>cure</i> 2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Cunning and brutal, maraxes are far-ranging predators from Castrovel\u2019s mist-shrouded landscape. Gifted with vicious weapons, dense armor, and a paralytic venom, a single marax is a match for even the greatest hunter. A pack can easily bring down Castrovel\u2019s largest creatures and defend their territory against the planet\u2019s most fearsome competitors.<br/><br/>Variations of maraxes dot Castrovel\u2019s different regions just as big cats stalk Golarion\u2019s. Different subspecies can be identified by their varying fur colors and patterns and the arrangement of ridges on their dorsal plates. Maraxes typically stand 9 to 10 feet tall and weigh up to 900 pounds."
@@ -368,7 +358,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm forests or plains",
+            "organization": "solitary, pair, or pack (3\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tail barbs\u2014injury; <i>save</i> Fort DC 23; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Dex; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tail barbs\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 23",
+                        "save_type": "Fort",
+                        "dc": 23
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Dex",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

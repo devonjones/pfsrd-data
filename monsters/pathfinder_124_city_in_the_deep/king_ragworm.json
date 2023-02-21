@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any oceans<br/><b>Organization</b> solitary<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Eversible Pharynx (Ex)</b> The king ragworm\u2019s jaws sit deep within its throat. When making a bite attack, the ragworm turns its throat inside out and extends its jaws with surprising speed. This not only extends the ragworm\u2019s reach with its bite attack, but it also gives it a +4 bonus on attack rolls with its bite during surprise rounds. <br/><br/><b>Poison (Ex)</b> Slam or tail slap\u2014injury; <i>save</i> Fort DC 25; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Dex damage and 1d2 Con damage; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based. <br/><br/><b>Vortex Attack (Ex)</b> Three times per day as a standard action, king ragworm can undulate its body inside its burrow to create a vortex, drawing anything within a 15-foot cone toward the burrow\u2019s entrance. Large and smaller creatures caught in this vortex must succeed at a DC 26 Reflex save or be pulled into the ragworm\u2019s burrow, potentially provoking attacks of opportunity. Attacks of opportunity caused by this ability can\u2019t be avoided with Acrobatics (though attacks of opportunity provoked in other ways, such as by moving out of one of the ragworm\u2019s threatened squares, can be avoided as normal). The save DC is Dexterity-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The giant king ragworm, found in the far depths of the ocean, is among the largest of the sea worms. It creates a slime-lined burrow in the ocean floor, where it resides most of the time."
@@ -351,7 +341,57 @@
                     "name": "compression"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any oceans",
+            "organization": "solitary",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Eversible Pharynx",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The king ragworm\u2019s jaws sit deep within its throat. When making a bite attack, the ragworm turns its throat inside out and extends its jaws with surprising speed. This not only extends the ragworm\u2019s reach with its bite attack, but it also gives it a +4 bonus on attack rolls with its bite during surprise rounds. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Slam or tail slap\u2014injury; <i>save</i> Fort DC 25; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Dex damage and 1d2 Con damage; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Slam or tail slap\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 25",
+                        "save_type": "Fort",
+                        "dc": 25
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Dex damage and 1d2 Con damage",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vortex Attack",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Three times per day as a standard action, king ragworm can undulate its body inside its burrow to create a vortex, drawing anything within a 15-foot cone toward the burrow\u2019s entrance. Large and smaller creatures caught in this vortex must succeed at a DC 26 Reflex save or be pulled into the ragworm\u2019s burrow, potentially provoking attacks of opportunity. Attacks of opportunity caused by this ability can\u2019t be avoided with Acrobatics (though attacks of opportunity provoked in other ways, such as by moving out of one of the ragworm\u2019s threatened squares, can be avoided as normal). The save DC is Dexterity-based."
+            }
+        ]
     },
     "sources": [
         {

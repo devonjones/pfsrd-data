@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm marshes and aquatic<br/><b>Organization</b> solitary, pair, or army (3\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Injury; <i>save </i>Fort DC 10; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con damage; <i>cure </i>1 save"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Poisonous frogs are a bright green color, with additional bright yellow, red, or blue markings. They are just over a foot long and weigh 10 pounds. The poison of poisonous frogs is often gathered by primitive tribes and used to coat darts and arrows for hunting.<br/><br/>You can make a larger poison frog either by applying the giant simple template or by giving a normal giant frog a poison frog\u2019s venomous bite."
@@ -248,7 +238,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm marshes and aquatic",
+            "organization": "solitary, pair, or army (3\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Injury; <i>save </i>Fort DC 10; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con damage; <i>cure </i>1 save",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 10",
+                        "save_type": "Fort",
+                        "dc": 10
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Con damage",
+                    "cure": "1 save"
+                }
+            }
+        ]
     },
     "sources": [
         {

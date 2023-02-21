@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Abyss)<br/><b>Organization</b> solitary (unique)<br/><b>Treasure</b> triple (2 <i>+5 unholy daggers</i>, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Absorb Blood (Su)</b> If a creature dies while under the effects of Shax\u2019s ability to command blood, all of the victim\u2019s blood slithers out of its body and moves at a speed of 60 feet toward Shax. If the slithering blood reaches Shax, it flows up onto his body and is absorbed, affecting Shax as a <i>heal</i> spell (CL 28th). A slithering pool of blood can be destroyed by any amount of fire damage applied to it before it reaches its goal, or by the application of an effect that transmutes liquid to something other than blood.<br/><br/><b>Aura of Bleeding Wounds (Su)</b> Whenever a creature takes piercing or slashing damage within 30 feet of Shax, it takes an additional 1d6 points of bleed damage. This bleed damage stacks with itself, up to a maximum of 10d6 points. As a free action, Shax may designate any number of creatures within the aura to be exempt from this effect.<br/><br/><b>Command Blood (Su)</b> As a swift action, Shax can command the blood of any creature that is currently suffering from bleed damage to do his bidding. The target must be within 60 feet of Shax for him to use this ability. The target can resist this ability with a successful DC 36 Fortitude save. If the target fails the save, Shax can command the victim\u2019s blood to behave in one of the manners listed below. Once commanded, the blood continues to function in this way for as long as the victim continues to bleed. Shax can change the effect in a subsequent round by using this ability again, but no more than one of the following effects can be in effect at any one time. The save DC is Charisma-based.<br/><br/><i>Blinding Blood</i>: The victim\u2019s blood runs up into its eyes and blinds it at the start of its turn unless the victim takes a move action to wipe away the blood. Once a victim is blinded in this way, it remains blinded as long as the bleed effect continues.<br/><br/><i>Bloody Mess</i>: The victim\u2019s blood spreads out across its body, making it slippery. This grants a +10 circumstance bonus on Escape Artist checks and all attempts to resist being grappled, but the victim must succeed at a DC 36 Reflex save at the start of each round or drop objects it holds. These effects last as long as the bleed effect continues.<br/><br/><i>Choking Blood</i>: The target\u2019s blood runs up into its nostrils and mouth unless the creature uses a free hand to pinch its nose shut and holds its breath. If the target doesn\u2019t do so, the blood runs into its lungs and the creature must succeed at a Constitution check each round or it begins to drown. Once a victim begins to drown, it continues to do so as long as the bleed effect persists.<br/><br/><i>Gruesome Tendrils</i>: This effect automatically ends any bleed effects the victim is currently suffering as it causes the blood coating the victim to solidify into thin, whiplike tendrils that lash out at any creature within 5 feet. Any creature that begins its turn in this area automatically takes 1d6 points of slashing damage and 1d6 points of bleed damage; a successful DC 36 Reflex save prevents this damage.<br/><br/><b>Frightful Weapon Prowess (Ex)</b> When an opponent observes Shax\u2019s attacks, the frightening display of the demon lord\u2019s grace makes the victim take additional damage from those attacks, as if simply imagining the damage were enough to cause injury. Shax gains a profane bonus equal to his Charisma modifier on damage rolls (+10 damage) with all weapon attacks and ranged attacks made against a victim who can observe him. This damage is negated if the victim closes its eyes, but doing so puts the opponent in greater danger from Shax\u2019s sneak attacks. This is a visual fear effect.<br/><br/><b>Master of Lies (Ex)</b> Shax is immune to any magical effect that discerns lies or forces him to speak the truth.<br/><br/><b>Painful Cuts (Ex)</b> Whenever Shax threatens a critical hit with a slashing weapon, the victim must succeed at a DC 36 Fortitude save or be staggered by the pain for 1 round. If the hit was a critical hit, the staggered effect lasts for 1d4 rounds on a failed saving throw. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Shax is the demon lord of envy, lies, and\u2014above all else\u2014murder. He rules an Abyssal realm known as Charnelhome, an immense mansion the size of a city perched atop a slanted bluff surrounded by a bog of thorny, blood-drinking plants. He is fond of inviting his captured enemies as well as his greatest worshipers into the chambers of this building, for those who survive his deathtraps often serve as lessons as to how he can improve his methods of mayhem.<br/><br/>Shax is particularly skilled at blinding foes with critical hits\u2014when he does so, he likes to pluck the eyes from his victim\u2019s face as part of the attack and swiftly gobble them down whole. He can hurl the countless surgical tools he carries on his body as deadly weapons, but prefers to slaughter foes in melee."
@@ -1018,7 +1008,65 @@
                     "name": "master of lies"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Abyss)",
+            "organization": "solitary (unique)",
+            "treasure": "triple (2 <i>+5 unholy daggers</i>, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Absorb Blood",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "If a creature dies while under the effects of Shax\u2019s ability to command blood, all of the victim\u2019s blood slithers out of its body and moves at a speed of 60 feet toward Shax. If the slithering blood reaches Shax, it flows up onto his body and is absorbed, affecting Shax as a <i>heal</i> spell (CL 28th). A slithering pool of blood can be destroyed by any amount of fire damage applied to it before it reaches its goal, or by the application of an effect that transmutes liquid to something other than blood."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Aura of Bleeding Wounds",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Whenever a creature takes piercing or slashing damage within 30 feet of Shax, it takes an additional 1d6 points of bleed damage. This bleed damage stacks with itself, up to a maximum of 10d6 points. As a free action, Shax may designate any number of creatures within the aura to be exempt from this effect."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Command Blood",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a swift action, Shax can command the blood of any creature that is currently suffering from bleed damage to do his bidding. The target must be within 60 feet of Shax for him to use this ability. The target can resist this ability with a successful DC 36 Fortitude save. If the target fails the save, Shax can command the victim\u2019s blood to behave in one of the manners listed below. Once commanded, the blood continues to function in this way for as long as the victim continues to bleed. Shax can change the effect in a subsequent round by using this ability again, but no more than one of the following effects can be in effect at any one time. The save DC is Charisma-based.<br/><br/><i>Blinding Blood</i>: The victim\u2019s blood runs up into its eyes and blinds it at the start of its turn unless the victim takes a move action to wipe away the blood. Once a victim is blinded in this way, it remains blinded as long as the bleed effect continues.<br/><br/><i>Bloody Mess</i>: The victim\u2019s blood spreads out across its body, making it slippery. This grants a +10 circumstance bonus on Escape Artist checks and all attempts to resist being grappled, but the victim must succeed at a DC 36 Reflex save at the start of each round or drop objects it holds. These effects last as long as the bleed effect continues.<br/><br/><i>Choking Blood</i>: The target\u2019s blood runs up into its nostrils and mouth unless the creature uses a free hand to pinch its nose shut and holds its breath. If the target doesn\u2019t do so, the blood runs into its lungs and the creature must succeed at a Constitution check each round or it begins to drown. Once a victim begins to drown, it continues to do so as long as the bleed effect persists.<br/><br/><i>Gruesome Tendrils</i>: This effect automatically ends any bleed effects the victim is currently suffering as it causes the blood coating the victim to solidify into thin, whiplike tendrils that lash out at any creature within 5 feet. Any creature that begins its turn in this area automatically takes 1d6 points of slashing damage and 1d6 points of bleed damage; a successful DC 36 Reflex save prevents this damage."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Frightful Weapon Prowess",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "When an opponent observes Shax\u2019s attacks, the frightening display of the demon lord\u2019s grace makes the victim take additional damage from those attacks, as if simply imagining the damage were enough to cause injury. Shax gains a profane bonus equal to his Charisma modifier on damage rolls (+10 damage) with all weapon attacks and ranged attacks made against a victim who can observe him. This damage is negated if the victim closes its eyes, but doing so puts the opponent in greater danger from Shax\u2019s sneak attacks. This is a visual fear effect."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Master of Lies",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Shax is immune to any magical effect that discerns lies or forces him to speak the truth."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Painful Cuts",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Whenever Shax threatens a critical hit with a slashing weapon, the victim must succeed at a DC 36 Fortitude save or be staggered by the pain for 1 round. If the hit was a critical hit, the staggered effect lasts for 1d4 rounds on a failed saving throw. The save DC is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

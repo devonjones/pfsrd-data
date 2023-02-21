@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (graveyards or the Boneyard)<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Grave Dependent (Su)</b> A kere is mystically bonded to a single gravestone\u2014typically the most impressive or oldest in a graveyard\u2014and must never stray more than 300 yards from it. A kere who moves 300 yards beyond her bonded grave immediately becomes visible and unable to use any of her spell-like abilities. A kere who is out of range of her bonded grave for 24 hours takes 1d6 points of Constitution damage, and another 1d6 points of Constitution damage every day of separation that follows\u2014eventually, this separation kills the kere. A kere can break this bond or forge a new bond with a new grave by performing a 24-hour ritual and making a successful DC 20 Will save. If a kere is not bonded with a grave, she must either actively try to forge a new bond or attempt to return to the Boneyard (where she takes no penalties from not being bonded).<br/><br/><b>Grave Meld (Su)</b> A kere can meld with any gravestone or funerary sculpture, similarly to how the spell <i>meld into stone</i> functions. She can remain melded with such a structure as long as she wishes.<br/><br/><b>Grave Tell (Sp)</b> This ability functions as the spell <i>stone tell</i>, but only affects stone funerary structures, like gravestones, cemetery monuments, lych-gates, mausoleums, and similar constructions.<br/><br/><b>Infectious Fear (Su)</b> Any creature struck by a kere\u2019s shroud must succeed at a DC 20 Will save or become frightened for 2d4 rounds. Any creature that physically touches a creature frightened by this effect must succeed at a DC 20 Will save as well or also be frightened for 2d4 rounds (though the fear of the creature touched is not contagious). The save DC is Charisma-based.<br/><br/><b>Shroud (Ex)</b> A kere\u2019s shroud is an insubstantial thing that only a kere can touch. Creatures that come into contact with this shroud find it to be as insubstantial as mist\u2014though they often do feel the terror it inspires. A creature that is unaware of a kere and is struck by her shroud is not aware that a weapon has struck it. A kere\u2019s shroud vaporizes upon its owner\u2019s death.<br/><br/><b>Spiritsense (Su)</b> A psychopomp notices, locates, and can distinguish between living and undead creatures within 60 feet, just as if she possessed the blindsight ability.<br/><br/><b>Spirit Touch (Ex)</b> A psychopomp\u2019s natural weapons, as well as any weapon it wields, are treated as though they had the <i>ghost touch </i>weapon special ability.<br/><br/><b>Veil of Tears (Su)</b> Any graveyard that hosts a kere is gloomier and more solemn. All exterior areas within such a graveyard are perpetually affected by <i>darkness </i>and <i>mind fog </i>(Will DC 20). Additionally, any undead creature that enters the area is also affected as per the spell <i>slow </i>(Will DC 20). Those who save against these effects are immune to the graveyard\u2019s veil of tears for the next 24 hours. Those who fail are affected by these penalties for as long as they remain in the graveyard. A veil of tears can be raised or lowered by the resident kere as a free action. The veil disperses if a kere leaves the graveyard or is destroyed, and rises upon her return. The veil can also be dispelled for 1 day by casting <i>dispel magic </i>or a similar spell upon the kere\u2019s bonded gravestone. The spell effects are cast at the kere\u2019s caster level (usually 11th). The saving throw DCs are based on the resident kere\u2019s Charisma."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Certain places are sacred, settings meant to remain free of the raucous sounds and defiling touch of the living. Graveyards number among some of the most obvious of such places, where stone guardians and the buried weight of the dead bear on visitors with undeniable gravity. But certain forces disregard the fundamental sanctity of such ground\u2014mortal and deathless heretics who use such places to hunt, feed, or cloak fouler deeds. Yet not all cemeteries are unguarded, and the vaporous shadows and palpable dread of some burial grounds suggest not corruption, but the custody of an ominous otherworldly guardian.<br/><br/>Keres, like all psychopomps, are emissaries of the Boneyard, the necropolis that all mortals must traverse at the end of life. While most psychopomps concern themselves with the souls of the recently deceased, keres mind the resting places of the dead. Their stewardship derives not from any otherworldly care for the deteriorating dust left in the wake of mortal life, but rather from an interest in those who come seeking the dead where they lie. Such creatures often engage in perversions keres seek to oppose. To this end, keres take up lonely residences amid the tombs and monuments of graveyards, spreading an ominous air and giving rise to tales of hauntings and strange encounters to deter even the boldest intruders from trespassing upon the fields they tend.<br/><br/>Keres appear as pale, sickly women standing about 5 feet tall and weighing less than 100 pounds."
@@ -610,7 +600,81 @@
                     "name": "grave meld"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (graveyards or the Boneyard)",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Grave Dependent",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A kere is mystically bonded to a single gravestone\u2014typically the most impressive or oldest in a graveyard\u2014and must never stray more than 300 yards from it. A kere who moves 300 yards beyond her bonded grave immediately becomes visible and unable to use any of her spell-like abilities. A kere who is out of range of her bonded grave for 24 hours takes 1d6 points of Constitution damage, and another 1d6 points of Constitution damage every day of separation that follows\u2014eventually, this separation kills the kere. A kere can break this bond or forge a new bond with a new grave by performing a 24-hour ritual and making a successful DC 20 Will save. If a kere is not bonded with a grave, she must either actively try to forge a new bond or attempt to return to the Boneyard (where she takes no penalties from not being bonded)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Grave Meld",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A kere can meld with any gravestone or funerary sculpture, similarly to how the spell <i>meld into stone</i> functions. She can remain melded with such a structure as long as she wishes."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Grave Tell",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "This ability functions as the spell <i>stone tell</i>, but only affects stone funerary structures, like gravestones, cemetery monuments, lych-gates, mausoleums, and similar constructions."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Infectious Fear",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any creature struck by a kere\u2019s shroud must succeed at a DC 20 Will save or become frightened for 2d4 rounds. Any creature that physically touches a creature frightened by this effect must succeed at a DC 20 Will save as well or also be frightened for 2d4 rounds (though the fear of the creature touched is not contagious). The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Shroud",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A kere\u2019s shroud is an insubstantial thing that only a kere can touch. Creatures that come into contact with this shroud find it to be as insubstantial as mist\u2014though they often do feel the terror it inspires. A creature that is unaware of a kere and is struck by her shroud is not aware that a weapon has struck it. A kere\u2019s shroud vaporizes upon its owner\u2019s death."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spiritsense",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A psychopomp notices, locates, and can distinguish between living and undead creatures within 60 feet, just as if she possessed the blindsight ability."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spirit Touch",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A psychopomp\u2019s natural weapons, as well as any weapon it wields, are treated as though they had the <i>ghost touch </i>weapon special ability."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Veil of Tears",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any graveyard that hosts a kere is gloomier and more solemn. All exterior areas within such a graveyard are perpetually affected by <i>darkness </i>and <i>mind fog </i>(Will DC 20). Additionally, any undead creature that enters the area is also affected as per the spell <i>slow </i>(Will DC 20). Those who save against these effects are immune to the graveyard\u2019s veil of tears for the next 24 hours. Those who fail are affected by these penalties for as long as they remain in the graveyard. A veil of tears can be raised or lowered by the resident kere as a free action. The veil disperses if a kere leaves the graveyard or is destroyed, and rises upon her return. The veil can also be dispelled for 1 day by casting <i>dispel magic </i>or a similar spell upon the kere\u2019s bonded gravestone. The spell effects are cast at the kere\u2019s caster level (usually 11th). The saving throw DCs are based on the resident kere\u2019s Charisma."
+            }
+        ]
     },
     "sources": [
         {

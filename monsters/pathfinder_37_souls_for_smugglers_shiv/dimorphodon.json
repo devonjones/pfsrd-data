@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm coasts or forests<br/><b>Organization</b> solitary, pair, or flock (3\u20139)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The dimorphodon\u2019s jaws contain two separate rows teeth: several large fangs near the front (used to grip prey and inject poison) and numerous smaller, sharp teeth along the rest of the jaw.<br/><br/>Dimorphodons are known for being easy to train. Handle Animal checks to train dimorphodons are attempted with a +4 bonus, and a dimorphodon can know one bonus trick chosen by its trainer once the creature has been fully domesticated.<br/><br/>A dimorphodon\u2019s wingspan is between 4 and 5 feet long."
@@ -223,7 +213,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm coasts or forests",
+            "organization": "solitary, pair, or flock (3\u20139)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Str",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests, plains, or swamps<br/><b>Organization</b> solitary, pair, or knot (3\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison Skin (Ex) </b>A creature that strikes a giant toad with an unarmed strike or natural weapon exposes itself to the toad\u2019s poisonous skin.<br/><br/>Skin\u2014contact; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Wisdom damage; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Most giant toads live in dryer areas after maturing, returning to the water only to mate and give birth.<br/><br/>Giant toad companions are identical to giant frog companions (<i>Pathfinder RPG Bestiary </i>135), save that they lack the frog\u2019s tongue and pull abilities. Instead, they gain the poison skin ability at 4th level."
@@ -314,7 +304,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests, plains, or swamps",
+            "organization": "solitary, pair, or knot (3\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison Skin",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A creature that strikes a giant toad with an unarmed strike or natural weapon exposes itself to the toad\u2019s poisonous skin.<br/><br/>Skin\u2014contact; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Wisdom damage; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison Skin",
+                    "affliction_type": "Poison Skin; A creature that strikes a giant toad with an unarmed strike or natural weapon exposes itself to the toad\u2019s poisonous skin.<br/><br/>Skin\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Wisdom damage",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

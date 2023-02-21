@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm deserts, hills, or plains<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Corrosive Blood (Ex)</b> See page 76 of <i>Pathfinder RPG Bestiary 2</i>.<br/><br/><b>Electrical Jolt (Su)</b> See page 76 of <i>Bestiary 2</i>.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury or skin\u2014contact; <i>save </i>Fort DC 22; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con; <i>cure </i>2 consecutive saves.<br/><br/><b>Venomous Skin (Ex)</b> See page 76 of <i>Bestiary 2</i>."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Sometimes a pregnant death worm lays an especially promising egg among her brood, about twice as large as the others and with a nigh-impenetrable, brownspeckled shell. This egg requires even more warmth than the others in its clutch, and upon emerging the worm would rather devour its brethren than the meal left by its parent. Such rare specimens grow up to become death worm leviathans, and those few who have heard of the fell beasts know to fear them as well as to hold them in awe. Death worm leviathans possess powers nearly identical to those of their smaller kin, albeit at a much deadlier scale. In addition, their massive girth makes it even easier for them to consume prey both large and small, and a single leviathan might consume an entire desert village before its terrible hunger is sated."
@@ -478,7 +468,65 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm deserts, hills, or plains",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Corrosive Blood",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "See page 76 of <i>Pathfinder RPG Bestiary 2</i>."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Electrical Jolt",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "See page 76 of <i>Bestiary 2</i>."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury or skin\u2014contact; <i>save </i>Fort DC 22; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury or skin\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 22",
+                        "save_type": "Fort",
+                        "dc": 22
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Venomous Skin",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "See page 76 of <i>Bestiary 2</i>."
+            }
+        ]
     },
     "sources": [
         {

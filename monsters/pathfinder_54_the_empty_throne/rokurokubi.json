@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any ruins<br/><b>Organization</b> solitary, pair, or harem (3\u20136)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Elongate Neck (Ex)</b> A rokurokubi can stretch her neck from a normal human length up to 20 feet, giving her reach with her bite attack and threatening all squares within that range.<br/><br/><b>Nightfall Aura (Su)</b> A rokurokubi can create an aura of <i>darkness</i> and <i>silence</i> (CL 12th) with a radius of 15 feet. The rokurokubi is immune to the effects of her aura, and can activate or suppress this ability as a free action. These aura effects can be dispelled as if they were spells.<br/><br/><b>No Sleep (Ex)</b> A rokurokubi does not need to sleep and is immune to all sleep effects.<br/><br/><b>Rokurokubi\u2019s Curse (Su)</b> Bite\u2014injury; <i>save </i>Will DC 23; <i>frequency </i>1 day; <i>effect </i>1 Cha damage and permanently silenced after 4 Cha damage. Fully healing the Cha damage cures the silence. The save DC is Charisma-based.<br/><br/><b>Spells</b> A rokurokubi casts spells as a 12th-level sorcerer."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A rokurokubi is an evil hag-like creature who seeks to spread as much mayhem and despair as possible. Her skin ranges in hue from pale blue to muted green, so to disguise herself she must cover up her flesh with makeup and clothing, and retract her neck so it is no longer than a human\u2019s.<br/><br/>A rokurokubi can mate with almost any male humanoid, monstrous humanoid, or humanoid-shaped creature. Her offspring is always a rokurokubi. The mate is usually devoured once the rokurokubi tires of his presence."
@@ -705,7 +695,72 @@
                     "name": "no sleep"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any ruins",
+            "organization": "solitary, pair, or harem (3\u20136)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Elongate Neck",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A rokurokubi can stretch her neck from a normal human length up to 20 feet, giving her reach with her bite attack and threatening all squares within that range."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Nightfall Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A rokurokubi can create an aura of <i>darkness</i> and <i>silence</i> (CL 12th) with a radius of 15 feet. The rokurokubi is immune to the effects of her aura, and can activate or suppress this ability as a free action. These aura effects can be dispelled as if they were spells."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "No Sleep",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A rokurokubi does not need to sleep and is immune to all sleep effects."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Rokurokubi\u2019s Curse",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Bite\u2014injury; <i>save </i>Will DC 23; <i>frequency </i>1 day; <i>effect </i>1 Cha damage and permanently silenced after 4 Cha damage. Fully healing the Cha damage cures the silence. The save DC is Charisma-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Rokurokubi\u2019s Curse",
+                    "affliction_type": "Rokurokubi\u2019s Curse; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Will DC 23",
+                        "save_type": "Will",
+                        "dc": 23
+                    },
+                    "frequency": "1 day",
+                    "effect": "1 Cha damage and permanently silenced after 4 Cha damage. Fully healing the Cha damage cures the silence. The save DC is Charisma-based."
+                }
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A rokurokubi casts spells as a 12th-level sorcerer."
+            }
+        ]
     },
     "sources": [
         {

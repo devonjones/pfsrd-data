@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Abaddon)<br/><b>Organization</b> solitary, pair, or lurk (3\u20137)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Aura of Worry (Su)</b> Anisydaemons project a 30-foot aura of anxiety and insecurity. Each creature within 30 feet of the daemon must succeed at a DC 22 Will save or be affected by crushing despair for as long as it remains within the aura. Creatures that fail their save remain affected by the aura for 1d4+1 rounds after leaving the radius. The anisydaemon gains Fast Healing 5 for as long as at least one creature is affected by its aura. Additionally, creatures that fail their save cannot sleep or receive any benefits of rest while under the effects of the aura. An anisydaemon can activate or deactivate this ability as a free action. The save DC is Charisma-based.<br/><br/><b>Devour Soul (Ex)</b> Any creature that dies while affected by one of the anisydaemon\u2019s mind-affecting abilities\u2014including its aura of worry\u2014has its soul devoured by the fiend\u2019s second mouth. That creature cannot be resurrected by any effect short of <i>miracle, wish</i>, or direct intervention from a deity while the anisydaemon lives. Creatures whose souls have been devoured by an anisydaemon can be resurrected normally if the anisydaemon is slain.<br/><br/><b>Hide in Plain Sight (Ex)</b> An anisydaemon can use the Stealth skill even while being observed. As long as it\u2019s standing in an area of at least dim light or shadow, an anisydaemon can hide itself from view without actually hiding behind anything. This ability has no effect if the anisydaemon is not in an area of at least dim light or in an area of shadow of at least Medium size.<br/><br/><b>Shadow Possession (Ex)</b> As a standard action that provokes an attack of opportunity if the target is aware of the daemon, an anisydaemon can enter the shadow of any creature to which it is currently adjacent. While within a shadow, the anisydaemon is considered to be sharing its target\u2019s space, though while the daemon is within a shadow, neither creature takes any penalties from squeezing. The anisydaemon can still affect creatures within 30 feet of itself with its aura of worry, though the daemon can target only the shadow\u2019s owner with its psychic magic or spell-like abilities. While within a shadow, an anisydaemon is considered incorporeal and takes half damage from spells and magic weapons. Ghost touch weapons affect it normally. An anisydaemon that dies while possessing a creature\u2019s shadow is immediately ejected to a random empty space adjacent to the creature. An anisydaemon can leave a shadow it is possessing as a move action that does not provoke attacks of opportunity. If it does so, it is ejected into a free space of its choice adjacent to the creature whose shadow it was possessing. When an anisydaemon is possessing a creature\u2019s shadow, that creature cannot benefit from morale bonuses of any kind. An anisydaemon can use its Stealth skill to hide while within a shadow.<br/><br/><b>Sunlight Weakness (Ex)</b> An anisydaemon exposed to natural sunlight is unable to use any of its psychic magic or spell-like abilities and cannot project its aura of worry. An anisydaemon possessing a creature\u2019s shadow does not count as being in direct sunlight, even if the creature whose shadow it\u2019s possessing is."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Anisydaemons, or \u201cworry daemons,\u201d represent death by stress and anxiety. Their work can be seen in the artisan who drives herself to death because she fears her work will never be good enough, or through the husband making himself sick wondering if his partner secretly has a lover and analyzing every detail of every interaction until his mind can no longer take the strain.<br/><br/>Anisydaemons average around 14 feet tall and weigh about 1 ton. Occasionally, some anisydaemons reach truly monstrous sizes after coaxing countless victims to their deaths. These fiends often grow additional mouths on other parts of their bodies, such as their hands or torsos, which magnify the power of their psychic whispers. Despite their bulk, those attempting to escape an anisydaemon discover the fiends can squeeze into impossibly small spaces in pursuit."
@@ -759,7 +749,57 @@
                     "name": "hide in plain sight"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Abaddon)",
+            "organization": "solitary, pair, or lurk (3\u20137)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Aura of Worry",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Anisydaemons project a 30-foot aura of anxiety and insecurity. Each creature within 30 feet of the daemon must succeed at a DC 22 Will save or be affected by crushing despair for as long as it remains within the aura. Creatures that fail their save remain affected by the aura for 1d4+1 rounds after leaving the radius. The anisydaemon gains Fast Healing 5 for as long as at least one creature is affected by its aura. Additionally, creatures that fail their save cannot sleep or receive any benefits of rest while under the effects of the aura. An anisydaemon can activate or deactivate this ability as a free action. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Devour Soul",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Any creature that dies while affected by one of the anisydaemon\u2019s mind-affecting abilities\u2014including its aura of worry\u2014has its soul devoured by the fiend\u2019s second mouth. That creature cannot be resurrected by any effect short of <i>miracle, wish</i>, or direct intervention from a deity while the anisydaemon lives. Creatures whose souls have been devoured by an anisydaemon can be resurrected normally if the anisydaemon is slain."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hide in Plain Sight",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "An anisydaemon can use the Stealth skill even while being observed. As long as it\u2019s standing in an area of at least dim light or shadow, an anisydaemon can hide itself from view without actually hiding behind anything. This ability has no effect if the anisydaemon is not in an area of at least dim light or in an area of shadow of at least Medium size."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Shadow Possession",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a standard action that provokes an attack of opportunity if the target is aware of the daemon, an anisydaemon can enter the shadow of any creature to which it is currently adjacent. While within a shadow, the anisydaemon is considered to be sharing its target\u2019s space, though while the daemon is within a shadow, neither creature takes any penalties from squeezing. The anisydaemon can still affect creatures within 30 feet of itself with its aura of worry, though the daemon can target only the shadow\u2019s owner with its psychic magic or spell-like abilities. While within a shadow, an anisydaemon is considered incorporeal and takes half damage from spells and magic weapons. Ghost touch weapons affect it normally. An anisydaemon that dies while possessing a creature\u2019s shadow is immediately ejected to a random empty space adjacent to the creature. An anisydaemon can leave a shadow it is possessing as a move action that does not provoke attacks of opportunity. If it does so, it is ejected into a free space of its choice adjacent to the creature whose shadow it was possessing. When an anisydaemon is possessing a creature\u2019s shadow, that creature cannot benefit from morale bonuses of any kind. An anisydaemon can use its Stealth skill to hide while within a shadow."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sunlight Weakness",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "An anisydaemon exposed to natural sunlight is unable to use any of its psychic magic or spell-like abilities and cannot project its aura of worry. An anisydaemon possessing a creature\u2019s shadow does not count as being in direct sunlight, even if the creature whose shadow it\u2019s possessing is."
+            }
+        ]
     },
     "sources": [
         {

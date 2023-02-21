@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Abyss)<br/><b>Organization</b> solitary (unique)<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Destruction (Su)</b> Isph-Aun-Vuln\u2019s bite resolves as a primary touch attack. A creature bitten by the qlippoth lord must succeed at a DC 33 Fortitude save or take 1d6 points of Wisdom drain and 150 points of negative energy damage. If the creature successfully saves, it takes 1 point of Wisdom drain and 20d6 points of negative energy damage. If a creature is slain by this damage, its body is immediately consumed in unholy fire, leaving behind only its possessions. The only way to restore such a slain creature to life is via <i>true resurrection</i>, a carefully worded <i>wish</i> spell followed by <i>resurrection</i>, or <i>miracle</i>. This is a death effect. The save DC is Charisma-based. <br/><b>Destructive Commands (Ex)</b> When Isph-Aun-Vuln magically controls a creature via a charm or compulsion effect, she may issue commands to the creature that are self-destructive or against the target\u2019s nature. When such a command is issued, the magically controlled creature can resist the command with a successful Will save against the DC of the spell effect in question, but success at this save does not cause the effect to end and does not prevent Isph-Aun-Vuln from attempting to issue the same or a similar command on a subsequent round. <br/><b>Horrific Appearance (Su)</b> A creature that succumbs to Isph-Aun-Vuln\u2019s horrific appearance becomes convinced that it has already succumbed to the qlippoth lord\u2019s mental control and can take no action other than to approach. An affected creature gains <i>freedom of movement</i> and a fly speed of 60 feet (perfect maneuverability) that can be used only to approach Isph-Aun-Vuln. Once an affected creature is adjacent to Isph-Aun-Vuln, it becomes dazed as long as it remains adjacent to the qlippoth lord. This dazed affect ends as soon as the creature is no longer adjacent, at which point the compulsion to approach Isph-Aun-Vuln returns. If Isph-Aun-Vuln is not present, the creature is free to act normally, but as soon as Isph-Aun-Vuln reappears, the compulsion to approach returns as well. This is a mind-affecting compulsion and a curse effect. If not removed via magic, this curse ends only after the creature remains outside Isph-Aun-Vuln\u2019s presence for 24 consecutive hours. <br/><b>Insidious Possession (Ex)</b> When Isph-Aun-Vuln tries to possess an object or creature via a spell-like ability, she automatically attempts to dispel any <i>protection from evil</i> or similar spell effect on the creature via <i>greater dispel magic</i>. In addition, once a creature fails a saving throw against Isph-Aun-Vuln\u2019s possession spell-like abilities, it takes a \u20134 penalty on all future saving throws against mind-affecting effects created by any qlippoth. This lingering penalty is a curse effect. <br/><b>Reflect Compulsion (Ex)</b> Even though Isph-Aun-Vuln is immune to mind-affecting effects, when a creature targets her with a compulsion spell or spell-like ability and that effect fails to penetrate her spell resistance, that effect is reflected back upon the caster. Treat the compulsion spell or effect as if Isph-Aun-Vuln had been the caster, except that the save DC remains unchanged. <br/><b>Soul Shell (Su)</b> Isph-Aun-Vuln is constantly surrounded by a swirling vortex of soul fragments from the countless creatures that have perished while she was dominating or possessing them. This vortex is a force effect that grants Isph-Aun-Vuln a +12 armor bonus and serves to deflect incoming ranged touch attacks. All ranged touch attacks against this qlippoth lord have a 50% miss chance. The soul shell does not impede Isph-Aun-Vuln\u2019s ability to move through solid objects as an incorporeal creature. <br/><b>Toxic Storm (Su)</b> As a standard action once every 1d4 rounds, Isph-Aun-Vuln can create a blast of hurricane-strength wind around herself. This blast of wind blows either outward from the qlippoth lord to a radius of 120 feet or inward toward the qlippoth lord from a radius of 60 feet, as chosen by Isph-Aun-Vuln. The wind affects creatures as described for hurricane force winds on page 439 of the <i>Pathfinder RPG Core Rulebook</i>. The blast of wind lasts for 1 round. These winds are highly toxic, and all creatures exposed to the poisonous winds are affected by the following poison effect. The save DC for the poison effect is Constitution-based. <br/><i>Winds of Isph-Aun-Vuln</i>: Toxic storm\u2014contact; <i>save</i> Fort DC 38; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d6 Wis damage plus confused for 1 round; <i>cure</i> 2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Isph-Aun-Vuln appears as a human-sized mass of roiling tentacles arrayed around a large toothy maw. These tentacles slip in and out of reality, never fully existing as anything more than vapor, yet despite her immaterial form and relatively small size, she is among the most powerful of the qlippoth lords. Whereas others overwhelm their opponents through size and strength, Isph-Aun-Vuln opts for a more subversive and subtle approach, using possession and mental control of others to achieve her goal of slaughtering every creature with the capacity for sin\u2014in other words, all free-willed mortals. Those she has no such use for she devours, adorning herself with fragments of their souls as vaporous, incandescent trophies\u2014such will be the fate of all who remain should Isph-Aun-Vuln ever succeed at eliminating free will from the universe."
@@ -830,7 +820,73 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Abyss)",
+            "organization": "solitary (unique)",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Destruction",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Isph-Aun-Vuln\u2019s bite resolves as a primary touch attack. A creature bitten by the qlippoth lord must succeed at a DC 33 Fortitude save or take 1d6 points of Wisdom drain and 150 points of negative energy damage. If the creature successfully saves, it takes 1 point of Wisdom drain and 20d6 points of negative energy damage. If a creature is slain by this damage, its body is immediately consumed in unholy fire, leaving behind only its possessions. The only way to restore such a slain creature to life is via <i>true resurrection</i>, a carefully worded <i>wish</i> spell followed by <i>resurrection</i>, or <i>miracle</i>. This is a death effect. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Destructive Commands",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "When Isph-Aun-Vuln magically controls a creature via a charm or compulsion effect, she may issue commands to the creature that are self-destructive or against the target\u2019s nature. When such a command is issued, the magically controlled creature can resist the command with a successful Will save against the DC of the spell effect in question, but success at this save does not cause the effect to end and does not prevent Isph-Aun-Vuln from attempting to issue the same or a similar command on a subsequent round. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Horrific Appearance",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A creature that succumbs to Isph-Aun-Vuln\u2019s horrific appearance becomes convinced that it has already succumbed to the qlippoth lord\u2019s mental control and can take no action other than to approach. An affected creature gains <i>freedom of movement</i> and a fly speed of 60 feet (perfect maneuverability) that can be used only to approach Isph-Aun-Vuln. Once an affected creature is adjacent to Isph-Aun-Vuln, it becomes dazed as long as it remains adjacent to the qlippoth lord. This dazed affect ends as soon as the creature is no longer adjacent, at which point the compulsion to approach Isph-Aun-Vuln returns. If Isph-Aun-Vuln is not present, the creature is free to act normally, but as soon as Isph-Aun-Vuln reappears, the compulsion to approach returns as well. This is a mind-affecting compulsion and a curse effect. If not removed via magic, this curse ends only after the creature remains outside Isph-Aun-Vuln\u2019s presence for 24 consecutive hours. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Insidious Possession",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "When Isph-Aun-Vuln tries to possess an object or creature via a spell-like ability, she automatically attempts to dispel any <i>protection from evil</i> or similar spell effect on the creature via <i>greater dispel magic</i>. In addition, once a creature fails a saving throw against Isph-Aun-Vuln\u2019s possession spell-like abilities, it takes a \u20134 penalty on all future saving throws against mind-affecting effects created by any qlippoth. This lingering penalty is a curse effect. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Reflect Compulsion",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Even though Isph-Aun-Vuln is immune to mind-affecting effects, when a creature targets her with a compulsion spell or spell-like ability and that effect fails to penetrate her spell resistance, that effect is reflected back upon the caster. Treat the compulsion spell or effect as if Isph-Aun-Vuln had been the caster, except that the save DC remains unchanged. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Soul Shell",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Isph-Aun-Vuln is constantly surrounded by a swirling vortex of soul fragments from the countless creatures that have perished while she was dominating or possessing them. This vortex is a force effect that grants Isph-Aun-Vuln a +12 armor bonus and serves to deflect incoming ranged touch attacks. All ranged touch attacks against this qlippoth lord have a 50% miss chance. The soul shell does not impede Isph-Aun-Vuln\u2019s ability to move through solid objects as an incorporeal creature. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Toxic Storm",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action once every 1d4 rounds, Isph-Aun-Vuln can create a blast of hurricane-strength wind around herself. This blast of wind blows either outward from the qlippoth lord to a radius of 120 feet or inward toward the qlippoth lord from a radius of 60 feet, as chosen by Isph-Aun-Vuln. The wind affects creatures as described for hurricane force winds on page 439 of the <i>Pathfinder RPG Core Rulebook</i>. The blast of wind lasts for 1 round. These winds are highly toxic, and all creatures exposed to the poisonous winds are affected by the following poison effect. The save DC for the poison effect is Constitution-based. <br/><i>Winds of Isph-Aun-Vuln</i>: Toxic storm\u2014contact; <i>save</i> Fort DC 38; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d6 Wis damage plus confused for 1 round; <i>cure</i> 2 consecutive saves."
+            }
+        ]
     },
     "sources": [
         {

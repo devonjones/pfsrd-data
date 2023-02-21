@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any swamps <br/><b>Organization</b> solitary, pair, or herd (3\u20136) <br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison Breath (Ex)</b> A catoblepas\u2019s horrid, stinking breath is 60-foot cone of poison gas. Breath\u2014contact; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Con damage; <i>cure </i>3 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The catoblepas is an aggressive beast at the best of times, willing to knock down trees, fences, even small houses to eat whatever it finds interesting, be that meal plant or animal or human being. Though it prefers swamps, the catoblepas has been known to forage in plains and forests for short periods before returning to the buoyant support of water and mud. Few creatures linger near a catoblepas\u2019s feeding ground because of the monster\u2019s bad temper and poisonous breath, and only rot-loving predators such as oozes or exceptionally large otyughs have any interest in hunting them. <br/><br/>A catoblepas\u2019 primary motivation is hunting and exerting its dominance over lesser creatures in its territory. Easily detected by its foul odor, the creature tolerates the presence of wild animals, humanoid tribes, and even predators that it can bully as long as these things flee or act submissive when the poisonous brute lumbers into view. The catoblepas is known to engage in physical battles with other Large swamp creatures such as crocodiles or even froghemoths. Some humanoid tribes claim to know techniques to domesticate a catoblepas for use as a guard animal, but the monster\u2019s intractable nature and not insignificant intelligence almost certainly means magic is involved, as the creature has little need for alliances and can wipe out entire villages with its breath. Some have been known to use their breath underwater, creating a churning cloud of bubbles that kills fish in the area and starves out other creatures. <br/><br/>A catoblepas\u2019s sense of smell is blunted by its own ungodly stench, and it can\u2019t easily recognize rival odors such as skunk musk (though this provides the beast no immunity to odor-based effects from other creatures). <br/><br/>A catoblepas is 15 feet long and weighs 2,200 pounds."
@@ -424,7 +414,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any swamps",
+            "organization": "solitary, pair, or herd (3\u20136)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison Breath",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A catoblepas\u2019s horrid, stinking breath is 60-foot cone of poison gas. Breath\u2014contact; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Con damage; <i>cure </i>3 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison Breath",
+                    "affliction_type": "Poison Breath; A catoblepas\u2019s horrid, stinking breath is 60-foot cone of poison gas. Breath\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 23",
+                        "save_type": "Fort",
+                        "dc": 23
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d6 Con damage",
+                    "cure": "3 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

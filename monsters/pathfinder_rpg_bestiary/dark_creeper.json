@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary, pair, gang (3\u20136), or clan (20\u201380 plus 1 dark stalker per 20 dark creepers)<br/><b>Treasure</b> standard (dagger, black poison [3 doses], other gear)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Death Throes (Su)</b> When a dark creeper is slain, its body combusts in a flash of bright white light, leaving its gear in a heap on the ground. All creatures within a 10-foot burst must make a DC 13 Fortitude save or be blinded for 1d6 rounds. Other dark creepers within 10 feet are automatically blinded for at least 1 round, due to their light blindness. The save is Constitution-based.<br/><br/><b>Poison Use (Ex)</b> Dark creepers are skilled in the use of poison and never risk accidentally poisoning themselves. Dark creepers favor a foul-smelling black paste distilled from certain deep-underground fungi known as black smear\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save.<br/><br/><b>Rag Armor (Ex)</b> A dark creeper\u2019s multiple layers of filthy rags function as leather armor when worn by one of their kind.<br/><br/><b>See in Darkness (Su) </b>A dark creeper can see perfectly in darkness of any kind, including that created by <i>deeper darkness</i>."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Dark creepers lurk in the black places deep below the surface of the world, venturing forth at night or into neighboring societies when the urge to steal and cause mayhem grows too great to resist. Endless layers of filthy, moldering black cloth shroud these small creatures, leading some to believe that the creature inside is smaller still. Usually encountered in groups, dark creepers flee from bright light, but are quite brave in the dark.<br/><br/>Dark creepers stand just under 4 feet tall and weigh 80 pounds. Their flesh is pale and moist, and their eyes are milky white. Dark creepers exude a foul stench of sweat and spoiled food, owing primarily to the fact that they never take off their clothing\u2014instead piling on new layers when the outermost one grows too ragged.<br/><br/>For all the mayhem and trouble a pack of dark creepers can cause, this is nothing compared to the dangers a tribe led by the taller, even more sinister dark stalkers represents. Dark creepers treat their tall, lithe masters almost like gods, presenting them with offerings and obeying their every whim. Invariably, several dark stalkers serve as leaders to dark creeper tribes, with all of the tribe\u2019s heavy work and labor falling on the diminutive shoulders of the creepers, freeing the dark stalkers for their own decadent pleasures. Yet the dark creepers themselves see no inherent imbalance in this arrangement\u2014to a dark creeper, a life in the servitude of a dark stalker is a life fulfilled."
@@ -339,7 +329,65 @@
                     "name": "rag armor"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground",
+            "organization": "solitary, pair, gang (3\u20136), or clan (20\u201380 plus 1 dark stalker per 20 dark creepers)",
+            "treasure": "standard (dagger, black poison [3 doses], other gear)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Throes",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "When a dark creeper is slain, its body combusts in a flash of bright white light, leaving its gear in a heap on the ground. All creatures within a 10-foot burst must make a DC 13 Fortitude save or be blinded for 1d6 rounds. Other dark creepers within 10 feet are automatically blinded for at least 1 round, due to their light blindness. The save is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison Use",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Dark creepers are skilled in the use of poison and never risk accidentally poisoning themselves. Dark creepers favor a foul-smelling black paste distilled from certain deep-underground fungi known as black smear\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison Use",
+                    "affliction_type": "Poison Use; Dark creepers are skilled in the use of poison and never risk accidentally poisoning themselves. Dark creepers favor a foul-smelling black paste distilled from certain deep-underground fungi known as black smear\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Str",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Rag Armor",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A dark creeper\u2019s multiple layers of filthy rags function as leather armor when worn by one of their kind."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "See in Darkness",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A dark creeper can see perfectly in darkness of any kind, including that created by <i>deeper darkness</i>."
+            }
+        ]
     },
     "sources": [
         {

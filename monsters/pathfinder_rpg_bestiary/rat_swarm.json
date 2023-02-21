@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pack (2\u20135 swarms), or infestation (6\u201312 swarms)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disease (Ex)</b> Filth fever: Swarm\u2014injury; <i>save </i>Fort DC 12; <i>onset </i>1d3 days; <i>frequency </i>1/day; <i>effect </i>1d3 Dex damage and 1d3 Con damage; cure 2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A rat swarm typically consists of a biting, roiling mass of hundreds of disease-ridden rats driven to uncharacteristic heights of aggression by fantastic and overwhelming hunger. In such numbers, they become voracious hunters, capable of killing a full-grown human with hundreds of bites. Rat swarms are often found in the sewers of large human settlements.<br/><br/>Rat swarms surround and attack any warm-blooded prey in their path."
@@ -295,7 +285,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pack (2\u20135 swarms), or infestation (6\u201312 swarms)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Filth fever: Swarm\u2014injury; <i>save </i>Fort DC 12; <i>onset </i>1d3 days; <i>frequency </i>1/day; <i>effect </i>1d3 Dex damage and 1d3 Con damage; cure 2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Filth fever",
+                    "affliction_type": "Disease; Swarm\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "onset": "1d3 days",
+                    "frequency": "1/day",
+                    "effect": "1d3 Dex damage and 1d3 Con damage; cure 2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

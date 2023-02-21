@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate marshes or plains<br/><b>Organization</b> solitary, pair, or ning (3\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Paralyzing Mucus (Ex)</b> A lich newt secretes poison from its skin, and any creature that successfully hits it with a natural weapon or unarmed strike must immediately attempt a save against its poison.<br/><br/><b>Poison (Ex)</b> Slam\u2014injury or contact; <i>save </i>Fort DC 11; <i>frequency </i>1/round for 2 rounds; <i>effect </i>1d2 Str damage; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Named for their distinctive black-and-white coloration and their opportunistic scavenging, these large amphibians live all along the polluted Inkwater River. A lich newt\u2019s defenses include bony ridges growing along either side of their footlong bodies and a poisonous mucus that causes numbness and muscle spasms. Some humanoid tribes, especially the orcs of the Northern Fangwood Forest, trap these amphibians and refine their poison into weapon blanches and drugs. The desperate even eat lich newts; their poison breaks down if their meat is cooked in vinegar as part of a tough, gamy, but relatively sustaining stew.<br/><br/>After battles waged by warring armies or mercenary bands, lich newts often swarm the rotting corpses, feasting on the softening flesh and hunting the various insects attracted by the carrion. As a result, many Nirmathi believe the newts to be bad omens, a legacy of Tar-Baphon, or otherwise associated with necromancy. Lich newt familiars are popular with wizards and witches who care more about the creatures\u2019 reputation than their true nature as bottom-feeders and scavengers. An arcane caster who selects a lich newt as his familiar gains a +2 bonus on Fortitude saves against disease and poison."
@@ -264,7 +254,49 @@
                     "name": "amphibious"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate marshes or plains",
+            "organization": "solitary, pair, or ning (3\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Paralyzing Mucus",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A lich newt secretes poison from its skin, and any creature that successfully hits it with a natural weapon or unarmed strike must immediately attempt a save against its poison."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Slam\u2014injury or contact; <i>save </i>Fort DC 11; <i>frequency </i>1/round for 2 rounds; <i>effect </i>1d2 Str damage; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Slam\u2014injury or contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 11",
+                        "save_type": "Fort",
+                        "dc": 11
+                    },
+                    "frequency": "1/round for 2 rounds",
+                    "effect": "1d2 Str damage",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

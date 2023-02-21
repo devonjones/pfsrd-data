@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Abyss) <br/><b>Organization</b> solitary or platoon (1 gallu, 1\u20133 mariliths, and 3\u201312 vrocks) <br/><b>Treasure</b> standard (<i>+1 falchion</i>, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Armor Plating (Su)</b> The armor plates covering much of a gallu\u2019s body grant it a +8 armor bonus. They also function as armor spikes during grapples, but cannot be used as offhand weapons. In addition, these armor plates can possess one additional armor special ability chosen from the following options: <i>acid resistance 20</i>, <i>cold resistance 20</i>, <i>fire resistance 20</i>, <i>ghost touch</i>, <i>moderate fortification</i>, or <i>sonic resistance 20</i>. A gallu demon can switch the active armor special quality once per hour as a swift action\u2014as a general rule, the gallu demon keeps the armor plating set to moderate fortification. These armor plates do not encumber the gallu or impose armor check penalties, maximum Dex bonuses, or arcane spell failure chances. They cannot be removed, sundered, or destroyed while the gallu lives, and they rust away into nonmagical fragments of iron upon the gallu\u2019s death. <br/><br/><b>Aura of Havoc (Su)</b> A gallu\u2019s presence wreaks havoc, infusing battlefields with elements of chaos and entropy that disrupt careful coordination and tactical plotting by manipulating fate and chance. This aura extends to a 30-foot radius around the gallu. The aid another action can never grant bonuses in this area, nor does flanking grant bonuses to hit in the affected area (although flanked foes remain susceptible to sneak attack damage). A creature summoned into this area by any creature other than a demon must succeed at a DC 26 Will save to avoid being confused for 1d4 rounds. Paladins and creatures with the lawful subtype must make a DC 26 Will save each round they begin their turn in this aura to avoid being nauseated for 1 round. Demons ignore the effects of a gallu\u2019s aura of havoc. The save DCs are Charisma-based. <br/><br/><b>Rain of Blood (Su)</b> As a standard action once per minute, a gallu can command the wounds of all creatures within 30 feet to erupt into a gory deluge of blood; any wounded creature in the area of effect immediately takes 3d6 points of damage from the rain of blood and must succeed at a DC 31 Fortitude saving throw. Failure indicates that the damage becomes bleed damage and the affected creature becomes staggered from the pain as long as the bleed damage continues. Creatures that are immune to bleed damage are immune to this ability\u2019s effects. The save DCs are Constitution-based. <br/><br/><b>Wounding Blood (Su)</b> The spikes that hold a gallu\u2019s armor plates in place extend as far into the demon\u2019s body as they do outside of it, causing rivulets of blood to constantly run from the creature\u2019s flesh. This continual bleeding does not inconvenience or harm the gallu; instead, it grants the wounding special ability to all manufactured weapons wielded by the gallu. The dripping blood does not affect the gallu\u2019s natural attacks."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "On the endless battlefields of the Abyss, the demon lords\u2019 vast armies clash and tear at each other in horrific displays of warfare and bloodshed. These conflicts often arise from border disputes between demonic realms, or when one demon lord finds an excuse to attack another. But many of these immense wars have no good reason at all, for gallus eagerly foment war for war\u2019s sake; they are master engineers of martial strife. These hateful, destructive demons arise from the souls of warmongers and war profiteers\u2014nefarious leaders, corrupt priests, or subversive merchants who used their power to perpetuate existing wars or even to trigger new ones, all for the express purpose of personal gain or sadistic pleasure. <br/><br/>Known to some as warmonger demons, the gallus are not as enormous as many of the other powerful demons; despite their near-human size, however, they are among the deadliest of demonkind. Standing 8 feet tall and weighing 450 pounds, these creatures have wolf like (but hairless) horned heads, batlike wings, and pale flesh. Their feet end in hooves, and their tails resemble those of lions. Gallus can assume humanoid shape as well, and typically do so when interacting with mortals, allowing them to more easily sow seeds of war among those they interact with. <br/><br/>These demons are relatively difficult to summon\u2014 <i>gate </i>spells can conjure them from the Abyss, but few other mortal spells can call them forth. As a result, most gallus encountered outside the Abyss have traveled there via portals or similar methods. Gallus are innately crafty creatures; when coming to a new world, they resist their natural urges to destroy in favor of infiltration. Extraordinarily patient, they can spend decades or more in disguise as they subtly build their inf luence and acquire positions of power; they then use those positions to incite government officials and other powerful individuals to wage war on their neighbors. Only when the hostilities have completely devastated their host, leaving it in smoking ruins, do gallus shed their human flesh and appear in their true form to gloat and torment the conflict\u2019s few survivors before moving on to seek fresh victims. <br/><br/>In the Worldwound, gallus serve an additional role as commanders in the numerous demonic armies. Many control multiple divisions, each led by a marilith general, and report in turn to one of the Worldwound\u2019s leaders, like Khorramzadeh, Areelu, or Aponavicius. But not all of the Worldwound\u2019s gallus command armies. Those who serve Baphomet primarily utilize their deceptive natures to infiltrate various Mendevian mercenary orders, Mammoth Lord barbarian tribes, settlements on the fringes of more civilized lands, and other factions arrayed against the Worldwound. From within those groups, they serve as advisors, urging those they\u2019ve infiltrated into launching ill-timed or poorly planned attacks on their demonic foes. These gallus occasionally feed their humanoid \u201callies\u201d legitimate intelligence about demonic fortifications or troop movements, knowing that a little truth can go a long way in encouraging mortals to act upon their more violent urges."
@@ -809,7 +799,49 @@
                     "name": "change shape"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Abyss)",
+            "organization": "solitary or platoon (1 gallu, 1\u20133 mariliths, and 3\u201312 vrocks)",
+            "treasure": "standard (<i>+1 falchion</i>, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Armor Plating",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "The armor plates covering much of a gallu\u2019s body grant it a +8 armor bonus. They also function as armor spikes during grapples, but cannot be used as offhand weapons. In addition, these armor plates can possess one additional armor special ability chosen from the following options: <i>acid resistance 20</i>, <i>cold resistance 20</i>, <i>fire resistance 20</i>, <i>ghost touch</i>, <i>moderate fortification</i>, or <i>sonic resistance 20</i>. A gallu demon can switch the active armor special quality once per hour as a swift action\u2014as a general rule, the gallu demon keeps the armor plating set to moderate fortification. These armor plates do not encumber the gallu or impose armor check penalties, maximum Dex bonuses, or arcane spell failure chances. They cannot be removed, sundered, or destroyed while the gallu lives, and they rust away into nonmagical fragments of iron upon the gallu\u2019s death. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Aura of Havoc",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A gallu\u2019s presence wreaks havoc, infusing battlefields with elements of chaos and entropy that disrupt careful coordination and tactical plotting by manipulating fate and chance. This aura extends to a 30-foot radius around the gallu. The aid another action can never grant bonuses in this area, nor does flanking grant bonuses to hit in the affected area (although flanked foes remain susceptible to sneak attack damage). A creature summoned into this area by any creature other than a demon must succeed at a DC 26 Will save to avoid being confused for 1d4 rounds. Paladins and creatures with the lawful subtype must make a DC 26 Will save each round they begin their turn in this aura to avoid being nauseated for 1 round. Demons ignore the effects of a gallu\u2019s aura of havoc. The save DCs are Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Rain of Blood",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action once per minute, a gallu can command the wounds of all creatures within 30 feet to erupt into a gory deluge of blood; any wounded creature in the area of effect immediately takes 3d6 points of damage from the rain of blood and must succeed at a DC 31 Fortitude saving throw. Failure indicates that the damage becomes bleed damage and the affected creature becomes staggered from the pain as long as the bleed damage continues. Creatures that are immune to bleed damage are immune to this ability\u2019s effects. The save DCs are Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Wounding Blood",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "The spikes that hold a gallu\u2019s armor plates in place extend as far into the demon\u2019s body as they do outside of it, causing rivulets of blood to constantly run from the creature\u2019s flesh. This continual bleeding does not inconvenience or harm the gallu; instead, it grants the wounding special ability to all manufactured weapons wielded by the gallu. The dripping blood does not affect the gallu\u2019s natural attacks."
+            }
+        ]
     },
     "sources": [
         {

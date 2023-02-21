@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Abyss) <br/><b>Organization</b> solitary, pair, or swarm (3\u201310) <br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Drone (Su)</b> The sound of a derakni in flight is a mesmerizing, unsettling drone that causes confusion in all non-demons who hear the sound. A derakni must fly at least 10 feet to activate this ability (which it can do as a free action as part of its move action). Any non-demon creature that begins its turn within 30 feet of a derakni that moved in this manner on its previous turn must succeed at a DC 18 Will save or become confused for 1d4 rounds. A creature that makes this save is immune to the drone of that derakni for 24 hours. Demons are immune to this sonic, mind-affecting effect. The save DC is Charisma-based. <br/><br/><b>Poison (Ex)</b> Bite or sting\u2014injury; <i>save </i>Fort DC 21; <i>frequency </i>1/ round for 6 rounds; <i>effect </i>1d4 Con; <i>cure </i>2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Deraknis, also known as locust demons, are among Deskari\u2019s favorite minions, both in the Abyss and in the Worldwound. Great flights of these creatures plague the skies above the Wounded Lands in particular, but they can be encountered anywhere in the Worldwound. These creatures\u2019 leering humanoid visages are armored with chitinous plates, and their front feet end in small claws that look strangely like human hands. A derakni can use these hands to manipulate objects or wield items, but generally eschews using weapons or shields entirely. <br/><br/>Often, deraknis are encountered in the vicinity of hives of vescavors (<i>Pathfinder Campaign Setting: Lost Kingdoms</i> 50). Indeed, vescavor swarms eagerly serve deraknis as minions, and, save for truly unusual circumstances, a derakni never needs to worry about taking damage from or being distracted by a vescavor swarm that shares its space. Deraknis typically aid in the devastation of large regions, often in preparation for the advance of larger demonic armies, and the Worldwound is one of their crowning glories. <br/><br/>A derakni is 14 feet long and weighs 1,200 pounds. These wretched demons arise from the souls of those who, in life, purposefully engineered disasters or aided in their development\u2014particularly souls whose disasters resulted in mass famines or droughts."
@@ -570,7 +560,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Abyss)",
+            "organization": "solitary, pair, or swarm (3\u201310)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Drone",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "The sound of a derakni in flight is a mesmerizing, unsettling drone that causes confusion in all non-demons who hear the sound. A derakni must fly at least 10 feet to activate this ability (which it can do as a free action as part of its move action). Any non-demon creature that begins its turn within 30 feet of a derakni that moved in this manner on its previous turn must succeed at a DC 18 Will save or become confused for 1d4 rounds. A creature that makes this save is immune to the drone of that derakni for 24 hours. Demons are immune to this sonic, mind-affecting effect. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite or sting\u2014injury; <i>save </i>Fort DC 21; <i>frequency </i>1/ round for 6 rounds; <i>effect </i>1d4 Con; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite or sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 21",
+                        "save_type": "Fort",
+                        "dc": 21
+                    },
+                    "frequency": "1/ round for 6 rounds",
+                    "effect": "1d4 Con",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> underground<br/><b>Organization</b> solitary or cluster (2\u20138)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Spores\u2014inhaled; <i>save </i>Fort DC 16; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Str damage; <i>cure </i>2 saves. The save DC is Constitution-based.<br/><br/><b>Spores (Ex)</b> Once per round as a free action, an ascomoid can release a jet of deadly spores to a range of 30 feet. Upon impacting a solid surface, such as a wall or creature, the jet billows out into a cloud of spores that fills a 10-foot-radius spread. This cloud lasts for 1 round before dispersing. Any creature in the cloud must make a DC 16 Fortitude save or become nauseated as long as it remains in the cloud. Any creature that fails to save against this nausea is also exposed to the ascomoid\u2019s poison (see above). The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Oversized fungi, ascomoids are frequently mistaken for giant puffballs until they begin to move, rolling toward any living prey that they sense. Once they have crushed the life out of a creature, they quickly move on, leaving spores behind in their victim\u2019s body to grow new ascomoids. Ascomoids can grow to a width of 10 feet, but they rarely weigh more than 400 pounds.<br/><br/>While ascomoids require no light to grow, they do require a moist environment. They do not keep traditional lairs, but often wander the same areas over and over, littering these routes with the bones of past victims.<br/><br/>Although they are typically solitary creatures, ascomoids dwelling in areas of ample moisture with generous sources of food\u2014or frequent unwitting passersby\u2014sometimes form deadly clusters. Such colonies of these giant fungi often lurk in large caverns among other pallid vegetation. Given ascomoids\u2019 ability to detect vibrations, the slightest quake or potential footfall sets them rolling, turning their cavernous lairs into churning meat grinders. Bounding about violently, groups of ascomoids sometimes take hours to settle back down, unable to distinguish between the movements of prey and the tumbling of their own kind. In some cases, ascomoids have been known to lair at the top of steep rises, crushing climbers as they roll in terrible fungal avalanches.<br/><br/>Those crushed by an ascomoid or who fall victim to an ascomoid\u2019s spores face a revolting end, their bodies becoming hosts to quick-growing colonies of rampant fungi. Immature ascomoid mold sprouts quickly, typically appearing within 24 hours. After 48 hours, such victims become so overgrown with this furry, brown-green mold that they can no longer be restored to life by <i>raise dead</i>, as their bodies are too vitally pervaded and thoroughly consumed by the swiftly spreading mold. Within a month, a new ascomoid emerges from the foul mess."
@@ -253,7 +243,49 @@
                     "notation": "B"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "underground",
+            "organization": "solitary or cluster (2\u20138)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Spores\u2014inhaled; <i>save </i>Fort DC 16; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Str damage; <i>cure </i>2 saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Spores\u2014inhaled",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 16",
+                        "save_type": "Fort",
+                        "dc": 16
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Str damage",
+                    "cure": "2 saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spores",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per round as a free action, an ascomoid can release a jet of deadly spores to a range of 30 feet. Upon impacting a solid surface, such as a wall or creature, the jet billows out into a cloud of spores that fills a 10-foot-radius spread. This cloud lasts for 1 round before dispersing. Any creature in the cloud must make a DC 16 Fortitude save or become nauseated as long as it remains in the cloud. Any creature that fails to save against this nausea is also exposed to the ascomoid\u2019s poison (see above). The save DC is Constitution-based."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate mountain valleys<br/><b>Organization</b> solitary or cult (2\u20136 plus 2\u20138 spiders of various sizes)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Wisdom damage; <i>cure </i>3 saves.<br/><br/><b>Spider Empathy (Ex)</b> This ability functions as a druid\u2019s wild empathy, save that it works only on spiders. A jorogumo gains a racial bonus on this check equal to her Hit Dice (normally +14). Spiders are normally mindless, but this empathic communication imparts upon them a modicum of implanted intelligence, allowing the jorogumo to train them and use them as guardians (though it does not grant them skills or feats).<br/><br/><b>Spider Legs (Ex)</b> A jorogumo\u2019s spider legs can emerge or retract as a free action. When a jorogumo\u2019s spider legs are present, she gains a +8 circumstance bonus on Climb checks and gains Deflect Arrows as a bonus feat.<br/><br/><b>Swift Shapechanger (Ex)</b> A jorogumo can assume spider or human form as a swift action."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Jorogumos are seductive schemers who secret themselves away in isolated mountain valleys where they lure travelers, especially men, to their dooms. Exclusively female, jorogumos must mate with humanoids to produce fertile eggs. After copulation, a jorogumo paralyzes her partner by poisoning him into a coma. She lays a single egg within the father\u2019s body, then cocoons the corpse and hides the victim. Periodic visits to re-poison the victim ensure his coma lasts for the 2d4 days required for the young jorogumo to hatch and feed. Jorogumos are enthusiastic enemies of tengus and attack them on sight\u2014they never take tengus as \u201cmates.\u201d"
@@ -577,7 +567,65 @@
                     "name": "swift shapechanger."
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate mountain valleys",
+            "organization": "solitary or cult (2\u20136 plus 2\u20138 spiders of various sizes)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 23; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d6 Wisdom damage; <i>cure </i>3 saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 23",
+                        "save_type": "Fort",
+                        "dc": 23
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d6 Wisdom damage",
+                    "cure": "3 saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spider Empathy",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "This ability functions as a druid\u2019s wild empathy, save that it works only on spiders. A jorogumo gains a racial bonus on this check equal to her Hit Dice (normally +14). Spiders are normally mindless, but this empathic communication imparts upon them a modicum of implanted intelligence, allowing the jorogumo to train them and use them as guardians (though it does not grant them skills or feats)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spider Legs",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A jorogumo\u2019s spider legs can emerge or retract as a free action. When a jorogumo\u2019s spider legs are present, she gains a +8 circumstance bonus on Climb checks and gains Deflect Arrows as a bonus feat."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Swift Shapechanger",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A jorogumo can assume spider or human form as a swift action."
+            }
+        ]
     },
     "sources": [
         {

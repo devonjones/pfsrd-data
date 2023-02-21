@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests<br/><b>Organization</b> solitary, pair, fury (3\u20136 swarms), maelstrom (7\u201312 swarms)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Swarm\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1 Dexterity damage; <i>cure </i>1 save. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A wasp swarm is a flying mass of thousands of carnivorous wasps. In such large numbers, they become voracious hunters, capable of taking down large creatures with their venom-filled stings. While a wasp swarm is capable of inflicting hundreds of stings, its true danger arises from its insatiable appetite for meat.<br/><br/>Wasp swarms surround and attack any living prey in their paths, and are swift to seek out new prey once their anger is aroused. An enraged wasp swarm often loses track of its hive or the original source of its anger, and presented with a constant series of new targets to swarm and sting, a swarm can continue its rampage nonstop until it is destroyed or dispersed."
@@ -260,7 +250,41 @@
                     "name": "vermin traits"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests",
+            "organization": "solitary, pair, fury (3\u20136 swarms), maelstrom (7\u201312 swarms)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Swarm\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1 Dexterity damage; <i>cure </i>1 save. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Swarm\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1 Dexterity damage",
+                    "cure": "1 save. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

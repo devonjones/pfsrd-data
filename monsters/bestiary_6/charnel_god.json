@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Divine Antithesis (Ex)</b> A charnel god is immune to any divine spell that allows spell resistance. Additionally, creatures within 60 feet of a charnel god gain spell resistance against divine spells equal to 11 + the charnel god\u2019s CR (34 for most charnel gods). Creatures cannot voluntarily lower this spell resistance. <br/><br/><b>Divine Sense (Su)</b> A charnel god can identify servants of the gods on sight, can immediately determine whether a creature it sees is capable of casting divine spells, and knows the highest level of spell that creature is capable of casting. It gains a +8 insight bonus on all Perception and Sense Motive checks attempted against such targets. <br/><br/><b>Divinity Lost (Su)</b> A charnel god gains, as spell-like abilities, the domain spells of two domains granted by the deity from which it formed. It can use domain spells of 5th level or lower as at-will spell-like abilities, spells of 6th to 8th level three times per day as spell-like abilities, and 9th level spells once per day as spell-like abilities. The caster level for these abilities equals the charnel god\u2019s CR (23 for most charnel gods), and the save DCs are Charisma-based. The charnel god does not gain any of these domains\u2019 granted powers. The charnel god presented above has the Death and Chaos domains, and these spell-like abilities are included in its stat block. <br/><br/><b>Favored Weapon (Su)</b> As a free action, a charnel god can conjure a weapon from the fragments of its former divine power. This weapon is always a <i>+5 unholy weapon</i> of the type favored by the deceased deity. The weapon functions only for the charnel god and vanishes if it leaves the charnel god\u2019s possession. Melee weapons created in this way are treated as if they were made of adamantine for the purposes of determining their resistance to damage and their ability to bypass hardness. Ranged weapons created in this way do not provoke attacks of opportunity when the charnel god uses them. <br/><br/><b>Hideous Will (Ex)</b> A charnel god is suffused with profane divine energy. It gains a profane bonus to its AC and Fortitude saving throws equal to its Charisma modifier. Additionally, it uses its Charisma modifier in place of its Constitution modifier when calculating its hit points. <br/><br/><b>Severance (Su)</b> As a swift action that doesn\u2019t provoke attacks of opportunity, a charnel god can attempt to sever the connection between a creature and its divine patron. The target must be within 60 feet of the charnel god, and it must attempt a DC 35 Will save to avoid being cut off from the divine. If successful, the target cannot be targeted by this ability again for 24 hours. If the target fails, it becomes stunned for 1 round and then permanently staggered thereafter. This ability has no effect on characters who don\u2019t have levels in any class that grants divine spellcasting, but it does affect characters who have minimal divine spellcasting abilities, such as paladins or rangers. This is a curse effect. <i>Atonement</i> can remove this effect, but only if the caster succeeds at a DC 35 caster level check. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The gods are no less strange and terrifying in death than in life. Though the death of any god is staggeringly rare, some do meet violent ends, often at the hands of other deities. When this happens, the deity\u2019s death casts fragments of the god\u2019s power out among the planes. These fragments are sometimes drawn to places where the god was worshiped in its life, where they can produce miraculous effects, such as striking the god\u2019s devout followers deaf or blind, or granting visions of the god\u2019s demise. Sometimes these shards of power go unnoticed and boil away into nothing over time. But sometimes, something far more terrible occurs\u2014such fragments can find a new home within a graven image of the former deity, forming a new creature: a charnel god. <br/><br/>Regardless of the deceased god\u2019s alignment or nature, all charnel gods are beings of sublime wickedness fueled by bitter anger. The memory of being killed and cast into the void leaves charnel gods utterly and cruelly insane. Further, they feel the pain of being incomplete, of being only a small portion of what they once were, and this torments them. Charnel gods have some memories of their time as gods, but any recollections are fragmented and muddled. A charnel god might be able to share a hidden secret it knew in its former life, but it could just as easily confuse the details or call forth a false memory, making it an unreliable source of wisdom. Charnel gods resent such questions anyway, as remembering their former lives only reminds them of their pitiful current state. <br/><br/>Those who believe encountering a charnel god will be a chance to reconnect with a deceased divine patron are in for a rude awakening. Without exception, charnel gods detest any who once worshiped them. Unable to come to terms with the fact that they were defeated, they blame the incompetence or faithlessness of their former worshipers for their deaths. Charnel gods also hate the servants of other deities, though with less fervor than they feel toward their own former followers. To a charnel god, all worshipers are false and deserve to be punished for their lack of loyalty and devotion. <br/><br/>At the same time, charnel gods long for mortals\u2019 worship. Truly, that is a charnel god\u2019s greatest wish\u2014to once again be venerated, offered sacrifices, and loved and feared above all else in the world. Charnel gods cannot grant spells like a true deity, and so must rely on their own terrible powers and fearsome demeanor to cow and bully others into worshiping them. Their cults rarely last long, for the charnel god is an easily angered and fickle deity. <br/><br/>The example charnel god presented here was once a demon lord of the hunt who was slain by a vengeful goddess. When creating a charnel god of a different deity, GMs should replace some or all of the charnel god\u2019s feats and skills to better support that deity\u2019s favored weapon and fighting style. Likewise, the charnel god\u2019s melee attacks should be altered as needed, but the end result should approximate the average damage a CR 23 creature might deal in a round. Note that charnel gods like the one detailed above can attack with their natural attacks as secondary attacks when attacking with ranged weapons. <br/><br/>A charnel god stands 15 feet tall and weighs 12 tons."
@@ -764,7 +754,65 @@
                     "name": "hideous will"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Divine Antithesis",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A charnel god is immune to any divine spell that allows spell resistance. Additionally, creatures within 60 feet of a charnel god gain spell resistance against divine spells equal to 11 + the charnel god\u2019s CR (34 for most charnel gods). Creatures cannot voluntarily lower this spell resistance. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Divine Sense",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A charnel god can identify servants of the gods on sight, can immediately determine whether a creature it sees is capable of casting divine spells, and knows the highest level of spell that creature is capable of casting. It gains a +8 insight bonus on all Perception and Sense Motive checks attempted against such targets. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Divinity Lost",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A charnel god gains, as spell-like abilities, the domain spells of two domains granted by the deity from which it formed. It can use domain spells of 5th level or lower as at-will spell-like abilities, spells of 6th to 8th level three times per day as spell-like abilities, and 9th level spells once per day as spell-like abilities. The caster level for these abilities equals the charnel god\u2019s CR (23 for most charnel gods), and the save DCs are Charisma-based. The charnel god does not gain any of these domains\u2019 granted powers. The charnel god presented above has the Death and Chaos domains, and these spell-like abilities are included in its stat block. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Favored Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a free action, a charnel god can conjure a weapon from the fragments of its former divine power. This weapon is always a <i>+5 unholy weapon</i> of the type favored by the deceased deity. The weapon functions only for the charnel god and vanishes if it leaves the charnel god\u2019s possession. Melee weapons created in this way are treated as if they were made of adamantine for the purposes of determining their resistance to damage and their ability to bypass hardness. Ranged weapons created in this way do not provoke attacks of opportunity when the charnel god uses them. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hideous Will",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A charnel god is suffused with profane divine energy. It gains a profane bonus to its AC and Fortitude saving throws equal to its Charisma modifier. Additionally, it uses its Charisma modifier in place of its Constitution modifier when calculating its hit points. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Severance",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a swift action that doesn\u2019t provoke attacks of opportunity, a charnel god can attempt to sever the connection between a creature and its divine patron. The target must be within 60 feet of the charnel god, and it must attempt a DC 35 Will save to avoid being cut off from the divine. If successful, the target cannot be targeted by this ability again for 24 hours. If the target fails, it becomes stunned for 1 round and then permanently staggered thereafter. This ability has no effect on characters who don\u2019t have levels in any class that grants divine spellcasting, but it does affect characters who have minimal divine spellcasting abilities, such as paladins or rangers. This is a curse effect. <i>Atonement</i> can remove this effect, but only if the caster succeeds at a DC 35 caster level check. The save DC is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

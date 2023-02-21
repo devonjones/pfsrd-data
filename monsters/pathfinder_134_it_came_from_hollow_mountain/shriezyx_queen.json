@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or hive (1 plus 3-12 <a href=\"MonsterDisplay.aspx?ItemName=Shriezyx\" style=\"text-decoration:underline\">shriezyx</a>)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Hive Influence (Su)</b> All shriezyx within 30 feet of a shriezyx queen lose their fear of fire weakness while they remain in the area of her aura and for 1 minute after leaving it or until the shriezyx no longer has line of sight to the shriezyx queen, whichever comes first. The shriezyx queen\u2019s mind-affecting spell-like abilities function normally against shriezyx within her hive influence aura. <br/><br/><b>Incendiary Webs (Su)</b> A shriezyx queen\u2019s web is coated with a supernatural oil that catches fire with the slightest spark. Any creature struck by a shriezyx queen\u2019s web gains vulnerability to fire for 1 minute. If a creature struck by the web is carrying a torch or otherwise using fire, the creature must succeed at a DC 18 Reflex saving throw or <a href=\"Rules.aspx?Name=Catching%20on%20Fire&Category=Heat%20Dangers\" style=\"text-decoration:underline\">catch on fire</a>. As long as a creature has vulnerability to fire from this effect, each time it casts a spell with the fire descriptor or takes fire damage, it must succeed at a DC 18 Reflex saving throw or catch on fire. This incendiary oil dries out quickly\u2014a web can impart this vulnerability to fire only on the round it is spun. Thereafter, the web remains sticky but does not have this incendiary effect. The save DC is Strength-based. <br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Fort DC 19; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d3 Str; <i>cure</i> 2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "When Runelord Alaznist first learned the art of fleshwarping from the qlippoth lord Yamasoth, she and her assistants created myriad abominations that have survived into the modern day. Among these wretched creations are the spider-like <a href=\"MonsterDisplay.aspx?ItemName=Shiezyx\" style=\"text-decoration:underline\">shriezyx</a>, which remain a constant threat to explorers venturing into the heart of Hollow Mountain, the ruins of Xin-Bakrakhan at the mountain\u2019s base, and the Irespan in the nearby city of Magnimar. While shriezyx made excellent soldiers and guardians, they made poor servants, in part because of their unnatural fear of fire (a particular problem for Alaznist\u2019s armies and devotees, who relied heavily on evocation magic). The same immunity to mental control that defended them against enchantments from the rival realm of Eurythnia also made them impossible to magically control by their own general. To solve this problem, Alaznist\u2019s skilled fleshwarpers created a superior version of the shriezyx\u2014a queen that could serve as commander to lesser shriezyx and ensure complete loyalty among the verminous minions.<br/><br/> A typical shriezyx queen is roughly 8 feet in length and weighs as much as 1,000 pounds."
@@ -478,7 +468,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or hive (1 plus 3-12 <a href=\"MonsterDisplay.aspx?ItemName=Shriezyx\" style=\"text-decoration:underline\">shriezyx</a>)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hive Influence",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "All shriezyx within 30 feet of a shriezyx queen lose their fear of fire weakness while they remain in the area of her aura and for 1 minute after leaving it or until the shriezyx no longer has line of sight to the shriezyx queen, whichever comes first. The shriezyx queen\u2019s mind-affecting spell-like abilities function normally against shriezyx within her hive influence aura. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Incendiary Webs",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A shriezyx queen\u2019s web is coated with a supernatural oil that catches fire with the slightest spark. Any creature struck by a shriezyx queen\u2019s web gains vulnerability to fire for 1 minute. If a creature struck by the web is carrying a torch or otherwise using fire, the creature must succeed at a DC 18 Reflex saving throw or <a href=\"Rules.aspx?Name=Catching%20on%20Fire&amp;Category=Heat%20Dangers\" style=\"text-decoration:underline\">catch on fire</a>. As long as a creature has vulnerability to fire from this effect, each time it casts a spell with the fire descriptor or takes fire damage, it must succeed at a DC 18 Reflex saving throw or catch on fire. This incendiary oil dries out quickly\u2014a web can impart this vulnerability to fire only on the round it is spun. Thereafter, the web remains sticky but does not have this incendiary effect. The save DC is Strength-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 19; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d3 Str; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 19",
+                        "save_type": "Fort",
+                        "dc": 19
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Str",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

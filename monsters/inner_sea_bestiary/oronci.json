@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground (Darklands)<br/><b>Organization</b> solitary, pair, or nest (3\u20139)<br/><b>Treasure</b> standard (heavy wooden shield, mwk battleaxe)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Frenzy (Ex) </b>Once per day, an oronci that takes damage in combat can fly into a frenzy as a free action the following round. While in this state, an oronci cannot use any Charisma-, Dexterity-, or Intelligence-based skill checks, but functions as if under the effects of a <i>haste </i>spell. The oronci can continue to frenzy for up to 3 rounds, after which it is staggered for 1 round.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Dex; <i>cure </i>2 consecutive saves.<br/><br/><b>Spit (Ex)</b> An oronci can spit poison at a target within 30 feet as a standard action. This is a ranged touch attack, and can only be performed once every 1d6 rounds. If the attack is successful, the target is affected by the poison just as if it had been injured. The oronci can still poison a target with each successful bite attack.<br/><br/><b>Undersized Weapons (Ex)</b> Although an oronci is Large, its upper torso is the same size as that of a Medium humanoid. As a result, oronci wield weapons as if they were one size category smaller than their actual size (Medium for most oronci)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "When drow fleshwarping alchemy is turned and focused upon an orc, the obscene result is called an oronci. Upon submersion in a fleshwarper\u2019s alchemical ichor, the unfortunate orc\u2019s legs merge, and its lower body turns black and elongates to a length of approximately 15 feet. This new body divides into segments, with each segment sprouting a pair of short, sturdy, thin legs. Finally, the horror\u2019s tusks connect to newly grown poison ducts that constantly drip poisonous spittle. The orc\u2019s head and upper body stay relatively intact as far as fleshwarping goes, though its eyes sometimes adopt a dark, vacant stare.<br/><br/>With the exception of the driders, the oronci are among the most useful of the obscenities produced by fleshwarping. They embody all the savage brutality of an orc warrior, but mounted centaurlike upon an even larger, more powerful frame. Being less intelligent than drow, oronci make better shock troopers and advance soldiers for drow armies than the dark elves themselves. Oronci who have escaped the slavery of the dark elves have become favored champions for certain clever orc chieftains. Some oronci even overcome their sensitivity to daylight given time, which makes them better suited to terrorize the surface lands."
@@ -370,7 +360,65 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground (Darklands)",
+            "organization": "solitary, pair, or nest (3\u20139)",
+            "treasure": "standard (heavy wooden shield, mwk battleaxe)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Frenzy",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per day, an oronci that takes damage in combat can fly into a frenzy as a free action the following round. While in this state, an oronci cannot use any Charisma-, Dexterity-, or Intelligence-based skill checks, but functions as if under the effects of a <i>haste </i>spell. The oronci can continue to frenzy for up to 3 rounds, after which it is staggered for 1 round."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Dex; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Dex",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spit",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "An oronci can spit poison at a target within 30 feet as a standard action. This is a ranged touch attack, and can only be performed once every 1d6 rounds. If the attack is successful, the target is affected by the poison just as if it had been injured. The oronci can still poison a target with each successful bite attack."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Undersized Weapons",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Although an oronci is Large, its upper torso is the same size as that of a Medium humanoid. As a result, oronci wield weapons as if they were one size category smaller than their actual size (Medium for most oronci)."
+            }
+        ]
     },
     "sources": [
         {

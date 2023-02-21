@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm ocean<br/><b>Organization</b> solitary, pair, or swarm (3-12)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Sting\u2014injury; <i>save</i> Fort DC 10; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1 Dex; <i>cure</i> 1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Known to some as sea scorpions, eurypterids are aquatic crustaceans that blur the line between their terrestrial cousins and lobsters. Primeval and voracious, these vermin range in size from relatively harmless ochre eurypterids the size of a dog up to the truly immense spitting eurypterids. There are even rumors of yet larger beasts, called whaleeating eurypterids by sailors. Regardless of their size, all share one thing in common\u2014an aggressive attitude. Eurypterids lash out at anything that might be food, and once they\u2019ve tasted prey, are single-minded in their pursuit. Although quite at home in the open sea, most eurypterids are capable of scuttling around on land and can exist out of water indefinitely. Unlike rats, eurypterids don\u2019t spread disease or cause much damage to most cargos\u2014traits that have led some captains to experiment with seeding colonies of ochre eurypterids in their holds to keep rodent populations under control. Alas, one can often tell the ships that use this tactic by the unusually high number of crewmen with missing fingers."
@@ -267,7 +257,41 @@
                     "name": "amphibious"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm ocean",
+            "organization": "solitary, pair, or swarm (3-12)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save</i> Fort DC 10; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1 Dex; <i>cure</i> 1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 10",
+                        "save_type": "Fort",
+                        "dc": 10
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1 Dex",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

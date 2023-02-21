@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Numeria)<br/><b>Organization</b> solitary or squad (2\u20136)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Force Field (Ex)</b> A thought harvester is sheathed in a thin layer of shimmering energy that grants it 40 bonus hit points. All damage dealt to a thought harvester with an active force field is reduced from these hit points first. As long as the force field is active, the thought harvester is immune to critical hits. A thought harvester\u2019s force field has fast healing 10, but once its hit points are reduced to 0, the force field shuts down and does not reactivate for 24 hours.<br/><br/><b>Integrated Nanite Injectors (Ex)</b> A thought harvester is outfitted with two nanite injectors. These modified syringes are mounted on the end of animated, flexible tubes that feed into the robot\u2019s crystal spheres and allow it to use its harvest thoughts ability. These injectors are treated as a piercing weapons that deal 1d4 points of damage, but can\u2019t be salvaged to be used on their own.<br/><br/><b>Integrated Sonic Rifle (Ex)</b> A thought harvester has an builtin sonic rifle slung beneath its head. This weapon has a range of 150 feet and deals 3d6 points of sonic damage. The weapon can fire once per round and does so in a burst of shots that attacks all creatures in a line. This line starts from any corner of the robot\u2019s space and extends to the limit of the weapon\u2019s range or until it strikes a barrier it can\u2019t penetrate. The robot must make a separate attack roll against each creature in the line, and each creature in the line can be attacked with only one shot from each burst. Each attack roll takes a \u20132 penalty, and its damage can\u2019t be modified by precision damage or damage-increasing feats such as Vital Strike. Effects that grant concealment (such as fog or smoke) or the spells <i>blur</i>, <i>invisibility</i>, or <i>mirror image</i> don\u2019t affect this weapon\u2019s attack. Roll to confirm each attack roll that threatens a critical hit separately.<br/><br/><b>Harvest Thoughts (Ex)</b> A thought harvester that hits a living creature with one of its integrated nanite injectors can selectively duplicate certain memories the target possesses. Each time the harvester uses this ability, it can copy one significant event (such as the events of a combat or a birthday party), or it can sift through the victim\u2019s memories as part of an interrogation that allows it to effectively ask and receive truthful answers to six questions. A successful DC 17 Will save negates the effects of this ability; mindless creatures or creatures with an Intelligence score of 1 are immune to it. Each time a creature\u2019s memories are copied through the use of this ability, it must succeed at a DC 17 Fortitude save or take 1d4 points of Intelligence drain. A creature\u2019s Intelligence score can\u2019t be drained below 1 in this way.<br/><br/> If successful, the target\u2019s copied memories appear as swirling mist within one of the crystal spheres socketed into the thought harvester\u2019s back. If the thought harvester is willing, helpless, or destroyed, a sphere can be removed from its socket with a successful DC 30 Disable Device check and be read by certain devices without damaging the memories within. This ability can be used on creatures that have been dead for less than 24 hours, but their brain must be mostly intact and only 1d4 memories can be harvested postmortem. The duration can be extended if the creature\u2019s brain has been preserved (such as by <i>gentle repose</i>) or if the creature possesses a brain that doesn\u2019t rot. The save DCs are Intelligence-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Thought harvesters are specialized robots designed to forcibly extract memories from a living creature or corpse. Built to survive battlefields and other hazardous environments, thought harvesters are outf itted with thick armor plating and a durable force field. Giving the thought harvester robot its name, two prehensile tendrils extend from the creature\u2019s sides, each tipped with a wickedly barbed syringe through which the creature injects sophisticated nanites into its target. These nanites immediately duplicate portions of the target\u2019s brain and return through the syringe into the thought harvester\u2019s central core. There, the target\u2019s memories are swiftly categorized and stored in one of an array of crystalline spheres located along the robot\u2019s spine. When performed on a living target, the process is painful and can cause severe damage to the subject\u2019s cognitive reasoning capabilities. A thought harvester\u2019s head has a single glowing eye in the center, and two weapons hang beneath it. These weapons allow the thought harvester to fire bursts of sonic energy at any targets that react in an aggressive manner. A thought harvester rarely speaks, but when it does it speaks in short, monosyllabic words, and is always direct and to the point. Thought harvesters are 6 feet long and 4 feet tall. They are densely built, and weigh 1,600 lbs. A thought harvester draws energy from an eff icient internal power source and continually recycles and repairs its internal store of specialized nanites."
@@ -430,7 +420,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Numeria)",
+            "organization": "solitary or squad (2\u20136)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Force Field",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A thought harvester is sheathed in a thin layer of shimmering energy that grants it 40 bonus hit points. All damage dealt to a thought harvester with an active force field is reduced from these hit points first. As long as the force field is active, the thought harvester is immune to critical hits. A thought harvester\u2019s force field has fast healing 10, but once its hit points are reduced to 0, the force field shuts down and does not reactivate for 24 hours."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Integrated Nanite Injectors",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A thought harvester is outfitted with two nanite injectors. These modified syringes are mounted on the end of animated, flexible tubes that feed into the robot\u2019s crystal spheres and allow it to use its harvest thoughts ability. These injectors are treated as a piercing weapons that deal 1d4 points of damage, but can\u2019t be salvaged to be used on their own."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Integrated Sonic Rifle",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A thought harvester has an builtin sonic rifle slung beneath its head. This weapon has a range of 150 feet and deals 3d6 points of sonic damage. The weapon can fire once per round and does so in a burst of shots that attacks all creatures in a line. This line starts from any corner of the robot\u2019s space and extends to the limit of the weapon\u2019s range or until it strikes a barrier it can\u2019t penetrate. The robot must make a separate attack roll against each creature in the line, and each creature in the line can be attacked with only one shot from each burst. Each attack roll takes a \u20132 penalty, and its damage can\u2019t be modified by precision damage or damage-increasing feats such as Vital Strike. Effects that grant concealment (such as fog or smoke) or the spells <i>blur</i>, <i>invisibility</i>, or <i>mirror image</i> don\u2019t affect this weapon\u2019s attack. Roll to confirm each attack roll that threatens a critical hit separately."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Harvest Thoughts",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A thought harvester that hits a living creature with one of its integrated nanite injectors can selectively duplicate certain memories the target possesses. Each time the harvester uses this ability, it can copy one significant event (such as the events of a combat or a birthday party), or it can sift through the victim\u2019s memories as part of an interrogation that allows it to effectively ask and receive truthful answers to six questions. A successful DC 17 Will save negates the effects of this ability; mindless creatures or creatures with an Intelligence score of 1 are immune to it. Each time a creature\u2019s memories are copied through the use of this ability, it must succeed at a DC 17 Fortitude save or take 1d4 points of Intelligence drain. A creature\u2019s Intelligence score can\u2019t be drained below 1 in this way.<br/><br/> If successful, the target\u2019s copied memories appear as swirling mist within one of the crystal spheres socketed into the thought harvester\u2019s back. If the thought harvester is willing, helpless, or destroyed, a sphere can be removed from its socket with a successful DC 30 Disable Device check and be read by certain devices without damaging the memories within. This ability can be used on creatures that have been dead for less than 24 hours, but their brain must be mostly intact and only 1d4 memories can be harvested postmortem. The duration can be extended if the creature\u2019s brain has been preserved (such as by <i>gentle repose</i>) or if the creature possesses a brain that doesn\u2019t rot. The save DCs are Intelligence-based."
+            }
+        ]
     },
     "sources": [
         {

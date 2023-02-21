@@ -3,11 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Bloodspray (Ex)</b> Whenever a creature sunders one of a miasma hydra\u2019s heads, strikes it with a melee attack that does bleed damage, or confirms a successful critical hit against the miasma hydra with a melee piercing or slashing weapon, the creature must succeed at a DC 21 Fortitude save or be affected by the miasma hydra\u2019s poison as though it had been bitten.<br/><br/><b>Breath Weapon (Ex) </b>A miasma hydra\u2019s breath weapon is identical in effect to <i>cloudkill</i>, except that it has a duration of instantaneous, covers a 15-foot-cone area, and is usable every 1d4 rounds by each of the miasma hydra\u2019s heads. A creature in the area of multiple breaths in the same round must make multiple saves, but can only be affected by the <i>cloudkill </i>effect once per round.<br/><br/><b>Fast Healing (Ex)</b> A miasma hydra\u2019s fast healing ability is equal to its current number of heads (minimum fast healing 12). This fast healing applies only to damage dealt to the miasma hydra\u2019s body.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 21; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Str damage and sickened for 1 minute; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "West of Kokutang in the Sodden Lands, there lies the remains of a once-proud and now-nameless village, destroyed when the massive Eye of Abendego consumed the gulf and buried the young nation of Yamasa and its secrets more than 100 years ago. Within the flooded ruins of this small settlement, the miasma hydra known to local Koboto tribespeople as Dhirgiska scavenges the wreckage and makes its lair in the vast caverns carved out of the marshy earth beneath the village. Attacking any who dare to near the destroyed village, the hydra has made it impossible for the people of Kokutang to fully explore the ruins and discover what importance the site once held for their people, if any. It is unknown what drives Dhirgiska to protect its lair so fervently, and some think that the beast was left by the deceased people of the village in order to protect their secrets and treasures. Whatever the case, it is well known that those who dare face the ruins and the beast that dwells within rarely come back alive.<br/><br/>Though it is generally known that any foreigners who try to interact with the people of Kokutang will be met with ravenous hostility, it is thought that should some brave adventurer bring the heart of the treacherous Dhirgiska to them, she would be praised as a hero in their eyes."
@@ -407,7 +402,57 @@
                     "name": "regenerate head"
                 }
             ]
-        }
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Bloodspray",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Whenever a creature sunders one of a miasma hydra\u2019s heads, strikes it with a melee attack that does bleed damage, or confirms a successful critical hit against the miasma hydra with a melee piercing or slashing weapon, the creature must succeed at a DC 21 Fortitude save or be affected by the miasma hydra\u2019s poison as though it had been bitten."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A miasma hydra\u2019s breath weapon is identical in effect to <i>cloudkill</i>, except that it has a duration of instantaneous, covers a 15-foot-cone area, and is usable every 1d4 rounds by each of the miasma hydra\u2019s heads. A creature in the area of multiple breaths in the same round must make multiple saves, but can only be affected by the <i>cloudkill </i>effect once per round."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Fast Healing",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A miasma hydra\u2019s fast healing ability is equal to its current number of heads (minimum fast healing 12). This fast healing applies only to damage dealt to the miasma hydra\u2019s body."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 21; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Str damage and sickened for 1 minute; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 21",
+                        "save_type": "Fort",
+                        "dc": 21
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Str damage and sickened for 1 minute",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

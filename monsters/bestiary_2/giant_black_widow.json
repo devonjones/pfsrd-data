@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, pair, or colony (3\u20138)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Con and staggered; <i>cure </i>2 saves. Save DC is Con-based with a +2 racial bonus.<br/><br/><b>Strong Webs (Ex)</b> A black widow\u2019s webs gain a +4 bonus to the DC to break or escape."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Females of this species are larger than males. Males are identical to the typical giant spider (<i>Pathfinder RPG Bestiary </i>258)."
@@ -269,7 +259,49 @@
                     "name": "strong webs"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary, pair, or colony (3\u20138)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Con and staggered; <i>cure </i>2 saves. Save DC is Con-based with a +2 racial bonus.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Con and staggered",
+                    "cure": "2 saves. Save DC is Con-based with a +2 racial bonus."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Strong Webs",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A black widow\u2019s webs gain a +4 bonus to the DC to break or escape."
+            }
+        ]
     },
     "sources": [
         {

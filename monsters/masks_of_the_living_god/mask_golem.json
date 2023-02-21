@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Immunity to Magic (Ex)</b> A mask golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below.<ul> <li>A <i>shatter</i> spell deals 4d6 points of damage (no save).</li> <li>A <i>grease</i> spell prevents the mask golem from using its masks of control ability for the duration of the spell (no save). Masks that are already in place are unaffected.</li> <li>A <i>make whole</i> spell heals the golem as normal and automatically restores one of its masks of control if any have been destroyed.</li> <li>Any magical attack against a mask golem that deals sonic damage affects the mask golem normally.</li> </ul><b>Masks of Control (Su)</b> As a standard action, a mask golem can force one of its masks onto a humanoid opponent\u2019s face. This ability has a range of 30 feet. Attaching a mask in this way requires a successful combat maneuver check and does not provoke an attack of opportunity. Once in place, the mask has one of two effects.<br/><br/><i>Obedience</i>: The target must make a DC 13 Will save each round or fall under the mask golem\u2019s control for 1 round. This functions as <i>dominate person</i>. The save DC is Charisma-based.<br/><br/><i>Solitude</i>: The target cannot speak, breathe, or hear while the mask is in place.<br/><br/>The mask can be removed with a successful combat maneuver check against the mask golem\u2019s CMD. The mask can also be destroyed, but half of any damage dealt is made to the target instead of the mask. The mask has Hardness 5 and 5 hit points. A mask golem has a number of masks equal to its Hit Dice (usually 4). If removed from a victim, the mask returns to the golem immediately and can be used again. Destroyed masks are replenished at the rate of 1 per day.<br/><br/><b>Swarm Form (Ex)</b> Once per day as a standard action, a mask golem can assume the form of a swarm of masks. While in this form, it gains the swarm subtype, a fly speed of 60 feet (average), a swarm attack that deals 1d6 points of damage, and the distraction quality (DC 12). Anyone who takes damage from the swarm attack can also be attacked with one of the golem\u2019s masks of control as a free action (assuming the golem has enough masks available). The swarm is made up of Tiny creatures, but does not gain any additional damage reduction. A mask golem can maintain this form for a number of minutes equal to its Hit Dice. Any damage dealt to the swarm is subtracted from the golem\u2019s hit points, as normal."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Made up of hundreds of masks, a mask golem is a construct forged by the faithful of Razmir to honor the Living God. These constructs are often placed in their temples or other locations that they wish to protect, such as treasure vaults or private sanctuaries for powerful priests. They spend much of their time completely immobile, only coming to life when their instructions force them to take action. Many acolytes are unaware of their true nature, having spent years viewing them as simple statues.<br/><br/>Mask golems can understand Common, but they cannot speak. While they possess intelligence, they are bound by the orders of their creators and are seldom given free reign when assigned to a task. Rarely, these golems are employed as assassins, sent out to punish or kill those that threaten the church.<br/><br/>While all of the masks that make up the golem\u2019s body are copies of the holy symbol of Razmir, they are made of different materials. Most are simple iron, but the masks around the joints are made of silver with gold trim, and the head is made from a specially crafted porcelain mask, set with a sapphire. When a mask golem is destroyed, these valuable masks remain, and are worth 1,000 gp in total. The sapphire is worth 500 gp. A mask golem stands 5 feet tall and weighs 300 pounds."
@@ -273,7 +263,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immunity to Magic",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A mask golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below.<ul> <li>A <i>shatter</i> spell deals 4d6 points of damage (no save).</li> <li>A <i>grease</i> spell prevents the mask golem from using its masks of control ability for the duration of the spell (no save). Masks that are already in place are unaffected.</li> <li>A <i>make whole</i> spell heals the golem as normal and automatically restores one of its masks of control if any have been destroyed.</li> <li>Any magical attack against a mask golem that deals sonic damage affects the mask golem normally.</li> </ul>"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Masks of Control",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action, a mask golem can force one of its masks onto a humanoid opponent\u2019s face. This ability has a range of 30 feet. Attaching a mask in this way requires a successful combat maneuver check and does not provoke an attack of opportunity. Once in place, the mask has one of two effects.<br/><br/><i>Obedience</i>: The target must make a DC 13 Will save each round or fall under the mask golem\u2019s control for 1 round. This functions as <i>dominate person</i>. The save DC is Charisma-based.<br/><br/><i>Solitude</i>: The target cannot speak, breathe, or hear while the mask is in place.<br/><br/>The mask can be removed with a successful combat maneuver check against the mask golem\u2019s CMD. The mask can also be destroyed, but half of any damage dealt is made to the target instead of the mask. The mask has Hardness 5 and 5 hit points. A mask golem has a number of masks equal to its Hit Dice (usually 4). If removed from a victim, the mask returns to the golem immediately and can be used again. Destroyed masks are replenished at the rate of 1 per day."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Swarm Form",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per day as a standard action, a mask golem can assume the form of a swarm of masks. While in this form, it gains the swarm subtype, a fly speed of 60 feet (average), a swarm attack that deals 1d6 points of damage, and the distraction quality (DC 12). Anyone who takes damage from the swarm attack can also be attacked with one of the golem\u2019s masks of control as a free action (assuming the golem has enough masks available). The swarm is made up of Tiny creatures, but does not gain any additional damage reduction. A mask golem can maintain this form for a number of minutes equal to its Hit Dice. Any damage dealt to the swarm is subtracted from the golem\u2019s hit points, as normal."
+            }
+        ]
     },
     "sources": [
         {

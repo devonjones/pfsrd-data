@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any forests or underground<br/><b>Organization</b> solitary, pair, or patch (3-12)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Spore cloud\u2014inhaled; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d2 Con damage; <i>cure</i> 2 consecutive saves.<br/><br/><b>Spore Cloud (Ex)</b> Once per day as a standard action, a shadow fern can expel a cloud of poisonous spores in a 10-foot-radius burst that lingers for 1 minute before dispersing. A moderate wind (11+ mph), such as from a <i>gust of wind</i> spell, disperses the cloud in 4 rounds. A strong wind (21+ mph) disperses the cloud in 1 round. A new shadow fern grows out of the corpse of any creature that dies as a result of Constitution damage from this poison after 1 week.<br/><br/><b>Vulnerable to Light (Ex)</b> Shadow ferns use darkness for essential life functions in the same way normal plants use sunlight for photosynthesis. Their fast healing is suppressed in areas of normal light and bright light, and they are staggered in areas of bright light."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The perpetual darkness under the canopy of the Uskwood in Nidal has given rise to new varieties of both flora and fauna unique to the preternaturally shadowy environment. Most prevalent among the plants exhibiting such adaptations are the fecund shadow ferns, which grow in large patches throughout the forest. Darklands-dwelling societies\u2014including caligni, drow, and especially duergar\u2014cultivate the plants underground, since they thrive in the lightless depths. Over the millennia, the plants have even spread into the Plane of Shadow, leading travelers using <i>shadow walk</i> to encounter the plants with increasing frequency during their umbral jaunts. Some shadowcasters believe that elder specimens of shadow ferns are capable of existing simultaneously on both the Material and Shadow Planes, and many such casters have a number of potted shadow ferns in their laboratories for further study.<br/><br/> The malevolent druids of the Uskwood have been known to weaponize shadow fern spores, killing their victims and seeding new patches of the invasive plant in their victims\u2019 corpses."
@@ -212,7 +202,57 @@
             "int": null,
             "wis": 15,
             "cha": 2
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any forests or underground",
+            "organization": "solitary, pair, or patch (3-12)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Spore cloud\u2014inhaled; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d2 Con damage; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Spore cloud\u2014inhaled",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Con damage",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spore Cloud",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per day as a standard action, a shadow fern can expel a cloud of poisonous spores in a 10-foot-radius burst that lingers for 1 minute before dispersing. A moderate wind (11+ mph), such as from a <i>gust of wind</i> spell, disperses the cloud in 4 rounds. A strong wind (21+ mph) disperses the cloud in 1 round. A new shadow fern grows out of the corpse of any creature that dies as a result of Constitution damage from this poison after 1 week."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vulnerable to Light",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Shadow ferns use darkness for essential life functions in the same way normal plants use sunlight for photosynthesis. Their fast healing is suppressed in areas of normal light and bright light, and they are staggered in areas of bright light."
+            }
+        ]
     },
     "sources": [
         {

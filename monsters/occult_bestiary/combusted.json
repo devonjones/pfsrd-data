@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or effigy (2\u20136)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Combustion (Su)</b> Curse\u2014slam; <i>save</i> Fort DC 13; <i>onset</i> immediate; <i>frequency</i> 1/ round; <i>effect</i> 2d6 fire damage that ignores fire resistance; <i>cure</i> 1 save. A creature that falls below 0 hit points from this curse spontaneously combusts, dying instantly. The save DC is Charisma-based. <br/><br/><b>Fire Blast (Sp)</b> This ability has a 30 foot range and can be used at will as a standard action. <br/><br/><b>Howl of Agony (Ex)</b> A combusted perpetually screams in agony, forcing each creature within 10 feet to succeed at a DC 13 Will save or be stunned with fear for 1d4 rounds. A creature cannot be affected by the same combusted\u2019s howl of agony ability more than once every 24 hours. This is a mind-affecting fear effect. The save DC is Charisma-based. <br/><br/><b>Susceptible to Water (Ex)</b> A vial of water can be used as a splash weapon against a combusted, dealing 1d4 points of damage on a hit or 1 point of damage on a splash. Holy water deals double damage to a combusted. Rainfall deals 1d6 points of damage per round to a combusted, and full immersion in water deals 6d6 points of damage per round. Despite this, the supernatural fires that burn in a combusted cannot be extinguished by mere water, and a combusted cannot be reduced to fewer hit points than it has Hit Dice (5 hp for most combusted) by water alone."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Most scholars of the strange consider accounts of spontaneous combustion to be nothing more than superstitious folktales. But those with a deep understanding of the occult know it is indeed possible for a person to feel a sudden fever come on, only to find the heat within her body rising to incredible levels until she bursts into flames and perishes, leaving behind only a charred corpse. The sudden and violent deaths of such individuals make it easier for dark powers to reanimate their bodies, and sometimes for the victims to return from the dead on their own. <br/><br/>However they return, the undead creatures known as combusted all suffer the telltale signs of their demise: their corpses constantly burn and their desiccated flesh is never fully consumed by the flames. Roiling clouds of smoke, thick with the stench of burning skin and hair, surround them at all times, and may reveal their presence from over a mile away. These shambling horrors can arise at any location that has a particular affinity for undead, but they have been known to wander into nearby bodies of water in an attempt to extinguish the flames that took their lives, though they never attempt such self destructive acts when affronted by the presence of the living. <br/><br/>A typical combusted stands the same height as the creature it was in life, but weighs less than half as much, since so much of its body and musculature has burned away to ashes."
@@ -318,7 +308,66 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or effigy (2\u20136)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Combustion",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Curse\u2014slam; <i>save</i> Fort DC 13; <i>onset</i> immediate; <i>frequency</i> 1/ round; <i>effect</i> 2d6 fire damage that ignores fire resistance; <i>cure</i> 1 save. A creature that falls below 0 hit points from this curse spontaneously combusts, dying instantly. The save DC is Charisma-based. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Combustion",
+                    "affliction_type": "Combustion; Curse\u2014slam",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "onset": "immediate",
+                    "frequency": "1/ round",
+                    "effect": "2d6 fire damage that ignores fire resistance",
+                    "cure": "1 save. A creature that falls below 0 hit points from this curse spontaneously combusts, dying instantly. The save DC is Charisma-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Fire Blast",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "This ability has a 30 foot range and can be used at will as a standard action. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Howl of Agony",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A combusted perpetually screams in agony, forcing each creature within 10 feet to succeed at a DC 13 Will save or be stunned with fear for 1d4 rounds. A creature cannot be affected by the same combusted\u2019s howl of agony ability more than once every 24 hours. This is a mind-affecting fear effect. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Susceptible to Water",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A vial of water can be used as a splash weapon against a combusted, dealing 1d4 points of damage on a hit or 1 point of damage on a splash. Holy water deals double damage to a combusted. Rainfall deals 1d6 points of damage per round to a combusted, and full immersion in water deals 6d6 points of damage per round. Despite this, the supernatural fires that burn in a combusted cannot be extinguished by mere water, and a combusted cannot be reduced to fewer hit points than it has Hit Dice (5 hp for most combusted) by water alone."
+            }
+        ]
     },
     "sources": [
         {

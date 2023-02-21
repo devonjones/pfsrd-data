@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or warm ocean or coastline<br/><b>Organization</b> solitary, pair, or cluster (3-10)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>All-Around Vision (Ex)</b> All giant sea urchins can see in all directions. They gain a +4 racial bonus on Perception checks and cannot be flanked.<br/><br/><b>Poison (Ex)</b> Hunter urchin venom causes intense pain that staggers those who suffer its effects, but does not actually inflict ability damage. The save DC is Constitution-based.<br/><br/>Spines\u2014injury; <i>save</i> Fort DC 13; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> staggered for 1 round; <i>cure</i> 1 save.<br/><br/><b>Spines (Ex)</b> A hunter urchin\u2019s spines can swivel to face any approaching creature. Any creature that attacks a hunter urchin with an unarmed strike or a natural attack, or any Medium or smaller creature that attacks with a one-handed weapon or light weapon, is automatically attacked by the hunter urchin\u2019s spines as an immediate action. If the spines hit, they can poison the target as well.<br/><br/><b>Stability (Ex)</b> All giant sea urchins receive a +8 bonus to CMD when resisting a bull rush or trip attempt."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Much more dangerous than their smaller kin, giant sea urchins are dangerous predators of opportunity. With the exception of the hunter urchin, giant sea urchins lie in wait for food to come to them, typically carried within reach of their attacks via ocean currents or, more commonly, tides.<br/><br/><b>Hunter Urchins</b>: These urchins can adjust their spines to effect an awkward method of locomotion on land. They actively seek prey, and possess long, rasp-like tongues that can whip out and pull food to them.<br/><br/><b>Spear Urchins</b>: These brightly colored creatures can fire spines like javelins, relying upon poison to slow down prey or eventually immobilize it so they can crawl over to feed.<br/><br/><b>Glass Urchins</b>: So named for their transparency, these beautiful creatures shimmer like delicate crystals. Yet for all the damage their spines can inf lict, victims of glass urchins generally do more damage to themselves or their allies due to the potent hallucinatory effects of this urchin\u2019s venom."
@@ -284,7 +274,65 @@
                     "name": "amphibious"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or warm ocean or coastline",
+            "organization": "solitary, pair, or cluster (3-10)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "All-Around Vision",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "All giant sea urchins can see in all directions. They gain a +4 racial bonus on Perception checks and cannot be flanked."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Hunter urchin venom causes intense pain that staggers those who suffer its effects, but does not actually inflict ability damage. The save DC is Constitution-based.<br/><br/>Spines\u2014injury; <i>save</i> Fort DC 13; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> staggered for 1 round; <i>cure</i> 1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Hunter urchin venom causes intense pain that staggers those who suffer its effects, but does not actually inflict ability damage. The save DC is Constitution-based.<br/><br/>Spines\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "staggered for 1 round",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spines",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A hunter urchin\u2019s spines can swivel to face any approaching creature. Any creature that attacks a hunter urchin with an unarmed strike or a natural attack, or any Medium or smaller creature that attacks with a one-handed weapon or light weapon, is automatically attacked by the hunter urchin\u2019s spines as an immediate action. If the spines hit, they can poison the target as well."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Stability",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "All giant sea urchins receive a +8 bonus to CMD when resisting a bull rush or trip attempt."
+            }
+        ]
     },
     "sources": [
         {

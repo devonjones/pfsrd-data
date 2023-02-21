@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary, pair, or swarm (3\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Leap (Ex)</b> A fungal crawler can perform a special kind of pounce attack by jumping into combat. When a fungal crawler charges, it can make a DC 20 Acrobatics check to jump into the air and land next to its enemies. If it makes the Acrobatics check, it can follow up with four claw attacks against foes in reach, but it cannot make a bite attack.<br/><br/><b>Plant Defenses (Ex)</b> A fungal crawler is part plant and shares many of the immunities that plant creatures possess. A fungal crawler is immune to mind-affecting effects, paralysis, poison, polymorph, sleep, and stunning.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Str and 1d2 Con; <i>cure </i>1 save. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Fungal crawlers are a perverse fusion of animal and plant. Over thousands of years, they have prospered and spread beneath the world, dominating the wildest depths of these underground regions. Like hyenas, fungal crawlers are top-tier scavengers. They are efficient hunters, but just as often feed on found carrion or take meals from other predators. When times are especially lean, fungal crawlers can even survive without food, subsisting on radiation and heat absorbed through the fungal flutes covering their pale, sickly bellies.<br/><br/>Thousands of breeds of fungal crawlers exist across the world, varying in appearance and habits, but all share a few common features. They invariably appear as monstrous crickets or locusts fused with fungal growths, often topped with mushroom-like caps. This hybridization makes them adept survivors, and infestations are notoriously difficult to clear out entirely. Their needle-like teeth cannot chew solid food, so most fungal crawlers rely on digestive enzymes injected through their bite to make their meals palatable. Average specimens grow to 30 pounds and 3 feet in length. They reproduce by releasing spores, which remain viable for decades until they contact organic matter and eventually develop into small, pale grubs.<br/><br/>Many subterranean civilizations tame fungal crawlers as guard animals, pets, or food. Though simple-minded, they are amicable enough to be trained when well-fed. Fungal crawlers hold no loyalties, though, and often flee or attack their keepers at the slightest provocation.<br/><br/>Thanks to the bizarre energies that suffuse their homes, fungal crawlers are incredibly diverse. They have adapted over millennia to fill every environment: flying variants fill subterranean rifts with the deafening drone of their wings, while aquatic breeds skim across the surfaces of underground lakes, and still others thrive in the fiery chambers and tunnels of volcanic networks."
@@ -304,7 +294,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground",
+            "organization": "solitary, pair, or swarm (3\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Leap",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A fungal crawler can perform a special kind of pounce attack by jumping into combat. When a fungal crawler charges, it can make a DC 20 Acrobatics check to jump into the air and land next to its enemies. If it makes the Acrobatics check, it can follow up with four claw attacks against foes in reach, but it cannot make a bite attack."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Plant Defenses",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A fungal crawler is part plant and shares many of the immunities that plant creatures possess. A fungal crawler is immune to mind-affecting effects, paralysis, poison, polymorph, sleep, and stunning."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Str and 1d2 Con; <i>cure </i>1 save. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Str and 1d2 Con",
+                    "cure": "1 save. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

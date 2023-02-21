@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or team (3\u201310)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Breath weapon\u2014inhaled; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d3 Con; <i>cure</i> 2 consecutive saves.<br/><b>Reprogram Terrain (Ex)</b> Three times per day as an action that takes 1 full round, a terraformer can release a cloud of nanites that mimics the effects of one of the following spells, using the terraformer\u2019s Hit Dice as the caster level: <i>expeditious excavation, soften earth and stone, or stone shape.</i><br/><b>Terraform (Ex)</b> Ten terraformers working in tandem can create remarkable effects over long periods of time, causing permanent changes to the local environment. The robots must maintain line of effect to each other, and each must be within 1 mile of one other terraformer. If they do this for a period of at least 2 weeks, one of the following effects (robots\u2019 choice) occurs in a 1-mile radius: the terrain is shaped as per <i>move earth</i>; water in the area is altered as per <i>control water</i>; plants in the area are affected as per either <i>plant growth or diminish plants</i>; or the average temperature in the area is raised or lowered by 10\u00c2\u00b0 Fahrenheit.<br/><b>Technological Wonders (Ex)</b> Effects from a terraformer\u2019s abilities are nonmagical in nature, and can\u2019t be identified, dispelled, or affected by effects that can affect only spells. The duration of these effects never expires."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Terraformer robots are sent to planets to pave the way for military bases, trading outposts, or settlements. A planet designated as a waystation might require only a few robots, but those marked for permanent habitation might have their skies darkened by hordes of terraformers, forming a hovering lattice around the globe."
@@ -476,7 +466,65 @@
                     "name": "terraform"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or team (3\u201310)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Breath weapon\u2014inhaled; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d3 Con; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Breath weapon\u2014inhaled",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Con",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Reprogram Terrain",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Three times per day as an action that takes 1 full round, a terraformer can release a cloud of nanites that mimics the effects of one of the following spells, using the terraformer\u2019s Hit Dice as the caster level: <i>expeditious excavation, soften earth and stone, or stone shape.</i>"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Terraform",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Ten terraformers working in tandem can create remarkable effects over long periods of time, causing permanent changes to the local environment. The robots must maintain line of effect to each other, and each must be within 1 mile of one other terraformer. If they do this for a period of at least 2 weeks, one of the following effects (robots\u2019 choice) occurs in a 1-mile radius: the terrain is shaped as per <i>move earth</i>; water in the area is altered as per <i>control water</i>; plants in the area are affected as per either <i>plant growth or diminish plants</i>; or the average temperature in the area is raised or lowered by 10\u00c2\u00b0 Fahrenheit."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Technological Wonders",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Effects from a terraformer\u2019s abilities are nonmagical in nature, and can\u2019t be identified, dispelled, or affected by effects that can affect only spells. The duration of these effects never expires."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, tangle (3\u20136 swarms) or colony (11\u201320 swarms)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Swarm\u2014injury; <i>save </i>Fort DC 11; <i>frequency </i>1/round for 2 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The sight of a carpet of swarming spiders is unsettling indeed\u2014particularly when the swarm is made up of spiders each the size of a gold coin and possessing blade-like mandibles capable of lacerating flesh with sickening ease. A swarm of spiders is a colonial mass of arachnids that relies on overwhelming much larger prey with sheer numbers rather than catching smaller snacks. While spider swarms spin webs, these webs are incapable of catching larger prey and typically serve the swarm as a lair rather than a method of capturing dinner."
@@ -251,7 +241,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, tangle (3\u20136 swarms) or colony (11\u201320 swarms)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Swarm\u2014injury; <i>save </i>Fort DC 11; <i>frequency </i>1/round for 2 rounds; <i>effect </i>1d2 Str; <i>cure </i>1 save. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Swarm\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 11",
+                        "save_type": "Fort",
+                        "dc": 11
+                    },
+                    "frequency": "1/round for 2 rounds",
+                    "effect": "1d2 Str",
+                    "cure": "1 save. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any coastlines<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Murmur (Su)</b> A lorelei\u2019s murmur has the power to infect the minds of those that hear it. This effect even influences undead creatures despite their usual immunity to mindaffecting effects. When a lorelei murmurs, all creatures aside from other lorelei within a 300-foot spread must succeed on a DC 20 Will saving throw or become captivated. A creature that successfully saves is not subject to the same lorelei\u2019s song for 24 hours. A victim under the effects of the murmur moves toward the lorelei using the most direct means available. If the path leads them into a dangerous area such as through fire or off a cliff, that creature receives a second saving throw to end the effect before moving into peril. Affected creatures can take no actions other than to defend themselves. A victim within 5 feet of the lorelei simply stands and offers no resistance to its attacks. This effect continues for as long as the lorelei murmurs and for 1 round thereafter. This is a sonic mind-affecting charm effect. The save DC is Charisma-based.<br/><br/><b>Poison (Ex)</b> Tentacle\u2014injury; <i>save </i>Fort DC 25; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d4 Str; <i>cure </i>2 consecutive saves.<br/><br/><b>Vortex (Su)</b> A lorelei can create a whirlpool as a standard action, at will. This ability functions identically to the whirlwind special attack (<i>Pathfinder RPG Bestiary</i> 306), but can form only underwater and cannot leave the water. A creature must succeed at a DC 25 Reflex save or be snared by the churning waters. The vortex is 20 feet across and 80 feet deep, and deals 2d8+9 points of damage. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A lorelei resembles an enormous, stony sea anemone with a humanlike face covering much of its body. Noted for their magical murmurs that entrance sailors, the creatures lurk near rocky shoals barely concealed by crashing waves or rushing rivers, eager to lure humanoids to their deaths.<br/><br/>Also known as a \u201cmurmur stone\u201d for its rocklike natural camouflage, a lorelei is a solitary creature that shuns peaceful contact with other living things. It broods in the shadows of seaside cliffs and ocean trenches, emerging only to torment the living. When not pursuing complicated schemes, a lorelei is fond of wrecking ships on rocks and luring sailors beneath the surface to drown.<br/><br/>Some scholars claim that these creatures were once a species of beautiful fey cursed by foul forces. This claim is backed by the fact that they behave much like nereids, nixies, and sirens. A lorelei stands 9 feet tall, not counting the mess of tentacles atop its body, and weighs around 2,000 pounds."
@@ -502,7 +492,57 @@
                     "name": "water dependency"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any coastlines",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Murmur",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A lorelei\u2019s murmur has the power to infect the minds of those that hear it. This effect even influences undead creatures despite their usual immunity to mindaffecting effects. When a lorelei murmurs, all creatures aside from other lorelei within a 300-foot spread must succeed on a DC 20 Will saving throw or become captivated. A creature that successfully saves is not subject to the same lorelei\u2019s song for 24 hours. A victim under the effects of the murmur moves toward the lorelei using the most direct means available. If the path leads them into a dangerous area such as through fire or off a cliff, that creature receives a second saving throw to end the effect before moving into peril. Affected creatures can take no actions other than to defend themselves. A victim within 5 feet of the lorelei simply stands and offers no resistance to its attacks. This effect continues for as long as the lorelei murmurs and for 1 round thereafter. This is a sonic mind-affecting charm effect. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tentacle\u2014injury; <i>save </i>Fort DC 25; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d4 Str; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tentacle\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 25",
+                        "save_type": "Fort",
+                        "dc": 25
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d4 Str",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vortex",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A lorelei can create a whirlpool as a standard action, at will. This ability functions identically to the whirlwind special attack (<i>Pathfinder RPG Bestiary</i> 306), but can form only underwater and cannot leave the water. A creature must succeed at a DC 25 Reflex save or be snared by the churning waters. The vortex is 20 feet across and 80 feet deep, and deals 2d8+9 points of damage. The save DC is Constitution-based."
+            }
+        ]
     },
     "sources": [
         {

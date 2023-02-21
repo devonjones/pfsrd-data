@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests, plains, or swamps<br/><b>Organization</b> solitary, pair, or knot (3\u201312)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison Skin (Ex) </b>A creature that strikes a fey giant toad with an unarmed strike or natural weapon exposes itself to the toad\u2019s poisonous skin.<br/><br/>Skin\u2014contact; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Wisdom damage; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Fey creatures resemble the mundane creatures they derive from, but with brighter colors, delicate features, and elegant wings such as those of a pixie or sprite. Despite their fragile-seeming appearance, fey creatures are every bit as hardy as their non-fey relations, though they sacrifice raw might for grace and the ability to fly. They live long lives, barring death by misadventure, and rarely show outward signs of age.<br/><br/>Some fey creatures owe their nature to fey ancestors interbreeding with mortal beings, while others are races in their own right. Still others began life as ordinary creatures and were infused with fey essence through the magic of learned spellcasters or the influence of ancient powers of nature. As a rule, fey creatures rarely dwell in civilized lands, both by preference and because the conditions that give rise to the fey rarely occur in urban surroundings. If not already born into realms of primeval wild or areas touched by great fey powers, fey creatures soon seek them out.<br/><br/>Though more prone to mischief than mayhem, fey creatures run the gamut from inimical to sprightly in behavior. Those inclined toward play and jest take a dim view of interlopers lacking in good humor. Such foul-tempered intruders risk humiliation at best if they insult the fey, and much worse if they raise arms against them. More aggressive fey still possess a well-developed though sadistic sense of humor. Such wicked fey use their inborn powers to lure outsiders to their doom, rather than into mere inconvenience.<br/><br/>Fey creatures generally have cordial relationships with animals, allies of nature such as druids, and other fey. Exceptions exist where rival communities of fey dwell in proximity to one another. In these cases, any fey creatures in the vicinity ally with one side or the other according to their own inclinations, only rarely standing outside such conflicts. Fey creatures derived from horses and the like often serve as mounts, though only to other fey or to allies of nature who acknowledge them as at least near-equals, if not full partners."
@@ -457,7 +447,41 @@
                     "name": "vanish"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests, plains, or swamps",
+            "organization": "solitary, pair, or knot (3\u201312)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison Skin",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A creature that strikes a fey giant toad with an unarmed strike or natural weapon exposes itself to the toad\u2019s poisonous skin.<br/><br/>Skin\u2014contact; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Wisdom damage; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison Skin",
+                    "affliction_type": "Poison Skin; A creature that strikes a fey giant toad with an unarmed strike or natural weapon exposes itself to the toad\u2019s poisonous skin.<br/><br/>Skin\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Wisdom damage",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

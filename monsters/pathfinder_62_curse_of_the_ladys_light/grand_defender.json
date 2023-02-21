@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land (extraplanar)<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Ablative Adaptation (Su)</b> As a standard action, the Grand Defender can cast off its outer layer of metal, revealing a slightly smaller version of itself underneath. This new form may be made of cold iron, mithral, or iron, and its appearance may change with each use of the ability, altering its apparent genders, hair style, and so on. In its cold iron form, the Grand Defender\u2019s DR changes to DR 15/cold iron and its attacks count as cold iron for the purpose of bypassing damage reduction. In its mithral form, its DR changes to DR 15/silver and its attacks count as silver. In its iron form, its abilities revert to normal. If the herald is brought to 0 hit points, it becomes inert; 1d4 hours after it last took damage, it sheds its outer layer and reanimates at half its normal hit points. Regardless of how often it uses this ability, the herald never changes size categories, as if it slowly grows to its normal size between transformations. Once shed, the outer layer decays into worthless powder 1d4 minutes after the transformation, though before this occurs it can spend 1 full round consuming the discarded metal to recharge its hammer storm ability.<br/><br/><b>Breath Weapon (Su) </b>As a free action once every 1d4+1 rounds, an iron golem can exhale a 10-foot cube of poisonous gas that persists for 1 round. Any creature within the area when it is exhaled (as well as any creature that passes through the cloud during the remainder of that round) is exposed to the cloud\u2019s poisonous effects. This poison is magically created each time the golem uses this power. <i>Breath weapon</i>\u2014inhaled; <i>save </i>Fort DC 19; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d4 Constitution damage; <i>cure </i>2 saves. The save DC is Constitution-based.<br/><br/><b>Defender\u2019s Shield (Ex) </b>The Grand Defender\u2019s shield is a <i>+3 heavy steel shield</i>, though it becomes nonmagical if the herald is destroyed or is no longer holding or wearing it.<br/><br/><b>Dwarf Traits (Ex) </b>The Grand Defender has the following dwarven racial traits: defensive training, hardy, hatred, stability, stonecunning, and weapon familiarity.<br/><br/><b>Hammer Storm (Ex)</b> Once per day as a full-round action, the Grand Defender can expel a volley of warhammers from its mouth in a 30-foot cone that deals 15d6 points of bludgeoning damage (Reflex DC 19 half). If the herald is in its cold iron or mithral form, these hammers count as cold iron or silver. The Grand Defender can exclude any number of squares in the cone\u2019s area, preventing the hammers from striking those squares. The attack also counts as an awesome blow, though the Defender makes a single combat maneuver check, applying that result to the CMD of all creatures in the area, and affected creatures can only be knocked directly away from the Defender. The hammer storm actually creates 24 physical warhammers that persist after the instantaneous attack and may be used by creatures (though they are normal warhammers, not masterwork, cold iron, or mithral). The Grand Defender can spend 1 minute eating 24 warhammers (or an equivalent amount of metal) to recharge this ability.<br/><br/><b>Immunity to Magic (Ex)</b> The Grand Defender is immune to spells or spell-like abilities that allow spell resistance. Certain spells and effects function differently against it, as noted below. <ul> <li>A magical attack that deals electricity damage slows the Grand Defender (as the <i>slow </i>spell) for 3 rounds, with no saving throw.</li> <li>A magical attack that deals fire damage breaks any slow effect on the Grand Defender and heals 1 point of damage for each 3 points of damage the attack would otherwise deal. If the amount of healing would cause the herald to exceed its full normal hit points, it gains any excess as temporary hit points. The Defender gets no saving throw against fire effects.</li> <li>The Grand Defender is affected normally by rust attacks, such as those of a rust monster or a <i>rusting grasp </i>spell.</li> </ul>"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Created by Torag to serve as his herald, the Grand Defender is a powerful golem animated by the collective will of dozens of great dwarf heroes. The heroic souls within the golem consider it an honor to lend their knowledge and love of battle to this mighty shell so it can protect dwarves in the mortal world. These heroes control the golem for anything from a single manifestation to several consecutive months of tasks, and afterward return to their reward in the afterlife. These multiple identities contribute to its varying appearance in each incarnation, even changing its apparent gender. The above statistics describe a typical manifestation of the herald, though if it is summoned for a specific purpose, the individual spirits within might have greater knowledge pertaining to that purpose. In general, the herald is friendly toward followers of Torag and focused on defending individuals or communities."
@@ -393,7 +383,65 @@
                     "name": "dwarf traits"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land (extraplanar)",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Ablative Adaptation",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action, the Grand Defender can cast off its outer layer of metal, revealing a slightly smaller version of itself underneath. This new form may be made of cold iron, mithral, or iron, and its appearance may change with each use of the ability, altering its apparent genders, hair style, and so on. In its cold iron form, the Grand Defender\u2019s DR changes to DR 15/cold iron and its attacks count as cold iron for the purpose of bypassing damage reduction. In its mithral form, its DR changes to DR 15/silver and its attacks count as silver. In its iron form, its abilities revert to normal. If the herald is brought to 0 hit points, it becomes inert; 1d4 hours after it last took damage, it sheds its outer layer and reanimates at half its normal hit points. Regardless of how often it uses this ability, the herald never changes size categories, as if it slowly grows to its normal size between transformations. Once shed, the outer layer decays into worthless powder 1d4 minutes after the transformation, though before this occurs it can spend 1 full round consuming the discarded metal to recharge its hammer storm ability."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a free action once every 1d4+1 rounds, an iron golem can exhale a 10-foot cube of poisonous gas that persists for 1 round. Any creature within the area when it is exhaled (as well as any creature that passes through the cloud during the remainder of that round) is exposed to the cloud\u2019s poisonous effects. This poison is magically created each time the golem uses this power. <i>Breath weapon</i>\u2014inhaled; <i>save </i>Fort DC 19; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d4 Constitution damage; <i>cure </i>2 saves. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Defender\u2019s Shield",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The Grand Defender\u2019s shield is a <i>+3 heavy steel shield</i>, though it becomes nonmagical if the herald is destroyed or is no longer holding or wearing it."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dwarf Traits",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The Grand Defender has the following dwarven racial traits: defensive training, hardy, hatred, stability, stonecunning, and weapon familiarity."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hammer Storm",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per day as a full-round action, the Grand Defender can expel a volley of warhammers from its mouth in a 30-foot cone that deals 15d6 points of bludgeoning damage (Reflex DC 19 half). If the herald is in its cold iron or mithral form, these hammers count as cold iron or silver. The Grand Defender can exclude any number of squares in the cone\u2019s area, preventing the hammers from striking those squares. The attack also counts as an awesome blow, though the Defender makes a single combat maneuver check, applying that result to the CMD of all creatures in the area, and affected creatures can only be knocked directly away from the Defender. The hammer storm actually creates 24 physical warhammers that persist after the instantaneous attack and may be used by creatures (though they are normal warhammers, not masterwork, cold iron, or mithral). The Grand Defender can spend 1 minute eating 24 warhammers (or an equivalent amount of metal) to recharge this ability."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immunity to Magic",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The Grand Defender is immune to spells or spell-like abilities that allow spell resistance. Certain spells and effects function differently against it, as noted below. <ul> <li>A magical attack that deals electricity damage slows the Grand Defender (as the <i>slow </i>spell) for 3 rounds, with no saving throw.</li> <li>A magical attack that deals fire damage breaks any slow effect on the Grand Defender and heals 1 point of damage for each 3 points of damage the attack would otherwise deal. If the amount of healing would cause the herald to exceed its full normal hit points, it gains any excess as temporary hit points. The Defender gets no saving throw against fire effects.</li> <li>The Grand Defender is affected normally by rust attacks, such as those of a rust monster or a <i>rusting grasp </i>spell.</li> </ul>"
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any ruins<br/><b>Organization</b> solitary, pair, or batch (3\u20138)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Sinful Bite (Su)</b> Each fleshdreg possesses an additional attack depending on its sin type. The save DCs are Charisma-based.<br/><br/><i>Envy</i>: An envy fleshdreg\u2019s bite attack can temporarily interfere with magic. If an envy fleshdreg deals damage with its bite attack to any creature under a magic effect, the fleshdreg attempts a dispel check as if it were caster level 3rd against the spell effect with the highest caster level. If the dispel check is successful, the effect is suppressed for 1d4 rounds.<br/><br/><i>Gluttony</i>: A gluttony fleshdreg\u2019s bite attack can wither and weaken the body of the creature it attacks. Any creature that takes damage from a gluttony fleshdreg\u2019s bite attack must succeed at a DC 12 Fortitude save or become fatigued. Subsequent uses of this ability do not cause a bitten creature to become exhausted.<br/><br/><i>Greed</i>: A greed fleshdreg\u2019s bite can twist and warp the body of a creature it attacks. Any creature that takes damage from a greed fleshdreg\u2019s bite attack must succeed at a DC 12 Fortitude save or have its speed reduced by half and take a \u20132 penalty to Strength and Dexterity for 1d6 rounds.<br/><br/><i>Lust</i>: A lust fleshdreg\u2019s bite can addle the mind of the creature it attacks. Any creature that takes damage from a lust fleshdreg\u2019s bite attack must succeed at a DC 12 Will save or become confused for 1 round.<br/><br/><i>Pride</i>: A pride fleshdreg\u2019s bite floods the senses of the creature it attacks. Any creature that takes damage from a pride fleshdreg\u2019s bite attack must succeed at a DC 12 Will save or be blinded for 1 round and dazzled for the next 1d4 rounds.<br/><br/><i>Sloth</i>: A sloth fleshdreg\u2019s bite conjures an amber crust that covers the target and restricts the target\u2019s movements. Any creature that takes damage from a sloth fleshdreg\u2019s bite attack must succeed at a DC 12 Reflex save or take a \u20132 penalty on attack rolls and Reflex saves for 1d4 rounds.<br/><br/><i>Wrath</i>: A wrath fleshdreg\u2019s bite delivers energy damage to creatures it attacks. Any creature that takes damage from a wrath fleshdreg\u2019s bite attack takes an additional 1d4 points of energy damage (fleshdreg\u2019s choice).<br/><br/><b>Sin-Scent (Su)</b> Fleshdregs have scent against creatures whose nature reflects the fleshdreg\u2019s related sin. For example, a wrathful fleshdreg can scent creatures using rage effects. The GM should adjudicate what creatures a particular fleshdreg can scent."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Fleshdregs are misshapen lumps of tissue, appendages, and biting mouths. These incomplete sinspawn are practically immortal, require little food to sustain their unnatural physiology, and don\u2019t seem to mature past the point of creation. Fleshdregs follow true sinspawn around like pets or curious children. Sinspawn use these weaker creatures as slaves, troops, and hunting companions. Despite this treatment, fleshdregs still seek out the company of their larger, more advanced cousins.<br/><br/>Fleshdregs vary in appearance from one another depending on factors such as the sins that powered their creation. Wrathful fleshdregs develop a more predatory form than lustful fleshdregs do, and slothful fleshdregs are little more than bloated piles of flesh atop stubby legs. Most fleshdregs stand between 3 and 4 feet tall, and weigh about 60 pounds. Greed fleshdregs are the tallest of their kind, and sloth fleshdregs the heaviest."
@@ -241,7 +231,33 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any ruins",
+            "organization": "solitary, pair, or batch (3\u20138)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sinful Bite",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Each fleshdreg possesses an additional attack depending on its sin type. The save DCs are Charisma-based.<br/><br/><i>Envy</i>: An envy fleshdreg\u2019s bite attack can temporarily interfere with magic. If an envy fleshdreg deals damage with its bite attack to any creature under a magic effect, the fleshdreg attempts a dispel check as if it were caster level 3rd against the spell effect with the highest caster level. If the dispel check is successful, the effect is suppressed for 1d4 rounds.<br/><br/><i>Gluttony</i>: A gluttony fleshdreg\u2019s bite attack can wither and weaken the body of the creature it attacks. Any creature that takes damage from a gluttony fleshdreg\u2019s bite attack must succeed at a DC 12 Fortitude save or become fatigued. Subsequent uses of this ability do not cause a bitten creature to become exhausted.<br/><br/><i>Greed</i>: A greed fleshdreg\u2019s bite can twist and warp the body of a creature it attacks. Any creature that takes damage from a greed fleshdreg\u2019s bite attack must succeed at a DC 12 Fortitude save or have its speed reduced by half and take a \u20132 penalty to Strength and Dexterity for 1d6 rounds.<br/><br/><i>Lust</i>: A lust fleshdreg\u2019s bite can addle the mind of the creature it attacks. Any creature that takes damage from a lust fleshdreg\u2019s bite attack must succeed at a DC 12 Will save or become confused for 1 round.<br/><br/><i>Pride</i>: A pride fleshdreg\u2019s bite floods the senses of the creature it attacks. Any creature that takes damage from a pride fleshdreg\u2019s bite attack must succeed at a DC 12 Will save or be blinded for 1 round and dazzled for the next 1d4 rounds.<br/><br/><i>Sloth</i>: A sloth fleshdreg\u2019s bite conjures an amber crust that covers the target and restricts the target\u2019s movements. Any creature that takes damage from a sloth fleshdreg\u2019s bite attack must succeed at a DC 12 Reflex save or take a \u20132 penalty on attack rolls and Reflex saves for 1d4 rounds.<br/><br/><i>Wrath</i>: A wrath fleshdreg\u2019s bite delivers energy damage to creatures it attacks. Any creature that takes damage from a wrath fleshdreg\u2019s bite attack takes an additional 1d4 points of energy damage (fleshdreg\u2019s choice)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sin-Scent",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Fleshdregs have scent against creatures whose nature reflects the fleshdreg\u2019s related sin. For example, a wrathful fleshdreg can scent creatures using rage effects. The GM should adjudicate what creatures a particular fleshdreg can scent."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Abaddon)<br/><b>Organization</b> solitary or mounted (Apollyon and the White Horse)<br/><b>Treasure</b> triple (<i>Usher of the Black Rain</i>, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath of Flies (Su)</b> Every 1d4 rounds as a move action, Apollyon can exhale a cloud of flies in a 60-foot cone. Those caught in the area take 18d6 points of piercing damage from the bites and are nauseated for 1d4 rounds. A creature that succeeds at a DC 42 Reflex save takes half the normal damage and negates the nausea effect. Any creature that takes any damage at all from the flies is automatically sickened for 1 minute. The flies linger for 1d4+1 rounds, gathering at the start of Apollyon\u2019s next turn into a buzzing 20-foot-square cloud centered on the cone\u2019s point of origin. Any creature that ends its turn in this cloud must succeed at a DC 42 Reflex save or take 9d6 points of piercing damage and become sickened for 1 minute. This cloud of flies can be dispersed by any area effect that deals damage or creates strong or stronger wind. All daemons and apocalypse horses are immune to the effects of breath of flies. The save DCs are Constitution-based. <br/><b>Disease (Ex)</b> Those bitten by Apollyon risk contracting soul plague, a deadly affliction that causes flesh to rot and drip away and that fills the sufferer with overwhelming despair and nausea. The soul of a creature that dies from soul plague is consigned to Abaddon to become one of the hunted of that realm, regardless of the victim\u2019s actual alignment and religion in life. Soul plague can be cured via magic but cannot be cured through normal rest. <br/><i>Soul Plague</i>: Bite\u2014injury; <i>save</i> Fort DC 42; <i>onset</i> immediate; <i>frequency</i> 1/day; <i>effect</i> 1d8 Con drain and nauseated for 24 hours. The save DC is Constitution-based. <br/><b>Father of Plagues (Sp)</b> As a swift action (but no more than once per day per target), Apollyon can inflict upon a single target within 60 feet any disease that the creature has ever previously suffered, unless the target succeeds at a DC 38 Fortitude save. The onset is immediate and this ability affects creatures immune to disease unless they are of demigod or greater stature, though creatures immune to disease gain a +4 bonus on their saving throws. The save DC is Charisma-based. <br/><b>Plague Shadow (Su)</b> Apollyon is surrounded by a carpet of plague-ridden vermin that bubbles up from the ground at his feet. Creatures within a 10-foot radius of Apollyon are subject to damage from this swarm. Any creatures in the area occupied by the plague shadow at the end of Apollyon\u2019s turn take 5d6 points of swarm damage and must succeed at a DC 38 Fortitude save or be nauseated for 1 round. The save DC is Charisma-based"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Apollyon has ruled for eons, since he seized his throne and slew all potential rivals following the disappearance of his presumed-dead predecessor. The Horseman of Pestilence is also known as the Prince of Plagues, and rules from his domain of the Plaguemere, a vast realm of swamps, flooded forests, and shallow, acidic oceans. His citadel, the Throne of Flies, is carved from a titanic spinal column and set of ribs, rumored to be those of a dead god of healing or a protean lord slaughtered by the Four and dragged back to Abaddon to feast upon. <br/><br/>While other horsemen engage in more overt acts of brutality against the mortals of the Material Plane, Apollyon and his servitors focus instead on their distinct form of creation: the crafting of new diseases and plagues capable of doing the daemons\u2019 work for them, spreading across the Material Plane in virulent pandemics. Less known is the fact that these acts of creation also extend to artifacts and magical items intended to corrupt their recipients, and even larger metaphysical infestations that work within the goddess of death\u2019s system to taint souls and condemn them to Abaddon after judgment. <br/><br/>Apollyon frequently sends his minions to the Material Plane, and their actions there leave behind contagious diseases long after they\u2019re killed or banished. When spreading ever more horrific and virulent plagues, the Horseman is not averse to granting temporary immunity to his mortal cultists in exchange for using them as carriers and living incubators, though this protection is short-lived\u2014 eventually, they too fall and their souls are carried to Abaddon amid clouds of corpse flies."
@@ -1017,7 +1007,49 @@
                     "name": "Horseman traits"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Abaddon)",
+            "organization": "solitary or mounted (Apollyon and the White Horse)",
+            "treasure": "triple (<i>Usher of the Black Rain</i>, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath of Flies",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Every 1d4 rounds as a move action, Apollyon can exhale a cloud of flies in a 60-foot cone. Those caught in the area take 18d6 points of piercing damage from the bites and are nauseated for 1d4 rounds. A creature that succeeds at a DC 42 Reflex save takes half the normal damage and negates the nausea effect. Any creature that takes any damage at all from the flies is automatically sickened for 1 minute. The flies linger for 1d4+1 rounds, gathering at the start of Apollyon\u2019s next turn into a buzzing 20-foot-square cloud centered on the cone\u2019s point of origin. Any creature that ends its turn in this cloud must succeed at a DC 42 Reflex save or take 9d6 points of piercing damage and become sickened for 1 minute. This cloud of flies can be dispersed by any area effect that deals damage or creates strong or stronger wind. All daemons and apocalypse horses are immune to the effects of breath of flies. The save DCs are Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Those bitten by Apollyon risk contracting soul plague, a deadly affliction that causes flesh to rot and drip away and that fills the sufferer with overwhelming despair and nausea. The soul of a creature that dies from soul plague is consigned to Abaddon to become one of the hunted of that realm, regardless of the victim\u2019s actual alignment and religion in life. Soul plague can be cured via magic but cannot be cured through normal rest. <br/><i>Soul Plague</i>: Bite\u2014injury; <i>save</i> Fort DC 42; <i>onset</i> immediate; <i>frequency</i> 1/day; <i>effect</i> 1d8 Con drain and nauseated for 24 hours. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Father of Plagues",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "As a swift action (but no more than once per day per target), Apollyon can inflict upon a single target within 60 feet any disease that the creature has ever previously suffered, unless the target succeeds at a DC 38 Fortitude save. The onset is immediate and this ability affects creatures immune to disease unless they are of demigod or greater stature, though creatures immune to disease gain a +4 bonus on their saving throws. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Plague Shadow",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Apollyon is surrounded by a carpet of plague-ridden vermin that bubbles up from the ground at his feet. Creatures within a 10-foot radius of Apollyon are subject to damage from this swarm. Any creatures in the area occupied by the plague shadow at the end of Apollyon\u2019s turn take 5d6 points of swarm damage and must succeed at a DC 38 Fortitude save or be nauseated for 1 round. The save DC is Charisma-based"
+            }
+        ]
     },
     "sources": [
         {

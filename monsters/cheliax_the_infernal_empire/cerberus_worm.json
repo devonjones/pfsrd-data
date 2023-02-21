@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any oceans<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Elusive (Su)</b> A cerberus worm is rarely encountered unless it wishes to be. As a full-round action while in water, a cerberus worm can move up to its run speed (300 feet) without leaving any sign of its passing, as though affected by a <i>pass without trace</i> spell. An elusive cerberus worm gains a +40 circumstance bonus on its Stealth check. In addition, except when in combat, a cerberus worm is considered to be under the effects of a <i>nondetection</i> spell. Both of these spell effects function at caster level 20th and cannot be dispelled.<br/><br/><b>Poison (Ex)</b> Wreathe in poison\u2014inhaled; <i>save</i> Fortitude DC 26; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d2 Constitution damage; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based.<br/><br/><b>Wreathe in Poison (Ex)</b> Once per day, as a standard action that does not provoke attacks of opportunity, a cerberus worm can wreathe itself in a poisonous mist that resembles black, licking flames for 3 minutes. This poisonous cloud surrounds the cerberus worm in a 30-foot radius, and creatures inside the radius are exposed to the cerberus worm\u2019s poison. A creature that successfully saves against the poison once need not attempt additional saving throws while it remains in the poison. If a creature leaves the wreath and reenters it, however, the creature is again exposed to the poison and must attempt another saving throw."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Believed to be the only beast of its kind, the cerberus worm is known for ambushing ships in Hellmouth Gulf, smashing them and eating their crew members alive. Because of the cerberus worm\u2019s flame-like poison wreath, and because all reports of sightings have occurred in the past few decades, most believe the creature is some sort of infernal monstrosity tied to House Thrune. While such claims are untrue, the Chelish government has done little to quell the rumors, using the citizens\u2019 own fears of its power to deter travel through Hellmouth Gulf and rebellion on its shores. In truth, the cerberus worm plaguing the gulf is but one of many such creatures living in the depths of the Arcadian Ocean. Why it ventured to the surface in recent years is a mystery.<br/><br/>A cerberus worm is approximately 45 feet long and weighs 3,200 pounds."
@@ -456,7 +446,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any oceans",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Elusive",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A cerberus worm is rarely encountered unless it wishes to be. As a full-round action while in water, a cerberus worm can move up to its run speed (300 feet) without leaving any sign of its passing, as though affected by a <i>pass without trace</i> spell. An elusive cerberus worm gains a +40 circumstance bonus on its Stealth check. In addition, except when in combat, a cerberus worm is considered to be under the effects of a <i>nondetection</i> spell. Both of these spell effects function at caster level 20th and cannot be dispelled."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Wreathe in poison\u2014inhaled; <i>save</i> Fortitude DC 26; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d2 Constitution damage; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Wreathe in poison\u2014inhaled",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fortitude DC 26",
+                        "save_type": "Fort",
+                        "dc": 26
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Constitution damage",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Wreathe in Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per day, as a standard action that does not provoke attacks of opportunity, a cerberus worm can wreathe itself in a poisonous mist that resembles black, licking flames for 3 minutes. This poisonous cloud surrounds the cerberus worm in a 30-foot radius, and creatures inside the radius are exposed to the cerberus worm\u2019s poison. A creature that successfully saves against the poison once need not attempt additional saving throws while it remains in the poison. If a creature leaves the wreath and reenters it, however, the creature is again exposed to the poison and must attempt another saving throw."
+            }
+        ]
     },
     "sources": [
         {

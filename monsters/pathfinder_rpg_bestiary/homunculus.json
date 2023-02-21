@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex) </b>Bite\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/minute for 60 minutes; <i>effect </i>sleep for 1 minute; <i>cure </i>1 save. The save DC is Constitution-based and includes a +2 racial bonus.<br/><br/><b>Telepathic Link (Su)</b> A homunculus cannot speak, but the process of creating one links it telepathically with its creator. A homunculus knows what its master knows and can convey to him or her everything it sees and hears, out to a distance of 1,500 feet."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A homunculus is a miniature servant created by a spellcaster from his own blood. They are weak combatants but make effective spies, messengers, and scouts. A homunculus\u2019s creator determines its precise features; some are more refined looking, but most creators don\u2019t bother to improve the creature\u2019s appearance beyond the minimum necessary for functioning.<br/><br/>Homunculi are little more than tools designed to carry out assigned tasks. They are extensions of their creators, sharing the same alignment and basic nature. A homunculus never willingly travels more than a mile from its master, though it can be removed forcibly. If this occurs, the creature does everything in its power to return to this range, as it cannot communicate with its master beyond this distance. An attack that destroys a homunculus deals 2d10 points of damage to its master. If the creature\u2019s master is slain, the homunculus goes insane\u2014it loses its Intelligence score, all feats, and all skill ranks, and generally claims the immediate surroundings as its domain, mindlessly attacking any who intrude upon its lair.<br/><br/>On rare occasions, a homunculus freed from its servitude rises above its master\u2019s original intent and becomes more than a half-insane construct guardian of a long-forgotten lair. In some cases, a homunculus might even come to see itself as the rightful heir to its master\u2019s legacy, or even the reincarnated spirit of the master himself."
@@ -260,7 +250,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/minute for 60 minutes; <i>effect </i>sleep for 1 minute; <i>cure </i>1 save. The save DC is Constitution-based and includes a +2 racial bonus.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "frequency": "1/minute for 60 minutes",
+                    "effect": "sleep for 1 minute",
+                    "cure": "1 save. The save DC is Constitution-based and includes a +2 racial bonus."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Telepathic Link",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A homunculus cannot speak, but the process of creating one links it telepathically with its creator. A homunculus knows what its master knows and can convey to him or her everything it sees and hears, out to a distance of 1,500 feet."
+            }
+        ]
     },
     "sources": [
         {

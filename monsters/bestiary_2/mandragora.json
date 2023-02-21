@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> cold or temperate forests<br/><b>Organization</b> solitary, pair, or grove (3\u201312)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Slam\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 4 rounds; <i>effect </i>confusion and fatigue; <i>cure </i>no saves but \u201cact normally\u201d result on the confusion behavior table ends the effect.<br/><br/><b>Shriek (Su) </b>Once per day as a standard action, a mandragora can give voice to an unsettling shriek. All creatures within a 30-foot spread of a shrieking mandragora must make a DC 15 Will save or become nauseated for 1d4 rounds. This is a sonic, mind-affecting ability. The save DC is Constitution-based.<br/><br/><b>Vulnerable to Supernatural Darkness (Ex)</b> In areas of supernatural darkness (such as those created by <i>deeper darkness</i>, but not by <i>darkness</i>), a mandragora is slowed, as the <i>slow </i>spell."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A mandragora rises spontaneously from a mandrake root that has drawn nutrition from the corpse or ichor of a demon. A typical mandragora stands at just over 3 feet tall and only weighs 30 pounds. However, its size hides the creature\u2019s fantastic strength and brutality. When a mandragora attacks, its fingers grow into whipping, thorny vines nearly 10 feet long, with which it makes its slam attacks.<br/><br/>A mandragora rarely strays far from its lair amid tangled roots or vines, but when it encounters any other creature, it attacks regardless of the odds. However, a mandragora can usually recognize druids and does not attack them or their animal companions unless they attack it first. It has no qualms about attacking a druid\u2019s allies.<br/><br/>When mandragora poison is mixed with its thick, gooey, sap-like blood and 1,000 gp worth of alchemical reagents, the resulting fluid can be used as a focus for the <i>scrying </i>spell. The fluid only lasts for the duration of the spell\u2019s casting time and resulting effects but the subject of the spell takes a \u20134 penalty on the save to resist it.<br/><br/>A mandrake root that is growing on or near a demon\u2019s corpse or ichor has a 2% chance of awakening as a mandragora within a day of first absorbing the tainted material. A creature that wants to create a mandragora can do so with alchemy; the process requires a day of work, a mandrake root, several pints of ichor or the body of a demon of CR 6 or above, and a successful DC 25 Craft (alchemy) check. The newly created mandragora is hostile, even to its creator."
@@ -375,7 +365,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "cold or temperate forests",
+            "organization": "solitary, pair, or grove (3\u201312)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Slam\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 4 rounds; <i>effect </i>confusion and fatigue; <i>cure </i>no saves but \u201cact normally\u201d result on the confusion behavior table ends the effect.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Slam\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "confusion and fatigue",
+                    "cure": "no saves but \u201cact normally\u201d result on the confusion behavior table ends the effect."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Shriek",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per day as a standard action, a mandragora can give voice to an unsettling shriek. All creatures within a 30-foot spread of a shrieking mandragora must make a DC 15 Will save or become nauseated for 1d4 rounds. This is a sonic, mind-affecting ability. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vulnerable to Supernatural Darkness",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "In areas of supernatural darkness (such as those created by <i>deeper darkness</i>, but not by <i>darkness</i>), a mandragora is slowed, as the <i>slow </i>spell."
+            }
+        ]
     },
     "sources": [
         {

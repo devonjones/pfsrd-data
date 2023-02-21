@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm deserts, plains, or hills <br/><b>Organization</b> solitary <br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Corrosive Blood (Ex)</b> A death worm\u2019s blood can corrode metal on contact. If a creature damages a death worm with a piercing or slashing weapon made of metal, the creature\u2019s blood deals 3d6 points of acid damage to the metal weapon (unlike most forms of energy damage, this damage is not halved when applied to a metal object, although it does still have to penetrate the metal\u2019s hardness). The weapon\u2019s wielder can halve the damage the weapon takes by making a successful DC 17 Reflex save. Creatures made of metal that deal slashing or piercing damage to a death worm with a natural attack take 3d6 points of acid damage (a DC 17 Reflex save halves this damage). The corrosive elements of the blood fade 1 round after it leaves the worm\u2019s body or the worm dies. The save DC is Constitution-based. <br/><br/><b>Electrical Jolt (Su)</b> A death worm can fire a jolt of electricity from its mouth as a standard action. The range increment for this ranged touch attack is 60 feet. <br/><br/><b>Poison (Ex)</b> Bite\u2014injury, or skin\u2014contact; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con damage; <i>cure </i>2 saves. <br/><br/><b>Venomous Skin (Ex)</b> A death worm\u2019s skin secretes a noxious, waxy substance. This venomous sheen poisons any creature that touches a death worm, either by making a successful attack with an unarmed strike or natural weapon or with a touch attack. A creature that grapples a death worm is also exposed to the creature\u2019s venomous skin."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The reclusive death worm is much feared in the deserts, badlands, and steppes in which it dwells, for it brings to a battle multiple harrowing ways of inflicting death upon its foes\u2014acid, lightning, poison, and its ravenous jaws. The creatures are remarkably good at hiding amid the sands and rocks of their favored terrain, and devilishly efficient at selecting foes that they can easily kill. This combination makes stories of these creatures hard to confirm, and in most urban centers, common wisdom is that the tales of death worms are fabrications\u2014attempts to impress city folk or hallucinations born of too much drink. <br/><br/>A death worm is 15 feet long and weighs 1,200 pounds\u2014although rumors of much larger death worms persist."
@@ -356,7 +346,65 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm deserts, plains, or hills",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Corrosive Blood",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A death worm\u2019s blood can corrode metal on contact. If a creature damages a death worm with a piercing or slashing weapon made of metal, the creature\u2019s blood deals 3d6 points of acid damage to the metal weapon (unlike most forms of energy damage, this damage is not halved when applied to a metal object, although it does still have to penetrate the metal\u2019s hardness). The weapon\u2019s wielder can halve the damage the weapon takes by making a successful DC 17 Reflex save. Creatures made of metal that deal slashing or piercing damage to a death worm with a natural attack take 3d6 points of acid damage (a DC 17 Reflex save halves this damage). The corrosive elements of the blood fade 1 round after it leaves the worm\u2019s body or the worm dies. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Electrical Jolt",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A death worm can fire a jolt of electricity from its mouth as a standard action. The range increment for this ranged touch attack is 60 feet. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury, or skin\u2014contact; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con damage; <i>cure </i>2 saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury, or skin\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Con damage",
+                    "cure": "2 saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Venomous Skin",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A death worm\u2019s skin secretes a noxious, waxy substance. This venomous sheen poisons any creature that touches a death worm, either by making a successful attack with an unarmed strike or natural weapon or with a touch attack. A creature that grapples a death worm is also exposed to the creature\u2019s venomous skin."
+            }
+        ]
     },
     "sources": [
         {

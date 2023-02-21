@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Abyss)<br/><b>Organization</b> solitary (unique)<br/><b>Treasure</b> triple (<i>Riftcarver</i>, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su)</b> Once every 1d4 rounds as a swift action, Deskari can spit out a line of noxious black slime in a 120- foot line that creates a 20-foot-radius-spread puddle of the stuff on the ground where the line terminates. Any creature caught in this area of effect takes 20d10 points of acid damage and is subject to the effects of Deskari\u2019s poison. A successful DC 42 Reflex save halves the damage, but does not mitigate the poison\u2019s effects. The line and puddle created by this attack remain as active acid on the ground for 1d4 rounds, affecting any creatures that move through an affected area. Damage caused by this breath weapon does not persist into additional rounds, but on the round a creature takes this damage, it is considered to be taking continuous damage for the purposes of spellcasting and concentration checks. The save DC is Constitution-based.<br/><br/><b>Enhanced Venom (Su)</b> Any poisons created by Deskari (or even those used by him) become enhanced, and can affect creatures normally immune to poison. If an affected creature is mythic and is normally immune to poison, it instead receives a +4 bonus on its saving throw against Deskari\u2019s poison effects.<br/><br/><b>Infestation (Su)</b> Whenever a creature becomes poisoned by Deskari, it also becomes infested with thousands of microscopic demonic eggs that quickly multiply and spread throughout the victim\u2019s bloodstream and flesh alike. Once infested, a creature remains infested even after the poison\u2019s effects end or are cured. A creature that has been infested by Deskari is recognized by all mindless swarms as a host, and such swarms never deal damage to the creature unless influenced and compelled to do so by an outside influence. An infested creature takes a \u20134 penalty on all saving throws made against Deskari\u2019s attacks or spells cast by his clerics. As a swift action, Deskari may command a creature\u2019s infestation to accelerate; this deals 20d6 points of damage and stuns the target for 1 round (a successful DC 42 Fortitude save halves the damage and negates the stun effect) as the eggs hatch and a fiendish locust swarm (<i>Pathfinder RPG Bestiary 4 </i>183) bursts out of the creature\u2019s body (ending the infestation). Infestation is a disease effect, and the save DC is Constitution-based.<br/><br/><b>Poison (Ex)</b> Bite, breath weapon, sting, or <i>Riftcarver</i>\u2014injury; <i>save </i>Fort DC 42; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Constitution drain plus infestation; <i>cure </i>3 consecutive saves. The save DC is Constitution-based.<br/><br/><b>Rasping Armor (Su)</b> The armor plates that protect Deskari\u2019s body rasp together whenever he is damaged by a physical attack, creating a discordant shrieking and grinding sound. Every time a creature strikes Deskari with an attack that deals bludgeoning, force, piercing, or slashing damage, all creatures within 10 feet of Deskari must succeed at a DC 42 Fortitude save or be sickened for 1d6 rounds. A sickened creature that fails this save becomes staggered for 1 round. A staggered creature that fails this save becomes nauseated for 1 round. Finally, a nauseated creature that fails this save becomes stunned for 1d6 rounds. This is a mind-affecting sonic effect that does not affect demons. The save DC is Constitution-based.<br/><br/><b>Swarm Master (Su)</b> Deskari is immune to swarm damage and other swarm effects (such as distraction). As a swift action, he can direct the movement of any swarm within 30 feet. An intelligent swarm can resist this compulsion by succeeding at a DC 36 Will save. Any swarm created by or conjured by Deskari deals +3d6 points of swarm damage, and the damage caused by such a swarm is treated as chaotic, epic, and evil for the purpose of overcoming damage reduction. The save DC is Charisma-based.<br/><br/><b>Swarmsight (Su)</b> Deskari can see through the eyes of any swarm he commands or controls, including the swarm of biting flies that makes up his wings (this swarm, incidentally, grants him all-around vision).<br/><br/><b>Wall Crawler (Su)</b> Deskari can climb any vertical surface with ease and never has to attempt Climb checks to avoid falling as a result of taking damage. This grants him a +16 racial bonus on Climb checks."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Known as the Lord of the Locust Host and the Usher of the Apocalypse, Deskari has long plagued the region of Sarkoris, ever since he discovered a strange thinness between that nation and his own Abyssal realm. His first attempt to capitalize upon this strange feature ended with his defeat at Aroden\u2019s hands, but after the god\u2019s death at the outset of the Age of Lost Omens, Deskari and his cult wasted no time in opening the Worldwound to allow the demon lord\u2019s plans for Golarion to continue.<br/><br/>Deskari carved his realm from the raw matter of the Abyss using a great scythe called <i>Riftcarver </i>(see page 63), a weapon he crafted from the remains of the strange creature his father, Pazuzu, mated with tens of thousands of years ago. Today, Pazuzu and Deskari have what passes as a cordial relationship\u2014the two demon lords do not work together, but neither do they oppose each other\u2019s goals on the Material Plane and beyond."
@@ -1064,7 +1054,81 @@
                     "name": "wall crawler"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Abyss)",
+            "organization": "solitary (unique)",
+            "treasure": "triple (<i>Riftcarver</i>, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds as a swift action, Deskari can spit out a line of noxious black slime in a 120- foot line that creates a 20-foot-radius-spread puddle of the stuff on the ground where the line terminates. Any creature caught in this area of effect takes 20d10 points of acid damage and is subject to the effects of Deskari\u2019s poison. A successful DC 42 Reflex save halves the damage, but does not mitigate the poison\u2019s effects. The line and puddle created by this attack remain as active acid on the ground for 1d4 rounds, affecting any creatures that move through an affected area. Damage caused by this breath weapon does not persist into additional rounds, but on the round a creature takes this damage, it is considered to be taking continuous damage for the purposes of spellcasting and concentration checks. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Enhanced Venom",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any poisons created by Deskari (or even those used by him) become enhanced, and can affect creatures normally immune to poison. If an affected creature is mythic and is normally immune to poison, it instead receives a +4 bonus on its saving throw against Deskari\u2019s poison effects."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Infestation",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Whenever a creature becomes poisoned by Deskari, it also becomes infested with thousands of microscopic demonic eggs that quickly multiply and spread throughout the victim\u2019s bloodstream and flesh alike. Once infested, a creature remains infested even after the poison\u2019s effects end or are cured. A creature that has been infested by Deskari is recognized by all mindless swarms as a host, and such swarms never deal damage to the creature unless influenced and compelled to do so by an outside influence. An infested creature takes a \u20134 penalty on all saving throws made against Deskari\u2019s attacks or spells cast by his clerics. As a swift action, Deskari may command a creature\u2019s infestation to accelerate; this deals 20d6 points of damage and stuns the target for 1 round (a successful DC 42 Fortitude save halves the damage and negates the stun effect) as the eggs hatch and a fiendish locust swarm (<i>Pathfinder RPG Bestiary 4 </i>183) bursts out of the creature\u2019s body (ending the infestation). Infestation is a disease effect, and the save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite, breath weapon, sting, or <i>Riftcarver</i>\u2014injury; <i>save </i>Fort DC 42; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Constitution drain plus infestation; <i>cure </i>3 consecutive saves. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Rasping Armor",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "The armor plates that protect Deskari\u2019s body rasp together whenever he is damaged by a physical attack, creating a discordant shrieking and grinding sound. Every time a creature strikes Deskari with an attack that deals bludgeoning, force, piercing, or slashing damage, all creatures within 10 feet of Deskari must succeed at a DC 42 Fortitude save or be sickened for 1d6 rounds. A sickened creature that fails this save becomes staggered for 1 round. A staggered creature that fails this save becomes nauseated for 1 round. Finally, a nauseated creature that fails this save becomes stunned for 1d6 rounds. This is a mind-affecting sonic effect that does not affect demons. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Swarm Master",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Deskari is immune to swarm damage and other swarm effects (such as distraction). As a swift action, he can direct the movement of any swarm within 30 feet. An intelligent swarm can resist this compulsion by succeeding at a DC 36 Will save. Any swarm created by or conjured by Deskari deals +3d6 points of swarm damage, and the damage caused by such a swarm is treated as chaotic, epic, and evil for the purpose of overcoming damage reduction. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Swarmsight",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Deskari can see through the eyes of any swarm he commands or controls, including the swarm of biting flies that makes up his wings (this swarm, incidentally, grants him all-around vision)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Wall Crawler",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Deskari can climb any vertical surface with ease and never has to attempt Climb checks to avoid falling as a result of taking damage. This grants him a +16 racial bonus on Climb checks."
+            }
+        ]
     },
     "sources": [
         {

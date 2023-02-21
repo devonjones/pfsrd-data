@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land (usually jungles or underground)<br/><b>Organization</b> solitary, pair, or cult (3\u201312)<br/><b>Treasure</b> NPC gear (masterwork dagger, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex) </b>Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Str; <i>cure </i>2 saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "To the serpentfolk, the pursuit of knowledge and magic is the highest goal. Their legends speak of how humanity rose to power only through the theft of serpent magic, a legend that may form the basis of the hatred toward humanity most serpentfolk harbor. They view themselves as the undisputed masters of magic, be it arcane or divine. Yet despite this, the majority of serpentfolk today are degenerates who have devolved to the point of primeval savagery and have lost much of their magical legacy\u2014more civilized serpentfolk generally regard these degenerates with shame and disdain.<br/><br/>Serpentfolk are 6 feet tall and weigh 120 pounds. Degenerates are only 5 feet tall but weigh 200 pounds. All serpentfolk are quite long-lived, and generally live to the age of 500."
@@ -428,7 +418,41 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land (usually jungles or underground)",
+            "organization": "solitary, pair, or cult (3\u201312)",
+            "treasure": "NPC gear (masterwork dagger, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Str; <i>cure </i>2 saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Str",
+                    "cure": "2 saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

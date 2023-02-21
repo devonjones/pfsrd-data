@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary<br/><b>Treasure</b> double"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Deific</b> Conqueror worms can grant divine spells to their worshipers. Granting spells does not require any specific action on a conqueror worm\u2019s behalf. Conqueror worms grant access to the domains of Charm, Evil, Nobility, and Trickery, and their favored weapon varies but is always a simple weapon (daggers and sickles being the most common choices). Each conqueror worm has its own unique holy symbol, although typically it resembles a ring of eyes. <br/><br/><b>Mental Invader (Su)</b> A conqueror worm infects the minds of others from afar, allowing it to control its puppets without leaving the safety of the earth\u2019s depths. When a conqueror worm communicates with a creature mentally, such as by using telepathy or spells such as dream, it can attempt to form a lasting mental connection with that creature. The target can resist this connection with a successful DC 33 Will save. A target that succeeds at this save is immune to that conqueror worm\u2019s mental invader ability forever. Once a connection is formed, the worm can communicate with the bonded creature using telepathy over any distance, and can target the bonded creature with mind-affecting spells and effects regardless of range. A worm can form bonds with a number of creatures equal to its Intelligence modifier (10 for the typical conqueror worm). If a new bond would exceed this limit, the worm must choose to break one of its previous connections. The effects of a bond are suppressed while the worm and the bonded creature are on different planes. A bond can otherwise be broken only via a <i>break enchantment, miracle</i>, or <i>wish</i> spell cast on the bonded creature, or by the worm\u2019s death. This is a mind-affecting effect. The save DC is Charisma-based. <br/><br/><b>Telepathic Escape (Su)</b> A conqueror worm can escape death by casting its mind out of its body at the moment of death. Up to once per day, when an attack, spell, or effect would reduce a conqueror worm to 0 or fewer hit points or otherwise kill it instantly, it can transfer its mind to one of the creatures it has formed a connection with using its mental invader ability. The target can attempt a DC 33 Will save to resist being overtaken. If the target succeeds, the conqueror worm can be killed normally. If the target fails, the conqueror worm transfers its soul into the bonded creature\u2019s body. This functions as the spell <i>possession</i> (CL 21st) except the possession is permanent. A host body possessed by a conqueror worm in this way undergoes terrible changes to its physiology. Every day, the host must succeed at a DC 33 Fortitude save or take 1d6 points of Charisma drain. Over time, the host slowly grows more wormlike in appearance, losing body hair, growing obese, and taking on a pale yellow-white coloration. When the host\u2019s Charisma score is drained to 0, an ectoplasmic cocoon forms around the creature. Over the course of the next 24 hours, the host grows to an enormous size, and at the end of this time emerges in a brand new body as a new conqueror worm that retains the memories of its previous incarnation, at which point the host creature is effectively dead (and can be resurrected normally). If the host is slain before this transformation completes, the conqueror worm dies as well. The effect can also be ended by any effect that successfully expels the conqueror worm\u2019s possessing spirit from the host. This is a mind-affecting effect. The save DCs are Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Though conqueror worms resemble immense vermin, those who mistake them for mindless creatures suffer terribly for their mistake. In truth, conqueror worms are creatures of vast intellect and equal depravity. These monstrous beings exist only to rule \u201clesser civilizations\u201d from the shadows, and revel in the complete control of an unknowing society through the remote manipulation of its supposed leaders. <br/><br/>A conqueror worm prefers to play with its toys before breaking them. To do so, it burrows its way below a target nation\u2019s capital. From there, the conqueror worm makes mental contact with the city\u2019s leaders, forming sinister psychic connections with those in power. The worm beguiles some of these leaders with promises of wealth or power. Others, the worm controls outright using the considerable psychic magic at its disposal. Regardless, the end result is the same; without intervention, all end up as puppets dancing to the conqueror worm\u2019s whims. <br/><br/>Once a conqueror worm seizes control of a city or nation, that region\u2019s downfall can take years, if not decades\u2014for conqueror worms are surprisingly theatrical. A conqueror worm may direct a kingdom\u2019s leader to enact cruel or tyrannical laws, only to then use a second puppet to inflame the populace into revolt. Once the fires of revolution die down, the worm might then expose the rebel leader as a traitor or depraved criminal, causing the rebellion to turn on itself and descend again into violence. All the while, the conqueror worm watches in delight at the madness, sin, and horror it inspires in others. <br/><br/>Eventually a conqueror worm tires of its games, and plots to destroy its subjects. Often it does this by sending its puppets to war against a nearby nation. The horrors of war devastate not only the worm\u2019s own populace, but also those of its neighbors, bringing perverse joy to the worm\u2019s many hearts. However, a special fate awaits the worm\u2019s favorite servants, who are brought down into its subterranean realm so they can glimpse their master\u2019s true form before being impaled on the conqueror worm\u2019s goreslick jaws. Its work finally finished, the conqueror worm then seeks out a new realm to subjugate. <br/><br/>Perhaps the most terrifying and peculiar aspect of the conqueror worm is its ability to form cults. Whether through accumulation of psychic power or some hidden divine spark, conqueror worms are capable of granting spells to creatures that worship them. A conqueror worm exploits this ability to attract cultists, which it uses to further its goals in the civilized world above. Although such cults are absolutely loyal to the conqueror worm, which they worship as an all-knowing and all-powerful god, the conqueror worm usually considers its mortal followers expendable. <br/><br/>A conqueror worm is 80 feet long and weighs 70 tons."
@@ -1116,7 +1106,41 @@
                     "name": "deific"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary",
+            "treasure": "double"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Mental Invader",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A conqueror worm infects the minds of others from afar, allowing it to control its puppets without leaving the safety of the earth\u2019s depths. When a conqueror worm communicates with a creature mentally, such as by using telepathy or spells such as dream, it can attempt to form a lasting mental connection with that creature. The target can resist this connection with a successful DC 33 Will save. A target that succeeds at this save is immune to that conqueror worm\u2019s mental invader ability forever. Once a connection is formed, the worm can communicate with the bonded creature using telepathy over any distance, and can target the bonded creature with mind-affecting spells and effects regardless of range. A worm can form bonds with a number of creatures equal to its Intelligence modifier (10 for the typical conqueror worm). If a new bond would exceed this limit, the worm must choose to break one of its previous connections. The effects of a bond are suppressed while the worm and the bonded creature are on different planes. A bond can otherwise be broken only via a <i>break enchantment, miracle</i>, or <i>wish</i> spell cast on the bonded creature, or by the worm\u2019s death. This is a mind-affecting effect. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Telepathic Escape",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A conqueror worm can escape death by casting its mind out of its body at the moment of death. Up to once per day, when an attack, spell, or effect would reduce a conqueror worm to 0 or fewer hit points or otherwise kill it instantly, it can transfer its mind to one of the creatures it has formed a connection with using its mental invader ability. The target can attempt a DC 33 Will save to resist being overtaken. If the target succeeds, the conqueror worm can be killed normally. If the target fails, the conqueror worm transfers its soul into the bonded creature\u2019s body. This functions as the spell <i>possession</i> (CL 21st) except the possession is permanent. A host body possessed by a conqueror worm in this way undergoes terrible changes to its physiology. Every day, the host must succeed at a DC 33 Fortitude save or take 1d6 points of Charisma drain. Over time, the host slowly grows more wormlike in appearance, losing body hair, growing obese, and taking on a pale yellow-white coloration. When the host\u2019s Charisma score is drained to 0, an ectoplasmic cocoon forms around the creature. Over the course of the next 24 hours, the host grows to an enormous size, and at the end of this time emerges in a brand new body as a new conqueror worm that retains the memories of its previous incarnation, at which point the host creature is effectively dead (and can be resurrected normally). If the host is slain before this transformation completes, the conqueror worm dies as well. The effect can also be ended by any effect that successfully expels the conqueror worm\u2019s possessing spirit from the host. This is a mind-affecting effect. The save DCs are Charisma-based."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Deific",
+                "text": "Conqueror worms can grant divine spells to their worshipers. Granting spells does not require any specific action on a conqueror worm\u2019s behalf. Conqueror worms grant access to the domains of Charm, Evil, Nobility, and Trickery, and their favored weapon varies but is always a simple weapon (daggers and sickles being the most common choices). Each conqueror worm has its own unique holy symbol, although typically it resembles a ring of eyes. "
+            }
+        ]
     },
     "sources": [
         {

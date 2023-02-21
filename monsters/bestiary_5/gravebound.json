@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land (graveyards)<br/><b>Organization</b> solitary, pair, or tomb (3\u20136)<br/><b>Treasure</b> standard (shovel, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Bury Alive (Su)</b> As a full-round action, a gravebound can manipulate the ground to fill in a pit that it created with its gravedigger ability. Any creature the gravedigger buries alive is trapped and can\u2019t move, and begins to <a href=\"Rules.aspx?Name=Suffocation&Category=Environmental%20Rules\" style=\"text-decoration:underline\">suffocate</a>. Creatures outside of the pit can dig out the buried creature. Each 5-foot cube of dirt weighs 3,000 pounds, and a creature can move 5 times her maximum load worth of dirt per minute, or 10 times her maximum load if she has a shovel or other appropriate tool. Once all squares of dirt above a creature\u2019s head have been removed, the creature can breathe, and can escape with a DC 15 Strength or Escape Artist check. A standing Medium creature typically has its head buried under 5 feet of earth (3,000 pounds). For a Small creature, this is increased to roughly 7 feet of earth (4,200 pounds). If the creature was prone when it was buried, its head is buried under the full 10 feet of earth (6,000 pounds).<br/><br/><b>Disease (Su)</b><i>False Death</i>: Injury; <i>save </i>Fort DC 15; <i>onset </i>1 day; <i>frequency </i>1/day; <i>effect </i>1d4 Cha damage; <i>cure </i>2 consecutive saves. The save DC is Charisma-based. A creature whose Charisma score is reduced to 0 by false death falls into a deep coma and appears to be dead to anyone who doesn\u2019t succeed at a DC 25 Heal check. After one week, the affected creature wakes up with all of its Charisma restored.<br/><br/><b>Gravedigger (Su)</b> As a standard action, a gravebound can open up a 10-foot-deep pit in the earth underneath a single creature. The creature can avoid falling into the pit with a successful DC 17 Reflex save. Because the pit is made of soft earth, the falling damage the creature takes is nonlethal damage. The save DC is Charisma-based.<br/><br/><b>Tied to the Grave (Ex)</b> A gravebound can\u2019t venture more than 1,000 feet from the spot where its body is buried.<br/><br/><b>Vulnerable to Consecration (Ex)</b> Whenever a gravebound is within the area of a <a href=\"SpellDisplay.aspx?ItemName=Consecrate\" style=\"text-decoration:underline\"><i>consecrate</i></a> effect, it must succeed at a DC 15 Fortitude save at the beginning of each of its turns or be staggered for 1 round."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Gravebound are hateful creatures formed when the souls of people who were buried alive return, animating grave dirt to form new bodies. Obsessed with their own deaths, gravebound can\u2019t travel far from their resting places, but they seethe with the need to inflict their fate upon others. A gravebound digs graves and attempts to bury victims alive in them, and wounds taken at its hands can cause a victim to appear to be dead. Each gravebound arises with a shovel attached to its back\u2014a mark of its obsession\u2014 and those who slay a gravebound can take the shovel to assist buried allies before they suffocate."
@@ -314,7 +304,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land (graveyards)",
+            "organization": "solitary, pair, or tomb (3\u20136)",
+            "treasure": "standard (shovel, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Bury Alive",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a full-round action, a gravebound can manipulate the ground to fill in a pit that it created with its gravedigger ability. Any creature the gravedigger buries alive is trapped and can\u2019t move, and begins to <a href=\"Rules.aspx?Name=Suffocation&amp;Category=Environmental%20Rules\" style=\"text-decoration:underline\">suffocate</a>. Creatures outside of the pit can dig out the buried creature. Each 5-foot cube of dirt weighs 3,000 pounds, and a creature can move 5 times her maximum load worth of dirt per minute, or 10 times her maximum load if she has a shovel or other appropriate tool. Once all squares of dirt above a creature\u2019s head have been removed, the creature can breathe, and can escape with a DC 15 Strength or Escape Artist check. A standing Medium creature typically has its head buried under 5 feet of earth (3,000 pounds). For a Small creature, this is increased to roughly 7 feet of earth (4,200 pounds). If the creature was prone when it was buried, its head is buried under the full 10 feet of earth (6,000 pounds)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "<i>False Death</i>: Injury; <i>save </i>Fort DC 15; <i>onset </i>1 day; <i>frequency </i>1/day; <i>effect </i>1d4 Cha damage; <i>cure </i>2 consecutive saves. The save DC is Charisma-based. A creature whose Charisma score is reduced to 0 by false death falls into a deep coma and appears to be dead to anyone who doesn\u2019t succeed at a DC 25 Heal check. After one week, the affected creature wakes up with all of its Charisma restored."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Gravedigger",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a standard action, a gravebound can open up a 10-foot-deep pit in the earth underneath a single creature. The creature can avoid falling into the pit with a successful DC 17 Reflex save. Because the pit is made of soft earth, the falling damage the creature takes is nonlethal damage. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Tied to the Grave",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A gravebound can\u2019t venture more than 1,000 feet from the spot where its body is buried."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vulnerable to Consecration",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Whenever a gravebound is within the area of a <a href=\"SpellDisplay.aspx?ItemName=Consecrate\" style=\"text-decoration:underline\"><i>consecrate</i></a> effect, it must succeed at a DC 15 Fortitude save at the beginning of each of its turns or be staggered for 1 round."
+            }
+        ]
     },
     "sources": [
         {

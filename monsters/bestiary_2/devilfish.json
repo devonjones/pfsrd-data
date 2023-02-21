@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any aquatic <br/><b>Organization</b> solitary <br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Savage bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Str; <i>cure </i>2 consecutive saves. <br/><br/><b>Savage Bite (Ex)</b> A devilfish can attack with its savage bite whenever it makes a successful grapple check. This attack is in place of any other action made with a successful grapple check. The bite threatens a critical hit on a roll of 18\u201320, and injects the target with poison as well. <br/><br/><b>Unholy Blood (Su)</b> A devilfish\u2019s blood is infused with fiendish magic. Once per day, as a swift action, a devilfish can emit a night-black cloud of this foul liquid, filling a 20-foot-radius cloud if underwater, or a 20-foot-radius burst on land. In water, the blood provides total concealment for everything but a devilfish (which can see through the blood with ease); on land the slippery blood coats the ground, making the area difficult terrain. The blood persists for 1 minute before fading. Anyone who enters a cloud of the blood in the water or who is within the area of a burst of blood on land must make a DC 15 Fortitude save or be nauseated for 1d4 rounds\u2014this save need be made only once per cloud. The save DC is Constitution-based. <br/><br/><b>Water Dependency (Ex)</b> A devilfish can survive out of the water for 1 hour, after which it becomes fatigued. After 2 hours, the devilfish becomes exhausted and begins to suffocate (<i>Pathfinder RPG Core Rulebook</i> 445)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Although the devilfish superficially resembles a seven-armed octopus, it is an altogether different creature. Possessing a rudimentary intellect, a devilfish can understand and even speak a few words and phrases in various languages, although when it speaks, it has a tendency to mix languages together, making it somewhat difficult to understand for anyone who doesn\u2019t speak all the languages known by the devilfish. <br/><br/>More than those of a mere animal, the devilfish\u2019s intelligence and several of its abilities are gifts from a fiendish legacy\u2014most sages believe that the original devilfish were once outsiders from the Abyss, and that over the course of thousands of years they became true natives of the Material Plane\u2019s oceans. Rumors of far more intelligent devilfish dwelling in the deepest ocean trenches persist, although if these rumors are true, these deep-dwelling devilfish do not often come to the surface. <br/><br/>A devilfish is 10 feet long and weighs 500 pounds."
@@ -346,7 +336,65 @@
                     "name": "water dependency"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any aquatic",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Savage bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Str; <i>cure </i>2 consecutive saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Savage bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Str",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Savage Bite",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A devilfish can attack with its savage bite whenever it makes a successful grapple check. This attack is in place of any other action made with a successful grapple check. The bite threatens a critical hit on a roll of 18\u201320, and injects the target with poison as well. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Unholy Blood",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A devilfish\u2019s blood is infused with fiendish magic. Once per day, as a swift action, a devilfish can emit a night-black cloud of this foul liquid, filling a 20-foot-radius cloud if underwater, or a 20-foot-radius burst on land. In water, the blood provides total concealment for everything but a devilfish (which can see through the blood with ease); on land the slippery blood coats the ground, making the area difficult terrain. The blood persists for 1 minute before fading. Anyone who enters a cloud of the blood in the water or who is within the area of a burst of blood on land must make a DC 15 Fortitude save or be nauseated for 1d4 rounds\u2014this save need be made only once per cloud. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Water Dependency",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A devilfish can survive out of the water for 1 hour, after which it becomes fatigued. After 2 hours, the devilfish becomes exhausted and begins to suffocate (<i>Pathfinder RPG Core Rulebook</i> 445)."
+            }
+        ]
     },
     "sources": [
         {

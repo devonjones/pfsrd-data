@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any ruin (Numeria)<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Fall to Pieces (Ex)</b> Attacks and effects that deal more than 25% of a scrapyard robot\u2019s maximum hit points in damage (10 hit points for a standard scrapyard robot) impair one of the robot\u2019s components. Determine which subsystem randomly by rolling 1d6. If the subsystem has already been impaired, there is no further effect.<br/><br/><i>1 CPU</i>: The robot is confused (<i>Pathfinder RPG Core Rulebook </i>566)<br/><br/><i>2 Fractured Plating</i>: Reduce the robot\u2019s natural armor bonus by 3.<br/><br/><i>3 Power Core</i>: Attacks against the robot with natural weapons, unarmed strikes, or metal weapons deal 1d6 points of electricity damage to the attacker, and the robot\u2019s slam attack deals an additional 1d6 points of electricity damage. The robot shuts down from power loss in 1d4+1 rounds.<br/><br/><i>4 Rotary Saw</i>: The robot loses its rotary saw attack.<br/><br/><i>5 Servos</i>: The robot\u2019s speed is reduced to 15 feet and its CMD against trip combat maneuvers is reduced by 8.<br/><br/><i>6 Sensors</i>: The robot is blinded.<br/><br/><b>Repair (Ex)</b> A scrapyard robot can use the inactive bodies of other robots to repair damage to itself. Doing so restores 10 hit points and removes one condition imparted by its fall to pieces ability per 8-hour period of uninterrupted work. Eight hours of repair expends all salvageable parts from 1 Medium robot. For each size category a scrapped robot is above Medium, the scrapyard robot can perform another 8 hours of repairs using that robot\u2019s parts. For each size category smaller than Medium scrapped robots are, the scrapyard robot requires twice as many robots to complete 8 hours of work.<br/><br/><b>Staggered (Ex)</b> The poor construction of a scrapyard robot allows it to take only a single move or standard action each round. In effect, it always has the staggered condition. A scrapyard robot can move up to its speed and attack in the same round as a charge action."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Pieced together from broken technology, these constructs lack the balance to stand upright, the motor control to use their hands (if they have any), and the intelligence possessed by advanced robots, but they still retain a halting consciousness and the ability to obey simple commands."
@@ -306,7 +296,41 @@
                     "name": "staggered"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any ruin (Numeria)",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Fall to Pieces",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Attacks and effects that deal more than 25% of a scrapyard robot\u2019s maximum hit points in damage (10 hit points for a standard scrapyard robot) impair one of the robot\u2019s components. Determine which subsystem randomly by rolling 1d6. If the subsystem has already been impaired, there is no further effect.<br/><br/><i>1 CPU</i>: The robot is confused (<i>Pathfinder RPG Core Rulebook </i>566)<br/><br/><i>2 Fractured Plating</i>: Reduce the robot\u2019s natural armor bonus by 3.<br/><br/><i>3 Power Core</i>: Attacks against the robot with natural weapons, unarmed strikes, or metal weapons deal 1d6 points of electricity damage to the attacker, and the robot\u2019s slam attack deals an additional 1d6 points of electricity damage. The robot shuts down from power loss in 1d4+1 rounds.<br/><br/><i>4 Rotary Saw</i>: The robot loses its rotary saw attack.<br/><br/><i>5 Servos</i>: The robot\u2019s speed is reduced to 15 feet and its CMD against trip combat maneuvers is reduced by 8.<br/><br/><i>6 Sensors</i>: The robot is blinded."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Repair",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A scrapyard robot can use the inactive bodies of other robots to repair damage to itself. Doing so restores 10 hit points and removes one condition imparted by its fall to pieces ability per 8-hour period of uninterrupted work. Eight hours of repair expends all salvageable parts from 1 Medium robot. For each size category a scrapped robot is above Medium, the scrapyard robot can perform another 8 hours of repairs using that robot\u2019s parts. For each size category smaller than Medium scrapped robots are, the scrapyard robot requires twice as many robots to complete 8 hours of work."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Staggered",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The poor construction of a scrapyard robot allows it to take only a single move or standard action each round. In effect, it always has the staggered condition. A scrapyard robot can move up to its speed and attack in the same round as a charge action."
+            }
+        ]
     },
     "sources": [
         {

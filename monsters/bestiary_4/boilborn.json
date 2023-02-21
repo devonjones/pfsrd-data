@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or infestation (2\u201320)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Death Throes (Su)</b> When killed, a boilborn pops in a 10-footradius burst that deals 2d6 points of acid damage (DC 14 Reflex half). Creatures taking damage must succeed at a DC 12 Fortitude save or contract leprosy.<br/><br/><b>Disease (Su)</b> Leprosy: Injury; <i>save</i> Fort DC 12; <i>onset</i> 2d4 weeks; <i>frequency</i> 1/week; <i>effect</i> 1d2 Cha damage; <i>cure</i> 2 consecutive saves. This save is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Purulent wounds that crawl out from piles of diseased dead and areas of massive contagion, these oozes slop about thoughtlessly, quivering and ready to burst and infect anything that moves. The creatures manifest in areas wracked by plagues, where rot and ruin run rampant. Crawling from the aff licted areas, boilborn spread out in all directions to disperse their infection.<br/><br/>Though carefully studied by healers and naturalists focusing on oozes, living boilborn are dangerous to experiment upon. This is because their death throes can sometimes be triggered accidentally, even when the creatures are handled gently and no harm has been done to them. Some posit that boilborn have only a limited lifespan, and self-destruct when that period ends. Others have labored for years under the hope that the infectious fluids contained within boilborn might somehow be used to find both cures and immunities to any number of diseases that plague the world. Though this experimentation has resulted in certain indicators that boilborn might indeed be put to such positive use, a reliable concoction has yet to be developed.<br/><br/>The boilborn detailed here is by far the most common, but as with diseases, other mutations exist. Use the following to represent some of the other virulent strains of these disgusting creatures. All diseases listed below appear on page 557 of the <i>Pathfinder RPG Core Rulebook</i>.<br/><br/><b>Abyssal Boilborn (CR 3)</b>: Colored in hues of bruised blue and bloody red and smelling like bile and pus, this dangerous boilborn has squeezed through a rift from the Abyss. It has the fiendish creature simple template and the advanced creature simple template, and infects its victims with demon fever.<br/><br/><b>Blindborn (CR 1)</b>: Pale greenish gray in color and slightly luminescent, this boilborn transmits blinding sickness (Fortitude DC 14) to creatures affected by its slam attack or death throes ability.<br/><br/><b>Infernal Boilborn (CR 3)</b>: Accompanied by the smell of brimstone, this black-skinned boilborn has the advanced creature simple template and the fiendish creature simple template, and infects victims it slams or splatters upon with devil chills.<br/><br/><b>Plagueborn (CR 2)</b>: Sickly yellow and wracked with perpetual palpitations that emit a fine mist, this boilborn has the giant simple template. Any creatures within 5 feet of a plagueborn must succeed at a DC 16 Fortitude save or contract cackle fever."
@@ -237,7 +227,50 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or infestation (2\u201320)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Throes",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "When killed, a boilborn pops in a 10-footradius burst that deals 2d6 points of acid damage (DC 14 Reflex half). Creatures taking damage must succeed at a DC 12 Fortitude save or contract leprosy."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Leprosy: Injury; <i>save</i> Fort DC 12; <i>onset</i> 2d4 weeks; <i>frequency</i> 1/week; <i>effect</i> 1d2 Cha damage; <i>cure</i> 2 consecutive saves. This save is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Leprosy",
+                    "affliction_type": "Disease; Injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "onset": "2d4 weeks",
+                    "frequency": "1/week",
+                    "effect": "1d2 Cha damage",
+                    "cure": "2 consecutive saves. This save is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm oceans<br/><b>Organization</b> solitary<br/><b>Treasure</b> double"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Constrict\u2014injury; <i>save</i> Fort DC 28; <i>frequency</i> 1/ round for 6 rounds; <i>effect</i> 1d6 Dex; <i>cure</i> 2 consecutive saves.<br/><b>Rend Ship (Ex)</b> As a full-round action, a lusca can attempt to use four of its tentacles to grapple a ship of its size or smaller by attempting a combat maneuver check opposed by the ship captain\u2019s Profession (sailor) check; the lusca receives a cumulative +4 bonus on the check for each size category smaller than Gargantuan the ship is. If the lusca grapples the ship, it holds the ship motionless; it can attack targets anywhere on or within the ship with its remaining four tentacles, but can\u2019t attack foes at all with its shark heads. Each round it maintains its hold on the ship, it automatically deals bite damage from all three heads to the ship\u2019s hull.<br/><b>Vicious Grapple (Ex)</b> A lusca does not gain the grappled condition if it grabs a foe with its tentacles. It can attempt to maintain a grapple against any number of creatures in its tentacles as a swift action."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Luscas are among the most feared predators in the open ocean\u2014their snapping shark heads and writhing tentacles spell the end for many crews. A lusca\u2019s presence can first be felt in the air, as its body naturally conducts electricity. Sailors who have encountered the being and survived claim that thunderclouds seem to roll in alongside the creature and strange electrical f ires dance in the air before it attacks, lending an eerie aura of foreboding to the oncoming assault. Ravenous and unpredictable, a lusca claims wide swaths of territory in order to maximize the number of ships it can sink and crews it can feast upon; luscas brook no other large predators in their claimed territory, and battle even mighty krakens for control. They are equally territorial with their own kind, and an encounter between two luscas, except to mate, almost always ends with one dead or driven off. While luscas prefer to make quick meals of the sailors onboard a ship, they will eat just about any aquatic creature, and even giant octopuses and whales know to steer clear of a hungry lusca\u2019s vicinity.<br/><br/> The average lusca is 90 feet from tentacle to snout and weighs 3,800 pounds. Legends tell of even larger luscas that can sink Colossal ships."
@@ -510,7 +500,57 @@
                     "name": "vicious grapple"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm oceans",
+            "organization": "solitary",
+            "treasure": "double"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Constrict\u2014injury; <i>save</i> Fort DC 28; <i>frequency</i> 1/ round for 6 rounds; <i>effect</i> 1d6 Dex; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Constrict\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 28",
+                        "save_type": "Fort",
+                        "dc": 28
+                    },
+                    "frequency": "1/ round for 6 rounds",
+                    "effect": "1d6 Dex",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Rend Ship",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a full-round action, a lusca can attempt to use four of its tentacles to grapple a ship of its size or smaller by attempting a combat maneuver check opposed by the ship captain\u2019s Profession (sailor) check; the lusca receives a cumulative +4 bonus on the check for each size category smaller than Gargantuan the ship is. If the lusca grapples the ship, it holds the ship motionless; it can attack targets anywhere on or within the ship with its remaining four tentacles, but can\u2019t attack foes at all with its shark heads. Each round it maintains its hold on the ship, it automatically deals bite damage from all three heads to the ship\u2019s hull."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vicious Grapple",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A lusca does not gain the grappled condition if it grabs a foe with its tentacles. It can attempt to maintain a grapple against any number of creatures in its tentacles as a swift action."
+            }
+        ]
     },
     "sources": [
         {

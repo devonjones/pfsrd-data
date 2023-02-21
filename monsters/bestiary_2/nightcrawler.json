@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Negative Energy Plane)<br/><b>Organization</b> solitary or pair<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Energy Drain (Su)</b> A creature that has been swallowed whole by a nightcrawler gains 1 negative level each round.<br/><br/><b>Poison (Su)</b> Sting\u2014injury; <i>save </i>Fort DC 28; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Constitution drain and 1 negative level; <i>cure </i>3 consecutive saves. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Although the nightcrawler might appear to be little more than an immense and frightening vermin, with its centipede-like body and numerous glowing eyes, it is actually incredibly intelligent. When not cleansing the deep caverns of life, the nightcrawler spends its time plotting how best to carry out its own private stages of the overall nightshade plan to expunge life from all worlds, conferring with its undead minions and, when necessary, observing living creatures from afar while invisible to learn about hidden enclaves that its depredations might otherwise have missed.<br/><br/>It would be one thing if the nightcrawlers remained in the deep caverns, for these regions are rife with foul life the world is better off without. Yet unfortunately for those who dwell upon the surface, nightcrawlers often crawl up through the tunnels to bring their devastation to the night above. Although they always retreat underground before the first tentative rays of dawn color the eastern skies, they can spread an incredible amount of ruin in the span of a few short hours each night.<br/><br/>A nightcrawler is 60 feet long and weighs 10,000 pounds."
@@ -832,7 +822,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Negative Energy Plane)",
+            "organization": "solitary or pair",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Energy Drain",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A creature that has been swallowed whole by a nightcrawler gains 1 negative level each round."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 28; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Constitution drain and 1 negative level; <i>cure </i>3 consecutive saves. The save DC is Charisma-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 28",
+                        "save_type": "Fort",
+                        "dc": 28
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Constitution drain and 1 negative level",
+                    "cure": "3 consecutive saves. The save DC is Charisma-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary or nest (2\u20134)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Hypnosis (Su)</b> Once per day, by weaving and coiling its body and hissing as a standard action, a lunar naga can cause its scales to shimmer and glow with moonlike radiance. All creatures within 30 feet who can see the naga must make a DC 17 Will save to avoid becoming fascinated. The lunar naga can maintain this fascination effect as long as it concentrates; fascinated creatures follow the still-glowing naga if it moves as long as it maintains the effect by concentrating. The save DC is Charisma-based.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Con and 1 Wis; <i>cure </i>1 save.<br/><br/><b>Spells </b>A lunar naga casts spells as a 5th-level sorcerer."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Lunar nagas are patient watchers of the night sky. They enjoy cosmology and believe strongly in astrology, maintaining a handful of complex zodiacs. A few lunar nagas even bear knowledge of the unspeakable things from the dark spaces between the stars. A lunar naga stretches over 10 feet from its pale face to the tip of its tail, and weighs close to 200 pounds.<br/><br/>Nocturnal creatures, lunar nagas often live in ruined towers or atop mountains\u2014any place open to the sky at night. There they peer through astrological devices, closely monitoring passing celestial markers, eager to decipher more of the universe. Those living underground make nightly trips to the open sky when they can. Cloudy nights make lunar nagas agitated, and a creature is more likely to run afoul of a lunar naga on these dark evenings.<br/><br/>Lunar nagas sometimes lead small cults of sky-watchers. These followers aid the nagas in recording tome upon tome of calculations of the stars and planets moving through the inky black of the night sky. In small doses tempered with water, fruit juices, and alcohol, lunar naga venom is mildly hallucinogenic. The nagas\u2019 cultist allies often take the substance as a ritualistic drug."
@@ -455,7 +445,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary or nest (2\u20134)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hypnosis",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per day, by weaving and coiling its body and hissing as a standard action, a lunar naga can cause its scales to shimmer and glow with moonlike radiance. All creatures within 30 feet who can see the naga must make a DC 17 Will save to avoid becoming fascinated. The lunar naga can maintain this fascination effect as long as it concentrates; fascinated creatures follow the still-glowing naga if it moves as long as it maintains the effect by concentrating. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d3 Con and 1 Wis; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 18",
+                        "save_type": "Fort",
+                        "dc": 18
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Con and 1 Wis",
+                    "cure": "1 save."
+                }
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A lunar naga casts spells as a 5th-level sorcerer."
+            }
+        ]
     },
     "sources": [
         {

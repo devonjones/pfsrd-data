@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground (Abyss)<br/><b>Organization</b> solitary, pair, or cast (3\u201310)<br/><b>Treasure</b> standard (<i>+1 scimitar</i>, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Horrific Appearance (Su)</b> Those who succumb to a gongorinan\u2019s horrific appearance become confused for 1d4 rounds. <br/><br/><b>Oviposition (Su)</b> A gongorinan can implant a stony egg the size of a human heart in the body of any Small or larger pinned, helpless, or willing creature as a full-round action that provokes attacks of opportunity. This action deals 1d4 points of Constitution damage to the victim. If the victim survives this damage, the egg takes root deep in the victim\u2019s body, links to its mind, and begins gestating. The egg grows rapidly, dealing 1 point of Intelligence drain every day. Once this Intelligence drain affects a creature that has an effective Intelligence score of 1, the egg \u201chatches\u201d inside of the victim. This causes the victim to immediately transform into a horrid animal, aberration, magical beast, or vermin (the exact choice is made by the gongorinan according to its strange goals and unknowable desires), whereupon it begins living out its new life via pure instinct\u2014this effect otherwise functions as <i>baleful polymorph</i> with the creature having failed its secondary Will save to retain its personality. A gongorinan can command the actions of a creature that has undergone this transformation as if the victim had been affected by <i>dominate monster</i> (this works even on creatures that are normally immune to such effects as a result of being mindless) as long as the gongorinan is within 120 feet of the creature. The effect can be reversed by <i>break enchantment</i> (DC 22\u2014treat the gongorinan\u2019s Hit Dice as the caster level), but cannot be dispelled. <br/><br/><b>Poison (Ex)</b> Sting\u2014injury; <i>save</i> Fort DC 22; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d3 Strength damage and staggered for 1 round; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The gongorinans are the spawn of the qlippoth lord Yamasoth, although one could be forgiven for thinking of them less as offspring and more as parasites. A gongorinan\u2019s basic shape resembles that of an immense, stocky crab, save that it lacks crabs\u2019 aquatic adaptations\u2014gongorinans are terrestrial creatures. A typical gongorinan has no fewer than a dozen stalked eyes, and is capable of extending these eyes from the upper edges of its body just above its mouth to a length of nearly 3 feet, giving it extraordinary vision in all directions. A gongorinan\u2019s mouth is a complex tangle of sliding plates and toothy ridges that rasp and shriek against each other as it speaks and chews, but despite their frightening shapes, these mouthparts are ill-suited for making physical attacks; the gongorinan relies upon its arms for that. Each gongorinan has four arms, and each is a different, highly specialized appendage. The humanoid arm is used for fine manipulation or wielding weapons, while the mantis-like claw is used to shred flesh and create deep, bleeding wounds. The needle-covered tentacle is used to sting and inject a painful poison to stagger foes, while the pincer is used to snatch and hold victims close for oviposition. <br/><br/>A typical gongorinan stands about 6 feet tall and weighs 800 pounds. When at rest, a gongorinan retracts its limbs into its rock-encrusted body, allowing it to appear remarkably like nothing more than a large, misshapen boulder. Larger specimens known as elder gongorinans exist (and often have additional and even more dangerous arms), but these are quite rare save for in realms where Yamasoth\u2019s influence is strong. <br/><br/>All gongorinans carry a brood of horrific egg masses, yet these eggs are not used for the propagation of their kind (a process governed by a more traditional and nightmarish method best left undescribed). Instead, these eggs carry within their stony shells a raw quintessence of the Abyss, infused with the ichor-seed of the gongorinans\u2019 lord Yamasoth. Whereas most creatures are driven to breed and multiply, the gongorinans are instead driven to seek out humanoid hosts for their eggs. The implantation happens via the gongorinan\u2019s mouth and a hideous ovipositor that\u2019s neither tongue nor toothed, prolapsing throat, but something worse. Fortunately for most who might encounter a gongorinan, the oviposition process leaves the horrid qlippoth open to attack and cannot be performed quickly, yet to a lone adventurer caught and overwhelmed by a gongorinan, this is small comfort indeed. <br/><br/>Once an egg has been implanted, it takes many days to grow, and the gongorinan prefers to carry the unfortunate host off to restrain it in a hidden location for the duration. Victims are often cocooned in webs while the egg gestates. As it grows, the egg feeds on the victim\u2019s mind, absorbing the victim\u2019s intellect until it has reduced the host to a drooling wreck. At this point, the egg doesn\u2019t hatch so much as it merge with the host, effecting a horrific and permanent transformation into a monstrous form. The gongorinan can influence this ultimate form as it lays its egg. It typically chooses powerful creatures already found in the region, for these \u201cyoung\u201d are loyal to their parent and serve it as guardians or playthings. Victims retain no portion of their previous personality, but those who have been rescued from this horrific fate via powerful magic do retain memories of their time as a monstrosity. Many never quite recover from these ordeals, and often develop a peculiar form of madness in which they regard their life as a monster as having been their true life, and their true form and life as the curse. The most despondent seek the promise of peace through suicide rather than endure the dreams of their life as a monster\u2014dreams that carry within them a most horrible longing to return to the qlippoth\u2019s arms. <br/><br/>Gongorinans are an industrious breed of qlippoth, and wherever they find themselves, they invariably form hive-like complexes in which to live. These gongorinan \u201ccities\u201d are labyrinthine affairs with plenty of chambers for their transformed children. In the Abyss, gongorinan hives can grow truly immense, with populations in the thousands, but the Material Plane is no stranger to their hive cities"
@@ -679,7 +669,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground (Abyss)",
+            "organization": "solitary, pair, or cast (3\u201310)",
+            "treasure": "standard (<i>+1 scimitar</i>, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Horrific Appearance",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Those who succumb to a gongorinan\u2019s horrific appearance become confused for 1d4 rounds. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Oviposition",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A gongorinan can implant a stony egg the size of a human heart in the body of any Small or larger pinned, helpless, or willing creature as a full-round action that provokes attacks of opportunity. This action deals 1d4 points of Constitution damage to the victim. If the victim survives this damage, the egg takes root deep in the victim\u2019s body, links to its mind, and begins gestating. The egg grows rapidly, dealing 1 point of Intelligence drain every day. Once this Intelligence drain affects a creature that has an effective Intelligence score of 1, the egg \u201chatches\u201d inside of the victim. This causes the victim to immediately transform into a horrid animal, aberration, magical beast, or vermin (the exact choice is made by the gongorinan according to its strange goals and unknowable desires), whereupon it begins living out its new life via pure instinct\u2014this effect otherwise functions as <i>baleful polymorph</i> with the creature having failed its secondary Will save to retain its personality. A gongorinan can command the actions of a creature that has undergone this transformation as if the victim had been affected by <i>dominate monster</i> (this works even on creatures that are normally immune to such effects as a result of being mindless) as long as the gongorinan is within 120 feet of the creature. The effect can be reversed by <i>break enchantment</i> (DC 22\u2014treat the gongorinan\u2019s Hit Dice as the caster level), but cannot be dispelled. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save</i> Fort DC 22; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d3 Strength damage and staggered for 1 round; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 22",
+                        "save_type": "Fort",
+                        "dc": 22
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Strength damage and staggered for 1 round",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

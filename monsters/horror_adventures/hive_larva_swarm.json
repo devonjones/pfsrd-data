@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or hive (1-20 plus 1-50 hive workers and warriors and 1 queen)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Infest (Ex)</b> A hive larva swarm can enter the body of a single Small or larger helpless living creature. When it does so, a portion of the swarm enters a creature\u2019s mouth and gestates for 1d4 minutes. The gestated larvae ravage the host for 24 hours, during which time the infested creature falls unconscious and can\u2019t be woken by any means. During this period the larvae are vulnerable to expulsion by <i>remove disease</i> (same DC as death throes, typically DC 16). If successful, the hive larvae die inside of the host, dealing another 1d6 points of acid damage. In some cases, metabolized hive larvae corpses can infect the creature with the hive corruption (see page 24).<br/><br/> After 24 hours, the hive larvae achieve symbiosis. The host awakens feeling healthy but hungry. Spells such as <i>diagnose disease<sup>UM<sup></sup></sup></i> and Heal checks used to detect disease no longer detect the hive infestation, and the host creature is now treated as both its original creature type and an aberration for purposes of spells and effects (whichever is worse). A successful DC 25 Knowledge (dungeoneering) check can identify the symbiosis. If the host dies at this point, the larval infestation dies as well. However, if the host is then returned from the dead, the larvae are returned to life as well.<br/><br/> The swarm fully matures 2d12 hours after symbiosis. By this point, there is no way to save the host short of a <i>miracle</i> or <i>wish</i> spell. Each round for 2d12 rounds, the host suffers agonizing pain and must succeed at a Fortitude save (DC 16) or be nauseated for 1 round. On each failed save, the host takes 4d6 points of damage as the mature hive creature forcibly separates itself. At the end of the 2d12 rounds, or after the host is slain by the damage, a fully formed hive creature (usually a hive warrior) explodes from within, destroying the host\u2019s body.<br/><br/><b>Poison (Ex)</b> Swarm\u2014injury; save Fort DC 16; frequency 1/round for 6 rounds; effect 1d4 Strength; cure 2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Hive larvae are the first stage of the hive life cycle. These tenacious creatures render suitable hosts incapacitated and infest their bodies, transforming them into new hive creatures."
@@ -280,7 +270,33 @@
                     "name": "blind"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or hive (1-20 plus 1-50 hive workers and warriors and 1 queen)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Infest",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A hive larva swarm can enter the body of a single Small or larger helpless living creature. When it does so, a portion of the swarm enters a creature\u2019s mouth and gestates for 1d4 minutes. The gestated larvae ravage the host for 24 hours, during which time the infested creature falls unconscious and can\u2019t be woken by any means. During this period the larvae are vulnerable to expulsion by <i>remove disease</i> (same DC as death throes, typically DC 16). If successful, the hive larvae die inside of the host, dealing another 1d6 points of acid damage. In some cases, metabolized hive larvae corpses can infect the creature with the hive corruption (see page 24).<br/><br/> After 24 hours, the hive larvae achieve symbiosis. The host awakens feeling healthy but hungry. Spells such as <i>diagnose disease<sup>UM<sup></sup></sup></i> and Heal checks used to detect disease no longer detect the hive infestation, and the host creature is now treated as both its original creature type and an aberration for purposes of spells and effects (whichever is worse). A successful DC 25 Knowledge (dungeoneering) check can identify the symbiosis. If the host dies at this point, the larval infestation dies as well. However, if the host is then returned from the dead, the larvae are returned to life as well.<br/><br/> The swarm fully matures 2d12 hours after symbiosis. By this point, there is no way to save the host short of a <i>miracle</i> or <i>wish</i> spell. Each round for 2d12 rounds, the host suffers agonizing pain and must succeed at a Fortitude save (DC 16) or be nauseated for 1 round. On each failed save, the host takes 4d6 points of damage as the mature hive creature forcibly separates itself. At the end of the 2d12 rounds, or after the host is slain by the damage, a fully formed hive creature (usually a hive warrior) explodes from within, destroying the host\u2019s body."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Swarm\u2014injury; save Fort DC 16; frequency 1/round for 6 rounds; effect 1d4 Strength; cure 2 consecutive saves."
+            }
+        ]
     },
     "sources": [
         {

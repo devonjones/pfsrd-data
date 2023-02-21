@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Hell)<br/><b>Organization</b> solitary, pair, or cabal (3\u20135)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>All-Around Vision (Ex)</b> A hesperian has all-around vision only in amphisbaena form.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Con; <i>cure </i>1 save. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Servitors of Asmodeus, hesperians\u2014also known as accomplice devils\u2014come to the Material Plane to help guide inf luential individuals and their followers into Hell\u2019s grasp. Once a hesperian finds a suitable target for his clever wiles, he tells his victims that the greatest of Hell\u2019s devils sent him, and that his diabolical masters have recognized the individual\u2019s talents and potential. The hesperian goes on to claim that he has come to the mortal world in order to guide the creature as a chosen prodigy of Hell, and promises to carry the individual past the threshold of greatness. It\u2019s all a tangled lie, of course, but the best lies are the ones that at some point can be made into truths. A hesperian encourages envy, overreaching, pride, and ultimately hubris in his targets, urging his victims to strive toward ever bolder and more grandiose destinies. A hesperian dedicates himself to a mortal\u2019s service, assisting his victim in amassing power, wealth, prestige\u2014all the while inf lating her ego and cultivating her belief in her own worthiness and infallibility. Once fully convinced of her own incontrovertible position, a hesperian\u2019s victim is usually only a gentle push from Hell\u2019s threshold.<br/><br/>Always serving themselves and their dark god, hesperians are careful to not show too much of their hand, preferring to beguile and manipulate from the shadows. They cunningly alter their inhuman features to resemble attractive humanoids to mingle with mortals, appear more convincing in negotiations, and to not draw too much attention to their devilish natures.<br/><br/>A hesperian often establishes Asmodean cults, then elevates one chosen mortal to a position of leadership within the group. He advises this leader, all the while manipulating other cultists\u2014even sacrificing them if necessary\u2014to help this mortal leader\u2019s ascendance without her having any direct accountability. A single hesperian typically has several mortals whom he calls master and advises in this way. Rotating his attention between these masters, the hesperian enjoys appearing for a while and then unexpectedly vanishing for periods like some dark muse.<br/><br/>In his true form, a hesperian looks like a devilishly handsome human male with devilish horns, a forked tongue, and eyes reminiscent of snake\u2019s, but he can make himself a perfect imitation of any humanoid or even take the form of a long snake with a head on each end. Hesperians stand just under 7 feet tall and weigh approximately 180 pounds."
@@ -619,7 +609,49 @@
                     "name": "change shape"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Hell)",
+            "organization": "solitary, pair, or cabal (3\u20135)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "All-Around Vision",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A hesperian has all-around vision only in amphisbaena form."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 13; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1d2 Con; <i>cure </i>1 save. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Con",
+                    "cure": "1 save. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm forests or mountains<br/><b>Organization</b> solitary, pair, or ambush (3\u20136)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Cloud Form (Su)</b> A nue can change into the form of a 10-foot black cloud or back to its normal form as a standard action. A nue in cloud form is otherwise treated as if under the effects of <i>gaseous form</i>, except that it obscures vision like <i>fog cloud</i>.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 21; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Strength damage; <i>cure </i>2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "This strange creature has the body of a tiger, the head of a fanged monkey, and a poisonous viper for a tail. Though some call it a chimera and treat it as an exotic specimen of that creature, it is a completely different breed of beast.<br/><br/>Intelligent enough to enjoy cruelty as well as inflicting terror upon its prey, a nue delights in toying with its victim before dealing the killing blow. Often, a nue will select a target and plague it with nightmares before it even attempts an act of violence, wearing down the victim with dreadful dreams and phantasmagoric terrors. Once its prey is thoroughly exhausted, the nue will finally steal into the victim\u2019s sleeping chambers and engage in combat, paralyzing its target with its magic and infecting its prey with both disease and poison, letting the victim writhe in pain before succumbing to death.<br/><br/>A nue\u2019s ghastly appearance in physical form is only made eerier by its ability to turn into an inky cloud of darkness. In this guise, a nue can hide amongst fog clouds or shadows before emerging as the destructive horror it is. By the time a nue crawls forth from the inscrutable black cloud, its prey is often too fatigued from its strange night terrors to defend itself. The dreams a nue impregnates creatures\u2019 minds with varies from victim to victim, but all share the trait of an ever-present, foreboding cloud that exudes a fierce and palpable sense of malice.<br/><br/>Some legends suggest that nues are the spirits of children warped into twisted forms to spread paranoia, exhaustion, and fear among former friends and family. According to these stories, such a cursed child wreaks terror upon its friends and relatives until they are all either dead or driven mad by fear. Then, the creature moves on, seeking more challenging kills to sate its vicious hunger. The greatest joy a nue can feel is snuffing the life of a once-strong and proud target that has been brought low by its debilitating attacks.<br/><br/>A nue is 9 feet long and weighs 600 pounds."
@@ -455,7 +445,49 @@
                     "name": "cloud form"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm forests or mountains",
+            "organization": "solitary, pair, or ambush (3\u20136)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Cloud Form",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A nue can change into the form of a 10-foot black cloud or back to its normal form as a standard action. A nue in cloud form is otherwise treated as if under the effects of <i>gaseous form</i>, except that it obscures vision like <i>fog cloud</i>."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 21; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Strength damage; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 21",
+                        "save_type": "Fort",
+                        "dc": 21
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Strength damage",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

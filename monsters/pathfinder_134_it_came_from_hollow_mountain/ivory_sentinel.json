@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or troop (3-7)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Alert (Su)</b> An ivory sentinel can take simple orders and identify intruders. This functions as the <a href=\"MonsterDisplay.aspx?ItemName=Iron%20Sentinel\" style=\"text-decoration:underline\">iron sentinel\u2019s alert ability</a>). <br/><br/><b>Disorienting Screech (Su)</b> Three times per day, an ivory sentinel can emit a disorienting screech as a standard action. All living creatures within a 30-foot spread must succeed at a DC 15 Will save or become confused (as per the spell <a href=\"SpellDisplay.aspx?ItemName=confusion\" style=\"text-decoration:underline\"><i>confusion</i></a>) for 1d4+1 rounds. A creature that succeeds at this saving throw is immune to further disorienting screeches from that ivory sentinel for 24 hours. This is a sonic, mind-affecting effect. The save is Constitution-based. <br/><br/><b>Immunity to Magic (Ex)</b> An ivory sentinel is immune to spells or spell-like abilities that allow spell resistance, except for spells with the sonic descriptor. <br/><br/><b>Poison (Ex)</b> Claws\u2014injury; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d3 Con damage; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Ivory sentinels were most often employed by the upper echelons of Thassilonian aristocracy, especially across Bakrakhan and Shalast. These nobles competed with one another in decking out the approaches to their palaces with outlandish and lethal guardians, and the avian ivory sentinels served this purpose well. Often employed to terrorize peasants and foreign dignitaries, most of these constructs were destroyed during Earthfall when those extravagant palaces came tumbling down.<br/><br/> When an ivory sentinel takes flight, delicate wings carved to resemble those of a bird unfurl from the sides of its skull-like head."
@@ -414,7 +404,65 @@
                     "name": "freeze"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or troop (3-7)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Alert",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "An ivory sentinel can take simple orders and identify intruders. This functions as the <a href=\"MonsterDisplay.aspx?ItemName=Iron%20Sentinel\" style=\"text-decoration:underline\">iron sentinel\u2019s alert ability</a>). "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disorienting Screech",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Three times per day, an ivory sentinel can emit a disorienting screech as a standard action. All living creatures within a 30-foot spread must succeed at a DC 15 Will save or become confused (as per the spell <a href=\"SpellDisplay.aspx?ItemName=confusion\" style=\"text-decoration:underline\"><i>confusion</i></a>) for 1d4+1 rounds. A creature that succeeds at this saving throw is immune to further disorienting screeches from that ivory sentinel for 24 hours. This is a sonic, mind-affecting effect. The save is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immunity to Magic",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "An ivory sentinel is immune to spells or spell-like abilities that allow spell resistance, except for spells with the sonic descriptor. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Claws\u2014injury; <i>save</i> Fort DC 15; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d3 Con damage; <i>cure</i> 2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Claws\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d3 Con damage",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

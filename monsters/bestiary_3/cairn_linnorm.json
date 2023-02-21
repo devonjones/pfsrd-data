@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> cold hills<br/><b>Organization</b> solitary<br/><b>Treasure</b> triple"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su)</b> Once every 1d4 rounds as a standard action, a cairn linnorm can expel a 60-foot cone of acidic bile, dealing 18d8 points of acid damage to all creatures struck. In addition, this bile is infused with negative energy, and inflicts 1d4 negative levels on all creatures struck by it. A successful DC 28 Reflex save halves the damage and completely negates the negative levels. The save DC is Constitution-based.<br/><br/><b>Death Curse (Su)</b><i>Curse of Decay</i>: <i>save </i>Will DC 28; <i>effect </i>the creature takes 1 point of Constitution damage per day, and ages at an accelerated rate of 1 year per day, eventually incurring all of the penalties of old age but none of the benefits.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 28; <i>frequency </i>1/round for 10 rounds; <i>effect </i>4d6 acid damage and 1d6 Con drain; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Cairn linnorms prefer to dwell in necropolises, amid reaches of burial mounds, or in caverns below the scorched earth of legendary battlefields. These linnorms particularly relish the flavor of undead flesh\u2014while they cannot consume incorporeal undead, regions they haunt are typically barren of corporeal undead not canny enough to avoid the cairn linnorm\u2019s ravenous appetite. An incredibly powerful undead creature might use a cairn linnorm as a guardian, manipulating the dragon while it selects a cairn or tomb well within the linnorm\u2019s territory. While cairn linnorms will not hesitate to feed on undead creatures they encounter, some ancient superstition shared by all of their kind prevents them from actually entering a tomb or other enclosed burial site unless granted permission by the tomb\u2019s undead denizens or a priest devoted to the religion associated with the site. Likewise, a cairn linnorm somehow caught within a tomb large enough to contain it prefers not to leave without securing similar permission to do so. These limitations are purely psychological, and if pressed (such as by an enemy seeking to use a tomb entrance as a defense), a cairn linnorm can break such restrictions.<br/><br/>A cairn linnorm is 60 feet long and weighs 12,000 pounds."
@@ -555,7 +545,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "cold hills",
+            "organization": "solitary",
+            "treasure": "triple"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds as a standard action, a cairn linnorm can expel a 60-foot cone of acidic bile, dealing 18d8 points of acid damage to all creatures struck. In addition, this bile is infused with negative energy, and inflicts 1d4 negative levels on all creatures struck by it. A successful DC 28 Reflex save halves the damage and completely negates the negative levels. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Death Curse",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "<i>Curse of Decay</i>: <i>save </i>Will DC 28; <i>effect </i>the creature takes 1 point of Constitution damage per day, and ages at an accelerated rate of 1 year per day, eventually incurring all of the penalties of old age but none of the benefits."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 28; <i>frequency </i>1/round for 10 rounds; <i>effect </i>4d6 acid damage and 1d6 Con drain; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 28",
+                        "save_type": "Fort",
+                        "dc": 28
+                    },
+                    "frequency": "1/round for 10 rounds",
+                    "effect": "4d6 acid damage and 1d6 Con drain",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

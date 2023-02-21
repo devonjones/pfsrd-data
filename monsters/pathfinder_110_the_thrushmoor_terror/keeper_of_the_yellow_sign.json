@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, pair, or cult (3\u20136)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disquieting Aura (Su)</b> A keeper of the Yellow Sign is surrounded by an aura of gloom and repulsiveness. A creature that fails its saving throw against this aura takes a \u20131 penalty on attack rolls and on saving throws against fear effects while within the aura and for 7 minutes after leaving the affected area. Any creature that successfully saves against this power cannot be affected again by it for 24 hours. This is a mind-affecting fear effect, and the save DC is Charisma-based. A creature within range of a keeper\u2019s disquieting aura can be affected by its <i>bestow curse</i> spell-like ability from a distance (not only by touch). If a target of the aura has seen the Yellow Sign, it takes a \u20132 penalty on its saving throws against the aura and the keeper\u2019s <i>bestow curse</i> spell-like ability.<br/><br/><b>Entropic Drain (Ex)</b> A keeper\u2019s use of its energy draining ability can result in a surge of entropy that consumes its body and disrupts life all around it. Every time the keeper\u2019s entropic drain attack results in a creature\u2019s death, the keeper must succeed at a DC 17 Fortitude saving throw or be destroyed. If the keeper is destroyed, all sentient beings in a 15-foot radius around the keeper gain a negative level (Fortitude DC 17 negates). If any negative level bestowed by a keeper becomes permanent, the victim must succeed at a DC 17 Will saving throw or die after 1 hour of delirium. The save DCs are Charisma-based.<br/><br/><b>Sunlight Powerlessness (Ex)</b> A keeper of the Yellow Sign is powerless in natural sunlight (though not in an area of <i>daylight</i> or similar spells), and it cannot attack and is staggered. It can use its supernatural and spell-like abilities, but with a 50% failure chance.<br/><br/><b>Yellow Sign Affinity (Su)</b> When the keeper of the Yellow Sign stays within 1 mile of an active Yellow Sign for 24 hours, it gains a +2 profane bonus to its Armor Class and a +1 resistance bonus on all saving throws. An active Yellow Sign is either one that was created by Hastur or by the <i>Yellow Sign</i> spell (see page 72). If the keeper leaves this range, it loses the bonuses immediately and can regain them only after once more staying within 1 mile of an active Yellow Sign for 24 hours."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A keeper of the Yellow Sign is the undead form of a cultist of Hastur who willingly sacrificed his soul to rise as his god\u2019s servant after death. A quiet but relentless champion of the Unspeakable One, a keeper brings anxiety and woe to the lives of any infidel who comes too close to the secrets of its master. Like a vampire, a keeper can easily pass for a living human, if it so wishes, although it tends to have a pale, unhealthy look and a swollen face that can give away its true nature to those who know what to look for. Feeble and sluggish in the sunlight, a keeper can easily be mistaken for a sickly vagrant or even a leper if seen in the open during the day. In the darkness, however, a keeper grows supernaturally strong and attentive, and its eyes glow with a malignant, yellow luminescence.<br/><br/>A keeper\u2019s primary purpose is to haunt and persecute unbelievers who witness the Yellow Sign or, worse, have a document or item that bears the dreaded symbol, such as a copy of <i>The King in Yellow</i> or another artifact of Hastur\u2019s cult. Against these favored victims, the keeper uses <i>dream</i> to create a sense of anticipation and awareness of its victim\u2019s forthcoming doom. Although a keeper\u2019s actions are mainly motivated by a sadistic eagerness to spread pain and misery, the creature can also perform special duties on behalf of a cleric of Hastur, such as slaying her personal enemies or harassing cultists she considers unworthy. These monsters also have an odd, morbid attraction for art in all its forms, favoring bizarre and decadent creations. Since a keeper\u2019s energy drain ability can cause its own destruction, one interested in prolonging its own existence uses its touch attack sparingly. Typically, a keeper switches to touch attacks when it faces heavily armored adversaries otherwise difficult to hit, when it is reduced to half hit points (and therefore already facing destruction), or when it simply feels the urge to \u201ctaste\u201d the energy of a victim, usually one with artistic talent (such as anyone who demonstrates particular skill in the areas of Craft or Perform)."
@@ -458,7 +448,49 @@
                     "name": "Yellow Sign affinity"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary, pair, or cult (3\u20136)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disquieting Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A keeper of the Yellow Sign is surrounded by an aura of gloom and repulsiveness. A creature that fails its saving throw against this aura takes a \u20131 penalty on attack rolls and on saving throws against fear effects while within the aura and for 7 minutes after leaving the affected area. Any creature that successfully saves against this power cannot be affected again by it for 24 hours. This is a mind-affecting fear effect, and the save DC is Charisma-based. A creature within range of a keeper\u2019s disquieting aura can be affected by its <i>bestow curse</i> spell-like ability from a distance (not only by touch). If a target of the aura has seen the Yellow Sign, it takes a \u20132 penalty on its saving throws against the aura and the keeper\u2019s <i>bestow curse</i> spell-like ability."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Entropic Drain",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A keeper\u2019s use of its energy draining ability can result in a surge of entropy that consumes its body and disrupts life all around it. Every time the keeper\u2019s entropic drain attack results in a creature\u2019s death, the keeper must succeed at a DC 17 Fortitude saving throw or be destroyed. If the keeper is destroyed, all sentient beings in a 15-foot radius around the keeper gain a negative level (Fortitude DC 17 negates). If any negative level bestowed by a keeper becomes permanent, the victim must succeed at a DC 17 Will saving throw or die after 1 hour of delirium. The save DCs are Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sunlight Powerlessness",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A keeper of the Yellow Sign is powerless in natural sunlight (though not in an area of <i>daylight</i> or similar spells), and it cannot attack and is staggered. It can use its supernatural and spell-like abilities, but with a 50% failure chance."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Yellow Sign Affinity",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "When the keeper of the Yellow Sign stays within 1 mile of an active Yellow Sign for 24 hours, it gains a +2 profane bonus to its Armor Class and a +1 resistance bonus on all saving throws. An active Yellow Sign is either one that was created by Hastur or by the <i>Yellow Sign</i> spell (see page 72). If the keeper leaves this range, it loses the bonuses immediately and can regain them only after once more staying within 1 mile of an active Yellow Sign for 24 hours."
+            }
+        ]
     },
     "sources": [
         {

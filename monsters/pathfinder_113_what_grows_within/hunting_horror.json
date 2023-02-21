@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or pack (3\u20136)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Answer Beckoning (Ex)</b> Although a hunting horror is not an elemental or outsider, it can be conjured via <i>gate</i>, <i>greater planar ally</i>, or <i>greater planar binding</i>, provided the caster of the spell is a worshiper of one of the Great Old Ones or Outer Gods or specifically alters the words of the spell to invoke a hunting horror, and provided the spell is not cast in an area of direct sunlight. When invoking a hunting horror in this way, the spellcaster must succeed at a DC 30 Spellcraft check as part of the casting of the spell, or when the hunting horror arrives it is automatically free to act under its own will.<br/><br/><b>Contingency</b> While the exact details of a particular hunting horror\u2019s <i>contingency</i> effect can vary wildly (as the monster has an immense range of potential spells to choose from due to its ability to manipulate magic), most settle for the simple but effective tactic of causing a <i>greater invisibility</i> spell to activate on the hunting horror as soon as it takes damage.<br/><br/><b>Crush (Ex)</b> A flying hunting horror can land on foes as a standard action, and then use its lengthy coils to crush them. This attack is effective only against creatures three or more size categories smaller than the hunting horror (Medium for most hunting horrors), and affects as many creatures as fit in the hunting horror\u2019s space. Any creature in the affected area must succeed at a DC 25 Reflex saving throw or be pinned, automatically taking 4d6+18 points of bludgeoning damage each round it is pinned. If the hunting horror chooses to maintain the pin, it must succeed at a combat maneuver check as normal. The save DC is Constitution-based.<br/><br/><b>Hunter (Ex)</b> Hunting horrors are efficient and talented at tracking prey, and Survival is a class skill for these creatures as a result. In addition, they gain a +8 racial bonus on Survival checks. When a hunting horror succeeds at a Survival check to follow a creature\u2019s tracks, the hunting horror can declare that creature to be its prey. If there are multiple sets of tracks from a group of creatures traveling together, the hunting horror can choose which specific creature becomes its prey if it knows the target is among those in the group; otherwise, its chosen prey is determined randomly. The next time the hunting horror begins a battle against its prey, it gains a +10 bonus on its initiative check. In addition, its prey takes a \u20132 penalty on all saving throws against the hunting horror\u2019s spell-like abilities. A hunting horror can have only one creature as its designated prey at any one time, and if 24 hours pass without the hunting horror succeeding at a Survival check to follow that prey\u2019s trail, that creature ceases being the hunting horror\u2019s prey.<br/><br/><b>Manipulate Magic (Sp)</b> A hunting horror is gifted at manipulating magic to affect a wide range of spell-like abilities beyond those that it normally can access. In effect, this allows each hunting horror to use <i>limited wish </i>three times per day as a spell-like ability, but only to duplicate a sorcerer/wizard spell of 6th level or lower. Hunting horrors typically use this ability to deal with foes who manage to stay at a distance, favoring potent attacks like <i>chain lightning</i>, <i>disintegrate</i>, and <i>flesh to stone</i>. Most save the third and final daily use for emergencies\u2014<i>teleport </i>to escape from a battle gone unpredictably poorly, for example, or <i>break enchantment</i> or <i>greater dispel magic</i> to remove a debilitating effect. All hunting horrors use this ability to maintain a <i>contingency </i>effect on themselves as well.<br/><br/><b>Powerful Tail (Ex)</b> A hunting horror\u2019s tail slap is treated as a primary natural attack.<br/><br/><b>Squeezing Coils (Ex)</b> A creature that takes damage from a hunting horror\u2019s constrict ability after being struck by the hunting horror\u2019s tail slap attack must succeed at a DC 29 Fortitude saving throw or fall unconscious for 1d4 rounds. The save DC is Strength-based.<br/><br/><b>Susceptible to Sunlight (Ex)</b> While the glow of a distant star does not inconvenience a hunting horror, this creature cannot abide the light of a sun in relatively close proximity\u2014including sunlight on a typical habitable planet such as Golarion. When in natural sunlight (but not in an area of <i>daylight</i> or similar spells), a hunting horror can\u2019t attack and is staggered. In sunlight, its fast healing ability doesn\u2019t function, it loses its damage reduction, and it takes 2d6 points of fire damage per round. In areas of natural sunlight, a hunting horror\u2019s light sensitivity increases to light blindness."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Servitors of the Crawling Chaos Nyarlathotep, the serpentine hunting horrors excel at tracking and seeking prey, talents that often see them called on by cultists or spellcasters to hunt down enemies. They speak in great and powerful voices, when they deign to speak at all.<br/><br/>A typical hunting horror is 60 feet long but weighs only 2 tons."
@@ -698,7 +688,81 @@
                     "name": "powerful tail"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or pack (3\u20136)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Answer Beckoning",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Although a hunting horror is not an elemental or outsider, it can be conjured via <i>gate</i>, <i>greater planar ally</i>, or <i>greater planar binding</i>, provided the caster of the spell is a worshiper of one of the Great Old Ones or Outer Gods or specifically alters the words of the spell to invoke a hunting horror, and provided the spell is not cast in an area of direct sunlight. When invoking a hunting horror in this way, the spellcaster must succeed at a DC 30 Spellcraft check as part of the casting of the spell, or when the hunting horror arrives it is automatically free to act under its own will."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Crush",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A flying hunting horror can land on foes as a standard action, and then use its lengthy coils to crush them. This attack is effective only against creatures three or more size categories smaller than the hunting horror (Medium for most hunting horrors), and affects as many creatures as fit in the hunting horror\u2019s space. Any creature in the affected area must succeed at a DC 25 Reflex saving throw or be pinned, automatically taking 4d6+18 points of bludgeoning damage each round it is pinned. If the hunting horror chooses to maintain the pin, it must succeed at a combat maneuver check as normal. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hunter",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Hunting horrors are efficient and talented at tracking prey, and Survival is a class skill for these creatures as a result. In addition, they gain a +8 racial bonus on Survival checks. When a hunting horror succeeds at a Survival check to follow a creature\u2019s tracks, the hunting horror can declare that creature to be its prey. If there are multiple sets of tracks from a group of creatures traveling together, the hunting horror can choose which specific creature becomes its prey if it knows the target is among those in the group; otherwise, its chosen prey is determined randomly. The next time the hunting horror begins a battle against its prey, it gains a +10 bonus on its initiative check. In addition, its prey takes a \u20132 penalty on all saving throws against the hunting horror\u2019s spell-like abilities. A hunting horror can have only one creature as its designated prey at any one time, and if 24 hours pass without the hunting horror succeeding at a Survival check to follow that prey\u2019s trail, that creature ceases being the hunting horror\u2019s prey."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Manipulate Magic",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "A hunting horror is gifted at manipulating magic to affect a wide range of spell-like abilities beyond those that it normally can access. In effect, this allows each hunting horror to use <i>limited wish </i>three times per day as a spell-like ability, but only to duplicate a sorcerer/wizard spell of 6th level or lower. Hunting horrors typically use this ability to deal with foes who manage to stay at a distance, favoring potent attacks like <i>chain lightning</i>, <i>disintegrate</i>, and <i>flesh to stone</i>. Most save the third and final daily use for emergencies\u2014<i>teleport </i>to escape from a battle gone unpredictably poorly, for example, or <i>break enchantment</i> or <i>greater dispel magic</i> to remove a debilitating effect. All hunting horrors use this ability to maintain a <i>contingency </i>effect on themselves as well."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Powerful Tail",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A hunting horror\u2019s tail slap is treated as a primary natural attack."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Squeezing Coils",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A creature that takes damage from a hunting horror\u2019s constrict ability after being struck by the hunting horror\u2019s tail slap attack must succeed at a DC 29 Fortitude saving throw or fall unconscious for 1d4 rounds. The save DC is Strength-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Susceptible to Sunlight",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "While the glow of a distant star does not inconvenience a hunting horror, this creature cannot abide the light of a sun in relatively close proximity\u2014including sunlight on a typical habitable planet such as Golarion. When in natural sunlight (but not in an area of <i>daylight</i> or similar spells), a hunting horror can\u2019t attack and is staggered. In sunlight, its fast healing ability doesn\u2019t function, it loses its damage reduction, and it takes 2d6 points of fire damage per round. In areas of natural sunlight, a hunting horror\u2019s light sensitivity increases to light blindness."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Contingency",
+                "text": "While the exact details of a particular hunting horror\u2019s <i>contingency</i> effect can vary wildly (as the monster has an immense range of potential spells to choose from due to its ability to manipulate magic), most settle for the simple but effective tactic of causing a <i>greater invisibility</i> spell to activate on the hunting horror as soon as it takes damage."
+            }
+        ]
     },
     "sources": [
         {

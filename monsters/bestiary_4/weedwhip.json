@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or warm forests<br/><b>Organization</b> solitary, pair, or patch (3\u20136)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Camouflage (Ex)</b> Since a weedwhip looks like a normal plant when at rest, a successful DC 15 Perception check is required to notice it before it attacks for the first time. Anyone with ranks in Survival or Knowledge (nature) can use either of those skills instead of Perception to notice the plant.<br/><br/><b>Dig In (Ex)</b> A weedwhip can bury its central bulb in earth or sand as a move action, granting it partial cover against all attacks (<i>Pathfinder RPG Core Rulebook</i> 196), but preventing it from moving. It can extract itself from the ground as a move action.<br/><br/><b>Languid Whips (Ex)</b> A weedwhip\u2019s tentacles don\u2019t threaten any squares, and doesn\u2019t make attacks of opportunity.<br/><br/><b>Poison (Ex)</b> Tentacle\u2014contact; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 6 rounds; <i>effect </i>nauseated 1 round; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.<br/><br/><b>Poisonous (Ex)</b> Any creature that attacks a weedwhip with a natural piercing or slashing weapon is exposed to its poison."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A weedwhip is an animate plant that rarely attacks unless provoked. Its unpleasant smell (reminiscent of decomposing fish) and tendency to sprout in any passable soil makes it a nuisance to farmers and settlers. Those who don\u2019t know of the weedwhip\u2019s dangers quickly fall prey to this plant once they target it for culling. Farmers have to deal with it in croplands and orchards, groundskeepers find it climbing walls like ivy, druids spot it encroaching on sacred groves, and even cave dwellers find it growing in dung heaps. Animals don\u2019t eat it because of its stench and poison, and fire is a risky way to destroy it because the weed mixes with other plants or wraps around trees or buildings.<br/><br/>A mature plant consists of a torsosized bulb with small, ambulatory roots and three large, lashing vines, each as long as a whip, with blade-like thorns that secrete an irritating toxin. When the weedwhip is blooming, the bulb is crowned with a large flower and its scent is especially strong, often attracting pollinating flies.<br/><br/>In rocky areas lacking suitable soil, a weedwhip can root itself in a corpse, leading some adventurers to think it prefers feeding on dead bodies or plants seeds in its kills, but it does so only in extreme circumstances."
@@ -270,7 +260,73 @@
                     "name": "camouflage"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or warm forests",
+            "organization": "solitary, pair, or patch (3\u20136)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Camouflage",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Since a weedwhip looks like a normal plant when at rest, a successful DC 15 Perception check is required to notice it before it attacks for the first time. Anyone with ranks in Survival or Knowledge (nature) can use either of those skills instead of Perception to notice the plant."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dig In",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A weedwhip can bury its central bulb in earth or sand as a move action, granting it partial cover against all attacks (<i>Pathfinder RPG Core Rulebook</i> 196), but preventing it from moving. It can extract itself from the ground as a move action."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Languid Whips",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A weedwhip\u2019s tentacles don\u2019t threaten any squares, and doesn\u2019t make attacks of opportunity."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tentacle\u2014contact; <i>save </i>Fort DC 12; <i>frequency </i>1/round for 6 rounds; <i>effect </i>nauseated 1 round; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tentacle\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "nauseated 1 round",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poisonous",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Any creature that attacks a weedwhip with a natural piercing or slashing weapon is exposed to its poison."
+            }
+        ]
     },
     "sources": [
         {

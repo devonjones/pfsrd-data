@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or gang (2\u20134)<br/><b>Treasure</b> incidental (metal objects stuck to the golem)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Immunity to Magic (Ex)</b> A magnetite golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. <ul> <li>Any spell that deals fire damage instead disables a magnetite golem\u2019s inescapable grip, magnetic disarm, and magnetic field for 1d4 rounds, with no saving throw.</li> <li>A magical attack that deals electricity damage heals 1 point of damage for every 3 points of damage the attack would otherwise deal. If the amount of healing would cause the golem to exceed its full normal hit points, it gains any excess as temporary hit points. A magnetite golem receives no saving throw against electricity effects.</li> </ul><b>Inescapable Grip (Ex)</b> Whenever a magnetite golem hits a metallic creature or a creature wearing metal armor with its slam attack, it attempts to grapple the creature as a free action that doesn\u2019t provoke an attack of opportunity. If a magnetite golem successfully grapples such a creature, it partially adheres to the golem\u2019s body, and the golem needs only one arm to maintain the grapple. In these instances, a magnetite golem may still make a single slam attack on its turn with its remaining arm.<br/><br/><b>Magnetic Disarm (Su)</b> Whenever a magnetite golem hits a creature wielding a metal weapon with its slam attack, it attempts to disarm the weapon as a free action that doesn\u2019t provoke attacks of opportunity. If the golem successfully disarms a metal weapon, the weapon sticks to the golem\u2019s magnetic body rather than dropping to the ground. The golem is considered to have possession of the weapon, and the weapon must be retrieved using a disarm combat maneuver.<br/><br/><b>Magnetic Field (Su)</b> A magnetite golem is surrounded by a magnetic field, which pulls all metallic creatures and objects toward it. At the start of a magnetite golem\u2019s turn, as a free action that doesn\u2019t provoke attacks of opportunity, the golem attempts a combat maneuver check against every creature within 30 feet that is connected to a piece of metal. Affected creatures include (but are not limited to) metallic creatures, creatures wearing metal armor, and creatures wielding metal weapons. If the golem succeeds at its combat maneuver against a creature, the affected creature is pulled 10 feet closer to the golem, and can\u2019t move away from the golem during its next round. The magnetic field is stronger than gravity, and can pull creatures off the ground. This movement doesn\u2019t provoke attacks of opportunity. Unattended Large or smaller metal objects automatically travel toward magnetite golem at a rate of 10 feet per round. This magnetism is supernatural in nature and affects all metal objects."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Though softer than iron golems\u2014upon whom their design is based\u2014and problematic in most industrial settings, magnetite golems still prove to be useful, specialized constructs for both security and salvage. A magnetite golem\u2019s humanoid body is made of magnetite, a naturally magnetic mineral. A magnetite golem mindlessly obeys its creator\u2019s instructions, and, like most golems, shrugs off the most devastating magical assaults. To complicate matters, a magnetite golem emits a magnetic field, which forcefully pulls metallic objects closer\u2014including creatures holding metal weapons or clad in metal armor. Once within range, metal-bearing opponents find it difficult to pull themselves away. Magnetite golems specialize in grappling and disarming creatures that rely on metal equipment.<br/><br/>Magnetite golems are usually about 9 feet tall, and weigh approximately 1,500 pounds."
@@ -244,7 +234,49 @@
             "int": null,
             "wis": 12,
             "cha": 1
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or gang (2\u20134)",
+            "treasure": "incidental (metal objects stuck to the golem)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Immunity to Magic",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A magnetite golem is immune to any spell or spell-like ability that allows spell resistance. In addition, certain spells and effects function differently against the creature, as noted below. <ul> <li>Any spell that deals fire damage instead disables a magnetite golem\u2019s inescapable grip, magnetic disarm, and magnetic field for 1d4 rounds, with no saving throw.</li> <li>A magical attack that deals electricity damage heals 1 point of damage for every 3 points of damage the attack would otherwise deal. If the amount of healing would cause the golem to exceed its full normal hit points, it gains any excess as temporary hit points. A magnetite golem receives no saving throw against electricity effects.</li> </ul>"
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Inescapable Grip",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Whenever a magnetite golem hits a metallic creature or a creature wearing metal armor with its slam attack, it attempts to grapple the creature as a free action that doesn\u2019t provoke an attack of opportunity. If a magnetite golem successfully grapples such a creature, it partially adheres to the golem\u2019s body, and the golem needs only one arm to maintain the grapple. In these instances, a magnetite golem may still make a single slam attack on its turn with its remaining arm."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Magnetic Disarm",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Whenever a magnetite golem hits a creature wielding a metal weapon with its slam attack, it attempts to disarm the weapon as a free action that doesn\u2019t provoke attacks of opportunity. If the golem successfully disarms a metal weapon, the weapon sticks to the golem\u2019s magnetic body rather than dropping to the ground. The golem is considered to have possession of the weapon, and the weapon must be retrieved using a disarm combat maneuver."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Magnetic Field",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A magnetite golem is surrounded by a magnetic field, which pulls all metallic creatures and objects toward it. At the start of a magnetite golem\u2019s turn, as a free action that doesn\u2019t provoke attacks of opportunity, the golem attempts a combat maneuver check against every creature within 30 feet that is connected to a piece of metal. Affected creatures include (but are not limited to) metallic creatures, creatures wearing metal armor, and creatures wielding metal weapons. If the golem succeeds at its combat maneuver against a creature, the affected creature is pulled 10 feet closer to the golem, and can\u2019t move away from the golem during its next round. The magnetic field is stronger than gravity, and can pull creatures off the ground. This movement doesn\u2019t provoke attacks of opportunity. Unattended Large or smaller metal objects automatically travel toward magnetite golem at a rate of 10 feet per round. This magnetism is supernatural in nature and affects all metal objects."
+            }
+        ]
     },
     "sources": [
         {

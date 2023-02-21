@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any mountain<br/><b>Organization</b> solitary or pair<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Instrument of Retribution (Su)</b> As a full-round action, a xiuh couatl can transform into any simple or martial weapon. The weapon is always a <i>+2 flaming shock weapon</i> and can be sized for any creature. The xiuh couatl is limited to only light or one-handed weapons if sized for a Gargantuan creature or light weapons if sized for a Colossal creature. In weapon form, the xiuh couatl gains hardness equal to that of a weapon of its type and retains its type, senses, hit points, saving throws, and telepathy. A xiuh couatl can return to its normal form as an immediate action.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 22; <i>frequency </i>1/minute for 10 minutes; <i>effect </i>1d6 Str; <i>cure </i>2 consecutive saves.<br/><br/><b>Psychic Spells</b> A xiuh couatl casts spells as a 15th-level psychic (<i>Pathfinder RPG Occult Adventures</i> 60)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Xiuh couatls are a fierce variety of couatl commonly associated with vengeance and retribution. They seek out vile creatures, offering one final opportunity at redemption. Those who do not accept this offer or cannot be redeemed face the xiuh couatl\u2019s fearsome and absolute punishment. In cases where its might alone is not enough, a xiuh couatl offers its assistance to a powerful, righteous figure to mete out justice on its behalf. The winged serpents glow with an intense plume of flames, draped in arcing electricity. Their feathers range in color from bright crimson to deep violet, encompassing the shades of the setting sun. A typical xiuh couatl is 20 feet long with a wingspan of 25 feet. It weighs 4,500 pounds."
@@ -972,7 +962,57 @@
                     "name": "instrument of retribution"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any mountain",
+            "organization": "solitary or pair",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Instrument of Retribution",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "As a full-round action, a xiuh couatl can transform into any simple or martial weapon. The weapon is always a <i>+2 flaming shock weapon</i> and can be sized for any creature. The xiuh couatl is limited to only light or one-handed weapons if sized for a Gargantuan creature or light weapons if sized for a Colossal creature. In weapon form, the xiuh couatl gains hardness equal to that of a weapon of its type and retains its type, senses, hit points, saving throws, and telepathy. A xiuh couatl can return to its normal form as an immediate action."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 22; <i>frequency </i>1/minute for 10 minutes; <i>effect </i>1d6 Str; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 22",
+                        "save_type": "Fort",
+                        "dc": 22
+                    },
+                    "frequency": "1/minute for 10 minutes",
+                    "effect": "1d6 Str",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Psychic Spells",
+                "text": "A xiuh couatl casts spells as a 15th-level psychic (<i>Pathfinder RPG Occult Adventures</i> 60)."
+            }
+        ]
     },
     "sources": [
         {

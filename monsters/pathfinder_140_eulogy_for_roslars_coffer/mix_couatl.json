@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or flight (3-4)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Gift of Knowledge (Ex)</b> When a mix couatl uses its <a href=\"SpellDisplay.aspx?ItemName=modify%20memory\" style=\"text-decoration:underline\"><i>modify memory</i></a> ability, it can implant a memory of up to 1 hour in length. In addition to its normal modifications, it can use <a href=\"SpellDisplay.aspx?ItemName=modify%20memory\" style=\"text-decoration:underline\"><i>modify memory</i></a> to grant the knowledge of a particular skill to a creature. When using the ability in this way, the mix couatl chooses one of the following skills: Craft (any), Handle Animal, Heal, Knowledge (engineering), Knowledge (geography), Knowledge (nature), Profession (any), Ride, Spellcraft, Survival, or Use Magic Device. The target of the spell automatically gains a number of ranks in that skill equal to its Hit Dice (maximum 5 ranks) and treats that skill as a class skill. The target creature retains the skill ranks for up to 1 month, after which the creature loses the skill ranks but still treats the chosen skill as a class skill. A creature can receive the gift of skills in this way only once; it can never receive this gift again, even from a different mix couatl. <br/><br/><b>Poison (Ex)</b> Injury\u2014bite; <i>save</i> Fortitude DC 19; <i>frequency</i> 1/ minute for 10 minutes; <i>effect</i> 1d3 Wis damage; <i>cure</i> 1 save. The DC is Constitution-based. <br/><br/><b>Spells</b> A mix couatl casts spells as a 7th-level <a href=\"ClassDisplay.aspx?ItemName=Druid\" style=\"text-decoration:underline\">druid</a>. Druid spells are considered arcane spells for a mix couatl, meaning that it doesn\u2019t need a divine focus to cast them. <br/><br/><b>Star Child (Ex)</b> A mix couatl gains power from the night sky, granting it a +20 bonus on Stealth checks to hide against the darkness of the sky. In addition, its fly speed increases to 80 feet (perfect) at night."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Mix (pronounced \u201cmeesh\u201d) couatls are a variety of couatl known for their ability to grant guidance and knowledge to fledgling societies. They seek out less established tribes and villages and offer their knowledge to help such settlements flourish. A mix couatl can offer a variety of knowledge depending on the nature of the settlement and its people. To some, they offer knowledge of new farming and hunting techniques, while others are taught more esoteric knowledge, like the arcane arts. While nurturing a settlement, a mix couatl typically acts as its protector, keeping at bay any foes that would disrupt the growth of the people. A typical mix couatl is 12 feet long with a wingspan of 15 feet and weighs 1,500 pounds."
@@ -716,7 +706,65 @@
                     "name": "star child"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or flight (3-4)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Gift of Knowledge",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "When a mix couatl uses its <a href=\"SpellDisplay.aspx?ItemName=modify%20memory\" style=\"text-decoration:underline\"><i>modify memory</i></a> ability, it can implant a memory of up to 1 hour in length. In addition to its normal modifications, it can use <a href=\"SpellDisplay.aspx?ItemName=modify%20memory\" style=\"text-decoration:underline\"><i>modify memory</i></a> to grant the knowledge of a particular skill to a creature. When using the ability in this way, the mix couatl chooses one of the following skills: Craft (any), Handle Animal, Heal, Knowledge (engineering), Knowledge (geography), Knowledge (nature), Profession (any), Ride, Spellcraft, Survival, or Use Magic Device. The target of the spell automatically gains a number of ranks in that skill equal to its Hit Dice (maximum 5 ranks) and treats that skill as a class skill. The target creature retains the skill ranks for up to 1 month, after which the creature loses the skill ranks but still treats the chosen skill as a class skill. A creature can receive the gift of skills in this way only once; it can never receive this gift again, even from a different mix couatl. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Injury\u2014bite; <i>save</i> Fortitude DC 19; <i>frequency</i> 1/ minute for 10 minutes; <i>effect</i> 1d3 Wis damage; <i>cure</i> 1 save. The DC is Constitution-based. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Injury\u2014bite",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fortitude DC 19",
+                        "save_type": "Fort",
+                        "dc": 19
+                    },
+                    "frequency": "1/ minute for 10 minutes",
+                    "effect": "1d3 Wis damage",
+                    "cure": "1 save. The DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Star Child",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A mix couatl gains power from the night sky, granting it a +20 bonus on Stealth checks to hide against the darkness of the sky. In addition, its fly speed increases to 80 feet (perfect) at night."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A mix couatl casts spells as a 7th-level <a href=\"ClassDisplay.aspx?ItemName=Druid\" style=\"text-decoration:underline\">druid</a>. Druid spells are considered arcane spells for a mix couatl, meaning that it doesn\u2019t need a divine focus to cast them. "
+            }
+        ]
     },
     "sources": [
         {

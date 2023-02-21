@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or cult (3\u20136)<br/><b>Treasure</b> double"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Su) </b>Bite\u2014injury; <i>save </i>Fort DC 25; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con plus confusion for 1 round; <i>cure </i>2 consecutive saves. A Leng spider\u2019s venom causes flesh to blister and rot away and the mind to experience vivid and horrific hallucinations\u2014these visions cause the poisoned creature to react in an unpredictable manner, as if confused. The hallucination element of this poison is mind-affecting. The save DC is Constitution-based.<br/><br/><b>Web Weaponry (Ex)</b> A Leng spider is talented at using its webs to construct masterwork weapons. This technique of weapon creation allows the spider to effectively create a flail or bolas by attaching a heavy object such as a rock or chunk of metal to a cord of webbing. The spider attaches one end of this webbing to a leg and can then wield the weighted cord as a masterwork flail or a masterwork bolas. It can only wield one such weapon at a time\u2014it must use its other legs to walk. If a Leng spider drops or loses a web weapon, it can create a new one as a full-round action, provided it has access to heavy-weight objects of the correct size (such as loose rocks or skulls)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The spiders of Leng have long warred with that realm\u2019s more humanoid denizens, yet this does not make the spiders allies of sane life. These spiders see themselves as deserving of true positions of power, and the only creatures they suffer to live apart from their kin are their magically controlled slaves. Fortunately, the spiders have no intrinsic way to travel to the Material Plane, and must use portals or other methods to visit this world. Artistic trap builders, Leng spiders construct lairs of dangerous and haunting beauty made of webs and other materials found nearby.<br/><br/>A Leng spider\u2019s body is 18 feet long and weighs 6,000 pounds. Most leng spiders possess only 7 legs, but some possess 9, 11, or only 5\u2014they never possess an even number."
@@ -619,7 +609,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or cult (3\u20136)",
+            "treasure": "double"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 25; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con plus confusion for 1 round; <i>cure </i>2 consecutive saves. A Leng spider\u2019s venom causes flesh to blister and rot away and the mind to experience vivid and horrific hallucinations\u2014these visions cause the poisoned creature to react in an unpredictable manner, as if confused. The hallucination element of this poison is mind-affecting. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 25",
+                        "save_type": "Fort",
+                        "dc": 25
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con plus confusion for 1 round",
+                    "cure": "2 consecutive saves. A Leng spider\u2019s venom causes flesh to blister and rot away and the mind to experience vivid and horrific hallucinations\u2014these visions cause the poisoned creature to react in an unpredictable manner, as if confused. The hallucination element of this poison is mind-affecting. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Web Weaponry",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A Leng spider is talented at using its webs to construct masterwork weapons. This technique of weapon creation allows the spider to effectively create a flail or bolas by attaching a heavy object such as a rock or chunk of metal to a cord of webbing. The spider attaches one end of this webbing to a leg and can then wield the weighted cord as a masterwork flail or a masterwork bolas. It can only wield one such weapon at a time\u2014it must use its other legs to walk. If a Leng spider drops or loses a web weapon, it can create a new one as a full-round action, provided it has access to heavy-weight objects of the correct size (such as loose rocks or skulls)."
+            }
+        ]
     },
     "sources": [
         {

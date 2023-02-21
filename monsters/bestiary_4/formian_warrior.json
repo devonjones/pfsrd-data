@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> warm or temperate land or underground<br/><b>Organization</b> solitary, pair, band (5\u20138 plus 3\u201315 workers and 1 taskmaster), or patrol (3\u201312)<br/><b>Treasure</b> standard (6 javelins, other treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Coordinate (Su)</b> Once a formian warrior has acted in a combat, all allied formians within the hive mind are no longer considered flat-footed. When a formian warrior attacks a creature in melee, allied formians gain a +2 insight bonus on melee attack rolls against that creature until the start of the warrior\u2019s next turn.<br/><br/><b>Deadly Grasp (Ex)</b> When a formian warrior has a foe grappled, it deals sting damage when it succeeds at a grapple check to damage its opponent.<br/><br/><b>Poison (Ex)</b> Javelin or sting\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dex; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Composing the fighting caste of the hive, formian warriors grow from grubs hatched in the flesh of carnivores and similar fierce creatures. All are sterile females, although in rare circumstances they spontaneously become fertile after the death of their queen. In the rigid hierarchy of the formian hive, they rank above the worker caste and below all others. Allowed independent initiative to better hone their battle skills, formian warriors have more latitude in following commands than many other formians. Owing to this latitude, formian warriors are more likely to chafe under hive strictures than workers and taskmasters.<br/><br/>All formian warriors ultimately answer to the myrmarch caste and, through them, to the queen. Beneath this layer of command, the warriors have a command structure of their own. Formian warriors advance in rank through a complicated formula that references their achievements in battle, personal prowess, and years of service to the hive.<br/><br/>Formian warriors engrave their chitin with insignia depicting their rank and notable deeds. A disgraced warrior has her markings gouged out and her stinger torn away.<br/><br/>Formian warriors stand 7 feet tall and weigh 200 pounds. Their carapaces resemble suits of armor as much as insects\u2019 exoskeletons but cannot be enhanced with magic as if they were armor. The striped patterns of a formian warrior vary from individual to individual, although formians belonging to the same hive usually bear similar markings.<br/><br/>Warriors mature quickly and have short life spans, becoming too infirm to fight around 15 years of age. Old warriors are expected to end their lives for the good of the hive, either by taking on a fatal mission or through voluntary starvation. A few of the most exceptional warriors receive permission to live out their remaining years as teachers and drill instructors, passing their skills on to new generations of formian warriors."
@@ -387,7 +377,57 @@
                     "name": "formian traits"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "warm or temperate land or underground",
+            "organization": "solitary, pair, band (5\u20138 plus 3\u201315 workers and 1 taskmaster), or patrol (3\u201312)",
+            "treasure": "standard (6 javelins, other treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Coordinate",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once a formian warrior has acted in a combat, all allied formians within the hive mind are no longer considered flat-footed. When a formian warrior attacks a creature in melee, allied formians gain a +2 insight bonus on melee attack rolls against that creature until the start of the warrior\u2019s next turn."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Deadly Grasp",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "When a formian warrior has a foe grappled, it deals sting damage when it succeeds at a grapple check to damage its opponent."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Javelin or sting\u2014injury; <i>save </i>Fort DC 14; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dex; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Javelin or sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Dex",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

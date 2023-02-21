@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate forests<br/><b>Organization</b> solitary, pair, or nest (3\u20136 plus 2\u20138 giant spiders)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 10 rounds; <i>effect </i>1d2 Dex; <i>cure </i>2 consecutive saves. The save DC is Constitution based.<br/><br/><b>Spider Empathy (Ex) </b>This ability functions as the druid\u2019s wild empathy, save that an ettercap can only use this ability on spiders. An ettercap gains a +4 racial bonus on this check. Spiders are mindless, but this empathic communication imparts on them a modicum of implanted intelligence, allowing ettercaps to train giant spiders and use them as guardians.<br/><br/><b>Traps (Ex) </b>The ettercap is particularly skilled at crafting cunning traps with its webs. Deadfalls, nooses, and spear traps are the most common traps ettercaps build with their webs. An ettercap doesn\u2019t require gold to build its traps, merely time."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "<b>Ettercap Deadfall</b>: CR 3; <i>Type </i>mechanical; <i>Perception </i>DC 20; <i>Disable Device </i>DC 20; <i>Trigger </i>location; <i>Reset </i>repair; <i>Effect </i>+10 melee (4d6), multiple targets (all targets in a 10-ft. square).<br/><br/><b>Ettercap Noose</b>: CR 1; <i>Type </i>mechanical; <i>Perception </i>DC 20; <i>Disable Device </i>DC 20; <i>Trigger </i>location; <i>Reset </i>repair; <i>Effect </i>+15 CMB check (grapple).<br/><br/><b>Ettercap Spear Trap</b>: CR 2; <i>Type </i>mechanical; <i>Perception </i>DC 20; <i>Disable Device </i>DC 20; <i>Trigger </i>location; <i>Reset </i>repair; <i>Effect </i>+15 melee (1d6+6).<br/><br/>Ettercaps are typically 6 feet tall and weigh about 200 pounds. They are solitary creatures and rarely group with others of their kind, even to mate. When they do group, they tend to attract a variety of different spiders, forming a strange collective of ettercaps and arachnids. Ettercaps are known for building cunning traps out of webs and other natural materials, using them to trap prey. They build shelters out of webbing, often high up in the trees away from other ground-based predators, and use monstrous spiders as lookouts and guardians.<br/><br/>Ettercaps are not brave creatures, but their traps often ensure that the enemy never draws a weapon. When an ettercap does engage its enemies, it attacks with its claws and venomous bite. It usually refuses to come within melee reach of any foe that is still able to move, and flees if an opponent gets free."
@@ -302,7 +292,57 @@
                     "name": "spider empathy +7"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate forests",
+            "organization": "solitary, pair, or nest (3\u20136 plus 2\u20138 giant spiders)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 10 rounds; <i>effect </i>1d2 Dex; <i>cure </i>2 consecutive saves. The save DC is Constitution based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 10 rounds",
+                    "effect": "1d2 Dex",
+                    "cure": "2 consecutive saves. The save DC is Constitution based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spider Empathy",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "This ability functions as the druid\u2019s wild empathy, save that an ettercap can only use this ability on spiders. An ettercap gains a +4 racial bonus on this check. Spiders are mindless, but this empathic communication imparts on them a modicum of implanted intelligence, allowing ettercaps to train giant spiders and use them as guardians."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Traps",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The ettercap is particularly skilled at crafting cunning traps with its webs. Deadfalls, nooses, and spear traps are the most common traps ettercaps build with their webs. An ettercap doesn\u2019t require gold to build its traps, merely time."
+            }
+        ]
     },
     "sources": [
         {

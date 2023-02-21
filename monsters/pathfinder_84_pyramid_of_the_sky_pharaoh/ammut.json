@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Osirion)<br/><b>Organization</b> solitary<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Devour Soul (Su)</b> If a creature dies while swallowed whole by an ammut, its soul is consumed along with its body. A creature killed in this way cannot be brought back to life via any effect short of <i>true resurrection</i>, <i>miracle</i>, or <i>wish</i>, but even these spells require the caster to succeed at a caster level check equal to 10 + the targeted creature\u2019s Hit Dice. If this check fails, the caster can\u2019t attempt to return the targeted creature to life for the next 24 hours (though the caster can try again after this period).<br/><br/><b>Powerful Jaw (Ex)</b> An ammut\u2019s bite attack deals 4d6 points of damage plus one and a half times its Strength bonus. In addition, its reach with this attack is 5 feet further than normal and it gains the grab ability when attacking with its bite.<br/><br/><b>Swallow Whole (Ex)</b> An ammut can swallow creatures size Large or smaller with this special ability, and can only swallow one creature at a time regardless of the creature\u2019s size. In addition, creatures swallowed by an ammut are subject to its wasting curse.<br/><br/><b>Wasting Curse (Su)</b> Swallow whole\u2014contact; <i>save</i> Will DC 29; <i>frequency</i> 1 hour; <i>effect</i> 1d4 Cha drain. A creature whose Charisma score is reduced to 0 by this wasting curse dies; its body is destroyed and it is subject to the ammut\u2019s devour soul ability as if it had died while within the ammut\u2019s gut. The save DC is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Ammuts are beastly but cunning creatures that consume souls in an attempt to satisfy their insatiable hungers. Few ammuts exist, and those that do wander the vast deserts of Osirion preying on the souls of any creature they can catch. These creatures prefer the taste of thoroughly evil souls or those who have experienced full and complex lives. Ammuts show disdain for creatures of inferior intelligence, but also tend to leave them alone, as they claim their souls are shallow and flavorless. The rarity of ammuts and their nomadic nature makes it difficult to determine how long they live, or even if they age at all. Ammuts are approximately 20 feet long and 9 feet tall at the shoulder. Their rounded and muscular hindquarters makes them denser than would be expected for their size, and ammuts can weigh up to 10 tons."
@@ -683,7 +673,64 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Osirion)",
+            "organization": "solitary",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Devour Soul",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "If a creature dies while swallowed whole by an ammut, its soul is consumed along with its body. A creature killed in this way cannot be brought back to life via any effect short of <i>true resurrection</i>, <i>miracle</i>, or <i>wish</i>, but even these spells require the caster to succeed at a caster level check equal to 10 + the targeted creature\u2019s Hit Dice. If this check fails, the caster can\u2019t attempt to return the targeted creature to life for the next 24 hours (though the caster can try again after this period)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Powerful Jaw",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "An ammut\u2019s bite attack deals 4d6 points of damage plus one and a half times its Strength bonus. In addition, its reach with this attack is 5 feet further than normal and it gains the grab ability when attacking with its bite."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Swallow Whole",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "An ammut can swallow creatures size Large or smaller with this special ability, and can only swallow one creature at a time regardless of the creature\u2019s size. In addition, creatures swallowed by an ammut are subject to its wasting curse."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Wasting Curse",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Swallow whole\u2014contact; <i>save</i> Will DC 29; <i>frequency</i> 1 hour; <i>effect</i> 1d4 Cha drain. A creature whose Charisma score is reduced to 0 by this wasting curse dies; its body is destroyed and it is subject to the ammut\u2019s devour soul ability as if it had died while within the ammut\u2019s gut. The save DC is Charisma-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Wasting Curse",
+                    "affliction_type": "Wasting Curse; Swallow whole\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Will DC 29",
+                        "save_type": "Will",
+                        "dc": 29
+                    },
+                    "frequency": "1 hour",
+                    "effect": "1d4 Cha drain. A creature whose Charisma score is reduced to 0 by this wasting curse dies; its body is destroyed and it is subject to the ammut\u2019s devour soul ability as if it had died while within the ammut\u2019s gut. The save DC is Charisma-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

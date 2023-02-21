@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Abyss)<br/><b>Organization</b> solitary or flock (2\u201312)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Claw\u2014injury; <i>save </i>Fortitude DC 13; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dexterity; <i>cure </i>2 consecutive saves. The DC includes a +2 racial bonus."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The quasit is perhaps the least powerful demon, yet it is not the least respected\u2014even quasits hold themselves above the dretch horde, and true to their natures, dretches lack the courage or drive to prove the quaits wrong. A quasit\u2019s first role in life is that of a familiar to a spellcasting master, but those quasits who escape from this humiliating servitude become free-willed and much more dangerous.<br/><br/>A typical quasit stands a foot and a half tall, and weighs only 8 pounds. Alone among the demonic horde, quasits do not form from the dead souls of evil mortals. Instead, they form from living souls\u2014when a spellcaster seeks out a quasit to serve him as a familiar, his soul brushes against the Abyss and it reacts, carving from itself a quasit linked to that spellcaster\u2019s soul and forming a powerful bond between the two. Newly created quasits are birthed directly into the Material Plane, where they become familiars, and while bonded to their masters\u2019 wills, all quasits hate and loathe their lieges, as they can feel the pulse of their lords\u2019 souls and know that they could have been more. A quasit serves, yet it watches and waits for mistakes that might cost its master\u2019s life, or even better, an error that might let the quasit turn against its master.<br/><br/>When a quasit\u2019s master dies, the quasit can attempt to follow the master\u2019s soul into the Great Beyond by making a DC 15 Will save. This functions as <i>plane shift</i>, but affects only the quasit and transports it into the Abyss and places its master\u2019s soul in the quasit\u2019s possession as a writhing larvae rather than using the evil master\u2019s soul to create new demonic life. In this manner, a quasit can use its newly captured soul to bargain with more powerful denizens of the lower planes, and perhaps secure a vile transformative \u201cpromotion\u201d to a more powerful form of life in the process.<br/><br/>Rarely, a quasit elects to ignore its master\u2019s death and instead remains on the Material Plane to seek other ways to entertain itself\u2014usually settling in an urban area where there are plenty of folk to torment."
@@ -498,7 +488,41 @@
                     "name": "change shape"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Abyss)",
+            "organization": "solitary or flock (2\u201312)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Claw\u2014injury; <i>save </i>Fortitude DC 13; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dexterity; <i>cure </i>2 consecutive saves. The DC includes a +2 racial bonus.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Claw\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fortitude DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Dexterity",
+                    "cure": "2 consecutive saves. The DC includes a +2 racial bonus."
+                }
+            }
+        ]
     },
     "sources": [
         {

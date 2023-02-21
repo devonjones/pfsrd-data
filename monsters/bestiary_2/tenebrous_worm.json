@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land (Plane of Shadow)<br/><b>Organization</b> solitary, pair, or swarm (3\u20136)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Acid (Su)</b> The acid of a tenebrous worm\u2019s bite affects only organic matter\u2014as it dissolves creatures, it converts their flesh to shadow that swiftly fades away, leaving raw, jagged wounds behind. In dim light, acid damage dealt by a tenebrous worm\u2019s bite increases to 8d6 points of damage, while in darkness or bright light, the acid damage is reduced to 4d6.<br/><br/><b>Bristles (Su)</b> Long bristles of shadowstuff extend from between the tenebrous worm\u2019s armor plates. These bristles react swiftly to attacks, stabbing at any creature that attempts to harm the worm. Each time a creature attacks a tenebrous worm, it must make a DC 18 Reflex save to avoid being punctured by several bristles. Each time a creature is punctured by these bristles, it takes 1d4 points of piercing damage and is exposed to the tenebrous worm\u2019s poison. A creature that grapples a tenebrous worm is automatically hurt by these bristles. The save DC to avoid the bristles is Dexterity-based.<br/><br/><b>Poison (Su)</b> Bristles\u2014injury; <i>save </i>Fort DC 20, <i>frequency </i>1/round for 6 rounds, <i>effect </i>paralysis for 1d4 rounds plus 1d2 Con (the duration of the paralysis is cumulative with each failed save), cure 2 consecutive saves. The save DC is Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The caterpillar-like tenebrous worm is a voracious predator that hungers for mortal flesh. The tenebrous worm is the larval stage of the gloomwing (see page 133)\u2014but in a strange reversal, these younger creatures are more dangerous than the adults they grow into. A native of the Plane of Shadow, a tenebrous worm hatches from the body of an unfortunate creature that has been implanted with an egg by a gloomwing. The tenebrous worm is fully grown upon hatching, and immediately begins to scour its environs for flesh to consume.<br/><br/>Although the tenebrous worm tends to be relatively pale-colored, its internal organs seethe and roil with shadowy energies and dark fluids. As the creature feeds, these shadowy innards begin to grow out of its body, forming strange bristle-like filaments of semisolid shadowstuff not only capable of piercing the flesh of those who would attack the worm, but also possessing a deadly paralytic poison. Additional shadowy fluids constantly seep from the worm\u2019s mandibles\u2014when it bites prey, these fluids melt flesh into shadows that the creature can then consume. When a tenebrous worm feeds on enough of this shadowy flesh, the creature seeks out a secluded, shady area (typically just within a cave entrance or in a ruined building) and spins a shadowy cocoon around itself. A tenebrous worm\u2019s cocoon exudes the effects of a <i>darkness </i>spell (CL 8th), muting the surrounding light. After a period of several days, the cocoon tears open and a fully grown gloomwing emerges, ready to seek a host for its eggs."
@@ -285,7 +275,56 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land (Plane of Shadow)",
+            "organization": "solitary, pair, or swarm (3\u20136)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Acid",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "The acid of a tenebrous worm\u2019s bite affects only organic matter\u2014as it dissolves creatures, it converts their flesh to shadow that swiftly fades away, leaving raw, jagged wounds behind. In dim light, acid damage dealt by a tenebrous worm\u2019s bite increases to 8d6 points of damage, while in darkness or bright light, the acid damage is reduced to 4d6."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Bristles",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Long bristles of shadowstuff extend from between the tenebrous worm\u2019s armor plates. These bristles react swiftly to attacks, stabbing at any creature that attempts to harm the worm. Each time a creature attacks a tenebrous worm, it must make a DC 18 Reflex save to avoid being punctured by several bristles. Each time a creature is punctured by these bristles, it takes 1d4 points of piercing damage and is exposed to the tenebrous worm\u2019s poison. A creature that grapples a tenebrous worm is automatically hurt by these bristles. The save DC to avoid the bristles is Dexterity-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Bristles\u2014injury; <i>save </i>Fort DC 20, <i>frequency </i>1/round for 6 rounds, <i>effect </i>paralysis for 1d4 rounds plus 1d2 Con (the duration of the paralysis is cumulative with each failed save), cure 2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bristles\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 20",
+                        "save_type": "Fort",
+                        "dc": 20
+                    },
+                    "frequency": "1/round for 6 rounds,",
+                    "effect": "paralysis for 1d4 rounds plus 1d2 Con (the duration of the paralysis is cumulative with each failed save), cure 2 consecutive saves. The save DC is Constitution-based."
+                }
+            }
+        ]
     },
     "sources": [
         {

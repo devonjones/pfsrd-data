@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, crew (1 plus 2\u20135 <a href=\"MonsterDisplay.aspx?ItemName=Clockwork%20Servant\" style=\"text-decoration:underline\">clockwork servants</a>), or deployment (1\u20132 plus 2\u20135 <a href=\"MonsterDisplay.aspx?ItemName=Clockwork%20Soldier\" style=\"text-decoration:underline\">clockwork soldiers</a>)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Aura of Command (Ex)</b> A clockwork overseer broadcasts subtle commands in a 30-foot radius, granting heightened combat abilities to all clockwork creatures in the area. Affected clockwork creatures, including the clockwork overseer, gain a +1 competence bonus on saving throws, attack rolls, and weapon damage rolls; these bonuses are already calculated into the clockwork overseer\u2019s statistics. As a standard action, a clockwork overseer can intensify the aura until the beginning of its next turn, increasing the competence bonus to +2. <br/><br/><b>Lash (Ex)</b> A clockwork overseer\u2019s lash is a primary natural attack that deals bludgeoning damage. <br/><br/><b>Overclock (Ex)</b> In place of making a lash attack on its turn, a clockwork overseer can overclock another clockwork creature within its reach, impelling it to exceed its performance limitations. At the beginning of its turn, an overclocked creature takes an amount of damage equal to half its Hit Dice (minimum 1), expends 1 full day of activity stored by its winding ability, and gains one of the following benefits, selected by the clockwork overseer. <ul> <li>The overclocked creature gains the benefits of <a href=\"SpellDisplay.aspx?ItemName=haste\" style=\"text-decoration:underline\"><i>haste</i></a>. </li> <li>The overclocked creature\u2019s natural attacks and attacks with metal melee weapons deal an additional 1d6 points of fire damage. If the creature already deals fire damage, including with a breath weapon or the swallow whole ability, that special attack\u2019s fire damage increases by 2d6. </li> <li>The overclocked creature gains <a href=\"FeatDisplay.aspx?ItemName=Combat%20Reflexes\" style=\"text-decoration:underline\">Combat Reflexes</a> as a bonus feat and gains a +2 bonus on attack rolls when making attacks of opportunity.</li> </ul> A clockwork overseer can end this effect on a clockwork creature affected by its aura of command as a free action. The overclocked condition otherwise continues until the clockwork creature expends its stored days of activity or is destroyed. <br/><br/><b>Tactical Calculus (Ex)</b> A clockwork overseer can store hundreds of commands and scripts, allowing it to perform modest feats of problem-solving and strategic command as though it had an Intelligence score of 10. In practice, this enables a clockwork overseer to make tactical decisions, such as exploiting terrain or flanking targets, as well as convey simple tactical commands to other clockwork creatures in its aura of command. If the clockwork overseer takes electricity damage, it must succeed at a Fortitude save (DC = the electricity damage dealt) or lose both its aura of command and tactical calculus abilities for 1d4 rounds."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "What clockwork creatures boast in both strength and resilience, they often lack in nuance and strategy. Most machinists are content to command their constructs directly when seeking tactical precision, but only a few artificers have the technical expertise needed to create a mechanical lieutenant capable of reasoning and adapting in its master\u2019s absence. Known as clockwork overseers, these constructs boast extraordinarily complex programming that far exceeds the basic command vocabulary of other clockwork creatures. This allows clockwork overseers to store hundreds or even thousands of commands, which they can parse and sort quickly enough to simulate an intelligent creature\u2019s adaptive thinking\u2014at least regarding combat strategy and moderately complex tasks of coordinating construct laborers. These functions fall short of true thought, and clockwork overseers are incapable of language, emotion, higher thinking, or symbolic reasoning beyond specific sounds and statements they might parrot on command."
@@ -347,7 +337,49 @@
                     "name": "winding"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary, crew (1 plus 2\u20135 <a href=\"MonsterDisplay.aspx?ItemName=Clockwork%20Servant\" style=\"text-decoration:underline\">clockwork servants</a>), or deployment (1\u20132 plus 2\u20135 <a href=\"MonsterDisplay.aspx?ItemName=Clockwork%20Soldier\" style=\"text-decoration:underline\">clockwork soldiers</a>)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Aura of Command",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A clockwork overseer broadcasts subtle commands in a 30-foot radius, granting heightened combat abilities to all clockwork creatures in the area. Affected clockwork creatures, including the clockwork overseer, gain a +1 competence bonus on saving throws, attack rolls, and weapon damage rolls; these bonuses are already calculated into the clockwork overseer\u2019s statistics. As a standard action, a clockwork overseer can intensify the aura until the beginning of its next turn, increasing the competence bonus to +2. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Lash",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A clockwork overseer\u2019s lash is a primary natural attack that deals bludgeoning damage. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Overclock",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "In place of making a lash attack on its turn, a clockwork overseer can overclock another clockwork creature within its reach, impelling it to exceed its performance limitations. At the beginning of its turn, an overclocked creature takes an amount of damage equal to half its Hit Dice (minimum 1), expends 1 full day of activity stored by its winding ability, and gains one of the following benefits, selected by the clockwork overseer. <ul> <li>The overclocked creature gains the benefits of <a href=\"SpellDisplay.aspx?ItemName=haste\" style=\"text-decoration:underline\"><i>haste</i></a>. </li> <li>The overclocked creature\u2019s natural attacks and attacks with metal melee weapons deal an additional 1d6 points of fire damage. If the creature already deals fire damage, including with a breath weapon or the swallow whole ability, that special attack\u2019s fire damage increases by 2d6. </li> <li>The overclocked creature gains <a href=\"FeatDisplay.aspx?ItemName=Combat%20Reflexes\" style=\"text-decoration:underline\">Combat Reflexes</a> as a bonus feat and gains a +2 bonus on attack rolls when making attacks of opportunity.</li> </ul> A clockwork overseer can end this effect on a clockwork creature affected by its aura of command as a free action. The overclocked condition otherwise continues until the clockwork creature expends its stored days of activity or is destroyed. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Tactical Calculus",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A clockwork overseer can store hundreds of commands and scripts, allowing it to perform modest feats of problem-solving and strategic command as though it had an Intelligence score of 10. In practice, this enables a clockwork overseer to make tactical decisions, such as exploiting terrain or flanking targets, as well as convey simple tactical commands to other clockwork creatures in its aura of command. If the clockwork overseer takes electricity damage, it must succeed at a Fortitude save (DC = the electricity damage dealt) or lose both its aura of command and tactical calculus abilities for 1d4 rounds."
+            }
+        ]
     },
     "sources": [
         {

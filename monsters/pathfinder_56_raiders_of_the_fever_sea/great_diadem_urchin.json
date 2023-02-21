@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or warm oceans or coastlines<br/><b>Organization</b> solitary, pair, cluster (2\u20135)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex) </b>Great diadem urchin venom is shockingly painful and feels acidic at the moment of contact\u2014though the worst of the pain fades after a moment. The save DC is Constitution-based.<br/><br/>Spines\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con and stunned for 1 round; <i>cure </i>1 save.<br/><br/><b>Spines (Ex) </b>A great diadem urchin\u2019s spines can swivel to face any approaching creature. Any creature that attacks a great diadem urchin with an unarmed strike or a natural attack, or any Large or smaller creature that attacks with a onehanded weapon or light weapon, is automatically attacked by the hunter urchin\u2019s spines as an immediate action. If the spines hit, they can poison the target as well."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Enormous and brilliantly colored diadem urchins are often sought after by terrestrial collectors or aquatic creatures seeking to simultaneously decorate and defend their throne rooms, yet such beasts are never truly trainable, and attack anyone who comes close."
@@ -243,7 +233,49 @@
                     "name": "amphibious"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or warm oceans or coastlines",
+            "organization": "solitary, pair, cluster (2\u20135)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Great diadem urchin venom is shockingly painful and feels acidic at the moment of contact\u2014though the worst of the pain fades after a moment. The save DC is Constitution-based.<br/><br/>Spines\u2014injury; <i>save </i>Fort DC 18; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Con and stunned for 1 round; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Great diadem urchin venom is shockingly painful and feels acidic at the moment of contact\u2014though the worst of the pain fades after a moment. The save DC is Constitution-based.<br/><br/>Spines\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 18",
+                        "save_type": "Fort",
+                        "dc": 18
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Con and stunned for 1 round",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spines",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A great diadem urchin\u2019s spines can swivel to face any approaching creature. Any creature that attacks a great diadem urchin with an unarmed strike or a natural attack, or any Large or smaller creature that attacks with a onehanded weapon or light weapon, is automatically attacked by the hunter urchin\u2019s spines as an immediate action. If the spines hit, they can poison the target as well."
+            }
+        ]
     },
     "sources": [
         {

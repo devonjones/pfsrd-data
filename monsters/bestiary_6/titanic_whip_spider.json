@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or warm hills<br/><b>Organization</b> solitary or pair<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Fort DC 28; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Con drain and nauseated for 1 round; <i>cure</i> 2 consecutive saves. <br/><br/><b>Poison Cloud (Ex)</b> As a standard action up to twice per day, a titanic whip spider can release a cloud of poisonous gas in a 30-foot-radius spread, centered on any point within its space. Any creature in the area must succeed at a DC 28 Fortitude save or be nauseated for 1d6 rounds and sickened for 1d4 hours afterward. The poison cloud does not obscure vision and persists for 1d4 rounds, but a strong or stronger wind disperses it immediately. This is a poison effect that does not affect whip spiders of any type. The save DC is Constitution-based. <br/><br/><b>Whip Legs (Ex)</b> The whip spider\u2019s two front legs are extremely long, antennae-like \u201cwhips\u201d that give the whip spider the ability to locate potential prey and give it additional information about the target. These whip legs are secondary natural attacks that resolve as touch attacks and deal 1d4 points of slashing damage on a hit. If a whip leg hits a target, the whip spider gains additional sensory information about the target, gaining a +2 insight bonus on any further attacks against that target in the same round. If both whip legs hit, then any additional attacks the whip spider makes that round against that target gain a +4 insight bonus instead. As long as a whip spider benefits from this insight bonus against a foe, that foe can\u2019t gain concealment against the whip spider."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Whip spiders have eight legs, but walk on only the rear six. The remaining legs are longer and used as antennae-like feelers, the \u201cwhips\u201d that give the creature its name. <br/><br/>A whip spider\u2019s pedipalps are long, spined appendages highly adapted to striking and grasping prey. The titanic whip spider is also referred to as the \u201cmancatcher\u201d whip spider, so named for its extremely long pedipalps that end in slender, spiked claws resembling the weapon. The pedipalps vary in size and function in other species, such as the obsidian whip spider\u2019s stout, spiked pedipalps, or the saber whip spider\u2019s long blades in place of claws.<br/><br/>While the titanic whip spider is the largest known of the species, other species exist in different sizes and with various special abilities. The following table lists the most common variants. <table class=\"inner\"> <tr> <th>Species</th> <th>CR</th> <th>Size</th> <th>Hit Dice</th> </tr> <tr> <td>Jungle whip spider</td> <td>1</td> <td>Small</td> <td>2</td> </tr> <tr> <td>Giant whip spider</td> <td>4</td> <td>Medium</td> <td>6</td> </tr> <tr> <td>Saber whip spider</td> <td>7</td> <td>Large</td> <td>9</td> </tr> <tr> <td>Chain whip spider</td> <td>11</td> <td>Huge</td> <td>12</td> </tr> <tr> <td>Obsidian whip spider</td> <td>14</td> <td>Gargantuan</td> <td>16</td> </tr> </table>"
@@ -298,7 +288,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or warm hills",
+            "organization": "solitary or pair",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 28; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Con drain and nauseated for 1 round; <i>cure</i> 2 consecutive saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 28",
+                        "save_type": "Fort",
+                        "dc": 28
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con drain and nauseated for 1 round",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison Cloud",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a standard action up to twice per day, a titanic whip spider can release a cloud of poisonous gas in a 30-foot-radius spread, centered on any point within its space. Any creature in the area must succeed at a DC 28 Fortitude save or be nauseated for 1d6 rounds and sickened for 1d4 hours afterward. The poison cloud does not obscure vision and persists for 1d4 rounds, but a strong or stronger wind disperses it immediately. This is a poison effect that does not affect whip spiders of any type. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Whip Legs",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The whip spider\u2019s two front legs are extremely long, antennae-like \u201cwhips\u201d that give the whip spider the ability to locate potential prey and give it additional information about the target. These whip legs are secondary natural attacks that resolve as touch attacks and deal 1d4 points of slashing damage on a hit. If a whip leg hits a target, the whip spider gains additional sensory information about the target, gaining a +2 insight bonus on any further attacks against that target in the same round. If both whip legs hit, then any additional attacks the whip spider makes that round against that target gain a +4 insight bonus instead. As long as a whip spider benefits from this insight bonus against a foe, that foe can\u2019t gain concealment against the whip spider."
+            }
+        ]
     },
     "sources": [
         {

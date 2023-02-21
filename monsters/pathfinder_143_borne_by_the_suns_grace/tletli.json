@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or revelation (3\u20136 plus 1\u20132 angels and 1 <a href=\"MonsterDisplay.aspx?ItemName=Chicome\" style=\"text-decoration:underline\">chicome couatl</a>)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Holy Fire (Su)</b> Fire damage dealt by a tletli, including that of its breath weapon and spells, is infused with divine energy. Half the damage of such attacks is fire damage, but the other half is the result of holy power and thus not subject to being reduced by resistance to fire-based attacks. Fire damage dealt by a tletli is considered good-aligned for the purpose of overcoming damage reduction. <br/><br/><b>Poison (Ex)</b> Injury\u2014bite; <i>save</i> Fort DC 25; <i>frequency</i> 1/minute for 10 minutes; <i>effect</i> 1d6 Str; <i>cure</i> 2 consecutive saves. <br/><br/><b>Spells</b> A tletli casts spells as a 12th-level sorcerer, and can cast spells from the <a href=\"Spells.aspx?Class=Inquisitor\" style=\"text-decoration:underline\">inquisitor</a> and <a href=\"Spells.aspx?Class=Paladin\" style=\"text-decoration:underline\">paladin</a> spell lists as well as those normally available to a <a href=\"Spells.aspx?Class=Sorcerer\" style=\"text-decoration:underline\">sorcerer</a>. These divine spells are considered arcane spells for the tletli, meaning that the creature does not need a divine focus to cast them. <br/><br/><b>Stoke Flames (Ex)</b> Once per round when a tletli attacks with its wings, it can cause areas of active fire within 30 feet to spread as a free action. An affected 5-foot square of fire spreads to one adjacent square that is not on fire, possibly burning objects or creatures in that space. The tletli determines which adjacent squares are set on fire."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Of all the couatls, tletlis are among the most vengeful and easily the most actively destructive, channeling their righteous fury to rid Golarion of large swaths of evildoers. While some couatls may offer redemption to evil individuals, a tletli withholds salvation and exacts punishment on whole sects of people whose crimes they deem warrant oblivion. Tletlis do not hunt down individuals, instead targeting gangs, corrupt governments, and even entire settlements that they believe have fallen beyond redemption.<br/><br/> The tletli is a terrifying sight to behold. Its wings are continually shrouded in flame, ranging from warm orange at the base to hot blue at the tips, causing the air around the couatl to radiate with an ominous light best described as apocalyptic. Further magnifying the effect, the beast\u2019s opalescent scales seem to reflect a divine light. A typical tletli is 35 long with a wingspan of 25 feet. It is one of the heaviest couatls, weighing nearly 6,000 pounds."
@@ -955,7 +945,65 @@
                     "name": "holy fire"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or revelation (3\u20136 plus 1\u20132 angels and 1 <a href=\"MonsterDisplay.aspx?ItemName=Chicome\" style=\"text-decoration:underline\">chicome couatl</a>)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Holy Fire",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Fire damage dealt by a tletli, including that of its breath weapon and spells, is infused with divine energy. Half the damage of such attacks is fire damage, but the other half is the result of holy power and thus not subject to being reduced by resistance to fire-based attacks. Fire damage dealt by a tletli is considered good-aligned for the purpose of overcoming damage reduction. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Injury\u2014bite; <i>save</i> Fort DC 25; <i>frequency</i> 1/minute for 10 minutes; <i>effect</i> 1d6 Str; <i>cure</i> 2 consecutive saves. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Injury\u2014bite",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 25",
+                        "save_type": "Fort",
+                        "dc": 25
+                    },
+                    "frequency": "1/minute for 10 minutes",
+                    "effect": "1d6 Str",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Stoke Flames",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per round when a tletli attacks with its wings, it can cause areas of active fire within 30 feet to spread as a free action. An affected 5-foot square of fire spreads to one adjacent square that is not on fire, possibly burning objects or creatures in that space. The tletli determines which adjacent squares are set on fire."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A tletli casts spells as a 12th-level sorcerer, and can cast spells from the <a href=\"Spells.aspx?Class=Inquisitor\" style=\"text-decoration:underline\">inquisitor</a> and <a href=\"Spells.aspx?Class=Paladin\" style=\"text-decoration:underline\">paladin</a> spell lists as well as those normally available to a <a href=\"Spells.aspx?Class=Sorcerer\" style=\"text-decoration:underline\">sorcerer</a>. These divine spells are considered arcane spells for the tletli, meaning that the creature does not need a divine focus to cast them. "
+            }
+        ]
     },
     "sources": [
         {

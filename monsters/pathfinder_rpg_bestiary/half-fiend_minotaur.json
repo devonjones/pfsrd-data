@@ -3,11 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate ruins or underground<br/><b>Organization</b> solitary, pair, or gang (3\u20134)<br/><b>Treasure</b> standard (greataxe, other treasure)<br/>*<a href=\"MonsterDisplay.aspx?ItemName=Minotaur\" style=\"text-decoration:underline\">Minotaur</a> ability"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Half-fiends are creatures heavily tainted with demonic, infernal, or other evil power."
@@ -109,7 +104,14 @@
                 {
                     "type": "stat_block_section",
                     "subtype": "defensive_ability",
-                    "name": "natural cunning*"
+                    "modifiers": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "modifier",
+                            "name": "Minotaur Ability"
+                        }
+                    ],
+                    "name": "natural cunning"
                 }
             ],
             "dr": [
@@ -455,6 +457,14 @@
                     }
                 ]
             }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate ruins or underground",
+            "organization": "solitary, pair, or gang (3\u20134)",
+            "treasure": "standard (greataxe, other treasure)"
         }
     },
     "sources": [

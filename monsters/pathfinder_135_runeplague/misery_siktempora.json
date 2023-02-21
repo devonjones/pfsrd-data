@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Dimension of Time)<br/><b>Organization</b> solitary, pair, or desperation (3-6)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Burst of Uncanny Speed (Su)</b> On the first round of combat, a misery siktempora moves as if it were affected by a <a href=\"SpellDisplay.aspx?ItemName=haste\" style=\"text-decoration:underline\"><i>haste</i></a> spell. It can use <a href=\"FeatDisplay.aspx?ItemName=Whirlwind%20Attack\" style=\"text-decoration:underline\">Whirlwind Attack</a> on this first round of combat as a standard action, making one melee attack at its highest base attack bonus against each opponent within reach. <br/><br/><b>Miserable Source (Ex)</b> A misery siktempora created by a creature that has damaged the time stream is no more powerful than others of its kind, but its creator takes a \u20134 penalty on saving throws against that particular siktempora\u2019s misery and telepathic wail abilities. <br/><br/><b>Misery (Sp)</b> Those struck by a misery siktempora\u2019s claws are infused with the misery and despair the creature is made of. A creature that takes damage from a misery siktempora\u2019s claw must succeed at a DC 22 Will save or it becomes struck with despair and takes a \u20134 penalty on attack rolls, Will saving throws, and skill checks for 1 minute. If a creature is already affected by misery, failing an additional save resets the duration and restores 5 hit points to the misery siktempora. This is a mind-affecting emotion effect. The save DC is Charisma-based. <br/><br/><b>Savage the Suffering (Su)</b> A misery siktempora has a supernatural knack for striking those suffering from misery and confusion. It treats confused foes and those affected by its misery attack as flat-footed. <br/><br/><b>Telepathic Wail (Su)</b> Once per round as a swift action, a misery siktempora can fill the mind of a single living creature within 100 feet with the perception of a wail filled with horror and despair. A creature subjected to this telepathic wail must succeed at a DC 22 Will save or become confused for 1 round. This is a mind-affecting effect. The save DC is Charisma-based. <br/><br/><b>Temporal Jaunt (Sp)</b> As a standard action, a misery siktempora can vanish into the time stream, reappearing in another location. This ability functions as <a href=\"SpellDisplay.aspx?ItemName=dimension%20door\" style=\"text-decoration:underline\"><i>dimension door</i></a> (so a typical misery siktempora can jaunt up to 880 feet), but the siktempora can take other actions that round after reappearing, and the destination must be in a location the siktempora could reach normally by walking. Temporal jaunts are not true teleportation\u2014the misery siktempora simply travels to a later point in the time stream\u2014so the ability can be used in areas that bar teleportation effects; however, in such areas a siktempora can travel only a distance equal to its speed. <br/><br/><b>Temporal Sense (Ex)</b> A misery siktempora can sense all the possible futures of the coming seconds. This grants it an insight bonus on its Initiative checks and to its Armor Class equal to its Wisdom bonus (+5 for most misery siktemporas). A misery siktempora born from someone who damaged the time stream can use <a href=\"SpellDisplay.aspx?ItemName=discern%20location\" style=\"text-decoration:underline\"><i>discern location</i></a> at will as a spell-like ability to pinpoint its progenitor\u2019s location."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "All emotion goes somewhere; that energy does not simply vanish, sent into the void to be lost. Feelings lurch between places and congeal in the endless corners of time. The things they birth have many names, but are collectively known as siktemporas. Most siktemporas never leave the Dimension of Time, dwelling forever in their own isolated mindscape-like fugues, where they bask in the emotions that created them. Yet among the siktemporas, one variety has a penchant for traveling beyond the eerie borders of its home dimension\u2014those born of misery.<br/><br/> Misery siktemporas are personifications of silent suffering. Hideous to behold, wracked in such constant pain that they can endure any agony, and with alien minds incapable of forming any other thought apart from various forms of self-loathing and despair, misery siktemporas find themselves drawn out of the Dimension of Time to seek out those who spawned them and inflict miserable vengeance.<br/><br/> A misery siktempora vaguely resembles a slender human with a body wrapped in black rags and scarfs. It has no arms, and its six exceptionally long spiderlike legs each end in a nearly skeletal looking claw. It has only empty black eye sockets in its narrow faces\u2014no mouth, ears, or nose\u2014and from those empty sockets trail constant rivers of black tears."
@@ -565,7 +555,73 @@
                     "name": "miserable source"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Dimension of Time)",
+            "organization": "solitary, pair, or desperation (3-6)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Burst of Uncanny Speed",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "On the first round of combat, a misery siktempora moves as if it were affected by a <a href=\"SpellDisplay.aspx?ItemName=haste\" style=\"text-decoration:underline\"><i>haste</i></a> spell. It can use <a href=\"FeatDisplay.aspx?ItemName=Whirlwind%20Attack\" style=\"text-decoration:underline\">Whirlwind Attack</a> on this first round of combat as a standard action, making one melee attack at its highest base attack bonus against each opponent within reach. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Miserable Source",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A misery siktempora created by a creature that has damaged the time stream is no more powerful than others of its kind, but its creator takes a \u20134 penalty on saving throws against that particular siktempora\u2019s misery and telepathic wail abilities. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Misery",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "Those struck by a misery siktempora\u2019s claws are infused with the misery and despair the creature is made of. A creature that takes damage from a misery siktempora\u2019s claw must succeed at a DC 22 Will save or it becomes struck with despair and takes a \u20134 penalty on attack rolls, Will saving throws, and skill checks for 1 minute. If a creature is already affected by misery, failing an additional save resets the duration and restores 5 hit points to the misery siktempora. This is a mind-affecting emotion effect. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Savage the Suffering",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A misery siktempora has a supernatural knack for striking those suffering from misery and confusion. It treats confused foes and those affected by its misery attack as flat-footed. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Telepathic Wail",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per round as a swift action, a misery siktempora can fill the mind of a single living creature within 100 feet with the perception of a wail filled with horror and despair. A creature subjected to this telepathic wail must succeed at a DC 22 Will save or become confused for 1 round. This is a mind-affecting effect. The save DC is Charisma-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Temporal Jaunt",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "As a standard action, a misery siktempora can vanish into the time stream, reappearing in another location. This ability functions as <a href=\"SpellDisplay.aspx?ItemName=dimension%20door\" style=\"text-decoration:underline\"><i>dimension door</i></a> (so a typical misery siktempora can jaunt up to 880 feet), but the siktempora can take other actions that round after reappearing, and the destination must be in a location the siktempora could reach normally by walking. Temporal jaunts are not true teleportation\u2014the misery siktempora simply travels to a later point in the time stream\u2014so the ability can be used in areas that bar teleportation effects; however, in such areas a siktempora can travel only a distance equal to its speed. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Temporal Sense",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A misery siktempora can sense all the possible futures of the coming seconds. This grants it an insight bonus on its Initiative checks and to its Armor Class equal to its Wisdom bonus (+5 for most misery siktemporas). A misery siktempora born from someone who damaged the time stream can use <a href=\"SpellDisplay.aspx?ItemName=discern%20location\" style=\"text-decoration:underline\"><i>discern location</i></a> at will as a spell-like ability to pinpoint its progenitor\u2019s location."
+            }
+        ]
     },
     "sources": [
         {

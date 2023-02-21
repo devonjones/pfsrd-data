@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary, pair, or collection (3\u20138)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Captivating Artistry (Su)</b> Any creature with an Intelligence score of at least 3 that begins its turn within 30 feet of a living cave painting must succeed at a DC 15 Will saving throw or be fascinated for 1 round. Hostile actions by the living cave painting that don\u2019t target or affect the fascinated creature do not end the fascinated effect. Whether or not the save is successful, the target is immune to the same living cave painting\u2019s captivating artistry aura for 24 hours. This is a mind-affecting effect. The save DC is Charisma-based.<br/><br/><b>Manifestation (Sp)</b> A living cave painting manifests itself in the three-dimensional world by shaping quasi-real illusions. Three times per day, a living cave painting can use <i>shadow conjuration</i> as a spell-like ability, but the <i>shadow conjuration</i> can mimic only <i>summon nature\u2019s ally III</i> spells. Additionally, whenever a conjured creature takes enough damage to destroy it, the living cave painting can instead, as a free action, sacrifice any number of hit points. Each hit point sacrificed in this way prevents 1 point of damage done to the <i>shadow conjuration</i>. The caster level for this effect is 7th. The save DC is Charisma-based.<br/><br/><b>Ocherous Touch (Ex)</b> A living cave painting\u2019s touch causes vicious wounds to appear on the victim\u2019s body, dealing 1d6 points of damage and 2d6 points of bleed damage. The living cave painting uses its Dexterity modifier instead of its Strength modifier to resolve all touch attacks.<br/><br/><b>Two-Dimensional (Ex)</b> A living cave painting exists in only two dimensions, and has some qualities in common with incorporeal creatures. A living cave painting has no Strength score. Additionally, it gains a deflection bonus to its AC equal to its Charisma modifier. It cannot move in three dimensions (such as jumping or flying), and can navigate only along solid surfaces such as floors, ceilings, and walls. It can attack creatures only by entering their squares and touching them directly. A living cave painting can crawl onto solid objects that can then themselves be moved through other means. It cannot fall or take falling damage, and it cannot use or be affected by combat maneuvers such as bull rush, grapple, or trip. It cannot take any physical action that would move or manipulate an opponent or the opponent\u2019s equipment. It has no weight, and does not set off traps that are triggered by weight. A living cave painting takes no damage from nonmagical attacks and takes only half the normal amount of damage from magical weapons.<br/><br/><b>Vulnerable to Erase (Ex)</b> A living cave painting can be targeted by an <i>erase</i> spell, which deals 3d6 points of damage to the creature."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Little is known of the primitive tribes that preceded the great mortal civilizations of the Age of Legends. They possessed no written language and built few lasting structures, so little of their culture exists to this day. Yet some evidence of these ancient peoples can be found, hidden away in deep, remote caves protected from the ravages of time. The simple paintings and sculptures found in these caves speak to the primal roots of the human experience, and they\u2019re treasured in the modern world as pieces of art nearly as much as they are considered historical artifacts. Yet those who wish to explore these caverns or retrieve such relics must be cautious. Ancient guardians haunt the dark places in the earth, hiding among the paintings, waiting to strike down those foolish enough to disturb their millennia-long rest.<br/><br/>These guardians are the living cave paintings, ancient works of art animated by strange magic at the dawn of human civilization. They lack true bodies, and instead exist as two-dimensional beings painted across cave walls in ocher and charcoal. Living cave paintings most often depict herd animals such as aurochs, bison, horses, or rhinoceroses, or megafauna such as megaloceros that forms herds. Some others depict predatory creatures, human figures, or even animal-human hybrids."
@@ -361,7 +351,57 @@
                     "name": "two-dimensional"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground",
+            "organization": "solitary, pair, or collection (3\u20138)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Captivating Artistry",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any creature with an Intelligence score of at least 3 that begins its turn within 30 feet of a living cave painting must succeed at a DC 15 Will saving throw or be fascinated for 1 round. Hostile actions by the living cave painting that don\u2019t target or affect the fascinated creature do not end the fascinated effect. Whether or not the save is successful, the target is immune to the same living cave painting\u2019s captivating artistry aura for 24 hours. This is a mind-affecting effect. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Manifestation",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "A living cave painting manifests itself in the three-dimensional world by shaping quasi-real illusions. Three times per day, a living cave painting can use <i>shadow conjuration</i> as a spell-like ability, but the <i>shadow conjuration</i> can mimic only <i>summon nature\u2019s ally III</i> spells. Additionally, whenever a conjured creature takes enough damage to destroy it, the living cave painting can instead, as a free action, sacrifice any number of hit points. Each hit point sacrificed in this way prevents 1 point of damage done to the <i>shadow conjuration</i>. The caster level for this effect is 7th. The save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Ocherous Touch",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A living cave painting\u2019s touch causes vicious wounds to appear on the victim\u2019s body, dealing 1d6 points of damage and 2d6 points of bleed damage. The living cave painting uses its Dexterity modifier instead of its Strength modifier to resolve all touch attacks."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Two-Dimensional",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A living cave painting exists in only two dimensions, and has some qualities in common with incorporeal creatures. A living cave painting has no Strength score. Additionally, it gains a deflection bonus to its AC equal to its Charisma modifier. It cannot move in three dimensions (such as jumping or flying), and can navigate only along solid surfaces such as floors, ceilings, and walls. It can attack creatures only by entering their squares and touching them directly. A living cave painting can crawl onto solid objects that can then themselves be moved through other means. It cannot fall or take falling damage, and it cannot use or be affected by combat maneuvers such as bull rush, grapple, or trip. It cannot take any physical action that would move or manipulate an opponent or the opponent\u2019s equipment. It has no weight, and does not set off traps that are triggered by weight. A living cave painting takes no damage from nonmagical attacks and takes only half the normal amount of damage from magical weapons."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vulnerable to Erase",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A living cave painting can be targeted by an <i>erase</i> spell, which deals 3d6 points of damage to the creature."
+            }
+        ]
     },
     "sources": [
         {

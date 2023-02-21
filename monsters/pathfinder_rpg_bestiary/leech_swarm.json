@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or warm marshes<br/><b>Organization</b> solitary, pair, or infestation (3\u20136 swarms)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Blood Drain (Ex)</b> Any living creature that begins its turn with a leech swarm in its space is drained of its blood and takes 1d3 points of Str and Con damage.<br/><br/><b>Poison (Ex)</b> Swarm\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 2 rounds; <i>effect </i>1d4 Dexterity drain; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "This horrifying cloud of ravenous, blood-draining parasites eschews the stealth of a lone leech\u2019s methods in favor of swift and merciless feeding."
@@ -275,7 +265,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or warm marshes",
+            "organization": "solitary, pair, or infestation (3\u20136 swarms)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Blood Drain",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Any living creature that begins its turn with a leech swarm in its space is drained of its blood and takes 1d3 points of Str and Con damage."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Swarm\u2014injury; <i>save </i>Fort DC 15; <i>frequency </i>1/round for 2 rounds; <i>effect </i>1d4 Dexterity drain; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Swarm\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 15",
+                        "save_type": "Fort",
+                        "dc": 15
+                    },
+                    "frequency": "1/round for 2 rounds",
+                    "effect": "1d4 Dexterity drain",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

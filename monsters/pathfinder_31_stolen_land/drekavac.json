@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary or pack (2-5)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Create Spawn (Su)</b> A child slain by a drekavac\u2019s disease has a 1-in- 6 chance of rising as another drekavac 3 days after death. The new drekavac is not in any way controlled by its maker, and is immediately capable of exercising its full powers, including creating spawn of its own. It does not possess any of the abilities it had in life.<br/><br/><b>Disease (Su)</b> Drekavacs are spirits of disease and contagion. While most drekavacs carry bubonic plague, drekavacs who died from other afflictions may carry those diseases instead. Any illness caused by a drekavac must be potentially fatal. Other diseases commonly carried include demon fever, filth fever, and slimy doom. If a drekavac is reduced to 0 hit points (from weapons or other sources, including channeled energy), all of the diseases it caused are cured, although the victims must recover from any effects normally, and slain victims are not restored.<br/><br/><i>Bubonic plague</i>: Touch\u2014injury; <i>save</i> Fort DC 15; <i>onset</i> 1 day; <i>frequency</i> 1/day; <i>effect</i> 1d4 Con damage, 1 Cha damage, victim is fatigued; <i>cure</i> 2 consecutive saves.<br/><br/><b>Diseased Shadow (Su)</b> Any creature touched by a drekavac\u2019s shadow is also affected by the creature\u2019s disease ability. If there is a question about which way the drekavac\u2019s shadow falls, roll 1d8 to determine a random square around the creature. A character with a light source cannot be touched by the drekavac\u2019s shadow, but the light causes the shadow to fall directly opposite the character (unless there is another light source there as well). A drekavac can deliberately touch a creature with its shadow as a standard action by making a successful touch attack.<br/><br/>A target missed by the drekavac\u2019s chilling grasp attack must make a DC 15 Reflex save to avoid being touched by the creature\u2019s shadow as well. This save DC is Charisma-based.<br/><br/><b>Sunlight Aversion (Ex)</b> Drekavacs hate natural sunlight and immediately flee from it. A drekavac caught in natural sunlight is staggered.<br/><br/><b>Unnatural Aura (Su)</b> Animals, wild or domesticated, can sense the unnatural presence of a drekavac at a distance of 30 feet. They do not willingly approach nearer than that and panic if forced to do so unless a master succeeds at a DC 25 Handle Animal, Ride, or wild empathy check. Panicked animals remain so as long as they are within 30 feet of the drekavac.<br/><br/><b>Vulnerability to Magic (Ex)</b> A <i>remove curse</i> or <i>remove disease</i> spell cast directly upon a drekavac (DC equal to the drekavac\u2019s disease ability) immediately destroys the creature, allowing the afflicted soul to move on. Destroying a drekavac with <i>remove curse</i> or <i>remove disease</i> does not cure any of the creature\u2019s diseases.<br/><br/><b>Vulnerability to Salt (Ex)</b> Drekavacs are vulnerable to salt that has been consecrated in the same fashion as holy water, and cannot cross an unbroken line of blessed salt. A handful of blessed salt thrown at a drekavac inflicts the same damage as a flask of holy water (<i>Pathfinder RPG Core Rulebook</i> 160)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Drekavacs are the undead remains of children who perished from disease, particularly in plague-ridden areas where many such deaths occurred in a short period of time. Able to become as insubstantial as the mist rising from a graveyard on a cold, dark night, drekavacs are carriers of disease, seeking to infect the living with the afflictions that slew them. According to some stories, drekavacs only result from young plague victims who remain unburied or died bereft of the proper funeral rites; performing those rites may allow their spirits to rest and no longer haunt the world of the living."
@@ -345,7 +335,73 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary or pack (2-5)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Create Spawn",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A child slain by a drekavac\u2019s disease has a 1-in- 6 chance of rising as another drekavac 3 days after death. The new drekavac is not in any way controlled by its maker, and is immediately capable of exercising its full powers, including creating spawn of its own. It does not possess any of the abilities it had in life."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Drekavacs are spirits of disease and contagion. While most drekavacs carry bubonic plague, drekavacs who died from other afflictions may carry those diseases instead. Any illness caused by a drekavac must be potentially fatal. Other diseases commonly carried include demon fever, filth fever, and slimy doom. If a drekavac is reduced to 0 hit points (from weapons or other sources, including channeled energy), all of the diseases it caused are cured, although the victims must recover from any effects normally, and slain victims are not restored.<br/><br/><i>Bubonic plague</i>: Touch\u2014injury; <i>save</i> Fort DC 15; <i>onset</i> 1 day; <i>frequency</i> 1/day; <i>effect</i> 1d4 Con damage, 1 Cha damage, victim is fatigued; <i>cure</i> 2 consecutive saves."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Diseased Shadow",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Any creature touched by a drekavac\u2019s shadow is also affected by the creature\u2019s disease ability. If there is a question about which way the drekavac\u2019s shadow falls, roll 1d8 to determine a random square around the creature. A character with a light source cannot be touched by the drekavac\u2019s shadow, but the light causes the shadow to fall directly opposite the character (unless there is another light source there as well). A drekavac can deliberately touch a creature with its shadow as a standard action by making a successful touch attack.<br/><br/>A target missed by the drekavac\u2019s chilling grasp attack must make a DC 15 Reflex save to avoid being touched by the creature\u2019s shadow as well. This save DC is Charisma-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sunlight Aversion",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Drekavacs hate natural sunlight and immediately flee from it. A drekavac caught in natural sunlight is staggered."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Unnatural Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Animals, wild or domesticated, can sense the unnatural presence of a drekavac at a distance of 30 feet. They do not willingly approach nearer than that and panic if forced to do so unless a master succeeds at a DC 25 Handle Animal, Ride, or wild empathy check. Panicked animals remain so as long as they are within 30 feet of the drekavac."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vulnerability to Magic",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A <i>remove curse</i> or <i>remove disease</i> spell cast directly upon a drekavac (DC equal to the drekavac\u2019s disease ability) immediately destroys the creature, allowing the afflicted soul to move on. Destroying a drekavac with <i>remove curse</i> or <i>remove disease</i> does not cure any of the creature\u2019s diseases."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Vulnerability to Salt",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Drekavacs are vulnerable to salt that has been consecrated in the same fashion as holy water, and cannot cross an unbroken line of blessed salt. A handful of blessed salt thrown at a drekavac inflicts the same damage as a flask of holy water (<i>Pathfinder RPG Core Rulebook</i> 160)."
+            }
+        ]
     },
     "sources": [
         {

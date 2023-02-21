@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate plains<br/><b>Organization</b> solitary, pair, or nest (3\u20136)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury or spit\u2014contact; <i>save </i>Fort DC 21; frequency 1/round for 6 rounds; <i>effect </i>1d4 Con damage; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.<br/><br/><b>Spells </b>A guardian naga casts spells as a 9th-level sorcerer, and can cast spells from the cleric list as well as those normally available to a sorcerer. Cleric spells are considered arcane spells for a guardian naga.<br/><br/><b>Spit (Ex)</b> A guardian naga can spit its venom up to 30 feet as a standard action. This is a ranged touch attack with no range increment. Opponents hit by this attack must make successful saves (see above) to avoid the effect."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Although ferocious in shape, with radiant scales, cobra-like hoods, and powerful serpentine bodies, guardian nagas serve as dutiful protectors of places of fundamental power and sanctity. Their scales often bear elaborate patterns similar to those of exotic jungle snakes. A typical guardian naga stretches 14 feet long and weighs approximately 350 pounds.<br/><br/>While many guardian nagas adhere to the exotic practices of ancient or forgotten faiths, others are merely drawn to sites of innate wonder\u2014towering waterfalls, natural spires, mountaintop temples\u2014minding them out of their own senses of duty and reverence. Often these nagas join a living faith, serving as protectors of sanctuaries or ancient treasures. A pair of nagas might take up residence near a site they deem worthy of protection, hatching a brood and raising their offspring there. When the young grow to adulthood, they have the choice of departing to seek their own homes or staying to protect their elder\u2019s charge. Sometimes, a guardian naga protecting a ruin or temple is but the current protector in a line of sentinels stretching back centuries. Such sentinels often take the same name as their forebears to appear as a single, exceptionally long-lived figure."
@@ -544,7 +534,57 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate plains",
+            "organization": "solitary, pair, or nest (3\u20136)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury or spit\u2014contact; <i>save </i>Fort DC 21; <i>frequency</i> 1/round for 6 rounds; <i>effect </i>1d4 Con damage; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury or spit\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 21",
+                        "save_type": "Fort",
+                        "dc": 21
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con damage",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spit",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A guardian naga can spit its venom up to 30 feet as a standard action. This is a ranged touch attack with no range increment. Opponents hit by this attack must make successful saves (see above) to avoid the effect."
+            }
+        ],
+        "other_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "other_ability",
+                "name": "Spells",
+                "text": "A guardian naga casts spells as a 9th-level sorcerer, and can cast spells from the cleric list as well as those normally available to a sorcerer. Cleric spells are considered arcane spells for a guardian naga."
+            }
+        ]
     },
     "sources": [
         {

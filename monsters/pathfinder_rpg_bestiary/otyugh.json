@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary, pair, or cluster (3\u20134)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disease (Ex)</b> Filth fever: Bite\u2014injury; <i>save </i>Fortitude DC 14; <i>onset </i>1d3 days; <i>frequency </i>1/day; <i>effect </i>1d3 Dex damage and 1d3 Con damage; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.<br/><br/>ECOLOGY<br/><br/>Environment any underground<br/><br/>Organization solitary, pair, or cluster (3\u20134)<br/><br/>Treasure standard"
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Otyughs are particularly vile and horrid creatures that lurk in places most sane creatures avoid. Their lairs are middens, cesspools, offal pits, toxic swamps, and sewers\u2014the greater a lair\u2019s filth, the greater the draw to the refuse-eating otyugh. They glory in the role of scavenger, wandering through vast underground caverns in search of the choicest cuts of garbage and waste. Upon finding such refuse, they gorge upon it, gathering what cannot be consumed in one debauch to bring back to their foul-smelling lairs. Otyughs spend most of their time in these filthy dens, which they keep constantly filled with carrion, dung, and worse sorts of stinking effluvia.<br/><br/>Intelligent creatures dwelling in subterranean areas near an otyugh often form a partnership of convenience with the disgusting beast. These creatures gladly provide their refuse and piles of raw meat to the otyugh, transforming the creature into an effective form of trash disposal. In return, the otyugh leaves its benefactors alone, and does not attack them, possibly even acting as a guardian.<br/><br/>The most horrifying thing to most races about the notorious otyugh is not the nature of its diet or its choice of lairs, but rather that a creature with an otyugh\u2019s tastes can be anything other than a mindless scavenger. In fact, otyughs are surprisingly intelligent, and often quite eager to form alliances with those who offer them a steady supply of delicious diversions in the form of offal and waste. Most otyughs understand the fact that other creatures find them unpleasant and hideous, but few really care."
@@ -330,7 +320,42 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground",
+            "organization": "solitary, pair, or cluster (3\u20134)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Filth fever: Bite\u2014injury; <i>save </i>Fortitude DC 14; <i>onset </i>1d3 days; <i>frequency </i>1/day; <i>effect </i>1d3 Dex damage and 1d3 Con damage; <i>cure </i>2 consecutive saves. The save DC is Constitution-based.<br/><br/>ECOLOGY<br/><br/>Environment any underground<br/><br/>Organization solitary, pair, or cluster (3\u20134)<br/><br/>Treasure standard",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Filth fever",
+                    "affliction_type": "Disease; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fortitude DC 14",
+                        "save_type": "Fort",
+                        "dc": 14
+                    },
+                    "onset": "1d3 days",
+                    "frequency": "1/day",
+                    "effect": "1d3 Dex damage and 1d3 Con damage",
+                    "cure": "2 consecutive saves. The save DC is Constitution-based.<br/><br/>ECOLOGY<br/><br/>Environment any underground<br/><br/>Organization solitary, pair, or cluster (3\u20134)<br/><br/>Treasure standard"
+                }
+            }
+        ]
     },
     "sources": [
         {

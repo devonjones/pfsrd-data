@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary, pair, or nest (3\u201310)<br/><b>Treasure</b> incidental (no metal treasure)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Rust (Su)</b> A rust monster\u2019s antennae are a primary touch attack that causes any metal object they touch to swiftly rust and corrode. The object touched takes half its maximum hp in damage and gains the broken condition\u2014a second hit destroys the item. A rust monster never provokes attacks of opportunity by attempting to strike a weapon with its antennae. Against creatures made of metal, a rust monster\u2019s antennae deal 3d6+5 points of damage. An attended object, any magic object, or a metal creature can attempt a DC 15 Reflex save to negate this effect. The save DC is Constitution-based.<br/><br/><b>Scent Metals (Ex)</b> This ability functions much the same as the scent ability, except that the range is 90 feet and the rust monster can only use it to sense metal objects (including creatures wearing or carrying metal objects)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Of all the terrifying beasts an explorer might encounter underground, only the rust monster targets that which the average adventurer values most: his treasure.<br/><br/>Typically 5 feet long and weighing almost 200 pounds, the lobster-like rust monster would be frightening enough even without the alien feeding process that gives it its name. Rust monsters consume metal objects, preferring iron and ferrous alloys like steel but devouring even mithral, adamantine, and enchanted metals with equal ease. Any metal touched by the rust monster\u2019s delicate antennae or armored hide corrodes and falls to dust within seconds, making the beast a major threat to subterranean adventurers and those dwarven miners who must defend their forges and compete for ore.<br/><br/>Though rust monsters have no innate tendency toward violence, their insatiable hunger leads them to charge anything they come across that bears even trace amounts of metal, and any resistance is met with unthinking savagery. It\u2019s not unheard of for rust monsters in metal-poor areas to track escaped victims for days using their scent metal ability, provided the victims retain intact metal objects. Fortunately, it\u2019s often possible to escape a rust monster\u2019s attentions by throwing it a dense metal object like a shield and running in the opposite direction. Those who frequent areas infested with rust monsters quickly learn to keep a few stone or wooden weapons close at hand."
@@ -263,7 +253,33 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground",
+            "organization": "solitary, pair, or nest (3\u201310)",
+            "treasure": "incidental (no metal treasure)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Rust",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A rust monster\u2019s antennae are a primary touch attack that causes any metal object they touch to swiftly rust and corrode. The object touched takes half its maximum hp in damage and gains the broken condition\u2014a second hit destroys the item. A rust monster never provokes attacks of opportunity by attempting to strike a weapon with its antennae. Against creatures made of metal, a rust monster\u2019s antennae deal 3d6+5 points of damage. An attended object, any magic object, or a metal creature can attempt a DC 15 Reflex save to negate this effect. The save DC is Constitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Scent Metals",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "This ability functions much the same as the scent ability, except that the range is 90 feet and the rust monster can only use it to sense metal objects (including creatures wearing or carrying metal objects)."
+            }
+        ]
     },
     "sources": [
         {

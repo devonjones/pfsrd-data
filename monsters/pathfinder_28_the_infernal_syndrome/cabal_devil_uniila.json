@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any (Hell)<br/><b>Organization</b> solitary, pair or cabal (3-9)<br/><b>Treasure</b> double (4 <i>+1 daggers</i>, other treasure as magic scrolls and writings)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Dread Magic (Su)</b> All spells an uniila casts draw upon terrible infernal eddies and the torment of damned souls. As such, all of an uniila\u2019s spells (not her spell-like abilities) are strange and terrible to behold. This increases the Spellcraft DC required to identify an uniila\u2019s spell as it is being cast by +5. In addition, at will, an uniila can choose to make a spell she casts particularly frightening. Any creature forced to make a saving throw to resist a spell cast by an uniila must make an additional Will save at the same DC or be shaken for 1 round. This effect can potentially increase the severity of other fear effects. This is a mind-affecting fear effect.<br/><br/><b>Infernal Arcana (Su)</b> Once per day, after spending a minute whispering strange formulas and cosmic truths, an uniila can grant an adjacent mortal spellcaster additional profane insight into the ways of magic. This counts as a bonus spell prepared or spell per day of 6th level or lower, which is immediately accessible by the target in addition to all its regular spells. The uniila chooses what spell to grant the target. It need not be a spell already known by the target, though it must be of 6th level or lower and of a level he can cast or from his class\u2019s spell list. This spell remains available to the target for 24 hours. The spell can be any arcane or divine spell. An uniila can never use this ability on herself or non-mortal targets.<br/><br/>Once a target chooses to make use of this spell, it is cast at the uniila\u2019s caster level (typically 8th) and is treated as having the evil subtype. In addition, as the uniila chooses, she may spontaneously add the effects of any metamagic feat to the spell (without the spell being treated as though it were of an increased spell level). Typically, uniilas use this ability to compel magic users to rely on them for more powerful magic, though they might also use effects like Widen Spell to affect unintended targets.<br/><br/><b>Scroll Mastery (Su)</b> All uniilas possess Scribe Scroll as a bonus feat. An uniila is treated as knowing all spells of 6th level or lower in the <i>Pathfinder RPG Core Rulebook</i> and can create scrolls of any of those spells. Whether an uniila knows rarer magic is decided by the GM.<br/><br/><b>Summon Devil (Su)</b> Once per day, an uniila can attempt to summon 2d4 imps with a 55% chance of success. This ability is the equivalent of a 4th-level spell.<br/><br/><b>Witch Token (Su)</b> By spending an hour in concentration, an uniila can create a token of arcane power. This token may take any form that takes up an item slot, and typically appears as a subtly fiendish ring, amulet, or similar piece of jewelry. While it is worn by a mortal, all of the DCs of any spells the wearer casts increase by +1 (this effect stacks with Spell Focus). However, while wearing a witch token, the bearer takes a \u20135 penalty on all saves made to resist spells and effects cast by the token\u2019s creation. Also, while the token is being worn, the uniila can effectively scry through the token at will and without the wearer\u2019s knowledge as long as he remains on the same plane. Spells and effects that typically bar or confound <i>scry</i> also affect the witch token.<br/><br/>As a standard action, an uniila can cause her witch token to erupt in a burst of destructive magic that deals 10d6 points of damage to the wearer. An uniila can only ever have one witch token in existence at a time and must destroy a previously created token before creating a new one. The damage of this effect is based on the uniila\u2019s Hit Dice.<br/><br/>All witch tokens are also under effects similar to <i>magic aura</i>, and are detected as possessing auras of moderate universal magic. Those who use <i>identify</i> or a similar spell must succeed at a DC 20 Will save to receive correct information (that the token sheds an aura of strong divination). <i>Detect evil</i> reveals no aura from a witch token. The saving throw is Charisma-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "The tools devils use to ensnare the minds and ultimately the souls of their victims vary incredibly, from the most blatant of infernal corruptions to enticements that seem not like temptations at all. The elusive cabal devils, or uniilas as they are known by diabolists, employ one of the most seductive drugs in existence in their snares: magic. Mistresses of the arcane with an understanding of the cultic arts\u2014both arcane and divine\u2014that rivals even that of many greater fiends, these mysterious and aloof sages haunt the most ancient ruins and moldering depths of Stygia, the fifth layer of Hell, researching arcana and puzzling over formulae destined to shake the cosmos. When conjured forth or left to their own devices upon the Material Plane, uniilas make no untoward offers or forceful demands of their mortal hosts; they merely offer greater magical power in any of the various ways they might do so. Should the ease with which such might is granted pollute a mortal\u2019s ambitions or lead him to rely upon a devil for his power, such ultimately proves the student\u2019s fault, not the eager teacher\u2019s. So too does the resulting damnation at the end of the mortal\u2019s short life prove more of his own doing than any overt diabolical trap, making uniilas\u2019 methods all the more sinister for their subtlety."
@@ -818,7 +808,57 @@
                     "name": "witch token"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any (Hell)",
+            "organization": "solitary, pair or cabal (3-9)",
+            "treasure": "double (4 <i>+1 daggers</i>, other treasure as magic scrolls and writings)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dread Magic",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "All spells an uniila casts draw upon terrible infernal eddies and the torment of damned souls. As such, all of an uniila\u2019s spells (not her spell-like abilities) are strange and terrible to behold. This increases the Spellcraft DC required to identify an uniila\u2019s spell as it is being cast by +5. In addition, at will, an uniila can choose to make a spell she casts particularly frightening. Any creature forced to make a saving throw to resist a spell cast by an uniila must make an additional Will save at the same DC or be shaken for 1 round. This effect can potentially increase the severity of other fear effects. This is a mind-affecting fear effect."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Infernal Arcana",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per day, after spending a minute whispering strange formulas and cosmic truths, an uniila can grant an adjacent mortal spellcaster additional profane insight into the ways of magic. This counts as a bonus spell prepared or spell per day of 6th level or lower, which is immediately accessible by the target in addition to all its regular spells. The uniila chooses what spell to grant the target. It need not be a spell already known by the target, though it must be of 6th level or lower and of a level he can cast or from his class\u2019s spell list. This spell remains available to the target for 24 hours. The spell can be any arcane or divine spell. An uniila can never use this ability on herself or non-mortal targets.<br/><br/>Once a target chooses to make use of this spell, it is cast at the uniila\u2019s caster level (typically 8th) and is treated as having the evil subtype. In addition, as the uniila chooses, she may spontaneously add the effects of any metamagic feat to the spell (without the spell being treated as though it were of an increased spell level). Typically, uniilas use this ability to compel magic users to rely on them for more powerful magic, though they might also use effects like Widen Spell to affect unintended targets."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Scroll Mastery",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "All uniilas possess Scribe Scroll as a bonus feat. An uniila is treated as knowing all spells of 6th level or lower in the <i>Pathfinder RPG Core Rulebook</i> and can create scrolls of any of those spells. Whether an uniila knows rarer magic is decided by the GM."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Summon Devil",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once per day, an uniila can attempt to summon 2d4 imps with a 55% chance of success. This ability is the equivalent of a 4th-level spell."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Witch Token",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "By spending an hour in concentration, an uniila can create a token of arcane power. This token may take any form that takes up an item slot, and typically appears as a subtly fiendish ring, amulet, or similar piece of jewelry. While it is worn by a mortal, all of the DCs of any spells the wearer casts increase by +1 (this effect stacks with Spell Focus). However, while wearing a witch token, the bearer takes a \u20135 penalty on all saves made to resist spells and effects cast by the token\u2019s creation. Also, while the token is being worn, the uniila can effectively scry through the token at will and without the wearer\u2019s knowledge as long as he remains on the same plane. Spells and effects that typically bar or confound <i>scry</i> also affect the witch token.<br/><br/>As a standard action, an uniila can cause her witch token to erupt in a burst of destructive magic that deals 10d6 points of damage to the wearer. An uniila can only ever have one witch token in existence at a time and must destroy a previously created token before creating a new one. The damage of this effect is based on the uniila\u2019s Hit Dice.<br/><br/>All witch tokens are also under effects similar to <i>magic aura</i>, and are detected as possessing auras of moderate universal magic. Those who use <i>identify</i> or a similar spell must succeed at a DC 20 Will save to receive correct information (that the token sheds an aura of strong divination). <i>Detect evil</i> reveals no aura from a witch token. The saving throw is Charisma-based."
+            }
+        ]
     },
     "sources": [
         {

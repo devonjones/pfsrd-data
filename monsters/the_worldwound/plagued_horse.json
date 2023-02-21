@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any<br/><b>Organization</b> solitary, pair, or herd (3\u201330)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Disease (Ex)</b> Demon Plague: Bite\u2014injury; <i>save</i> Fortitude DC 13; <i>onset</i> 1 day; <i>frequency</i> 1/day; <i>effect</i> 1d3 Constitution damage and 1d6 Wisdom damage, victim is fatigued if it takes any ability damage from the disease, and certain creatures slain by demon plague rise as plagued beasts; <i>cure</i> 3 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "When animals are stricken with demon plague, they may arise as undead and further spread the disease. Some demons and cultists are fond of using plagued horses as mounts."
@@ -304,7 +294,42 @@
                     "name": "docile"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any",
+            "organization": "solitary, pair, or herd (3\u201330)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Disease",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Demon Plague: Bite\u2014injury; <i>save</i> Fortitude DC 13; <i>onset</i> 1 day; <i>frequency</i> 1/day; <i>effect</i> 1d3 Constitution damage and 1d6 Wisdom damage, victim is fatigued if it takes any ability damage from the disease, and certain creatures slain by demon plague rise as plagued beasts; <i>cure</i> 3 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Demon Plague",
+                    "affliction_type": "Disease; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fortitude DC 13",
+                        "save_type": "Fort",
+                        "dc": 13
+                    },
+                    "onset": "1 day",
+                    "frequency": "1/day",
+                    "effect": "1d3 Constitution damage and 1d6 Wisdom damage, victim is fatigued if it takes any ability damage from the disease, and certain creatures slain by demon plague rise as plagued beasts",
+                    "cure": "3 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

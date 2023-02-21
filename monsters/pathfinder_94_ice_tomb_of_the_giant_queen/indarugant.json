@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> cold mountains<br/><b>Organization</b> solitary or warband (1 indarugant and 2\u20136 taiga giants)<br/><b>Treasure</b> standard (hide armor, spear)"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Curse of Frozen Flesh (Su)</b> Slam\u2014contact; <i>save </i>Will DC 24; <i>effect </i>Creature gains vulnerability to cold. Anytime the cursed creature fails a saving throw against a spell or effect with the cold descriptor, it is also slowed for 1d4 rounds.<br/><br/><b>Lingering Curses (Su)</b> An indarugant is an accursed creature, and so has dominion over misfortune and curses. An indarugant can apply the effects of its curse of frozen flesh with its <i>bestow curse</i> spell-like ability (in place of <i>bestow curse\u2019s</i> normal effects). Additionally, the DC of any attempt to remove a curse inflicted by the indarugant increases by 5. If a caster level check to remove an indarugant\u2019s curse fails by 5 or more, the curse appears to be lifted and is temporarily suppressed until the next time the victim enters combat or is otherwise faced with a life-threatening situation (subject to the GM\u2019s discretion)."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "In times of need, the taiga giants of Varisia turn to the spirits of their ancestors for aid, relying on signs and omens from the spirit world to guide them out of danger. Yet sometimes the power and insight of these ancestral spirits is not enough. When invaders overhunt the land, when disease and pestilence run rampant, or when war and slavery threaten to decimate whole tribes, some giants seek a different sort of aid\u2014one that comes at a far higher price. High above the snow line, trapped within ancient glacial floes, the indarugants wait to be unleashed so they might once again bring disaster and ruin to the enemies of their tribes.<br/><br/>Most indarugants resemble the desiccated corpses of taiga giants, though other types of giants may become indarugants as well. After taiga giants, stone giants are the most likely to follow through with this ritual, though by doing so they risk being shunned by neighboring tribes.<br/><br/>Indarugants stand 20 feet tall, but weigh only 3,000 pounds due to the lack of water in their shriveled, skeletal bodies. The ritual that creates an indarugant involves marking and maiming the body of the candidate, and many still bear these fading tattoos and ancient scars."
@@ -547,7 +537,47 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "cold mountains",
+            "organization": "solitary or warband (1 indarugant and 2\u20136 taiga giants)",
+            "treasure": "standard (hide armor, spear)"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Curse of Frozen Flesh",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Slam\u2014contact; <i>save </i>Will DC 24; <i>effect </i>Creature gains vulnerability to cold. Anytime the cursed creature fails a saving throw against a spell or effect with the cold descriptor, it is also slowed for 1d4 rounds.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Curse of Frozen Flesh",
+                    "affliction_type": "Curse of Frozen Flesh; Slam\u2014contact",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Will DC 24",
+                        "save_type": "Will",
+                        "dc": 24
+                    },
+                    "effect": "Creature gains vulnerability to cold. Anytime the cursed creature fails a saving throw against a spell or effect with the cold descriptor, it is also slowed for 1d4 rounds."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Lingering Curses",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "An indarugant is an accursed creature, and so has dominion over misfortune and curses. An indarugant can apply the effects of its curse of frozen flesh with its <i>bestow curse</i> spell-like ability (in place of <i>bestow curse\u2019s</i> normal effects). Additionally, the DC of any attempt to remove a curse inflicted by the indarugant increases by 5. If a caster level check to remove an indarugant\u2019s curse fails by 5 or more, the curse appears to be lifted and is temporarily suppressed until the next time the victim enters combat or is otherwise faced with a life-threatening situation (subject to the GM\u2019s discretion)."
+            }
+        ]
     },
     "sources": [
         {

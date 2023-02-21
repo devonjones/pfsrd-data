@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> temperate or warm hills<br/><b>Organization</b> solitary, pair, or murder (3\u20135 and 1\u20133 wyverns)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Breath Weapon (Su)</b> Once every 1d4 rounds, an Aashaq\u2019s wyvern can emit a cloud of noxious fire in a 30-foot cone that deals 6d6 points of fire damage. Creatures that take damage are also temporarily blinded by the fumes as though by <i>glitterdust </i>for 4 rounds. A DC 19 Reflex save halves the fire damage and negates the <i>glitterdust </i>effect. The save DC is Consitution-based.<br/><br/><b>Poison (Ex)</b> Sting\u2014injury; <i>save </i>Fort DC 19; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con; <i>cure </i>2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Aashaq\u2019s wyverns resemble the typical wyverns commonly found throughout the Inner Sea region in many regards, but they have been warped by magic. Unlike their more mundane cousins, these wyverns have bifurcated tails that allow for two stinging attacks, and are able to emit a noxious blast of gas that burns and blinds those in its path. Aashaq\u2019s wyverns reside in the natural caves that honeycomb the cliffs of Dahak\u2019s Teeth, and were common wyverns until the evil dragon Aashaq commandeered the islands. Seeing these beasts as the perfect deacons for her dark cult, Aashaq twisted the very fabric of the wyverns until she settled upon the form now most commonly encountered on Dahak\u2019s Teeth. Their very name is indicative of the wyverns\u2019 servitor status, and they are occasionally even ridden as mounts by Dahak cultists.<br/><br/>Aashaq gives her wyvern minions a remarkable amount of freedom, but most never stray too far from the three islands that make up Dahak\u2019s Teeth. Mariners who make their way past the dreaded isles know to watch out for the beasts, which assail unprepared ships from both sky and water in order to feed upon their crews and capture their cargo for Aashaq. The corrupting inf luence of Aashaq\u2019s chaotic manipulations has also provided these unpredictable creatures with resistance to acid, fire, and magic.<br/><br/>A typical Aashaq\u2019s wyvern is 18 feet in length (including its bifurcated tail) and weighs 2,500 pounds. Their scales can vary in tint, but are usually purple. Though only slightly more intelligent than their common kin, the Dahak-worshiping wyverns enjoy lording their \u201csuperior\u201d status over the lesser specimens found on other islets."
@@ -460,7 +450,49 @@
                     "name": "hold breath"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "temperate or warm hills",
+            "organization": "solitary, pair, or murder (3\u20135 and 1\u20133 wyverns)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Breath Weapon",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Once every 1d4 rounds, an Aashaq\u2019s wyvern can emit a cloud of noxious fire in a 30-foot cone that deals 6d6 points of fire damage. Creatures that take damage are also temporarily blinded by the fumes as though by <i>glitterdust </i>for 4 rounds. A DC 19 Reflex save halves the fire damage and negates the <i>glitterdust </i>effect. The save DC is Consitution-based."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 19; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Con; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 19",
+                        "save_type": "Fort",
+                        "dc": 19
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

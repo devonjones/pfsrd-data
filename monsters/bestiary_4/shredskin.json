@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary or pack (2\u20135)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Control Body (Su)</b> A shredskin can wrap itself around a corpse (or a corporeal undead it controls using command undead). When wrapping a host body in this way, the shredskin gains Strength 14 or the host body\u2019s Strength, whichever is higher, but cannot use its grab or enshroud abilities which doing so. Attacks targeted at the shredskin deal half damage to it and half damage to the host body; area attacks deal normal damage to both the shredskin and its host. If the host is destroyed, the shredskin unwraps itself as a free action on its next turn. A typical Medium corpse has 15 hit points for this purpose, while a Small corpse has 10 hit points. A shredskin can only use this ability on a generally humanoid-shaped creature (two arms, one head, humanoid torso) of Medium or Small size.<br/><br/><b>Enshroud (Ex)</b> A shredskin that successfully pins a creature can wrap itself around that target like a shirt. The target gains the pinned condition, but the shredskin has neither the grappled or pinned condition, and can move itself and the target as if it controlled the target\u2019s body. The shredskin deals constrict damage to the target on its turn each round (no combat maneuver check needed). Attacking the shredskin while it\u2019s using this ability damages both it and the target as described in the control body ability. The shredskin can release the target as a free action."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "A shredskin is a wretched undead creature created either when a humanoid is skinned alive to be preserved as a trophy or otherwise killed in a terrifying way that leaves much of its upper half unharmed, such as being dissolved feet-first in acid. A fragment of the creature\u2019s soul animates the skin and seeks vengeance on those who created it, all the while trying to find a comfortable body for it to use as it did when it was alive. A shredskin may attack on its own and try to squeeze the life out of a living humanoid to use it as a body, or it might control another undead such as a skeleton, zombie, or ghoul, covering it like a morbid costume. In either case, it abandons its borrowed body if it finds a better one or the old one is destroyed. A shredskin is usually recognizable by creatures who knew it in life.<br/><br/>Because it lacks a lower half, a shredskin is 3\u20134 feet tall and weighs only 10\u201315 pounds."
@@ -385,7 +375,33 @@
                     "name": "compression"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary or pack (2\u20135)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Control Body",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A shredskin can wrap itself around a corpse (or a corporeal undead it controls using command undead). When wrapping a host body in this way, the shredskin gains Strength 14 or the host body\u2019s Strength, whichever is higher, but cannot use its grab or enshroud abilities which doing so. Attacks targeted at the shredskin deal half damage to it and half damage to the host body; area attacks deal normal damage to both the shredskin and its host. If the host is destroyed, the shredskin unwraps itself as a free action on its next turn. A typical Medium corpse has 15 hit points for this purpose, while a Small corpse has 10 hit points. A shredskin can only use this ability on a generally humanoid-shaped creature (two arms, one head, humanoid torso) of Medium or Small size."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Enshroud",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A shredskin that successfully pins a creature can wrap itself around that target like a shirt. The target gains the pinned condition, but the shredskin has neither the grappled or pinned condition, and can move itself and the target as if it controlled the target\u2019s body. The shredskin deals constrict damage to the target on its turn each round (no combat maneuver check needed). Attacking the shredskin while it\u2019s using this ability damages both it and the target as described in the control body ability. The shredskin can release the target as a free action."
+            }
+        ]
     },
     "sources": [
         {

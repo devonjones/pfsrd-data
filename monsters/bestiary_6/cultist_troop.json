@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground<br/><b>Organization</b> solitary or band (2\u20134)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Fast Channeling (Su)</b> Each round as a free action, one cultist activates its ability to channel negative energy. Note that the cultist can\u2019t use Selective Channeling to select out a troop (this feat works normally for selecting out individual allies), so typically the troop places this effect outside of the troop\u2019s area entirely. <br/><b>Fast Healing (Sp)</b> The troop\u2019s fast healing is a reflection of the fact that each round, some cultists cast cure spells on others. Not all cultists use this ability simultaneously. The troop can gain fast healing in this manner for only up to 20 rounds per day. Activating this ability is a free action. <br/><b>Poison (Ex)</b> Troop\u2014injury; <i>save</i> DC 13, <i>frequency</i> 1/minute for 2 minutes; <i>effect</i> unconscious 1 minute/2d4 hours; <i>cure</i> 1 save. <br/><b>Spell-Like Abilities (Sp)</b> This cultist troop\u2019s spell-like abilities come from a mix of actual spell-like abilities and spells the individual cultists have prepared. When the troop uses a quickened spelllike ability, only one troop member creates the effect. This effect resolves normally. (These abilities are swift actions since the action of one member does not significantly change the troop\u2019s overall actions). When a troop casts <i>resist energy</i> or <i>shield of faith</i>, this represents all the troop\u2019s members casting the spell on themselves. The effects of the spell apply to the entire troop, and successful attacks of opportunity do not have a chance to disrupt the spell-like ability. Likewise, readied actions to disrupt spell-like abilities function only if they can affect the entire area occupied by the troop."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "This troop of drow nobles is composed of clerics devoted to a demon lord. They have trained well to fight together and serve their fiendish master."
@@ -502,7 +492,64 @@
                     "name": "spellcasting"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground",
+            "organization": "solitary or band (2\u20134)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Fast Channeling",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Each round as a free action, one cultist activates its ability to channel negative energy. Note that the cultist can\u2019t use Selective Channeling to select out a troop (this feat works normally for selecting out individual allies), so typically the troop places this effect outside of the troop\u2019s area entirely. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Fast Healing",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "The troop\u2019s fast healing is a reflection of the fact that each round, some cultists cast cure spells on others. Not all cultists use this ability simultaneously. The troop can gain fast healing in this manner for only up to 20 rounds per day. Activating this ability is a free action. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Troop\u2014injury; <i>save</i> DC 13, <i>frequency</i> 1/minute for 2 minutes; <i>effect</i> unconscious 1 minute/2d4 hours; <i>cure</i> 1 save. ",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Troop\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "DC 13",
+                        "dc": 13
+                    },
+                    "frequency": "1/minute for 2 minutes",
+                    "effect": "unconscious 1 minute/2d4 hours",
+                    "cure": "1 save."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Spell-Like Abilities",
+                "ability_type": "Spell-Like",
+                "ability_type_abbrev": "Sp",
+                "text": "This cultist troop\u2019s spell-like abilities come from a mix of actual spell-like abilities and spells the individual cultists have prepared. When the troop uses a quickened spelllike ability, only one troop member creates the effect. This effect resolves normally. (These abilities are swift actions since the action of one member does not significantly change the troop\u2019s overall actions). When a troop casts <i>resist energy</i> or <i>shield of faith</i>, this represents all the troop\u2019s members casting the spell on themselves. The effects of the spell apply to the entire troop, and successful attacks of opportunity do not have a chance to disrupt the spell-like ability. Likewise, readied actions to disrupt spell-like abilities function only if they can affect the entire area occupied by the troop."
+            }
+        ]
     },
     "sources": [
         {

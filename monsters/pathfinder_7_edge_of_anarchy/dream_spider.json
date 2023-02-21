@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> tropical forest or any urban<br/><b>Organization</b> solitary, pair, or colony (3-8)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Dream Web (Ex)</b> A dream spider\u2019s webs have an iridescent hue, making them easier to notice than the typical spider\u2019s web (Perception DC 15). Any animal, humanoid, or monstrous humanoid that contacts these webs experiences strange hallucinations, taking 1 point of Wisdom damage per round of contact. A successful DC 11 Fortitude save negates this damage. If the webs of a dream spider are burned, they spread poisonous gas in a 10-foot radius. This gas deals 1d4 points of Wisdom damage to all creatures in the area (not just to those in contact with the webs). A successful DC 11 Fortitude save halves this damage. The cloud of colorful vapor remains for 1 round only before dissipating harmlessly. The Wisdom damage effect of a dream web is a poison effect. The save DC is Constitution-based. <br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Fort DC 11; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d2 Wis; <i>cure</i> 1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Transplants from the Mwangi Expanse (where these spiders can grow to truly enormous proportions), dream spiders have become a significant but valuable infestation in Korvosa\u2019s Shingles, for the venom of one of these spiders can be distilled into the popular but dangerous drug known as <a href=\"Drugs.aspx?ItemName=Shiver\" style=\"text-decoration:underline\">shiver</a>."
@@ -257,7 +247,49 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "tropical forest or any urban",
+            "organization": "solitary, pair, or colony (3-8)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Dream Web",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A dream spider\u2019s webs have an iridescent hue, making them easier to notice than the typical spider\u2019s web (Perception DC 15). Any animal, humanoid, or monstrous humanoid that contacts these webs experiences strange hallucinations, taking 1 point of Wisdom damage per round of contact. A successful DC 11 Fortitude save negates this damage. If the webs of a dream spider are burned, they spread poisonous gas in a 10-foot radius. This gas deals 1d4 points of Wisdom damage to all creatures in the area (not just to those in contact with the webs). A successful DC 11 Fortitude save halves this damage. The cloud of colorful vapor remains for 1 round only before dissipating harmlessly. The Wisdom damage effect of a dream web is a poison effect. The save DC is Constitution-based. "
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 11; <i>frequency</i> 1/round for 4 rounds; <i>effect</i> 1d2 Wis; <i>cure</i> 1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 11",
+                        "save_type": "Fort",
+                        "dc": 11
+                    },
+                    "frequency": "1/round for 4 rounds",
+                    "effect": "1d2 Wis",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

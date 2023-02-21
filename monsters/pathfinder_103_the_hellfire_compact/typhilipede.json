@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any underground (Hell)<br/><b>Organization</b> solitary, mass (2\u20139), or colony (10\u201330)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Aura of Shadow (Su)</b> A typhilipede can create a region of twisting, shadowy darkness within a 10-foot radius around it. Creatures in the area, including the typhilipede, have concealment against attackers that don\u2019t have lowlight vision or darkvision. The typhilipede can suppress or reactivate this aura at will as a swift action. This is a darkness effect.<br/><br/><b>Lumivore (Ex)</b> A typhilipede can consume light through a process of energy absorption. As a standard action, a typhilipede can snuff out all mundane light sources in a 15-foot radius around it (magical light sources are not affected). Torches, lamps, campfires, and similar light sources are immediately extinguished (and don\u2019t produce smoke or other normal effects of being snuffed out). For each mundane light source it consumes in this way, a typhilipede gains 1 temporary hit point, to a maximum of 10 temporary hit points. These temporary hit points last for 1 hour. The typhilipede loses these temporary hit points first when damaged.<br/><br/><b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Fort DC 12; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Con; <i>cure</i> 2 consecutive saves."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Not all the creatures of Hell are devils. Descended from vermin that came to be trapped in Hell, typhilipedes embody the corruptive might and terrible hungers that brood in the dark. Usually encountered as wriggling, clacking masses of insectoid legs and flapping wings, these creatures strike fear in the weaker souls that trespass within the Pit. Typhilipedes possess night-black, segmented bodies with dozens of scraping, skittering legs. Two pairs of batlike wings sprout from between body segments closer to the creature\u2019s head, which bears two pairs of eyes and oversized mandibles glistening with sickly ichor.<br/><br/>A typhilipede typically measures 2 to 3 feet in length and rises no more than 8 inches from the ground, though its 3-foot wingspan can lift it off the ground with only minor difficulty. A single typhilipede weighs about 10 pounds."
@@ -327,7 +317,57 @@
                     "name": "lumivore"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any underground (Hell)",
+            "organization": "solitary, mass (2\u20139), or colony (10\u201330)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Aura of Shadow",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A typhilipede can create a region of twisting, shadowy darkness within a 10-foot radius around it. Creatures in the area, including the typhilipede, have concealment against attackers that don\u2019t have lowlight vision or darkvision. The typhilipede can suppress or reactivate this aura at will as a swift action. This is a darkness effect."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Lumivore",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A typhilipede can consume light through a process of energy absorption. As a standard action, a typhilipede can snuff out all mundane light sources in a 15-foot radius around it (magical light sources are not affected). Torches, lamps, campfires, and similar light sources are immediately extinguished (and don\u2019t produce smoke or other normal effects of being snuffed out). For each mundane light source it consumes in this way, a typhilipede gains 1 temporary hit point, to a maximum of 10 temporary hit points. These temporary hit points last for 1 hour. The typhilipede loses these temporary hit points first when damaged."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 12; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Con; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 12",
+                        "save_type": "Fort",
+                        "dc": 12
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Con",
+                    "cure": "2 consecutive saves."
+                }
+            }
+        ]
     },
     "sources": [
         {

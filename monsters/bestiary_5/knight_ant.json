@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any warm<br/><b>Organization</b> solitary, pair, scouting party (2 plus 1d4 giant ants), colony (3-8 plus 10-100 workers, 3-12 soldiers, and 1 queen)<br/><b>Treasure</b> none"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Hive Guard (Ex)</b> Knight ants gain Coordinated Defense as a bonus feat, and giant ants from the same colony also gain this feat when adjacent to a knight ant. As a standard action, a knight ant can use its oversized head to provide total cover to creatures behind it or sharing its space, as if wielding a tower shield.<br/><br/><b>Poison (Ex)</b> Sting\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str; <i>cure </i>1 save."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "These giant ants use pheromones to organize the complex work and protection of their colonies, identifying insects of their own or allied colonies and warding off intruders. They have a specialized physiology, including both enhanced pheromone glands and an especially wide, oversized head. The sheer size of its head allows a knight ant to block off entire tunnels within the hive in order to protect its fellow ants. It remains in place long enough to fend off invaders, even at the cost of its own life.<br/><br/>A knight ant is 10 feet long and weighs approximately 1,100 pounds. Its head is 7 feet across, and the flanges on the sides make it appear slightly concave."
@@ -281,7 +271,49 @@
                     "name": "hive guard"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any warm",
+            "organization": "solitary, pair, scouting party (2 plus 1d4 giant ants), colony (3-8 plus 10-100 workers, 3-12 soldiers, and 1 queen)",
+            "treasure": "none"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Hive Guard",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Knight ants gain Coordinated Defense as a bonus feat, and giant ants from the same colony also gain this feat when adjacent to a knight ant. As a standard action, a knight ant can use its oversized head to provide total cover to creatures behind it or sharing its space, as if wielding a tower shield."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Sting\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d4 Str; <i>cure </i>1 save.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 17",
+                        "save_type": "Fort",
+                        "dc": 17
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Str",
+                    "cure": "1 save."
+                }
+            }
+        ]
     },
     "sources": [
         {

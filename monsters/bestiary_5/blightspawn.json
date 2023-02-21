@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any swamps<br/><b>Organization</b> solitary<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Su)</b> Sting\u2014injury; <i>save</i> Fort DC 16; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Wisdom damage and confusion for 1 round; <i>cure</i> 2 saves. The save DC is Constitution-based.<br/><br/><b>Stagnation Aura (Su)</b> A blightspawn\u2019s stagnation aura causes lethargy and torpor in those who approach it, sapping their energy and speed. When a creature comes within 20 feet of a blightspawn, it must succeed at a DC 16 Will save or be affected as per the slow spell for as long as the creature remains within the blightspawn\u2019s aura and for an additional 1d3 rounds after leaving it. Once a creature successfully saves against the aura, it is immune to that particular blightspawn\u2019s aura for 24 hours; otherwise, reentering the aura forces a creature to save again. In addition, this aura fouls liquids of all types within the area. A creature that drinks anything in a blightspawn\u2019s aura (including potions and alchemical elixirs) must succeed at a DC 16 Fortitude save or be nauseated for 1d3 rounds. The save DCs are Constitution-based."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Blightspawn must gestate in the body of a true believer until they\u2019re released at the host\u2019s death or during a ritual, and so are most often found in places where cults that worship parasitic demons or devils are strong. To the faithful, being host to an immature blightspawn is a great honor, for they believe that when the monster bursts from the host\u2019s body, the host\u2019s consciousness lives on in some way in the blightspawn\u2019s mind, almost as if the host had reincarnated into the monster. The fact that cultists who die giving hideous birth to a blightspawn can\u2019t be resurrected lends a bit of weight to this notion, even if the blightspawn themselves have nothing to say on the topic.<br/><br/>A host carrying an immature blightspawn functions normally in all ways until the creature emerges\u2014except that the host can pass on new blightspawn to his or her children. A blightspawn\u2019s gestation can last for decades, and a child separated from infected parents might live her entire life without knowing what awaits her upon death. When a blightspawn emerges from its host, it is fully grown, although its gore-soaked wings can\u2019t be used for flight for 1d4 rounds after emerging."
@@ -465,7 +455,49 @@
                     "name": "no breath"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any swamps",
+            "organization": "solitary",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "Sting\u2014injury; <i>save</i> Fort DC 16; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Wisdom damage and confusion for 1 round; <i>cure</i> 2 saves. The save DC is Constitution-based.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Sting\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 16",
+                        "save_type": "Fort",
+                        "dc": 16
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Wisdom damage and confusion for 1 round",
+                    "cure": "2 saves. The save DC is Constitution-based."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Stagnation Aura",
+                "ability_type": "Supernatural",
+                "ability_type_abbrev": "Su",
+                "text": "A blightspawn\u2019s stagnation aura causes lethargy and torpor in those who approach it, sapping their energy and speed. When a creature comes within 20 feet of a blightspawn, it must succeed at a DC 16 Will save or be affected as per the slow spell for as long as the creature remains within the blightspawn\u2019s aura and for an additional 1d3 rounds after leaving it. Once a creature successfully saves against the aura, it is immune to that particular blightspawn\u2019s aura for 24 hours; otherwise, reentering the aura forces a creature to save again. In addition, this aura fouls liquids of all types within the area. A creature that drinks anything in a blightspawn\u2019s aura (including potions and alchemical elixirs) must succeed at a DC 16 Fortitude save or be nauseated for 1d3 rounds. The save DCs are Constitution-based."
+            }
+        ]
     },
     "sources": [
         {

@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any oceans or coastlines<br/><b>Organization</b> solitary, pair, or cluster (2\u201310)<br/><b>Treasure</b> incidental"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Anchored (Ex)</b> As a full-round action, a giant sea anemone can affix itself to a solid surface. While anchored, it cannot move, and it gains a +4 bonus to its CMD on all checks to resist being bull-rushed, dragged, overrun, or repositioned. This bonus increases by +4 for each size category larger the sea anemone is compared to the opponent attempting the maneuver. The creature can unanchor itself as a full-round action.<br/><br/><b>Poison (Ex)</b> Tentacle\u00c2\u00ad\u2014injury; <i>save </i>Fort DC 16; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dex damage; <i>cure </i>2 consecutive saves.<br/><br/><b>Sightless (Ex)</b> A sea anemone is blind and is not affected by any effect that relies on sight, such as gaze attacks or blindness."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Giant sea anemones are beautiful but deadly ocean-dwelling vermin that rely on camouflage and paralytic toxins to draw in their prey. A sea anemone has a long, cylindrical body that ends in a flat circular disc with a slitlike orifice for both ingesting food and dispelling waste. This disc is surrounded by a thicket of tendrils that vary in thickness from fine, hairlike cilia to thick, swollen appendages. The creature uses all of these tentacles at once when it attacks prey. Like their smaller kin, giant sea anemones come in a broad spectrum of colors\u2014many are known for their brilliant hues.<br/><br/>Giant sea anemones can move at a slow pace by walking along the projections at their bases. More often, however, these predators affix themselves to rock, coral, or sunken objects like ships, then wait for prey to come to them.<br/><br/>As mindless creatures, giant sea anemones have no use for treasure, but the remains of prey digested and then expelled often litter the area around these creatures. Massive sea anemones big enough to eat dolphins, whales, or even sea serpents reportedly exist in the deepest parts of the ocean. Called deep tigers for their alternating fronds of black and brilliant orange, these giant sea anemones are said to lair in undersea ruins and sunken ships, where the promise of sought-after treasure conveniently lures in a constant food supply.<br/><br/>Other species of sea anemones exist as well, some smaller but most quite a bit larger and favoring different oceanic regions and depths. You can adjust the stats for the giant sea anemone by changing the Hit Dice and size (adjusting Strength, Dexterity, and Constitution as appropriate) to represent a wide range of species. Often, different species have additional abilities, such as the darkforest anemone\u2019s constriction attack, or the deep tiger\u2019s ability to squirt acid. The following table lists the most common variants.<br/><br/><table class=\"inner\"> <tr> <td><b>Species</b></td> <td><b>CR</b></td> <td><b>Size</b></td> <td><b>HD</b></td> </tr> <tr> <td>Common anemone</td> <td>1/4</td> <td>Tiny</td> <td>1d8</td> </tr> <tr> <td>Bluehair anemone</td> <td>1/2</td> <td>Small</td> <td>2d8</td> </tr> <tr> <td>Coffin anemone</td> <td>1</td> <td>Medium</td> <td>3d8</td> </tr> <tr> <td>Darkforest anemone</td> <td>6</td> <td>Huge</td> <td>9d8</td> </tr> <tr> <td>Siren\u2019s bed anemone</td> <td>9</td> <td>Gargantuan</td> <td>14d8</td> </tr> <tr> <td>Deep tiger anemone</td> <td>13</td> <td>Colossal</td> <td>19d8</td> </tr> </table>"
@@ -279,7 +269,57 @@
                     "name": "sightless"
                 }
             ]
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any oceans or coastlines",
+            "organization": "solitary, pair, or cluster (2\u201310)",
+            "treasure": "incidental"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Anchored",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "As a full-round action, a giant sea anemone can affix itself to a solid surface. While anchored, it cannot move, and it gains a +4 bonus to its CMD on all checks to resist being bull-rushed, dragged, overrun, or repositioned. This bonus increases by +4 for each size category larger the sea anemone is compared to the opponent attempting the maneuver. The creature can unanchor itself as a full-round action."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Tentacle\u00c2\u00ad\u2014injury; <i>save </i>Fort DC 16; <i>frequency </i>1/round for 6 rounds; <i>effect </i>1d2 Dex damage; <i>cure </i>2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Tentacle\u00c2\u00ad\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 16",
+                        "save_type": "Fort",
+                        "dc": 16
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d2 Dex damage",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Sightless",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A sea anemone is blind and is not affected by any effect that relies on sight, such as gaze attacks or blindness."
+            }
+        ]
     },
     "sources": [
         {

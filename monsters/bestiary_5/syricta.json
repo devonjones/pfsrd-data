@@ -3,16 +3,6 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Ecology",
-            "type": "section",
-            "html": "<b>Environment</b> any land<br/><b>Organization</b> solitary, pair, knot (3\u20135)<br/><b>Treasure</b> standard"
-        },
-        {
-            "name": "Special Abilities",
-            "type": "section",
-            "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save</i> Fort DC 24; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Strength; <i>cure</i> 2 consecutive saves.<br/><b>Poison Cloud (Ex)</b> Once per day as a swift action, a syricta can exhale a poisonous cloud from its nostrils in a 20-foot radius centered on it. Any creature within the cloud or entering it must immediately succeed at a DC 24 Fortitude save or be affected by the syricta\u2019s poison. The cloud dissipates at the beginning of the syricta\u2019s next turn.<br/><b>Serpentfolk Pawn (Ex)</b> A syricta\u2019s immunity to mind-affecting effects doesn\u2019t apply against serpentfolk or any effects originating from a serpentfolk (for example, a <i>mind fog</i> cast by a serpentfolk would bypass the syricta\u2019s immunity to mind-affecting effects).<br/><b>Snake Overrun (Ex)</b> The numerous snake heads and tails of a syricta\u2019s lower torso deal 6d6 points of bludgeoning, piercing, and slashing damage to creatures when it succeeds on an overrun combat maneuver against them. Creatures that take damage from a syricta\u2019s snake overrun are also subjected to the syricta\u2019s poison."
-        },
-        {
             "name": "Description",
             "type": "section",
             "html": "Serpentfolk breed syrictas by performing a ritual to infuse a deformed serpentfolk egg with the vital essence from a clutch of snake eggs. The resulting amalgamation is a nightmarish cross between a serpentfolk and a mass of writhing ophidian tails and heads.<br/><br/> Numerous snakes make up these abominations\u2019 lower halves, granting them a slithering form of locomotion. Each syricta also has a thick, muscled snake tail forming one of its arms, allowing it to wrap around prey and squeeze the life from them, while its other arm splits at the elbow into two venomous snake heads, granting the syricta a total of three deadly bites. Despite being much smaller than its main head, the arm heads are possessed of unexpected strength for their size, making them equally deadly. These heads are also adept at manipulating objects, allowing the syricta to perform any action that would require a hand\u2014 such as holding a weapon\u2014 at the expense of those bite attacks.<br/><br/> These hideous monstrosities serve the serpentfolk as bodyguards and enforcers, their primitive minds conditioned to obey their serpentfolk masters. They f ight to the death if so commanded, though when they lack commands from a serpentfolk, they act as brutish bullies and cowards, viciously and sadistically harming those weaker than themselves but f leeing from foes that prove stronger. Syricta societies are harsh, ruled absolutely by the strongest individuals, and rarely last long due to syrictas\u2019 inability to reproduce. Most syrictas instead spend their lives serving their serpentfolk creators, rarely forming relationships with other syrictas.<br/><br/> Syrictas are entirely carnivorous. A typical adult syricta stands around 9 feet tall and weighs 550 pounds."
@@ -442,7 +432,65 @@
                     }
                 ]
             }
-        }
+        },
+        "ecology": {
+            "name": "Ecology",
+            "type": "stat_block_section",
+            "subtype": "ecology",
+            "environment": "any land",
+            "organization": "solitary, pair, knot (3\u20135)",
+            "treasure": "standard"
+        },
+        "special_abilities": [
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Bite\u2014injury; <i>save</i> Fort DC 24; <i>frequency</i> 1/round for 6 rounds; <i>effect</i> 1d4 Strength; <i>cure</i> 2 consecutive saves.",
+                "affliction": {
+                    "type": "stat_block_section",
+                    "subtype": "affliction",
+                    "name": "Poison",
+                    "affliction_type": "Poison; Bite\u2014injury",
+                    "saving_throw": {
+                        "type": "stat_block_section",
+                        "subtype": "save_dc",
+                        "text": "Fort DC 24",
+                        "save_type": "Fort",
+                        "dc": 24
+                    },
+                    "frequency": "1/round for 6 rounds",
+                    "effect": "1d4 Strength",
+                    "cure": "2 consecutive saves."
+                }
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Poison Cloud",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "Once per day as a swift action, a syricta can exhale a poisonous cloud from its nostrils in a 20-foot radius centered on it. Any creature within the cloud or entering it must immediately succeed at a DC 24 Fortitude save or be affected by the syricta\u2019s poison. The cloud dissipates at the beginning of the syricta\u2019s next turn."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Serpentfolk Pawn",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "A syricta\u2019s immunity to mind-affecting effects doesn\u2019t apply against serpentfolk or any effects originating from a serpentfolk (for example, a <i>mind fog</i> cast by a serpentfolk would bypass the syricta\u2019s immunity to mind-affecting effects)."
+            },
+            {
+                "type": "stat_block_section",
+                "subtype": "special_ability",
+                "name": "Snake Overrun",
+                "ability_type": "Extraordinary",
+                "ability_type_abbrev": "Ex",
+                "text": "The numerous snake heads and tails of a syricta\u2019s lower torso deal 6d6 points of bludgeoning, piercing, and slashing damage to creatures when it succeeds on an overrun combat maneuver against them. Creatures that take damage from a syricta\u2019s snake overrun are also subjected to the syricta\u2019s poison."
+            }
+        ]
     },
     "sources": [
         {
