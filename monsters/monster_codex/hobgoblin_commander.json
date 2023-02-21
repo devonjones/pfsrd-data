@@ -3,30 +3,14 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Description",
-            "type": "section"
+            "name": "Hobgoblin",
+            "type": "section",
+            "html": "<i>Standing as tall as a human, this muscular, gray-skinned creature peers about with tiny, observant eyes.</i>"
         },
         {
-            "name": "Commander\u00e2\u0080\u0099s Warhorse",
+            "name": "Description",
             "type": "section",
-            "sections": [
-                {
-                    "name": "Defense",
-                    "type": "section",
-                    "html": "<b>AC </b>28, touch 12, flat-footed 25 (+4 armor, +3 Dex, +12 natural, \u20131 size)<br/><b>hp </b>93 (11d8+44)<br/><b>Fort </b>+10, <b>Ref </b>+10, <b>Will </b>+6"
-                },
-                {
-                    "name": "Offense",
-                    "type": "section",
-                    "html": "<b>Speed </b>50 ft.<br/><b>Melee </b>bite +13 (1d4+6), 2 hooves +8 (1d6+3)<br/><b>Space </b>10 ft.; <b>Reach </b>5 ft."
-                },
-                {
-                    "name": "Statistics",
-                    "type": "section",
-                    "html": "<b>Str </b>22, <b>Dex </b>17, <b>Con </b>17, <b>Int </b>2, <b>Wis </b>12, <b>Cha </b>6<br/><b>Base Atk</b> +8; <b>CMB </b>+15; <b>CMD </b>28 (32 vs. trip)<br/><b>Feats </b>Diehard, Endurance, Iron Will, Light Armor Proficiency, Power Attack, Run, Toughness<br/><b>Skills </b>Perception +15<br/><b>SQ </b>combat trained, tricks (attack, come, defend, down, fetch, guard, heel, seek, stay, track, work)<br/><b>Gear </b>leather lamellar barding<sup>UC</sup><br/><br/> The commanders of hobgoblin armies are among the most formidable warriors and military tacticians the world over."
-                }
-            ],
-            "html": "Horse animal companion<br/> N Large animal<br/><b>Init</b> +3; <b>Senses</b> low-light vision, scent; Perception +15"
+            "html": "The commanders of hobgoblin armies are among the most formidable warriors and military tacticians the world over."
         }
     ],
     "game-obj": "Monsters",
@@ -79,6 +63,346 @@
                     "type": "stat_block_section",
                     "subtype": "graft",
                     "name": "samurai 13"
+                }
+            ]
+        },
+        "sub_creature": {
+            "name": "Commander\u00e2\u0080\u0099s Warhorse",
+            "type": "monster",
+            "stat_block": {
+                "name": "Commander\u00e2\u0080\u0099s Warhorse",
+                "type": "stat_block",
+                "initiative": {
+                    "type": "stat_block_section",
+                    "subtype": "initiative",
+                    "value": 3
+                },
+                "perception": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "perception",
+                        "value": 15
+                    }
+                ],
+                "senses": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "low-light vision"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "scent"
+                    }
+                ],
+                "creature_type": {
+                    "type": "stat_block_section",
+                    "subtype": "creature_type",
+                    "creature_type": "Animal",
+                    "size": "Large",
+                    "alignment": "Neutral",
+                    "alignment_text": "N",
+                    "grafts": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "graft",
+                            "name": "Horse"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "graft",
+                            "name": "animal"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "graft",
+                            "name": "companion"
+                        }
+                    ]
+                },
+                "defense": {
+                    "name": "Defense",
+                    "type": "stat_block_section",
+                    "subtype": "defense",
+                    "ac": {
+                        "name": "AC",
+                        "type": "stat_block_section",
+                        "subtype": "armor_class",
+                        "ac": 28,
+                        "touch": 12,
+                        "flat-footed": 25,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+4 armor"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+3 Dex"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+12 natural"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "-1 size"
+                            }
+                        ]
+                    },
+                    "saves": {
+                        "type": "stat_block_section",
+                        "subtype": "saves",
+                        "fort": {
+                            "name": "Fort",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 10
+                        },
+                        "ref": {
+                            "name": "Ref",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 10
+                        },
+                        "will": {
+                            "name": "Will",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 6
+                        }
+                    }
+                },
+                "offense": {
+                    "name": "Offense",
+                    "type": "stat_block_section",
+                    "subtype": "offense",
+                    "speed": {
+                        "name": "Speed",
+                        "type": "stat_block_section",
+                        "subtype": "speeds",
+                        "movement": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "speed",
+                                "name": "50 ft.",
+                                "movement_type": "walk",
+                                "value": 50
+                            }
+                        ]
+                    },
+                    "melee": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack",
+                            "attack_type": "melee",
+                            "name": "bite",
+                            "bonus": [
+                                13
+                            ],
+                            "damage": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "formula": "1d4+6"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack",
+                            "attack_type": "melee",
+                            "count": 2,
+                            "name": "hooves",
+                            "bonus": [
+                                8
+                            ],
+                            "damage": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "formula": "1d6+3"
+                                }
+                            ]
+                        }
+                    ],
+                    "space": "10 ft.;",
+                    "reach": {
+                        "type": "stat_block_section",
+                        "subtype": "reach",
+                        "value": "5 ft."
+                    },
+                    "bab": {
+                        "type": "stat_block_section",
+                        "subtype": "bab",
+                        "value": 8
+                    },
+                    "cmb": {
+                        "type": "stat_block_section",
+                        "subtype": "cmb",
+                        "value": 15
+                    },
+                    "cmd": {
+                        "type": "stat_block_section",
+                        "subtype": "cmd",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "32 vs. trip"
+                            }
+                        ],
+                        "value": 28
+                    }
+                },
+                "gear": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "item",
+                        "name": "leather lamellar barding"
+                    }
+                ],
+                "statistics": {
+                    "type": "stat_block_section",
+                    "subtype": "statistics",
+                    "str": 22,
+                    "dex": 17,
+                    "con": 17,
+                    "int": 2,
+                    "wis": 12,
+                    "cha": 6,
+                    "feats": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Diehard"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Endurance"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Iron Will"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Light Armor Proficiency"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Power Attack"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Run"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Toughness"
+                        }
+                    ],
+                    "skills": {
+                        "type": "stat_block_section",
+                        "subtype": "skills",
+                        "skills": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Perception",
+                                "value": 15
+                            }
+                        ]
+                    },
+                    "tricks": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "attack"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "come"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "defend"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "down"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "fetch"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "guard"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "heel"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "seek"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "stay"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "track"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "work"
+                        }
+                    ],
+                    "special_qualities": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "special_quality",
+                            "name": "combat trained"
+                        }
+                    ]
+                }
+            },
+            "game-obj": "Monsters",
+            "sources": [
+                {
+                    "type": "source",
+                    "name": "Monster Codex",
+                    "link": {
+                        "type": "link",
+                        "name": "Monster Codex pg. 123",
+                        "alt": "Monster Codex pg. 123",
+                        "href": "http://paizo.com/products/btpy9926?Pathfinder-Roleplaying-Game-Monster-Codex%0D%0A"
+                    },
+                    "page": 123
                 }
             ]
         },

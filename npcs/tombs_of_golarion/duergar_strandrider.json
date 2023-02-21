@@ -3,31 +3,9 @@
     "type": "npc",
     "sections": [
         {
-            "name": "Many-Legged Mount",
+            "name": "Description",
             "type": "section",
-            "sections": [
-                {
-                    "name": "Defense",
-                    "type": "section",
-                    "html": "<b>AC </b>23, touch 12, flat-footed 20 (+4 armor, +3 Dex, +7 natural, \u20131 size)<br/><b>hp </b>60 (8d8+24)<br/><b>Fort </b>+9, <b>Ref </b>+5, <b>Will </b>+2 (+6 vs. enchantments)<br/><b>Defensive Abilities</b> evasion, mindless"
-                },
-                {
-                    "name": "Offense",
-                    "type": "section",
-                    "html": "<b>Speed </b>30 ft., climb 30 ft.<br/><b>Melee </b>bite +7/+2 (1d8+3 plus poison)<br/><b>Space </b>10 ft.; <b>Reach </b>10 ft."
-                },
-                {
-                    "name": "Statistics",
-                    "type": "section",
-                    "html": "<b>Str </b>15, <b>Dex </b>16, <b>Con </b>16, <b>Int </b>\u2014, <b>Wis </b>10, <b>Cha </b>2<br/><b>Base Atk</b> +6; <b>CMB</b> +9; <b>CMD</b> 22 (34 vs. trip)<br/><b>Feats </b>Endurance<sup>B</sup><br/><b>Tricks </b>attack, come, defend, down, guard, heel<br/><b>Skills </b>Climb +8<br/><b>SQ </b>combat riding, devotion, extra attack<br/><b>Gear </b>chain shirt barding"
-                },
-                {
-                    "name": "Special Abilities",
-                    "type": "section",
-                    "html": "<b>Poison (Ex)</b> Bite\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1 Str; <i>cure </i>1 save.<br/><br/> Where the ironclads are immovable, their counterparts\u2014 the strandriders\u2014are swift. As a rite of passage, these duergar harvest the egg sacks of giant female spiders, claiming the cluster\u2019s strongest specimens to use as their future mounts."
-                }
-            ],
-            "html": "Giant spider animal companion (<i>Ultimate Magic</i> 37)<br/> N Large vermin<br/><b>Init </b>+3; <b>Senses </b>darkvision 60 ft., tremorsense 30 ft.; Perception +0"
+            "html": "Where the ironclads are immovable, their counterparts\u2014 the strandriders\u2014are swift. As a rite of passage, these duergar harvest the egg sacks of giant female spiders, claiming the cluster\u2019s strongest specimens to use as their future mounts."
         }
     ],
     "html": "<i>This stout, gray-skinned warrior sits astride an enormous spider.</i>",
@@ -80,6 +58,348 @@
                     "type": "stat_block_section",
                     "subtype": "graft",
                     "name": "cavalier (beast rider) 9"
+                }
+            ]
+        },
+        "sub_creature": {
+            "name": "Many-Legged Mount",
+            "type": "monster",
+            "stat_block": {
+                "name": "Many-Legged Mount",
+                "type": "stat_block",
+                "initiative": {
+                    "type": "stat_block_section",
+                    "subtype": "initiative",
+                    "value": 3
+                },
+                "perception": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "perception",
+                        "value": 0
+                    }
+                ],
+                "senses": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "darkvision 60 ft."
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "tremorsense 30 ft."
+                    }
+                ],
+                "creature_type": {
+                    "type": "stat_block_section",
+                    "subtype": "creature_type",
+                    "creature_type": "Vermin",
+                    "size": "Large",
+                    "alignment": "Neutral",
+                    "alignment_text": "N",
+                    "grafts": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "graft",
+                            "name": "Giant"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "graft",
+                            "name": "spider"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "graft",
+                            "name": "animal"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "graft",
+                            "name": "companion (<i>Ultimate Magic</i> 37)"
+                        }
+                    ]
+                },
+                "defense": {
+                    "name": "Defense",
+                    "type": "stat_block_section",
+                    "subtype": "defense",
+                    "ac": {
+                        "name": "AC",
+                        "type": "stat_block_section",
+                        "subtype": "armor_class",
+                        "ac": 23,
+                        "touch": 12,
+                        "flat-footed": 20,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+4 armor"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+3 Dex"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+7 natural"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "-1 size"
+                            }
+                        ]
+                    },
+                    "saves": {
+                        "type": "stat_block_section",
+                        "subtype": "saves",
+                        "fort": {
+                            "name": "Fort",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 9
+                        },
+                        "ref": {
+                            "name": "Ref",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 5
+                        },
+                        "will": {
+                            "name": "Will",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 2,
+                            "modifiers": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "+6 vs. enchantments"
+                                }
+                            ]
+                        }
+                    },
+                    "defensive_abilities": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "defensive_ability",
+                            "name": "evasion"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "defensive_ability",
+                            "name": "mindless"
+                        }
+                    ]
+                },
+                "offense": {
+                    "name": "Offense",
+                    "type": "stat_block_section",
+                    "subtype": "offense",
+                    "speed": {
+                        "name": "Speed",
+                        "type": "stat_block_section",
+                        "subtype": "speeds",
+                        "movement": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "speed",
+                                "name": "30 ft.",
+                                "movement_type": "walk",
+                                "value": 30
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "speed",
+                                "name": "climb 30 ft.",
+                                "movement_type": "climb",
+                                "value": 30
+                            }
+                        ]
+                    },
+                    "melee": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack",
+                            "attack_type": "melee",
+                            "name": "bite",
+                            "bonus": [
+                                7,
+                                2
+                            ],
+                            "damage": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "formula": "1d8+3"
+                                },
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "effect": "poison"
+                                }
+                            ]
+                        }
+                    ],
+                    "space": "10 ft.;",
+                    "reach": {
+                        "type": "stat_block_section",
+                        "subtype": "reach",
+                        "value": "10 ft."
+                    },
+                    "bab": {
+                        "type": "stat_block_section",
+                        "subtype": "bab",
+                        "value": 6
+                    },
+                    "cmb": {
+                        "type": "stat_block_section",
+                        "subtype": "cmb",
+                        "value": 9
+                    },
+                    "cmd": {
+                        "type": "stat_block_section",
+                        "subtype": "cmd",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "34 vs. trip"
+                            }
+                        ],
+                        "value": 22
+                    }
+                },
+                "gear": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "item",
+                        "name": "chain shirt barding"
+                    }
+                ],
+                "statistics": {
+                    "type": "stat_block_section",
+                    "subtype": "statistics",
+                    "str": 15,
+                    "dex": 16,
+                    "con": 16,
+                    "int": null,
+                    "wis": 10,
+                    "cha": 2,
+                    "feats": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Endurance",
+                            "notation": "B"
+                        }
+                    ],
+                    "tricks": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "attack"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "come"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "defend"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "down"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "guard"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "heel"
+                        }
+                    ],
+                    "skills": {
+                        "type": "stat_block_section",
+                        "subtype": "skills",
+                        "skills": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Climb",
+                                "value": 8
+                            }
+                        ]
+                    },
+                    "special_qualities": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "special_quality",
+                            "name": "combat riding"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "special_quality",
+                            "name": "devotion"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "special_quality",
+                            "name": "extra attack"
+                        }
+                    ]
+                },
+                "special_abilities": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "special_ability",
+                        "name": "Poison",
+                        "ability_type": "Extraordinary",
+                        "ability_type_abbrev": "Ex",
+                        "text": "Bite\u2014injury; <i>save </i>Fort DC 17; <i>frequency </i>1/round for 4 rounds; <i>effect </i>1 Str; <i>cure </i>1 save.",
+                        "affliction": {
+                            "type": "stat_block_section",
+                            "subtype": "affliction",
+                            "name": "Poison",
+                            "affliction_type": "Poison; Bite\u2014injury",
+                            "saving_throw": {
+                                "type": "stat_block_section",
+                                "subtype": "save_dc",
+                                "text": "Fort DC 17",
+                                "save_type": "Fort",
+                                "dc": 17
+                            },
+                            "frequency": "1/round for 4 rounds",
+                            "effect": "1 Str",
+                            "cure": "1 save."
+                        }
+                    }
+                ]
+            },
+            "game-obj": "Monsters",
+            "sources": [
+                {
+                    "type": "source",
+                    "name": "Tombs of Golarion",
+                    "link": {
+                        "type": "link",
+                        "name": "Tombs of Golarion pg. 32",
+                        "alt": "Tombs of Golarion pg. 32",
+                        "href": "http://paizo.com/products/btpy98yu?Pathfinder-Campaign-Setting-Tombs-of-Golarion"
+                    },
+                    "page": 32
                 }
             ]
         },

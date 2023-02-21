@@ -3,30 +3,14 @@
     "type": "monster",
     "sections": [
         {
-            "name": "Description",
-            "type": "section"
+            "name": "Ogre",
+            "type": "section",
+            "html": "<i>This lumbering giant\u2019s beady eyes are devoid of wit or kindness, and its puffy face features a wide mouth with ill-fitting teeth.</i>"
         },
         {
-            "name": "Fiendish Rhinoceros Companion",
+            "name": "Description",
             "type": "section",
-            "sections": [
-                {
-                    "name": "Defense",
-                    "type": "section",
-                    "html": "<b>AC </b>16, touch 9, flat-footed 16 (+7 natural, \u20131 size)<br/><b>hp </b>42 (5d8+20)<br/><b>Fort </b>+10, <b>Ref </b>+4, <b>Will </b>+2<br/><b>DR </b>5/good; <b>Resist </b>cold 10, fire 10; <b>SR </b>10"
-                },
-                {
-                    "name": "Offense",
-                    "type": "section",
-                    "html": "<b>Speed </b>40 ft.<br/><b>Melee </b>gore +8 (2d6+9)<br/><b>Space </b>10 ft.; <b>Reach </b>5 ft.<br/><b>Special Attacks</b> powerful charge (gore, 4d6+12), smite good 1/day as a swift action (+0 attack, +5 damage)"
-                },
-                {
-                    "name": "Statistics",
-                    "type": "section",
-                    "html": "<b>Str </b>22, <b>Dex </b>10, <b>Con </b>19, <b>Int </b>2, <b>Wis </b>13, <b>Cha </b>5<br/><b>Base Atk</b> +3; <b>CMB </b>+10; <b>CMD </b>20 (24 vs. trip)<br/><b>Feats </b>Endurance, Great Fortitude, Skill Focus (Perception)<br/><b>Skills </b>Perception +12<br/><br/> An ogre destroyer is profane, disgusting, and filled with rage; nothing is safe from his murderous and hateful urges. He indulges every whim, revels in the powers granted by his dark patrons, and lives utterly free of all civilized restraint. He represents what people think of when they hear the word \u201cantipaladin.\u201d"
-                }
-            ],
-            "html": "N Large animal<br/><b>Init</b> +0; <b>Senses </b>darkvision 60 ft., scent; Perception +12"
+            "html": "An ogre destroyer is profane, disgusting, and filled with rage; nothing is safe from his murderous and hateful urges. He indulges every whim, revels in the powers granted by his dark patrons, and lives utterly free of all civilized restraint. He represents what people think of when they hear the word \u201cantipaladin.\u201d"
         }
     ],
     "game-obj": "Monsters",
@@ -98,6 +82,284 @@
                     "type": "stat_block_section",
                     "subtype": "graft",
                     "name": "antipaladin 7"
+                }
+            ]
+        },
+        "sub_creature": {
+            "name": "Fiendish Rhinoceros Companion",
+            "type": "monster",
+            "stat_block": {
+                "name": "Fiendish Rhinoceros Companion",
+                "type": "stat_block",
+                "initiative": {
+                    "type": "stat_block_section",
+                    "subtype": "initiative",
+                    "value": 0
+                },
+                "perception": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "perception",
+                        "value": 12
+                    }
+                ],
+                "senses": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "darkvision 60 ft."
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "scent"
+                    }
+                ],
+                "creature_type": {
+                    "type": "stat_block_section",
+                    "subtype": "creature_type",
+                    "creature_type": "Animal",
+                    "size": "Large",
+                    "alignment": "Neutral",
+                    "alignment_text": "N"
+                },
+                "defense": {
+                    "name": "Defense",
+                    "type": "stat_block_section",
+                    "subtype": "defense",
+                    "ac": {
+                        "name": "AC",
+                        "type": "stat_block_section",
+                        "subtype": "armor_class",
+                        "ac": 16,
+                        "touch": 9,
+                        "flat-footed": 16,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+7 natural"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "-1 size"
+                            }
+                        ]
+                    },
+                    "saves": {
+                        "type": "stat_block_section",
+                        "subtype": "saves",
+                        "fort": {
+                            "name": "Fort",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 10
+                        },
+                        "ref": {
+                            "name": "Ref",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 4
+                        },
+                        "will": {
+                            "name": "Will",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 2
+                        }
+                    },
+                    "dr": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "dr",
+                            "value": 5,
+                            "text": "5/good",
+                            "damage_types": [
+                                "good"
+                            ]
+                        }
+                    ],
+                    "resistances": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "resistance",
+                            "value": 10,
+                            "name": "cold"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "resistance",
+                            "value": 10,
+                            "name": "fire"
+                        }
+                    ],
+                    "sr": {
+                        "type": "stat_block_section",
+                        "subtype": "sr",
+                        "value": 10
+                    }
+                },
+                "offense": {
+                    "name": "Offense",
+                    "type": "stat_block_section",
+                    "subtype": "offense",
+                    "speed": {
+                        "name": "Speed",
+                        "type": "stat_block_section",
+                        "subtype": "speeds",
+                        "movement": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "speed",
+                                "name": "40 ft.",
+                                "movement_type": "walk",
+                                "value": 40
+                            }
+                        ]
+                    },
+                    "melee": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack",
+                            "attack_type": "melee",
+                            "name": "gore",
+                            "bonus": [
+                                8
+                            ],
+                            "damage": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "formula": "2d6+9"
+                                }
+                            ]
+                        }
+                    ],
+                    "space": "10 ft.;",
+                    "reach": {
+                        "type": "stat_block_section",
+                        "subtype": "reach",
+                        "value": "5 ft."
+                    },
+                    "special_attacks": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "special_attack",
+                            "modifiers": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "gore"
+                                },
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "4d6+12"
+                                }
+                            ],
+                            "name": "powerful charge"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "special_attack",
+                            "modifiers": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "+0 attack"
+                                },
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "+5 damage"
+                                }
+                            ],
+                            "name": "smite good 1/day as a swift action"
+                        }
+                    ],
+                    "bab": {
+                        "type": "stat_block_section",
+                        "subtype": "bab",
+                        "value": 3
+                    },
+                    "cmb": {
+                        "type": "stat_block_section",
+                        "subtype": "cmb",
+                        "value": 10
+                    },
+                    "cmd": {
+                        "type": "stat_block_section",
+                        "subtype": "cmd",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "24 vs. trip"
+                            }
+                        ],
+                        "value": 20
+                    }
+                },
+                "statistics": {
+                    "type": "stat_block_section",
+                    "subtype": "statistics",
+                    "str": 22,
+                    "dex": 10,
+                    "con": 19,
+                    "int": 2,
+                    "wis": 13,
+                    "cha": 5,
+                    "feats": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Endurance"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Great Fortitude"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "modifiers": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "Perception"
+                                }
+                            ],
+                            "name": "Skill Focus"
+                        }
+                    ],
+                    "skills": {
+                        "type": "stat_block_section",
+                        "subtype": "skills",
+                        "skills": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Perception",
+                                "value": 12
+                            }
+                        ]
+                    }
+                }
+            },
+            "game-obj": "Monsters",
+            "sources": [
+                {
+                    "type": "source",
+                    "name": "Monster Codex",
+                    "link": {
+                        "type": "link",
+                        "name": "Monster Codex pg. 158",
+                        "alt": "Monster Codex pg. 158",
+                        "href": "http://paizo.com/products/btpy9926?Pathfinder-Roleplaying-Game-Monster-Codex%0D%0A"
+                    },
+                    "page": 158
                 }
             ]
         },

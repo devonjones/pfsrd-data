@@ -4,34 +4,8 @@
     "sections": [
         {
             "name": "Description",
-            "type": "section"
-        },
-        {
-            "name": "Corpse Cat",
             "type": "section",
-            "sections": [
-                {
-                    "name": "Defense",
-                    "type": "section",
-                    "html": "<b>AC </b>20, touch 17, flat-footed 14 (+6 Dex, +3 natural, +1 size)<br/><b>hp </b>16 (3d8+3)<br/><b>Fort </b>+4, <b>Ref </b>+9, <b>Will </b>+2<br/><b>Immune </b>undead traits"
-                },
-                {
-                    "name": "Offense",
-                    "type": "section",
-                    "html": "<b>Speed </b>50 ft.<br/><b>Melee </b><i>+1 bite</i> +10 (1d4+2 plus trip), 2 <i>+1 claws</i> +11 (1d2+2)"
-                },
-                {
-                    "name": "Tactics",
-                    "type": "section",
-                    "html": "<b>Base Statistics</b> Without <i>greater magic fang</i>, the cat\u2019s statistics are <b>Melee </b>bite +9 (1d4+1 plus trip), 2 claws +10 (1d2+1)."
-                },
-                {
-                    "name": "Statistics",
-                    "type": "section",
-                    "html": "<b>Str </b>13, <b>Dex </b>22, <b>Con </b>-, <b>Int </b>2, <b>Wis </b>12, <b>Cha </b>12<br/><b>Base Atk</b> +2; <b>CMB </b>+2; <b>CMD </b>18 (22 vs. trip)<br/><b>Feats </b>Weapon Finesse, Weapon Focus (claw)<br/><b>Skills </b>Acrobatics +10 (+18 when jumping), Perception +5, Stealth +14<br/><b>SQ </b>tricks (attack [all creatures], come, fetch, guard, seek, stay, track)<br/><br/>Though most ghouls hunt and kill to satiate their hunger, a huntsmaster relishes the chase as much as the feast after."
-                }
-            ],
-            "html": "N Small undead<br/><b>Init </b>+6; <b>Senses </b>darkvision 60 ft., low-light vision, scent; Perception +5"
+            "html": "Though most ghouls hunt and kill to satiate their hunger, a huntsmaster relishes the chase as much as the feast after."
         }
     ],
     "game-obj": "Monsters",
@@ -77,6 +51,318 @@
                     "type": "stat_block_section",
                     "subtype": "graft",
                     "name": "ranger 6"
+                }
+            ]
+        },
+        "sub_creature": {
+            "name": "Corpse Cat",
+            "type": "monster",
+            "stat_block": {
+                "name": "Corpse Cat",
+                "type": "stat_block",
+                "initiative": {
+                    "type": "stat_block_section",
+                    "subtype": "initiative",
+                    "value": 6
+                },
+                "perception": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "perception",
+                        "value": 5
+                    }
+                ],
+                "senses": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "darkvision 60 ft."
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "low-light vision"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "scent"
+                    }
+                ],
+                "creature_type": {
+                    "type": "stat_block_section",
+                    "subtype": "creature_type",
+                    "creature_type": "Undead",
+                    "size": "Small",
+                    "alignment": "Neutral",
+                    "alignment_text": "N"
+                },
+                "defense": {
+                    "name": "Defense",
+                    "type": "stat_block_section",
+                    "subtype": "defense",
+                    "ac": {
+                        "name": "AC",
+                        "type": "stat_block_section",
+                        "subtype": "armor_class",
+                        "ac": 20,
+                        "touch": 17,
+                        "flat-footed": 14,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+6 Dex"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+3 natural"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+1 size"
+                            }
+                        ]
+                    },
+                    "saves": {
+                        "type": "stat_block_section",
+                        "subtype": "saves",
+                        "fort": {
+                            "name": "Fort",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 4
+                        },
+                        "ref": {
+                            "name": "Ref",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 9
+                        },
+                        "will": {
+                            "name": "Will",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 2
+                        }
+                    },
+                    "immunities": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "immunity",
+                            "name": "undead traits"
+                        }
+                    ]
+                },
+                "offense": {
+                    "name": "Offense",
+                    "type": "stat_block_section",
+                    "subtype": "offense",
+                    "speed": {
+                        "name": "Speed",
+                        "type": "stat_block_section",
+                        "subtype": "speeds",
+                        "movement": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "speed",
+                                "name": "50 ft.",
+                                "movement_type": "walk",
+                                "value": 50
+                            }
+                        ]
+                    },
+                    "melee": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack",
+                            "attack_type": "melee",
+                            "count": 1,
+                            "name": "bite",
+                            "bonus": [
+                                10
+                            ],
+                            "damage": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "formula": "1d4+2"
+                                },
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "effect": "trip"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack",
+                            "attack_type": "melee",
+                            "count": 2,
+                            "name": "+1 claws",
+                            "bonus": [
+                                11
+                            ],
+                            "damage": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "formula": "1d2+2"
+                                }
+                            ]
+                        }
+                    ],
+                    "bab": {
+                        "type": "stat_block_section",
+                        "subtype": "bab",
+                        "value": 2
+                    },
+                    "cmb": {
+                        "type": "stat_block_section",
+                        "subtype": "cmb",
+                        "value": 2
+                    },
+                    "cmd": {
+                        "type": "stat_block_section",
+                        "subtype": "cmd",
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "22 vs. trip"
+                            }
+                        ],
+                        "value": 18
+                    }
+                },
+                "tactics": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "tactic",
+                        "name": "Base Statistics",
+                        "text": " Without <i>greater magic fang</i>, the cat\u2019s statistics are <b>Melee </b>bite +9 (1d4+1 plus trip), 2 claws +10 (1d2+1)."
+                    }
+                ],
+                "statistics": {
+                    "type": "stat_block_section",
+                    "subtype": "statistics",
+                    "str": 13,
+                    "dex": 22,
+                    "con": null,
+                    "int": 2,
+                    "wis": 12,
+                    "cha": 12,
+                    "feats": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Weapon Finesse"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "modifiers": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "claw"
+                                }
+                            ],
+                            "name": "Weapon Focus"
+                        }
+                    ],
+                    "skills": {
+                        "type": "stat_block_section",
+                        "subtype": "skills",
+                        "skills": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Acrobatics",
+                                "value": 10,
+                                "modifiers": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "modifier",
+                                        "name": "+18 when jumping"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Perception",
+                                "value": 5
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Stealth",
+                                "value": 14
+                            }
+                        ]
+                    },
+                    "tricks": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "modifiers": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "all creatures"
+                                }
+                            ],
+                            "name": "attack"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "come"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "fetch"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "guard"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "seek"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "stay"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "trick",
+                            "name": "track"
+                        }
+                    ]
+                }
+            },
+            "game-obj": "Monsters",
+            "sources": [
+                {
+                    "type": "source",
+                    "name": "Monster Codex",
+                    "link": {
+                        "type": "link",
+                        "name": "Monster Codex pg. 83",
+                        "alt": "Monster Codex pg. 83",
+                        "href": "http://paizo.com/products/btpy9926?Pathfinder-Roleplaying-Game-Monster-Codex%0D%0A"
+                    },
+                    "page": 83
                 }
             ]
         },

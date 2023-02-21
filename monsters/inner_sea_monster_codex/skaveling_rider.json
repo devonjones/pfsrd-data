@@ -4,29 +4,8 @@
     "sections": [
         {
             "name": "Description",
-            "type": "section"
-        },
-        {
-            "name": "Skaveling Mount",
             "type": "section",
-            "sections": [
-                {
-                    "name": "Defense",
-                    "type": "section",
-                    "html": "<b>AC </b>23, touch 15, flat-footed 17 (+2 armor, +5 Dex, +1 dodge, +6 natural, \u20131 size)<br/><b>hp </b>39 (6d8+12)<br/><b>Fort </b>+4, <b>Ref </b>+7, <b>Will </b>+7<br/><b>Immune </b>undead traits"
-                },
-                {
-                    "name": "Offense",
-                    "type": "section",
-                    "html": "<b>Speed </b>20 ft., fly 40 ft. (good)<br/><b>Melee </b>bite +10 (2d8+7)<br/><b>Space </b>10 ft.; <b>Reach </b>10 ft.<br/><b>Special Attacks </b>screech (DC 15)"
-                },
-                {
-                    "name": "Statistics",
-                    "type": "section",
-                    "html": "<b>Str </b>25, <b>Dex </b>21, <b>Con </b>\u2014, <b>Int </b>2, <b>Wis </b>15, <b>Cha </b>14<br/><b>Base Atk</b> +4; <b>CMB </b>+12; <b>CMD </b>28<br/><b>Feats </b>Dodge, Improved Initiative, Mobility<br/><b>Skills </b>Fly +12, Perception +7, Stealth +6<br/><br/> Gear leather barding, military saddle Urdefhans created the first skavelings\u2014flying undead horrors nicknamed \u201cghoul bats\u201d\u2014and rely on them to maintain air superiority in Orv\u2019s colossal caverns. While some urdefhans subdue wild undead mobats for use as mounts, others create new skavelings and form permanent bonds with the resulting less intelligent but more loyal specimens. Skaveling riders serve as forward scouts who report on enemy movements, track intruders in urdefhan lands, and support or lead urdefhan soldiers in battle. The casual urdefhan view of death and destruction doesn\u2019t extend to these riders\u2019 skavelings, and an urdefhan will shake the foundations of Golarion to murder the creature who destroys its mount."
-                }
-            ],
-            "html": "CE Large undead<br/><b>Init </b>+9; <b>Senses </b>darkvision 60 ft.; Perception +7"
+            "html": "Urdefhans created the first skavelings\u2014flying undead horrors nicknamed \u201cghoul bats\u201d\u2014and rely on them to maintain air superiority in Orv\u2019s colossal caverns. While some urdefhans subdue wild undead mobats for use as mounts, others create new skavelings and form permanent bonds with the resulting less intelligent but more loyal specimens. Skaveling riders serve as forward scouts who report on enemy movements, track intruders in urdefhan lands, and support or lead urdefhan soldiers in battle. The casual urdefhan view of death and destruction doesn\u2019t extend to these riders\u2019 skavelings, and an urdefhan will shake the foundations of Golarion to murder the creature who destroys its mount."
         }
     ],
     "html": "<i>Additional straps and hooks concealed beneath this muscular horror\u2019s cloak secure it to the saddle of the rotting, flapping undead monstrosity he rides.</i>",
@@ -80,6 +59,273 @@
                     "type": "stat_block_section",
                     "subtype": "graft",
                     "name": "cavalier 7"
+                }
+            ]
+        },
+        "sub_creature": {
+            "name": "Skaveling Mount",
+            "type": "monster",
+            "stat_block": {
+                "name": "Skaveling Mount",
+                "type": "stat_block",
+                "initiative": {
+                    "type": "stat_block_section",
+                    "subtype": "initiative",
+                    "value": 9
+                },
+                "perception": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "perception",
+                        "value": 7
+                    }
+                ],
+                "senses": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "sense",
+                        "name": "darkvision 60 ft."
+                    }
+                ],
+                "creature_type": {
+                    "type": "stat_block_section",
+                    "subtype": "creature_type",
+                    "creature_type": "Undead",
+                    "size": "Large",
+                    "alignment": "Chaotic Evil",
+                    "alignment_text": "CE"
+                },
+                "defense": {
+                    "name": "Defense",
+                    "type": "stat_block_section",
+                    "subtype": "defense",
+                    "ac": {
+                        "name": "AC",
+                        "type": "stat_block_section",
+                        "subtype": "armor_class",
+                        "ac": 23,
+                        "touch": 15,
+                        "flat-footed": 17,
+                        "modifiers": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+2 armor"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+5 Dex"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+1 dodge"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "+6 natural"
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "modifier",
+                                "name": "-1 size"
+                            }
+                        ]
+                    },
+                    "saves": {
+                        "type": "stat_block_section",
+                        "subtype": "saves",
+                        "fort": {
+                            "name": "Fort",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 4
+                        },
+                        "ref": {
+                            "name": "Ref",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 7
+                        },
+                        "will": {
+                            "name": "Will",
+                            "type": "stat_block_section",
+                            "subtype": "save",
+                            "value": 7
+                        }
+                    },
+                    "immunities": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "immunity",
+                            "name": "undead traits"
+                        }
+                    ]
+                },
+                "offense": {
+                    "name": "Offense",
+                    "type": "stat_block_section",
+                    "subtype": "offense",
+                    "speed": {
+                        "name": "Speed",
+                        "type": "stat_block_section",
+                        "subtype": "speeds",
+                        "movement": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "speed",
+                                "name": "20 ft.",
+                                "movement_type": "walk",
+                                "value": 20
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "speed",
+                                "modifiers": [
+                                    {
+                                        "type": "stat_block_section",
+                                        "subtype": "modifier",
+                                        "name": "good<br/>"
+                                    }
+                                ],
+                                "name": "fly 40 ft.",
+                                "movement_type": "fly",
+                                "value": 40
+                            }
+                        ]
+                    },
+                    "melee": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "attack",
+                            "attack_type": "melee",
+                            "name": "bite",
+                            "bonus": [
+                                10
+                            ],
+                            "damage": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "attack_damage",
+                                    "formula": "2d8+7"
+                                }
+                            ]
+                        }
+                    ],
+                    "space": "10 ft.;",
+                    "reach": {
+                        "type": "stat_block_section",
+                        "subtype": "reach",
+                        "value": "10 ft."
+                    },
+                    "special_attacks": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "special_attack",
+                            "modifiers": [
+                                {
+                                    "type": "stat_block_section",
+                                    "subtype": "modifier",
+                                    "name": "DC 15"
+                                }
+                            ],
+                            "name": "screech"
+                        }
+                    ],
+                    "bab": {
+                        "type": "stat_block_section",
+                        "subtype": "bab",
+                        "value": 4
+                    },
+                    "cmb": {
+                        "type": "stat_block_section",
+                        "subtype": "cmb",
+                        "value": 12
+                    },
+                    "cmd": {
+                        "type": "stat_block_section",
+                        "subtype": "cmd",
+                        "value": 28
+                    }
+                },
+                "gear": [
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "item",
+                        "name": "leather barding"
+                    },
+                    {
+                        "type": "stat_block_section",
+                        "subtype": "item",
+                        "name": "military saddle"
+                    }
+                ],
+                "statistics": {
+                    "type": "stat_block_section",
+                    "subtype": "statistics",
+                    "str": 25,
+                    "dex": 21,
+                    "con": null,
+                    "int": 2,
+                    "wis": 15,
+                    "cha": 14,
+                    "feats": [
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Dodge"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Improved Initiative"
+                        },
+                        {
+                            "type": "stat_block_section",
+                            "subtype": "feat",
+                            "name": "Mobility"
+                        }
+                    ],
+                    "skills": {
+                        "type": "stat_block_section",
+                        "subtype": "skills",
+                        "skills": [
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Fly",
+                                "value": 12
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Perception",
+                                "value": 7
+                            },
+                            {
+                                "type": "stat_block_section",
+                                "subtype": "skill",
+                                "name": "Stealth",
+                                "value": 6
+                            }
+                        ]
+                    }
+                }
+            },
+            "game-obj": "Monsters",
+            "sources": [
+                {
+                    "type": "source",
+                    "name": "Inner Sea Monster Codex",
+                    "link": {
+                        "type": "link",
+                        "name": "Inner Sea Monster Codex pg. 61",
+                        "alt": "Inner Sea Monster Codex pg. 61",
+                        "href": "http://paizo.com/products/btpy9elc?Pathfinder-Campaign-Setting-Inner-Sea-Monster-Codex"
+                    },
+                    "page": 61
                 }
             ]
         },
